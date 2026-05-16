@@ -80,7 +80,7 @@ const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
     title: "Rede CIA na China",
     description:
       "Como uma rede humana foi comprometida em ambiente hostil, e o que o caso ensina sobre comunicação, fontes e contrainteligência.",
-    href: "/assinar",
+    href: "https://lastlink.com/p/C667B6404/checkout-payment",
     image: "/images/editorial/china-cia-cover.jpg",
     imageAlt: "Homem observa as luzes de Pequim pela janela de um quarto à noite.",
   },
@@ -88,7 +88,7 @@ const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
     title: "Sergei Skripal",
     description:
       "O ciclo completo de uma fonte: recrutamento, captura, troca de prisioneiros e risco residual após a operação.",
-    href: "/assinar",
+    href: "https://lastlink.com/p/C667B6404/checkout-payment",
     image: "/images/cases/skripal.jpg",
     imageAlt: "Homem sentado em banco de parque inglês sob neblina.",
   },
@@ -96,7 +96,7 @@ const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
     title: "Unidade 29155",
     description:
       "Operações atribuídas ao GRU na Europa, falhas de OPSEC e o papel de investigadores independentes na exposição.",
-    href: "/assinar",
+    href: "https://lastlink.com/p/C667B6404/checkout-payment",
     image: "/images/cases/unit-29155.jpg",
     imageAlt: "Homem de sobretudo caminha por viela europeia molhada.",
   },
@@ -104,7 +104,7 @@ const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
     title: "Operação Ajax",
     description:
       "Influência, narrativa e efeitos de longo prazo em uma operação que ainda molda leituras geopolíticas.",
-    href: "/assinar",
+    href: "https://lastlink.com/p/C667B6404/checkout-payment",
     image: "/images/cases/operation-ajax.jpg",
     imageAlt: "Homem iraniano com chapéu em um bazar nos anos 1950.",
   },
@@ -112,7 +112,7 @@ const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
     title: "Projeto Azorian",
     description:
       "Arquitetura de cobertura, negação plausível e engenharia operacional em uma das ações mais ambiciosas da Guerra Fria.",
-    href: "/assinar",
+    href: "https://lastlink.com/p/C667B6404/checkout-payment",
     image: "/images/cases/project-azorian.jpg",
     imageAlt: "Oficial observa o oceano a partir da ponte de um navio.",
   },
@@ -120,7 +120,7 @@ const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
     title: "John Walker Jr.",
     description:
       "Traição, rotina pessoal e vulnerabilidades exploradas em um caso clássico de segurança e fontes humanas.",
-    href: "/assinar",
+    href: "https://lastlink.com/p/C667B6404/checkout-payment",
     image: "/images/cases/john-walker.jpg",
     imageAlt: "Homem deposita pacote em árvore oca sob neblina.",
   },
