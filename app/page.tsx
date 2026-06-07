@@ -16,7 +16,6 @@ import {
   ChevronDown,
   ArrowDown,
   Flag,
-  Unlock,
 } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -658,37 +657,6 @@ export default function AcervoTaticoPage() {
               <br />
               <span className="text-humint-amber">Em um único acervo.</span>
             </h2>
-          </div>
-
-          {/* ── Condição de fundador + escada de preço ───────────────── */}
-          {/* ESCASSEZ REAL: preços futuros precisam ser verdadeiros e cumpridos. Sem countdown falso, sem "X pessoas vendo". */}
-          <div className="reveal mx-auto max-w-3xl mb-8 md:mb-12">
-            <div className="relative overflow-hidden border border-humint-bone/12 bg-humint-ink/30">
-              {/* Escada de preço */}
-              <div className="grid">
-                {/* Degrau 1 — ATIVO */}
-                <div className="relative bg-humint-amber/[0.06] px-6 py-7 md:px-8 md:py-8">
-                  <div className="absolute left-0 top-0 h-full w-1 bg-humint-amber" aria-hidden />
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="inline-flex items-center gap-2">
-                      <Unlock className="h-3.5 w-3.5 text-humint-amber shrink-0" aria-hidden />
-                      <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-humint-amber">
-                        condição especial
-                      </span>
-                    </span>
-                    <span className="bg-humint-amber px-2.5 py-1 font-mono text-[9px] font-bold tracking-[0.16em] uppercase text-humint-ink">
-                      Menor preço
-                    </span>
-                  </div>
-                  <div className="font-serif text-humint-bone text-3xl md:text-4xl leading-none tabular-nums">
-                    12× R$ 39,20
-                  </div>
-                  <p className="mt-4 font-mono text-[10px] font-bold tracking-[0.1em] uppercase text-white leading-relaxed max-w-[28ch]">
-                    ou R$ 379 à vista com a condição especial de membro fundador hoje
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="reveal relative">
