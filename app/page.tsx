@@ -80,7 +80,7 @@ export default function AcervoTaticoPage() {
             <div className="w-full max-w-3xl text-center">
               {/* Eyebrow */}
               <div className="reveal mb-7 md:mb-8">
-                <p className="font-mono text-[11px] md:text-xs tracking-[0.32em] uppercase text-humint-amber/80">
+                <p className="font-mono text-[11px] md:text-xs tracking-[0.077em] uppercase text-humint-amber/80">
                   Conhecimento prático em HUMINT
                 </p>
               </div>
