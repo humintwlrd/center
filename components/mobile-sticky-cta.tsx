@@ -42,6 +42,8 @@ export function MobileStickyCta() {
         </div>
         <a
           href={CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="shrink-0 inline-flex items-center gap-1.5 bg-humint-amber text-humint-ink font-mono text-[11px] tracking-[0.16em] uppercase font-bold px-4 py-3 min-h-[44px] active:bg-humint-bone"
         >
           Acessar

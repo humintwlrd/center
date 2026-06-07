@@ -15,7 +15,7 @@ export function AccessButton({
   children: React.ReactNode
 }) {
   return (
-    <a href={CHECKOUT_URL} className={className}>
+    <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
     </a>
   )
