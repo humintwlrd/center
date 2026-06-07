@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft, ArrowRight, Brain, Layers, Target, Lock, Repeat, Compass } from "lucide-react"
+import { ArrowLeft, Brain, Layers, Target, Lock, Repeat } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Como aproveitar o acervo · Mundo da HUMINT",
@@ -14,7 +14,7 @@ const STEPS = [
   {
     icon: Brain,
     title: "Estude com intenção, não com pressa",
-    body: "O acervo não é uma maratona para terminar no fim de semana. Cada dossiê foi construído para ser lido com atenção, anotado e digerido. Leia uma vez para entender o caso, leia de novo para enxergar a técnica por trás dele. Conhecimento de HUMINT não se consome — se internaliza.",
+    body: "O acervo não é uma maratona para terminar no fim de semana. Cada dossiê foi construído para ser lido com atenção, anotado e digerido. Leia uma vez para entender o caso, leia de novo para enxergar a técnica por trás dele. Conhecimento de HUMINT não se consome, se internaliza.",
   },
   {
     icon: Repeat,
@@ -24,12 +24,12 @@ const STEPS = [
   {
     icon: Target,
     title: "Aplique em situações reais",
-    body: "A diferença entre quem leu sobre HUMINT e quem domina HUMINT está na prática. Observe conversas, identifique padrões de comportamento, teste a leitura de intenções no dia a dia. O acervo te dá o mapa — a maestria vem de andar pelo terreno.",
+    body: "A diferença entre quem leu sobre HUMINT e quem domina HUMINT está na prática. Observe conversas, identifique padrões de comportamento, teste a leitura de intenções no dia a dia. O acervo te dá o mapa, a maestria vem da aplicação diária em campo.",
   },
   {
     icon: Layers,
     title: "Construa sobre uma base",
-    body: "Os conteúdos foram sequenciados para que um conceito prepare o terreno para o próximo. Quem pula etapas perde a fundação. Quem segue o ritmo constrói um entendimento que se sustenta — camada sobre camada, do fundamento à aplicação avançada.",
+    body: "Os conteúdos foram sequenciados para que um conceito prepare o terreno para o próximo. Quem pula etapas perde a fundação. Quem segue o ritmo constrói um entendimento que se sustenta, camada sobre camada, do fundamento à aplicação avançada.",
   },
 ]
 
@@ -64,8 +64,9 @@ export default function ComoAproveitarPage() {
         </h1>
         <p className="mt-6 text-[15px] md:text-base leading-relaxed text-humint-bone/70 font-light text-pretty">
           Você não comprou um arquivo de PDFs. Você entrou em um acervo vivo, pensado para transformar a forma
-          como você lê pessoas, situações e intenções. Aproveitá-lo bem é menos sobre ter acesso a tudo — e mais
-          sobre como você estuda, retém e aplica o que está aqui dentro.
+          como você lê pessoas, situações e intenções. Aproveitá-lo bem é menos sobre ter acesso a tudo de uma
+          vez e sair consumindo desenfreadamente... é mais sobre como você estuda, retém e aplica o que está aqui
+          dentro.
         </p>
 
         {/* Steps */}
@@ -83,15 +84,12 @@ export default function ComoAproveitarPage() {
 
         {/* Why gradual release */}
         <section className="mt-14 md:mt-20">
-          <div className="flex items-center gap-3">
-            <Compass className="h-5 w-5 text-humint-amber" aria-hidden />
-            <h2 className="font-serif text-2xl md:text-3xl leading-tight tracking-tight text-humint-bone">
-              Por que o conteúdo é liberado aos poucos
-            </h2>
-          </div>
+          <h2 className="font-serif text-2xl md:text-3xl leading-tight tracking-tight text-humint-bone">
+            Por que o conteúdo é liberado aos poucos
+          </h2>
           <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-humint-bone/70 font-light">
             <p>
-              Os dossiês, arquivos e materiais do acervo não são entregues todos de uma vez — e isso é uma
+              Os dossiês, arquivos e materiais do acervo não são entregues todos de uma vez, e isso é uma
               decisão deliberada, feita a seu favor.
             </p>
             <p>
@@ -102,10 +100,10 @@ export default function ComoAproveitarPage() {
               constrói domínio real.
             </p>
             <p>
-              <strong className="font-semibold text-humint-bone">O segundo motivo é honesto:</strong> proteger o
-              acervo. Liberar todo o material no primeiro dia seria um convite para plagiadores comprarem,
-              copiarem tudo de uma vez e cancelarem em seguida. O ritmo de liberação preserva o valor do que você
-              adquiriu e mantém o acervo íntegro — para você e para todos os membros sérios.
+              <strong className="font-semibold text-humint-bone">O segundo motivo:</strong>{" "}
+              proteger o acervo. Liberar todo o material no primeiro dia seria um convite para plagiadores
+              comprarem, copiarem tudo de uma vez e cancelarem em seguida. O ritmo de liberação preserva o
+              valor do que você adquiriu e mantém o acervo íntegro, para você e para todos os membros sérios.
             </p>
           </div>
         </section>
@@ -123,46 +121,13 @@ export default function ComoAproveitarPage() {
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-humint-bone/70 font-light">
             Não é para curiosos de fim de semana nem para quem quer apenas colecionar arquivos. É para quem
-            entende que dominar a leitura humana exige tempo, repetição e prática — e que está disposto a
+            entende que dominar a leitura humana exige tempo, repetição e prática, e que está disposto a
             percorrer esse caminho com seriedade. Se é assim que você encara, o acervo vai recompensar cada
             passo. O ritmo não é um obstáculo: é o método.
           </p>
         </section>
 
-        {/* Back to home CTA */}
-        <div className="mt-14 md:mt-20 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 bg-humint-amber text-humint-ink font-mono text-[11px] tracking-[0.16em] uppercase font-bold px-5 py-3.5 hover:bg-humint-bone transition-colors"
-          >
-            Voltar para o início
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-          <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-humint-bone/40">
-            Bons estudos, membro.
-          </p>
-        </div>
       </article>
-
-      {/* Footer */}
-      <footer className="border-t border-humint-bone/10 py-10">
-        <div className="mx-auto max-w-3xl px-5 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex flex-wrap justify-center gap-6 font-mono text-[11px] tracking-[0.2em] uppercase text-humint-bone/45">
-            <Link href="/termos" className="hover:text-humint-amber transition-colors">
-              Termos
-            </Link>
-            <Link href="/privacidade" className="hover:text-humint-amber transition-colors">
-              Privacidade
-            </Link>
-            <a href="mailto:contato@humint.click" className="hover:text-humint-amber transition-colors">
-              Contato
-            </a>
-          </div>
-          <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-humint-bone/35">
-            © 2026 Mundo da HUMINT
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }
