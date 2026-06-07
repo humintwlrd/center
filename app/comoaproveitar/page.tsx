@@ -121,6 +121,11 @@ export default function ComoAproveitarPage() {
           </p>
         </section>
 
+        {/* Voltar para a área de membros */}
+        <div className="mt-12 md:mt-16 flex justify-center border-t border-humint-bone/10 pt-10">
+          <BackButton variant="solid" />
+        </div>
+
       </article>
     </main>
   )
