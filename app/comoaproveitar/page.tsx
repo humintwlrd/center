@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowLeft, Brain, Layers, Target, Lock, Repeat } from "lucide-react"
+import { Brain, Layers, Target, Lock, Repeat } from "lucide-react"
+import { BackButton } from "@/components/back-button"
 
 export const metadata: Metadata = {
   title: "Como aproveitar o acervo · Mundo da HUMINT",
@@ -39,13 +39,7 @@ export default function ComoAproveitarPage() {
       {/* Top bar */}
       <header className="border-b border-humint-bone/10">
         <div className="mx-auto max-w-3xl px-5 md:px-8 py-5 flex items-center justify-between">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.2em] uppercase text-humint-bone/60 hover:text-humint-amber transition-colors"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Voltar ao site
-          </Link>
+          <BackButton />
           <img
             src="/logo-mundo-humint.png"
             alt="Mundo da HUMINT"
