@@ -655,7 +655,7 @@ export default function AcervoTaticoPage() {
             <h2 className="font-serif font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.06] md:leading-[1.04] tracking-[-0.01em] text-balance">
               Tudo incluso.
               <br />
-              <span className="text-humint-amber">Em um único acervo.</span>
+                <span className="text-humint-amber">Em um único pacote.</span>
             </h2>
           </div>
 
@@ -836,7 +836,7 @@ export default function AcervoTaticoPage() {
 
       {/* ═══════════════════════════════════════════════════════════
            AVISO DE PROTEÇÃO / PROPRIEDADE INTELECTUAL
-         ═══════════════════════════════════════════════════════════ */}
+         ════════���══════════════════════════════════════════════════ */}
       <section
         id="protecao"
         className="relative bg-humint-ink py-24 md:py-32 border-t border-humint-blood/30 overflow-hidden"
@@ -975,7 +975,7 @@ export default function AcervoTaticoPage() {
   )
 }
 
-  /* ══════════════════════════════════════════════════════════════════
+  /* ═══════════════════════════════════════════════════��══════════════
    Dossiês data
    ═════════════════════════════════════════════════════════════════���═ */
 
