@@ -16,7 +16,6 @@ import {
   ChevronDown,
   ArrowDown,
   Flag,
-  Unlock,
 } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -69,10 +68,6 @@ export default function AcervoTaticoPage() {
             </span>
             <span className="md:hidden font-mono text-[10px] tracking-[0.24em] uppercase text-humint-blood/80">
               Limitado
-            </span>
-            <span className="hidden lg:inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-humint-amber/70">
-              <span className="h-px w-8 bg-humint-amber/30" />
-              Condição de fundador
             </span>
           </div>
 
@@ -656,60 +651,8 @@ export default function AcervoTaticoPage() {
             <h2 className="font-serif font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.06] md:leading-[1.04] tracking-[-0.01em] text-balance">
               Tudo incluso.
               <br />
-              <span className="text-humint-amber">Em um único acervo.</span>
+                <span className="text-humint-amber">Em um único pacote.</span>
             </h2>
-          </div>
-
-          {/* ── Condição de fundador + escada de preço ───────────────── */}
-          {/* ESCASSEZ REAL: preços futuros precisam ser verdadeiros e cumpridos. Sem countdown falso, sem "X pessoas vendo". */}
-          <div className="reveal mx-auto max-w-3xl mb-8 md:mb-12">
-            <div className="relative overflow-hidden border border-humint-bone/12 bg-humint-ink/30">
-              {/* Cabeçalho */}
-              <div className="border-b border-humint-bone/10 px-6 py-7 md:px-10 md:py-9">
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="inline-flex items-center gap-2 border border-[#00a422]/40 bg-[#00a422]/10 px-3 py-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#00a422]" aria-hidden />
-                    <span
-                      className="font-sans font-bold text-[09px] md:text-[11px] tracking-[0.24em] uppercase"
-                      style={{ color: "#00a422" }}
-                    >
-                      Condição especial
-                    </span>
-                  </span>
-                  <span className="h-px flex-1 bg-humint-bone/10" aria-hidden />
-                </div>
-                <p className="font-light text-humint-bone/70 leading-relaxed text-[15px] text-pretty">
-                  Como membro fundador (condição especial destinada às primeiras turmas), você paga pelo que já existe e recebe cada expansão futura sem nenhum
-                  custo adicional. A cada novo dossiê publicado, o preço sobe para quem chega depois, por
-                  isso, o preço que está disponível hoje é o mais baixo que esta página voltará a exibir.
-                </p>
-              </div>
-
-              {/* Escada de preço */}
-              <div className="grid">
-                {/* Degrau 1 — ATIVO */}
-                <div className="relative bg-humint-amber/[0.06] px-6 py-7 md:px-8 md:py-8">
-                  <div className="absolute left-0 top-0 h-full w-1 bg-humint-amber" aria-hidden />
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="inline-flex items-center gap-2">
-                      <Unlock className="h-3.5 w-3.5 text-humint-amber shrink-0" aria-hidden />
-                      <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-humint-amber">
-                        condição especial
-                      </span>
-                    </span>
-                    <span className="bg-humint-amber px-2.5 py-1 font-mono text-[9px] font-bold tracking-[0.16em] uppercase text-humint-ink">
-                      Menor preço
-                    </span>
-                  </div>
-                  <div className="font-serif text-humint-bone text-3xl md:text-4xl leading-none tabular-nums">
-                    12× R$ 39,20
-                  </div>
-                  <p className="mt-4 font-mono text-[10px] font-bold tracking-[0.1em] uppercase text-white leading-relaxed max-w-[28ch]">
-                    ou R$ 379 à vista com a condição especial de membro fundador hoje
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="reveal relative">
@@ -889,7 +832,7 @@ export default function AcervoTaticoPage() {
 
       {/* ═══════════════════════════════════════════════════════════
            AVISO DE PROTEÇÃO / PROPRIEDADE INTELECTUAL
-         ═══════════════════════════════════════════════════════════ */}
+         ═══════�����══════════════════════════════════════════════════ */}
       <section
         id="protecao"
         className="relative bg-humint-ink py-24 md:py-32 border-t border-humint-blood/30 overflow-hidden"
@@ -1028,7 +971,7 @@ export default function AcervoTaticoPage() {
   )
 }
 
-  /* ══════════════════════════════════════════════════════════════════
+  /* ══════════════════════════════════════════════���════��══════════════
    Dossiês data
    ═════════════════════════════════════════════════════════════════���═ */
 
