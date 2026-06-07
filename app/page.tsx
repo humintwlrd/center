@@ -69,10 +69,6 @@ export default function AcervoTaticoPage() {
             <span className="md:hidden font-mono text-[10px] tracking-[0.24em] uppercase text-humint-blood/80">
               Limitado
             </span>
-            <span className="hidden lg:inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-humint-amber/70">
-              <span className="h-px w-8 bg-humint-amber/30" />
-              Condição de fundador
-            </span>
           </div>
 
           <div className="flex justify-center">
@@ -836,7 +832,7 @@ export default function AcervoTaticoPage() {
 
       {/* ═══════════════════════════════════════════════════════════
            AVISO DE PROTEÇÃO / PROPRIEDADE INTELECTUAL
-         ════════���══════════════════════════════════════════════════ */}
+         ═══════�����══════════════════════════════════════════════════ */}
       <section
         id="protecao"
         className="relative bg-humint-ink py-24 md:py-32 border-t border-humint-blood/30 overflow-hidden"
@@ -975,7 +971,7 @@ export default function AcervoTaticoPage() {
   )
 }
 
-  /* ═══════════════════════════════════════════════════��══════════════
+  /* ══════════════════════════════════════════════���════��══════════════
    Dossiês data
    ═════════════════════════════════════════════════════════════════���═ */
 
