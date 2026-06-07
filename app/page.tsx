@@ -664,27 +664,6 @@ export default function AcervoTaticoPage() {
           {/* ESCASSEZ REAL: preços futuros precisam ser verdadeiros e cumpridos. Sem countdown falso, sem "X pessoas vendo". */}
           <div className="reveal mx-auto max-w-3xl mb-8 md:mb-12">
             <div className="relative overflow-hidden border border-humint-bone/12 bg-humint-ink/30">
-              {/* Cabeçalho */}
-              <div className="border-b border-humint-bone/10 px-6 py-7 md:px-10 md:py-9">
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="inline-flex items-center gap-2 border border-[#00a422]/40 bg-[#00a422]/10 px-3 py-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#00a422]" aria-hidden />
-                    <span
-                      className="font-sans font-bold text-[09px] md:text-[11px] tracking-[0.24em] uppercase"
-                      style={{ color: "#00a422" }}
-                    >
-                      Condição especial
-                    </span>
-                  </span>
-                  <span className="h-px flex-1 bg-humint-bone/10" aria-hidden />
-                </div>
-                <p className="font-light text-humint-bone/70 leading-relaxed text-[15px] text-pretty">
-                  Como membro fundador (condição especial destinada às primeiras turmas), você paga pelo que já existe e recebe cada expansão futura sem nenhum
-                  custo adicional. A cada novo dossiê publicado, o preço sobe para quem chega depois, por
-                  isso, o preço que está disponível hoje é o mais baixo que esta página voltará a exibir.
-                </p>
-              </div>
-
               {/* Escada de preço */}
               <div className="grid">
                 {/* Degrau 1 — ATIVO */}
