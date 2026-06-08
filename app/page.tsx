@@ -669,19 +669,19 @@ export default function AcervoTaticoPage() {
                       Acesso por 12 meses
                     </div>
                     <div className="text-humint-bone/40 line-through text-[13px] md:text-sm mb-1">
-                      De R$ 1.200
+                      De R$ 1.290
                     </div>
                     <div className="flex items-baseline justify-center gap-1.5 md:gap-2">
                       <span className="font-mono text-xs text-humint-bone/60 mt-3">12×</span>
                       <span className="font-serif text-5xl md:text-7xl text-humint-bone leading-none tabular-nums">
-                    R$ 39
+                    R$ 99
                   </span>
                   <span className="font-serif text-xl md:text-2xl text-humint-bone/70 mt-2 md:mt-3">
-                    ,20
+                    ,30
                   </span>
                     </div>
                     <div className="mt-2 text-[13px] md:text-sm text-humint-bone/65 font-light">
-                      ou <span className="text-humint-bone">R$ 379 à vista</span> · PIX ou cartão
+                      ou <span className="text-humint-bone">R$ 960 à vista</span> · PIX ou cartão
                     </div>
 
                     <AccessButton className="animate-amber-pulse mt-5 md:mt-7 group relative w-full inline-flex items-center justify-center gap-2 md:gap-3 bg-humint-amber text-humint-ink font-mono text-[12px] md:text-sm tracking-[0.16em] md:tracking-[0.18em] uppercase font-bold px-5 md:px-6 py-4 md:py-4 min-h-[52px] hover:bg-humint-bone transition-colors">
@@ -973,7 +973,7 @@ export default function AcervoTaticoPage() {
 
   /* ══════════════════════════════════════════════���════��══════════════
    Dossiês data
-   ═════════════════════════════════════════════════════════════════���═ */
+   ════════════════════════════════════════════════════════���════════���═ */
 
 const dossies = [
   {
