@@ -1,0 +1,40 @@
+# Upgrade Instagram: galeria de slides + transcrição — repo `humintwlrd/center`
+
+**Standalone**: inclui tudo do update anterior (+50 artigos) **mais** a galeria com todos os slides
+e a transcrição (OCR) dos carrosséis. Drop-in testado rodando o gerador do próprio repo.
+
+## Alterações de código (veja `CHANGES.diff` para o diff exato)
+- `lib/content/articles.ts` — novo bloco `gallery` no tipo `ArticleBlock` (1 linha, retrocompatível).
+- `app/artigos/[slug]/page.tsx` — `renderBlock` passa a renderizar o bloco `gallery` (grid de imagens).
+- `scripts/generate-instagram-articles.mjs` — gera a galeria a partir de `public/images/carrossel/<ShortCode>/`
+  e anexa a transcrição lida de `data/instagram-extras.json`.
+
+## Dados e imagens
+- `data/instagram-export.json` — 298 → **348** posts.
+- `data/instagram-extras.json` — transcrição (OCR) dos 50 novos posts.
+- `lib/content/instagram-articles.generated.ts` — regenerado (294 → **344** artigos; galeria+transcrição nos novos).
+- `public/images/instagram/*.jpg` — 50 capas novas.
+- `public/images/carrossel/<ShortCode>/NN.jpg` — **540 slides** (a galeria). ~48 MB.
+
+## Como aplicar
+1. Extraia este zip na **raiz** do repositório `center` (sobrescreve os arquivos e adiciona as imagens).
+2. Commit e push:
+   ```bash
+   git add -A
+   git commit -m "Instagram: +50 artigos com galeria de slides e transcrição"
+   git push
+   ```
+3. O Vercel publica sozinho.
+
+> Alternativa: se preferir regenerar você mesmo, garanta as imagens em `public/images/carrossel/` e rode
+> `npm run generate:instagram-articles`.
+
+## Como fica o artigo
+Ordem: **legenda → “Transcrição dos slides” → galeria** (todos os slides em grade ao final).
+
+## Notas
+- A galeria aparece só em posts com 2+ slides; 4 posts de quiz seguem em `EXCLUDED_SHORT_CODES` (por isso 50).
+- A transcrição é **OCR automático** (rotulada como tal no artigo). Para **desligá-la**: apague
+  `data/instagram-extras.json` e rode o gerador novamente.
+- Slides comprimidos (~1080px) para não pesar o repositório; ainda assim somam ~48 MB.
+- Categorias vêm do seu `inferCategory` (ajuste em `data/editorial-audit.json` se quiser).
