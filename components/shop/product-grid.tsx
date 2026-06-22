@@ -8,15 +8,15 @@ export function ProductGrid() {
         <div>
           <p className="eyebrow-gold mb-2">Catálogo</p>
           <h2 id="catalogo-title" className="font-display text-2xl sm:text-3xl font-semibold text-ink">
-            Produtos
+            Cursos e materiais
           </h2>
         </div>
         <p className="hidden sm:block font-mono text-[11px] uppercase tracking-widest text-ink-muted">
-          Do mais acessível ao premium
+          Pagamento · Cartão e Pix
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {PRODUCTS.map((product, i) => (
           <ProductCard key={product.id} product={product} priority={i === 0} />
         ))}

@@ -1,101 +1,110 @@
 /**
  * Catálogo de produtos digitais — Loja "Mundo da HUMINT".
- * Dados tipados e renderizados pelo grid em /shop.
- * Ordem: do mais acessível ao mais premium.
+ * Dados tipados e renderizados pelo grid em /shop e nas páginas /shop/[slug].
+ * Ordem: por destaque (carro-chefe primeiro).
  */
 
 export interface Product {
-  /** Identificador estável (usado como key). */
+  /** Identificador estável e slug da página (/shop/[id]). */
   id: string
   /** Nome comercial do produto. */
   nome: string
-  /** Tipo do entregável, exibido como badge. */
-  tipo: "EBOOK" | "CURSO ONLINE"
-  /** Preço "de" (ancoragem). Use null quando não houver. */
-  precoDe: string | null
+  /** Tipo do entregável, exibido como tag (ex.: "Curso completo", "Curso", "Ebook"). */
+  tipo: string
+  /** Selo de destaque opcional (ex.: "Mais vendido"). */
+  badge?: string
   /** Preço atual em destaque. */
   preco: string
-  /** Texto de parcelamento. */
-  parcelamento: string
-  /** Descrição curta (line-clamp na UI). */
+  /** Preço "de" (ancoragem). Opcional. */
+  precoDe?: string | null
+  /** Descrição curta (1–2 linhas no card). */
   descricao: string
-  /** Lista opcional de destaques/módulos. */
+  /** Destaques curtos exibidos como chips no card. */
   destaques?: string[]
-  /** Capa do produto. <!-- trocar pela capa real quando disponível --> */
+  /** Ementa / currículo completo (exibido na página do produto). */
+  ementa?: string[]
+  /** Capa do produto. */
   image: string
   /** Texto alternativo da capa. */
   imageAlt: string
-  /** Link de checkout (HeroSpark). Abre em nova aba. */
+  /** Link de checkout (HeroSpark). Abre em nova aba. Aceita Cartão e Pix. */
   checkoutUrl: string
-  /** Página de vendas (detalhes). */
-  detalhesUrl: string
-  /** Marca o produto premium em destaque. */
+  /** Marca o produto carro-chefe em destaque. */
   destaque?: boolean
 }
 
 export const PRODUCTS: Product[] = [
   {
-    id: "osint-playbook",
-    nome: "OSINT Playbook (guia prático)",
-    tipo: "EBOOK",
-    precoDe: "R$ 250,00",
-    preco: "R$ 199,00",
-    parcelamento: "ou 12x de R$ 20,60",
+    id: "acervo-tatico",
+    nome: "Acervo Tático de Inteligência Humana",
+    tipo: "Curso completo",
+    badge: "Mais vendido",
+    preco: "R$ 900,00",
     descricao:
-      "O ponto de partida para investigar fontes abertas com método. Guia prático para conduzir investigações OSINT com critério, fluxo de raciocínio definido e um arsenal de ferramentas para localizar pessoas, bens e vínculos.",
-    image: "/images/shop/osint-playbook.png",
+      "O acervo definitivo de HUMINT: 9 módulos cobrindo mecânicas do comportamento, comunicação e influência, linguagem não verbal, elicitação, contrainteligência e OPSEC, fontes de informação e ferramentas operacionais.",
+    destaques: [
+      "Mecânicas do Comportamento",
+      "Comunicação e Influência",
+      "Linguagem Não Verbal",
+      "Elicitação",
+      "Contrainteligência e OPSEC",
+    ],
+    ementa: [
+      "Comece por aqui",
+      "01 · Mecânicas do Comportamento",
+      "02 · Comunicação e Influência",
+      "03 · Linguagem Não Verbal",
+      "04 · Guia de Observação de Linguagem Corporal",
+      "05 · Elicitação (inclui as “36 perguntas de Aron”)",
+      "06 · Contrainteligência e OPSEC",
+      "07 · Fontes de Informação",
+      "08 · Ferramentas Operacionais",
+    ],
+    image: "/images/shop/acervo-tatico.png",
     imageAlt:
-      "Mesa de investigação com caderno de anotações, lupa sobre documentos e linhas de conexão entre alfinetes.",
+      "Dossiê de inteligência organizado: pastas confidenciais empilhadas, ficha de caso e gráficos de análise comportamental.",
     checkoutUrl:
-      "https://pay.herospark.com/osint-playbook-guia-pratico-by-mundo-da-humint-525745",
-    detalhesUrl:
-      "https://mundodahumint.herospark.co/osint-playbook-guia-pratico-by-mundo-da-humint",
+      "https://pay.herospark.com/acervo-tatico-de-inteligencia-humana-525712",
+    destaque: true,
   },
   {
     id: "engenharia-social",
     nome: "Fundamentos de Engenharia Social: Princípios de Campo",
-    tipo: "CURSO ONLINE",
-    precoDe: null,
-    preco: "R$ 199,00",
-    parcelamento: "ou 12x de R$ 20,60",
+    tipo: "Curso",
+    preco: "R$ 120,00",
     descricao:
-      "Enxergue o 'jogo' social e domine as técnicas que mais importam. Curso direto ao ponto em três frentes: os fundamentos da persuasão, a aplicação prática em pentest físico e a defesa contra tentativas de manipulação.",
-    destaques: ["Parte 1 — Os Fundamentos", "Parte 2 — Pentest Físico", "Parte 3 — Defesa"],
+      "Curso de campo sobre engenharia social: os fundamentos, pentest físico e estratégias de defesa.",
+    destaques: ["Os Fundamentos", "Pentest Físico", "Defesa"],
+    ementa: [
+      "Parte 1 · Os Fundamentos",
+      "Parte 2 · Pentest Físico",
+      "Parte 3 · Defesa",
+    ],
     image: "/images/shop/engenharia-social.png",
     imageAlt:
       "Corredor corporativo à noite visto por uma porta de vidro, com crachá de acesso sobre uma mesa.",
     checkoutUrl:
       "https://pay.herospark.com/fundamentos-de-engenharia-social-principios-de-campo-525751",
-    detalhesUrl:
-      "https://mundodahumint.herospark.co/fundamentos-de-engenharia-social-principios-de-campo",
   },
   {
-    id: "acervo-tatico",
-    nome: "Acervo Tático de Inteligência Humana",
-    tipo: "CURSO ONLINE",
-    precoDe: "R$ 1.290,00",
-    preco: "R$ 960,00",
-    parcelamento: "ou 12x de R$ 99,30",
+    id: "osint-playbook",
+    nome: "OSINT Playbook (guia prático)",
+    tipo: "Ebook",
+    preco: "R$ 70,00",
     descricao:
-      "O programa completo de HUMINT — da leitura de pessoas à operação real. 9 módulos que percorrem toda a cadeia da inteligência humana, do comportamento às ferramentas operacionais.",
-    destaques: [
-      "Mecânicas do Comportamento",
-      "Comunicação e Influência",
-      "Linguagem Não Verbal",
-      "Guia de Observação Corporal",
-      "Elicitação",
-      "Contrainteligência e OPSEC",
-      "Fontes de Informação",
-      "Ferramentas Operacionais",
-    ],
-    image: "/images/shop/acervo-tatico.png",
+      "Guia prático de OSINT: técnicas e fluxo de trabalho para investigação de fontes abertas, em formato ebook (PDF).",
+    image: "/images/shop/osint-playbook.png",
     imageAlt:
-      "Dossiê de inteligência organizado: pastas confidenciais empilhadas, ficha de caso e gráficos de análise comportamental.",
-    checkoutUrl: "https://pay.herospark.com/acervo-tatico-de-inteligencia-humana-525712",
-    detalhesUrl: "https://mundodahumint.herospark.co/acervo-tatico-de-inteligencia-humana",
-    destaque: true,
+      "Mesa de investigação com caderno de anotações, lupa sobre documentos e linhas de conexão entre alfinetes.",
+    checkoutUrl:
+      "https://pay.herospark.com/osint-playbook-guia-pratico-by-mundo-da-humint-525745",
   },
 ]
+
+/** Busca um produto pelo slug (id). */
+export function getProductBySlug(slug: string): Product | undefined {
+  return PRODUCTS.find((p) => p.id === slug)
+}
 
 export interface Combo {
   id: string

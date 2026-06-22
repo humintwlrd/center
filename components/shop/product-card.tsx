@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
+import { ArrowUpRight, CreditCard } from "lucide-react"
 import type { Product } from "@/lib/products"
 
 type Props = {
@@ -13,14 +14,13 @@ export function ProductCard({ product, priority }: Props) {
   return (
     <article
       className={[
-        "group flex flex-col bg-paper-strong transition-all duration-300",
-        "border hover:-translate-y-1",
+        "group flex flex-col bg-paper-strong transition-all duration-300 border hover:-translate-y-1",
         isFeatured
-          ? "border-gold shadow-[0_1px_0_0_var(--color-gold)] hover:shadow-[0_8px_30px_-12px_rgba(217,165,35,0.45)]"
-          : "border-line hover:border-line-strong hover:shadow-[0_8px_30px_-16px_rgba(17,17,17,0.25)]",
+          ? "border-gold shadow-[0_1px_0_0_var(--color-gold)] hover:shadow-[0_12px_36px_-12px_rgba(217,165,35,0.55)]"
+          : "border-line hover:border-gold/60 hover:shadow-[0_12px_32px_-16px_rgba(217,165,35,0.4)]",
       ].join(" ")}
     >
-      {/* Capa — trocar pela capa real quando disponível */}
+      {/* Capa */}
       <div className="relative aspect-[16/9] overflow-hidden bg-paper-deep">
         <Image
           src={product.image || "/placeholder.svg"}
@@ -31,17 +31,15 @@ export function ProductCard({ product, priority }: Props) {
           loading={priority ? "eager" : "lazy"}
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
-        {/* Badge de tipo */}
         <span className="absolute left-3 top-3 inline-block bg-ink px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-paper">
           {product.tipo}
         </span>
-        {/* Badge premium */}
-        {isFeatured && (
+        {product.badge && (
           <span
-            className="absolute right-3 top-3 inline-block bg-gold px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest"
+            className="absolute right-3 top-3 inline-block bg-gold px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-widest"
             style={{ color: "var(--color-on-gold)" }}
           >
-            Mais completo
+            {product.badge}
           </span>
         )}
       </div>
@@ -52,11 +50,10 @@ export function ProductCard({ product, priority }: Props) {
           {product.nome}
         </h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-3">
+        <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-2">
           {product.descricao}
         </p>
 
-        {/* Destaques / módulos */}
         {product.destaques && product.destaques.length > 0 && (
           <ul className="mt-4 flex flex-wrap gap-1.5">
             {product.destaques.slice(0, 4).map((d) => (
@@ -75,38 +72,36 @@ export function ProductCard({ product, priority }: Props) {
           </ul>
         )}
 
-        {/* Preço — empurrado para a base do card */}
+        {/* Preço + compra — empurrado para a base do card */}
         <div className="mt-auto pt-6">
           <div className="flex items-baseline gap-2">
             {product.precoDe && (
               <span className="text-sm text-ink-muted line-through">{product.precoDe}</span>
             )}
-            <span className="font-display text-2xl font-bold text-gold-active">
+            <span className="font-display text-3xl font-bold text-gold-active">
               {product.preco}
             </span>
           </div>
-          <p className="mt-0.5 text-xs text-ink-muted">{product.parcelamento}</p>
+          <p className="mt-1 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ink-muted">
+            <CreditCard className="h-3.5 w-3.5" aria-hidden /> Cartão · Pix
+          </p>
 
-          {/* CTA principal */}
           <a
             href={product.checkoutUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-widest text-on-gold transition-colors hover:bg-gold-hover focus-visible:outline-2"
           >
-            Quero acessar
+            Comprar agora
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </a>
 
-          {/* Link secundário */}
-          <a
-            href={product.detalhesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/shop/${product.id}`}
             className="mt-3 block text-center font-mono text-[11px] uppercase tracking-widest text-ink-muted underline-offset-4 hover:text-gold-active hover:underline"
           >
             Ver detalhes
-          </a>
+          </Link>
         </div>
       </div>
     </article>

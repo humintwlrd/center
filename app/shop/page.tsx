@@ -1,17 +1,16 @@
 import type { Metadata } from "next"
 import { ShopHero } from "@/components/shop/shop-hero"
 import { ProductGrid } from "@/components/shop/product-grid"
-import { ShopCombos } from "@/components/shop/shop-combos"
 
 export const metadata: Metadata = {
-  title: "Loja",
+  title: { absolute: "Loja — Mundo da HUMINT" },
   description:
-    "Arsenal do Mundo da HUMINT: cursos e guias práticos de inteligência humana, OSINT e engenharia social. Do guia mais acessível ao programa completo.",
+    "Cursos e materiais de inteligência humana aplicada: Acervo Tático de HUMINT, Fundamentos de Engenharia Social e OSINT Playbook. Pagamento via Cartão e Pix.",
   alternates: { canonical: "/shop" },
   openGraph: {
-    title: "Loja · Mundo da HUMINT",
+    title: "Loja — Mundo da HUMINT",
     description:
-      "Cursos e guias práticos de inteligência humana, OSINT e engenharia social.",
+      "Cursos e materiais de inteligência humana aplicada, engenharia social e OSINT. Pagamento via Cartão e Pix.",
     url: "/shop",
   },
 }
@@ -21,7 +20,6 @@ export default function ShopPage() {
     <>
       <ShopHero />
       <ProductGrid />
-      <ShopCombos />
     </>
   )
 }
