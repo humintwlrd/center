@@ -54,24 +54,6 @@ export function ProductCard({ product, priority }: Props) {
           {product.descricao}
         </p>
 
-        {product.destaques && product.destaques.length > 0 && (
-          <ul className="mt-4 flex flex-wrap gap-1.5">
-            {product.destaques.slice(0, 4).map((d) => (
-              <li
-                key={d}
-                className="border border-line bg-paper px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-soft"
-              >
-                {d}
-              </li>
-            ))}
-            {product.destaques.length > 4 && (
-              <li className="px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-muted">
-                +{product.destaques.length - 4}
-              </li>
-            )}
-          </ul>
-        )}
-
         {/* Preço parcelado + compra — empurrado para a base do card */}
         <div className="mt-auto pt-6">
           <p className="font-display text-2xl font-bold text-gold-active">{product.parcelado}</p>
