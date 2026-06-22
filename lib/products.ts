@@ -63,7 +63,7 @@ export const PRODUCTS: Product[] = [
     ],
     image: "/images/shop/acervo-tatico.webp",
     imageAlt:
-      "Pôster do Acervo Tático HUMINT: silhueta de um rosto dividido em dois tons, com o título ACERVO TÁTICO HUMINT.",
+      "Pôster Acervo Tático HUMINT em estilo dossiê: silhueta sob fragmentos de documentos confidenciais.",
     checkoutUrl:
       "https://pay.herospark.com/acervo-tatico-de-inteligencia-humana-525712",
     destaque: true,
@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
     ],
     image: "/images/shop/engenharia-social.webp",
     imageAlt:
-      "Capa Engenharia Social: Os Fundamentos — figura observando uma cidade ao entardecer em tons de vermelho.",
+      "Capa Engenharia Social: multidão de silhuetas com figuras em vermelho e uma figura mascarada de óculos.",
     checkoutUrl:
       "https://pay.herospark.com/fundamentos-de-engenharia-social-principios-de-campo-525751",
   },
@@ -98,7 +98,7 @@ export const PRODUCTS: Product[] = [
       "Guia prático de OSINT: técnicas e fluxo de trabalho para investigação de fontes abertas, em formato ebook (PDF).",
     image: "/images/shop/osint-playbook.webp",
     imageAlt:
-      "Capa do Playbook OSINT do Mundo da HUMINT: rosto com sobreposição de código e o título Playbook OSINT.",
+      "Capa Playbook OSINT do Mundo da HUMINT: rosto em perfil com código sobreposto.",
     checkoutUrl:
       "https://pay.herospark.com/osint-playbook-guia-pratico-by-mundo-da-humint-525745",
   },

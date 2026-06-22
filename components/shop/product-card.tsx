@@ -21,7 +21,7 @@ export function ProductCard({ product, priority }: Props) {
       ].join(" ")}
     >
       {/* Capa real do produto (object-contain sobre fundo escuro para exibir o pôster inteiro) */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-deep">
+      <div className="relative aspect-[3/4] overflow-hidden bg-deep">
         <Image
           src={product.image || "/placeholder.svg"}
           alt={product.imageAlt}
@@ -29,7 +29,7 @@ export function ProductCard({ product, priority }: Props) {
           sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
           priority={priority}
           loading={priority ? "eager" : "lazy"}
-          className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
         <span className="absolute left-3 top-3 inline-block bg-ink px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-paper">
           {product.tipo}

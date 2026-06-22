@@ -51,14 +51,14 @@ export default async function ProductPage({ params }: Props) {
 
       <div className="container-editorial grid gap-10 py-10 md:py-14 lg:grid-cols-2">
         {/* Capa real */}
-        <div className="relative aspect-[4/5] w-full overflow-hidden border border-line bg-deep">
+        <div className="relative aspect-[3/4] w-full overflow-hidden border border-line bg-deep">
           <Image
             src={product.image || "/placeholder.svg"}
             alt={product.imageAlt}
             fill
             sizes="(min-width: 1024px) 600px, 100vw"
             priority
-            className="object-contain"
+            className="object-cover"
           />
           <span className="absolute left-3 top-3 inline-block bg-ink px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-paper">
             {product.tipo}
