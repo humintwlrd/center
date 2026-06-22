@@ -148,6 +148,26 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
           <p className="leading-relaxed text-ink">{highlightEntities(block.text)}</p>
         </aside>
       )
+    case "gallery":
+      return (
+        <div
+          key={i}
+          className="my-8 grid grid-cols-2 sm:grid-cols-3 gap-2"
+          role="group"
+          aria-label="Slides do post original"
+        >
+          {block.images.map((img, j) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={j}
+              src={img.src || "/placeholder.svg"}
+              alt={img.alt}
+              loading="lazy"
+              className="block w-full h-auto border border-line bg-deep"
+            />
+          ))}
+        </div>
+      )
     default:
       return null
   }

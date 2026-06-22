@@ -10,6 +10,7 @@ export type ArticleBlock =
   | { type: "ol"; items: string[] }
   | { type: "quote"; text: string; cite?: string }
   | { type: "note"; text: string }
+  | { type: "gallery"; images: { src: string; alt: string }[] }
 
 export type Article = {
   slug: string

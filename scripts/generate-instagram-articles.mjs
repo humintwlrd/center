@@ -295,6 +295,7 @@ function inferCategory(post) {
 }
 
 const instagramImagesDir = path.join(projectRoot, "public", "images", "instagram")
+const carouselDir = path.join(projectRoot, "public", "images", "carrossel")
 
 function resolveHeroImage(post, category) {
   const fallback = categoryHeroImages[category] ?? categoryHeroImages["fundamentos-de-humint"]
@@ -312,7 +313,23 @@ function resolveHeroImage(post, category) {
   return fallback
 }
 
-function buildArticle(post, categoryMap) {
+function resolveGallery(post, title) {
+  const shortCode = post.shortCode
+  if (!shortCode) return undefined
+  const dir = path.join(carouselDir, shortCode)
+  if (!fs.existsSync(dir)) return undefined
+  const files = fs
+    .readdirSync(dir)
+    .filter((file) => /\.jpe?g$/i.test(file))
+    .sort()
+  if (files.length === 0) return undefined
+  return files.map((file, index) => ({
+    src: `/images/carrossel/${shortCode}/${file}`,
+    alt: smartTrim(`${title} \u2014 slide ${index + 1}`, 130),
+  }))
+}
+
+function buildArticle(post, categoryMap, extras) {
   const category = categoryMap.get(post.shortCode) ?? inferCategory(post)
   const categoryLabel = categoryLabels[category] ?? categoryLabels["fundamentos-de-humint"]
   const hero = resolveHeroImage(post, category)
@@ -321,6 +338,31 @@ function buildArticle(post, categoryMap) {
   const publishedAt = post.timestamp ? String(post.timestamp).slice(0, 10) : "2026-05-10"
   const fullText = cleanText(removeHashtagCloudLines(post.caption ?? ""))
   const minutes = Math.max(1, Math.ceil(wordsCount(fullText) / 220))
+
+  const baseBody = captionToBlocks(post)
+  const galleryImages = resolveGallery(post, title)
+  const extra = extras ? extras[post.shortCode] : undefined
+  const transcript =
+    extra && typeof extra.slideText === "string" ? extra.slideText.trim() : ""
+  const body = [...baseBody]
+  if (transcript.length > 40) {
+    const paragraphs = transcript
+      .split(/\n{2,}/)
+      .map((chunk) => cleanText(chunk))
+      .filter(Boolean)
+    if (paragraphs.length > 0) {
+      body.push({ type: "h2", text: "Transcri\u00e7\u00e3o dos slides" })
+      body.push({
+        type: "note",
+        text:
+          "Texto extra\u00eddo automaticamente das imagens do carrossel; pode conter imprecis\u00f5es de OCR.",
+      })
+      for (const paragraph of paragraphs) body.push({ type: "p", text: paragraph })
+    }
+  }
+  if (galleryImages && galleryImages.length > 1) {
+    body.push({ type: "gallery", images: galleryImages })
+  }
 
   return {
     slug: `instagram-${String(post.shortCode).toLowerCase()}-${slugBase}`,
@@ -339,7 +381,7 @@ function buildArticle(post, categoryMap) {
     heroAlt: hero.alt,
     instagramShortCode: post.shortCode,
     instagramUrl: post.url || `https://www.instagram.com/p/${post.shortCode}/`,
-    body: captionToBlocks(post),
+    body,
   }
 }
 
@@ -347,6 +389,8 @@ function main() {
   const posts = readJson(exportPath)
   const audit = readJson(auditPath)
   const categoryMap = categoryByShortCode(audit)
+  const extrasPath = path.join(projectRoot, "data", "instagram-extras.json")
+  const extras = fs.existsSync(extrasPath) ? readJson(extrasPath) : {}
 
   if (!Array.isArray(posts)) {
     throw new Error(`O arquivo ${exportPath} não contém uma lista de posts.`)
@@ -356,7 +400,7 @@ function main() {
     (post) => !EXCLUDED_SHORT_CODES.has(post.shortCode),
   )
   const excludedCount = posts.length - visiblePosts.length
-  const articles = visiblePosts.map((post) => buildArticle(post, categoryMap))
+  const articles = visiblePosts.map((post) => buildArticle(post, categoryMap, extras))
   const uniqueSlugs = new Set(articles.map((article) => article.slug))
   if (uniqueSlugs.size !== articles.length) {
     throw new Error("Foram gerados slugs duplicados para os posts do Instagram.")

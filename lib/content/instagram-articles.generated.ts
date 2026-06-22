@@ -3,7 +3,7 @@
 
 import type { Article } from "./articles"
 
-export const INSTAGRAM_ARTICLE_COUNT = 294
+export const INSTAGRAM_ARTICLE_COUNT = 344
 
 export const INSTAGRAM_ARTICLES = [
   {
@@ -17056,6 +17056,7720 @@ export const INSTAGRAM_ARTICLES = [
       {
         "type": "p",
         "text": "Enquanto você \"apenas cumprimenta\", alguém pode já estar definindo como vai te conduzir pelo resto da conversa."
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzx1pv_kvqb-nos-anos-1930-a-universidade-de-cambridge-era-um-terreno-fertil",
+    "title": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil.",
+    "description": "Jovens brilhantes, revoltados com a crise econômica e fascinados pelas ideias socialistas, tornavam-se candidatos ideais para os soviéticos.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-09",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZX1pV_kVQB.jpg",
+    "heroAlt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil.",
+    "instagramShortCode": "DZX1pV_kVQB",
+    "instagramUrl": "https://www.instagram.com/p/DZX1pV_kVQB/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. Jovens brilhantes, revoltados com a crise econômica e fascinados pelas ideias socialistas, tornavam-se candidatos ideais para os soviéticos. Nesse ambiente, Kim Philby, filho de diplomata britânico, carismático e com conexões sociais valiosas, chamou atenção."
+      },
+      {
+        "type": "p",
+        "text": "O spotting foi meticuloso: colegas e professores simpatizantes se aproximaram, testaram sua lealdade em pequenas tarefas e avaliaram seu potencial."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Identificaram que ele tinha características desejadas:",
+          "Ideologia compatível",
+          "Ambiente social privilegiado",
+          "Origem diplomática, com acesso futuro a lideranças britânicas"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Em 1934, Philby foi formalmente recrutado pelo NKVD. Recebeu treinamento para apagar o rastro militante e se aproximar de círculos conservadores, preparando o terreno para, anos depois, infiltrar-se no MI6."
+      },
+      {
+        "type": "p",
+        "text": "Esse é o poder do spotting, transformar simples observação em estratégia de longo prazo."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Guerra E CEg dE E de inteligência o procuravam seus e"
+      },
+      {
+        "type": "p",
+        "text": "A Spotting: o primeiro passo da busca de potenciais alvos para é da Cpo a! A a"
+      },
+      {
+        "type": "p",
+        "text": "Nos anos 1930, Cambridge era terreno fértil para ideias TamEntama revolucionárias. estudante, chamou atenção dos"
+      },
+      {
+        "type": "p",
+        "text": "Philby foi identificado por seu; pis E A E E é perfeito e o abordaram. do"
+      },
+      {
+        "type": "p",
+        "text": "A Esse é o spotting em ação: EM Observar, mapear e avaliar. e! DO Doo a A E GIrua E o lda Tra Philby não foi recrutado por acaso, mas por ter sido escolhido a dedo."
+      },
+      {
+        "type": "p",
+        "text": "Kim Philby foi recrutado a pelo seu potencial. um estudante inteligente, carismático e bem relacionado. aquilo que os soviéticos desejavam encontrar, anos depois, dentro do MI6."
+      },
+      {
+        "type": "p",
+        "text": "o Philby se tornou parte dos: O grupo de espiões britânicos mais famosos a serviço da URSS"
+      },
+      {
+        "type": "p",
+        "text": "E Spotting continua sendo usado em HUMINT, seja por agências ou até por corporações em busca de talentos estratégicos. ania SE men e PErEr"
+      },
+      {
+        "type": "p",
+        "text": "E você? Sabe identificar os sinais que revelam se alguém pode ser uma fonte de valor? E compartilhe, curta e comente MundodaHumint"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/01.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/02.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/03.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/04.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/05.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/06.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/07.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/08.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZX1pV_kVQB/09.jpg",
+            "alt": "Nos anos 1930, a Universidade de Cambridge era um terreno fértil. — slide 9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyqvvszr2_y-o-carrinho-de-mercado-fala-mais-sobre-voce-do-que-parece",
+    "title": "O carrinho de mercado fala mais sobre você do que parece.",
+    "description": "Produtos impulsivos, marcas específicas, organização dos itens, excesso de industrializados, foco em praticidade, compras para status ou para conforto emocional…...",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Comportamento Humano",
+      "Psicologia Comportamental",
+      "Engenharia Social",
+      "Leitura Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-23",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYqVvszR2_Y.jpg",
+    "heroAlt": "O carrinho de mercado fala mais sobre você do que parece.",
+    "instagramShortCode": "DYqVvszR2_Y",
+    "instagramUrl": "https://www.instagram.com/p/DYqVvszR2_Y/",
+    "body": [
+      {
+        "type": "p",
+        "text": "O carrinho de mercado fala mais sobre você do que parece."
+      },
+      {
+        "type": "p",
+        "text": "Produtos impulsivos, marcas específicas, organização dos itens, excesso de industrializados, foco em praticidade, compras para status ou para conforto emocional…"
+      },
+      {
+        "type": "p",
+        "text": "Tudo isso ajuda a revelar rotina, prioridades, nível de ansiedade, planejamento, contexto financeiro e até traços de personalidade."
+      },
+      {
+        "type": "p",
+        "text": "Em HUMINT, pequenos padrões cotidianos raramente são \"só detalhes\". Eles ajudam a montar contexto."
+      },
+      {
+        "type": "p",
+        "text": "E é justamente o contexto que transforma observação em informação."
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dy4_iukez22-leitura-a-frio-e-um-processo-de-inferencia-comportamental-baseado-em-sin",
+    "title": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados.",
+    "description": "O cérebro humano faz isso o tempo inteiro de forma automática.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Comportamento Humano",
+      "Engenharia Social",
+      "Psicologia Comportamental",
+      "Leitura AFrio"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-28",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DY4_iUKEZ22.jpg",
+    "heroAlt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados.",
+    "instagramShortCode": "DY4_iUKEZ22",
+    "instagramUrl": "https://www.instagram.com/p/DY4_iUKEZ22/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados."
+      },
+      {
+        "type": "p",
+        "text": "O cérebro humano faz isso o tempo inteiro de forma automática. Quando você olha alguém e pensa \"essa pessoa parece cansada\", \"parece organizada\", \"parece impulsiva\", você já está interpretando microinformações sem perceber."
+      },
+      {
+        "type": "p",
+        "text": "A diferença é que algumas pessoas treinam esse processo de forma deliberada."
+      },
+      {
+        "type": "p",
+        "text": "Em HUMINT, vendas, interrogatórios, recrutamento, negociação e engenharia social, o objetivo é reduzir incerteza."
+      },
+      {
+        "type": "p",
+        "text": "Você observa padrões de consumo, aparência, linguagem corporal, vocabulário, ritmo de fala, objetos pessoais, pequenos hábitos e prioridades aparentes. Depois, cria hipóteses provisórias."
+      },
+      {
+        "type": "p",
+        "text": "Hipóteses. Não certezas."
+      },
+      {
+        "type": "p",
+        "text": "O problema começa quando alguém transforma leitura probabilística em convicção absoluta. Porque seres humanos são complexos, contraditórios e contextuais. Um mesmo comportamento pode ter causas completamente diferentes."
+      },
+      {
+        "type": "p",
+        "text": "Por isso profissionais experientes não \"batem o martelo\". Eles usam a leitura a frio como ferramenta de aproximação, calibração e adaptação social."
+      },
+      {
+        "type": "p",
+        "text": "É quase como ajustar a frequência de um rádio."
+      },
+      {
+        "type": "p",
+        "text": "Você observa. Testa. Recebe feedback. Corrige a leitura. E continua refinando."
+      },
+      {
+        "type": "p",
+        "text": "Leitura a frio serve também para perceber o quanto nós emitimos sinais o tempo inteiro… mesmo quando achamos que estamos em silêncio."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "DE... O que podemos saber"
+      },
+      {
+        "type": "p",
+        "text": "Quando o desafio é lançado, Eee alega de SÃO Sie efe jars o leis Lao o logurte em quantidade, Epil começou E acriar hipóteses. A é"
+      },
+      {
+        "type": "p",
+        "text": "itens de limpeza E compraspráticas. E Talvezfilhos. o Talvez pouco tempo. E Os comentários do post original resumem bem diversos raciocínios que podemnser feitos a À Doutor Nada é certeza. Eleitura de contexto."
+      },
+      {
+        "type": "p",
+        "text": "canto NA e a Doeste Reto enjoa itens baratos... mas escolhe UM produto premium específico. Seo supe ooo a prioridade emocional.. Economiza em alguma coisa e"
+      },
+      {
+        "type": "p",
+        "text": "A organização do carrinho também comunica. Pode indicar alguém mais metódico. Tudo misturado? Talvez pressa, impulsividade ou cansaço mental. Talvez seja apenas uma pessoa que conviva bem com a."
+      },
+      {
+        "type": "p",
+        "text": "Leitura a frio não vai ser útil para tirar conclusões definitivas. Mas com toda certeza ajuda a entender o outro, criar estratégias de aproximação, identificar assuntos o e para criar conexão. Um vendedor faz isso. Um recrutador faz isso. Um interrogador faz isso. Um golpista também. Todos querem entender qual é a melhor forma de"
+      },
+      {
+        "type": "p",
+        "text": "dam Enquanto você observa os outros... os outros também observam você. E o comportamento também fala, vezes mais do que palavras. e: E A melhor defesa é estar ciente daquilo que nós estamos comunicando"
+      },
+      {
+        "type": "p",
+        "text": "A Curta, siga, comente e; DSjo o a Comunicação e Influência,"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/01.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/02.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/03.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/04.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/05.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/06.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/07.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DY4_iUKEZ22/08.jpg",
+            "alt": "Leitura a frio é um processo de inferência comportamental baseado em sinais fragmentados. — slide 8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyps6tpkahx-a-maior-parte-das-operacoes-modernas-de-influencia-nao-depende-de-super-",
+    "title": "A maior parte das operações modernas de influência não depende de \"super espiões\".",
+    "description": "Depende de relacionamento humano. É exatamente por isso que HUMINT continua sendo uma das ferramentas mais poderosas do mundo.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Contrainteligencia",
+      "China"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-12",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYPs6tPkahx.jpg",
+    "heroAlt": "A maior parte das operações modernas de influência não depende de \"super espiões\". Depende de relacionamento humano.",
+    "instagramShortCode": "DYPs6tPkahx",
+    "instagramUrl": "https://www.instagram.com/p/DYPs6tPkahx/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A maior parte das operações modernas de influência não depende de \"super espiões\". Depende de relacionamento humano."
+      },
+      {
+        "type": "p",
+        "text": "É exatamente por isso que HUMINT continua sendo uma das ferramentas mais poderosas do mundo."
+      },
+      {
+        "type": "p",
+        "text": "Governos entendem que as pessoas abrem portas que tecnologia nenhuma consegue abrir."
+      },
+      {
+        "type": "p",
+        "text": "E muitas vezes isso acontece sem ameaça, sem chantagem e sem clandestinidade aparente."
+      },
+      {
+        "type": "p",
+        "text": "A aproximação ocorre através de prestígio, pertencimento, validação, networking e influência gradual."
+      },
+      {
+        "type": "p",
+        "text": "As operações não precisam buscar documentos secretos."
+      },
+      {
+        "type": "p",
+        "text": "Basta moldar percepção, influenciar ambiente político, criar proximidade estratégica e gerar acesso contínuo."
+      },
+      {
+        "type": "p",
+        "text": "Na prática, influência humana é uma arma geopolítica."
+      },
+      {
+        "type": "p",
+        "text": "Qual você acha mais perigoso, o espião clandestino…ou alguém influenciando decisões sem parecer uma ameaça?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "de uma cidade americana.... e, secretamente, trabalhava para a China."
+      },
+      {
+        "type": "p",
+        "text": "Eileen Wang, prefeita de San Leandro, na Califórnia, se declarou culpada por atuarcomo agenteligadaao governo chinês. ela recebia benefícios, favores e orientações políticas."
+      },
+      {
+        "type": "p",
+        "text": "Não era uma espionagem clássica. Não queria segredos nucleares, nem usava gadgets. Nada de operações cinematográficas. e É Mas ela tinha acesso, influência e relacionamentos. e,"
+      },
+      {
+        "type": "p",
+        "text": "HUMINT é obtenção de dados através de pessoas. eficientes de obter isso é aproximando-se de quem"
+      },
+      {
+        "type": "p",
+        "text": "Governos não precisam invadir tudo. Um assessor, um empresário, E sabe um político local."
+      },
+      {
+        "type": "p",
+        "text": "Na Guerra Fria, o foco eram militares, cientistas e diplomatas. Hoje, o terreno expandiu. Universidades, empresas, governos, mídia, Think tanks e comunidades locais. miche Tudo virou área"
+      },
+      {
+        "type": "p",
+        "text": "Tudo começa com convites, eventos, congressos, networking, viagens, prestígio, sensação de importância. Os vínculos vão formando."
+      },
+      {
+        "type": "p",
+        "text": "A maioria das pessoas é recrutada por ego, status, pertencimento, oportunidade, Nem percebem a construção, do envolvimento."
+      },
+      {
+        "type": "p",
+        "text": "influenciar decisões, moldar narrativas,. ou reduzir resistência política."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que a Inteligência moderna não separa mais espionagem, influência e relacionamento humano. Tudo se mistura."
+      },
+      {
+        "type": "p",
+        "text": "estão próximas de centros de decisão sem perceberem que viraram ativos? Comente, curta e compartilhe"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/01.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/02.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/03.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/04.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/05.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/06.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/07.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/08.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/09.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/10.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYPs6tPkahx/11.jpg",
+            "alt": "A maior parte das operações modernas de influência não depende de \"super espiões\". — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyvkb-hkutb-com-frequencia-as-reunioes-sao-espacos-de-conducao-psicologica",
+    "title": "Com frequência as reuniões são espaços de condução psicológica.",
+    "description": "Ao definir a pauta, define-se também o foco mental do grupo. Ao validar determinadas falas, reduz-se resistência e aumenta-se abertura emocional.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Psicologia Comportamental",
+      "Engenharia Social",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-25",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYvkB-hkUTb.jpg",
+    "heroAlt": "Com frequência as reuniões são espaços de condução psicológica. Ao definir a pauta, define-se também o foco mental do grupo.",
+    "instagramShortCode": "DYvkB-hkUTb",
+    "instagramUrl": "https://www.instagram.com/p/DYvkB-hkUTb/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Com frequência as reuniões são espaços de condução psicológica."
+      },
+      {
+        "type": "p",
+        "text": "Ao definir a pauta, define-se também o foco mental do grupo. Ao validar determinadas falas, reduz-se resistência e aumenta-se abertura emocional. Ao fazer as perguntas certas, torna-se possível identificar medos, prioridades, inseguranças e alianças dentro da sala."
+      },
+      {
+        "type": "p",
+        "text": "Assim funciona a dinâmica humana."
+      },
+      {
+        "type": "p",
+        "text": "Poucas pessoas racionalizam quem realmente está conduzindo uma conversa quando não há autoridade definida."
+      },
+      {
+        "type": "p",
+        "text": "Porque influência sofisticada parece organização. Parece colaboração. Parece liderança natural."
+      },
+      {
+        "type": "p",
+        "text": "Por isso técnicas de elicitação funcionam tão bem em ambientes corporativos, negociações, entrevistas, vendas e até relações pessoais."
+      },
+      {
+        "type": "p",
+        "text": "A maioria das pessoas escuta palavras, mas não observam direção, enquadramento e controle emocional do ambiente."
+      },
+      {
+        "type": "p",
+        "text": "É aí que quem conhece as técnicas se destaca."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Em um grupo, talvez você É queria conduzir o tema E mais facilidade. a. Tente seguir essas dicas. e a a"
+      },
+      {
+        "type": "p",
+        "text": "a Vamos começar pelo objetivo principal. delimita-se o escopo daconversa. É a Ganha-se foco e eficiência."
+      },
+      {
+        "type": "p",
+        "text": "E Estamos alinhados antes de começar? Mas serve para eliminar resistência cedo."
+      },
+      {
+        "type": "p",
+        "text": "Pessoas falam mais; quando se sentem, reconhecidas."
+      },
+      {
+        "type": "p",
+        "text": "Quero ouvir quem ainda Tori e extrair informação de perfis mais retraídos. É"
+      },
+      {
+        "type": "p",
+        "text": "O Quais riscos você debatendo. Está identificando medos, inseguranças e"
+      },
+      {
+        "type": "p",
+        "text": "a Comoisso se conecta Uma das ferramentas a mais usadas em condução psicológica."
+      },
+      {
+        "type": "p",
+        "text": "Podemos sustentar isso com dados? Pressão social elegante. A pessoa passa a justificar a própria posição."
+      },
+      {
+        "type": "p",
+        "text": "E: Ao distribuir tarefas... assume-se aliderança Sue Eder autoridade."
+      },
+      {
+        "type": "p",
+        "text": "espionagem. E entender como conversas. moldam comportamento.,. E À Gadi Curta, comente e compartilhe, Vocêsabe controlar uma reunião?:"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/01.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/02.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/03.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/04.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/05.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/06.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/07.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/08.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/09.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/10.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYvkB-hkUTb/11.jpg",
+            "alt": "Com frequência as reuniões são espaços de condução psicológica. — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyxrbzwrqf7-e-muito-comum-utilizar-postagens-nas-redes-sociais-para-obter-algum-dado",
+    "title": "É muito comum utilizar postagens nas redes sociais para obter algum dado a mais.",
+    "description": "O Desafio é a partir dessa imagem descobrir onde a foto foi tirada.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-15",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYXrbzWRqF7.jpg",
+    "heroAlt": "É muito comum utilizar postagens nas redes sociais para obter algum dado a mais.",
+    "instagramShortCode": "DYXrbzWRqF7",
+    "instagramUrl": "https://www.instagram.com/p/DYXrbzWRqF7/",
+    "body": [
+      {
+        "type": "p",
+        "text": "É muito comum utilizar postagens nas redes sociais para obter algum dado a mais. O Desafio é a partir dessa imagem descobrir onde a foto foi tirada."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Desafio de OSINT: localização DE e o DE E é e E Eae E e faia e pci DE"
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzgerhyef_x-uma-das-ilusoes-em-seguranca-digital-e-acreditar-que-o-risco-esta-apenas",
+    "title": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo.",
+    "description": "Fotografias podem carregar informações invisíveis ao usuário comum.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "OPSEC",
+      "Contrainteligencia",
+      "Seguranca Da Informacao",
+      "OSINT",
+      "HUMINT"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-12",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZgERHYEf_X.jpg",
+    "heroAlt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo.",
+    "instagramShortCode": "DZgERHYEf_X",
+    "instagramUrl": "https://www.instagram.com/p/DZgERHYEf_X/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo."
+      },
+      {
+        "type": "p",
+        "text": "Fotografias podem carregar informações invisíveis ao usuário comum. Data, horário, modelo do equipamento, coordenadas geográficas e outros metadados que ajudam a reconstruir contexto, rotina e localização."
+      },
+      {
+        "type": "p",
+        "text": "Cada informação entregue reduz a incerteza do adversário."
+      },
+      {
+        "type": "p",
+        "text": "Uma foto isolada pode parecer irrelevante. Dez fotos, horários de publicação, locais recorrentes, conexões pessoais e pequenos detalhes aparentemente inocentes podem permitir a construção de um quadro muito mais completo."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que a proteção começa com a percepção daquilo que está sendo entregue."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Escondeu sua e: identidade por anos. E até que enviou uma foto provocando as autoridades. o"
+      },
+      {
+        "type": "p",
+        "text": "Em 2012, Higinio E Ochoa era conhecido no mundo hacker Integrava um Na grupo ligado ao Anonymous. Seus alvos incluiam governos, empresas e forças policiais."
+      },
+      {
+        "type": "p",
+        "text": "O grupo realizava invasões e vazava informações sigilosas. Ochoa acreditava estar protegido pelo anonimato. Até então, estava funcionando."
+      },
+      {
+        "type": "p",
+        "text": "Após um dos ataques, ele decidiu comemorar. E também provocar as autoridades."
+      },
+      {
+        "type": "p",
+        "text": "Uma foto foi publicada na internet. Nela, sua namorada aparecia segurando uma mensagem zombando da, É polícia. Parecia apenas uma provocação."
+      },
+      {
+        "type": "p",
+        "text": "Mas a imagem escondia algo que ele conhecia, mas não verificou. Metadados. Informações gravadas automaticamente pelo celular que tirou a foto."
+      },
+      {
+        "type": "p",
+        "text": "Entre os dados dad havia sido tirada.. A a"
+      },
+      {
+        "type": "p",
+        "text": "Os investigadores seguiram a pista. A localização levou até a mulher da foto."
+      },
+      {
+        "type": "p",
+        "text": "Anos de anonimato ruíram por causa de um único arquivo. O erro foi humano. A vontade de comemorar falou mais alto que a disciplina."
+      },
+      {
+        "type": "p",
+        "text": "É e e Muitas falhas críticas não ocorrem por falta de conhecimento, mas por um momento de desatenção"
+      },
+      {
+        "type": "p",
+        "text": "Você garante a disciplina a ponto de não ser traído pela desatenção? Curta, siga e compartilhe o Aqui você aprende sobre inteligência através de histórias reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/01.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/02.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/03.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/04.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/05.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/06.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/07.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/08.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/09.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/10.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZgERHYEf_X/11.jpg",
+            "alt": "Uma das ilusões em segurança digital é acreditar que o risco está apenas no conteúdo. — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dz0l7ymkc01-nenhuma-empresa-controla-todos-os-dispositivos-dos-funcionarios",
+    "title": "Nenhuma empresa controla todos os dispositivos dos funcionários.",
+    "description": "Nenhuma organização impede todos os cliques errados.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "Contrainteligencia",
+      "OPSEC",
+      "Seguranca Da Informacao",
+      "Gestao De Risco",
+      "HUMINT"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-20",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZ0l7YMkc01.jpg",
+    "heroAlt": "Nenhuma empresa controla todos os dispositivos dos funcionários. Nenhuma organização impede todos os cliques errados.",
+    "instagramShortCode": "DZ0l7YMkc01",
+    "instagramUrl": "https://www.instagram.com/p/DZ0l7YMkc01/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Nenhuma empresa controla todos os dispositivos dos funcionários. Nenhuma organização impede todos os cliques errados. Nenhum sistema está totalmente imune a vazamentos, erros de configuração, ameaças internas ou credenciais comprometidas."
+      },
+      {
+        "type": "p",
+        "text": "Embora esse seja o objetivo, é impossível eliminar completamente o risco."
+      },
+      {
+        "type": "p",
+        "text": "Deve-se aceitar isso para reduzir o impacto quando algo inevitavelmente der errado."
+      },
+      {
+        "type": "p",
+        "text": "Essa lógica não vale apenas para empresas. Vale para qualquer pessoa."
+      },
+      {
+        "type": "p",
+        "text": "Não adianta viver acreditando que nada acontecerá. Deve-se construir camadas de proteção suficientes para continuar operando quando acontecer."
+      },
+      {
+        "type": "p",
+        "text": "Na segurança, maturidade é também a capacidade de estar preparado para as eventuais falhas. E sobreviver a elas sem resultado crítico."
+      },
+      {
+        "type": "p",
+        "text": "Qual camada de proteção você acredita que a maioria das organizações negligencia hoje?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Milhares de celulares receberam uma mensagem que não deveria existir: a o o Misantropi4 A falha por trás disso é mais comum do que você imagina."
+      },
+      {
+        "type": "p",
+        "text": "junho, usuários de diversos estados receberam um alerta extremo da Defesa Civil. Defesa Civil: misantropi4 Não havia emergência."
+      },
+      {
+        "type": "p",
+        "text": "Rapidamente começaram as perguntas:"
+      },
+      {
+        "type": "p",
+        "text": "a Muita gente imagina que situações assim acontecem por ataques altamente, sofisticados. A a Normalmente a explicação a é bem mais simples."
+      },
+      {
+        "type": "p",
+        "text": "Em diversos incidentes de segurança, não é necessário invadir o sistema. Mon Utiliza-se um acesso que"
+      },
+      {
+        "type": "p",
+        "text": "Uma credencial esquecida. Um usuário que nunca foi removido. Uma senha vazada. Uma conta compartilhada. É assim que muitas organizações são comprometidas. E"
+      },
+      {
+        "type": "p",
+        "text": "E Acessos legítimos são. comprometidos o tempo todo. Todos os dias. Em empresas de todos os tamanhos."
+      },
+      {
+        "type": "p",
+        "text": "Vazamentos de bases de dados. Reutilização de senhas. é Falhas humanas. À Não é uma hipótese distante."
+      },
+      {
+        "type": "p",
+        "text": "Por isso, organizações maduras não dependem apenas do segredo de uma credencial. E Elas assumem que algum e E comprometido. Elimitam o que pode acontecer quando isso ocorrer."
+      },
+      {
+        "type": "p",
+        "text": "Toda organização protege suas senhas. O dia em que elas cairão nas mãos erradas. login"
+      },
+      {
+        "type": "p",
+        "text": "Segredo na segurança não é impedir todas as falhas, mas considerar que elas ocorrerão. o Curta, siga e compartilhe. Aqui você aprende sobre Inteligência através de histórias reais a"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/01.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/02.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/03.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/04.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/05.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/06.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/07.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/08.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/09.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/10.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZ0l7YMkc01/11.jpg",
+            "alt": "Nenhuma empresa controla todos os dispositivos dos funcionários. — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzqdnyyeyg9-muitas-informacoes-mudam-de-maos-porque-alguem-decidiu-confiar-na-pessoa",
+    "title": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada.",
+    "description": "A coleta de informações através de fonte humana exige um uma série de avaliações que dependem de percepções. Quem parece confiável? Quem parece legítimo?",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Contrainteligencia",
+      "Espionagem",
+      "Engenharia Social",
+      "Seguranca"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-16",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZqdNyyEYG9.jpg",
+    "heroAlt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada.",
+    "instagramShortCode": "DZqdNyyEYG9",
+    "instagramUrl": "https://www.instagram.com/p/DZqdNyyEYG9/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada."
+      },
+      {
+        "type": "p",
+        "text": "A coleta de informações através de fonte humana exige um uma série de avaliações que dependem de percepções."
+      },
+      {
+        "type": "p",
+        "text": "Quem parece confiável? Quem parece legítimo? Quem parece não representar risco?"
+      },
+      {
+        "type": "p",
+        "text": "A maioria dos profissionais aprende a proteger sistemas. Poucos aprendem a proteger relacionamentos. E é justamente nesse espaço que muitos problemas começam. Além de proteger seus sistemas e seus dados, vale fazer uma pergunta mais simples:"
+      },
+      {
+        "type": "p",
+        "text": "Você saberia reconhecer alguém tentando entender você?"
+      },
+      {
+        "type": "p",
+        "text": "Não suas senhas. Não seus dispositivos."
+      },
+      {
+        "type": "p",
+        "text": "VOCÊ."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "A Rússiaafirmou A Led atig feio Tede E CIA usando esta peruca. dBi O que encontraram depois foi ainda mais"
+      },
+      {
+        "type": "p",
+        "text": "e. Diplomata americanoem, Moscou. Segundo o governo russo, eletambém trabalhava paraa."
+      },
+      {
+        "type": "p",
+        "text": "Em maio de 2013, foi detido pelo FSB durante uma tentativa de ale"
+      },
+      {
+        "type": "p",
+        "text": "Quando seus pertences foram examinados, os russos divulgaram fotos do que encontraram. Mei lie Oculos escuros Eld Dinheiro em espécie As imagens correram o mundo. Parecia uma cena de filme."
+      },
+      {
+        "type": "p",
+        "text": "Mas o item mais Supostamente destinada E de JEefor o"
+      },
+      {
+        "type": "p",
+        "text": "A carta explicava como funcionaria a cooperação. E Contato secreto. Troca de informações. Pagamentos. Tudo explicaso de;"
+      },
+      {
+        "type": "p",
+        "text": "E à Enormal acreditarem que orecrutamento começa E Rua de O E"
+      },
+      {
+        "type": "p",
+        "text": "Antes do dinheiro vem relacionamento, confiança e interesse. o Nenhuma fonte entrega informações relevantes para um total desconhecido. da a E construir vínculo."
+      },
+      {
+        "type": "p",
+        "text": "Por isso que essa etapa costuma começar com conversas"
+      },
+      {
+        "type": "p",
+        "text": "Fique alerta quando alguém demonstra mais interesse no seu acesso do que em você. Projetos. Clientes. Processos. Informações internas."
+      },
+      {
+        "type": "p",
+        "text": "Ryan Fogleficou famoso por causa da peruca. Devido a imunidade diplomática foi considerado persona non grata e teve que deixar a Rússia."
+      },
+      {
+        "type": "p",
+        "text": "Mas o ensinamento do episódio a gente aprendeu pela carta. Mme O relacionamento é mais importante na hora de construir sua rede de dA fontes humanas. Essa é a essência da e Tou"
+      },
+      {
+        "type": "p",
+        "text": "Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/01.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/02.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/03.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/04.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/05.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/06.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/07.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/08.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/09.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/10.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/11.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/12.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZqdNyyEYG9/13.jpg",
+            "alt": "Muitas informações mudam de mãos porque alguém decidiu confiar na pessoa errada. — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dysl0xbkd2y-a-inteligencia-humana-sempre-dependeu-menos-da-tecnologia-e-mais-da-capa",
+    "title": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de...",
+    "description": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de perceber padrões, movimentos, comportamentos e intenções antes dos outros.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Segunda Guerra",
+      "Inteligencia Humana",
+      "Tradecraft"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-23",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYsl0xbkd2y.jpg",
+    "heroAlt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de perceber padrões, movimentos, comportamentos e...",
+    "instagramShortCode": "DYsl0xbkd2y",
+    "instagramUrl": "https://www.instagram.com/p/DYsl0xbkd2y/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de perceber padrões, movimentos, comportamentos e intenções antes dos outros. Foi assim na Segunda Guerra. Continua sendo assim hoje."
+      },
+      {
+        "type": "p",
+        "text": "O ponto mais importante é que informação raramente nasce no topo. Ela nasce na periferia do sistema. Em conversas aparentemente comuns. Em pequenos detalhes ignorados. Em pessoas consideradas \"irrelevantes\"."
+      },
+      {
+        "type": "p",
+        "text": "Por isso HUMINT não é apenas uma ferramenta militar."
+      },
+      {
+        "type": "p",
+        "text": "É uma forma de entender como ambientes funcionam, como redes humanas se conectam e como decisões são influenciadas silenciosamente."
+      },
+      {
+        "type": "p",
+        "text": "Operações clandestinas colapsam porque alguém fala, observa, denuncia, confia demais… ou ignora o fator humano."
+      },
+      {
+        "type": "p",
+        "text": "No fim, tecnologia amplia capacidades."
+      },
+      {
+        "type": "p",
+        "text": "Mas são pessoas que vencem ou destroem operações."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "a E O Japão avançava A violentamente pelo A Pacífico após Pearl Harbor. a é Se Cidades estavam É É sendo ocupadas. ERabaul virou um ponto estratégico da guerra."
+      },
+      {
+        "type": "p",
+        "text": "É Na região vivia Sua família administrava uma plantação isolada na Papua-Nova Guiné. a Mas o padrasto dele"
+      },
+      {
+        "type": "p",
+        "text": "Ted Harvey fazia parte dos Coastwatchers. Uma rede clandestina australiana de observação. Riad A missão era simples: observar tropas japonesas..."
+      },
+      {
+        "type": "p",
+        "text": "HUMINT em estado Jia cor pessoas observando... e enviando informação."
+      },
+      {
+        "type": "p",
+        "text": "o Quando os japoneses invadiram E Rabaul, Ted permaneceu escondido operando um transmissor clandestino. Liu oro militares, navios, tropas e cas O Do Cada mensagem enviada colocava a família inteira em risco."
+      },
+      {
+        "type": "p",
+        "text": "Mas alguém denunciou Ted aos japoneses. Os soldados chegaram na E Encontraram o rádio. Encontraram um revólver. Durante a abordagem, um soldado japonês agrediu a mãe de Dickie."
+      },
+      {
+        "type": "p",
+        "text": "É Dickie reagiu. Um menino de soco em um soldado japonês e ELE a família inteira deixou de ser. vista como civil."
+      },
+      {
+        "type": "p",
+        "text": "O julgamento durou, poucosdias. A acusação: espionagem."
+      },
+      {
+        "type": "p",
+        "text": "Antes da execução, a mãe amarrou um pano vermelho nos olhos de Dickie. Ela não queria que o filho visse o pelotão de fuzilamento. Então segurou suas mãos... até os disparos começarem."
+      },
+      {
+        "type": "p",
+        "text": "coletada em salas secretas. die Ela nasce em fazendas. o Em pessoas comuns vivendo de E E é exatamente que está em todo lugar, e é tão poderosa."
+      },
+      {
+        "type": "p",
+        "text": "A é Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/01.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/02.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/03.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/04.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/05.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/06.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/07.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/08.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/09.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/10.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/11.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYsl0xbkd2y/12.jpg",
+            "alt": "A inteligência humana sempre dependeu menos da tecnologia e mais da capacidade de... — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyf0htfkqy1-a-maioria-das-pessoas-imagina-vazamento-de-informacao-como-algo-sofistic",
+    "title": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como...",
+    "description": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como hackers, malware, satélites, escutas clandestinas.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "OSINT",
+      "OPSEC",
+      "Segurança Digital"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-18",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYf0hTfkQy1.jpg",
+    "heroAlt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como hackers, malware, satélites, escutas clandestinas.",
+    "instagramShortCode": "DYf0hTfkQy1",
+    "instagramUrl": "https://www.instagram.com/p/DYf0hTfkQy1/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como hackers, malware, satélites, escutas clandestinas."
+      },
+      {
+        "type": "p",
+        "text": "Mas, na prática, muita coisa é entregue de forma espontânea."
+      },
+      {
+        "type": "p",
+        "text": "Uma foto aparentemente inocente. Um hábito repetido. Um horário constante. Uma corrida registrada no aplicativo. Um check-in. Um fundo de tela. Uma rotina previsível."
+      },
+      {
+        "type": "p",
+        "text": "Inteligência não é apenas descobrir segredos. Muitas vezes é conectar pequenos fragmentos públicos até que eles revelem algo maior."
+      },
+      {
+        "type": "p",
+        "text": "O problema da hiperexposição não é apenas privacidade. É previsibilidade."
+      },
+      {
+        "type": "p",
+        "text": "E previsibilidade gera vulnerabilidade."
+      },
+      {
+        "type": "p",
+        "text": "Foi assim que militares, agentes, executivos e até governos já expuseram posições, padrões e comportamentos sem perceber."
+      },
+      {
+        "type": "p",
+        "text": "Na era digital, comportamento também produz inteligência."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "uma cerveja... a E eacabaram revelando até a"
+      },
+      {
+        "type": "p",
+        "text": "eres Militares britânicos usavam o Foursquare para marcar presença em bares próximos"
+      },
+      {
+        "type": "p",
+        "text": "Esses check-ins, repetidos várias Mas formavam um padrão."
+      },
+      {
+        "type": "p",
+        "text": "Um gesto banal, como um check-in em barzinho, pode virar inteligência estratégica. Esse é o poder da falha de OPSEC."
+      },
+      {
+        "type": "p",
+        "text": "A Percebeu o Mom pessoas divulgam sem perceber? A a Curta, E e compartilhe Oquejá descobriu devido DE"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYf0hTfkQy1/01.jpg",
+            "alt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYf0hTfkQy1/02.jpg",
+            "alt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYf0hTfkQy1/03.jpg",
+            "alt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYf0hTfkQy1/04.jpg",
+            "alt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYf0hTfkQy1/05.jpg",
+            "alt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYf0hTfkQy1/06.jpg",
+            "alt": "A maioria das pessoas imagina vazamento de informação como algo sofisticado como... — slide 6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dykpqtrkfrh-a-maior-espionagem-moderna-acontece-no-seu-bolso",
+    "title": "A maior espionagem moderna acontece no seu bolso.",
+    "description": "O celular deixou de ser apenas um meio de comunicação. Hoje ele funciona como um sensor permanente de comportamento humano.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Geopolitica",
+      "Inteligencia",
+      "Espionagem",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-20",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYkpQtRkfrh.jpg",
+    "heroAlt": "A maior espionagem moderna acontece no seu bolso. O celular deixou de ser apenas um meio de comunicação.",
+    "instagramShortCode": "DYkpQtRkfrh",
+    "instagramUrl": "https://www.instagram.com/p/DYkpQtRkfrh/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A maior espionagem moderna acontece no seu bolso."
+      },
+      {
+        "type": "p",
+        "text": "O celular deixou de ser apenas um meio de comunicação. Hoje ele funciona como um sensor permanente de comportamento humano. Ele registra rotina, deslocamento, padrão de sono, consumo, relações sociais, interesses políticos, impulsos emocionais e até mudanças sutis de humor."
+      },
+      {
+        "type": "p",
+        "text": "E isso tem valor estratégico gigantesco."
+      },
+      {
+        "type": "p",
+        "text": "Por trás da disputa entre EUA e China existe uma guerra por dados, influência e percepção. O debate sobre apps chineses nunca foi apenas sobre \"vídeos curtos\" ou compras online. O ponto central sempre foi outro: quem controla ecossistemas digitais passa a entender populações inteiras em escala."
+      },
+      {
+        "type": "p",
+        "text": "Isso é ouro."
+      },
+      {
+        "type": "p",
+        "text": "HUMINT não é apenas recrutar fontes ou conduzir conversas. HUMINT é compreender pessoas: seus medos, desejos, vulnerabilidades, padrões e motivações."
+      },
+      {
+        "type": "p",
+        "text": "E pela primeira vez na história, bilhões de pessoas passaram a alimentar sistemas com esses dados voluntariamente… todos os dias."
+      },
+      {
+        "type": "p",
+        "text": "A guerra fria do século XXI talvez esteja sendo travada por algoritmos que entendem comportamento humano melhor do que governos."
+      },
+      {
+        "type": "p",
+        "text": "E maioria das pessoas ainda acha que está apenas \"usando um aplicativo\"."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Omaior sistemade vigilância da história cabenoseubolso. e Seu celular sabe até quando você está triste."
+      },
+      {
+        "type": "p",
+        "text": "Parece exagero. Mas pense por quanto você dorme, quanto tempo fica online, quando para de responder pessoas e quando muda sua rotina."
+      },
+      {
+        "type": "p",
+        "text": "Pelos padrões é possível identificar isolamento,. consumo compulsivo e mudanças bruscas de; comportamento. o"
+      },
+      {
+        "type": "p",
+        "text": "É um relatório de atenção emocional. Quanto tempo você fica olhando um vídeo. E o o a e Quais assuntos prendem você. Quais conteúdos alteram Doi"
+      },
+      {
+        "type": "p",
+        "text": "a e Na espionagem de Estado, não existe mais a mesma; necessidade de seguir os Quase todos carregam sensores no próprio bolso."
+      },
+      {
+        "type": "p",
+        "text": "Isso explica melhor a guerra appscomo TikTok, Kwai e a empresa Huawei"
+      },
+      {
+        "type": "p",
+        "text": "O medo americano nunca foi vídeos de dança. e Era entender o uso desses dados, que podem ser utilizados para entender e influenciar pessoas. é"
+      },
+      {
+        "type": "p",
+        "text": "Percebe o poder de um país que tem a capacidade de analisar esses dados e alterar um algoritmo? muito tempo o celular: deixou de ser apenas um aparelho de comunicação e virou ferramenta de poder."
+      },
+      {
+        "type": "p",
+        "text": "Se você gosta desse tipo de conteúdo e deseja aprender como aplicar a Lui A e"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/01.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/02.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/03.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/04.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/05.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/06.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/07.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/08.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYkpQtRkfrh/09.jpg",
+            "alt": "A maior espionagem moderna acontece no seu bolso. — slide 9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzajaviewh1-nenhuma-cobertura-funciona-sozinha-nenhuma-identidade-falsa-opera-isolad",
+    "title": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente.",
+    "description": "Nenhuma rede clandestina sobrevive sem pessoas dispostas a assumir riscos, transmitir informações e acreditar que alguém cumprirá sua palavra.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Contrainteligencia",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-31",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZAjaViEWh1.jpg",
+    "heroAlt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente.",
+    "instagramShortCode": "DZAjaViEWh1",
+    "instagramUrl": "https://www.instagram.com/p/DZAjaViEWh1/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. Nenhuma rede clandestina sobrevive sem pessoas dispostas a assumir riscos, transmitir informações e acreditar que alguém cumprirá sua palavra."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que HUMINT continua relevante mesmo em uma era dominada por satélites, inteligência artificial e vigilância digital."
+      },
+      {
+        "type": "p",
+        "text": "Tecnologia coleta dados. Pessoas entregam contexto, acesso e cooperação."
+      },
+      {
+        "type": "p",
+        "text": "A Operação Brothers é um lembrete de que, por trás das maiores operações de inteligência da história, quase sempre existe uma rede humana sustentando tudo."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "o Edna comprou um resortinteiro...."
+      },
+      {
+        "type": "p",
+        "text": "Muitos fugiram e para o Sudão. à"
+      },
+      {
+        "type": "p",
+        "text": "Mas não tinha relações Ene com o Sudão. a E qualquer operação eus cuerir À a"
+      },
+      {
+        "type": "p",
+        "text": "O Mossad precisava encontrar uma forma de levantar suspeitas. DO REge a na costa do Mar"
+      },
+      {
+        "type": "p",
+        "text": "Arous. À wonderful world apart, with has some E the best, Circo idea E eta Compraram o hotel. E, Abriramas portas. E se"
+      },
+      {
+        "type": "p",
+        "text": "Recebiam hóspedes. o oaY4 a: Organizavam mergulhos. O e O Serviam refeições. e o e O resort funcionava."
+      },
+      {
+        "type": "p",
+        "text": "Ao é Refugiados eram retirados discretamente dos campos. Levados até praias a isoladas.. O E embarcados em operações secretas rumo a"
+      },
+      {
+        "type": "p",
+        "text": "Numa das noites, E soldados sudaneses DE Elec A operação corria risco"
+      },
+      {
+        "type": "p",
+        "text": "Em vez de fugir... Um agente caminhou até os E; Disse que eles estavam; atrapalhando uma atividade Em turística para hóspedes"
+      },
+      {
+        "type": "p",
+        "text": "Rota é o: E Antes de qualquer resgate, alguém precisou. construir confiança. Identificar famílias. E e Criar redes clandestinas. por o a o. aterrorizadas a seguir, desconhecidos."
+      },
+      {
+        "type": "p",
+        "text": "Em HUMINT, operações movidas por relações a a O resortera apenas a Rali o E E a"
+      },
+      {
+        "type": "p",
+        "text": "ficou famosa. Mas a confiança milhares de vidas. e a E"
+      },
+      {
+        "type": "p",
+        "text": "Aqui você aprende sobre inteligência através de histórias reais É do"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/01.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/02.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/03.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/04.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/05.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/06.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/07.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/08.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/09.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/10.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/11.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/12.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/13.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DZAjaViEWh1/14.jpg",
+            "alt": "Nenhuma cobertura funciona sozinha. Nenhuma identidade falsa opera isoladamente. — slide 14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dy2m6dgkfpj-em-2015-moscou-negava-qualquer-presenca-militar-na-ucrania-mas-uma-seque",
+    "title": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos...",
+    "description": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos com filhotes de husky, postadas por soldados russos, acabou entregando...",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "OPSEC",
+      "OSINT",
+      "HUMINT",
+      "Seguranca Dalnformacao"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-27",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DY2m6DgkfpJ.jpg",
+    "heroAlt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos com filhotes de husky, postadas por soldados...",
+    "instagramShortCode": "DY2m6DgkfpJ",
+    "instagramUrl": "https://www.instagram.com/p/DY2m6DgkfpJ/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos com filhotes de husky, postadas por soldados russos, acabou entregando tudo."
+      },
+      {
+        "type": "p",
+        "text": "As imagens mostravam os cães em bases improvisadas."
+      },
+      {
+        "type": "p",
+        "text": "Pareciam inofensivas, até que analistas começaram a comparar os fundos das fotos: o mesmo tipo de vegetação, cercas e linhas elétricas."
+      },
+      {
+        "type": "p",
+        "text": "Ao cruzar com imagens de satélite, descobriram que todos os soldados que haviam postado estavam na mesma região — Debaltseve, em território ucraniano."
+      },
+      {
+        "type": "p",
+        "text": "Nos mesmos locais, vídeos mostraram tanques T-72B3, modelo exclusivo do Exército Russo."
+      },
+      {
+        "type": "p",
+        "text": "A foto dos huskies serviu como elo entre diferentes perfis, unidades e locais, provando que havia uma brigada russa operando em solo ucraniano, apesar das negações oficiais."
+      },
+      {
+        "type": "p",
+        "text": "O caso ficou conhecido como \"Vreditel Sobaka\" — o Cachorro Sabotador."
+      },
+      {
+        "type": "p",
+        "text": "Uma falha de OPSEC, quando pequenas postagens pessoais se cruzam e, juntas, formam um mapa."
+      },
+      {
+        "type": "p",
+        "text": "Em inteligência, raramente é um único erro que quebra o sigilo é a soma de rastros humanos, deixados por quem acreditava estar apenas compartilhando um momento."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Em 2015, Moscou dizia que não havia tropas russas na Ucrânia. o o E e"
+      },
+      {
+        "type": "p",
+        "text": "Um soldado postou fotos de.. militar. mma Parecia uma pausa na guerra o"
+      },
+      {
+        "type": "p",
+        "text": "OPproblema é que a E e E. E A é Estava em territorio E rantanna ucraniano em combate E a E a Eta o a o O"
+      },
+      {
+        "type": "p",
+        "text": "Na rede social russa, a geolocalização não costuma ser muito confiável. Mas a foto dos husks com diversos soldados garatiu que estavam na mesma região, na mesma época, aliado a geolocalização"
+      },
+      {
+        "type": "p",
+        "text": "dE o e E fotos que mostravam soldados em cidades na a e: e É a"
+      },
+      {
+        "type": "p",
+        "text": "E: Somada a uma fotografia a de um blindado exclusivo DO a o! E o a E Não deixou nenhuma, ao a A e a O a, E"
+      },
+      {
+        "type": "p",
+        "text": "enfiei Não tinha mais como negar. O caso foi conhecido como Vredibel Sobaka o cachorro sabotador"
+      },
+      {
+        "type": "p",
+        "text": "Se uma fotografia de um cachorro pode desmascarar uma guerra, Imagina o que suas postagens podem revelar Curta, salve e compartilhe"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/01.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/02.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/03.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/04.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/05.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/06.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/07.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/08.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DY2m6DgkfpJ/09.jpg",
+            "alt": "Em 2015, Moscou negava qualquer presença militar na Ucrânia, mas uma sequência de fotos... — slide 9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dypvc7xesaa-as-reportagens-mostraram-como-uma-rede-privada-de-influencia-pode-operar",
+    "title": "As reportagens mostraram como uma rede privada de influência pode operar de maneira...",
+    "description": "As reportagens mostraram como uma rede privada de influência pode operar de maneira extremamente parecida com técnicas utilizadas em operações psicológicas...",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "PSYOPS",
+      "HUMINT",
+      "Guerra Informacional",
+      "Engenharia Social",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-22",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYpvc7XESaA.jpg",
+    "heroAlt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira extremamente parecida com técnicas utilizadas em...",
+    "instagramShortCode": "DYpvc7XESaA",
+    "instagramUrl": "https://www.instagram.com/p/DYpvc7XESaA/",
+    "body": [
+      {
+        "type": "p",
+        "text": "As reportagens mostraram como uma rede privada de influência pode operar de maneira extremamente parecida com técnicas utilizadas em operações psicológicas modernas."
+      },
+      {
+        "type": "p",
+        "text": "Isso muda completamente a forma como devemos enxergar mídia digital."
+      },
+      {
+        "type": "p",
+        "text": "Hoje, influência não depende necessariamente de grandes emissoras."
+      },
+      {
+        "type": "p",
+        "text": "Ela pode ser construída através de ecossistemas menores, mas altamente coordenados:"
+      },
+      {
+        "type": "p",
+        "text": "portais, criadores de conteúdo , amplificação narrativa, gestão de reputação, timing emocional e controle de crise."
+      },
+      {
+        "type": "p",
+        "text": "PsyOps modernas funcionam criando percepção de realidade, não recisam controlar totalmente a informação."
+      },
+      {
+        "type": "p",
+        "text": "Basta controlar o enquadramento,a velocidade,a emoção,e a repetição."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que guerra informacional não precisa de helicópteros lançando panfletos sobre zona de conflito, hoje ela parece feed."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "As técnicas das E. maiores agências E a À À de espionagem... E À A o À a O a e ane E"
+      },
+      {
+        "type": "p",
+        "text": "e. Segundo investigações, foi identificada uma influência ligada ao empresário Daniel Vorcaro."
+      },
+      {
+        "type": "p",
+        "text": "o Aestrutura envolvia E portais, influenciadores,: gestão de reputação e coordenação narrativa mess Dada"
+      },
+      {
+        "type": "p",
+        "text": "eremoções acontecendo rapidamente depois. ini"
+      },
+      {
+        "type": "p",
+        "text": "Segundo a imprensa, a organização também teria utilizado influenciadores e campanhas coordenadas para pressionar narrativas públicas."
+      },
+      {
+        "type": "p",
+        "text": "E é aqui as coisas se tornam interessante, porque isso começa a se conhecido na: a inteligência. a conhecido como Operação psicológica"
+      },
+      {
+        "type": "p",
+        "text": "Operações psicológicas funcionam através da percepção. o a O objetivo é construir o ambiente emocional onde você pensa, e assim direcionar sua opinião."
+      },
+      {
+        "type": "p",
+        "text": "Quem parece vítima. Quem parece confiável. Quem parece perigoso. Quem merece apoio. é Tudo isso pode ser moldado."
+      },
+      {
+        "type": "p",
+        "text": "No passado, operações a assim dependiam de rádio, Hoje, basta um o ecossistema digital coordenado. A Mir"
+      },
+      {
+        "type": "p",
+        "text": "Portais, À Criadores de conteúdo,. Narrativas sincronizadas,: Gestores de crise... modernas parece conteúdo E, espontâneo.:, o"
+      },
+      {
+        "type": "p",
+        "text": "o E quanto mais natural parece... mais eficiente costuma ada Peida Dido dirt Tei o moderna, as pessoas consomem conteúdos formatados para direcionar aopinião... eissoéosuficientepara mudar a direção deumpaís... Do"
+      },
+      {
+        "type": "p",
+        "text": "Quer entender HUMINT, influência e PsyOps no mundo real? Comente"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/01.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/02.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/03.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/04.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/05.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/06.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/07.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/08.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/09.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/10.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/11.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYpvc7XESaA/12.jpg",
+            "alt": "As reportagens mostraram como uma rede privada de influência pode operar de maneira... — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dy0wk2akc6q-a-operacao-do-grupo-handala-mostra-como-a-guerra-moderna-mudou-de-forma",
+    "title": "A operação do grupo Handala mostra como a guerra moderna mudou de forma.",
+    "description": "Hoje, um ataque cibernético não precisa derrubar infraestrutura para gerar impacto estratégico.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "OPSEC",
+      "HUMINT",
+      "PSYOPS",
+      "Cyber Warfare",
+      "Guerra Informacional",
+      "Espionagem"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-26",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DY0Wk2Akc6q.jpg",
+    "heroAlt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma.",
+    "instagramShortCode": "DY0Wk2Akc6q",
+    "instagramUrl": "https://www.instagram.com/p/DY0Wk2Akc6q/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A operação do grupo Handala mostra como a guerra moderna mudou de forma."
+      },
+      {
+        "type": "p",
+        "text": "Hoje, um ataque cibernético não precisa derrubar infraestrutura para gerar impacto estratégico. As vezes o objetivo é atingir confiança, reputação e percepção pública."
+      },
+      {
+        "type": "p",
+        "text": "A alegação de que uma fundação humanitária estaria ligada a operações clandestinas da CIA e do Mossad espalhou rapidamente porque ativa a sensação de que existe uma camada invisível operando por trás das instituições."
+      },
+      {
+        "type": "p",
+        "text": "Até agora, não existe comprovação pública independente das acusações centrais feitas pelo grupo. Mas, em operações psicológicas modernas, muitas vezes o objetivo é produzir dúvida suficiente para enfraquecer a confiança, polarizar opiniões e obrigar governos, imprensa e sociedade a reagirem."
+      },
+      {
+        "type": "p",
+        "text": "O vazamento virou munição geopolítica."
+      },
+      {
+        "type": "p",
+        "text": "Pró-Irã usam o caso como prova de manipulação ocidental. Analistas de cibersegurança enxergam uma operação clássica de PsyOps. E o público comum fica preso no meio da guerra narrativa."
+      },
+      {
+        "type": "p",
+        "text": "Esse tipo de operação mostra como cyber warfare, HUMINT e influência psicológica estão cada vez mais conectados."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Um grupo hacker à afirmou ter exposto A uma fundação secreta... a e e o o o A A que serve de fachada para CIA e do Mossad.?"
+      },
+      {
+        "type": "p",
+        "text": "ao DE a a é E O alvo foi uma organização E a Segundo próprio grupo E fundação humanitáriae filantrópica internacional."
+      },
+      {
+        "type": "p",
+        "text": "As Mas o Handala afirmougquma estrutura clandestina usada o para ganhar À"
+      },
+      {
+        "type": "p",
+        "text": "639 mil documentos e-mails internos a a contratos E e o listas de doadores no e"
+      },
+      {
+        "type": "p",
+        "text": "Ao imediatamente. Espionagem, ONGs, e guerra secreta. Isso gera curiosidade"
+      },
+      {
+        "type": "p",
+        "text": "E A O grupo responsável se chama Handala. associado ao ecossistema cibernético pró-lrã."
+      },
+      {
+        "type": "p",
+        "text": "Até agora nenhuma UM investigação independente. confirmou a autenticidade total dos documentos, o acusações centrais do grupo"
+      },
+      {
+        "type": "p",
+        "text": "Ocorre que historicamente, serviços de inteligência utilizaram várias coberturas operacionais. o sia jornalistas a empresas universidades fundações instituições culturais"
+      },
+      {
+        "type": "p",
+        "text": "A história pode conter propaganda... Mas foi construída em cima de algo plausível. E isso aumenta o impacto psicológico."
+      },
+      {
+        "type": "p",
+        "text": "e ici; e percepção pública."
+      },
+      {
+        "type": "p",
+        "text": "Isso tem nome E E Operações psicológicas voltadas para influenciar emoções, narrativas e comportamento coletivo."
+      },
+      {
+        "type": "p",
+        "text": "E e Um vazamento pode valer mais pelo medo que produz do que pelo que realmente prova."
+      },
+      {
+        "type": "p",
+        "text": "o E Quer aprender como HUMINT, construção de narrativa e guerra informacional funcionam no mundo real? O Curtae compartilhe. Pressa na"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/01.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/02.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/03.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/04.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/05.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/06.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/07.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/08.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/09.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/10.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/11.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/12.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DY0Wk2Akc6q/13.jpg",
+            "alt": "A operação do grupo Handala mostra como a guerra moderna mudou de forma. — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzsxzfpm9df-as-pessoas-costumam-imaginar-que-operacoes-sao-comprometidas-por-falhas-",
+    "title": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas.",
+    "description": "Malware sofisticado. Ataques avançados. Ferramentas de última geração. Na prática, muitas investigações avançam por causa de algo muito mais simples. Contexto.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "OSINT",
+      "OPSEC",
+      "Inteligencia",
+      "Contrainteligencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-17",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZsxZfpm9df.jpg",
+    "heroAlt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. Malware sofisticado. Ataques avançados.",
+    "instagramShortCode": "DZsxZfpm9df",
+    "instagramUrl": "https://www.instagram.com/p/DZsxZfpm9df/",
+    "body": [
+      {
+        "type": "p",
+        "text": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas."
+      },
+      {
+        "type": "p",
+        "text": "Malware sofisticado. Ataques avançados. Ferramentas de última geração."
+      },
+      {
+        "type": "p",
+        "text": "Na prática, muitas investigações avançam por causa de algo muito mais simples."
+      },
+      {
+        "type": "p",
+        "text": "Contexto."
+      },
+      {
+        "type": "p",
+        "text": "Um objeto no fundo. Uma foto publicada sem atenção. Uma rotina repetida. Um detalhe que parecia irrelevante."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que profissionais experientes desenvolvem o hábito de observar tudo."
+      },
+      {
+        "type": "p",
+        "text": "Nem sempre a informação mais importante está no centro da imagem."
+      },
+      {
+        "type": "p",
+        "text": "Frequentemente ela está na borda."
+      },
+      {
+        "type": "p",
+        "text": "A pergunta que vale para qualquer investigação é:"
+      },
+      {
+        "type": "p",
+        "text": "\"Se eu estivesse tentando entender esta pessoa, organização ou operação, o que mais eu conseguiria descobrir a partir deste detalhe?\""
+      },
+      {
+        "type": "p",
+        "text": "Gazer essa pergunta leva a enxergar informações onde a maioria vê apenas ruído."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Group. Far Criadora do Pegasus,. ide"
+      },
+      {
+        "type": "p",
+        "text": "Governos pagavam milhões para utilizar sua tecnologia. O negócio da empresa era permanecer invisível."
+      },
+      {
+        "type": "p",
+        "text": "havia superado um escândalo.; Foi acusada de ser usado contra jornalistas, ativistas e políticos. Em 2019, o WhatsApp processou a"
+      },
+      {
+        "type": "p",
+        "text": "Após anos de disputa, a Justiça americana proibiu novas operações contra usuários do WhatsApp. Parecia o fim da história."
+      },
+      {
+        "type": "p",
+        "text": "Mas em 2026 surgiu uma nova suspeita. A a identificado umanova, campanha de ataques. se pune otro sra ado: Jiod Essen"
+      },
+      {
+        "type": "p",
+        "text": "E Para investigar, o WhatsApp criou contas e grupos controlados. o O armadilha para ataques 1-click. E então algo inesperado apareceu."
+      },
+      {
+        "type": "p",
+        "text": "Era apenas uma foto de uma! É sopa. Até alguém perceber o logo Group no fundo da imagem."
+      },
+      {
+        "type": "p",
+        "text": "Uma empresa especializada em permanecer invisível... Teria sido identificada por causa de uma foto de sopa."
+      },
+      {
+        "type": "p",
+        "text": "O caso é sobre OPSEC. Ter uma mentalidade e ações que não forneçam informações que possam ser usadas por um adversário."
+      },
+      {
+        "type": "p",
+        "text": "Uma empresa de ponta pode se expor de forma crítica porque alguém esqueceu um detalhe aparentemente insignificante. E detalhes insignificantes constroem investigações inteiras."
+      },
+      {
+        "type": "p",
+        "text": "Efe Reto aii olcMO é Aqui você aprende sobre inteligência através de"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/01.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/02.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/03.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/04.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/05.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/06.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/07.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/08.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/09.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/10.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/11.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZsxZfpm9df/12.jpg",
+            "alt": "As pessoas costumam imaginar que operações são comprometidas por falhas complexas. — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dydt1f4edo--campanhas-politicas-do-mundo-inteiro-ja-entenderam-uma-coisa-ha-muito-te",
+    "title": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser...",
+    "description": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser humano raramente decide de forma totalmente racional.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Psicologia Comportamental",
+      "Influencia",
+      "Manipulação"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-17",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYdT1F4EdO-.jpg",
+    "heroAlt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser humano raramente decide de forma totalmente...",
+    "instagramShortCode": "DYdT1F4EdO-",
+    "instagramUrl": "https://www.instagram.com/p/DYdT1F4EdO-/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser humano raramente decide de forma totalmente racional."
+      },
+      {
+        "type": "p",
+        "text": "Antes do voto existir, existe influência."
+      },
+      {
+        "type": "p",
+        "text": "Existe ambiente, repetição. Existe medo, vontade de pertencer e muita pressão social."
+      },
+      {
+        "type": "p",
+        "text": "Pessoas moldam pessoas."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que símbolos, assim como as narrativas e líderes carismáticos funcionam. Isso tudo gera efeitos emocionais."
+      },
+      {
+        "type": "p",
+        "text": "Convencer pela lógica dá trabalho…fazer alguém sentir que pertence a um lado…é muito mais poderoso."
+      },
+      {
+        "type": "p",
+        "text": "No fim, muitas vezes a pessoa não consegue analisar com os dados, porque é uma questão de defender a própria identidade."
+      },
+      {
+        "type": "p",
+        "text": "E é exatamente por isso que operações de influência se tornam tão eficientes."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Você vota no que acredita... A Tede De ato"
+      },
+      {
+        "type": "p",
+        "text": "e o A maioria das pessoas que normalmente não é bem assim... a,"
+      },
+      {
+        "type": "p",
+        "text": "E se o eso TSETo ape o E e eos o. e o aauo"
+      },
+      {
+        "type": "p",
+        "text": "Seu voto pode ser influenciado por redes sociais, ambiente de trabalho, DE Mesmo que não perceba."
+      },
+      {
+        "type": "p",
+        "text": "campanhas investem tantoem emoção, símbolos, frases repetidas... Isso tudo gera um senso de pertencimento"
+      },
+      {
+        "type": "p",
+        "text": "o a: É. e Quando todo mundo O o narrativa... o E discordar começa a causar desconforto..."
+      },
+      {
+        "type": "p",
+        "text": "a por isso que tanta gente continua defendendo uma mesmo diante das provas."
+      },
+      {
+        "type": "p",
+        "text": "e abandonar uma narrativa parece mais doloroso do que ignorar as evidências."
+      },
+      {
+        "type": "p",
+        "text": "E est O DA o Em operações de influência, o objetivo é moldar percepção. a E"
+      },
+      {
+        "type": "p",
+        "text": "E No Ou seja muita gente não vota em um candidato. a Vota em uma identidade. E e"
+      },
+      {
+        "type": "p",
+        "text": "da influência ao redor? Comente, curta e compartilhe com aqueles quenão narrativa diante das evidências."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/01.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/02.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/03.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/04.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/05.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/06.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/07.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/08.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/09.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/10.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/11.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYdT1F4EdO-/12.jpg",
+            "alt": "Campanhas políticas do mundo inteiro já entenderam uma coisa há muito tempo que o ser... — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzlglx3kvba-desinformacao-nao-e-simplesmente-mentir",
+    "title": "Desinformação não é simplesmente mentir.",
+    "description": "Em operações de influência quase nunca se escolhe o caminho de produzir algo completamente falso. Isso exige muito esforço e costuma gerar resistência.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Desinformacao",
+      "Contrainteligencia",
+      "Operacoes De Influencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-04",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZLGLX3kVba.jpg",
+    "heroAlt": "Desinformação não é simplesmente mentir. Em operações de influência quase nunca se escolhe o caminho de produzir algo completamente...",
+    "instagramShortCode": "DZLGLX3kVba",
+    "instagramUrl": "https://www.instagram.com/p/DZLGLX3kVba/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Desinformação não é simplesmente mentir."
+      },
+      {
+        "type": "p",
+        "text": "Em operações de influência quase nunca se escolhe o caminho de produzir algo completamente falso. Isso exige muito esforço e costuma gerar resistência."
+      },
+      {
+        "type": "p",
+        "text": "O caminho mais eficiente é selecionar fatos, controlar o contexto e conduzir a interpretação."
+      },
+      {
+        "type": "p",
+        "text": "A Operação Neptune ilustra esse princípio com precisão."
+      },
+      {
+        "type": "p",
+        "text": "Os documentos existiam. Os jornalistas existiam. Os mergulhadores existiam. As caixas existiam."
+      },
+      {
+        "type": "p",
+        "text": "O que foi fabricado não foram necessariamente os elementos da história, mas a percepção de autenticidade da descoberta."
+      },
+      {
+        "type": "p",
+        "text": "Esse é um conceito importante para quem trabalha com HUMINT, contrainteligência ou análise de informações, pois demonstra que as pessoas não avaliam apenas dados. Elas avaliam a credibilidade do ambiente onde esses dados aparecem."
+      },
+      {
+        "type": "p",
+        "text": "Quando uma informação surge cercada por símbolos de legitimidade — especialistas, imprensa, imagens, testemunhas ou documentos — a tendência natural é reduzir o nível de questionamento."
+      },
+      {
+        "type": "p",
+        "text": "Por isso, profissionais de inteligência costumam separar duas análises distintas:"
+      },
+      {
+        "type": "p",
+        "text": "A informação é verdadeira?"
+      },
+      {
+        "type": "p",
+        "text": "E, principalmente:"
+      },
+      {
+        "type": "p",
+        "text": "Como essa informação chegou até mim?"
+      },
+      {
+        "type": "p",
+        "text": "Muitas operações de influência sobrevivem justamente porque todos discutem o conteúdo da mensagem, enquanto quase ninguém investiga a origem da narrativa."
+      },
+      {
+        "type": "p",
+        "text": "Acha que isso acontece ainda nos dias de hoje?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Em 1964, mergulhadores E encontraram caixas é nazist6s no fundo de a um lago europeu."
+      },
+      {
+        "type": "p",
+        "text": "milhares de documentos secretos ligados ao"
+      },
+      {
+        "type": "p",
+        "text": "o; e SE; o DE O lago erareal. o e DA o,"
+      },
+      {
+        "type": "p",
+        "text": "Mas as caixas não estavam a., A operação foi criada pela inteligência da Tchecoslováquia, com apoio do KGB."
+      },
+      {
+        "type": "p",
+        "text": "Operação Neptune. Fra Numa madrugada de junho de 1964, agentes afundaram caixas no Lago Negro."
+      },
+      {
+        "type": "p",
+        "text": "porem Depois construíram a narrativa. E o"
+      },
+      {
+        "type": "p",
+        "text": "Quando os documentos chegaram de Moscou, a operação ganhou força. lado Parte servia aos interesses soviéticos."
+      },
+      {
+        "type": "p",
+        "text": "Oobjetivo era reascender uma discussão. buscavaligar o governo alemão oriental ao passado;"
+      },
+      {
+        "type": "p",
+        "text": "Adela Acha que as pessoas ainda caem em histórias fabricadas? Tiga Taio Aqui você aprende sobre inteligência através de a histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/01.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/02.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/03.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/04.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/05.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/06.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/07.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/08.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/09.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/10.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/11.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/12.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZLGLX3kVba/13.jpg",
+            "alt": "Desinformação não é simplesmente mentir. — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dytccrikfh3-muitas-operacoes-historicas-funcionaram-explorando-algo-muito-mais-simpl",
+    "title": "Muitas operações históricas funcionaram explorando algo muito mais simples…o...",
+    "description": "Muitas operações históricas funcionaram explorando algo muito mais simples…o comportamento humano sob desconforto. O IRA entendeu isso cedo.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "Psicologiacomportamental",
+      "Engenharia Social",
+      "OPSEC"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-13",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYTCCRikfh3.jpg",
+    "heroAlt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o comportamento humano sob desconforto.",
+    "instagramShortCode": "DYTCCRikfh3",
+    "instagramUrl": "https://www.instagram.com/p/DYTCCRikfh3/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Muitas operações históricas funcionaram explorando algo muito mais simples…o comportamento humano sob desconforto."
+      },
+      {
+        "type": "p",
+        "text": "O IRA entendeu isso cedo."
+      },
+      {
+        "type": "p",
+        "text": "Uma inspeção longa exige atenção. Atenção exige energia. E seres humanos evitam naturalmente ambientes desagradáveis."
+      },
+      {
+        "type": "p",
+        "text": "Cheiro forte, frio extremo, cansaço e rotina criam atalhos mentais. É assim que operações clandestinas encontram espaço."
+      },
+      {
+        "type": "p",
+        "text": "Isso vale para terrorismo ou espionagem, mas também ocorre no contrabando, fraude, segurança corporativa e até investigações."
+      },
+      {
+        "type": "p",
+        "text": "Uma grande vulnerabilidade pode ser apenas o operador cansado do outro lado."
+      },
+      {
+        "type": "p",
+        "text": "Qual outro objeto banal você acha que poderia ser usado como cobertura operacional?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Irlanda do Norte. Década de 1970 e 1980. aaa É nas E. travava uma guerra contra o Reino Unido.."
+      },
+      {
+        "type": "p",
+        "text": "era uma organização paramilitar irlandesa. Seu objetivo era retirar o controle britânico da Irlanda do Norte. Décadas de atentados, emboscadas e guerra assimétrica."
+      },
+      {
+        "type": "p",
+        "text": "precisava mover armas e explosivos sem ser descoberto."
+      },
+      {
+        "type": "p",
+        "text": "Aresposta veio da compreensão do ser humano"
+      },
+      {
+        "type": "p",
+        "text": "Explosivos começaram a ser escondidos em cargas improváveis. a sem E E Ode Inclusive carregamentos. de peixe congelado."
+      },
+      {
+        "type": "p",
+        "text": "DO:. Ninguém quer passar muito tempo abrindo caminhão com cheiro insuportável."
+      },
+      {
+        "type": "p",
+        "text": "humano... fadiga, nojo e pressa.... Eme E"
+      },
+      {
+        "type": "p",
+        "text": "Isso é Humint. Entender comportamento humano poder valer mais que equipamento caro."
+      },
+      {
+        "type": "p",
+        "text": "uns Toda inspeção tem limite. Em algum momento... e"
+      },
+      {
+        "type": "p",
+        "text": "Os organizações criminosas também vivem buscando essas vulnerabilidades. As falhas humanas. a"
+      },
+      {
+        "type": "p",
+        "text": "a Na guerra...atéomaucheiro pode virar cobertura A Curta, sigae compartilhe. a"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/01.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/02.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/03.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/04.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/05.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/06.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/07.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/08.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/09.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/10.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/11.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYTCCRikfh3/12.jpg",
+            "alt": "Muitas operações históricas funcionaram explorando algo muito mais simples…o... — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzx0quikrt_-uma-parte-importante-da-atividade-de-inteligencia-moderna-gira-em-torno-",
+    "title": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas.",
+    "description": "Quem fala com quem. Quem lidera um movimento. Quem financia. Quem influencia. Quem pode representar uma ameaça aos interesses de um Estado.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "Inteligencia",
+      "Contrainteligencia",
+      "Espionagem",
+      "HUMINT",
+      "Seguranca Nacional"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-19",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZx0QuIkRT_.jpg",
+    "heroAlt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. Quem fala com quem. Quem lidera um movimento.",
+    "instagramShortCode": "DZx0QuIkRT_",
+    "instagramUrl": "https://www.instagram.com/p/DZx0QuIkRT_/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas."
+      },
+      {
+        "type": "p",
+        "text": "Quem fala com quem. Quem lidera um movimento. Quem financia. Quem influencia. Quem pode representar uma ameaça aos interesses de um Estado."
+      },
+      {
+        "type": "p",
+        "text": "O caso Peter Wai chamou atenção porque expôs uma preocupação crescente em diversos países: operações conduzidas contra dissidentes que já vivem sob a proteção de outra jurisdição."
+      },
+      {
+        "type": "p",
+        "text": "A pergunta que fica não é apenas sobre o Reino Unido."
+      },
+      {
+        "type": "p",
+        "text": "É sobre qualquer democracia aberta."
+      },
+      {
+        "type": "p",
+        "text": "Inclusive o Brasil."
+      },
+      {
+        "type": "p",
+        "text": "Se uma potência estrangeira decidir monitorar, influenciar, intimidar ou coletar informações sobre indivíduos em território brasileiro, nossas instituições conseguem identificar a atividade?"
+      },
+      {
+        "type": "p",
+        "text": "Existe integração suficiente entre inteligência, investigação e política pública para responder a esse tipo de ameaça?"
+      },
+      {
+        "type": "p",
+        "text": "E mais importante:"
+      },
+      {
+        "type": "p",
+        "text": "Estamos procurando por esse problema ou presumindo que ele não existe?"
+      },
+      {
+        "type": "p",
+        "text": "Na inteligência, a capacidade de agir começa pela capacidade de perceber."
+      },
+      {
+        "type": "p",
+        "text": "E ameaças ignoradas costumam permanecer invisíveis até deixarem de ser."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "e à Som ido E ajudou o Reino a Unido a controlar quem entrava no país. ao Em 2026, foi condenado por espionar para China. a e"
+      },
+      {
+        "type": "p",
+        "text": "Uma carreira exemplar., a, Marinha britânica. Metropolitan Police., Border Force em Heathrow. Poucas pessoas tinham um currículo tão sólido."
+      },
+      {
+        "type": "p",
+        "text": "joe E, E, E, o Det ate; E a Mas a inteligência à Ele também atuava em benefício de interesses do governo Chinês."
+      },
+      {
+        "type": "p",
+        "text": "Sua missão não era obter. segredos militares. Nem informações estratégicas do governo britânico. Os alvos eram pessoas."
+      },
+      {
+        "type": "p",
+        "text": "a! haviam deixado seu país de origem e reconstruído: suas vidas no;"
+      },
+      {
+        "type": "p",
+        "text": "A investigação apontou que ele e outros colaboradores coletavam informações sobre esses indivíduos. Endereços. Veículos. Redes sociais. E"
+      },
+      {
+        "type": "p",
+        "text": "Em 2024, integrantes do grupo foram até a casa de Monica Kwong, uma mulher procurada pelas autoridades ligadas ao Partido Comunista Chinês. Disfarçados de trabalhadores de manutenção iniciaram uma ação de coleta."
+      },
+      {
+        "type": "p",
+        "text": "Eles levavam câmeras e tentaram obter acesso ao imóvel. Tudo enquanto mantinham comunicação com outros integrantes da operação. A dona do imóvel conseguiu acompanhar tudo remotamente."
+      },
+      {
+        "type": "p",
+        "text": "O distância, e virou uma É operação física em território britânico. Com disfarce. Com coordenação... e aproximação direta do alvo."
+      },
+      {
+        "type": "p",
+        "text": "anos de prisão para,! Peter Wai. Segurança Nacional do Reino Unido."
+      },
+      {
+        "type": "p",
+        "text": "As autoridades britânicas classificaram o caso como um exemplo de policiamento transnacional. Quando um Estado atua além de suas fronteiras para monitorar, intimidar ou influenciar pessoas que vivem em outro país."
+      },
+      {
+        "type": "p",
+        "text": "A preocupação era o uso de E dai Tdi Teia legítimas para localizar, acompanhar e pressionar dissidentes no exterior."
+      },
+      {
+        "type": "p",
+        "text": "Você não precisa prender um dissidente para controlá-lo. saiba que está sendo observado."
+      },
+      {
+        "type": "p",
+        "text": "Nossas leis e instituições estão preparadas para lidar com operações conduzidas por governos estrangeiros em território nacional? Curta, siga e compartilhe Aqui você aprende Inteligência através de histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/01.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/02.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/03.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/04.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/05.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/06.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/07.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/08.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/09.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/10.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/11.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/12.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/13.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DZx0QuIkRT_/14.jpg",
+            "alt": "Uma parte importante da atividade de inteligência moderna gira em torno de pessoas. — slide 14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyfpifsetim-uma-investigacao-de-inteligencia-corporativa-sempre-inicia-com-uma-justi",
+    "title": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima.",
+    "description": "Proteger a empresa, evitar vazamentos… enfim identificar e anular ameaças internas.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "OPSEC",
+      "HUMINT",
+      "Contrainteligencia",
+      "Engenharia Social",
+      "Espionagem Corporativa"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-18",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYfPIfsETIM.jpg",
+    "heroAlt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima.",
+    "instagramShortCode": "DYfPIfsETIM",
+    "instagramUrl": "https://www.instagram.com/p/DYfPIfsETIM/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima."
+      },
+      {
+        "type": "p",
+        "text": "Proteger a empresa, evitar vazamentos… enfim identificar e anular ameaças internas."
+      },
+      {
+        "type": "p",
+        "text": "O problema é que, quando a informação vira prioridade absoluta, a linha do limite ético começa a desaparecer"
+      },
+      {
+        "type": "p",
+        "text": "E é exatamente aí que HUMINT se torna perigoso nas mãos erradas."
+      },
+      {
+        "type": "p",
+        "text": "Porque inteligência humana depende de acesso, confiança, manipulação emocional e exploração comportamental."
+      },
+      {
+        "type": "p",
+        "text": "Uma pessoa bem treinada consegue obter informação sem invadir sistema algum."
+      },
+      {
+        "type": "p",
+        "text": "Só conversando, observando, criando contexto e induzindo erro."
+      },
+      {
+        "type": "p",
+        "text": "O mesmo conhecimento que protege uma organização também pode ser usado para ultrapassar fronteiras éticas sem que ninguém perceba no início."
+      },
+      {
+        "type": "p",
+        "text": "A maior parte das operações controversas da história não começou com um objetivo legítimo."
+      },
+      {
+        "type": "p",
+        "text": "O risco surge quando o objetivo passa a justificar qualquer método."
+      },
+      {
+        "type": "p",
+        "text": "E no ambiente corporativo moderno isso ficou ainda mais delicado."
+      },
+      {
+        "type": "p",
+        "text": "Hoje empresas possuem monitoramento digital, cruzamento de dados, investigações privadas com OSINT… etc"
+      },
+      {
+        "type": "p",
+        "text": "Ou seja, capacidades que antes existiam quase exclusivamente em agências de inteligência estão no mundo corporativo."
+      },
+      {
+        "type": "p",
+        "text": "As empresas vão e devem investigar, mas surge a questão… quem faz o controle externo da investigação?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "a Segredos corporativos a A Hewlett-Packard caçou um vazador... É e criou um escândalo nacional."
+      },
+      {
+        "type": "p",
+        "text": "começaram a aparecer na imprensa. Reuniões internas. Planos estratégicos. Discussões do conselho. Alguém estava vazando tudo."
+      },
+      {
+        "type": "p",
+        "text": "O problema ficou sério. O a, É Tudo indicava que o sentado na mesa de reunião."
+      },
+      {
+        "type": "p",
+        "text": "foi contratar investigadores privados. para descobrir quem falava com jornalistas. dO Par E uma operação de contrainteligência corporativa."
+      },
+      {
+        "type": "p",
+        "text": "que os investigadores; usaram um métodos A investigação deixou de ser com auditoria interna; análise de acesso;, entrevistas; controle documental; E Emonitoramento autorizado..."
+      },
+      {
+        "type": "p",
+        "text": "E E passou para falsidade ideológica; impersonação; manipulação de operadoras; obtenção fraudulenta de registros privados."
+      },
+      {
+        "type": "p",
+        "text": "Por exemplo, Os investigadores ligavam para operadoras telefônicas.... e se passavam pelos o addo Usavam engenharia social para acessar registros privados de chamadas. a"
+      },
+      {
+        "type": "p",
+        "text": "SE o E Tete Executivos passaram, a ser monitorados. Nro Até familiares foram a A paranoia interna cresceu."
+      },
+      {
+        "type": "p",
+        "text": "à, A tentativa de impedir à acabou vazando para o E o escândalo explodiu."
+      },
+      {
+        "type": "p",
+        "text": "O Congresso dos EUA abriu a ia pELERE o e inteligência corporativa."
+      },
+      {
+        "type": "p",
+        "text": "a:. O curioso é que o vazamento começou no"
+      },
+      {
+        "type": "p",
+        "text": "A linha entre proteção e abuso pode desaparecer rápido. Comente, curta e compartilhe. Até onde uma empresa deveria para descobrir um vazador de informações sigilosas? gun"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/01.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/02.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/03.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/04.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/05.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/06.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/07.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/08.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/09.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/10.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/11.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYfPIfsETIM/12.jpg",
+            "alt": "Uma investigação de inteligência corporativa sempre inicia com uma justificativa legítima. — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzial61kffm-informacao-esta-em-toda-parte-esta-nos-jornais-nas-redes-sociais-nos-rel",
+    "title": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas...",
+    "description": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas conversas e nos bancos de dados.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Inteligencia",
+      "Contrainteligencia",
+      "OSINT",
+      "Analise De Inteligencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-13",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZiAL61kfFM.jpg",
+    "heroAlt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas conversas e nos bancos de dados.",
+    "instagramShortCode": "DZiAL61kfFM",
+    "instagramUrl": "https://www.instagram.com/p/DZiAL61kfFM/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas conversas e nos bancos de dados. O que realmente diferencia um analista é a capacidade de transformar fragmentos dispersos em compreensão."
+      },
+      {
+        "type": "p",
+        "text": "Duas pessoas podem receber exatamente os mesmos dados e chegar a conclusões completamente diferentes. Não porque uma tenha mais acesso, mas porque uma pensa corretamente ."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que grandes investigações ou conclusões para um relatório, não são obtidas por uma única evidência decisiva. O que normalmente faz a diferença é a capacidade de conectar sinais aparentemente desconexos, questionar premissas, revisar hipóteses e enxergar relações que passam despercebidas pela maioria."
+      },
+      {
+        "type": "p",
+        "text": "0s erros mais comprometedores não costumam surgir da falta de informação, mas da interpretação errada."
+      },
+      {
+        "type": "p",
+        "text": "O objetivo é enxergar padrões onde os outros veem coincidências, vulnerabilidades onde os outros veem rotina e oportunidades onde os outros veem apenas fatos isolados."
+      },
+      {
+        "type": "p",
+        "text": "A qualidade das suas conclusões nunca será superior à qualidade do seu raciocínio. E essa é uma habilidade que pode ser treinada."
+      },
+      {
+        "type": "p",
+        "text": "Qual dessas formas de pensar você considera mais importante para um analista?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "formas de pensar que diferenciam um observador de um analista! A maioria das pessoas apenas fatos. Analistas enxergam relações."
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Causal O que causouisso? O analista não pára no evento. Ele procura o fato que produziu a evento. A oie Uma fonte muda de comportamento. e E Além de perguntar o que ela fez? Deve-se entender o que fez ela mudar?"
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Abstrato O que isso representa? Um encontro pode eee dE Um presente pode representar uma tentativa de influência. O ETeia Tese e Tejo a representar medo. E"
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Não Linear Pequenos detalhes podem gerar grandes consequências. Uma fotografia. Um comentário. Um horário repetido. Muitas investigações começam com algo aparentemente insignificante."
+      },
+      {
+        "type": "p",
+        "text": "Como sabemos disso? Analistas desconfiam até das próprias conclusões. E ELA E Qual interesse a"
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Bayesiano Novas evidências exigem novas conclusões. Hipóteses não são religiões. Quando os fatos mudam, a"
+      },
+      {
+        "type": "p",
+        "text": "Inteligência raramente trabalha com certezas., Trabalha com probabilidades. Embora busque a verdade real, normalmente pergunta-se Qual a chance disso ser verdade?"
+      },
+      {
+        "type": "p",
+        "text": "Atalhos mentais economizam tempo. E Mas também criam vieses. Experiência acelera decisões. Excesso de confiança destrói. investigações."
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Dialético Duas ideias opostas podem ser verdadeiras ao mesmo tempo. Uma fonte pode ser E também ser perigosa. o E o a"
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Integrativo Os melhores analistas unem disciplinas. Psicologia. Antropologia. Tecnologia. Comportamento Aresposta raramente está em apenas uma área."
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Hipotético E E se a fonte estiver mentindo? E se a informação for plantada? E se estivermos olhando para o suspeito errado? Boas perguntas evitam erros graves."
+      },
+      {
+        "type": "p",
+        "text": "Pensamento Contrafactual O que teria acontecido se... Após uma operação ou investigação, o analista revisita decisões. O objetivo é aprender com o passado"
+      },
+      {
+        "type": "p",
+        "text": "Informação não é inteligência. A diferença está na forma de pensar."
+      },
+      {
+        "type": "p",
+        "text": "o pensar você usa com mais frequência? Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/01.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/02.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/03.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/04.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/05.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/06.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/07.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/08.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/09.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/10.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/11.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/12.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/13.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DZiAL61kfFM/14.jpg",
+            "alt": "Informação está em toda parte. Está nos jornais, nas redes sociais, nos relatórios, nas... — slide 14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyyacrqkce3-uma-unica-foto-normalmente-revela-muito-mais-do-que-queriam-mostrar",
+    "title": "Uma única foto normalmente revela muito mais do que queriam mostrar.",
+    "description": "Ela revela hábitos. Rotina. Padrão social. Localização. Nível financeiro. Relacionamentos. Horário. Tecnologia utilizada. E, muitas vezes, vulnerabilidades.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "OSINT",
+      "HUMINT",
+      "Cyber Security",
+      "Inteligencia",
+      "Engenharia Social"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-16",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYYaCrQkce3.jpg",
+    "heroAlt": "Uma única foto normalmente revela muito mais do que queriam mostrar. Ela revela hábitos. Rotina. Padrão social. Localização.",
+    "instagramShortCode": "DYYaCrQkce3",
+    "instagramUrl": "https://www.instagram.com/p/DYYaCrQkce3/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Uma única foto normalmente revela muito mais do que queriam mostrar."
+      },
+      {
+        "type": "p",
+        "text": "Ela revela hábitos. Rotina. Padrão social. Localização. Nível financeiro. Relacionamentos. Horário. Tecnologia utilizada. E, muitas vezes, vulnerabilidades."
+      },
+      {
+        "type": "p",
+        "text": "Uma sombra pode indicar horário e direção. Um reflexo pode revelar quem estava no ambiente. Uma placa, arquitetura, vegetação ou tomada elétrica podem reduzir um país para uma cidade. Metadados podem entregar dispositivo, data e até coordenadas. Roupas, sotaques visuais, marcas e objetos ajudam a montar perfil comportamental."
+      },
+      {
+        "type": "p",
+        "text": "É assim que operações reais encontram pessoas. E é assim que criminosos também escolhem alvos."
+      },
+      {
+        "type": "p",
+        "text": "A maioria das pessoas publica informação. Poucas percebem que estão publicando muito mais sobre si do que pensam."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Desafio de OSINT: localização E a a Res Roso oficio do A E E Fudesatio!!: é e ond O a"
+      },
+      {
+        "type": "p",
+        "text": "A primerarcoisa: édarumprint e abusar do zoom. Tentar identificar tudo aquilo a É A as asda; E a Edo À Tem um carro onde aparece a placa, tem um parquiímetro na praça, um prédio no fundo, ônibis e uma linha que demonstra que a foto foi tirada através do vidro."
+      },
+      {
+        "type": "p",
+        "text": "À E. Vamos começar pelo ônibus. Se dermos um zoom, na parte de trás À é possível ver a palavra veremos facimente que a ema E Perde caio É cremes fim: brasil mogi E"
+      },
+      {
+        "type": "p",
+        "text": "Se focarmos nossa O O aims atenção na placa do A o oiee O"
+      },
+      {
+        "type": "p",
+        "text": "a,. Salesópolis foca perto de Mogi das Cruzes e São José dos Campos. e o E a E a a:"
+      },
+      {
+        "type": "p",
+        "text": "A e Dando um zoom Egg Parquímetro em Mogi das Cruzes."
+      },
+      {
+        "type": "p",
+        "text": "Jojo o cipa Door onde o Parquimetro começará em age SE o Rasa A partir desta terça-feira um novo sistema de estacionamento controlado passará a operar em Mogi das Cruzes. Dez novos parquímetros passarão a operar, aceitando, além de moedas, o pagamento com cartões débito e crédito. O usuário digitará a placa do veículo, não precisando retornar para deixar o comprovante no painel. Os primeiros parquímetros a operarem com o novo sistema ficam na auenidarpottor Candido Xavier de Almeida e Souza, rud Capitão Manoel Rudge praça Norival Tavares, rka Barão de JhasBUdaT, Fla Major Doutor Antonio Cândido Vieira, rua Coronel Cardoso de iqueira rua Padre joão com rua Coronel Souza Franço, rua Ese agente pesquisar o endereço colocar os endereços no Street View, cerca de operando no novo sistelHE teremos achado. chegar no naraviímetro o vsiário dicitará a nlaca do"
+      },
+      {
+        "type": "p",
+        "text": "Ainda tem o prédio que se olhar bem, verá que a sacada é redonda. prédio sacada redonda mogi das Tudo Imagens Shopping Maps Vídeos ia Surge o Condomínio ESomegavasd a Do"
+      },
+      {
+        "type": "p",
+        "text": "condominio stephanie mogi das Modo IA Tudo Maps Imagens Notícias Vídeos O Mogi das Cruzes Brás Cubas, Mogi das Cruzes- Brasil Escolher região O VivaiReal no: Edificio Stephanie Residencial Centro Rua Coronel Souza Franco, 1221 Centro, Mogi das Cruzes Condomínio localizado no Centro conta com imóveis de até dormitórios, churrasqueira, piscina e tem o endereço novamente. Tem que conferir no street view. seguindo a rua. E pronto."
+      },
+      {
+        "type": "p",
+        "text": "Agora é virar SE dus erro! Dto LaNIIR cia o risco do vidro. Foitirada por dentro da Drogasil."
+      },
+      {
+        "type": "p",
+        "text": "Tinha ainda o app do parquímetro de Mogi das Cruzes. sou tocaaua Que está um pouco desatializado, mas O ELE à cheia de parquímetro AS que em cidade menor,; normalmente é no E MuBE Cruzes centro"
+      },
+      {
+        "type": "p",
+        "text": "E Busca de dados em fontes abertas. Curta, siga e compartilhe Aqui você aprende sobre Inteligência através de histórias reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/01.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/02.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/03.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/04.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/05.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/06.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/07.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/08.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/09.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/10.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/11.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYYaCrQkce3/12.jpg",
+            "alt": "Uma única foto normalmente revela muito mais do que queriam mostrar. — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dybb01frudk-humint-comeca-quando-alguem-decide-ouvir-de-verdade",
+    "title": "HUMINT começa quando alguém decide ouvir de verdade.",
+    "description": "Uma mesa de bar. Um corredor. Um café. Uma pausa no cigarro. Uma pergunta aparentemente inocente.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Comportamento Humano",
+      "Inteligencia Humana",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-17",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYbB01FRudk.jpg",
+    "heroAlt": "HUMINT começa quando alguém decide ouvir de verdade. Uma mesa de bar. Um corredor. Um café. Uma pausa no cigarro.",
+    "instagramShortCode": "DYbB01FRudk",
+    "instagramUrl": "https://www.instagram.com/p/DYbB01FRudk/",
+    "body": [
+      {
+        "type": "p",
+        "text": "HUMINT começa quando alguém decide ouvir de verdade."
+      },
+      {
+        "type": "p",
+        "text": "Uma mesa de bar. Um corredor. Um café. Uma pausa no cigarro. Uma pergunta aparentemente inocente."
+      },
+      {
+        "type": "p",
+        "text": "A maioria das informações importantes do mundo nunca esteve em um servidor. Esteve na cabeça de alguém."
+      },
+      {
+        "type": "p",
+        "text": "E quase sempre escapou por emoção: ego, medo, carência, raiva, necessidade de reconhecimento, vontade de pertencer."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que profissionais de inteligência observam pessoas antes de observar dados."
+      },
+      {
+        "type": "p",
+        "text": "Pessoas mostram o que está prestes a acontecer."
+      },
+      {
+        "type": "p",
+        "text": "HUMINT é entender comportamento humano a ponto de perceber padrões antes deles virarem evidência."
+      },
+      {
+        "type": "p",
+        "text": "Às vezes a fonte fala. Às vezes ela nem percebe que falou."
+      },
+      {
+        "type": "p",
+        "text": "E essa diferença separa quem apenas escuta… de quem realmente coleta inteligência."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "act nirist Ria HUMINT Inteligência Humana é a inteligência valiosas de inteligência, pois oferece contexto, E as observação direta, percepções e análises do Apoiaoperações Fornece informações a Aula na avaliação Fotalee relações E res peço esrageasem imesgçes decano cut inespessoas, meia poção À sos"
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dznzrwkkdxm-e-comum-que-confundam-autoridade-com-influencia",
+    "title": "É comum que confundam autoridade com influência.",
+    "description": "A autoridade aparece no organograma, já a influência não. Uma empresa pode ter vários diretores, mas a opinião de alguns pesam mais do que de outros.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Inteligencia",
+      "Lideranca",
+      "Negociacao",
+      "Influencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-15",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZnzrwKkdxM.jpg",
+    "heroAlt": "É comum que confundam autoridade com influência. A autoridade aparece no organograma, já a influência não.",
+    "instagramShortCode": "DZnzrwKkdxM",
+    "instagramUrl": "https://www.instagram.com/p/DZnzrwKkdxM/",
+    "body": [
+      {
+        "type": "p",
+        "text": "É comum que confundam autoridade com influência. A autoridade aparece no organograma, já a influência não."
+      },
+      {
+        "type": "p",
+        "text": "Uma empresa pode ter vários diretores, mas a opinião de alguns pesam mais do que de outros."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que algumas decisões parecem surgir do nada. Por que algumas pessoas conseguem aprovar projetos que outros não conseguem. A verdade é que certas opiniões tem mais valor do que outras. Também por esse motivo, algumas pessoas, sem ocupar os cargos mais altos, acabam moldando o rumo de equipes, empresas e até governos."
+      },
+      {
+        "type": "p",
+        "text": "Entender apenas a estrutura formal é enxergar metade do cenário. É importante identificar especialistas, líderes informais e influenciadores para entender como as decisões realmente são tomadas."
+      },
+      {
+        "type": "p",
+        "text": "Antes de tentar convencer alguém, negociar, vender, investigar ou liderar, procure identificar quem exerce influência."
+      },
+      {
+        "type": "p",
+        "text": "Talvez, para alcançar seu objetivo, seja necessário um esforço muito menor."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "e Lee lacocca, lendário A executivo da Ford, observou algo O Alguns projetos avançavam rapidamente. Outros simplesmente morriam. O qHiyçasaa E ninguém conseguia explicar o motivo."
+      },
+      {
+        "type": "p",
+        "text": "doca A explicação não estava Não estava nos relatórios."
+      },
+      {
+        "type": "p",
+        "text": "No papel, a Ford possuía Todos sabiam E E quem era o chefe. A agi"
+      },
+      {
+        "type": "p",
+        "text": "a notar um padrão. É Algumas pessoas O antes de qualquer decisão importante. mim Mesmo sem ocupar os cargos mais altos."
+      },
+      {
+        "type": "p",
+        "text": "Quando elas apoiavam uma ideia, o projeto o Quando não apoiavam, tudo ficava mais difícil."
+      },
+      {
+        "type": "p",
+        "text": "duel Tao percebeu uma regra que aparece em quase toda organização: a Cargo e poder não são a mesma coisa. A."
+      },
+      {
+        "type": "p",
+        "text": "Existem os líderes formais. Seu poder vem da autoridade do cargo."
+      },
+      {
+        "type": "p",
+        "text": "a informais., As pessoas os seguem mesmo quando não são obrigadas. Seu poder vem da confiança."
+      },
+      {
+        "type": "p",
+        "text": "Existem os especialistas. Quando surge um problema complexo, todos querem ouvir sua opinião. Seu poder vem do conhecimento."
+      },
+      {
+        "type": "p",
+        "text": "influenciadores. Os mais difíceis de identificar. Seu poder vem da: capacidade de moldar opiniões e decisões. E"
+      },
+      {
+        "type": "p",
+        "text": "A maioria das pessoas procura quem tem a ia autoridade. pot Os especialistas em humint reconhecem a autoridade, mas procuram quem tem influência.."
+      },
+      {
+        "type": "p",
+        "text": "Antes de obter uma e informação. E a. E de tentar o Side a.. Antes de tomar uma decisão. e tita Descubra quem realmente exerce poder."
+      },
+      {
+        "type": "p",
+        "text": "Antes de procurar respostas, descubra quem move as decisões. Curta, siga e compartilhe Aquivocê aprende sobre Inteligência através de usa histórias reais 7777 e o a e"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/01.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/02.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/03.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/04.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/05.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/06.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/07.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/08.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/09.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/10.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/11.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/12.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZnzrwKkdxM/13.jpg",
+            "alt": "É comum que confundam autoridade com influência. — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dy5gpf0rcwn-repostado-porque-o-primeiro-nao-tinha-resolucao-adequada",
+    "title": "repostado porque o primeiro não tinha resolução adequada.",
+    "description": "*repostado porque o primeiro não tinha resolução adequada. OSINT mudou a forma como informações são descobertas.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "Contrainteligencia",
+      "OPSEC"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-28",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DY5GPf0RCWN.jpg",
+    "heroAlt": "*repostado porque o primeiro não tinha resolução adequada. OSINT mudou a forma como informações são descobertas.",
+    "instagramShortCode": "DY5GPf0RCWN",
+    "instagramUrl": "https://www.instagram.com/p/DY5GPf0RCWN/",
+    "body": [
+      {
+        "type": "p",
+        "text": "*repostado porque o primeiro não tinha resolução adequada."
+      },
+      {
+        "type": "p",
+        "text": "OSINT mudou a forma como informações são descobertas."
+      },
+      {
+        "type": "p",
+        "text": "Hoje, uma imagem aparentemente banal pode revelar localização, rotina, conexões, deslocamentos e intenções e na maioria das vezes, a própria pessoa publica os dados sem perceber."
+      },
+      {
+        "type": "p",
+        "text": "O desafio desse vídeo é:"
+      },
+      {
+        "type": "p",
+        "text": "Descobrir quem é a celebridade, onde ela está e por qual motivo foi até esse local."
+      },
+      {
+        "type": "p",
+        "text": "No mundo real, esse mesmo processo já foi usado para localizar militares, mapear instalações estratégicas, identificar agentes e antecipar operações."
+      },
+      {
+        "type": "p",
+        "text": "A diferença entre curiosidade e inteligência está na capacidade de conectar detalhes dispersos."
+      },
+      {
+        "type": "p",
+        "text": "Vamos ver quem consegue.🔎"
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dynpxwletqp-muita-gente-associa-humint-apenas-a-espionagem-estatal",
+    "title": "Muita gente associa HUMINT apenas à espionagem estatal.",
+    "description": "Mas a maior parte das decisões humanas continua sendo tomada através de percepção social. Empresas chamam isso de:\"inteligência corporativa\".",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Inteligencia",
+      "Comportamento Humano",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-11",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYNPxwlETqp.jpg",
+    "heroAlt": "Muita gente associa HUMINT apenas à espionagem estatal.",
+    "instagramShortCode": "DYNPxwlETqp",
+    "instagramUrl": "https://www.instagram.com/p/DYNPxwlETqp/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Muita gente associa HUMINT apenas à espionagem estatal."
+      },
+      {
+        "type": "p",
+        "text": "Mas a maior parte das decisões humanas continua sendo tomada através de percepção social."
+      },
+      {
+        "type": "p",
+        "text": "Empresas chamam isso de:\"inteligência corporativa\". Psicólogos chamam de leitura comportamental. Executivos chamam de negociação. Investigadores chamam de entrevista. Consultorias chamam de due diligence."
+      },
+      {
+        "type": "p",
+        "text": "O nome muda."
+      },
+      {
+        "type": "p",
+        "text": "O mecanismo continua igual:pessoas revelam informações o tempo inteiro, de forma consciente ou não."
+      },
+      {
+        "type": "p",
+        "text": "A diferença é que alguns sabem observar padrões.Outros apenas reagem a eles."
+      },
+      {
+        "type": "p",
+        "text": "E no mundo atual, onde existe excesso de dados, quem entende comportamento humano ganha vantagem desproporcional."
+      },
+      {
+        "type": "p",
+        "text": "Porque o problema raramente é falta de informação. Normalmente é incapacidade de interpretar pessoas e transformar tudo em conhecimento para tomada de decisões."
+      },
+      {
+        "type": "p",
+        "text": "Você acha que as pessoas percebem o quanto são influenciadas diariamente?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "provar que você, usa técnicas de espionagem todos os dias... A"
+      },
+      {
+        "type": "p",
+        "text": "Quando você faz uma pergunta, lêintenções, E percebe mentira,: entende interesse oculto, identifica manipulação, criarapport..."
+      },
+      {
+        "type": "p",
+        "text": "HUMINT significa Human Intelligence. Dados obtidos através de pessoas. Não precisa satélites, hackers...etc Tudo através de comportamento humano."
+      },
+      {
+        "type": "p",
+        "text": "A del; A O Muita gente relaciona HUMINT com espiões na Guerra Fria, microfilmes, agentes Em infiltrados Mas no mundoreal... está em todo lugar."
+      },
+      {
+        "type": "p",
+        "text": "No mundo corporativo, HUMINT aparece em due diligence, inteligência corporativa, É E stakeholder mapping, análise reputacional,. insider risk... E"
+      },
+      {
+        "type": "p",
+        "text": "Uma empresa quer comprar outra. Os números parecem perfeitos. O Mas conversas discretas com concorrentes... a revelam fraude, conflito e corrupção. Isso é HUMINT."
+      },
+      {
+        "type": "p",
+        "text": "Grandes negociações também são decididas por ego, medo, influência, status, rivalidade, a necessidade de"
+      },
+      {
+        "type": "p",
+        "text": "E Contrainteligência A corporativa estuda isso. A."
+      },
+      {
+        "type": "p",
+        "text": "executivo pode usar HUMINT. Currículo não mostra impulsividade, caráter, ambição destrutiva, risco comportamental."
+      },
+      {
+        "type": "p",
+        "text": "dependem de confiança, percepção, influência e ETiatig:"
+      },
+      {
+        "type": "p",
+        "text": "Por isso Humint está presente nos negócios, nos relacionamentos,"
+      },
+      {
+        "type": "p",
+        "text": "e hoje é humint. Curta, siga e compartilhe Aqui você aprende inteligência aplicada ao"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/01.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/02.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/03.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/04.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/05.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/06.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/07.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/08.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/09.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/10.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/11.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYNPxwlETqp/12.jpg",
+            "alt": "Muita gente associa HUMINT apenas à espionagem estatal. — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyitt9qkyr9-muita-gente-olha-para-o-caso-eli-cohen-e-pensa-que-a-operacao-comecou-em",
+    "title": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco.",
+    "description": "Ela, na verdade, começou em Buenos Aires. Infiltrações profundas começam na construção de legitimidade. A Argentina foi usada como \"fábrica de confiança\".",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Contrainteligencia",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-19",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYiTT9qkYr9.jpg",
+    "heroAlt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. Ela, na verdade, começou em Buenos Aires.",
+    "instagramShortCode": "DYiTT9qkYr9",
+    "instagramUrl": "https://www.instagram.com/p/DYiTT9qkYr9/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco."
+      },
+      {
+        "type": "p",
+        "text": "Ela, na verdade, começou em Buenos Aires."
+      },
+      {
+        "type": "p",
+        "text": "Infiltrações profundas começam na construção de legitimidade."
+      },
+      {
+        "type": "p",
+        "text": "A Argentina foi usada como \"fábrica de confiança\"."
+      },
+      {
+        "type": "p",
+        "text": "Ali, Eli criou algo mais poderoso que uma identidade falsa, ele criou reputação social."
+      },
+      {
+        "type": "p",
+        "text": "Ele conseguiu construir uma validação social em cadeia."
+      },
+      {
+        "type": "p",
+        "text": "Quando alguém é apresentado por pessoas influentes, o cérebro reduz suspeitas automaticamente."
+      },
+      {
+        "type": "p",
+        "text": "É assim que acesso real é criado."
+      },
+      {
+        "type": "p",
+        "text": "A operação explorou perfeitamente a tendência de confiar em quem já foi aceito pelo grupo."
+      },
+      {
+        "type": "p",
+        "text": "Décadas depois, empresas, serviços de inteligência, golpistas e até manipuladores sociais continuam usando exatamente o mesmo princípio."
+      },
+      {
+        "type": "p",
+        "text": "Porque no fim… credenciais abrem portas e a confiança faz as pessoas falarem."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "a, Os generais sírios contavam segredos A! o a AS E"
+      },
+      {
+        "type": "p",
+        "text": "E Israel acreditava que uma nova guerra contra países E Rom e eres O E O o EasSíriaera uma no E o A a"
+      },
+      {
+        "type": "p",
+        "text": "E o E geçd o estava sendo preparado do E outro lado da fronteira. E: o"
+      },
+      {
+        "type": "p",
+        "text": "A Então Israel decidiu colocar um homem dentro da elite síria. Ou pelo menos... era esse o nome verdadeiro."
+      },
+      {
+        "type": "p",
+        "text": "A infiltração começou na Argentina. Antes mesmo de entrar na Síria ele construía relacionamentos com a elite árabe expatriada. Porque HUMINT exige formação de contexto."
+      },
+      {
+        "type": "p",
+        "text": "E o É importantes adoram pessoas que as fazem se sentir importantes. E era Quando chegou em Damasco... elejátinha conexões poderosas. E Edil A casa dele virou ponto de encontro de militares e políticos sírios"
+      },
+      {
+        "type": "p",
+        "text": "Oficiais começaram a revelar o À posições militares, estruturas defensivas,! conflitos internos, A: planos estratégicos. Na frente dele."
+      },
+      {
+        "type": "p",
+        "text": "Israel recebia informações E diretamente do coração da É Síria. A É! clandestinamente por rádio"
+      },
+      {
+        "type": "p",
+        "text": "Mas o sucesso criou excesso de confiança. e A inteligência síria começou a a rastrear transmissões clandestinas com ajuda E soviética. E a E encontrou Eli Cohen."
+      },
+      {
+        "type": "p",
+        "text": "Quando ele foi preso... E elite síria entrou em choque. confiaram nele, receberam ele em casa, entregaram segredos militares para ele."
+      },
+      {
+        "type": "p",
+        "text": "Muitos acreditam que parte À dessa vantagem começou a a des. ELE E"
+      },
+      {
+        "type": "p",
+        "text": "Muitos segredos não. precisam ser roubados. Ema No contexto certo, eles são,. falados abertamente. gui Isso é Humint! à"
+      },
+      {
+        "type": "p",
+        "text": "Quer aprender Humint além dos filmes e entender como usar isso na sua vida? Comente"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/01.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/02.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/03.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/04.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/05.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/06.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/07.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/08.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/09.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/10.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/11.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/12.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/13.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DYiTT9qkYr9/14.jpg",
+            "alt": "Muita gente olha para o caso Eli Cohen e pensa que a operação começou em Damasco. — slide 14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzghxwsmn1s-para-entender-essa-historia-e-preciso-voltar-a-espanha-dos-anos-1970",
+    "title": "Para entender essa história, é preciso voltar à Espanha dos anos 1970.",
+    "description": "Luis Carrero Blanco era o homem escolhido por Francisco Franco para garantir a continuidade do regime após sua morte.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Comportamento Humano",
+      "Contrainteligencia",
+      "Espionagem Historica"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-02",
+    "updatedAt": "2026-05-11",
+    "readingTime": "2 min",
+    "heroImage": "/images/instagram/DZGHxwSmn1s.jpg",
+    "heroAlt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970.",
+    "instagramShortCode": "DZGHxwSmn1s",
+    "instagramUrl": "https://www.instagram.com/p/DZGHxwSmn1s/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Para entender essa história, é preciso voltar à Espanha dos anos 1970."
+      },
+      {
+        "type": "p",
+        "text": "Luis Carrero Blanco era o homem escolhido por Francisco Franco para garantir a continuidade do regime após sua morte. Quando o ETA decidiu eliminá-lo, acreditavam que estar atacando o futuro da própria ditadura."
+      },
+      {
+        "type": "p",
+        "text": "A operação foi meticulosa. Durante meses, integrantes do grupo alugaram um apartamento em Madri sob a fachada de estudantes. Enquanto aparentavam uma vida comum, escavavam secretamente um túnel sob a rua utilizada diariamente pelo comboio oficial. Quando a carga explosiva foi detonada, a explosão foi tão poderosa que o carro de Carrero Blanco foi lançado acima de um prédio próximo, transformando o atentado em um dos episódios mais marcantes da história do terrorismo europeu."
+      },
+      {
+        "type": "p",
+        "text": "Um dos participantes da operação era José Miguel Beñaran, conhecido como Argala."
+      },
+      {
+        "type": "p",
+        "text": "Após o atentado, ele fugiu para a França e passou anos vivendo na clandestinidade. Acreditava ter escapado. Em dezembro de 1978, porém, um artefato explosivo instalado em seu veículo encerrou sua fuga."
+      },
+      {
+        "type": "p",
+        "text": "Embora o governo espanhol jamais tenha assumido a autoria, acredita-se amplamente que a operação tenha sido conduzida por agentes ou ex-agentes ligados aos serviços de segurança da Espanha."
+      },
+      {
+        "type": "p",
+        "text": "O aspecto mais interessante dessa história é a motivação."
+      },
+      {
+        "type": "p",
+        "text": "Pessoas passam anos observando, esperando e correndo riscos por diferentes razões. Algumas por dinheiro. Outras por ideologia. Outras por patriotismo. E algumas por vingança."
+      },
+      {
+        "type": "p",
+        "text": "A HUMINT parte da premissa que a ação humana é consequência de motivação. Sempre ligada a dor e/ou desejo."
+      },
+      {
+        "type": "p",
+        "text": "Compreender o que move uma pessoa permite prever, influenciar ou explorar suas decisões."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "A É mais poderoso da Espanha. e E! o o Cinco anos depois, a vingança bateu na sua porta."
+      },
+      {
+        "type": "p",
+        "text": "1973. A Espanha vivia os iii, últimos anos da ditadura de Franco. a Rad SE Sue E e"
+      },
+      {
+        "type": "p",
+        "text": "homem mais poderoso do governo espanhol. a O O primeiro-ministro: Luis Carrero Blanco. E, a"
+      },
+      {
+        "type": "p",
+        "text": "um túnel sob uma do asfalto. Tudo sem levantar suspeitas."
+      },
+      {
+        "type": "p",
+        "text": "o da Na edil! Net As E exatamente sobre o ponto marcado. E. Esto A explosão foi devastadora. E os E A O carro foi arremessado acima de um rue: prédio de cinco andares. A operação entrou para a história. É"
+      },
+      {
+        "type": "p",
+        "text": "Argala virou um herói. E Mas para outros, Felesetornouumalvo."
+      },
+      {
+        "type": "p",
+        "text": "Argala fugiu para a França. À Sie E acreditou que"
+      },
+      {
+        "type": "p",
+        "text": "O que ele não sabia era a que alguém o procurava. Horários. E Deslocamentos.!"
+      },
+      {
+        "type": "p",
+        "text": "de dezembro de 1978. da Cinco anos após amorte de dra A Carrero Blanco. eae É O E Todea; Renault, girou a chave... o."
+      },
+      {
+        "type": "p",
+        "text": "A A Mas foi a informação,; e asvezes anos., SE E"
+      },
+      {
+        "type": "p",
+        "text": "Uma equipe clandestina do serviço secreto espanhol nunca esqueceu. a o O compartilhe. E Algumas operações"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/01.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/02.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/03.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/04.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/05.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/06.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/07.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/08.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/09.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/10.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZGHxwSmn1s/11.jpg",
+            "alt": "Para entender essa história, é preciso voltar à Espanha dos anos 1970. — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyvalvyestl-no-mundo-da-espionagem-nem-tudo-segue-caminhos-eticos-sofisticados-ou-ci",
+    "title": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos.",
+    "description": "Muitas operações começam explorando simples vulnerabilidades humanas.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Contrainteligencia",
+      "Espionagem",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-24",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYvALVYEStL.jpg",
+    "heroAlt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos.",
+    "instagramShortCode": "DYvALVYEStL",
+    "instagramUrl": "https://www.instagram.com/p/DYvALVYEStL/",
+    "body": [
+      {
+        "type": "p",
+        "text": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. Muitas operações começam explorando simples vulnerabilidades humanas."
+      },
+      {
+        "type": "p",
+        "text": "Serviços de inteligência entendem que medo, vergonha e necessidade de esconder um erro podem ser mais eficazes do que dinheiro ou ideologia. Uma pessoa psicologicamente pressionada tende a entrar em ciclos de silêncio, isolamento e obediência gradual."
+      },
+      {
+        "type": "p",
+        "text": "Primeiro vêm perguntas pequenas. Favores aparentemente inofensivos. Informações que \"não parecem tão importantes\"."
+      },
+      {
+        "type": "p",
+        "text": "O objetivo inicial é testar até onde a pessoa aceita avançar para proteger a própria reputação."
+      },
+      {
+        "type": "p",
+        "text": "Esse mecanismo aparece em operações de espionagem, mas também em golpes, manipulação psicológica, corrupção corporativa e engenharia social. Quanto maior o medo da exposição, maior a capacidade de controle sobre a vítima."
+      },
+      {
+        "type": "p",
+        "text": "Por isso, ambientes profissionais sensíveis investem tanto em cultura de reporte imediato e contrainteligência preventiva. Porque sabem que segredos escondidos criam vulnerabilidades exploráveis."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "transformou um herói da Estônia em um espião... E uma noite para isso."
+      },
+      {
+        "type": "p",
+        "text": "E DenissMetsavas Pis era major do da Especialista em artilharia. Um homem confiável dentro da estrutura militar europeia."
+      },
+      {
+        "type": "p",
+        "text": "one a Em 2007, durante uma visita à Rússia, ele conheceu uma mulher em uma boate. Beberam. Se divertiram. Passaram a noite juntos. Parecia"
+      },
+      {
+        "type": "p",
+        "text": "o, Na manhã seguinte, Homens à paisana o interceptaram. e A mulher o acusava de E Eles diziam ter vídeos. Testemunhas. E um processo pronto para destruir sua vida."
+      },
+      {
+        "type": "p",
+        "text": "Você vai colaborar conosco... ou isso chega ao seu Exército, à sua família e à polícia."
+      },
+      {
+        "type": "p",
+        "text": "O, Ele nunca contou para ninguém. Nem para o Exército. Nem para a contrainteligência da Estônia. A vergonha virou prisão psicológica."
+      },
+      {
+        "type": "p",
+        "text": "Meses depois apareceu Anton. a Um oficial do GRU. a a a Era Anton quem controlava E O a operação. A Marcava encontros. o Fazia perguntas. e. E lembrava Metsavas do que aconteceria se ele parasse de,"
+      },
+      {
+        "type": "p",
+        "text": "Anton começou pedindo grandes segredos. cod E ia rotina militar, estrutura movimentações. E Pouco a pouco, Metsavas foi entrando mais fundo."
+      },
+      {
+        "type": "p",
+        "text": "E Metsavas cresceu dentro das Contato com estruturas da OTAN. Quanto maior o cargo... mais valioso ele ficava para Anton e para Moscou."
+      },
+      {
+        "type": "p",
+        "text": "o! Ele virou símbolo público do patriotismo estoniano. Dava entrevistas informações para a Rússia."
+      },
+      {
+        "type": "p",
+        "text": "informações militares da Estônia e da OTAN. Tudo sustentado pelo medo da exposição."
+      },
+      {
+        "type": "p",
+        "text": "Em 2018, a contrainteligência estoniana finalmente o prendeu."
+      },
+      {
+        "type": "p",
+        "text": "precisou de uma noite para"
+      },
+      {
+        "type": "p",
+        "text": "A operação deu certo no momento em que ele escolheu o silêncio. e Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYvALVYEStL/01.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/02.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/03.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/04.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/05.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/06.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/07.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/08.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/09.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/10.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/11.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/12.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/13.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DYvALVYEStL/14.jpg",
+            "alt": "No mundo da espionagem, nem tudo segue caminhos éticos, sofisticados ou cinematográficos. — slide 14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyljcahkz6q-toda-operacao-clandestina-precisa-responder-uma-pergunta-fundamental",
+    "title": "Toda operação clandestina precisa responder uma pergunta fundamental:",
+    "description": "\"O que as pessoas esperam ver?\" Porque o cérebro humano não verifica tudo. Ele economiza energia.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Contrainteligencia",
+      "Psicologia Comportamental",
+      "PSYOPS",
+      "Engenharia Social"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-10",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYLJCAhkZ6Q.jpg",
+    "heroAlt": "Toda operação clandestina precisa responder uma pergunta fundamental: \"O que as pessoas esperam ver?",
+    "instagramShortCode": "DYLJCAhkZ6Q",
+    "instagramUrl": "https://www.instagram.com/p/DYLJCAhkZ6Q/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Toda operação clandestina precisa responder uma pergunta fundamental:"
+      },
+      {
+        "type": "p",
+        "text": "\"O que as pessoas esperam ver?\""
+      },
+      {
+        "type": "p",
+        "text": "Porque o cérebro humano não verifica tudo. Ele economiza energia."
+      },
+      {
+        "type": "p",
+        "text": "Nós usamos contexto, aparência, linguagem, status social e coerência narrativa para decidir rapidamente no que confiar."
+      },
+      {
+        "type": "p",
+        "text": "Esse é um dos pilares da HUMINT: A maioria das pessoas detecta inconsistências."
+      },
+      {
+        "type": "p",
+        "text": "Por isso operações sofisticadas não se sustentam apenas em documentos falsos ou identidades falsas."
+      },
+      {
+        "type": "p",
+        "text": "Elas constroem ecossistemas psicológicos."
+      },
+      {
+        "type": "p",
+        "text": "Quando tudo parece encaixar… a mente relaxa."
+      },
+      {
+        "type": "p",
+        "text": "E isso não acontece apenas na espionagem."
+      },
+      {
+        "type": "p",
+        "text": "Acontece em golpes financeiros. Em manipulação política. Em relações pessoais. Em campanhas de influência. Em redes sociais."
+      },
+      {
+        "type": "p",
+        "text": "Percepção é uma infraestrutura de poder."
+      },
+      {
+        "type": "p",
+        "text": "Muitas vezes o esforço mais importante é criar a versão da realidade que as pessoas deixam de questionar."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "e ema. e Uma equipe de Hollywood o entrou no Irã revolucionário para gravar um filme. era uma operação da CIA. É"
+      },
+      {
+        "type": "p",
+        "text": "A E o o a O e. emTeerã foi invadida. viraram reféns diante das E câmeras do mundo inteiro."
+      },
+      {
+        "type": "p",
+        "text": "conseguiram escapar. na Haga ada na Eles estavam escondidos dentro o! é andrea E dai Aeroportos eram monitorados. E A odiados nas ruas.: É"
+      },
+      {
+        "type": "p",
+        "text": "precisava o! tirar os E O a Mas existia um problema. as, Qualquer rota tradicional O"
+      },
+      {
+        "type": "p",
+        "text": "Na a NA A Então surgiu uma ideia tão absurda... em uma equipe de A"
+      },
+      {
+        "type": "p",
+        "text": "o. a Vai ode pao lag a a a Não era"
+      },
+      {
+        "type": "p",
+        "text": "e E eles levaram a cobertura até o fim. produtora em Hollywood A E DE o roteiro completo concept arts Pes telefonistas atendendo"
+      },
+      {
+        "type": "p",
+        "text": "Passport Contral Porque operações clandestinas precisam de mais do que apenas de documentos falsos. gas de coerência social."
+      },
+      {
+        "type": "p",
+        "text": "O arquiteto da dad operação era Tony Mendez. Especialista em his disfarces e e, À Mas sua principal arma era conseguir alterar a percepção."
+      },
+      {
+        "type": "p",
+        "text": "Então veio o momento crítico, o aeroporto de E Cada olhar podia sea"
+      },
+      {
+        "type": "p",
+        "text": "E Sulgayt dale pote Gigas Lguá Não O! sta Olga! alas! Os agentes iranianos não dpi Rap da apa"
+      },
+      {
+        "type": "p",
+        "text": "E foi exatamente isso que aconteceu. voo comercial. E saíram do Irã sem um tiro. Late o ate E Togo narrativa parecia plausível o E Life"
+      },
+      {
+        "type": "p",
+        "text": "O sucesso de muitas operações de inteligência depende de pessoas aceitarem uma versão conveniente da realidade. E percepção também é extração."
+      },
+      {
+        "type": "p",
+        "text": "Quantas realidades manipuladas estão ao nosso redor? Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/01.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/02.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/03.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/04.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/05.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/06.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/07.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/08.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/09.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/10.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/11.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/12.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/13.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/14.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 14"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/15.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 15"
+          },
+          {
+            "src": "/images/carrossel/DYLJCAhkZ6Q/16.jpg",
+            "alt": "Toda operação clandestina precisa responder uma pergunta fundamental: — slide 16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzduc-qkbfu-a-reputacao-abre-portas-gera-oportunidades-e-constroi-confianca-por-outr",
+    "title": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela...",
+    "description": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela também cria inimigos, desperta memórias e deixa rastros que podem sobreviver...",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Psicologia Comportamental",
+      "Espionagem",
+      "Contrainteligencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-01",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZDUc-QkbfU.jpg",
+    "heroAlt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela também cria inimigos, desperta memórias e deixa...",
+    "instagramShortCode": "DZDUc-QkbfU",
+    "instagramUrl": "https://www.instagram.com/p/DZDUc-QkbfU/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela também cria inimigos, desperta memórias e deixa rastros que podem sobreviver por décadas."
+      },
+      {
+        "type": "p",
+        "text": "Herberts Cukurs foi celebrado como pioneiro da aviação, admirado por muitos e conhecido muito além das fronteiras da Letônia. Mas seu nome também foi associado a algumas das acusações mais graves surgidas após a Segunda Guerra Mundial."
+      },
+      {
+        "type": "p",
+        "text": "Reputação é um fenômeno externo. Ela não pertence a você. Pertence às pessoas que observam você. O erro de muitos é acreditar que controlam a própria reputação apenas porque controlam a própria narrativa."
+      },
+      {
+        "type": "p",
+        "text": "E isso importa porque as pessoas tomam decisões baseadas em percepções, não em verdades absolutas."
+      },
+      {
+        "type": "p",
+        "text": "Talvez, o erro de Cukurs tenha sido acreditar que sua reputação garantiria uma presunção de inocência, e que estaria protegido."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "O homem acusado de Foi encontrado morto, no Uruguai dentro de um baú. Do lado, um bilhete.."
+      },
+      {
+        "type": "p",
+        "text": "À Na década de 1930, ele era um herói nacional da Letônia. penpio pare: E E E"
+      },
+      {
+        "type": "p",
+        "text": "Pci o sobreviventes o acusaram. de participar de perseguições, torturas e assassinatos de judeus. e Para muitos, ele era um criminoso de guerra. A:"
+      },
+      {
+        "type": "p",
+        "text": "caráter. PPTMANente do dec. 010., de 1938 É aja Letonia Esta A e e para o Brasil. Ao? de decembr: Aro: O pela autoridade consular, sendo as duas vias em original."
+      },
+      {
+        "type": "p",
+        "text": "Abriu negócios. Concedeu entrevistas. Criou uma nova vida. E E E Enquanto isso, as acusações continuavam o perseguindo. e"
+      },
+      {
+        "type": "p",
+        "text": "Em 1965, surgiu uma oportunidade. Um empresário europeu demonstrou interesse em fazer negócios com ele. O que Cukurs não sabia: era um agente do Mossad."
+      },
+      {
+        "type": "p",
+        "text": "Construção de confiança. Até que veio o convite: Vamos discutir o projeto no Uruguai."
+      },
+      {
+        "type": "p",
+        "text": "Cukurs aceitou. Ao entrar numa casa em Montevidéu, percebeu que algo estava errado."
+      },
+      {
+        "type": "p",
+        "text": "a Alutafoi violenta. A resistiu ferozmente. Mas não saiu vivo dali."
+      },
+      {
+        "type": "p",
+        "text": "Dias depois, a polícia E E dentro de um baú. Ao lado, uma mensagem.; É E O Mossad assumia a E o dO A Ati"
+      },
+      {
+        "type": "p",
+        "text": "Para alguns, foi justiça. O IA? Um homem acusado de tribunais e finalmente foi"
+      },
+      {
+        "type": "p",
+        "text": "É A pergunta A ao o EuugiENElCE Quando a Justiça falha, a um serviço secreto tem o,: direito de decidir quem À vive e quem morre?"
+      },
+      {
+        "type": "p",
+        "text": "Elen flar: Foi justiça ou assassinato? Comente, curta e compartilhe."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/01.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/02.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/03.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/04.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/05.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/06.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/07.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/08.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/09.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/10.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/11.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/12.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/13.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DZDUc-QkbfU/14.jpg",
+            "alt": "A reputação abre portas, gera oportunidades e constrói confiança, por outro lado ela... — slide 14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyapy4rktow-o-recente-caso-da-monica-witt-reforca-o-que-falo-com-frequencia-operacoe",
+    "title": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas...",
+    "description": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas com HUMINT exploram algo muito mais profundo do que dinheiro ou...",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Contrainteligencia",
+      "Espionagem",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-16",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYaPy4rkTOw.jpg",
+    "heroAlt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas com HUMINT exploram algo muito mais profundo do...",
+    "instagramShortCode": "DYaPy4rkTOw",
+    "instagramUrl": "https://www.instagram.com/p/DYaPy4rkTOw/",
+    "body": [
+      {
+        "type": "p",
+        "text": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas com HUMINT exploram algo muito mais profundo do que dinheiro ou chantagem…explora a identidade, pertencimento, validação emocional e ruptura psicológica gradual."
+      },
+      {
+        "type": "p",
+        "text": "Um ponto de atenção para a contrainteligência é que esse tipo de ameaça não ocorre do dia para noite, elas costumam ser precedidas por mudanças de comportamento, isolamento, ressentimento institucional, radicalização ideológica ou busca por reconhecimento."
+      },
+      {
+        "type": "p",
+        "text": "Por isso, serviços de inteligência modernos precisam observar não apenas acesso a informação, mas como está o ser humano que possui o acesso."
+      },
+      {
+        "type": "p",
+        "text": "Outro aspecto relevante do caso é a integração operacional."
+      },
+      {
+        "type": "p",
+        "text": "A suposta atuação iraniana não ficou limitada ao recrutamento humano. Depois da deserção, surgiram campanhas cibernéticas, engenharia social, perfis falsos e phishing contra antigos colegas da própria Monica Witt."
+      },
+      {
+        "type": "p",
+        "text": "Era HUMINT, CYBER e influência psicológica atuando juntos."
+      },
+      {
+        "type": "p",
+        "text": "Fica claro que a atuação da Inteligência não acontece em \"caixinhas separadas\". OSINT, HUMINT, interceptação de sinais, análise de imagens, CYBER… tudo trabalha em conjunto."
+      },
+      {
+        "type": "p",
+        "text": "Hoje, operações reais misturam comportamento, dados, relações humanas, narrativas e tecnologia."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Ela foi treinada para identificar espiões... acabou virando A um deles."
+      },
+      {
+        "type": "p",
+        "text": "contrainteligência da Força Aérea dos EUA E Sua função era proteger pessoas,, operações, meios e E informações contra a ELE"
+      },
+      {
+        "type": "p",
+        "text": "ater técnicas de manipulação, recrutamento ideológico, engenharia psicológica, operações clandestinas. Ela sabia exatamente como espionagem funcionava"
+      },
+      {
+        "type": "p",
+        "text": "Surgiram problemas financeiros, isolamento, crise de identidade e frustração ideológica."
+      },
+      {
+        "type": "p",
+        "text": "Ela começou a acreditar que os EUA perseguiam muçulmanos. Teo dar TeR; Que havia mentiras por trás o Bei EUA a A!"
+      },
+      {
+        "type": "p",
+        "text": "Então surgiu o convite. pesa Debates políticos, mídia, intelectuais e narrativas A antiamericanas."
+      },
+      {
+        "type": "p",
+        "text": "e Monica encontrou algo À que não sentia nos EUA... Validação, pertencimento. a e"
+      },
+      {
+        "type": "p",
+        "text": "A Pouco depois, ela, AS desapareceu. e Unidos. Elogiando o a TeR ade A agente havia Nas desertado. e"
+      },
+      {
+        "type": "p",
+        "text": "Segundo o FBI, Monica ajudou o Irã a identificar ex-colegas da inteligência americana. Pessoas que trabalharam ao lado dela."
+      },
+      {
+        "type": "p",
+        "text": "O regime iraniano passou a criar target packages. e ao Perfis detalhados dos alvos."
+      },
+      {
+        "type": "p",
+        "text": "Lado A: agora ajudava um governo"
+      },
+      {
+        "type": "p",
+        "text": "A inteligência iraniana precisou entender emoções: E perceber as vulnerabilidades da agente americana."
+      },
+      {
+        "type": "p",
+        "text": "A HUMINT explorou a a solidão, ego, ressentimento e pertencimento.. Curta, siga e compartilhe E histórias reais. a, e"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/01.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/02.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/03.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/04.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/05.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/06.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/07.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/08.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/09.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/10.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/11.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/12.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYaPy4rkTOw/13.jpg",
+            "alt": "O recente caso da Monica Witt reforça o que falo com frequência, operações sofisticadas... — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyu6wgqkuww-operacoes-especiais-normalmente-operam-com-informacoes-obtidas-pela-inte",
+    "title": "Operações especiais normalmente operam com informações obtidas pela Inteligência.",
+    "description": "Antes da explosão da porta, as forças especiais precisavam saber quem dormia na casa, Quem fazia segurança, Qual entrada era usada, Como era a estrutura do...",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Operacoes Especiais",
+      "Countra Terrorismo",
+      "Inteligencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-14",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYU6wgQkUww.jpg",
+    "heroAlt": "Operações especiais normalmente operam com informações obtidas pela Inteligência.",
+    "instagramShortCode": "DYU6wgQkUww",
+    "instagramUrl": "https://www.instagram.com/p/DYU6wgQkUww/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Operações especiais normalmente operam com informações obtidas pela Inteligência."
+      },
+      {
+        "type": "p",
+        "text": "Antes da explosão da porta, as forças especiais precisavam saber quem dormia na casa, Quem fazia segurança, Qual entrada era usada, Como era a estrutura do complexo, Quem circulava no local, Onde estavam mulheres e crianças…"
+      },
+      {
+        "type": "p",
+        "text": "Isso reduz incerteza. E em operações CQB, reduzir incerteza salva vidas."
+      },
+      {
+        "type": "p",
+        "text": "Muita gente imagina que operações especiais são alimentadas apenas por tecnologia como drone, visão noturna, helicóptero, míssil..mas frequentemente o elemento decisivo vem de alguém aparentemente comum com acesso à informação."
+      },
+      {
+        "type": "p",
+        "text": "A diferença entre uma invasão cirúrgica e um desastre operacional normalmente está na qualidade da inteligência humana."
+      },
+      {
+        "type": "p",
+        "text": "Na prática, grupos táticos e inteligência funcionam como partes da mesma engrenagem."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "evitava telefone, internet e a e É continuava cercado por pessoas... A Fren A"
+      },
+      {
+        "type": "p",
+        "text": "E mais caçados do planeta."
+      },
+      {
+        "type": "p",
+        "text": "Baghdadi liderava o Islamic State, conhecido como O grupo controlou cidades, executou reféns e espalhou terror pelo Oriente Médio."
+      },
+      {
+        "type": "p",
+        "text": "de propaganda, E recrutamento"
+      },
+      {
+        "type": "p",
+        "text": "Baghdadi sabia como sobreviver escondido. Satélites viam prédios. Drones viam carros. Mas ninguém conseguia Tale iii"
+      },
+      {
+        "type": "p",
+        "text": "Fontes infiltradas começaram a informar sobre contatos,. familiares, casas seguras e rotas clandestinas."
+      },
+      {
+        "type": "p",
+        "text": "Uma fonte humana teria sido decisiva. Ela ajudou a confirmar a presença de Baghdadi, descrevero complexo, identificar hábitos e forneceu"
+      },
+      {
+        "type": "p",
+        "text": "aigá a À A nes Tie IgE Barisha, no noroeste da Síria. O detalhe curioso, ele estava escondido perto de grupos rivais. E As vezes, o lugar mais seguro é onde ninguém procura."
+      },
+      {
+        "type": "p",
+        "text": "cruzaram a Síria em baixa altitude. o A a A missão havia começado."
+      },
+      {
+        "type": "p",
+        "text": "a é E Operadores da A invadiram o complexo. Paredes foram explodidas. Houve troca de tiros. Crianças foram retiradas."
+      },
+      {
+        "type": "p",
+        "text": "Baghdadi fugiu para um túnel sem saída. Encurralado, detonou um colete explosivo. Morreu junto com duas crianças."
+      },
+      {
+        "type": "p",
+        "text": "Os helicópteros E aparecem nos filmes. No ameddEi E Mas alguém que sentava À E perto do alvo foi recrutado antes."
+      },
+      {
+        "type": "p",
+        "text": "Curta, siga e compartilhe a Aqui você aprende sobre Inteligência através de histórias reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/01.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/02.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/03.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/04.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/05.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/06.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/07.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/08.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/09.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/10.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/11.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/12.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYU6wgQkUww/13.jpg",
+            "alt": "Operações especiais normalmente operam com informações obtidas pela Inteligência. — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyxslklkayr-em-1982-britanicos-operavam-no-outro-lado-do-planeta-com-comunicacao-lim",
+    "title": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas...",
+    "description": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas imagens atualizadas e enorme incerteza sobre o cenário real nas ilhas.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Inteligencia Militar",
+      "Psicologia Comportamental"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-25",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYxSlKLkayr.jpg",
+    "heroAlt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas imagens atualizadas e enorme incerteza sobre o...",
+    "instagramShortCode": "DYxSlKLkayr",
+    "instagramUrl": "https://www.instagram.com/p/DYxSlKLkayr/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas imagens atualizadas e enorme incerteza sobre o cenário real nas ilhas. Satélites existiam, mas estavam longe da capacidade de vigilância persistente que conhecemos hoje. Drones praticamente não faziam parte do campo de batalha. Então muita informação decisiva veio do método mais antigo da inteligência: Pessoas."
+      },
+      {
+        "type": "p",
+        "text": "Hoje existe a ilusão de que Big Data, IA, interceptação e vigilância digital resolveram o problema da inteligência. Não resolveram, paradoxalmente cada vez mais a coleta de dados depende a relação humana."
+      },
+      {
+        "type": "p",
+        "text": "Porque quase toda operação humana ainda depende de fatores emocionais:medo, ego, exaustão, pertencimento, necessidade de validação, pressão psicológica e percepção de segurança."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que HUMINT continua extremamente relevante em espionagem, investigações, negociação, segurança corporativa, entrevistas, recrutamento… etc"
+      },
+      {
+        "type": "p",
+        "text": "A tecnologia pode mostrar \"o que\" aconteceu, só que normalmente o \"por quê\", vem da Humint."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "E E À fra a E EM col aii cedo DAS E E ele ajudava os britânicos. E"
+      },
+      {
+        "type": "p",
+        "text": "A Argentina havia invadido as ilhas Falklands, também chamada de Malvinas pelos Argentinos o: E o Reino Unido respondeu"
+      },
+      {
+        "type": "p",
+        "text": "A E E durante a viagem e E depois do desembarque, a inteligência britânica let E quadro situacional;... Doe e"
+      },
+      {
+        "type": "p",
+        "text": "A Mad Nicholas van der Bijl inicia a análise"
+      },
+      {
+        "type": "p",
+        "text": "de maio de 1982. Miguel Cruzado é abatido. E À ele senta na frente de Nick."
+      },
+      {
+        "type": "p",
+        "text": "E, aos poucos... o piloto começou a falar."
+      },
+      {
+        "type": "p",
+        "text": "a Lee é aguerra termina. o oia e Eainteligência humana coletada e no conflito foi considerada Soa na à à é. Porque tecnologia ajuda. Write? sda Mas guerras ainda são decididas por pessoas, em salas de reunião e"
+      },
+      {
+        "type": "p",
+        "text": "A natureza humana mudou menos do que você imagina. À ao Mor oiii a e A a DE"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/01.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/02.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/03.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/04.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/05.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/06.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/07.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYxSlKLkayr/08.jpg",
+            "alt": "Em 1982, britânicos operavam no outro lado do planeta, com comunicação limitada, poucas... — slide 8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzqa7ypevti-em-junho-de-1953-um-garoto-de-14-anos-chamado-jimmy-bozart-fazia-entrega",
+    "title": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no...",
+    "description": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no Brooklyn quando recebeu uma moeda de cinco centavos como pagamento.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "Contrainteligencia",
+      "Espionagem",
+      "OPSEC"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-06",
+    "updatedAt": "2026-05-11",
+    "readingTime": "2 min",
+    "heroImage": "/images/instagram/DZQA7yPEVTI.jpg",
+    "heroAlt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no Brooklyn quando recebeu uma moeda de cinco...",
+    "instagramShortCode": "DZQA7yPEVTI",
+    "instagramUrl": "https://www.instagram.com/p/DZQA7yPEVTI/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no Brooklyn quando recebeu uma moeda de cinco centavos como pagamento."
+      },
+      {
+        "type": "p",
+        "text": "Pouco depois, a moeda caiu no chão."
+      },
+      {
+        "type": "p",
+        "text": "Ela se abriu."
+      },
+      {
+        "type": "p",
+        "text": "Dentro havia uma microfotografia contendo uma mensagem codificada."
+      },
+      {
+        "type": "p",
+        "text": "O FBI assumiu imediatamente a investigação."
+      },
+      {
+        "type": "p",
+        "text": "Ninguém conseguiu explicar de onde aquela moeda veio, quem deveria recebê-la ou o significado dos números registrados na microimagem."
+      },
+      {
+        "type": "p",
+        "text": "O caso permaneceu sem solução durante anos."
+      },
+      {
+        "type": "p",
+        "text": "A moeda fazia parte de um método clássico de comunicação sigilosa utilizado por redes clandestinas durante a Guerra Fria."
+      },
+      {
+        "type": "p",
+        "text": "Longe de ser um universo repleto de perseguições, gadgets sofisticados e encontros secretos em becos escuros. Uma das maiores preocupações de qualquer serviço de inteligência de estado durante a Guerra Fria era transmitir informações sem chamar atenção."
+      },
+      {
+        "type": "p",
+        "text": "Por isso surgiram técnicas como moedas ocas, parafusos ocos, canetas modificadas, microfilmes, microfotografias e os chamados dead drops, locais onde mensagens eram deixadas para serem recolhidas posteriormente, sem contato direto entre os envolvidos."
+      },
+      {
+        "type": "p",
+        "text": "O objetivo era esconder a própria existência da comunicação."
+      },
+      {
+        "type": "p",
+        "text": "Esse princípio continua atual."
+      },
+      {
+        "type": "p",
+        "text": "A resposta da moeda só surgiu em 1957, quando o agente soviético Reino Häyhänen desertou para o Ocidente. Durante os interrogatórios, ele reconheceu a microfotografia e revelou detalhes de uma rede de espionagem soviética que operava secretamente nos Estados Unidos. As informações levaram o FBI até Rudolf Abel, um dos mais importantes agentes ilegais da União Soviética em território americano. Abel foi preso, condenado por espionagem e, anos depois, trocado pelo piloto americano Francis Gary Powers, abatido durante o famoso incidente do avião U-2."
+      },
+      {
+        "type": "p",
+        "text": "E você?"
+      },
+      {
+        "type": "p",
+        "text": "Qual objeto comum passaria despercebido aos seus olhos se escondesse uma mensagem?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "E Um garoto recebeu uma moeda de troco. À A: dentro dela havia um"
+      },
+      {
+        "type": "p",
+        "text": "Nova York. 1953. Jimmy Bozart, um jornaleiro de anos, recolhia pagamentos de assinantes. Nada fora do comum. Até uma moeda cairno chão. E tar DA"
+      },
+      {
+        "type": "p",
+        "text": "peu Mas ninguém sabia quem e E havia enviado a 1255"
+      },
+      {
+        "type": "p",
+        "text": "Na Guerra Fria, transmitir informações eraumdosmaiores É desafios da espionagem. Coletar era difícil. Enviar sem ser descoberto era ainda mais."
+      },
+      {
+        "type": "p",
+        "text": "Por isso surgiram técnicas de comunicação Microfilmes. Moedas ocas. A Parafusos ocos. Canetas modificadas. e o Objetos comuns transformados em esconderijos."
+      },
+      {
+        "type": "p",
+        "text": "em meio ao cotidiano. objeto, menor a chance A"
+      },
+      {
+        "type": "p",
+        "text": "Outra técnica comum eram os dead drops. E Em vez de encontros presenciais, agentes deixavam mensagens em locais previamente; combinados. Nenhuma necessidade de conversa ou contato"
+      },
+      {
+        "type": "p",
+        "text": "Toda comunicação clandestina enfrenta o, o SiS dE informação sem revelar quem a enviou."
+      },
+      {
+        "type": "p",
+        "text": "o Aresposta era à comportamento. o a Camuflagem. A Epic"
+      },
+      {
+        "type": "p",
+        "text": "Anos depois, À aquela pequena moeda ajudaria o clandestina: soviética operando nos Estados Unidos."
+      },
+      {
+        "type": "p",
+        "text": "Curta, siga e compartilhe Aqui você aprende sobre. Eco dA dE E"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/01.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/02.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/03.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/04.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/05.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/06.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/07.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/08.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/09.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/10.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/11.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZQA7yPEVTI/12.jpg",
+            "alt": "Em junho de 1953, um garoto de 14 anos chamado Jimmy Bozart fazia entregas de jornais no... — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dy8vdmies38-a-imagem-popular-ainda-e-a-do-agente-escondido-em-um-beco-escuro-usando-",
+    "title": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos...",
+    "description": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos secretos e dispositivos sofisticados.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Contrainteligencia",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-30",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DY8VDmIES38.jpg",
+    "heroAlt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos secretos e dispositivos sofisticados.",
+    "instagramShortCode": "DY8VDmIES38",
+    "instagramUrl": "https://www.instagram.com/p/DY8VDmIES38/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos secretos e dispositivos sofisticados. Na prática, muitos dos casos mais relevantes dos últimos anos giram em torno de acesso."
+      },
+      {
+        "type": "p",
+        "text": "O princípio fundamental da HUMINT é que informação relevante normalmente está concentrada em redes humanas. Quem conversa com as pessoas certas, frequenta os ambientes certos e conquista confiança suficiente pode obter conhecimento estratégico sem precisar invadir sistemas, roubar documentos ou acessar instalações sensíveis."
+      },
+      {
+        "type": "p",
+        "text": "Por isso, profissões que justificam naturalmente a criação de relacionamentos costumam ser observadas com atenção pelos serviços de inteligência. Jornalistas, pesquisadores, consultores, empresários e acadêmicos frequentemente transitam em ambientes onde circulam informações de alto valor."
+      },
+      {
+        "type": "p",
+        "text": "O caso Pablo González chama atenção justamente por isso. Independentemente do resultado final dos processos judiciais, ele se tornou um exemplo contemporâneo de que a cobertura ideal é aquela que torna o acesso legítimo e esperado."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Durante anos, Pablo González! foi visto como é Especialista em Rússia,, Ucrânia e conflitos do Leste Europeu. O"
+      },
+      {
+        "type": "p",
+        "text": "E Mas havia um detalhe.: Pablo González DE não era seu nome E como Pavel Rubtsov."
+      },
+      {
+        "type": "p",
+        "text": "Nrdno SE Em Sua cobertura Conhecia a região. Viajava constantemente. Etinha uma razão a legítima para fazer perguntas."
+      },
+      {
+        "type": "p",
+        "text": "Como jornalista, E Rolo feito E ativistas diplomatas refugiados políticos e opositores do Kremlin Exatamente onde estão algumas das fontes mais"
+      },
+      {
+        "type": "p",
+        "text": "europeus começaram o a suspeitar. fel"
+      },
+      {
+        "type": "p",
+        "text": "europeias, ele trabalharia secretamente para o GRU. mit E, A inteligência militar russa. A acusação: usar o jornalismo para inteligência humana a a Pile"
+      },
+      {
+        "type": "p",
+        "text": "Os principais alvos seriam a oposição russa exilada. principais críticos de Putin. aaa"
+      },
+      {
+        "type": "p",
+        "text": "Para Moscou, aquilo valia ouro. Redes de contato. A Financiadores.: Influenciadores. Informação estratégica nasce de pessoas."
+      },
+      {
+        "type": "p",
+        "text": "o e Investigadores afirmam. que ele utilizava à comunicações E clandestinas, encontros discretos e rígida disciplina operacional."
+      },
+      {
+        "type": "p",
+        "text": "Então veio a guerra. Dias após a invasão da Ucrânia, ele foi preso pela segurança interna E Acusado de espionagem para a Rússia."
+      },
+      {
+        "type": "p",
+        "text": "A maior pista surgiu dois anos depois. E Quando Rússiae Ocidente trocaram prisioneiros... Moscou exigiusua libertação. E"
+      },
+      {
+        "type": "p",
+        "text": "Moscou, foi recebido pessoalmente por reservado a ativos mol considerados valiosos pelo Estado."
+      },
+      {
+        "type": "p",
+        "text": "e a DE O A, A melhor cobertura é a que explica naturalmente"
+      },
+      {
+        "type": "p",
+        "text": "importância das pessoas como fonte de ingu a Digite Humint nos comentários se quiser saber mais sobre técnicas utilizadas para obter informações de pessoas."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DY8VDmIES38/01.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/02.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/03.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/04.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/05.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/06.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/07.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/08.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/09.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/10.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/11.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/12.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/13.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/14.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 14"
+          },
+          {
+            "src": "/images/carrossel/DY8VDmIES38/15.jpg",
+            "alt": "A imagem popular ainda é a do agente escondido em um beco escuro, usando códigos... — slide 15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzaohvyevce-toda-informacao-possui-um-ciclo-de-vida-ela-e-criada-utilizada-armazenad",
+    "title": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum...",
+    "description": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum momento, descartada. É nessa última etapa que muitos problemas começam.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "OPSEC",
+      "Contrainteligencia",
+      "Seguranca Da Informacao",
+      "Espionagem"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-10",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZaoHvYEVCE.jpg",
+    "heroAlt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum momento, descartada.",
+    "instagramShortCode": "DZaoHvYEVCE",
+    "instagramUrl": "https://www.instagram.com/p/DZaoHvYEVCE/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum momento, descartada."
+      },
+      {
+        "type": "p",
+        "text": "É nessa última etapa que muitos problemas começam."
+      },
+      {
+        "type": "p",
+        "text": "Durante a Guerra Fria, a OTAN descobriu que documentos aparentemente sem valor, abandonados por tropas soviéticas, podiam revelar estrutura de unidades, logística, procedimentos e capacidades militares. O segredo não vazou porque alguém invadiu um sistema. Vazou porque alguém acreditou que aquele papel já não importava."
+      },
+      {
+        "type": "p",
+        "text": "O princípio continua exatamente o mesmo."
+      },
+      {
+        "type": "p",
+        "text": "Empresas jogam organogramas no lixo. Funcionários descartam listas de contato. Pessoas vendem computadores sem apagar os dados. Etiquetas de remessa revelam fornecedores, clientes e endereços. Fotos aparentemente inocentes mostram telas, crachás, documentos e quadros de planejamento ao fundo."
+      },
+      {
+        "type": "p",
+        "text": "A proteção da informação não termina quando o documento deixa de ser útil."
+      },
+      {
+        "type": "p",
+        "text": "Na verdade, muitas vezes é nesse momento que ela começa a falhar."
+      },
+      {
+        "type": "p",
+        "text": "O descarte também faz parte da segurança."
+      },
+      {
+        "type": "p",
+        "text": "E é quando algo parece sem valor que as pessoas costumam baixar a guarda."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Eles protegiam os e Do Tos Fio A a e, Pao em No, Mas esqueciam do lixo. E na E E A a"
+      },
+      {
+        "type": "p",
+        "text": "Alemanha. Década de 1970. A Guerra Fria dividia a Europa em dois blocos armados. a Deumlado, aOTAN. De outro, o Pacto de Varsóvia E E E pas"
+      },
+      {
+        "type": "p",
+        "text": "Centenas de milhares de soldados soviéticos estavam e O Artilharia. o E exatamente o que estavam fazendo."
+      },
+      {
+        "type": "p",
+        "text": "Mas não conseguia saber o que acontecia dentro das unidades. E Quantos homens havia? Quais equipamentos estavam chegando? Quem comandava cada unidade? da Quais eram os planos?"
+      },
+      {
+        "type": "p",
+        "text": "Satélites ajudavam. Interceptações ajudavam. E Mas ainda faltavam respostas.. a. A o"
+      },
+      {
+        "type": "p",
+        "text": "Então alguém percebeu que depois dos e e epo e exercícios militares, os E.. Mas nem tudo partia a cmi nas.: A"
+      },
+      {
+        "type": "p",
+        "text": "Equipes da OTAN começaram a examinar o material descartado. Encontraram mapas. Formulários. Listas. Anotações. Documentos militares. Espalhados no chão e misturados a embalagens vazias e restos de acampamento."
+      },
+      {
+        "type": "p",
+        "text": "Operação Tamarisk. Bars e Neo Pee emma explorar tudo o que as tropas Serge Lida eteTRE e tao Do o o O rio"
+      },
+      {
+        "type": "p",
+        "text": "DE Pouco a pouco, os fragmentos começaram a formar um quadro A E Estruturas de unidades. E Procedimentos."
+      },
+      {
+        "type": "p",
+        "text": "À E Oinimigo entregou informações porque acreditou que"
+      },
+      {
+        "type": "p",
+        "text": "um ciclo de vida: a E Criação. À"
+      },
+      {
+        "type": "p",
+        "text": "parou para pensar quantas informações importantes estão presente nos lixos? Curta, siga e compartilhe NA E e E"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/01.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/02.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/03.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/04.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/05.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/06.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/07.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/08.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/09.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/10.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/11.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/12.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DZaoHvYEVCE/13.jpg",
+            "alt": "Toda informação possui um ciclo de vida: ela é criada, utilizada, armazenada e, em algum... — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzsmj88u_g3-uma-das-maiores-falhas-de-seguranca-que-vejo-e-a-crenca-de-que-ninguem-e",
+    "title": "Uma das maiores falhas de segurança que vejo é a crença de que ninguém está prestando...",
+    "description": "Uma das maiores falhas de segurança que vejo é a crença de que ninguém está prestando atenção.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "OSINT",
+      "OPSEC",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-07",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZSmj88u_g3.jpg",
+    "heroAlt": "Uma das maiores falhas de segurança que vejo é a crença de que ninguém está prestando atenção.",
+    "instagramShortCode": "DZSmj88u_g3",
+    "instagramUrl": "https://www.instagram.com/p/DZSmj88u_g3/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Uma das maiores falhas de segurança que vejo é a crença de que ninguém está prestando atenção."
+      },
+      {
+        "type": "p",
+        "text": "A maioria das pessoas imagina que um adversário precisa invadir sistemas, quebrar senhas ou usar ferramentas sofisticadas para obter informações."
+      },
+      {
+        "type": "p",
+        "text": "Frequentemente as informações já estão disponíveis. O desafio é apenas encontrá-las, organizá-las e conectá-las."
+      },
+      {
+        "type": "p",
+        "text": "É entra o OSINT."
+      },
+      {
+        "type": "p",
+        "text": "OSINT é a sigla para Open Source Intelligence, ou Inteligência de Fontes Abertas. Em outras palavras, é o processo de coletar e analisar informações disponíveis publicamente para produzir conhecimento útil."
+      },
+      {
+        "type": "p",
+        "text": "Redes sociais, notícias, documentos públicos, imagens, sites, bancos de dados e até comentários aparentemente inocentes podem fazer parte desse processo."
+      },
+      {
+        "type": "p",
+        "text": "Do ponto de vista defensivo, o OSINT permite enxergar sua exposição antes que outra pessoa a enxergue."
+      },
+      {
+        "type": "p",
+        "text": "Quais informações sobre sua empresa estão públicas? Quais hábitos seus podem ser identificados online? Quais dados podem ser usados para engenharia social? Quais vulnerabilidades você está revelando sem perceber?"
+      },
+      {
+        "type": "p",
+        "text": "Antes de tentar descobrir informações sobre os outros, vale a pena descobrir o que os outros podem descobrir sobre você."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Identificar onde foi filmado a campanha do McDonalds para e E Ronaldinho e Lamine Yamal"
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dydjogweccw-muita-gente-acredita-que-humint-e-apenas-em-interrogatorios-infiltracoes",
+    "title": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações...",
+    "description": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações clandestinas. Tem muito mais que isso.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Psicologiacomportamental",
+      "Engenharia Social",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-18",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYdjogWEccw.jpg",
+    "heroAlt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações clandestinas. Tem muito mais que isso.",
+    "instagramShortCode": "DYdjogWEccw",
+    "instagramUrl": "https://www.instagram.com/p/DYdjogWEccw/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações clandestinas."
+      },
+      {
+        "type": "p",
+        "text": "Tem muito mais que isso. Pode começar com a observação de padrões pequenos, repetidos e aparentemente banais."
+      },
+      {
+        "type": "p",
+        "text": "O jeito de ocupar espaço, organizar objetos, caminhar, olhar o ambiente ou estacionar um carro pode revelar:"
+      },
+      {
+        "type": "p",
+        "text": "nível de ansiedade, necessidade de controle, pressa, prevenção, descuido, autoproteção e até consciência situacional."
+      },
+      {
+        "type": "p",
+        "text": "Isso não significa \"diagnosticar pessoas\" por um único comportamento."
+      },
+      {
+        "type": "p",
+        "text": "Aliás, esse é o erro de muito conteúdo superficial de linguagem corporal."
+      },
+      {
+        "type": "p",
+        "text": "Em inteligência, o valor está no conjunto. Na repetição. Na coerência entre sinais."
+      },
+      {
+        "type": "p",
+        "text": "O detalhe sozinho não prova nada. Mas padrões constantes começam a revelar funcionamento mental e tendência comportamental."
+      },
+      {
+        "type": "p",
+        "text": "HUMINT também analisa isso… transforma comportamento cotidiano em leitura estratégica."
+      },
+      {
+        "type": "p",
+        "text": "Depois que você aprende isso… fica difícil parar de observar."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Até o jeito de estacionar fala sobre você..."
+      },
+      {
+        "type": "p",
+        "text": "Pareceexagero.. É sãos Das Mas comportamento quase nunca é aleatório."
+      },
+      {
+        "type": "p",
+        "text": "Em HUMINT,, pequenos hábitos ajudam a revelar padrões. Lud Não certezas. E Padrões.. a a"
+      },
+      {
+        "type": "p",
+        "text": "a a E Quem estaciona ocupando duas vagas... pode indicar ego, E, descuido social, necessidade de controle ou proteção excessiva a do patrimônio."
+      },
+      {
+        "type": "p",
+        "text": "old E estaciona de muitas vezes pensa em a saída rápida, ToP segurança E e controle do ambiente."
+      },
+      {
+        "type": "p",
+        "text": "Malalinhado.: a Mesmo com espaço. a e Pode indicar pressa, E ansiedade, distração ou baixa consciência situacional naquele"
+      },
+      {
+        "type": "p",
+        "text": "E Mas atenção, isso não é ler mente. e Nem ciência exata."
+      },
+      {
+        "type": "p",
+        "text": "o a Isso se chama E Em a Você observa sinais pequenos... melo Melgieclo E tendências comportamentais. o"
+      },
+      {
+        "type": "p",
+        "text": "de Um comportamento isolado quase não vale nada. O contexto muda tudo."
+      },
+      {
+        "type": "p",
+        "text": "Mas quando vários sinais começam a se repetir... a um padrão aparece."
+      },
+      {
+        "type": "p",
+        "text": "É assim que HUMINT E funciona... o À observação, contexto e comportamento acumulado. a"
+      },
+      {
+        "type": "p",
+        "text": "o gti isolados confundem."
+      },
+      {
+        "type": "p",
+        "text": "estacionar? E Comente, curta e compartilhe."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYdjogWEccw/01.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/02.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/03.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/04.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/05.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/06.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/07.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/08.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/09.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/10.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/11.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/12.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYdjogWEccw/13.jpg",
+            "alt": "Muita gente acredita que HUMINT é apenas em interrogatórios, infiltrações ou operações... — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzi2uo6eew3-orlando-letelier-sabia-que-tinha-inimigos",
+    "title": "Orlando Letelier sabia que tinha inimigos.",
+    "description": "Sabia que era monitorado. Sabia que sua atuação incomodava o governo chileno.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "OPSEC",
+      "Espionagem",
+      "Contrainteligencia",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-03",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZI2uO6EeW3.jpg",
+    "heroAlt": "Orlando Letelier sabia que tinha inimigos. Sabia que era monitorado. Sabia que sua atuação incomodava o governo chileno.",
+    "instagramShortCode": "DZI2uO6EeW3",
+    "instagramUrl": "https://www.instagram.com/p/DZI2uO6EeW3/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Orlando Letelier sabia que tinha inimigos. Sabia que era monitorado. Sabia que sua atuação incomodava o governo chileno."
+      },
+      {
+        "type": "p",
+        "text": "Muita gente com alto grau de alerta consegue identificar ameaças, mesmo quando não são as mais obvias."
+      },
+      {
+        "type": "p",
+        "text": "O problema é que fracassam por prestar atenção demais na ameaça errada."
+      },
+      {
+        "type": "p",
+        "text": "Uma mulher bonita tentando se aproximar de você parece perigosa. Alguém observando silenciosamente seus horários não."
+      },
+      {
+        "type": "p",
+        "text": "Uma tentativa de sedução chama atenção. Uma rotina previsível passa despercebida."
+      },
+      {
+        "type": "p",
+        "text": "Talvez seja por isso que operações de inteligência tenham menos glamour do que os filmes mostram."
+      },
+      {
+        "type": "p",
+        "text": "A maior parte delas não depende de convencer alguém a falar."
+      },
+      {
+        "type": "p",
+        "text": "Depende de observar o que essa pessoa faz repetidamente."
+      },
+      {
+        "type": "p",
+        "text": "Todos nós temos rotinas. Todos nós deixamos padrões."
+      },
+      {
+        "type": "p",
+        "text": "E padrões costumam ser mais fáceis de explorar do que segredos."
+      },
+      {
+        "type": "p",
+        "text": "A história de Letelier nos mostra como o perigo mais visível nem sempre é o mais importante."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Quanto mais a espiã fracassava..."
+      },
+      {
+        "type": "p",
+        "text": "Um dos maiores críticos 428 daditadurachilena a vivia exilado nos a Seu nome era,"
+      },
+      {
+        "type": "p",
+        "text": "Preso após a ascensão E de Pinochet. nO E A E E agora fazia campanha O e E E Ride"
+      },
+      {
+        "type": "p",
+        "text": "Todo Letelier havia se tornado um problema estratégico. e Cadadiscurso., Cada entrevista. Cada reunião. eos é Custava milhões ao regime."
+      },
+      {
+        "type": "p",
+        "text": "decidiu agir. Ennio À É E a a E"
+      },
+      {
+        "type": "p",
+        "text": "O o A Pal É E Ganhar sua confiança e obter informações. a e. a A E,? O E E"
+      },
+      {
+        "type": "p",
+        "text": "ia Acesso através da atração. sis bar E O O O que hoje chamamos de Tentou criar proximidade,;.; mas o relacionamento"
+      },
+      {
+        "type": "p",
+        "text": "A operação havia fracassado. Ou parecia. Enquanto a sedução falhava... É outro grupo observava"
+      },
+      {
+        "type": "p",
+        "text": "a Uma bomba explodiu sob seu. edge AMtos: ira E É sogro à e o E SE E De; Eis A O E ao"
+      },
+      {
+        "type": "p",
+        "text": "Nem toda honey trap e! a Mas todarotina. E do A"
+      },
+      {
+        "type": "p",
+        "text": "A mulher enviada para capped A análise de padrões a selou o destino"
+      },
+      {
+        "type": "p",
+        "text": "Curta, siga e compartilhe Aqui você aprende inteligência através de histórias reais na"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/01.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/02.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/03.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/04.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/05.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/06.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/07.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/08.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/09.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/10.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/11.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DZI2uO6EeW3/12.jpg",
+            "alt": "Orlando Letelier sabia que tinha inimigos. — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dynxgy5kdkc-elicitacao-e-uma-tecnica-de-comunicacao-usada-para-obter-informacao-de-f",
+    "title": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,...",
+    "description": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta, natural e não coercitiva.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Elicitação",
+      "Psicologia Comportamental",
+      "Engenharia Social",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-21",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYnXGy5kdKC.jpg",
+    "heroAlt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta, natural e não coercitiva.",
+    "instagramShortCode": "DYnXGy5kdKC",
+    "instagramUrl": "https://www.instagram.com/p/DYnXGy5kdKC/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta, natural e não coercitiva."
+      },
+      {
+        "type": "p",
+        "text": "Na espionagem, ela serve para acessar dados sensíveis sem levantar suspeitas. Mas no mundo civil ela aparece o tempo inteiro de forma lícita e legítima."
+      },
+      {
+        "type": "p",
+        "text": "Investigadores usam elicitação para perceber inconsistências sem transformar uma conversa em interrogatório. Executivos usam para entender intenções reais em negociações. Profissionais de vendas usam para descobrir dores que o cliente não verbalizou diretamente. Recrutadores usam para identificar perfil comportamental além do currículo. Jornalistas experientes usam para fazer alguém falar mais do que planejava."
+      },
+      {
+        "type": "p",
+        "text": "A técnica está na afirmação, no ambiente, no timing, no silêncio, na validação emocional e na forma como a conversa é conduzida."
+      },
+      {
+        "type": "p",
+        "text": "As pessoas revelam mais quando se sentem confortáveis, relevantes e compreendidas."
+      },
+      {
+        "type": "p",
+        "text": "Por isso HUMINT é compreender comportamento humano em ambientes reais."
+      },
+      {
+        "type": "p",
+        "text": "E isso vale para inteligência, negócios, liderança e vida cotidiana."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Ele conseguia obter. informações sigilosas"
+      },
+      {
+        "type": "p",
+        "text": "A Londres. Anos 1950. Guerra Fria. o E Lad A União Soviética precisava de informações sobre submarinos e tecnologia o E naval da OTAN. as: A E o e o"
+      },
+      {
+        "type": "p",
+        "text": "Entrou em Pre Gordon Lonsdale, nome falso: Konon Molody Um agente ilegal da KGB o À operando no Reino Unido A: a E"
+      },
+      {
+        "type": "p",
+        "text": "e o Sua principal ferramenta para a conversa. O Não precisou trocar documentos em encontros secretos com fontes."
+      },
+      {
+        "type": "p",
+        "text": "Udo círculos sociais. Parecia apenas um a interessado nas pessoas.,; Mas cada conversatinha,! um objetivo"
+      },
+      {
+        "type": "p",
+        "text": "Em vez de perguntar diretamente, ele fazia comentários indiretos: Quvi dizer que os engenheiros estão enfrentando problemas Tri o E;. Ealguém respondia:"
+      },
+      {
+        "type": "p",
+        "text": "elicitação. Conduzir uma conversa para.. que a própria pessoa revele informação espontaneamente"
+      },
+      {
+        "type": "p",
+        "text": "No contexto certo, muita gente fala o que não devia para parecer inteligente, E útil, importante, A ou incluída. a"
+      },
+      {
+        "type": "p",
+        "text": "Foi assim que a rede soviética, conseguiu acessar informações, estratégicas ligadas à marinha a britânica e à OTAN. a E O Conversas aparentemente normais. Consequências extremamente reais. E, E a"
+      },
+      {
+        "type": "p",
+        "text": "o Em 1961, Konon foi preso.! A Anos depois, atravessou uma ponte na Alemanha em uma troca de espiões da Guerra Fria. o é o"
+      },
+      {
+        "type": "p",
+        "text": "na espionagem. Ela aparece no networking, Linkedln, da happy hour, Uber, eventos, reuniões,.. e até encontros casuais."
+      },
+      {
+        "type": "p",
+        "text": "Quer aprender técnicas de influência e leitura comportamental?"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/01.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/02.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/03.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/04.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/05.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/06.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/07.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/08.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/09.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/10.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/11.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYnXGy5kdKC/12.jpg",
+            "alt": "Elicitação é uma técnica de comunicação usada para obter informação de forma indireta,... — slide 12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dy-tgygks8q-muita-gente-imagina-que-localizar-uma-pessoa-depende-de-tecnologia-sofis",
+    "title": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso...",
+    "description": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso privilegiado.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "OSINT",
+      "HUMINT",
+      "Inteligencia",
+      "Seguranca Digital",
+      "Investigacao"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-30",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DY-tGYGkS8q.jpg",
+    "heroAlt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso privilegiado.",
+    "instagramShortCode": "DY-tGYGkS8q",
+    "instagramUrl": "https://www.instagram.com/p/DY-tGYGkS8q/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso privilegiado. Na prática, muitas vezes o caminho começa com algo muito mais simples: os rastros que ela mesma deixa para trás."
+      },
+      {
+        "type": "p",
+        "text": "OSINT (Open Source Intelligence) é a capacidade de transformar informações públicas dispersas em conhecimento útil. Uma foto pode revelar uma localização. Um comentário antigo pode indicar vínculos pessoais. Um perfil profissional pode mostrar rotina, interesses e rede de contatos. Separadamente, cada dado parece irrelevante. Juntos, contam uma história."
+      },
+      {
+        "type": "p",
+        "text": "O segredo não está em encontrar uma informação secreta. Está em conectar dezenas de informações aparentemente inocentes."
+      },
+      {
+        "type": "p",
+        "text": "A mesma lógica que ajuda a localizar alguém também serve para proteger você. Quanto mais você entende como os rastros digitais são construídos, mais consciente se torna sobre os rastros que está deixando."
+      },
+      {
+        "type": "p",
+        "text": "Na inteligência, encontrar pessoas é técnica e método."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "E, De Quem é a celebridade?"
+      },
+      {
+        "type": "p",
+        "text": "É Aprimeira coisa mEcÃ Mane EovÉ é pesquisar onde Ameriii sir aparece no copo. para ver quenão é a lojas waffle house, com"
+      },
+      {
+        "type": "p",
+        "text": "Uma olhada com atenção no vídeo, percebemos também que o prefixo. de duas aeronaves. A A QUE Ao colocar no google, achamos um site que o monitoramento dos aviões. Flight Tracking and History Flight status, tracking, and historical data for including scheduled, estimated, and actual departure and arrival times. o"
+      },
+      {
+        "type": "p",
+        "text": "DE 2025 a osr inca o O Do liuici Tao O AS Ao em Henderson Texas vou anotar essa cidade, pode ser importante áio"
+      },
+      {
+        "type": "p",
+        "text": "o ptit as DE É Tempo total de viagem Espera, se a filmagem é de A E Ideagosto de 2029. e oúltimo pouso doN46AX foiem de novembro de 2022. o Precisamos checar isso. 7775 o"
+      },
+      {
+        "type": "p",
+        "text": "E À a airport huntsville alabama See similar places O loca lito Nie rol o DE Vilojo AS algo o a Lao a A a Recently viewed, À A Tupelo.! Huntsville Alabama O Tuscaloosa!"
+      },
+      {
+        "type": "p",
+        "text": "nislIZANigo ros epa e; e Nas O aeroporto de Huntsville a Um à O gre"
+      },
+      {
+        "type": "p",
+        "text": "a a! agr A VEl a nos a; Search this area E O O O e o a No nem pertinho E DE pit E Ita nElh E eta E celebridade? o E e a bao E a à psi dA Con DE amor na"
+      },
+      {
+        "type": "p",
+        "text": "Os maiores nomes nacionais que efetivamente E estiveram em Huntsville em agosto de 2023 e que provavelmente geraram maior movimento de público foram: o Huntsville À Se pesquisar em uma IA quais foram as celebridades que estiveram em Huntsville E NO Verá alguns nomes. E O Birmingham aloosa o"
+      },
+      {
+        "type": "p",
+        "text": "2023 omashing Pumpkins tocou o E: do"
+      },
+      {
+        "type": "p",
+        "text": "nine a Se reparar bem nesse trecho, a van E da celebridade está indo em direção dos aviões, e não se distanciando. Então, em tese, ela está indo embora da cidade. sociais esse vídeo"
+      },
+      {
+        "type": "p",
+        "text": "A Dao o À À A a E A a Ras Snoop Dogg se apresentou"
+      },
+      {
+        "type": "p",
+        "text": "Se for no feed do Snoop Dogg O na data da postagem, encontrará o vídeo. e Mas se a apresentação foi dia porque foi embora dia"
+      },
+      {
+        "type": "p",
+        "text": "vma agenda no mês, que mostram que Event Pelails o show dele do dia cancelado. All tickets purchased automatically refunded. Please allow days for the refund"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/01.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/02.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/03.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/04.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/05.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/06.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/07.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/08.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/09.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/10.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/11.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/12.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/13.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 13"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/14.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 14"
+          },
+          {
+            "src": "/images/carrossel/DY-tGYGkS8q/15.jpg",
+            "alt": "Muita gente imagina que localizar uma pessoa depende de tecnologia sofisticada ou acesso... — slide 15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzn7wslkuwi-normalmente-as-pessoas-entram-em-um-ambiente-procurando-informacoes",
+    "title": "Normalmente as pessoas entram em um ambiente procurando informações.",
+    "description": "Poucas entram procurando estruturas. Essa é a diferença. Em qualquer sala existem conversas visíveis e dinâmicas invisíveis.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Comportamento Humano",
+      "Inteligencia Humana",
+      "Psicologia Social",
+      "Influencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-05",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZN7WSLkUwI.jpg",
+    "heroAlt": "Normalmente as pessoas entram em um ambiente procurando informações. Poucas entram procurando estruturas. Essa é a diferença.",
+    "instagramShortCode": "DZN7WSLkUwI",
+    "instagramUrl": "https://www.instagram.com/p/DZN7WSLkUwI/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Normalmente as pessoas entram em um ambiente procurando informações. Poucas entram procurando estruturas."
+      },
+      {
+        "type": "p",
+        "text": "Essa é a diferença."
+      },
+      {
+        "type": "p",
+        "text": "Em qualquer sala existem conversas visíveis e dinâmicas invisíveis. Existem cargos formais, mas também existem líderes informais. Existem organogramas, mas também existem redes de confiança. Existem decisões anunciadas publicamente e decisões que já foram tomadas muito antes da reunião começar."
+      },
+      {
+        "type": "p",
+        "text": "A leitura de ambiente é a capacidade de identificar essas estruturas que não estão à vista."
+      },
+      {
+        "type": "p",
+        "text": "Quem busca só conteúdo escuta palavras."
+      },
+      {
+        "type": "p",
+        "text": "Quem lê o ambiente observa quem interrompe, quem consulta quem antes de responder, quem recebe atenção quando fala, quem gera desconforto, quem é evitado e quem influencia sem precisar pedir."
+      },
+      {
+        "type": "p",
+        "text": "Em HUMINT, essa habilidade costuma determinar o sucesso ou o fracasso de uma aproximação."
+      },
+      {
+        "type": "p",
+        "text": "A pessoa mais importante nem sempre é a que possui o cargo mais alto."
+      },
+      {
+        "type": "p",
+        "text": "Muitas vezes é a que conecta grupos, controla fluxos de informação ou molda opiniões nos bastidores."
+      },
+      {
+        "type": "p",
+        "text": "Antes de tentar influenciar alguém, descubra quem já está influenciando o ambiente."
+      },
+      {
+        "type": "p",
+        "text": "Entender essa rede social invisível de um grupo passa a enxergar comportamentos que os demais interpretam apenas como coincidência."
+      },
+      {
+        "type": "p",
+        "text": "A inteligência bem feita começa antes da primeira pergunta."
+      },
+      {
+        "type": "p",
+        "text": "Ela começa na observação."
+      },
+      {
+        "type": "p",
+        "text": "Você costuma identificar a hierarquia oficial e a hierarquia real de um ambiente?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "E a E a No e entendem tudo À em"
+      },
+      {
+        "type": "p",
+        "text": "Toda sala tem hierarquias invisíveis. E quem as enxerga, controla o ambiente A"
+      },
+      {
+        "type": "p",
+        "text": "Leitura de ambiente é a habilidade de mapear o cenário humano antes de interagir. é o"
+      },
+      {
+        "type": "p",
+        "text": "Cada ambiente tem três camadas: E Formal: o que se A funções, papéis, hierarquias Informal: o que se sente afinidades, resistências a E E Oculta: o que se teme ou se deseja, Ler é perceber o que não foi"
+      },
+      {
+        "type": "p",
+        "text": "Falar cedo demais fecha portas. o exato em que a aproximação se"
+      },
+      {
+        "type": "p",
+        "text": "Aleitura de ambiente vale para operações, entrevistas ou reuniões de A Antes de influenciar, entenda o cenário emocional e a rede de lealdades. E o mapa invisível do comportamento coletivo"
+      },
+      {
+        "type": "p",
+        "text": "Curta, siga e compartilhe Aqui você aprende, Inteligência através de"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/01.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/02.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/03.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/04.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/05.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/06.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZN7WSLkUwI/07.jpg",
+            "alt": "Normalmente as pessoas entram em um ambiente procurando informações. — slide 7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzvkclnkdq5-em-inteligencia-a-coleta-e-apenas-o-comeco",
+    "title": "Em inteligência, a coleta é apenas o começo.",
+    "description": "Um dado isolado nunca é o suficiente para achar a resposta. Uma placa de veículo. Um número de telefone. Uma fotografia. Um endereço. Um encontro observado.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Inteligencia",
+      "Espionagem",
+      "Contrainteligencia",
+      "Analise De Inteligencia"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-18",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZvkclNkdq5.jpg",
+    "heroAlt": "Em inteligência, a coleta é apenas o começo. Um dado isolado nunca é o suficiente para achar a resposta. Uma placa de veículo.",
+    "instagramShortCode": "DZvkclNkdq5",
+    "instagramUrl": "https://www.instagram.com/p/DZvkclNkdq5/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Em inteligência, a coleta é apenas o começo. Um dado isolado nunca é o suficiente para achar a resposta."
+      },
+      {
+        "type": "p",
+        "text": "Uma placa de veículo. Um número de telefone. Uma fotografia. Um endereço. Um encontro observado. Sem contexto, são apenas registros."
+      },
+      {
+        "type": "p",
+        "text": "O trabalho analítico consiste em avaliar, validar, correlacionar e integrar esses fragmentos para produzir algo mais valioso: conhecimento."
+      },
+      {
+        "type": "p",
+        "text": "Esse processo não é linear."
+      },
+      {
+        "type": "p",
+        "text": "Novas informações confirmam hipóteses antigas. Outras as descartam."
+      },
+      {
+        "type": "p",
+        "text": "Alguns dados permanecem irrelevantes por anos até que uma mudança de cenário lhes atribua significado."
+      },
+      {
+        "type": "p",
+        "text": "Outros parecem importantes no momento da coleta, mas perdem completamente o valor com o tempo."
+      },
+      {
+        "type": "p",
+        "text": "Por isso, inteligência não é um exercício de acumulação de informações. É um processo contínuo de construção de entendimento. Pouco a pouco, relacionamentos são identificados."
+      },
+      {
+        "type": "p",
+        "text": "Redes são mapeadas. Padrões de comportamento emergem. Vulnerabilidades aparecem."
+      },
+      {
+        "type": "p",
+        "text": "Até que o volume e a qualidade do conhecimento produzido permitem reduzir incertezas e apoiar uma decisão ou uma ação operacional."
+      },
+      {
+        "type": "p",
+        "text": "Quando uma operação finalmente acontece, existe uma tendência de associar seu sucesso ao momento da execução. Na realidade, o resultado normalmente é consequência de meses ou anos de coleta, análise, validação e refinamento de hipóteses."
+      },
+      {
+        "type": "p",
+        "text": "A ação é apenas a parte visível de um processo muito maior."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "anos, o Mossad É falhou em encontrá-lo. é Até o dia em que ele"
+      },
+      {
+        "type": "p",
+        "text": "ele era um dos homens mais procurados do mundo. Poucos fora do mundo da inteligência sabiam quem ele era."
+      },
+      {
+        "type": "p",
+        "text": "E; Do Seu nome foi associado a alguns dos ataques mais graves da década de E FEmbaixada dos EUA Quartel dos Fuzileiros Navais dos EUA, em Beirute em 1983"
+      },
+      {
+        "type": "p",
+        "text": "a Atentado na Embaixada Aires em 1992, deixando EmA de Adela se: De a Atentado a bomba na Associação Mutual Israelita Argentina Entre muitos outros,. o E centenas de vítimas dA a Eee"
+      },
+      {
+        "type": "p",
+        "text": "conseguia encontrá-lo. Mughniyeh evitava exposição. Mudava rotinas. Viajava discretamente. E quase nunca aparecia em público."
+      },
+      {
+        "type": "p",
+        "text": "Com o passar dos anos, ele virou uma espécie de fantasma. O Enquanto outros líderes A A buscavam notoriedade... o Ele buscava invisibilidade. E isso funcionou durante décadas."
+      },
+      {
+        "type": "p",
+        "text": "O Mossad continuou procurando. Ano após ano. Sem anúncios. Apenas acumulando informações."
+      },
+      {
+        "type": "p",
+        "text": "ado Até que surgiu uma poa A de PreaRe oportunidade. Ela Saia O caia era DE a aeee Na E nas a ais E por E o o E É o Do sentia seguro. e E o pese egg Dado O"
+      },
+      {
+        "type": "p",
+        "text": "Um trabalho conjunto de Israel e EUA, foi possível coletar informações suficiente para prever seus deslocamentos, e planejar um ataque. Em uma cidade controlada por aliados de Mughniyeh. E da E em E e?"
+      },
+      {
+        "type": "p",
+        "text": "Mughniyeh saiu de uma reunião em Damasco. Ao se aproximar de seu veículo, uma bomba oculta em um carro estacionado nas proximidades foi detonada. A caçada de mais de duas O décadas havia terminado."
+      },
+      {
+        "type": "p",
+        "text": "Ele acreditava que o tempo estava do seu lado.... foiseuerro. Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/01.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/02.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/03.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/04.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/05.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/06.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/07.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/08.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/09.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/10.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZvkclNkdq5/11.jpg",
+            "alt": "Em inteligência, a coleta é apenas o começo. — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzk1g1nktg2-os-maiores-sucessos-de-inteligencia-frequentemente-acontecem-devido-a-um",
+    "title": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento.",
+    "description": "Um bom serviço de inteligência não busca apenas informações. Busca estar próximo das pessoas certas, nos lugares certos, no momento certo.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Espionagem",
+      "Contrainteligencia",
+      "Inteligencia",
+      "Seguranca"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-14",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZk1G1NkTG2.jpg",
+    "heroAlt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento.",
+    "instagramShortCode": "DZk1G1NkTG2",
+    "instagramUrl": "https://www.instagram.com/p/DZk1G1NkTG2/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento."
+      },
+      {
+        "type": "p",
+        "text": "Um bom serviço de inteligência não busca apenas informações. Busca estar próximo das pessoas certas, nos lugares certos, no momento certo."
+      },
+      {
+        "type": "p",
+        "text": "É por isso que organizações investem tanto em recrutamento, desenvolvimento de fontes e construção de relacionamentos. A informação não surge do nada, ela costuma chegar através de alguém."
+      },
+      {
+        "type": "p",
+        "text": "Ana Belén Montes é um lembrete de que o verdadeiro valor não está apenas no que uma pessoa sabe, mas em onde ela está e na confiança que conquistou ao longo do tempo."
+      },
+      {
+        "type": "p",
+        "text": "Em HUMINT, acesso é um ativo. Credibilidade é um multiplicador desse ativo."
+      },
+      {
+        "type": "p",
+        "text": "E, muitas vezes, quem possui ambos consegue enxergar muito antes dos demais."
+      },
+      {
+        "type": "p",
+        "text": "Qual você acha que é mais difícil de obter: informação ou acesso?"
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "Cuba infiltrou na inteligência dos EUA. E ninguém percebeu por"
+      },
+      {
+        "type": "p",
+        "text": "EM À a a E E Cuba não podia competir o A e E"
+      },
+      {
+        "type": "p",
+        "text": "Ana Belén Montes Rad Os Analista da inteligência militar americana."
+      },
+      {
+        "type": "p",
+        "text": "Ou A AS e entender o governo cubano... E o a a referência no assunto. E!"
+      },
+      {
+        "type": "p",
+        "text": "Porém Anatrabalhava secretamente para Cuba. Enquanto analisava informações dos EUA... à Também repassava informações para Havana."
+      },
+      {
+        "type": "p",
+        "text": "Por quase duas décadas ela recebeu promoções. Reconhecimento. Prêmios. E cada nova conquista aumentava ainda mais sua credibilidade."
+      },
+      {
+        "type": "p",
+        "text": "Ela não levava a uma vida luxuosa. o Não ostentava dinheiro. Não chamava atenção. E Não parecia uma espiã. E aihad Parecia exatamente o, que deveria parecer."
+      },
+      {
+        "type": "p",
+        "text": "procura sinais de traição. da Ana oferecia o oposto. a Discrição. Dad Da Confiança."
+      },
+      {
+        "type": "p",
+        "text": "Os americanos sabiam que havia uma fonte vazando informações Ele Fato após fato, o círculo de suspeitos foi diminuindo. Até que chegaram emAna., a e"
+      },
+      {
+        "type": "p",
+        "text": "romperbarreiras para acessar E DE é o a O É a a dis"
+      },
+      {
+        "type": "p",
+        "text": "são acessados com credibilidade. Curta, siga e compartilhe Aqui você aprende sobre inteligência através de histórias reais"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/01.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/02.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/03.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/04.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/05.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/06.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/07.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/08.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/09.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/10.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZk1G1NkTG2/11.jpg",
+            "alt": "Os maiores sucessos de inteligência frequentemente acontecem devido a um bom posicionamento. — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dzdhfhmkvy_-um-modulo-eletronico-supostamente-ligado-a-china-teria-sido-encontrado-e",
+    "title": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo...",
+    "description": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo utilizado pelo Primeiro-Ministro britânico.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "Contrainteligencia",
+      "Espionagem",
+      "Seguranca Operacional",
+      "Supply Chain Security"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-06-11",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DZdHfHmkVy_.jpg",
+    "heroAlt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo utilizado pelo Primeiro-Ministro britânico.",
+    "instagramShortCode": "DZdHfHmkVy_",
+    "instagramUrl": "https://www.instagram.com/p/DZdHfHmkVy_/",
+    "body": [
+      {
+        "type": "p",
+        "text": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo utilizado pelo Primeiro-Ministro britânico. A discussão rapidamente se concentrou na tecnologia, na transmissão de dados e nas capacidades de rastreamento."
+      },
+      {
+        "type": "p",
+        "text": "Mas, quem permitiu que aquilo chegasse lá?"
+      },
+      {
+        "type": "p",
+        "text": "Toda cadeia de suprimentos é uma cadeia de pessoas."
+      },
+      {
+        "type": "p",
+        "text": "Alguém projeta. Alguém fabrica. Alguém compra. Alguém aprova. Alguém instala. Alguém inspeciona. Alguém decide confiar."
+      },
+      {
+        "type": "p",
+        "text": "Serviços de inteligência dedicam tanto esforço à compreensão de fornecedores, funcionários, parceiros, terceirizados e pessoas com acesso privilegiado."
+      },
+      {
+        "type": "p",
+        "text": "A vulnerabilidade nasce quando uma organização perde visibilidade sobre quem participa da sua cadeia de confiança."
+      },
+      {
+        "type": "p",
+        "text": "Esse raciocínio vale para governos, empresas e até para a vida pessoal."
+      },
+      {
+        "type": "p",
+        "text": "Muitas vezes a ameaça entra misturada ao que parecia legítimo. E quando é descoberta, já passou por dezenas de mãos e o estrago está feito."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "A China rastreou E o carro do Primeiro- Ministro britânico. À Enquanto todos focaram no rastreador, os profissionais procuram o outro lado."
+      },
+      {
+        "type": "p",
+        "text": "Em 2026, surgiu uma revelação old EM Um dispositivo ligado a um módulo celular chinês teria sido: encontrado em um veículo usado pelo Primeiro-Ministro.."
+      },
+      {
+        "type": "p",
+        "text": "Segundo o relato, DE De E Tide: Ret- o E transmitir dados de localização remotamente."
+      },
+      {
+        "type": "p",
+        "text": "Isso cria uma preocupação em Como um veículo de tão alto nível poderia estar enviando sua localização para um adversário estratégico?"
+      },
+      {
+        "type": "p",
+        "text": "A primeira pergunta que surge éoqueexatamenteesse equipamento faz. Quais dados cur, o E. é"
+      },
+      {
+        "type": "p",
+        "text": "Para o profissional de Humint, a questão também é como ele chegou Como foi esse acesso?"
+      },
+      {
+        "type": "p",
+        "text": "na darÃ nto o Alguém aprovou sua utilização. pai spa"
+      },
+      {
+        "type": "p",
+        "text": "e Todo equipamento e cadeia de suprimentos passam por pessoas. E nesse processo, alguma vulnerabilidade foi explorada."
+      },
+      {
+        "type": "p",
+        "text": "Quem tinha acesso ao tora Quem tinha acesso à fabricação? Quem tinha acesso à manutenção? Quemtinhaacessoao veículo? o Onde está a falha?"
+      },
+      {
+        "type": "p",
+        "text": "E O acesso permite observar, influenciar, instalar e contornar barreiras."
+      },
+      {
+        "type": "p",
+        "text": "A vulnerabilidade real estava em algum lugar da cadeia humana. Curta, siga e compartilhe Aqui você aprende sobre Inteligência através de histórias reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/01.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/02.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/03.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/04.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/05.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/06.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/07.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/08.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/09.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/10.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DZdHfHmkVy_/11.jpg",
+            "alt": "Um módulo eletrônico supostamente ligado à China teria sido encontrado em um veículo... — slide 11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dyxlgjteaha-a-operacao-northwoods-nunca-aconteceu-mas-existiu-no-papel",
+    "title": "A Operação Northwoods nunca aconteceu, mas existiu no papel.",
+    "description": "E isso, por si só, já deveria ser suficiente para mudar a forma como você enxerga guerra, narrativa e opinião pública.",
+    "category": "contrainteligencia",
+    "categoryLabel": "Contrainteligência",
+    "tags": [
+      "Contrainteligência",
+      "HUMINT",
+      "PSYOPS",
+      "Guerra Informacional",
+      "Comportamento Humano"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-15",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYXlgJTEahA.jpg",
+    "heroAlt": "A Operação Northwoods nunca aconteceu, mas existiu no papel.",
+    "instagramShortCode": "DYXlgJTEahA",
+    "instagramUrl": "https://www.instagram.com/p/DYXlgJTEahA/",
+    "body": [
+      {
+        "type": "p",
+        "text": "A Operação Northwoods nunca aconteceu, mas existiu no papel."
+      },
+      {
+        "type": "p",
+        "text": "E isso, por si só, já deveria ser suficiente para mudar a forma como você enxerga guerra, narrativa e opinião pública."
+      },
+      {
+        "type": "p",
+        "text": "Em 1962, no auge da Guerra Fria, membros do alto comando militar dos EUA elaboraram propostas para criar ataques falsos e atribuí-los ao governo cubano. O objetivo era gerar indignação coletiva suficiente para justificar uma intervenção militar."
+      },
+      {
+        "type": "p",
+        "text": "O mais importante é a lógica por trás da operação."
+      },
+      {
+        "type": "p",
+        "text": "PsyOps não depende da mudança de percepção."
+      },
+      {
+        "type": "p",
+        "text": "Quando emoções são direcionadas, a população passa a aceitar medidas que talvez rejeitasse em condições normais. Medo, raiva, patriotismo e sensação de ameaça são aceleradores psicológicos extremamente poderosos."
+      },
+      {
+        "type": "p",
+        "text": "Esse é o ponto onde inteligência, comunicação estratégica e comportamento humano se encontram."
+      },
+      {
+        "type": "p",
+        "text": "A operação foi rejeitada por Kennedy e permaneceu secreta durante décadas. Mas os documentos desclassificados revelaram que grandes operações não precisam apenas vencer militarmente, precisam vencer cognitivamente."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "guerra contra Cuba... a o E os EUA planejou um atentado A contra civis americanos."
+      },
+      {
+        "type": "p",
+        "text": "1962. Guerra Fria. Cuba virou obsessão estratégica dos Estados Unidos. Após o fracasso da Baía dos Porcos, precisavam derrubar E"
+      },
+      {
+        "type": "p",
+        "text": "A A: Então surgiu uma proposta... criar ataques falsos e culpar Cuba."
+      },
+      {
+        "type": "p",
+        "text": "e O plano foi elaborado pelo Estado-Maior Conjunto das Forças Armadas dos EUA. Aideia era manipular percepção pública."
+      },
+      {
+        "type": "p",
+        "text": "PsyOps puro. o O fabricar indignação para legitimar uma invasão militar. e"
+      },
+      {
+        "type": "p",
+        "text": "O plano incluía explosões em cidades americanas atribuídas a agentes cubanos."
+      },
+      {
+        "type": "p",
+        "text": "Também cogitaram afundar barcos com refugiados e criar"
+      },
+      {
+        "type": "p",
+        "text": "Outra proposta era simular aviões civis abatidos por caças À e Um avião seria trocado por drone. O ataque Digo seria encenado."
+      },
+      {
+        "type": "p",
+        "text": "de Mensagens de socorro falsas seriam transmitidas para convencer o mundo inteiro."
+      },
+      {
+        "type": "p",
+        "text": "A população precisava apenas acreditar na narrativa."
+      },
+      {
+        "type": "p",
+        "text": "A Kennedy rejeitou o plano. Mas os documentos ficaram secretos por"
+      },
+      {
+        "type": "p",
+        "text": "Quantas narrativas atuais existem porque alguém precisava de um inimigo? Curta, siga e compartilhe Aqui você aprende sobre Inteligência através de a histórias reais E a"
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/01.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/02.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/03.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/04.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/05.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/06.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/07.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/08.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/09.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/10.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/11.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/12.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 12"
+          },
+          {
+            "src": "/images/carrossel/DYXlgJTEahA/13.jpg",
+            "alt": "A Operação Northwoods nunca aconteceu, mas existiu no papel. — slide 13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "instagram-dysq_tcefpn-o-caso-de-dubai-virou-uma-das-maiores-exposicoes-publicas-de-uma-operaca",
+    "title": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina...",
+    "description": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina moderna. Porque ele mostrou algo que não chama tanta atenção nos filmes.",
+    "category": "opsec",
+    "categoryLabel": "OPSEC",
+    "tags": [
+      "HUMINT",
+      "Espionagem",
+      "Contrainteligencia",
+      "OPSEC"
+    ],
+    "author": "Equipe Mundo da HUMINT",
+    "authorBio": "Equipe editorial dedicada a método, ética e profundidade no campo da inteligência humana aplicada.",
+    "publishedAt": "2026-05-13",
+    "updatedAt": "2026-05-11",
+    "readingTime": "1 min",
+    "heroImage": "/images/instagram/DYSQ_TcEfpN.jpg",
+    "heroAlt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina moderna.",
+    "instagramShortCode": "DYSQ_TcEfpN",
+    "instagramUrl": "https://www.instagram.com/p/DYSQ_TcEfpN/",
+    "body": [
+      {
+        "type": "p",
+        "text": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina moderna."
+      },
+      {
+        "type": "p",
+        "text": "Porque ele mostrou algo que não chama tanta atenção nos filmes. Operações de Inteligência normalmente não chamam atenção pela violência, ela é sutil."
+      },
+      {
+        "type": "p",
+        "text": "Coleta-se dados, iniciam observação, Mapeam de rotina. Leitura de comportamento. Identificação de vulnerabilidades. Antecipação de padrões."
+      },
+      {
+        "type": "p",
+        "text": "A equipe só precisou entender onde ele estaria, como se moveria, quando estaria sozinho e quais hábitos o fariam baixar a guarda."
+      },
+      {
+        "type": "p",
+        "text": "O ser humano é previsível quando entra em rotina."
+      },
+      {
+        "type": "p",
+        "text": "E é exatamente aí que operações profissionais exploram a vulnerabilidade."
+      },
+      {
+        "type": "p",
+        "text": "Outro ponto importante, é a exploração do contexto. Como o caso dos agentes que pareciam turistas comuns."
+      },
+      {
+        "type": "p",
+        "text": "O melhor disfarce, normalmente é conseguir não chamar atenção… é pertencer sem ruído."
+      },
+      {
+        "type": "p",
+        "text": "Quanto menos memorável você parecer, mais invisível você se torna."
+      },
+      {
+        "type": "h2",
+        "text": "Transcrição dos slides"
+      },
+      {
+        "type": "note",
+        "text": "Texto extraído automaticamente das imagens do carrossel; pode conter imprecisões de OCR."
+      },
+      {
+        "type": "p",
+        "text": "age A A Um homem agentes do Mossad E"
+      },
+      {
+        "type": "p",
+        "text": "responsável pela logística de A E. E Eat E:, isentas foi encontrado morto no"
+      },
+      {
+        "type": "p",
+        "text": "e a Horas antes da chegada dele... a equipe Os agentes chegaram, em voos diferentes. SUA Passaportes diferentes. Dao A Mas todos convergiam para o mesmo alvo."
+      },
+      {
+        "type": "p",
+        "text": "e Eles pareciam turistas. A Roupas comuns. e"
+      },
+      {
+        "type": "p",
+        "text": "As câmeras de Dubai registraram tudo. Elevadores. Corredores. Lobby. Entradas. O mundo inteiro assistiu depois. E a E a"
+      },
+      {
+        "type": "p",
+        "text": "Os agentes mapearam os movimentos dele dentro A, do hotel. vulnerabilidades, ausência de segurança."
+      },
+      {
+        "type": "p",
+        "text": "Quando al-Mabhouh entrou no quarto... a operação começou. E, Tudo rápido, controlado. E"
+      },
+      {
+        "type": "p",
+        "text": "A equipe deixou Dubai antes do corpo ser descoberto. oro Asd Sem tiros. Sem perseguição. O,"
+      },
+      {
+        "type": "p",
+        "text": "Depois, Dubai divulgou; A. Na dida O mundo viu: asP o rostos, disfarces, E. movimentação"
+      },
+      {
+        "type": "p",
+        "text": "Os agentes não precisaram"
+      },
+      {
+        "type": "p",
+        "text": "Curta, siga e compartilhe.. a Espe E asa o a Aqui você aprende através E de operações reais."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/01.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 1"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/02.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 2"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/03.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 3"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/04.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 4"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/05.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 5"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/06.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 6"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/07.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 7"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/08.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 8"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/09.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 9"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/10.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 10"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/11.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 11"
+          },
+          {
+            "src": "/images/carrossel/DYSQ_TcEfpN/12.jpg",
+            "alt": "O caso de Dubai virou uma das maiores exposições públicas de uma operação clandestina... — slide 12"
+          }
+        ]
       }
     ]
   }
