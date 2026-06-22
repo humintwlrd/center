@@ -13,10 +13,10 @@ export interface Product {
   tipo: string
   /** Selo de destaque opcional (ex.: "Mais vendido"). */
   badge?: string
-  /** Preço atual em destaque. */
+  /** Preço à vista (referência; não exibido na loja). */
   preco: string
-  /** Preço "de" (ancoragem). Opcional. */
-  precoDe?: string | null
+  /** Preço parcelado exibido na loja (ex.: "12x de R$ 93,09"). */
+  parcelado: string
   /** Descrição curta (1–2 linhas no card). */
   descricao: string
   /** Destaques curtos exibidos como chips no card. */
@@ -40,6 +40,7 @@ export const PRODUCTS: Product[] = [
     tipo: "Curso completo",
     badge: "Mais vendido",
     preco: "R$ 900,00",
+    parcelado: "12x de R$ 93,09",
     descricao:
       "O acervo definitivo de HUMINT: 9 módulos cobrindo mecânicas do comportamento, comunicação e influência, linguagem não verbal, elicitação, contrainteligência e OPSEC, fontes de informação e ferramentas operacionais.",
     destaques: [
@@ -60,9 +61,9 @@ export const PRODUCTS: Product[] = [
       "07 · Fontes de Informação",
       "08 · Ferramentas Operacionais",
     ],
-    image: "/images/shop/acervo-tatico.png",
+    image: "/images/shop/acervo-tatico.webp",
     imageAlt:
-      "Dossiê de inteligência organizado: pastas confidenciais empilhadas, ficha de caso e gráficos de análise comportamental.",
+      "Pôster do Acervo Tático HUMINT: silhueta de um rosto dividido em dois tons, com o título ACERVO TÁTICO HUMINT.",
     checkoutUrl:
       "https://pay.herospark.com/acervo-tatico-de-inteligencia-humana-525712",
     destaque: true,
@@ -72,6 +73,7 @@ export const PRODUCTS: Product[] = [
     nome: "Fundamentos de Engenharia Social: Princípios de Campo",
     tipo: "Curso",
     preco: "R$ 120,00",
+    parcelado: "12x de R$ 12,41",
     descricao:
       "Curso de campo sobre engenharia social: os fundamentos, pentest físico e estratégias de defesa.",
     destaques: ["Os Fundamentos", "Pentest Físico", "Defesa"],
@@ -80,9 +82,9 @@ export const PRODUCTS: Product[] = [
       "Parte 2 · Pentest Físico",
       "Parte 3 · Defesa",
     ],
-    image: "/images/shop/engenharia-social.png",
+    image: "/images/shop/engenharia-social.webp",
     imageAlt:
-      "Corredor corporativo à noite visto por uma porta de vidro, com crachá de acesso sobre uma mesa.",
+      "Capa Engenharia Social: Os Fundamentos — figura observando uma cidade ao entardecer em tons de vermelho.",
     checkoutUrl:
       "https://pay.herospark.com/fundamentos-de-engenharia-social-principios-de-campo-525751",
   },
@@ -91,11 +93,12 @@ export const PRODUCTS: Product[] = [
     nome: "OSINT Playbook (guia prático)",
     tipo: "Ebook",
     preco: "R$ 70,00",
+    parcelado: "12x de R$ 7,24",
     descricao:
       "Guia prático de OSINT: técnicas e fluxo de trabalho para investigação de fontes abertas, em formato ebook (PDF).",
-    image: "/images/shop/osint-playbook.png",
+    image: "/images/shop/osint-playbook.webp",
     imageAlt:
-      "Mesa de investigação com caderno de anotações, lupa sobre documentos e linhas de conexão entre alfinetes.",
+      "Capa do Playbook OSINT do Mundo da HUMINT: rosto com sobreposição de código e o título Playbook OSINT.",
     checkoutUrl:
       "https://pay.herospark.com/osint-playbook-guia-pratico-by-mundo-da-humint-525745",
   },
@@ -109,14 +112,11 @@ export function getProductBySlug(slug: string): Product | undefined {
 export interface Combo {
   id: string
   titulo: string
-  /** Frase curta de valor. */
   texto: string
-  /** Produto que entra com desconto. */
   itemComDesconto: string
   precoDe: string
   preco: string
   desconto: string
-  /** Checkout aponta para o produto âncora (Acervo Tático), onde a oferta aparece. */
   checkoutUrl: string
 }
 

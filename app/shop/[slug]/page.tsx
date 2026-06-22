@@ -50,15 +50,15 @@ export default async function ProductPage({ params }: Props) {
       </section>
 
       <div className="container-editorial grid gap-10 py-10 md:py-14 lg:grid-cols-2">
-        {/* Capa */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden border border-line bg-paper-deep">
+        {/* Capa real */}
+        <div className="relative aspect-[4/5] w-full overflow-hidden border border-line bg-deep">
           <Image
             src={product.image || "/placeholder.svg"}
             alt={product.imageAlt}
             fill
             sizes="(min-width: 1024px) 600px, 100vw"
             priority
-            className="object-cover"
+            className="object-contain"
           />
           <span className="absolute left-3 top-3 inline-block bg-ink px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-paper">
             {product.tipo}
@@ -81,12 +81,7 @@ export default async function ProductPage({ params }: Props) {
           </h1>
           <p className="mt-4 text-base leading-relaxed text-ink-soft">{product.descricao}</p>
 
-          <div className="mt-6 flex items-baseline gap-2">
-            {product.precoDe && (
-              <span className="text-base text-ink-muted line-through">{product.precoDe}</span>
-            )}
-            <span className="font-display text-4xl font-bold text-gold-active">{product.preco}</span>
-          </div>
+          <p className="mt-6 font-display text-4xl font-bold text-gold-active">{product.parcelado}</p>
           <p className="mt-1 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ink-muted">
             <CreditCard className="h-3.5 w-3.5" aria-hidden /> Cartão · Pix
           </p>
