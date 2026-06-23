@@ -145,10 +145,10 @@ function HeaderFallback() {
           ))}
         </nav>
         <a
-          href="/assinar"
+          href="/academy"
           className="inline-flex items-center bg-gold text-on-gold px-3 py-2 text-sm font-semibold sm:px-4"
         >
-          Assine
+          Academy
         </a>
       </div>
     </header>

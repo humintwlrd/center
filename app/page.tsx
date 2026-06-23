@@ -77,52 +77,52 @@ const MOST_READ_SLUGS = [
 
 const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
   {
-    title: "Rede CIA na China",
+    title: "Comportamento humano",
     description:
-      "Como uma rede humana foi comprometida em ambiente hostil, e o que o caso ensina sobre comunicação, fontes e contrainteligência.",
-    href: "/assinar",
-    image: "/images/editorial/china-cia-cover.jpg",
-    imageAlt: "Homem observa as luzes de Pequim pela janela de um quarto à noite.",
+      "Padrões, vieses e gatilhos que tornam pessoas previsíveis — a base de toda leitura de fontes.",
+    href: "/academy",
+    image: "/images/cases/john-walker.jpg",
+    imageAlt: "Homem deposita pacote em árvore oca sob neblina.",
   },
   {
-    title: "Sergei Skripal",
+    title: "Comunicação e influência",
     description:
-      "O ciclo completo de uma fonte: recrutamento, captura, troca de prisioneiros e risco residual após a operação.",
-    href: "/assinar",
-    image: "/images/cases/skripal.jpg",
-    imageAlt: "Homem sentado em banco de parque inglês sob neblina.",
-  },
-  {
-    title: "Unidade 29155",
-    description:
-      "Operações atribuídas ao GRU na Europa, falhas de OPSEC e o papel de investigadores independentes na exposição.",
-    href: "/assinar",
-    image: "/images/cases/unit-29155.jpg",
-    imageAlt: "Homem de sobretudo caminha por viela europeia molhada.",
-  },
-  {
-    title: "Operação Ajax",
-    description:
-      "Influência, narrativa e efeitos de longo prazo em uma operação que ainda molda leituras geopolíticas.",
-    href: "/assinar",
+      "Conduzir conversas, criar rapport e influenciar com método — sem manipular às cegas.",
+    href: "/academy",
     image: "/images/cases/operation-ajax.jpg",
     imageAlt: "Homem iraniano com chapéu em um bazar nos anos 1950.",
   },
   {
-    title: "Projeto Azorian",
+    title: "Elicitação e fontes humanas",
     description:
-      "Arquitetura de cobertura, negação plausível e engenharia operacional em uma das ações mais ambiciosas da Guerra Fria.",
-    href: "/assinar",
-    image: "/images/cases/project-azorian.jpg",
-    imageAlt: "Oficial observa o oceano a partir da ponte de um navio.",
+      "Obter informação sem a pergunta óbvia; recrutar, validar e proteger fontes.",
+    href: "/academy",
+    image: "/images/cases/skripal.jpg",
+    imageAlt: "Homem sentado em banco de parque inglês sob neblina.",
   },
   {
-    title: "John Walker Jr.",
+    title: "Contrainteligência e OPSEC",
     description:
-      "Traição, rotina pessoal e vulnerabilidades exploradas em um caso clássico de segurança e fontes humanas.",
-    href: "/assinar",
-    image: "/images/cases/john-walker.jpg",
-    imageAlt: "Homem deposita pacote em árvore oca sob neblina.",
+      "Proteger operações e a si mesmo — e reconhecer quando algo foi comprometido.",
+    href: "/academy",
+    image: "/images/editorial/china-cia-cover.jpg",
+    imageAlt: "Homem observa as luzes de Pequim pela janela de um quarto à noite.",
+  },
+  {
+    title: "OSINT na prática",
+    description:
+      "Investigar fontes abertas com método e conectar pessoas, bens e vínculos.",
+    href: "/academy",
+    image: "/images/cases/unit-29155.jpg",
+    imageAlt: "Homem de sobretudo caminha por viela europeia molhada.",
+  },
+  {
+    title: "Tradecraft e operação",
+    description:
+      "Do planejamento à execução: cobertura, comunicação segura e disciplina operacional.",
+    href: "/academy",
+    image: "/images/cases/project-azorian.jpg",
+    imageAlt: "Oficial observa o oceano a partir da ponte de um navio.",
   },
 ]
 

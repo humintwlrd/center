@@ -4,6 +4,7 @@ const nextConfig = {
     return [
       { source: "/shop", destination: "/academy", permanent: true },
       { source: "/shop/:slug", destination: "/academy/:slug", permanent: true },
+      { source: "/assinar", destination: "/academy", permanent: true },
     ]
   },
 }

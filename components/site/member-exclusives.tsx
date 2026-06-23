@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight, Crown } from "lucide-react"
+import { ChevronLeft, ChevronRight, GraduationCap } from "lucide-react"
 import { useRef } from "react"
 
 export type MemberExclusiveItem = {
@@ -38,12 +38,12 @@ export function MemberExclusives({ items }: Props) {
             id="member-exclusives-title"
             className="font-display text-2xl md:text-[1.65rem] font-bold text-[#07142a]"
           >
-            Exclusivo para membros
+            O que você aprende na Academy
           </h2>
           <div className="flex items-center gap-3">
             <button
               type="button"
-              aria-label="Ver exclusivos anteriores"
+              aria-label="Ver temas anteriores"
               onClick={() => scroll("prev")}
               className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#d9dde5] text-[#9aa3b2] hover:border-[#b9c0cb] hover:text-[#07142a] transition-colors"
             >
@@ -51,7 +51,7 @@ export function MemberExclusives({ items }: Props) {
             </button>
             <button
               type="button"
-              aria-label="Ver próximos exclusivos"
+              aria-label="Ver próximos temas"
               onClick={() => scroll("next")}
               className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#cfd5df] text-[#07142a] hover:border-[#07142a] transition-colors"
             >
@@ -82,8 +82,8 @@ export function MemberExclusives({ items }: Props) {
                   />
                   <div className="absolute left-3 top-3">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-[#20c7a4] px-3 py-1.5 text-xs font-bold text-white shadow-sm">
-                      <Crown className="h-3.5 w-3.5" aria-hidden="true" />
-                      Exclusivo
+                      <GraduationCap className="h-3.5 w-3.5" aria-hidden="true" />
+                      Academy
                     </span>
                   </div>
                 </div>

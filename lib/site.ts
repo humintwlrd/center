@@ -23,7 +23,6 @@ export const NAV = {
     { label: "Casos", href: "/artigos?categoria=casos-historicos" },
     { label: "Métodos", href: "/metodos" },
     { label: "Academy", href: "/academy" },
-    { label: "Assinatura", href: "/assinar" },
   ],
   // Acessos auxiliares (visiveis no menu mobile e no rodape).
   meta: [

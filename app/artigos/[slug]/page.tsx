@@ -516,22 +516,22 @@ export default async function ArtigoPage({ params }: Props) {
               aria-labelledby="vip-cta-heading"
               className="bg-deep text-paper p-6 md:p-8 max-w-[68ch]"
             >
-              <p className="eyebrow-gold">Membro VIP</p>
+              <p className="eyebrow-gold">Academy</p>
               <h2
                 id="vip-cta-heading"
                 className="mt-2 font-display text-2xl font-semibold text-balance"
               >
-                Aprofunde sua leitura com a assinatura do Mundo da HUMINT.
+                Vá além com os cursos da Academy do Mundo da HUMINT.
               </h2>
               <p className="mt-2 text-[var(--color-warm-text)] leading-relaxed">
-                Entre para a área de membros e acompanhe análises, aulas e estudos
-                exclusivos sobre inteligência humana aplicada.
+                Conheça a Academy: cursos e materiais para aplicar inteligência
+                humana na prática, do comportamento à operação.
               </p>
               <Link
-                href="/assinar"
+                href="/academy"
                 className="mt-6 inline-flex items-center justify-center bg-gold px-5 py-3 text-sm font-semibold text-deep transition-colors hover:bg-gold-hover"
               >
-                Virar membro VIP
+                Conhecer a Academy
               </Link>
             </section>
           </footer>

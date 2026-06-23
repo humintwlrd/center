@@ -47,7 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/metodos", priority: 0.85, changeFrequency: "weekly" },
     { path: "/categorias", priority: 0.7, changeFrequency: "monthly" },
     { path: "/formacao", priority: 0.75, changeFrequency: "monthly" },
-    { path: "/assinar", priority: 0.8, changeFrequency: "monthly" },
     { path: "/recursos", priority: 0.7, changeFrequency: "monthly" },
     { path: "/sobre", priority: 0.5, changeFrequency: "yearly" },
     { path: "/contato", priority: 0.4, changeFrequency: "yearly" },
