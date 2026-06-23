@@ -88,20 +88,6 @@ export const PRODUCTS: Product[] = [
     checkoutUrl:
       "https://pay.herospark.com/fundamentos-de-engenharia-social-principios-de-campo-525751",
   },
-  {
-    id: "osint-playbook",
-    nome: "OSINT Playbook (guia prático)",
-    tipo: "Ebook",
-    preco: "R$ 70,00",
-    parcelado: "12x de R$ 7,24",
-    descricao:
-      "Guia prático de OSINT: técnicas e fluxo de trabalho para investigação de fontes abertas, em formato ebook (PDF).",
-    image: "/images/shop/osint-playbook.webp",
-    imageAlt:
-      "Capa Playbook OSINT do Mundo da HUMINT: rosto em perfil com código sobreposto.",
-    checkoutUrl:
-      "https://pay.herospark.com/osint-playbook-guia-pratico-by-mundo-da-humint-525745",
-  },
 ]
 
 /** Busca um produto pelo slug (id). */
