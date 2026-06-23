@@ -1,7 +1,6 @@
 import Link from "next/link"
-import { Instagram, Mail } from "lucide-react"
+import { Instagram, Mail, ArrowRight } from "lucide-react"
 import { NAV, SITE, DOSSIERS } from "@/lib/site"
-import { NewsletterInline } from "./newsletter-inline"
 import { BrandLogo } from "@/components/site/brand-logo"
 
 export function SiteFooter() {
@@ -132,19 +131,35 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Newsletter */}
+        {/* CTA Academy */}
         <div className="mt-10 pt-8 border-t border-deep-2">
-          <div className="grid lg:grid-cols-12 gap-6 items-center">
-            <div className="lg:col-span-5">
-              <p className="font-mono text-xs uppercase tracking-widest text-gold mb-1">
-                Newsletter
-              </p>
-              <p className="text-sm text-warm-text">
-                Receba novos dossiês e análises diretamente no seu e-mail.
-              </p>
-            </div>
-            <div className="lg:col-span-7">
-              <NewsletterInline variant="dark" />
+          <div className="relative overflow-hidden border border-gold/30 bg-gradient-to-br from-deep to-ink p-6 md:p-9">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-16 top-0 h-full w-px rotate-12 bg-gold/30"
+            />
+            <div className="relative grid gap-6 lg:grid-cols-12 lg:items-center">
+              <div className="lg:col-span-8">
+                <p className="font-mono text-xs uppercase tracking-widest text-gold mb-2">
+                  Mundo da HUMINT Academy
+                </p>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-paper text-balance leading-tight">
+                  Onde a teoria vira operação.
+                </h3>
+                <p className="mt-3 max-w-xl text-sm leading-relaxed text-warm-text">
+                  Cursos e materiais operacionais — comportamento, comunicação, elicitação,
+                  contrainteligência e OSINT. Método para aplicar de verdade.
+                </p>
+              </div>
+              <div className="lg:col-span-4 lg:text-right">
+                <Link
+                  href="/academy"
+                  className="inline-flex items-center justify-center gap-2 bg-gold px-6 py-3.5 font-mono text-sm font-bold uppercase tracking-widest text-on-gold transition-colors hover:bg-gold-hover"
+                >
+                  Conhecer a Academy
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
