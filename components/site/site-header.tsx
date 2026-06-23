@@ -115,10 +115,10 @@ export function SiteHeader() {
           </Link>
 
           <Link
-            href="/assinar"
+            href="/academy"
             className="inline-flex items-center justify-center bg-gold hover:bg-gold-active text-on-gold px-3 py-2 text-sm font-semibold transition-colors sm:px-4"
           >
-            Assine
+            Academy
           </Link>
 
           <button
@@ -189,10 +189,10 @@ export function SiteHeader() {
               Ver artigos
             </Link>
             <Link
-              href="/assinar"
+              href="/academy"
               className="mt-3 inline-flex items-center justify-center bg-gold text-on-gold px-4 py-3 text-sm font-semibold"
             >
-              Assine
+              Academy
             </Link>
           </nav>
         </div>
