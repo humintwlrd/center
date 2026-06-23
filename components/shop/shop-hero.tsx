@@ -18,9 +18,9 @@ export function ShopHero() {
         className="pointer-events-none absolute -right-24 top-0 h-full w-px rotate-12 bg-gold/30"
       />
       <div className="container-editorial relative py-16 sm:py-20 lg:py-24">
-        <p className="eyebrow-gold mb-4">Loja</p>
+        <p className="eyebrow-gold mb-4">Academy</p>
         <h1 className="max-w-4xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-paper text-balance sm:text-5xl lg:text-6xl">
-          <span className="text-gold">/</span>Mundo da HUMINT Shop
+          <span className="text-gold">/</span>Mundo da HUMINT Academy
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-warm sm:text-lg">
           Inteligência humana aplicada. Cursos e materiais operacionais.

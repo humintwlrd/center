@@ -18,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Produto não encontrado", robots: { index: false, follow: false } }
   }
   return {
-    title: { absolute: `${product.nome} — Loja Mundo da HUMINT` },
+    title: { absolute: `${product.nome} — Academy Mundo da HUMINT` },
     description: product.descricao,
-    alternates: { canonical: `/shop/${product.id}` },
+    alternates: { canonical: `/academy/${product.id}` },
     openGraph: {
       title: product.nome,
       description: product.descricao,
-      url: `/shop/${product.id}`,
+      url: `/academy/${product.id}`,
       images: [{ url: product.image, alt: product.imageAlt }],
     },
   }
@@ -39,8 +39,8 @@ export default async function ProductPage({ params }: Props) {
     <article>
       <section className="container-editorial pt-8 md:pt-10">
         <nav className="font-mono text-[11px] uppercase tracking-widest text-ink-muted" aria-label="Trilha">
-          <Link href="/shop" className="hover:text-ink">
-            Loja
+          <Link href="/academy" className="hover:text-ink">
+            Academy
           </Link>
           <span className="px-2" aria-hidden>
             /

@@ -72,7 +72,7 @@ export function ProductCard({ product, priority }: Props) {
           </a>
 
           <Link
-            href={`/shop/${product.id}`}
+            href={`/academy/${product.id}`}
             className="mt-3 block text-center font-mono text-[11px] uppercase tracking-widest text-ink-muted underline-offset-4 hover:text-gold-active hover:underline"
           >
             Ver detalhes
