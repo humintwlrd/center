@@ -45,7 +45,7 @@ export function SiteFooter() {
 
           {/* Navigation */}
           <div className="lg:col-span-2">
-            <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">
+            <p className="font-mono text-xs uppercase tracking-widest text-paper mb-4">
               Navegar
             </p>
             <ul className="flex flex-col gap-2 text-sm">
@@ -64,7 +64,7 @@ export function SiteFooter() {
 
           {/* Dossiers */}
           <div className="lg:col-span-3">
-            <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">
+            <p className="font-mono text-xs uppercase tracking-widest text-paper mb-4">
               Dossiês
             </p>
             <ul className="flex flex-col gap-2 text-sm">
@@ -83,7 +83,7 @@ export function SiteFooter() {
 
           {/* Institutional */}
           <div className="lg:col-span-3">
-            <p className="font-mono text-xs uppercase tracking-widest text-gold mb-4">
+            <p className="font-mono text-xs uppercase tracking-widest text-paper mb-4">
               Institucional
             </p>
             <ul className="flex flex-col gap-2 text-sm">
@@ -133,14 +133,14 @@ export function SiteFooter() {
 
         {/* CTA Academy */}
         <div className="mt-10 pt-8 border-t border-deep-2">
-          <div className="relative overflow-hidden border border-gold/30 bg-gradient-to-br from-deep to-ink p-6 md:p-9">
+          <div className="relative overflow-hidden border border-paper/15 bg-gradient-to-br from-deep to-ink p-6 md:p-9">
             <div
               aria-hidden
-              className="pointer-events-none absolute -right-16 top-0 h-full w-px rotate-12 bg-gold/30"
+              className="pointer-events-none absolute -right-16 top-0 h-full w-px rotate-12 bg-paper/15"
             />
             <div className="relative grid gap-6 lg:grid-cols-12 lg:items-center">
               <div className="lg:col-span-8">
-                <p className="font-mono text-xs uppercase tracking-widest text-gold mb-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-warm-text mb-2">
                   Mundo da HUMINT Academy
                 </p>
                 <h3 className="font-display text-2xl md:text-3xl font-bold text-paper text-balance leading-tight">
@@ -154,7 +154,7 @@ export function SiteFooter() {
               <div className="lg:col-span-4 lg:text-right">
                 <Link
                   href="/academy"
-                  className="inline-flex items-center justify-center gap-2 bg-gold px-6 py-3.5 font-mono text-sm font-bold uppercase tracking-widest text-on-gold transition-colors hover:bg-gold-hover"
+                  className="inline-flex items-center justify-center gap-2 bg-paper px-6 py-3.5 font-mono text-sm font-bold uppercase tracking-widest text-ink transition-colors hover:bg-warm-text"
                 >
                   Conhecer a Academy
                   <ArrowRight className="h-4 w-4" aria-hidden />
