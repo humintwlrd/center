@@ -77,6 +77,37 @@ export function ArticleCard({ article, variant = "default", priority }: Props) {
     )
   }
 
+  if (variant === "overlay") {
+    return (
+      <article className="group flex flex-col">
+        <Link href={href} className="relative block overflow-hidden bg-paper-deep">
+          <div className="relative aspect-[16/9]">
+            <Image
+              src={article.heroImage || "/placeholder.svg"}
+              alt={article.heroAlt}
+              fill
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw"
+              preload={priority}
+              loading={priority ? "eager" : "lazy"}
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+          <span className="absolute left-3 top-3 inline-block bg-ink/85 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-paper backdrop-blur-sm">
+            {article.categoryLabel}
+          </span>
+        </Link>
+        <Link href={href} className="mt-3 block">
+          <h3 className="font-display text-lg font-semibold leading-snug text-ink text-balance group-hover:text-gold-active transition-colors">
+            {article.title}
+          </h3>
+        </Link>
+        <p className="mt-2 text-[11px] font-mono uppercase tracking-widest text-ink-muted">
+          {formatDateBR(article.publishedAt)}
+        </p>
+      </article>
+    )
+  }
+
   if (variant === "horizontal") {
     const naturalOnMobile = isInstagramImage(article.heroImage)
     return (
