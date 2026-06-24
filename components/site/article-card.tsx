@@ -5,7 +5,7 @@ import { formatDateBR } from "@/lib/format"
 
 type Props = {
   article: Article
-  variant?: "default" | "featured" | "compact" | "horizontal"
+  variant?: "default" | "featured" | "compact" | "horizontal" | "overlay"
   priority?: boolean
 }
 
