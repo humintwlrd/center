@@ -1,5 +1,5 @@
 /**
- * Hero da loja — estilo editorial "/[Nome] Shop" (referência: everydayspy.com/shop).
+ * Hero da Academy — estilo editorial "/[Nome] Academy".
  * Fundo escuro (bg-deep) + filete dourado, coerente com as seções premium do site.
  */
 export function ShopHero() {
@@ -23,8 +23,16 @@ export function ShopHero() {
           <span className="text-gold">/</span>Mundo da HUMINT Academy
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-warm sm:text-lg">
-          Inteligência humana aplicada. Cursos e materiais operacionais.
+          Inteligência humana aplicada. Cursos e materiais operacionais para sair da teoria
+          e aplicar de verdade.
         </p>
+        <div className="mt-7 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] uppercase tracking-widest text-warm">
+          <span>2 cursos</span>
+          <span className="text-gold" aria-hidden>·</span>
+          <span>6 dossiês</span>
+          <span className="text-gold" aria-hidden>·</span>
+          <span>acesso imediato</span>
+        </div>
       </div>
       <div aria-hidden className="h-px w-full bg-gradient-to-r from-gold/0 via-gold to-gold/0" />
     </section>

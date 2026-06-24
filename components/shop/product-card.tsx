@@ -11,6 +11,13 @@ type Props = {
 export function ProductCard({ product, priority }: Props) {
   const isFeatured = Boolean(product.destaque)
 
+  // Hierarquia de preço: "12x de" (rótulo) + valor em destaque.
+  const hasParcelas = product.parcelado.includes(" de ")
+  const parcelaLabel = hasParcelas ? `${product.parcelado.split(" de ")[0]} de` : ""
+  const parcelaValor = hasParcelas
+    ? product.parcelado.split(" de ").slice(1).join(" de ")
+    : product.parcelado
+
   return (
     <article
       className={[
@@ -20,7 +27,7 @@ export function ProductCard({ product, priority }: Props) {
           : "border-line hover:border-gold/60 hover:shadow-[0_12px_32px_-16px_rgba(217,165,35,0.4)]",
       ].join(" ")}
     >
-      {/* Capa real do produto (object-contain sobre fundo escuro para exibir o pôster inteiro) */}
+      {/* Capa real do produto */}
       <div className="relative aspect-[3/4] overflow-hidden bg-deep">
         <Image
           src={product.image || "/placeholder.svg"}
@@ -50,14 +57,23 @@ export function ProductCard({ product, priority }: Props) {
           {product.nome}
         </h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-2">
+        <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-3">
           {product.descricao}
         </p>
 
         {/* Preço parcelado + compra — empurrado para a base do card */}
         <div className="mt-auto pt-6">
-          <p className="font-display text-2xl font-bold text-gold-active">{product.parcelado}</p>
-          <p className="mt-1 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ink-muted">
+          <div className="flex items-baseline gap-2">
+            {parcelaLabel && (
+              <span className="font-mono text-[11px] uppercase tracking-widest text-ink-muted">
+                {parcelaLabel}
+              </span>
+            )}
+            <span className="font-display text-2xl font-bold leading-none text-gold-active">
+              {parcelaValor}
+            </span>
+          </div>
+          <p className="mt-2 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ink-muted">
             <CreditCard className="h-3.5 w-3.5" aria-hidden /> Cartão · Pix
           </p>
 
