@@ -88,6 +88,90 @@ export const PRODUCTS: Product[] = [
     checkoutUrl:
       "https://pay.herospark.com/fundamentos-de-engenharia-social-principios-de-campo-525751",
   },
+  {
+    id: "dossie-01",
+    nome: "Dossiê 01 — Mecânicas do Comportamento",
+    tipo: "E-book",
+    preco: "R$ 190,00",
+    parcelado: "12x de R$ 19,65",
+    descricao:
+      "Um guia direto sobre os padrões que governam as decisões humanas. Reconheça vieses cognitivos, gatilhos comportamentais e os sinais que antecipam reações para compreender pessoas antes de agir. Não é sobre forçar, é sobre compreender.",
+    image: "/images/shop/dossie-01.webp",
+    imageAlt:
+      "Capa do Dossiê 01 — Mecânicas do Comportamento, em estilo dossiê confidencial do Mundo da HUMINT.",
+    checkoutUrl:
+      "https://pay.herospark.com/dossie-01-individual-mecanicas-do-comportamento-529505",
+  },
+  {
+    id: "dossie-02",
+    nome: "Dossiê 02 — Comunicação e Influência",
+    tipo: "E-book",
+    preco: "R$ 190,00",
+    parcelado: "12x de R$ 19,65",
+    descricao:
+      "Comunicar bem é conduzir. Princípios da comunicação persuasiva e da influência ética: escuta ativa, enquadramento de mensagens, construção de rapport e os ajustes que mudam o resultado de uma conversa.",
+    image: "/images/shop/dossie-02.webp",
+    imageAlt:
+      "Capa do Dossiê 02 — Comunicação e Influência, em estilo dossiê confidencial do Mundo da HUMINT.",
+    checkoutUrl:
+      "https://pay.herospark.com/dossie-02-individual-comunicacao-e-influencia-529506",
+  },
+  {
+    id: "dossie-03",
+    nome: "Dossiê 03 — Linguagem Não-verbal",
+    tipo: "E-book",
+    preco: "R$ 190,00",
+    parcelado: "12x de R$ 19,65",
+    descricao:
+      "A maior parte do que comunicamos não está nas palavras. Aprenda a ler postura, microexpressões, gestos e tom para captar o que não é dito e alinhar sua própria linguagem corporal à mensagem que deseja transmitir.",
+    image: "/images/shop/dossie-03.webp",
+    imageAlt:
+      "Capa do Dossiê 03 — Linguagem Não-verbal, em estilo dossiê confidencial do Mundo da HUMINT.",
+    checkoutUrl:
+      "https://pay.herospark.com/dossie-03-individual-linguagem-nao-verbal-529510",
+  },
+  {
+    id: "dossie-04",
+    nome: "Dossiê 04 — Elicitação Ética",
+    tipo: "E-book",
+    preco: "R$ 190,00",
+    parcelado: "12x de R$ 19,65",
+    descricao:
+      "Como obter informações relevantes por meio de conversas naturais, sem interrogatórios nem manipulação. Técnicas de elicitação aplicadas de forma ética: perguntas bem construídas, escuta estratégica e condução de diálogo.",
+    image: "/images/shop/dossie-04.webp",
+    imageAlt:
+      "Capa do Dossiê 04 — Elicitação Ética, em estilo dossiê confidencial do Mundo da HUMINT.",
+    checkoutUrl:
+      "https://pay.herospark.com/dossie-04-individual-elicitacao-etica-529511",
+  },
+  {
+    id: "dossie-05",
+    nome: "Dossiê 05 — Contrainteligência e OPSEC",
+    tipo: "E-book",
+    preco: "R$ 190,00",
+    parcelado: "12x de R$ 19,65",
+    descricao:
+      "Proteja suas informações, sua rotina e sua presença digital. Fundamentos de contrainteligência e segurança operacional (OPSEC): identifique vulnerabilidades, reduza sua exposição e reconheça tentativas de observação.",
+    image: "/images/shop/dossie-05.webp",
+    imageAlt:
+      "Capa do Dossiê 05 — Contrainteligência e OPSEC, em estilo dossiê confidencial do Mundo da HUMINT.",
+    checkoutUrl:
+      "https://pay.herospark.com/dossie-05-contrainteligencia-e-opsec-529512",
+  },
+  {
+    id: "dossie-06",
+    nome: "Dossiê 06 — Fontes de Informação",
+    tipo: "E-book",
+    preco: "R$ 190,00",
+    parcelado: "12x de R$ 19,65",
+    descricao:
+      "Onde encontrar informação confiável e como avaliá-la. Mapeie fontes humanas, abertas e técnicas, cruze dados, verifique credibilidade e transforme coleta dispersa em análise útil.",
+    image: "/images/shop/dossie-06.webp",
+    imageAlt:
+      "Capa do Dossiê 06 — Fontes de Informação, em estilo dossiê confidencial do Mundo da HUMINT.",
+    checkoutUrl:
+      "https://pay.herospark.com/dossie-06-individual-fontes-de-informacao-529513",
+  },
 ]
 
 /** Busca um produto pelo slug (id). */
