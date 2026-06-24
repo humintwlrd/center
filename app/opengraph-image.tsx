@@ -17,8 +17,8 @@ export default function OG() {
           justifyContent: "space-between",
           padding: 80,
           background:
-            "linear-gradient(135deg, #0E1116 0%, #161B22 60%, #1F2F43 100%)",
-          color: "#F6F1E6",
+            "linear-gradient(135deg, #0d0d0d 0%, #141414 60%, #1c1c1c 100%)",
+          color: "#fafafa",
           fontFamily: "serif",
         }}
       >
@@ -28,7 +28,7 @@ export default function OG() {
             alignItems: "center",
             gap: 16,
             fontSize: 22,
-            color: "#D9A523",
+            color: "#22c55e",
             letterSpacing: 0,
             textTransform: "uppercase",
             fontFamily: "monospace",
@@ -38,7 +38,7 @@ export default function OG() {
             style={{
               width: 14,
               height: 14,
-              background: "#D9A523",
+              background: "#22c55e",
             }}
           />
           {SITE.name}
@@ -64,7 +64,7 @@ export default function OG() {
           <div
             style={{
               fontSize: 28,
-              color: "#EBE1D1",
+              color: "#cfcfcf",
               maxWidth: 900,
               lineHeight: 1.4,
             }}
@@ -78,7 +78,7 @@ export default function OG() {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: 20,
-            color: "#A58F56",
+            color: "#9ca3af",
             fontFamily: "monospace",
             letterSpacing: 0,
             borderTop: "1px solid #3a3a3a",

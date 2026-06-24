@@ -13,33 +13,33 @@
   --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Paleta editorial (Bellingcat-like) */
-  --color-paper: #f6f1e6;
+  --color-paper: #fafafa;
   --color-paper-strong: #ffffff;
-  --color-paper-deep: #efe7d5;
+  --color-paper-deep: #f0f0f0;
   --color-ink: #111111;
   --color-ink-soft: #2e2e2e;
   --color-ink-muted: #606060;
-  --color-line: #d7cfbf;
-  --color-line-strong: #b9ad94;
+  --color-line: #e4e4e7;
+  --color-line-strong: #cbcbd1;
 
-  --color-gold: #d9a523;
-  --color-gold-hover: #bf8f14;
-  --color-gold-active: #9e7410;
-  --color-gold-soft: #f2e2ab;
-  --color-gold-disabled: #a58f56;
-  --color-on-gold: #111111;
+  --color-gold: #15803d;
+  --color-gold-hover: #166534;
+  --color-gold-active: #15803d;
+  --color-gold-soft: #dcfce7;
+  --color-gold-disabled: #9ec7ad;
+  --color-on-gold: #ffffff;
   --color-inverse: #ffffff;
 
   /* Paleta escura/editorial dramática */
-  --color-deep: #0e1116;
-  --color-deep-2: #161b22;
-  --color-surface: #1f2f43;
-  --color-warm-deep: #5c2617;
-  --color-alert: #b31d1b;
-  --color-copper: #c7673f;
-  --color-amber: #e6a963;
-  --color-cool: #98c2c6;
-  --color-warm-text: #ebe1d1;
+  --color-deep: #0d0d0d;
+  --color-deep-2: #171717;
+  --color-surface: #171717;
+  --color-warm-deep: #111111;
+  --color-alert: #c01f1f;
+  --color-copper: #15803d;
+  --color-amber: #15803d;
+  --color-cool: #9ca3af;
+  --color-warm-text: #ededed;
 
   /* Mapeamento semântico (compat. shadcn) */
   --color-background: var(--color-paper);
