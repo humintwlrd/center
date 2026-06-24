@@ -4,6 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowUpRight, CreditCard, Check } from "lucide-react"
 import { PRODUCTS, getProductBySlug } from "@/lib/products"
+import { AcervoDetail } from "@/components/shop/acervo-detail"
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -34,6 +35,11 @@ export default async function ProductPage({ params }: Props) {
   const { slug } = await params
   const product = getProductBySlug(slug)
   if (!product) notFound()
+
+  // O Acervo Tático (carro-chefe) tem uma página de vendas rica, estilo landing.
+  if (product.id === "acervo-tatico") {
+    return <AcervoDetail product={product} />
+  }
 
   return (
     <article>
