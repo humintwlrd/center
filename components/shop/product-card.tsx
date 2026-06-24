@@ -23,8 +23,8 @@ export function ProductCard({ product, priority }: Props) {
       className={[
         "group flex flex-col bg-paper-strong transition-all duration-300 border hover:-translate-y-1",
         isFeatured
-          ? "border-gold shadow-[0_1px_0_0_var(--color-gold)] hover:shadow-[0_12px_36px_-12px_rgba(21,128,61,0.45)]"
-          : "border-line hover:border-gold/60 hover:shadow-[0_12px_32px_-16px_rgba(21,128,61,0.35)]",
+          ? "border-gold shadow-[0_1px_0_0_var(--color-gold)] hover:shadow-[0_12px_36px_-12px_rgba(200,16,46,0.45)]"
+          : "border-line hover:border-gold/60 hover:shadow-[0_12px_32px_-16px_rgba(200,16,46,0.35)]",
       ].join(" ")}
     >
       {/* Capa real do produto */}

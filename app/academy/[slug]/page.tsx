@@ -113,7 +113,7 @@ export default async function ProductPage({ params }: Props) {
             <ul className="mt-5 divide-y divide-line border-y border-line">
               {product.ementa.map((item) => (
                 <li key={item} className="flex items-start gap-3 py-3 text-ink-soft">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-active" aria-hidden />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-green" aria-hidden />
                   <span>{item}</span>
                 </li>
               ))}

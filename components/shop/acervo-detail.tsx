@@ -412,7 +412,7 @@ export function AcervoDetail({ product }: { product: Product }) {
                     {m.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2">
                         <Check
-                          className={`mt-0.5 h-4 w-4 shrink-0 ${m.highlight ? "text-gold" : "text-gold-active"}`}
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${m.highlight ? "text-green" : "text-green"}`}
                           aria-hidden
                         />
                         <span className={m.highlight ? "text-paper/85" : "text-ink-soft"}>{b}</span>
@@ -491,7 +491,7 @@ export function AcervoDetail({ product }: { product: Product }) {
               <ul className="mt-6 space-y-4">
                 {FOR_WHOM.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold-active" aria-hidden />
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-green" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -583,7 +583,7 @@ export function AcervoDetail({ product }: { product: Product }) {
               <ul className="mt-5 space-y-3">
                 {INCLUDED.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold-active" aria-hidden />
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-green" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}

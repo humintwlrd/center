@@ -22,12 +22,13 @@
   --color-line: #e4e4e7;
   --color-line-strong: #cbcbd1;
 
-  --color-gold: #15803d;
+  --color-gold: #c8102e;
   --color-gold-hover: #166534;
-  --color-gold-active: #15803d;
-  --color-gold-soft: #dcfce7;
+  --color-gold-active: #c8102e;
+  --color-gold-soft: #fde0e4;
   --color-gold-disabled: #9ec7ad;
   --color-on-gold: #ffffff;
+  --color-green: #15803d;
   --color-inverse: #ffffff;
 
   /* Paleta escura/editorial dramática */
@@ -35,9 +36,9 @@
   --color-deep-2: #171717;
   --color-surface: #171717;
   --color-warm-deep: #111111;
-  --color-alert: #c01f1f;
-  --color-copper: #15803d;
-  --color-amber: #15803d;
+  --color-alert: #c8102e;
+  --color-copper: #c8102e;
+  --color-amber: #c8102e;
   --color-cool: #9ca3af;
   --color-warm-text: #ededed;
 
@@ -48,7 +49,7 @@
   --color-card-foreground: var(--color-ink);
   --color-popover: var(--color-paper-strong);
   --color-popover-foreground: var(--color-ink);
-  --color-primary: var(--color-gold);
+  --color-primary: var(--color-green);
   --color-primary-foreground: var(--color-on-gold);
   --color-secondary: var(--color-paper-strong);
   --color-secondary-foreground: var(--color-ink);
@@ -131,7 +132,8 @@
   .bg-deep { background-color: var(--color-deep); }
   .bg-deep-2 { background-color: var(--color-deep-2); }
   .bg-surface { background-color: var(--color-surface); }
-  .bg-gold { background-color: var(--color-gold); }
+  .bg-gold { background-color: var(--color-green); }
+  .bg-green { background-color: var(--color-green); }
   .bg-gold-soft { background-color: var(--color-gold-soft); }
   .bg-warm-deep { background-color: var(--color-warm-deep); }
   .bg-copper { background-color: var(--color-copper); }
@@ -143,6 +145,7 @@
   .text-ink-soft { color: var(--color-ink-soft); }
   .text-ink-muted { color: var(--color-ink-muted); }
   .text-gold { color: var(--color-gold); }
+  .text-green { color: var(--color-green); }
   .text-gold-hover { color: var(--color-gold-hover); }
   .text-gold-active { color: var(--color-gold-active); }
   .text-warm { color: var(--color-warm-text); }
@@ -157,6 +160,7 @@
   .border-line-strong { border-color: var(--color-line-strong); }
   .border-ink { border-color: var(--color-ink); }
   .border-gold { border-color: var(--color-gold); }
+  .border-green { border-color: var(--color-green); }
 
   .font-display { font-family: var(--font-display); }
 
@@ -240,6 +244,6 @@
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
   }
-  .article-prose a:hover { color: var(--color-gold-hover); }
+  .article-prose a:hover { color: #a90d26; }
   .article-prose strong { color: var(--color-ink); }
 }
