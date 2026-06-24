@@ -75,7 +75,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 120,00",
     parcelado: "12x de R$ 12,41",
     descricao:
-      "Curso de campo sobre engenharia social: os fundamentos, pentest físico e estratégias de defesa.",
+      "Como pessoas são levadas a entregar acesso e informação — e como barrar isso. Fundamentos da engenharia social, pentest físico e estratégias de defesa aplicados ao mundo real.",
     destaques: ["Os Fundamentos", "Pentest Físico", "Defesa"],
     ementa: [
       "Parte 1 · Os Fundamentos",
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 190,00",
     parcelado: "12x de R$ 19,65",
     descricao:
-      "Um guia direto sobre os padrões que governam as decisões humanas. Reconheça vieses cognitivos, gatilhos comportamentais e os sinais que antecipam reações para compreender pessoas antes de agir. Não é sobre forçar, é sobre compreender.",
+      "Os padrões que governam percepção, decisão e reação. Entenda por que as pessoas cedem, resistem e mudam de posição — para perceber antes de agir.",
     image: "/images/shop/dossie-01.webp",
     imageAlt:
       "Capa do Dossiê 01 — Mecânicas do Comportamento, em estilo dossiê confidencial do Mundo da HUMINT.",
@@ -109,7 +109,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 190,00",
     parcelado: "12x de R$ 19,65",
     descricao:
-      "Comunicar bem é conduzir. Princípios da comunicação persuasiva e da influência ética: escuta ativa, enquadramento de mensagens, construção de rapport e os ajustes que mudam o resultado de uma conversa.",
+      "Como mensagens são interpretadas e decisões são conduzidas. Ajuste linguagem, ritmo e enquadramento para influenciar com clareza, sem depender de improviso.",
     image: "/images/shop/dossie-02.webp",
     imageAlt:
       "Capa do Dossiê 02 — Comunicação e Influência, em estilo dossiê confidencial do Mundo da HUMINT.",
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 190,00",
     parcelado: "12x de R$ 19,65",
     descricao:
-      "A maior parte do que comunicamos não está nas palavras. Aprenda a ler postura, microexpressões, gestos e tom para captar o que não é dito e alinhar sua própria linguagem corporal à mensagem que deseja transmitir.",
+      "Leia postura, expressões, ritmo e microajustes — sem leitura fantasiosa. Perceba tensão, conforto e congruência no que não é dito.",
     image: "/images/shop/dossie-03.webp",
     imageAlt:
       "Capa do Dossiê 03 — Linguagem Não-verbal, em estilo dossiê confidencial do Mundo da HUMINT.",
@@ -137,7 +137,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 190,00",
     parcelado: "12x de R$ 19,65",
     descricao:
-      "Como obter informações relevantes por meio de conversas naturais, sem interrogatórios nem manipulação. Técnicas de elicitação aplicadas de forma ética: perguntas bem construídas, escuta estratégica e condução de diálogo.",
+      "Conduza conversas que revelam informação relevante por meio de perguntas, contexto e escuta — sem pressão, interrogatório ou manipulação.",
     image: "/images/shop/dossie-04.webp",
     imageAlt:
       "Capa do Dossiê 04 — Elicitação Ética, em estilo dossiê confidencial do Mundo da HUMINT.",
@@ -151,7 +151,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 190,00",
     parcelado: "12x de R$ 19,65",
     descricao:
-      "Proteja suas informações, sua rotina e sua presença digital. Fundamentos de contrainteligência e segurança operacional (OPSEC): identifique vulnerabilidades, reduza sua exposição e reconheça tentativas de observação.",
+      "Proteja suas informações e reduza sua exposição. Reconheça riscos, feche brechas e evite entregar detalhes sensíveis sem perceber.",
     image: "/images/shop/dossie-05.webp",
     imageAlt:
       "Capa do Dossiê 05 — Contrainteligência e OPSEC, em estilo dossiê confidencial do Mundo da HUMINT.",
@@ -165,7 +165,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 190,00",
     parcelado: "12x de R$ 19,65",
     descricao:
-      "Onde encontrar informação confiável e como avaliá-la. Mapeie fontes humanas, abertas e técnicas, cruze dados, verifique credibilidade e transforme coleta dispersa em análise útil.",
+      "Onde buscar, como validar e como cruzar dados. Transforme informação dispersa em leitura útil de contexto e decisão.",
     image: "/images/shop/dossie-06.webp",
     imageAlt:
       "Capa do Dossiê 06 — Fontes de Informação, em estilo dossiê confidencial do Mundo da HUMINT.",
