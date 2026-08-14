@@ -12,6 +12,7 @@ export type AnalyticsEvent =
   | "article_read_progress"
   | "outbound_click"
   | "contact_submit"
+  | "support_submit"
   | "search_used"
   | "filter_used"
 
