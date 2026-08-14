@@ -43,32 +43,8 @@ export default function SuportePage() {
         </p>
       </section>
 
-      <section className="container-editorial pb-16 md:pb-20 grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-5 flex flex-col gap-5">
-          <div className="bg-paper-strong p-6 hairline-y">
-            <p className="eyebrow-gold">Antes de enviar</p>
-            <p className="mt-1 text-sm text-ink-soft leading-relaxed">
-              Descreva o que aconteceu, o que você esperava e, se possível, os
-              passos para reproduzir o problema. Anexe prints por e-mail se
-              necessário.
-            </p>
-          </div>
-          <div className="bg-paper-strong p-6 hairline-y">
-            <p className="eyebrow-gold">Prazo de resposta</p>
-            <p className="mt-1 text-sm text-ink-soft leading-relaxed">
-              Respondemos em até alguns dias úteis. Solicitações urgentes têm
-              prioridade quando o assunto está bem descrito.
-            </p>
-          </div>
-          <div className="bg-paper-strong p-6 hairline-y">
-            <p className="eyebrow-gold">Privacidade</p>
-            <p className="mt-1 text-sm text-ink-soft leading-relaxed">
-              Nunca compartilhe senhas ou dados completos de cartão. Usamos suas
-              informações apenas para responder à solicitação.
-            </p>
-          </div>
-        </div>
-        <div className="lg:col-span-7">
+      <section className="container-editorial pb-16 md:pb-20">
+        <div className="max-w-2xl">
           <SupportForm />
         </div>
       </section>
