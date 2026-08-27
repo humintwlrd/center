@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
+  async redirects() {
+    return [
+      { source: "/shop", destination: "/academy", permanent: true },
+      { source: "/shop/:slug", destination: "/academy/:slug", permanent: true },
+      { source: "/assinar", destination: "/academy", permanent: true },
+    ]
   },
 }
 
