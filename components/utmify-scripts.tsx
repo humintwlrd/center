@@ -4,22 +4,20 @@ import Script from "next/script"
 import { useEffect, useState } from "react"
 
 /**
- * Carrega os scripts da Utmify (UTMs + Pixel) apenas no domínio de produção.
+ * Carrega os scripts da Utmify (UTMs + Pixel) somente no domínio oficial.
  *
- * Dentro do iframe de preview do v0 (domínios *.vusercontent.net), o sandbox
- * bloqueia as requisições externas do pixel.js, gerando erros "Failed to fetch".
- * Isso é apenas ruído de ambiente — não afeta a produção. Ao restringir o
- * carregamento ao host real, mantemos o rastreamento intacto em produção e
- * eliminamos os erros no preview.
+ * A lista positiva evita que novos domínios de preview (como *.v0.build) ou
+ * ambientes incorporados executem o pixel. O sandbox desses ambientes bloqueia
+ * as consultas externas de IP da Utmify e produz erros "Failed to fetch".
  */
 export function UtmifyScripts() {
   const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
-    const host = window.location.hostname
-    const isPreview =
-      host.endsWith("vusercontent.net") || host === "localhost" || host === "127.0.0.1"
-    if (!isPreview) {
+    const productionHosts = new Set(["humint.click", "www.humint.click"])
+    const isTopLevelWindow = window.self === window.top
+
+    if (productionHosts.has(window.location.hostname) && isTopLevelWindow) {
       setEnabled(true)
     }
   }, [])
