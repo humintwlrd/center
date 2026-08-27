@@ -1,35 +1,33 @@
 import type { Metadata } from "next"
 import {
-  Scale,
-  History,
-  KeyRound,
-  Activity,
-  FileSearch,
-  AlertTriangle,
-  Flag,
+  Brain,
+  MessageSquare,
   Eye,
-  BookOpen,
+  Ear,
+  ShieldCheck,
+  Search,
+  Wrench,
   FileText,
   ListChecks,
   ClipboardCheck,
+  RefreshCw,
   Check,
   X,
   Lock,
   ArrowRight,
-  ShieldCheck,
   ShieldAlert,
 } from "lucide-react"
 import { SITE } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Como Avaliar Pessoas · Confiança, Risco e Vulnerabilidade",
+  title: "Acervo Tático HUMINT",
   description:
-    "Como investigadores, espiões e empresas obtêm informações através de pessoas. Um método de avaliação humana extraído de documentos desclassificados de inteligência para identificar confiança, risco e vulnerabilidades antes de decidir.",
+    "Como investigadores, espiões e empresas obtêm informações através de pessoas. Um sistema para ler melhor interações humanas: comportamento, comunicação, observação, elicitação, proteção e fontes.",
   alternates: { canonical: "/lp" },
   openGraph: {
-    title: `Como Avaliar Pessoas · ${SITE.name}`,
+    title: `Acervo Tático HUMINT · ${SITE.name}`,
     description:
-      "Como investigadores, espiões e empresas obtêm informações através de pessoas. Identifique confiança, risco e vulnerabilidades antes de decidir.",
+      "Como investigadores, espiões e empresas obtêm informações através de pessoas.",
     url: "/lp",
   },
 }
@@ -37,157 +35,83 @@ export const metadata: Metadata = {
 // Atualize este link com o checkout real do produto.
 const CHECKOUT_URL = "#oferta"
 
-// Cada capítulo segue o mesmo protocolo de leitura.
-const CHAPTER_FORMAT = [
-  { tag: "Documento", body: "Trecho de um arquivo de inteligência desclassificado, traduzido na íntegra." },
-  { tag: "História", body: "O contexto humano por trás do papel: quem era a pessoa e o que estava em jogo." },
-  { tag: "O que aconteceu", body: "A decisão tomada, a confiança concedida e o custo que veio depois." },
-  { tag: "Lição", body: "O princípio de avaliação que aquele episódio revela com clareza." },
-  { tag: "Aplicação prática", body: "Como transportar a lição para suas próprias decisões de confiança." },
-]
-
-const PARTS = [
+const MODULES = [
   {
-    tag: "Parte 1",
-    icon: AlertTriangle,
-    title: "Os erros que nos fazem confiar nas pessoas erradas",
-    body: "Antes de aprender a avaliar bem, é preciso entender por que avaliamos mal. Os três atalhos mentais que sabotam o julgamento de quase todo mundo.",
-    chapters: [
-      "Cap. 1 — A primeira impressão: por que decidimos confiar em segundos e quase nunca revisamos.",
-      "Cap. 2 — O erro da autoridade: como títulos, cargos e credenciais desligam o senso crítico.",
-      "Cap. 3 — O erro da afinidade: por que confiamos em quem se parece conosco e baixamos a guarda.",
+    tag: "Dossiê 01",
+    icon: Brain,
+    title: "Mecânicas do Comportamento",
+    body: "Entenda os padrões que influenciam percepção, decisão e reação humana. A base para perceber por que pessoas cedem, resistem, justificam escolhas e mudam de posição.",
+    items: [
+      "Leitura de padrões comportamentais",
+      "Identificação de gatilhos de decisão",
+      "Compreensão de vieses e respostas automáticas",
     ],
   },
   {
-    tag: "Parte 2",
-    icon: FileSearch,
-    title: "O que a inteligência procura antes de confiar",
-    body: "Quando o custo de errar é alto, ninguém confia por impressão. Os quatro critérios que profissionais usam para avaliar uma pessoa antes de lhe dar acesso.",
-    chapters: [
-      "Cap. 4 — Motivação: o que realmente move uma pessoa por baixo do que ela declara.",
-      "Cap. 5 — Consistência: o comportamento observado ao longo do tempo, não no melhor dia.",
-      "Cap. 6 — Acesso: por que o que alguém alcança importa mais do que o cargo que ocupa.",
-      "Cap. 7 — Vulnerabilidades: o que transforma uma pessoa comum em um risco real.",
-    ],
+    tag: "Dossiê 02",
+    icon: MessageSquare,
+    title: "Comunicação e Influência",
+    body: "Aprenda como mensagens são interpretadas, como decisões são conduzidas e como ajustar linguagem, ritmo e enquadramento sem depender de improviso.",
+    items: ["Clareza na comunicação", "Construção de confiança", "Percepção de intenção e influência"],
   },
   {
-    tag: "Parte 3",
-    icon: History,
-    title: "Os maiores erros de julgamento da história da inteligência",
-    body: "Quatro casos reais em que sinais existiam, estavam à vista e foram ignorados por anos. Cada um é dissecado em o que foi observado, o que foi ignorado e o que deveria ter sido percebido.",
-    chapters: [
-      "Cap. 8 — Aldrich Ames: o homem cujo padrão de vida denunciava tudo.",
-      "Cap. 9 — Kim Philby: o charme que blindou um traidor por décadas.",
-      "Cap. 10 — Ana Montes: a analista exemplar que ninguém pensou em checar.",
-      "Cap. 11 — Robert Hanssen: o especialista em segurança que usava as próprias regras contra a casa.",
-    ],
-  },
-  {
-    tag: "Parte 4",
-    icon: KeyRound,
-    title: "O método A.C.E.S.S.O.",
-    body: "Tudo o que foi estudado nas partes anteriores condensado em um protocolo simples, repetível e aplicável a qualquer pessoa que você precise avaliar.",
-    chapters: [
-      "Um framework de seis perguntas para estruturar qualquer julgamento de confiança.",
-      "Como aplicar a sócios, contratações, parcerias, fornecedores e relações pessoais.",
-      "Como transformar leitura de pessoas em decisão registrada, e não em palpite.",
-    ],
-    highlight: true,
-  },
-]
-
-const METHOD = [
-  {
-    letter: "A",
-    icon: KeyRound,
-    title: "Acesso",
-    q: "O que essa pessoa realmente sabe e alcança?",
-    body: "Mapeie o que ela toca, vê e influencia de fato, para além do cargo no cartão.",
-  },
-  {
-    letter: "C",
-    icon: Activity,
-    title: "Consistência",
-    q: "O comportamento é estável ao longo do tempo?",
-    body: "Compare o que foi dito ontem com o que é feito hoje. A confiança vive na repetição.",
-  },
-  {
-    letter: "E",
-    icon: FileSearch,
-    title: "Evidências",
-    q: "O que comprova aquilo que ela afirma?",
-    body: "Separe o verificável da boa narrativa. Afirmação não é prova.",
-  },
-  {
-    letter: "S",
-    icon: AlertTriangle,
-    title: "Situação",
-    q: "Existem pressões ou vulnerabilidades em jogo?",
-    body: "Dívida, ego, ressentimento ou necessidade mudam o que uma pessoa é capaz de fazer.",
-  },
-  {
-    letter: "S",
-    icon: Flag,
-    title: "Sinais",
-    q: "Há alertas sendo ignorados por conveniência?",
-    body: "O problema raramente é a falta de sinal. É a vontade de não enxergá-lo.",
-  },
-  {
-    letter: "O",
+    tag: "Dossiê 03",
     icon: Eye,
-    title: "Observação contínua",
-    q: "A confiança continua merecida?",
-    body: "Avaliar não é um veredito único. É um processo que acompanha a relação.",
-  },
-]
-
-const CASES = [
-  {
-    name: "Aldrich Ames",
-    seen: "Ascensão de padrão de vida incompatível com o salário, à vista de todos.",
-    ignored: "Anos de sinais financeiros tratados como detalhe, não como evidência.",
-    lesson: "Vulnerabilidade somada a acesso é a combinação que mais custa caro.",
+    title: "Linguagem Não-verbal",
+    body: "Observe sinais físicos, expressões, ritmo, postura e microajustes de comportamento sem cair em leitura fantasiosa ou interpretação rasa.",
+    items: ["Leitura de congruência", "Observação de tensão e conforto", "Percepção de mudanças no comportamento"],
   },
   {
-    name: "Kim Philby",
-    seen: "Carisma, pedigree e relações certas que abriam todas as portas.",
-    ignored: "Inconsistências e laços antigos que a afinidade fazia parecer inofensivos.",
-    lesson: "Quanto mais simpática a pessoa, mais barata fica a confiança e mais cara a checagem.",
+    tag: "Dossiê 04",
+    icon: Ear,
+    title: "Elicitação Ética",
+    body: "Conduza conversas para obter informação relevante por meio de perguntas, contexto e escuta ativa, sem pressão, exposição ou manipulação.",
+    items: ["Perguntas indiretas", "Condução conversacional", "Extração ética de informação"],
   },
   {
-    name: "Ana Montes",
-    seen: "Desempenho exemplar e reputação impecável dentro da organização.",
-    ignored: "A própria competência a tornava acima de qualquer suspeita ou auditoria.",
-    lesson: "Reputação não é evidência. Quem nunca é checado é quem mais precisa ser.",
+    tag: "Dossiê 05",
+    icon: ShieldCheck,
+    title: "Contrainteligência & OPSEC",
+    body: "Aprenda a proteger informações, reduzir exposição, reconhecer riscos e evitar que detalhes sensíveis sejam entregues sem necessidade.",
+    items: ["Higiene digital e comportamental", "Detecção de exposição indevida", "Proteção de informação sensível"],
   },
   {
-    name: "Robert Hanssen",
-    seen: "Domínio técnico profundo dos próprios sistemas de segurança.",
-    ignored: "Acesso amplo combinado com ressentimento silencioso e ausência de supervisão.",
-    lesson: "Acesso sem observação contínua é um risco que só aparece quando já é tarde.",
+    tag: "Dossiê 06",
+    icon: Search,
+    title: "Fontes de Informação",
+    body: "Organize caminhos de busca, valide dados, relacione fontes e transforme informação dispersa em leitura útil de contexto.",
+    items: ["Busca e validação de dados", "Cruzamento de fontes", "Análise de contexto"],
+  },
+  {
+    tag: "Núcleo Operacional",
+    icon: Wrench,
+    title: "Ferramentas Operacionais",
+    body: "Use instrumentos práticos para estruturar análise, registrar observações, organizar hipóteses e aplicar o repertório dos dossiês com mais clareza.",
+    items: ["Modelos de análise", "Checklists operacionais", "Protocolos de aplicação"],
+    highlight: true,
   },
 ]
 
 const PLATFORM = [
   {
-    icon: BookOpen,
-    title: "O guia completo",
-    body: "As 4 partes e os 11 capítulos em PDF, para estudo profundo, revisão e consulta.",
-  },
-  {
     icon: FileText,
-    title: "Os 4 dossiês de caso",
-    body: "Ames, Philby, Montes e Hanssen dissecados em observado, ignorado e o que perceber.",
+    title: "Dossiês completos",
+    body: "Materiais em PDF para estudo profundo, revisão e consulta.",
   },
   {
     icon: ListChecks,
-    title: "O protocolo A.C.E.S.S.O.",
-    body: "O framework de seis perguntas em formato aplicável a qualquer avaliação.",
+    title: "Protocolos práticos",
+    body: "Estruturas para aplicar leitura, observação e análise com método.",
   },
   {
     icon: ClipboardCheck,
-    title: "Fichas e checklists",
-    body: "Modelos para registrar sinais, pressões e evidências de uma pessoa antes de decidir.",
+    title: "Checklists e modelos",
+    body: "Ferramentas para organizar hipóteses, registrar sinais e revisar decisões.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Atualizações",
+    body: "Novas liberações e melhorias durante o período de acesso.",
   },
 ]
 
@@ -204,62 +128,65 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "Estuda e aplica no seu ritmo",
-    body: "O material fica disponível na área de membros para estudo, revisão e consulta durante o período de acesso.",
+    title: "Consulta no seu ritmo",
+    body: "Os materiais ficam disponíveis na área de membros para estudo, revisão e consulta durante o período de acesso.",
   },
 ]
 
 const FOR_WHOM = [
-  "Quem decide sócios, contratações e parcerias e não pode descobrir o caráter de alguém só depois do prejuízo.",
-  "Líderes, fundadores e gestores que precisam saber em quem delegar acesso e confiança.",
-  "Investigadores, advogados, recrutadores e analistas que avaliam pessoas como parte do trabalho.",
-  "Qualquer pessoa cansada de confiar pela primeira impressão e pagar a conta da ingenuidade.",
+  "Negociadores, fundadores, executivos e líderes que precisam tomar decisões em ambientes de pressão.",
+  "Advogados, investigadores, analistas, consultores e profissionais que lidam com informação sensível.",
+  "Vendedores complexos, recrutadores e estrategistas que precisam compreender pessoas, interesses e contexto antes de agir.",
+  "Profissionais que precisam entrevistar, negociar, avaliar, proteger e decidir com mais precisão.",
 ]
 
 const NOT_FOR = [
-  "Quem procura truque para manipular, seduzir ou controlar os outros.",
-  "Quem quer um teste de personalidade mágico no lugar de método e observação.",
-  "Quem confunde avaliar pessoas com viver em desconfiança paranoica.",
-  "Quem quer julgar mais rápido, e não julgar melhor.",
+  "Quem procura hack mental, truque de sedução, coação ou manual de manipulação.",
+  "Quem quer frases prontas no lugar de método, prática e leitura de contexto.",
+  "Quem confunde inteligência humana com paranoia.",
+  "Quem quer aprender a manipular, e não a decidir melhor.",
 ]
 
 const INCLUDED = [
-  "O guia completo: 4 partes e 11 capítulos sobre como avaliar confiança, risco e vulnerabilidade.",
-  "Os 4 dossiês de caso real, com a anatomia de cada erro de julgamento.",
-  "O método A.C.E.S.S.O. em formato prático e aplicável.",
-  "Fichas, checklists e modelos para registrar avaliações em vez de confiar na memória.",
-  "12 meses de acesso à área de membros, com atualizações incluídas.",
+  "12 meses de acesso à área de membros.",
+  "7 entregas principais: 6 dossiês fundamentais + núcleo de ferramentas operacionais.",
+  "Materiais auxiliares: checklists, roteiros, modelos de análise e protocolos de aplicação.",
+  "Atualizações incluídas durante o período de acesso.",
   "Garantia incondicional de 7 dias.",
 ]
 
 const FAQ = [
   {
-    q: "De onde vem o conteúdo deste material?",
-    a: "O guia parte de documentos de inteligência desclassificados e de casos públicos de contrainteligência, traduzidos e analisados. Sobre essa base é construído um método próprio de avaliação de pessoas, com lições e aplicação prática para o seu dia a dia.",
+    q: "Por que o instrutor é anônimo?",
+    a: "Inteligência humana se exerce melhor em discrição. O anonimato é coerente com a própria disciplina: o foco está no método e no material, não na figura de quem ensina.",
   },
   {
-    q: "Preciso trabalhar com investigação ou inteligência?",
-    a: "Não. O material foi escrito para quem avalia pessoas em decisões comuns mas caras: sócios, contratações, parcerias, fornecedores e relações. Não exige nenhuma formação prévia.",
+    q: "Funciona para mim, que não sou da área?",
+    a: "Sim. O acervo foi construído para profissionais que dependem de leitura humana em decisões reais — negociação, vendas, liderança, recrutamento, investigação — e não exige formação prévia em inteligência.",
   },
   {
     q: "Isso é ético e legal?",
-    a: "Sim. O foco é avaliar confiança, risco e vulnerabilidade para decidir melhor, e proteger a si mesmo. Não há nada sobre coação, fraude, invasão ou manipulação de pessoas.",
+    a: "Sim. O material trata de leitura de contexto, comunicação consciente, proteção de informação e tomada de decisão. Não ensina coação, fraude, invasão ou exploração de vulnerabilidades.",
   },
   {
-    q: "Não é só mais um material de leitura corporal?",
-    a: "Não. Linguagem não-verbal é um detalhe menor. O núcleo é critério de julgamento: motivação, consistência, acesso, vulnerabilidade, evidência e observação ao longo do tempo.",
-  },
-  {
-    q: "Por que o autor é anônimo?",
-    a: "Avaliação humana se exerce melhor em discrição. O foco está no método e nos documentos, não na figura de quem ensina.",
+    q: "Isso não é só linguagem corporal de internet?",
+    a: "Não. A linguagem não-verbal é apenas um dos seis fundamentos, e é tratada com critério — congruência, tensão e mudança de comportamento — sem leitura fantasiosa ou truques rasos.",
   },
   {
     q: "Como recebo o acesso?",
     a: "Após a compra, as credenciais chegam em poucos minutos no e-mail usado no pagamento. Use sempre o e-mail principal que você realmente acessa.",
   },
   {
+    q: "O acesso expira? E depois?",
+    a: "O acesso é de 12 meses à área de membros, com as atualizações liberadas no período incluídas.",
+  },
+  {
     q: "E se não for para mim?",
     a: "Você tem 7 dias de garantia incondicional. Se o material não for para você, basta solicitar o reembolso dentro do prazo, sem fricção e sem justificativa.",
+  },
+  {
+    q: "Preciso de algum pré-requisito ou equipamento?",
+    a: "Não. Os materiais são de estudo e consulta. Basta um dispositivo com acesso à internet e disposição para aplicar o método no seu contexto.",
   },
 ]
 
@@ -285,21 +212,21 @@ export default function LandingPage() {
       <section className="hairline-b bg-paper-strong">
         <div className="container-editorial py-16 md:py-24 lg:py-28">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="eyebrow-gold mb-5">Como avaliar pessoas</p>
+            <p className="eyebrow-gold mb-5">Acervo Tático HUMINT</p>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-ink text-balance">
               Como investigadores, espiões e empresas obtêm informações através de pessoas
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-lg md:text-xl leading-relaxed text-ink-soft text-pretty">
-              Um método de avaliação humana extraído de documentos de inteligência desclassificados, para
-              identificar confiança, risco e vulnerabilidade em alguém — antes de dar acesso, fechar negócio ou
-              colocar o seu nome ao lado do dela.
+              Um sistema para ler melhor interações humanas. Aprenda a perceber o que está sendo construído
+              diante de você — comportamento, comunicação, observação, elicitação e proteção — e deixe de
+              apenas reagir ao roteiro que outros montam.
             </p>
             <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href={CHECKOUT_URL}
                 className="inline-flex items-center justify-center gap-2 bg-gold px-7 py-4 text-base font-semibold text-on-gold transition-colors hover:bg-gold-hover"
               >
-                Quero aprender o método
+                Quero acessar o acervo
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
               <span className="font-mono text-xs uppercase tracking-widest text-ink-muted">
@@ -317,138 +244,123 @@ export default function LandingPage() {
             <p className="eyebrow mb-4">/ 02. A situação real</p>
             <div className="article-prose">
               <p>
-                Quase todo prejuízo grande começa com uma boa impressão. O sócio parecia alinhado. O funcionário
-                parecia leal. O parceiro parecia sólido. Tudo fazia sentido no começo — e foi exatamente por isso
-                que ninguém olhou com atenção.
+                Você provavelmente já viveu isso em uma negociação, reunião, venda, parceria ou conversa
+                decisiva. Tudo parecia fazer sentido. A proposta era aceitável. O clima estava bom. Ninguém
+                levantou a voz, ninguém pressionou de forma óbvia, ninguém pareceu estar manipulando nada.
               </p>
               <p>
-                A verdade desconfortável é que a maioria das pessoas avalia caráter em segundos e quase nunca
-                revisa esse julgamento. Confiamos em quem fala bem, em quem tem o título certo, em quem se parece
-                conosco. E então entregamos acesso, dinheiro, informação e reputação com base em pouco mais do
-                que simpatia.
+                Mas depois, quando a euforia passou e a decisão começou a produzir consequências, veio a
+                sensação de que você perdeu espaço. Aceitou algo ruim demais. Cedeu antes da hora. Concordou com
+                uma lógica que parecia correta no momento, mas que não sustentava a realidade depois.
               </p>
               <p>
-                Serviços de inteligência aprenderam, no custo mais alto possível, que isso não funciona. Quando
-                confiar na pessoa errada significa perder agentes, operações e vidas, a avaliação deixa de ser
-                instinto e vira método. Este material traduz esse método para as decisões da sua vida.
+                Isso raramente acontece porque a outra pessoa é mais inteligente. Acontece porque ela estava
+                lendo a situação com mais precisão. Enquanto você prestava atenção apenas no que estava sendo
+                dito, alguém observava o ritmo da conversa, seus sinais de hesitação, seus pontos de interesse,
+                suas concessões pequenas e o momento exato em que você começava a justificar para si mesmo uma
+                decisão que ainda não estava madura.
               </p>
             </div>
 
             <div className="my-10 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
               <div className="bg-paper-strong p-6">
-                <p className="font-display text-lg font-semibold text-ink">Quem confia por impressão</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">descobre depois.</p>
+                <p className="font-display text-lg font-semibold text-ink">Quem é conduzido</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">só percebe depois.</p>
               </div>
               <div className="bg-paper-strong p-6">
-                <p className="font-display text-lg font-semibold text-ink">Quem avalia com critério</p>
+                <p className="font-display text-lg font-semibold text-ink">Quem negocia com consciência</p>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">percebe durante.</p>
               </div>
               <div className="bg-paper-strong p-6">
-                <p className="font-display text-lg font-semibold text-ink">Quem observa com método</p>
+                <p className="font-display text-lg font-semibold text-ink">Quem conduz</p>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">percebe antes.</p>
               </div>
+            </div>
+
+            <div className="article-prose">
+              <p>
+                O Acervo Tático foi construído para treinar essa percepção. Para que você deixe de entrar em
+                interações importantes apenas reagindo ao que aparece e passe a observar o que está sendo
+                construído diante de você.
+              </p>
             </div>
 
             <div className="mt-8 border-l-2 border-gold bg-paper-deep p-6">
               <p className="eyebrow-gold mb-2">Atenção</p>
               <p className="text-[15px] leading-relaxed text-ink-soft">
-                Não se trata de desconfiar de todo mundo nem de manipular ninguém. Trata-se de parar de confiar no
-                escuro. Em toda relação que importa, alguém está avaliando alguém. Quando você não sabe avaliar,
-                normalmente só entende o custo depois que ele já chegou.
+                Não se trata de manipular pessoas. Trata-se de não ser ingênuo em ambientes onde percepção,
+                linguagem, comportamento e decisão estão sempre em jogo. Em qualquer interação relevante, alguém
+                ocupa a posição de leitura. E quando essa pessoa não é você, normalmente você só entende o custo
+                depois.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 03. Como cada capítulo funciona ──────────────────── */}
+      {/* ── 03. A arquitetura ────────────────────────────────── */}
       <section className="hairline-b bg-paper-deep">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow mb-4">/ 03. O protocolo de leitura</p>
+            <p className="eyebrow mb-4">/ 03. A arquitetura</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
-              Cada capítulo parte de um documento real e termina em aplicação prática.
+              Seis fundamentos. Um núcleo operacional. Um sistema para ler melhor interações humanas.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
-              Não é teoria solta nem opinião. Cada lição nasce de um arquivo de inteligência desclassificado e é
-              conduzida pelo mesmo percurso, do documento à decisão que você toma amanhã.
+              Cada dossiê desenvolve uma camada específica da terceira posição: compreender comportamento,
+              calibrar comunicação, observar sinais, conduzir conversas, proteger informação, organizar fontes e
+              transformar conhecimento em prática. Não é uma sequência aleatória — é um mapa progressivo.
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-4xl grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
-            {CHAPTER_FORMAT.map((step, i) => (
-              <div key={step.tag} className="bg-paper-strong p-6">
-                <span className="font-mono text-xs text-gold-active">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-3 font-display text-base font-semibold text-ink">{step.tag}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 04. A arquitetura: 4 partes / 11 capítulos ───────── */}
-      <section className="hairline-b">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow mb-4">/ 04. A arquitetura</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
-              Quatro partes. Onze capítulos. Um método para avaliar qualquer pessoa.
-            </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
-              Você começa entendendo por que erra ao confiar, aprende o que a inteligência procura antes de
-              confiar, estuda os maiores erros de julgamento da história e termina com um método próprio para
-              aplicar a partir de hoje.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2">
-            {PARTS.map((part) => {
-              const Icon = part.icon
+          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+            {MODULES.map((mod) => {
+              const Icon = mod.icon
               return (
                 <div
-                  key={part.title}
-                  className={`flex flex-col p-7 md:p-8 ${part.highlight ? "bg-ink text-paper" : "bg-paper-strong"}`}
+                  key={mod.title}
+                  className={`flex flex-col p-7 ${mod.highlight ? "bg-ink text-paper" : "bg-paper-strong"}`}
                 >
                   <div className="flex items-center justify-between">
                     <span
                       className={`inline-flex h-11 w-11 items-center justify-center ${
-                        part.highlight ? "bg-gold text-on-gold" : "bg-paper-deep text-gold-active"
+                        mod.highlight ? "bg-gold text-on-gold" : "bg-paper-deep text-gold-active"
                       }`}
                     >
                       <Icon className="h-5 w-5" aria-hidden />
                     </span>
                     <span
                       className={`font-mono text-[11px] uppercase tracking-widest ${
-                        part.highlight ? "text-gold" : "text-ink-muted"
+                        mod.highlight ? "text-gold" : "text-ink-muted"
                       }`}
                     >
-                      {part.tag}
+                      {mod.tag}
                     </span>
                   </div>
                   <h3
-                    className={`mt-5 font-display text-xl font-semibold leading-snug ${
-                      part.highlight ? "text-paper" : "text-ink"
+                    className={`mt-5 font-display text-xl font-semibold ${
+                      mod.highlight ? "text-paper" : "text-ink"
                     }`}
                   >
-                    {part.title}
+                    {mod.title}
                   </h3>
                   <p
-                    className={`mt-2 text-sm leading-relaxed ${part.highlight ? "text-paper/70" : "text-ink-muted"}`}
+                    className={`mt-2 text-sm leading-relaxed ${
+                      mod.highlight ? "text-paper/70" : "text-ink-muted"
+                    }`}
                   >
-                    {part.body}
+                    {mod.body}
                   </p>
-                  <ul
-                    className="mt-5 space-y-2 border-t border-dashed pt-4 text-sm"
-                    style={{ borderColor: part.highlight ? "rgba(246,241,230,0.2)" : "var(--color-line)" }}
+                  <ul className="mt-5 space-y-2 border-t border-dashed pt-4 text-sm"
+                    style={{ borderColor: mod.highlight ? "rgba(246,241,230,0.2)" : "var(--color-line)" }}
                   >
-                    {part.chapters.map((ch) => (
-                      <li key={ch} className="flex items-start gap-2">
+                    {mod.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
                         <Check
-                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-gold" : "text-gold-active"}`}
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${mod.highlight ? "text-gold" : "text-gold-active"}`}
                           aria-hidden
                         />
-                        <span className={part.highlight ? "text-paper/85" : "text-ink-soft"}>{ch}</span>
+                        <span className={mod.highlight ? "text-paper/85" : "text-ink-soft"}>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -459,96 +371,18 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── 05. Os 4 casos reais ─────────────────────────────── */}
-      <section className="hairline-b bg-paper-deep">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow mb-4">/ 05. Os casos</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
-              Quatro traições que ninguém viu chegar — até ser tarde.
-            </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
-              Em todos eles os sinais existiam, estavam à vista e foram explicados como qualquer outra coisa. Cada
-              caso é dissecado em três colunas: o que foi observado, o que foi ignorado e o que deveria ter sido
-              percebido.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-12 max-w-4xl space-y-px overflow-hidden border border-line bg-line">
-            {CASES.map((c) => (
-              <div key={c.name} className="bg-paper-strong p-7 md:p-8">
-                <div className="flex items-center gap-3">
-                  <Scale className="h-5 w-5 text-gold-active" aria-hidden />
-                  <h3 className="font-display text-xl font-semibold text-ink">{c.name}</h3>
-                </div>
-                <div className="mt-5 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
-                  <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-gold-active">Observado</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.seen}</p>
-                  </div>
-                  <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">Ignorado</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.ignored}</p>
-                  </div>
-                  <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-ink">A lição</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.lesson}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 06. O método A.C.E.S.S.O. ────────────────────────── */}
+      {/* ── A plataforma ─────────────────────────────────────── */}
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow-gold mb-4">/ 06. O método</p>
+            <p className="eyebrow mb-4">A plataforma</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
-              A.C.E.S.S.O. — seis perguntas antes de confiar em alguém.
+              O que você recebe dentro da plataforma.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
-              Todo o conteúdo do guia condensado em um protocolo simples o bastante para você usar de cabeça em
-              qualquer avaliação — de uma contratação a uma sociedade.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {METHOD.map((m) => {
-              const Icon = m.icon
-              return (
-                <div key={m.title} className="bg-paper-strong p-7">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-display text-2xl font-bold text-gold">
-                      {m.letter}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <Icon className="h-4 w-4 text-gold-active" aria-hidden />
-                      <h3 className="font-display text-lg font-semibold text-ink">{m.title}</h3>
-                    </div>
-                  </div>
-                  <p className="mt-4 font-display text-[15px] font-medium leading-snug text-ink">{m.q}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{m.body}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── A plataforma / entregável ────────────────────────── */}
-      <section className="hairline-b bg-paper-deep">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow mb-4">O que você recebe</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
-              Um material para estudar uma vez e consultar pela vida toda.
-            </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
-              Tudo entregue na área de membros, em ordem progressiva: do erro de julgamento ao método pronto para
-              aplicar.
+              O Acervo não é uma sequência de aulas soltas. É uma estrutura de consulta, estudo e aplicação, em
+              ordem progressiva — comportamento, comunicação, observação, elicitação, proteção, fontes e
+              aplicação prática.
             </p>
           </div>
 
@@ -570,7 +404,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── Como o acesso funciona ───────────────────────────── */}
-      <section className="hairline-b">
+      <section className="hairline-b bg-paper-deep">
         <div className="container-editorial py-16 md:py-24">
           <p className="eyebrow mb-4 text-center">Como o acesso funciona</p>
           <div className="mx-auto mt-8 grid max-w-4xl gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
@@ -585,14 +419,14 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Para quem / Não é para ───────────────────────────── */}
-      <section className="hairline-b bg-paper-deep">
+      {/* ── 04/05. Para quem / Não é para ────────────────────── */}
+      <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto grid max-w-5xl gap-px overflow-hidden border border-line bg-line lg:grid-cols-2">
             <div className="bg-paper-strong p-8 md:p-10">
-              <p className="eyebrow-gold mb-4">/ 07. Para quem</p>
+              <p className="eyebrow-gold mb-4">/ 04. Para quem</p>
               <h2 className="font-display text-2xl font-bold leading-snug text-ink text-balance">
-                Para quem paga caro quando confia na pessoa errada.
+                Para profissionais que dependem de leitura humana em decisões reais.
               </h2>
               <ul className="mt-6 space-y-4">
                 {FOR_WHOM.map((item) => (
@@ -604,9 +438,9 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="bg-paper-strong p-8 md:p-10">
-              <p className="eyebrow mb-4">/ 08. Não é para</p>
+              <p className="eyebrow mb-4">/ 05. Não é para</p>
               <h2 className="font-display text-2xl font-bold leading-snug text-ink text-balance">
-                Não é para quem quer poder sobre os outros.
+                Não é para quem procura poder sobre os outros.
               </h2>
               <ul className="mt-6 space-y-4">
                 {NOT_FOR.map((item) => (
@@ -621,22 +455,22 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Ética e limites ──────────────────────────────────── */}
+      {/* ── 06. Ética e limites ──────────────────────────────── */}
       <section className="hairline-b bg-ink text-paper">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-gold mb-4">/ 09. Ética e limites</p>
+            <p className="font-mono text-[11px] uppercase tracking-widest text-gold mb-4">/ 06. Ética e limites</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-paper text-balance">
-              Avaliar pessoas não é manipular pessoas.
+              Inteligência humana sem manipulação barata.
             </h2>
             <p className="mt-6 text-[15px] md:text-base leading-relaxed text-paper/75 text-pretty">
-              Este material não ensina coação, fraude, invasão, chantagem ou exploração de vulnerabilidades. Ele
-              ensina a julgar confiança com critério, a enxergar risco antes do prejuízo e a proteger o que é
-              seu — começando pela própria capacidade de decidir.
+              O Acervo Tático não ensina coação, fraude, invasão, exposição ou exploração de vulnerabilidades. O
+              foco é leitura de contexto, comunicação consciente, proteção informacional e tomada de decisão em
+              interações humanas.
             </p>
             <p className="mt-5 text-lg font-display font-medium text-paper text-pretty">
-              Quem sabe avaliar não vence porque engana melhor. Vence porque percebe melhor, decide melhor e para
-              de pagar a conta da confiança cega.
+              O operador não vence porque engana melhor. Vence porque percebe melhor, decide melhor e preserva
+              confiança enquanto atua.
             </p>
           </div>
         </div>
@@ -680,8 +514,8 @@ export default function LandingPage() {
 
             {/* Conteúdo incluso */}
             <div className="bg-paper-strong p-8 md:p-10 lg:col-span-3">
-              <p className="eyebrow mb-4">Conteúdo do material</p>
-              <h3 className="font-display text-xl font-semibold text-ink">Como Avaliar Pessoas</h3>
+              <p className="eyebrow mb-4">Conteúdo do acervo</p>
+              <h3 className="font-display text-xl font-semibold text-ink">Acervo Tático HUMINT</h3>
               <ul className="mt-5 space-y-3">
                 {INCLUDED.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
@@ -755,13 +589,13 @@ export default function LandingPage() {
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-paper/70">
               Todo o conteúdo do Mundo da HUMINT — marca, identidade, copy, narrativa, estrutura de página,
-              guias, dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é
-              propriedade intelectual exclusiva e está protegido por direito autoral, direito de marca e
-              legislação de concorrência desleal.
+              dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é propriedade
+              intelectual exclusiva e está protegido por direito autoral, direito de marca e legislação de
+              concorrência desleal.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-paper/70">
               Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa não passa
-              despercebida. Documentos carregam marcações ocultas e identificadores individuais por leitor.
+              despercebida. Documentos carregam marcações ocultas e identificadores individuais por operador.
               Quando um vazamento aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
             </p>
 
@@ -775,8 +609,8 @@ export default function LandingPage() {
             </div>
 
             <p className="mt-10 text-[15px] leading-relaxed text-paper/80">
-              Quem estuda este material aprende a enxergar a pegada dos outros. Quem tenta copiá-lo,
-              ironicamente, deixa a pegada mais visível de todas.
+              Quem estuda este material aprende a fechar a própria pegada. Quem tenta copiá-lo, ironicamente,
+              deixa a pegada mais visível de todas.
             </p>
 
             <div className="mt-12 text-center">
@@ -784,7 +618,7 @@ export default function LandingPage() {
                 href={CHECKOUT_URL}
                 className="inline-flex items-center justify-center gap-2 bg-gold px-7 py-4 text-base font-semibold text-on-gold transition-colors hover:bg-gold-hover"
               >
-                Quero aprender o método por R$ 49
+                Quero acessar o acervo por R$ 49
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
             </div>
