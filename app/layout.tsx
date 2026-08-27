@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Fraunces, JetBrains_Mono } from "next/font/google"
-import Script from "next/script"
+import { UtmifyScripts } from "@/components/utmify-scripts"
 import "./globals.css"
 
 const inter = Inter({
@@ -94,24 +94,8 @@ export default function RootLayout({
           fetchPriority="high"
         />
         {children}
-        {/* Utmify — rastreamento de UTMs em todas as páginas */}
-        <Script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          strategy="afterInteractive"
-          data-utmify-prevent-xcod-sck=""
-          data-utmify-prevent-subids=""
-        />
-        {/* Utmify — Pixel Meta: define o pixelId antes de carregar o pixel.js */}
-        <Script id="utmify-pixel-id" strategy="afterInteractive">
-          {`window.pixelId = "6a2224af55ecba8492e4d111";`}
-        </Script>
-        <Script
-          id="utmify-pixel"
-          src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
-          strategy="afterInteractive"
-          async
-          defer
-        />
+        {/* Utmify — carregado apenas em produção (ver componente) */}
+        <UtmifyScripts />
       </body>
     </html>
   )
