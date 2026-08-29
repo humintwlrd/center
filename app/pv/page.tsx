@@ -158,11 +158,12 @@ export default function AcervoTaticoPage() {
         </div>
       </header>
 
-      {/* ══════���══════════════════════════════════════════════════���═
+      {/* ══════����══════════════════════════════════════════════════���═
            ANTES DA TÉCNICA — reconhecimento
          ═══════════════════════════════════════════════════════════ */}
       <section id="diagnostico" className="relative bg-humint-white py-24 md:py-36 overflow-hidden">
-        <div className="mx-auto max-w-2xl px-5 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="max-w-2xl md:ml-[8.333%]">
           {/* Eyebrow */}
           <div className="reveal mb-8 md:mb-10 flex items-center gap-3">
             <span className="h-px w-8 bg-humint-blood" aria-hidden />
@@ -262,16 +263,17 @@ export default function AcervoTaticoPage() {
             A arquitetura do acervo
             <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-1" />
           </a>
+          </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
            DOSSIÊS — Arquitetura do acervo
          ═══════════════════════════════════════════════════════════ */}
-      <section id="dossie" className="relative bg-humint-charcoal py-24 md:py-32">
+      <section id="dossie" className="relative bg-humint-charcoal py-24 md:py-36 border-t-4 border-humint-amber">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           {/* Cabeçalho da seção */}
-          <div className="grid lg:grid-cols-12 gap-8 md:gap-10 lg:gap-16 mb-12 md:mb-20 items-start">
+          <div className="grid border-b border-humint-bone/14 pb-12 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-16 mb-12 md:mb-20 items-start md:pb-16">
             <div className="lg:col-span-6 reveal">
               <div className="mb-6 flex items-center gap-3">
                 <span className="h-px w-8 bg-humint-amber" aria-hidden />
@@ -391,7 +393,7 @@ export default function AcervoTaticoPage() {
          ═══════════════════════════════════════════════════════════ */}
       <section
         id="acesso"
-        className="relative bg-humint-charcoal py-24 md:py-32 overflow-hidden border-t border-humint-bone/5"
+        className="relative bg-humint-graphite py-24 md:py-36 overflow-hidden border-t border-humint-bone/12"
       >
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -404,8 +406,8 @@ export default function AcervoTaticoPage() {
 
         <div className="relative mx-auto max-w-5xl px-5 md:px-8">
           {/* Heading */}
-          <div className="reveal mb-10 md:mb-14 max-w-3xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-5">
+          <div className="reveal mb-10 max-w-3xl border-l-2 border-humint-amber pl-6 md:mb-14 md:pl-10">
+            <div className="flex items-center gap-3 mb-5">
               <span className="h-px w-8 bg-humint-amber/60" aria-hidden />
               <span className="font-mono text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-humint-amber/80">
                 A plataforma
@@ -415,10 +417,10 @@ export default function AcervoTaticoPage() {
             <h2 className="font-serif font-light text-[28px] md:text-5xl lg:text-[3.4rem] leading-[1.06] text-humint-bone tracking-[-0.01em] text-balance">
               O que você recebe dentro da plataforma.
             </h2>
-            <p className="mt-5 md:mt-7 text-[16px] md:text-lg text-humint-bone/70 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-5 md:mt-7 text-[16px] md:text-lg text-humint-bone/70 font-light leading-relaxed max-w-2xl">
               O Acervo não é uma sequência de aulas soltas. É uma estrutura de consulta, estudo e aplicação.
             </p>
-            <p className="mt-4 text-[15px] md:text-base text-humint-bone/55 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-[15px] md:text-base text-humint-bone/55 font-light leading-relaxed max-w-2xl">
               Dentro da plataforma, você acessa os dossiês e materiais auxiliares em uma ordem progressiva.
               Cada parte foi pensada para desenvolver uma camada de leitura humana: comportamento, comunicação,
               observação, elicitação, proteção, fontes e aplicação prática.
@@ -427,7 +429,7 @@ export default function AcervoTaticoPage() {
             <img
               src="/images/pv/members-area-mockup.webp"
               alt="Prévia da área de membros do Mundo da HUMINT em um celular, com a aula em andamento, lista de dossiês e progresso do operador"
-              className="mt-10 md:mt-14 w-full max-w-2xl mx-auto h-auto"
+              className="mt-10 md:mt-14 w-full max-w-3xl h-auto"
             />
           </div>
 
@@ -534,7 +536,7 @@ export default function AcervoTaticoPage() {
          ═══════════════════════════════════════════════════════════ */}
       <section
         id="depoimentos"
-        className="relative overflow-hidden border-t border-humint-bone/5 bg-humint-charcoal py-24 md:py-32"
+        className="relative overflow-hidden border-t-4 border-humint-ink bg-humint-paper py-24 text-humint-ink md:py-36"
       >
         <div
           className="absolute inset-0 opacity-[0.035]"
@@ -546,18 +548,18 @@ export default function AcervoTaticoPage() {
           aria-hidden
         />
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">
-          <div className="reveal mx-auto mb-12 max-w-3xl text-center md:mb-16">
-            <div className="mb-5 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-humint-amber/60" aria-hidden />
-              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-amber/80 md:text-[11px]">
+          <div className="reveal mb-12 max-w-3xl border-l-2 border-humint-blood pl-6 md:mb-16 md:pl-10">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-humint-blood/60" aria-hidden />
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-blood md:text-[11px]">
                 Relatos de campo
               </span>
-              <span className="h-px w-8 bg-humint-amber/60" aria-hidden />
+              <span className="h-px w-8 bg-humint-blood/60" aria-hidden />
             </div>
-            <h2 className="text-balance font-serif text-3xl font-light leading-[1.06] tracking-[-0.01em] text-humint-bone sm:text-4xl md:text-5xl">
+            <h2 className="text-balance font-serif text-3xl font-light leading-[1.06] tracking-[-0.01em] text-humint-ink sm:text-4xl md:text-5xl">
               Quem entrou no acervo não ficou só na teoria.
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-pretty text-[15px] font-light leading-relaxed text-humint-bone/60 md:mt-7 md:text-lg">
+            <p className="mt-5 max-w-2xl text-pretty text-[15px] font-light leading-relaxed text-humint-ink/65 md:mt-7 md:text-lg">
               Leituras reais de quem estudou os dossiês, encontrou novas camadas de análise e levou o método para decisões concretas.
             </p>
           </div>
@@ -572,7 +574,7 @@ export default function AcervoTaticoPage() {
          ═══════════════════════════════════════════════════════════ */}
       <section
         id="oferta"
-        className="relative bg-humint-graphite py-24 md:py-32 overflow-hidden border-t border-humint-amber/15"
+        className="relative bg-humint-charcoal py-24 md:py-36 overflow-hidden border-t-4 border-humint-amber"
       >
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -585,7 +587,7 @@ export default function AcervoTaticoPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,90,0.08),transparent_60%)]" />
 
         <div className="relative mx-auto max-w-5xl px-5 md:px-8">
-          <div className="text-center mb-8 md:mb-14 reveal">
+          <div className="mb-8 max-w-3xl border-l-2 border-humint-amber pl-6 reveal md:mb-14 md:pl-10">
             <h2 className="font-serif font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.06] md:leading-[1.04] tracking-[-0.01em] text-balance">
               Tudo incluso.
               <br />
@@ -701,7 +703,7 @@ export default function AcervoTaticoPage() {
       {/* ═══════════════════════════════════════════════════════════
            / 07 — PERGUNTAS FREQUENTES
          ═══════════════���������═════════════════════════════════════════ */}
-      <section id="faq" className="relative bg-humint-charcoal py-24 md:py-32 border-t border-humint-bone/5">
+      <section id="faq" className="relative bg-humint-graphite py-24 md:py-36 border-t border-humint-bone/12">
         <div className="mx-auto max-w-3xl px-5 md:px-8">
           <h2 className="reveal font-serif font-light text-3xl md:text-5xl leading-[1.06] tracking-[-0.01em] text-humint-bone text-balance">
             Antes de decidir.
@@ -771,13 +773,13 @@ export default function AcervoTaticoPage() {
       {/* ═══════════════════════════════════════════════════════════
            CTA FINAL
          ═══════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden border-t border-humint-bone/5 bg-humint-graphite py-24 md:py-32">
+      <section className="relative overflow-hidden border-t-4 border-humint-amber bg-humint-charcoal py-24 md:py-36">
         <div
           className="absolute inset-x-0 top-0 mx-auto h-px max-w-3xl bg-gradient-to-r from-transparent via-humint-amber/60 to-transparent"
           aria-hidden
         />
-        <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-8 px-5 text-center md:gap-10 md:px-8">
-          <div className="reveal flex flex-col items-center gap-5 md:gap-6">
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-8 px-5 md:gap-10 md:px-8">
+          <div className="reveal flex max-w-4xl flex-col items-start gap-5 border-l-2 border-humint-amber pl-6 md:gap-6 md:pl-10">
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-amber md:text-[11px]">
               O próximo movimento é seu
             </span>
@@ -789,7 +791,7 @@ export default function AcervoTaticoPage() {
             </p>
           </div>
 
-          <div className="reveal flex w-full max-w-md flex-col items-center gap-4">
+          <div className="reveal ml-0 flex w-full max-w-md flex-col items-start gap-4 md:ml-10">
             <AccessButton className="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 bg-humint-amber px-7 py-4 font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-humint-ink transition-colors hover:bg-humint-bone md:text-sm">
               Garantir acesso ao acervo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

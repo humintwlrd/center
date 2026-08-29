@@ -4,18 +4,18 @@
 /* Tokens utilitários usados exclusivamente pela landing /pv. Declarados aqui
    para que o Tailwind gere as classes, sem alterar o tema editorial. */
 @theme inline {
-  --color-humint-charcoal: oklch(0.14 0.005 60);
-  --color-humint-graphite: oklch(0.18 0.006 70);
-  --color-humint-white: oklch(1 0 0);
-  --color-humint-paper: oklch(0.88 0.025 85);
-  --color-humint-paper-dark: oklch(0.78 0.04 80);
-  --color-humint-bone: oklch(0.92 0.01 80);
-  --color-humint-amber: oklch(0.78 0.13 75);
+  --color-humint-charcoal: oklch(0.12 0.004 55);
+  --color-humint-graphite: oklch(0.205 0.008 60);
+  --color-humint-white: oklch(0.985 0.003 78);
+  --color-humint-paper: oklch(0.93 0.014 82);
+  --color-humint-paper-dark: oklch(0.82 0.025 78);
+  --color-humint-bone: oklch(0.94 0.012 80);
+  --color-humint-amber: oklch(0.79 0.125 75);
   --color-humint-brass: oklch(0.65 0.09 75);
   --color-humint-olive: oklch(0.42 0.06 110);
   --color-humint-leather: oklch(0.32 0.05 50);
-  --color-humint-blood: oklch(0.42 0.18 25);
-  --color-humint-ink: oklch(0.18 0.005 60);
+  --color-humint-blood: oklch(0.44 0.18 25);
+  --color-humint-ink: oklch(0.17 0.006 55);
 }
 
 /* =========================================================
