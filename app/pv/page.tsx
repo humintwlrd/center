@@ -23,6 +23,7 @@ import { StickyNav } from "@/components/landing/sticky-nav"
 import { MobileStickyCta } from "@/components/landing/mobile-sticky-cta"
 import { AccessButton } from "@/components/landing/access-button"
 import { HeroCountdown } from "@/components/landing/hero-countdown"
+import { TestimonialsCarousel } from "@/components/landing/testimonials-carousel"
 
 export default function AcervoTaticoPage() {
   return (
@@ -575,7 +576,7 @@ export default function AcervoTaticoPage() {
                 </span>
               </div>
               <h3 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.1rem] text-humint-bone mb-7 md:mb-9 leading-[1.15] text-balance">
-                Não é para quem procura poder sobre os outros.
+                Não �� para quem procura poder sobre os outros.
               </h3>
               <ul className="space-y-4 md:space-y-5">
                 {[
@@ -625,6 +626,44 @@ export default function AcervoTaticoPage() {
                 preserva confiança enquanto atua.
               </p>
             </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+           DEPOIMENTOS — prova social antes da oferta
+         ═══════════════════════════════════════════════════════════ */}
+      <section
+        id="depoimentos"
+        className="relative overflow-hidden border-t border-humint-bone/5 bg-humint-charcoal py-24 md:py-32"
+      >
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #d4a55a 1px, transparent 1px), linear-gradient(to bottom, #d4a55a 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+          aria-hidden
+        />
+        <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+          <div className="reveal mx-auto mb-12 max-w-3xl text-center md:mb-16">
+            <div className="mb-5 flex items-center justify-center gap-3">
+              <span className="h-px w-8 bg-humint-amber/60" aria-hidden />
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-amber/80 md:text-[11px]">
+                Relatos de campo
+              </span>
+              <span className="h-px w-8 bg-humint-amber/60" aria-hidden />
+            </div>
+            <h2 className="text-balance font-serif text-3xl font-light leading-[1.06] tracking-[-0.01em] text-humint-bone sm:text-4xl md:text-5xl">
+              Quem entrou no acervo não ficou só na teoria.
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-pretty text-[15px] font-light leading-relaxed text-humint-bone/60 md:mt-7 md:text-lg">
+              Leituras reais de quem estudou os dossiês, encontrou novas camadas de análise e levou o método para decisões concretas.
+            </p>
+          </div>
+          <div className="reveal">
+            <TestimonialsCarousel />
           </div>
         </div>
       </section>
