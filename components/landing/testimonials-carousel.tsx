@@ -66,7 +66,7 @@ export function TestimonialsCarousel() {
       <CarouselContent className="-ml-3 md:-ml-5">
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={testimonial.src} className="basis-[86%] pl-3 sm:basis-[62%] md:basis-[44%] md:pl-5 lg:basis-[34%]">
-            <figure className="relative overflow-hidden border border-humint-bone/15 bg-humint-paper shadow-[0_20px_60px_rgba(0,0,0,0.28)]">
+            <figure className="relative overflow-hidden border border-humint-bone/14 bg-humint-paper">
               <div className="relative aspect-[9/16] w-full">
                 <Image
                   src={testimonial.src}

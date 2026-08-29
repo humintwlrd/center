@@ -29,13 +29,11 @@ export function StickyNav() {
           />
         </a>
 
-        {/* Desktop CTA — mobile uses sticky bottom CTA instead */}
         <a
           href="#oferta"
-          className="hidden md:inline-flex items-center gap-2 bg-humint-amber text-humint-ink font-mono text-xs tracking-[0.18em] uppercase font-semibold px-5 py-2.5 hover:bg-humint-bone transition-colors"
+          className="hidden border border-humint-amber/55 px-5 py-2.5 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-humint-amber transition-colors hover:bg-humint-amber hover:text-humint-ink md:inline-flex"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-humint-blood animate-pulse" />
-          Acessar acervo
+          Condições de acesso
         </a>
 
         {/* Mobile mini-CTA — only when scrolled past hero */}

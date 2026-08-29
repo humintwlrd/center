@@ -10,7 +10,7 @@ export function MobileStickyCta() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY
-      const trigger = document.getElementById("para-quem")
+      const trigger = document.getElementById("dossie")
       const offer = document.getElementById("oferta")
       const triggerTop = trigger
         ? trigger.getBoundingClientRect().top + window.scrollY
