@@ -158,7 +158,7 @@ export default function AcervoTaticoPage() {
         </div>
       </header>
 
-      {/* ═════════════════════════════════════════════════════════���═
+      {/* ══════��══════════════════════════════════════════════════���═
            ANTES DA TÉCNICA — reconhecimento
          ═══════════════════════════════════════════════════════════ */}
       <section id="diagnostico" className="relative bg-humint-white py-24 md:py-36 overflow-hidden">
@@ -601,35 +601,6 @@ export default function AcervoTaticoPage() {
         </div>
       </section>
 
-      {/* ════����══════════════════════════════════════════════════════
-           ÉTICA E LIMITES
-         ═══════════════════════════════════════════════════════════ */}
-      <section id="etica" className="relative bg-humint-white py-24 md:py-32 border-t border-humint-ink/10">
-        <div className="mx-auto max-w-3xl px-5 md:px-8">
-          <div className="reveal relative border-l-2 border-humint-blood pl-6 md:pl-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-humint-blood">
-                / 06. Ética e limites
-              </span>
-            </div>
-            <h2 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.6rem] leading-[1.12] tracking-[-0.01em] text-humint-ink text-balance">
-              Inteligência humana sem manipulação barata.
-            </h2>
-            <p className="mt-6 md:mt-8 text-[16px] md:text-lg text-humint-ink/70 font-light leading-relaxed text-pretty">
-              O Acervo Tático não ensina coação, fraude, invasão, exposição ou exploração de
-              vulnerabilidades. O foco é leitura de contexto, comunicação consciente, proteção
-              informacional e tomada de decisão em interações humanas.
-            </p>
-            <blockquote className="mt-8 md:mt-10">
-              <p className="font-serif text-xl md:text-[1.7rem] text-humint-ink leading-[1.3] tracking-[-0.01em] text-balance">
-                O operador não vence porque engana melhor. Vence porque percebe melhor, decide melhor e
-                preserva confiança enquanto atua.
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
       {/* ═══════════════════════════════════════════════════════════
            DEPOIMENTOS — prova social antes da oferta
          ═══════════════════════════════════════════════════════════ */}
@@ -866,103 +837,6 @@ export default function AcervoTaticoPage() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════
-           AVISO DE PROTEÇÃO / PROPRIEDADE INTELECTUAL
-         ═══════�����══════════════════════════════════════════════════ */}
-      <section
-        id="protecao"
-        className="relative bg-humint-ink py-24 md:py-32 border-t border-humint-blood/30 overflow-hidden"
-      >
-        {/* textura de grade discreta */}
-        <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #8a1c1c 1px, transparent 1px), linear-gradient(to bottom, #8a1c1c 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
-          }}
-          aria-hidden
-        />
-        {/* halo vermelho */}
-        <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(138,28,28,0.18),transparent_60%)]"
-          aria-hidden
-        />
-
-        <div className="relative mx-auto max-w-3xl px-5 md:px-8">
-          <div className="reveal relative border-l-2 border-humint-blood pl-6 md:pl-10">
-            {/* selo / classificação */}
-            <div className="flex items-center gap-3 mb-7 md:mb-9">
-              <Lock className="h-4 w-4 text-humint-blood" strokeWidth={2} />
-              <span className="font-mono text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-humint-blood">
-                Aviso de segurança · Material protegido
-              </span>
-            </div>
-
-            <h2 className="font-serif font-light text-[26px] sm:text-3xl md:text-[2.7rem] leading-[1.1] tracking-[-0.01em] text-humint-bone text-balance">
-              Cada linha deste material está catalogada, datada e rastreável até a fonte.
-            </h2>
-
-            <p className="mt-6 md:mt-8 text-[15px] md:text-[17px] text-humint-bone/75 font-light leading-relaxed text-pretty">
-              Todo o conteúdo do <span className="text-humint-bone font-normal">Mundo da HUMINT</span>, incluindo
-              marca, identidade, copy, narrativa, estrutura de página, dossiês, protocolos, ferramentas e qualquer
-              material entregue na área de membros, é propriedade intelectual exclusiva e está protegido por
-              direito autoral, direito de marca e legislação de concorrência desleal.
-            </p>
-
-            <p className="mt-5 text-[15px] md:text-[17px] text-humint-bone/75 font-light leading-relaxed text-pretty">
-              Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa, total ou
-              parcial, não passa despercebida. Documentos carregam{" "}
-              <span className="text-humint-bone font-normal">marcações ocultas</span> e identificadores
-              individuais por operador. Quando um vazamento aparece, ele aponta de volta para quem o originou.
-              Não é ameaça. É procedimento.
-            </p>
-
-            {/* bloco de consequências */}
-            <div className="mt-9 md:mt-11 grid gap-px bg-humint-blood/20 border border-humint-blood/20">
-              {[
-                {
-                  t: "Identificação",
-                  d: "Cada acesso é nominal e marcado. A origem de qualquer cópia é determinável.",
-                },
-                {
-                  t: "Notificação",
-                  d: "Remoção imediata, derrubada de domínios, plataformas e meios de pagamento envolvidos.",
-                },
-                {
-                  t: "Responsabilização",
-                  d: "Medidas cíveis e criminais cabíveis, com perdas, danos e ressarcimento de custos.",
-                },
-              ].map((item) => (
-                <div key={item.t} className="bg-humint-ink p-5 md:p-6 flex items-start gap-4">
-                  <ShieldCheck className="h-5 w-5 text-humint-blood shrink-0 mt-0.5" strokeWidth={1.75} />
-                  <div>
-                    <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-humint-blood mb-1.5">
-                      {item.t}
-                    </div>
-                    <p className="text-[14px] md:text-[15px] text-humint-bone/70 font-light leading-relaxed">
-                      {item.d}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <blockquote className="mt-9 md:mt-11">
-              <p className="font-serif text-lg md:text-[1.6rem] text-humint-bone leading-[1.3] tracking-[-0.01em] text-balance">
-                Quem estuda este material aprende a fechar a própria pegada. Quem tenta copiá-lo,
-                ironicamente, deixa a pegada mais visível de todas.
-              </p>
-            </blockquote>
-
-            <p className="mt-7 font-mono text-[10px] md:text-[11px] tracking-[0.14em] uppercase text-humint-bone/40 leading-relaxed">
-              © {new Date().getFullYear()} Mundo da HUMINT. Todos os direitos reservados. Uso autorizado
-              estritamente individual e intransferível.
-            </p>
-          </div>
         </div>
       </section>
 
