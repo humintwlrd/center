@@ -158,7 +158,7 @@ export default function AcervoTaticoPage() {
         </div>
       </header>
 
-      {/* ══════����══════════════════════════════════════════════════���═
+      {/* ══════�����══════════════════════════════════════════════════���═
            ANTES DA TÉCNICA — reconhecimento
          ═══════════════════════════════════════════════════════════ */}
       <section id="diagnostico" className="relative bg-humint-white py-24 md:py-36 overflow-hidden">
@@ -778,8 +778,8 @@ export default function AcervoTaticoPage() {
           className="absolute inset-x-0 top-0 mx-auto h-px max-w-3xl bg-gradient-to-r from-transparent via-humint-amber/60 to-transparent"
           aria-hidden
         />
-        <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-8 px-5 md:gap-10 md:px-8">
-          <div className="reveal flex max-w-4xl flex-col items-start gap-5 border-l-2 border-humint-amber pl-6 md:gap-6 md:pl-10">
+        <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 px-5 text-center md:gap-10 md:px-8">
+          <div className="reveal flex max-w-4xl flex-col items-center gap-5 md:gap-6">
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-amber md:text-[11px]">
               O próximo movimento é seu
             </span>
@@ -791,7 +791,7 @@ export default function AcervoTaticoPage() {
             </p>
           </div>
 
-          <div className="reveal ml-0 flex w-full max-w-md flex-col items-start gap-4 md:ml-10">
+          <div className="reveal flex w-full max-w-md flex-col items-center gap-4">
             <AccessButton className="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 bg-humint-amber px-7 py-4 font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-humint-ink transition-colors hover:bg-humint-bone md:text-sm">
               Garantir acesso ao acervo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
