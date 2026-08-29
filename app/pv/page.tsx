@@ -158,7 +158,7 @@ export default function AcervoTaticoPage() {
         </div>
       </header>
 
-      {/* ══════��══════════════════════════════════════════════════���═
+      {/* ══════���══════════════════════════════════════════════════���═
            ANTES DA TÉCNICA — reconhecimento
          ═══════════════════════════════════════════════════════════ */}
       <section id="diagnostico" className="relative bg-humint-white py-24 md:py-36 overflow-hidden">
@@ -530,78 +530,6 @@ export default function AcervoTaticoPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-           PARA QUEM / NÃO É PARA
-         ═══════════════════════════════════════════════════════════ */}
-      <section
-        id="para-quem"
-        className="relative bg-humint-graphite py-24 md:py-32 border-t border-humint-bone/5"
-      >
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
-            {/* For */}
-            <div className="reveal bg-humint-ink/30 border border-humint-amber/15 p-7 md:p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-10 bg-humint-amber" />
-                <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-humint-amber">
-                  / 04. Para quem
-                </span>
-              </div>
-              <h3 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.1rem] text-humint-bone mb-7 md:mb-9 leading-[1.15] text-balance">
-                Para profissionais que dependem de leitura humana em decisões reais.
-              </h3>
-              <ul className="space-y-4 md:space-y-5">
-                {[
-                  "Negociadores, fundadores, executivos e líderes que precisam tomar decisões em ambientes de pressão.",
-                  "Advogados, investigadores, analistas, consultores e profissionais que lidam com informação sensível.",
-                  "Vendedores complexos, recrutadores e estrategistas que precisam compreender pessoas, interesses e contexto antes de agir.",
-                  "Profissionais que precisam entrevistar, negociar, avaliar, proteger e decidir com mais precisão.",
-                ].map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-3 text-[14.5px] md:text-base text-humint-bone/80 font-light leading-relaxed"
-                  >
-                    <CheckCircle2 className="h-5 w-5 text-humint-amber shrink-0 mt-0.5" />
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Not for */}
-            <div className="reveal bg-humint-ink/30 border border-humint-blood/20 p-7 md:p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-10 bg-humint-blood" />
-                <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-humint-blood">
-                  / 05. Não é para
-                </span>
-              </div>
-              <h3 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.1rem] text-humint-bone mb-7 md:mb-9 leading-[1.15] text-balance">
-                Não �� para quem procura poder sobre os outros.
-              </h3>
-              <ul className="space-y-4 md:space-y-5">
-                {[
-                  "Quem procura hack mental, truque de sedução, coação ou manual de manipulação.",
-                  "Quem quer frases prontas no lugar de método, prática e leitura de contexto.",
-                  "Quem confunde inteligência humana com paranoia.",
-                  "Quem quer aprender a manipular, e não a decidir melhor.",
-                ].map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-3 text-[14.5px] md:text-base text-humint-bone/80 font-light leading-relaxed"
-                  >
-                    <span className="h-5 w-5 shrink-0 mt-0.5 flex items-center justify-center">
-                      <span className="block h-px w-3 bg-humint-blood" />
-                    </span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════
            DEPOIMENTOS — prova social antes da oferta
          ═══════════════════════════════════════════════════════════ */}
       <section
@@ -840,7 +768,7 @@ export default function AcervoTaticoPage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════
+      {/* ═════════════════════════════════════════════════════════���═
            FOOTER
          ═══════════════════════════════════════════════════════════ */}
       <footer className="bg-humint-charcoal border-t border-humint-bone/8 py-12">
