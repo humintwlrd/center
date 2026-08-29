@@ -23,6 +23,7 @@ import { StickyNav } from "@/components/landing/sticky-nav"
 import { MobileStickyCta } from "@/components/landing/mobile-sticky-cta"
 import { AccessButton } from "@/components/landing/access-button"
 import { HeroCountdown } from "@/components/landing/hero-countdown"
+import { TestimonialsCarousel } from "@/components/landing/testimonials-carousel"
 
 export default function AcervoTaticoPage() {
   return (
@@ -157,11 +158,12 @@ export default function AcervoTaticoPage() {
         </div>
       </header>
 
-      {/* ═════════════════════════════════════════════════════════���═
+      {/* ══════�����══════════════════════════════════════════════════���═
            ANTES DA TÉCNICA — reconhecimento
          ═══════════════════════════════════════════════════════════ */}
       <section id="diagnostico" className="relative bg-humint-white py-24 md:py-36 overflow-hidden">
-        <div className="mx-auto max-w-2xl px-5 md:px-8">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="max-w-2xl md:ml-[8.333%]">
           {/* Eyebrow */}
           <div className="reveal mb-8 md:mb-10 flex items-center gap-3">
             <span className="h-px w-8 bg-humint-blood" aria-hidden />
@@ -261,16 +263,17 @@ export default function AcervoTaticoPage() {
             A arquitetura do acervo
             <ArrowDown className="h-3.5 w-3.5 transition-transform group-hover:translate-y-1" />
           </a>
+          </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
            DOSSIÊS — Arquitetura do acervo
          ═══════════════════════════════════════════════════════════ */}
-      <section id="dossie" className="relative bg-humint-charcoal py-24 md:py-32">
+      <section id="dossie" className="relative bg-humint-charcoal py-24 md:py-36 border-t-4 border-humint-amber">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           {/* Cabeçalho da seção */}
-          <div className="grid lg:grid-cols-12 gap-8 md:gap-10 lg:gap-16 mb-12 md:mb-20 items-start">
+          <div className="grid border-b border-humint-bone/14 pb-12 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-16 mb-12 md:mb-20 items-start md:pb-16">
             <div className="lg:col-span-6 reveal">
               <div className="mb-6 flex items-center gap-3">
                 <span className="h-px w-8 bg-humint-amber" aria-hidden />
@@ -390,7 +393,7 @@ export default function AcervoTaticoPage() {
          ═══════════════════════════════════════════════════════════ */}
       <section
         id="acesso"
-        className="relative bg-humint-charcoal py-24 md:py-32 overflow-hidden border-t border-humint-bone/5"
+        className="relative bg-humint-graphite py-24 md:py-36 overflow-hidden border-t border-humint-bone/12"
       >
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -403,8 +406,8 @@ export default function AcervoTaticoPage() {
 
         <div className="relative mx-auto max-w-5xl px-5 md:px-8">
           {/* Heading */}
-          <div className="reveal mb-10 md:mb-14 max-w-3xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-5">
+          <div className="reveal mb-10 max-w-3xl border-l-2 border-humint-amber pl-6 md:mb-14 md:pl-10">
+            <div className="flex items-center gap-3 mb-5">
               <span className="h-px w-8 bg-humint-amber/60" aria-hidden />
               <span className="font-mono text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-humint-amber/80">
                 A plataforma
@@ -414,10 +417,10 @@ export default function AcervoTaticoPage() {
             <h2 className="font-serif font-light text-[28px] md:text-5xl lg:text-[3.4rem] leading-[1.06] text-humint-bone tracking-[-0.01em] text-balance">
               O que você recebe dentro da plataforma.
             </h2>
-            <p className="mt-5 md:mt-7 text-[16px] md:text-lg text-humint-bone/70 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-5 md:mt-7 text-[16px] md:text-lg text-humint-bone/70 font-light leading-relaxed max-w-2xl">
               O Acervo não é uma sequência de aulas soltas. É uma estrutura de consulta, estudo e aplicação.
             </p>
-            <p className="mt-4 text-[15px] md:text-base text-humint-bone/55 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-[15px] md:text-base text-humint-bone/55 font-light leading-relaxed max-w-2xl">
               Dentro da plataforma, você acessa os dossiês e materiais auxiliares em uma ordem progressiva.
               Cada parte foi pensada para desenvolver uma camada de leitura humana: comportamento, comunicação,
               observação, elicitação, proteção, fontes e aplicação prática.
@@ -426,7 +429,7 @@ export default function AcervoTaticoPage() {
             <img
               src="/images/pv/members-area-mockup.webp"
               alt="Prévia da área de membros do Mundo da HUMINT em um celular, com a aula em andamento, lista de dossiês e progresso do operador"
-              className="mt-10 md:mt-14 w-full max-w-2xl mx-auto h-auto"
+              className="mt-10 md:mt-14 w-full max-w-3xl h-auto"
             />
           </div>
 
@@ -529,102 +532,39 @@ export default function AcervoTaticoPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-           PARA QUEM / NÃO É PARA
+           DEPOIMENTOS — prova social antes da oferta
          ═══════════════════════════════════════════════════════════ */}
       <section
-        id="para-quem"
-        className="relative bg-humint-graphite py-24 md:py-32 border-t border-humint-bone/5"
+        id="depoimentos"
+        className="relative overflow-hidden border-t-4 border-humint-ink bg-humint-paper py-24 text-humint-ink md:py-36"
       >
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
-            {/* For */}
-            <div className="reveal bg-humint-ink/30 border border-humint-amber/15 p-7 md:p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-10 bg-humint-amber" />
-                <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-humint-amber">
-                  / 04. Para quem
-                </span>
-              </div>
-              <h3 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.1rem] text-humint-bone mb-7 md:mb-9 leading-[1.15] text-balance">
-                Para profissionais que dependem de leitura humana em decisões reais.
-              </h3>
-              <ul className="space-y-4 md:space-y-5">
-                {[
-                  "Negociadores, fundadores, executivos e líderes que precisam tomar decisões em ambientes de pressão.",
-                  "Advogados, investigadores, analistas, consultores e profissionais que lidam com informação sensível.",
-                  "Vendedores complexos, recrutadores e estrategistas que precisam compreender pessoas, interesses e contexto antes de agir.",
-                  "Profissionais que precisam entrevistar, negociar, avaliar, proteger e decidir com mais precisão.",
-                ].map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-3 text-[14.5px] md:text-base text-humint-bone/80 font-light leading-relaxed"
-                  >
-                    <CheckCircle2 className="h-5 w-5 text-humint-amber shrink-0 mt-0.5" />
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Not for */}
-            <div className="reveal bg-humint-ink/30 border border-humint-blood/20 p-7 md:p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-10 bg-humint-blood" />
-                <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-humint-blood">
-                  / 05. Não é para
-                </span>
-              </div>
-              <h3 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.1rem] text-humint-bone mb-7 md:mb-9 leading-[1.15] text-balance">
-                Não é para quem procura poder sobre os outros.
-              </h3>
-              <ul className="space-y-4 md:space-y-5">
-                {[
-                  "Quem procura hack mental, truque de sedução, coação ou manual de manipulação.",
-                  "Quem quer frases prontas no lugar de método, prática e leitura de contexto.",
-                  "Quem confunde inteligência humana com paranoia.",
-                  "Quem quer aprender a manipular, e não a decidir melhor.",
-                ].map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-start gap-3 text-[14.5px] md:text-base text-humint-bone/80 font-light leading-relaxed"
-                  >
-                    <span className="h-5 w-5 shrink-0 mt-0.5 flex items-center justify-center">
-                      <span className="block h-px w-3 bg-humint-blood" />
-                    </span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ════����══════════════════════════════════════════════════════
-           ÉTICA E LIMITES
-         ═══════════════════════════════════════════════════════════ */}
-      <section id="etica" className="relative bg-humint-white py-24 md:py-32 border-t border-humint-ink/10">
-        <div className="mx-auto max-w-3xl px-5 md:px-8">
-          <div className="reveal relative border-l-2 border-humint-blood pl-6 md:pl-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-humint-blood">
-                / 06. Ética e limites
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #d4a55a 1px, transparent 1px), linear-gradient(to bottom, #d4a55a 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+          aria-hidden
+        />
+        <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+          <div className="reveal mb-12 max-w-3xl border-l-2 border-humint-blood pl-6 md:mb-16 md:pl-10">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-humint-blood/60" aria-hidden />
+              <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-blood md:text-[11px]">
+                Relatos de campo
               </span>
+              <span className="h-px w-8 bg-humint-blood/60" aria-hidden />
             </div>
-            <h2 className="font-serif font-light text-2xl sm:text-3xl md:text-[2.6rem] leading-[1.12] tracking-[-0.01em] text-humint-ink text-balance">
-              Inteligência humana sem manipulação barata.
+            <h2 className="text-balance font-serif text-3xl font-light leading-[1.06] tracking-[-0.01em] text-humint-ink sm:text-4xl md:text-5xl">
+              Quem entrou no acervo não ficou só na teoria.
             </h2>
-            <p className="mt-6 md:mt-8 text-[16px] md:text-lg text-humint-ink/70 font-light leading-relaxed text-pretty">
-              O Acervo Tático não ensina coação, fraude, invasão, exposição ou exploração de
-              vulnerabilidades. O foco é leitura de contexto, comunicação consciente, proteção
-              informacional e tomada de decisão em interações humanas.
+            <p className="mt-5 max-w-2xl text-pretty text-[15px] font-light leading-relaxed text-humint-ink/65 md:mt-7 md:text-lg">
+              Leituras reais de quem estudou os dossiês, encontrou novas camadas de análise e levou o método para decisões concretas.
             </p>
-            <blockquote className="mt-8 md:mt-10">
-              <p className="font-serif text-xl md:text-[1.7rem] text-humint-ink leading-[1.3] tracking-[-0.01em] text-balance">
-                O operador não vence porque engana melhor. Vence porque percebe melhor, decide melhor e
-                preserva confiança enquanto atua.
-              </p>
-            </blockquote>
+          </div>
+          <div className="reveal">
+            <TestimonialsCarousel />
           </div>
         </div>
       </section>
@@ -634,7 +574,7 @@ export default function AcervoTaticoPage() {
          ═══════════════════════════════════════════════════════════ */}
       <section
         id="oferta"
-        className="relative bg-humint-graphite py-24 md:py-32 overflow-hidden border-t border-humint-amber/15"
+        className="relative bg-humint-charcoal py-24 md:py-36 overflow-hidden border-t-4 border-humint-amber"
       >
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -647,7 +587,7 @@ export default function AcervoTaticoPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,165,90,0.08),transparent_60%)]" />
 
         <div className="relative mx-auto max-w-5xl px-5 md:px-8">
-          <div className="text-center mb-8 md:mb-14 reveal">
+          <div className="mb-8 max-w-3xl border-l-2 border-humint-amber pl-6 reveal md:mb-14 md:pl-10">
             <h2 className="font-serif font-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.06] md:leading-[1.04] tracking-[-0.01em] text-balance">
               Tudo incluso.
               <br />
@@ -763,7 +703,7 @@ export default function AcervoTaticoPage() {
       {/* ═══════════════════════════════════════════════════════════
            / 07 — PERGUNTAS FREQUENTES
          ═══════════════���������═════════════════════════════════════════ */}
-      <section id="faq" className="relative bg-humint-charcoal py-24 md:py-32 border-t border-humint-bone/5">
+      <section id="faq" className="relative bg-humint-graphite py-24 md:py-36 border-t border-humint-bone/12">
         <div className="mx-auto max-w-3xl px-5 md:px-8">
           <h2 className="reveal font-serif font-light text-3xl md:text-5xl leading-[1.06] tracking-[-0.01em] text-humint-bone text-balance">
             Antes de decidir.
@@ -831,103 +771,39 @@ export default function AcervoTaticoPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-           AVISO DE PROTEÇÃO / PROPRIEDADE INTELECTUAL
-         ═══════�����══════════════════════════════════════════════════ */}
-      <section
-        id="protecao"
-        className="relative bg-humint-ink py-24 md:py-32 border-t border-humint-blood/30 overflow-hidden"
-      >
-        {/* textura de grade discreta */}
+           CTA FINAL
+         ═══════════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden border-t-4 border-humint-amber bg-humint-charcoal py-24 md:py-36">
         <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #8a1c1c 1px, transparent 1px), linear-gradient(to bottom, #8a1c1c 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
-          }}
+          className="absolute inset-x-0 top-0 mx-auto h-px max-w-3xl bg-gradient-to-r from-transparent via-humint-amber/60 to-transparent"
           aria-hidden
         />
-        {/* halo vermelho */}
-        <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(138,28,28,0.18),transparent_60%)]"
-          aria-hidden
-        />
-
-        <div className="relative mx-auto max-w-3xl px-5 md:px-8">
-          <div className="reveal relative border-l-2 border-humint-blood pl-6 md:pl-10">
-            {/* selo / classificação */}
-            <div className="flex items-center gap-3 mb-7 md:mb-9">
-              <Lock className="h-4 w-4 text-humint-blood" strokeWidth={2} />
-              <span className="font-mono text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-humint-blood">
-                Aviso de segurança · Material protegido
-              </span>
-            </div>
-
-            <h2 className="font-serif font-light text-[26px] sm:text-3xl md:text-[2.7rem] leading-[1.1] tracking-[-0.01em] text-humint-bone text-balance">
-              Cada linha deste material está catalogada, datada e rastreável até a fonte.
+        <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 px-5 text-center md:gap-10 md:px-8">
+          <div className="reveal flex max-w-4xl flex-col items-center gap-5 md:gap-6">
+            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-amber md:text-[11px]">
+              O próximo movimento é seu
+            </span>
+            <h2 className="max-w-3xl text-balance font-serif text-3xl font-light leading-[1.06] tracking-[-0.01em] text-humint-bone sm:text-4xl md:text-6xl">
+              Você já sabe o que está em jogo. Agora, decida com mais informação.
             </h2>
-
-            <p className="mt-6 md:mt-8 text-[15px] md:text-[17px] text-humint-bone/75 font-light leading-relaxed text-pretty">
-              Todo o conteúdo do <span className="text-humint-bone font-normal">Mundo da HUMINT</span>, incluindo
-              marca, identidade, copy, narrativa, estrutura de página, dossiês, protocolos, ferramentas e qualquer
-              material entregue na área de membros, é propriedade intelectual exclusiva e está protegido por
-              direito autoral, direito de marca e legislação de concorrência desleal.
+            <p className="max-w-xl text-pretty text-[15px] font-light leading-relaxed text-humint-bone/60 md:text-lg">
+              Entre no Acervo Tático e transforme observação, contexto e método em decisões mais precisas.
             </p>
+          </div>
 
-            <p className="mt-5 text-[15px] md:text-[17px] text-humint-bone/75 font-light leading-relaxed text-pretty">
-              Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa, total ou
-              parcial, não passa despercebida. Documentos carregam{" "}
-              <span className="text-humint-bone font-normal">marcações ocultas</span> e identificadores
-              individuais por operador. Quando um vazamento aparece, ele aponta de volta para quem o originou.
-              Não é ameaça. É procedimento.
-            </p>
-
-            {/* bloco de consequências */}
-            <div className="mt-9 md:mt-11 grid gap-px bg-humint-blood/20 border border-humint-blood/20">
-              {[
-                {
-                  t: "Identificação",
-                  d: "Cada acesso é nominal e marcado. A origem de qualquer cópia é determinável.",
-                },
-                {
-                  t: "Notificação",
-                  d: "Remoção imediata, derrubada de domínios, plataformas e meios de pagamento envolvidos.",
-                },
-                {
-                  t: "Responsabilização",
-                  d: "Medidas cíveis e criminais cabíveis, com perdas, danos e ressarcimento de custos.",
-                },
-              ].map((item) => (
-                <div key={item.t} className="bg-humint-ink p-5 md:p-6 flex items-start gap-4">
-                  <ShieldCheck className="h-5 w-5 text-humint-blood shrink-0 mt-0.5" strokeWidth={1.75} />
-                  <div>
-                    <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-humint-blood mb-1.5">
-                      {item.t}
-                    </div>
-                    <p className="text-[14px] md:text-[15px] text-humint-bone/70 font-light leading-relaxed">
-                      {item.d}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <blockquote className="mt-9 md:mt-11">
-              <p className="font-serif text-lg md:text-[1.6rem] text-humint-bone leading-[1.3] tracking-[-0.01em] text-balance">
-                Quem estuda este material aprende a fechar a própria pegada. Quem tenta copiá-lo,
-                ironicamente, deixa a pegada mais visível de todas.
-              </p>
-            </blockquote>
-
-            <p className="mt-7 font-mono text-[10px] md:text-[11px] tracking-[0.14em] uppercase text-humint-bone/40 leading-relaxed">
-              © {new Date().getFullYear()} Mundo da HUMINT. Todos os direitos reservados. Uso autorizado
-              estritamente individual e intransferível.
+          <div className="reveal flex w-full max-w-md flex-col items-center gap-4">
+            <AccessButton className="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 bg-humint-amber px-7 py-4 font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-humint-ink transition-colors hover:bg-humint-bone md:text-sm">
+              Garantir acesso ao acervo
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </AccessButton>
+            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-humint-bone/45">
+              Acesso imediato · 7 dias de garantia · Pagamento seguro
             </p>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════
+      {/* ═════════════════════════════════════════════════════════���═
            FOOTER
          ═══════════════════════════════════════════════════════════ */}
       <footer className="bg-humint-charcoal border-t border-humint-bone/8 py-12">
