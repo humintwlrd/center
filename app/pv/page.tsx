@@ -768,6 +768,39 @@ export default function AcervoTaticoPage() {
         </div>
       </section>
 
+      {/* ═══════════════════════════════════════════════════════════
+           CTA FINAL
+         ═══════════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden border-t border-humint-bone/5 bg-humint-graphite py-24 md:py-32">
+        <div
+          className="absolute inset-x-0 top-0 mx-auto h-px max-w-3xl bg-gradient-to-r from-transparent via-humint-amber/60 to-transparent"
+          aria-hidden
+        />
+        <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-8 px-5 text-center md:gap-10 md:px-8">
+          <div className="reveal flex flex-col items-center gap-5 md:gap-6">
+            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-humint-amber md:text-[11px]">
+              O próximo movimento é seu
+            </span>
+            <h2 className="max-w-3xl text-balance font-serif text-3xl font-light leading-[1.06] tracking-[-0.01em] text-humint-bone sm:text-4xl md:text-6xl">
+              Você já sabe o que está em jogo. Agora, decida com mais informação.
+            </h2>
+            <p className="max-w-xl text-pretty text-[15px] font-light leading-relaxed text-humint-bone/60 md:text-lg">
+              Entre no Acervo Tático e transforme observação, contexto e método em decisões mais precisas.
+            </p>
+          </div>
+
+          <div className="reveal flex w-full max-w-md flex-col items-center gap-4">
+            <AccessButton className="group inline-flex min-h-[56px] w-full items-center justify-center gap-3 bg-humint-amber px-7 py-4 font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-humint-ink transition-colors hover:bg-humint-bone md:text-sm">
+              Garantir acesso ao acervo
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </AccessButton>
+            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-humint-bone/45">
+              Acesso imediato · 7 dias de garantia · Pagamento seguro
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ═════════════════════════════════════════════════════════���═
            FOOTER
          ═══════════════════════════════════════════════════════════ */}
