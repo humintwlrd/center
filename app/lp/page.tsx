@@ -1,8 +1,18 @@
 import type { Metadata } from "next"
-import { ArrowRight, Plus, X } from "lucide-react"
+import type { ReactNode } from "react"
+import { ArrowRight, ArrowUpRight, Plus, X } from "lucide-react"
 import { SITE } from "@/lib/site"
 
+/**
+ * Checkout do "Como Avaliar Pessoas" (HeroSpark). Defina NEXT_PUBLIC_LP_CHECKOUT_URL
+ * na Vercel. Sem link, os botões de compra levam à oferta e a página fica fora dos
+ * buscadores, para ninguém chegar a uma oferta que ainda não pode ser comprada.
+ */
+const CHECKOUT_URL = process.env.NEXT_PUBLIC_LP_CHECKOUT_URL?.trim() || ""
+const HAS_CHECKOUT = CHECKOUT_URL.startsWith("https://")
+
 export const metadata: Metadata = {
+  ...(HAS_CHECKOUT ? {} : { robots: { index: false, follow: true } }),
   title: "Como Avaliar Pessoas · Confiança, Risco e Vulnerabilidade",
   description:
     "Como investigadores, espiões e empresas obtêm informações através de pessoas. Um método de avaliação humana extraído de documentos desclassificados de inteligência para identificar confiança, risco e vulnerabilidades antes de decidir.",
@@ -15,8 +25,23 @@ export const metadata: Metadata = {
   },
 }
 
-// Atualize este link com o checkout real do produto.
-const CHECKOUT_URL = "#oferta"
+function BuyLink({ className, children }: { className: string; children: ReactNode }) {
+  if (!HAS_CHECKOUT) {
+    return (
+      <a href="#oferta" className={className}>
+        {children}
+        <ArrowRight aria-hidden />
+      </a>
+    )
+  }
+  return (
+    <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+      <ArrowUpRight aria-hidden />
+      <span className="sr-only">(abre em nova aba)</span>
+    </a>
+  )
+}
 
 // Cada capítulo segue o mesmo protocolo de leitura.
 const CHAPTER_FORMAT = [
@@ -276,7 +301,7 @@ export default function LandingPage() {
               ao lado do dela.
             </p>
             <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
-              <a href={CHECKOUT_URL} className="btn btn-signal btn-lg">
+              <a href="#oferta" className="btn btn-signal btn-lg">
                 Quero aprender o método
                 <ArrowRight aria-hidden />
               </a>
@@ -606,10 +631,7 @@ export default function LandingPage() {
               <p className="mt-4 text-mist-2 line-through">De R$ 1.290</p>
               <p className="tabular mt-1 font-expanded text-mega font-extrabold">R$ 49</p>
               <p className="mt-2 text-lg text-mist">pagamento único · PIX ou cartão</p>
-              <a href={CHECKOUT_URL} className="btn btn-signal btn-lg mt-8 w-full sm:w-auto">
-                Garantir meu acesso
-                <ArrowRight aria-hidden />
-              </a>
+              <BuyLink className="btn btn-signal btn-lg mt-8 w-full sm:w-auto">Garantir meu acesso</BuyLink>
               <p className="mt-6 text-mist-2">7 dias de garantia · Pagamento seguro</p>
             </div>
             <div className="lg:col-span-7">
@@ -684,10 +706,7 @@ export default function LandingPage() {
               Quem estuda este material aprende a enxergar a pegada dos outros. Quem tenta copiá-lo, ironicamente, deixa a
               pegada mais visível de todas.
             </p>
-            <a href={CHECKOUT_URL} className="btn btn-signal btn-lg">
-              Quero aprender o método por R$ 49
-              <ArrowRight aria-hidden />
-            </a>
+            <BuyLink className="btn btn-signal btn-lg">Quero aprender o método por R$ 49</BuyLink>
           </div>
         </div>
       </section>

@@ -4,6 +4,8 @@ import { StickyNav } from "@/components/landing/sticky-nav"
 import { MobileStickyCta } from "@/components/landing/mobile-sticky-cta"
 import { AccessButton } from "@/components/landing/access-button"
 import { TestimonialsCarousel } from "@/components/landing/testimonials-carousel"
+import { splitParcelado } from "@/components/shop/product-card"
+import { ACERVO } from "@/lib/products"
 
 /**
  * Landing de vendas do Acervo Tático (tráfego pago). Header e footer próprios,
@@ -89,6 +91,10 @@ const FAQ = [
 ]
 
 export default function AcervoTaticoPage() {
+  // Preço vem do catálogo (lib/products.ts): uma só fonte para loja e landing.
+  const { value: installment } = splitParcelado(ACERVO.parcelado)
+  const installments = ACERVO.parcelado.split("x")[0]
+
   return (
     <div id="top" className="pv-page min-h-screen overflow-x-hidden bg-night pb-20 text-white md:pb-0">
       <StickyNav />
@@ -287,7 +293,7 @@ export default function AcervoTaticoPage() {
                 src="/images/pv/members-area-mockup.webp"
                 alt="Prévia da área de membros do Mundo da HUMINT em um celular, com a aula em andamento, lista de dossiês e progresso do operador"
                 width={1254}
-                height={950}
+                height={921}
                 sizes="(min-width: 1024px) 620px, 100vw"
                 className="h-auto w-full"
               />
@@ -353,11 +359,11 @@ export default function AcervoTaticoPage() {
               <p className="text-lg font-semibold text-mist">Acesso por 12 meses</p>
               <p className="mt-4 text-mist-2 line-through">De R$ 1.290</p>
               <p className="tabular mt-1 flex items-baseline gap-2">
-                <span className="text-mist">12×</span>
-                <span className="font-expanded text-display font-extrabold whitespace-nowrap">R$ 99,30</span>
+                <span className="text-mist">{installments}×</span>
+                <span className="font-expanded text-display font-extrabold whitespace-nowrap">{installment}</span>
               </p>
               <p className="mt-2 text-lg text-mist">
-                ou <span className="font-semibold text-white">R$ 960 à vista</span> · PIX ou cartão
+                ou <span className="font-semibold text-white">{ACERVO.preco} à vista</span> · PIX ou cartão
               </p>
               <AccessButton className="btn btn-signal btn-lg mt-8 w-full sm:w-auto">
                 Garantir acesso agora

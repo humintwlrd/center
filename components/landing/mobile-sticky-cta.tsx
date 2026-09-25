@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { ArrowRight } from "lucide-react"
 import { CHECKOUT_URL } from "@/components/landing/access-button"
+import { ACERVO } from "@/lib/products"
 
 export function MobileStickyCta() {
   const [show, setShow] = useState(false)
@@ -33,7 +34,7 @@ export function MobileStickyCta() {
     >
       <div className="flex items-center gap-3 border-t border-line-night bg-night px-4 py-2.5">
         <div className="flex-1 min-w-0">
-          <div className="tabular text-sm font-bold leading-tight text-white">12× R$ 99,30</div>
+          <div className="tabular text-sm font-bold leading-tight text-white">{ACERVO.parcelado.replace("x de ", "× ")}</div>
           <div className="mt-0.5 truncate text-xs leading-tight text-mist">7 dias de garantia</div>
         </div>
         <a

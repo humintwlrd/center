@@ -128,6 +128,8 @@ Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente core
   adaptado da humint.click: situação real, 6 dossiês + núcleo, ética, oferta, FAQ, aviso de segurança).
 - Produtos atuais: **Acervo Tático** (R$900 · 12x R$93,09 · "Mais vendido"),
   **Engenharia Social** (R$120 · 12x R$12,41), **Dossiês 01–06** (R$190 · 12x R$19,65 · E-book).
+- **`/pv` lê preço e checkout do catálogo** (`ACERVO` em `lib/products.ts`): mude o preço só lá.
+- **`/lp`**: checkout em `NEXT_PUBLIC_LP_CHECKOUT_URL` (Vercel). Sem a variável, a página fica `noindex`.
 - `/shop` redireciona para `/academy` e `/assinar` foi removido (ver `next.config.mjs`).
   A "Assinatura" foi substituída pela narrativa da Academy em todo o site.
 
@@ -151,4 +153,6 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 ## Deploy / verificação
 
 - `git push origin main` → Vercel republica automaticamente.
+- Domínios: `mundodahumint.com` e `.com.br` apontam para o mesmo projeto Vercel; o canônico vem de
+  `NEXT_PUBLIC_SITE_URL` (padrão `https://www.mundodahumint.com.br`). E-mail: `contato@mundodahumint.com.br`.
 - Como há cache de CDN, verifique a página com um cache-buster (`?v=algo`) e avise pra dar **Ctrl+F5**.

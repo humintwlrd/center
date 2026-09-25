@@ -8,3 +8,4 @@ fontes variáveis nem woff2.
 
 - `archivo-800-expanded.ttf`: wght 800, wdth 125 (títulos)
 - `archivo-400.ttf`: wght 400, wdth 100 (texto)
+- `acervo-tatico-cover.jpg`: capa do Acervo (de `public/images/shop/acervo-tatico.webp`) para o OG da /pv

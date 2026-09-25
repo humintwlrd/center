@@ -1,7 +1,8 @@
 import type React from "react"
+import { ACERVO } from "@/lib/products"
 
-/** URL de checkout (HeroSpark) — compra liberada. */
-export const CHECKOUT_URL = "https://pay.herospark.com/acervo-tatico-de-inteligencia-humana-525712"
+/** URL de checkout (HeroSpark) do Acervo, a mesma do catálogo. */
+export const CHECKOUT_URL = ACERVO.checkoutUrl
 
 /**
  * Botão de acesso que leva direto ao checkout.

@@ -22,7 +22,7 @@ const PRINCIPLES = [
 ]
 
 const TRANSPARENCY = [
-  "Identificamos autor e revisor em cada texto.",
+  "Cada texto informa quem assina: a equipe editorial do Mundo da HUMINT.",
   "Datas de publicação e atualização são visíveis.",
   "Correções factuais são registradas no rodapé do artigo.",
   "IA generativa não é usada para inventar fatos, citações ou fontes.",
