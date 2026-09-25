@@ -29,12 +29,12 @@ export function StickyNav() {
 
         {/* Desktop CTA — mobile uses sticky bottom CTA instead */}
         <a href="#oferta" className="btn btn-signal btn-sm hidden md:inline-flex">
-          Acessar acervo
+          Acessar o acervo
         </a>
 
         {/* Mobile mini-CTA — only when scrolled past hero */}
         <a href="#oferta" className={`btn btn-sm md:hidden ${scrolled ? "btn-signal" : "border-white text-white"}`}>
-          Acessar
+          Acessar o acervo
         </a>
       </div>
     </nav>

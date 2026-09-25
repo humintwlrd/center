@@ -141,21 +141,6 @@ const FAQ = [
   },
 ]
 
-/** Calha do numeral de capítulo, igual à dos casos na home. */
-const GUTTER =
-  "grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-3 sm:grid-cols-[2.75rem_minmax(0,1fr)] sm:gap-x-4 md:grid-cols-[5rem_minmax(0,1fr)] md:gap-x-8"
-
-function Numeral({ n, tone = "night" }: { n: number; tone?: "night" | "snow" }) {
-  return (
-    <span
-      aria-hidden
-      className={`tabular font-expanded text-heading font-extrabold md:text-title ${tone === "night" ? "text-mist-2" : "text-ink-3"}`}
-    >
-      {n}
-    </span>
-  )
-}
-
 function BuyButton({ className = "", label = "Garantir acesso agora" }: { className?: string; label?: string }) {
   return (
     <AccessButton className={`btn btn-signal btn-lg ${className}`}>
@@ -195,7 +180,7 @@ export default function AcervoTaticoPage() {
             </p>
             <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
               <a href="#oferta" className="btn btn-signal btn-lg">
-                Acessar material
+                Acessar o acervo
                 <ArrowRight aria-hidden />
               </a>
               <a href="#valor" className="link-more">
@@ -271,7 +256,7 @@ export default function AcervoTaticoPage() {
         </div>
 
         <ul className="scroller mt-10 flex gap-4 overflow-x-auto pb-20 rail md:mt-12 md:gap-5 md:pb-28" aria-label="Capturas das mensagens">
-          {TESTIMONIALS.map((t) => (
+          {TESTIMONIALS.filter((t) => t.src !== lead?.src).map((t) => (
             <li key={t.src} className="relative aspect-[9/16] w-[72vw] max-w-[280px] shrink-0 overflow-hidden bg-snow sm:w-[260px]">
               <Image src={t.src} alt={t.alt} fill sizes="280px" className="object-cover" />
             </li>
@@ -282,18 +267,13 @@ export default function AcervoTaticoPage() {
       {/* ── 1. Vale o preço? ───────────────────────────────────── */}
       <section id="valor" className="night" aria-labelledby="valor-title">
         <div className="container-site py-20 md:py-28">
-          <div className={GUTTER}>
-            <Numeral n={1} />
-            <div>
-              <h2 id="valor-title" className="font-expanded text-display font-extrabold">
-                Vale o preço?
-              </h2>
-              <p className="mt-6 max-w-[58ch] text-lede text-mist">
-                Cada dossiê também é vendido separado, por {brl.format(dossierPrice)}. Veja, item por item, o que vem no
-                acervo.
-              </p>
-            </div>
-          </div>
+          <h2 id="valor-title" className="font-expanded text-display font-extrabold">
+            Vale o preço?
+          </h2>
+          <p className="mt-6 max-w-[58ch] text-lede text-mist">
+            Cada dossiê também é vendido separado, por {brl.format(dossierPrice)}. Veja, item por item, o que vem no
+            acervo.
+          </p>
 
           <ol className="mt-14 border-t-2 border-white">
             {DOSSIES.map((m, i) => {
@@ -365,7 +345,7 @@ export default function AcervoTaticoPage() {
               </div>
               <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 pt-6">
                 <dt className="max-w-[30ch] text-lg">O acervo completo, com o núcleo operacional e 12 meses de atualizações</dt>
-                <dd className="tabular font-expanded text-display font-extrabold">
+                <dd className="tabular font-expanded text-mega font-extrabold md:text-display">
                   <span className="redact" data-delay="300">
                     {brl.format(acervoPrice)}
                   </span>
@@ -388,17 +368,14 @@ export default function AcervoTaticoPage() {
       <section id="serve" className="bg-snow text-ink" aria-labelledby="serve-title">
         <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <div className={`${GUTTER} lg:sticky lg:top-28`}>
-              <Numeral n={2} tone="snow" />
-              <div>
-                <h2 id="serve-title" className="font-expanded text-display font-extrabold">
-                  Serve para mim?
-                </h2>
-                <blockquote className="mt-8 max-w-[26ch] font-expanded text-xl font-extrabold leading-snug lg:text-heading">
-                  A pior posição é sair de uma situação convencido de que decidiu bem, quando na prática você apenas
-                  reagiu melhor ao roteiro que alguém construiu para você.
-                </blockquote>
-              </div>
+            <div className="lg:sticky lg:top-28">
+              <h2 id="serve-title" className="font-expanded text-display font-extrabold">
+                Serve para mim?
+              </h2>
+              <blockquote className="mt-8 max-w-[26ch] font-expanded text-xl font-extrabold leading-snug lg:text-heading">
+                A pior posição é sair de uma situação convencido de que decidiu bem, quando na prática você apenas
+                reagiu melhor ao roteiro que alguém construiu para você.
+              </blockquote>
             </div>
           </div>
 
@@ -482,7 +459,7 @@ export default function AcervoTaticoPage() {
             </div>
             <div className="lg:col-span-6">
               <Image
-                src="/images/pv/members-area-mockup.webp"
+                src="/images/pv/members-area-mockup-v2.webp"
                 alt="Prévia da área de membros do Mundo da HUMINT em um celular, com a aula em andamento, lista de dossiês e progresso do operador"
                 width={1254}
                 height={921}
@@ -510,8 +487,7 @@ export default function AcervoTaticoPage() {
       {/* ── 3. É ético? ────────────────────────────────────────── */}
       <section id="etica" className="night" aria-labelledby="etica-title">
         <div className="container-site py-20 md:py-28">
-          <div className={GUTTER}>
-            <Numeral n={3} />
+          <div>
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-5">
                 <h2 id="etica-title" className="font-expanded text-display font-extrabold">
@@ -539,7 +515,7 @@ export default function AcervoTaticoPage() {
       {/* ── Oferta ─────────────────────────────────────────────── */}
       <section id="oferta" className="night-2 scroll-mt-16" aria-labelledby="oferta-title">
         <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-4">
+          <div className="order-2 lg:order-1 lg:col-span-4">
             <div className="relative mx-auto aspect-[3/4] w-full max-w-[300px] overflow-hidden lg:mx-0 lg:max-w-none">
               <Image
                 src={ACERVO.image}
@@ -557,7 +533,7 @@ export default function AcervoTaticoPage() {
             )}
           </div>
 
-          <div className="lg:col-span-8">
+          <div className="order-1 lg:order-2 lg:col-span-8">
             <h2 id="oferta-title" className="font-expanded text-display font-extrabold">
               Tudo incluso. Em um único pacote.
             </h2>
@@ -566,7 +542,8 @@ export default function AcervoTaticoPage() {
               <div>
                 <p className="text-lg font-semibold text-mist">Acesso por 12 meses</p>
                 <p className="tabular mt-4 text-mist-2">
-                  Os seis dossiês avulsos: <span className="line-through">{brl.format(dossierSum)}</span>
+                  Os seis dossiês avulsos somam {brl.format(dossierSum)}.{" "}
+                  <span className="text-white">No acervo, {brl.format(savings)} a menos e com o núcleo.</span>
                 </p>
                 <p className="tabular mt-1 flex items-baseline gap-2">
                   <span className="text-mist">{installments}×</span>
@@ -634,7 +611,7 @@ export default function AcervoTaticoPage() {
             </p>
           </div>
           <div className="flex flex-col gap-3 lg:col-span-5 lg:items-end">
-            <BuyButton className="w-full sm:w-auto" label="Garantir acesso ao acervo" />
+            <BuyButton className="w-full sm:w-auto" />
             <p className="tabular text-sm text-mist-2">
               {installments}× {installment} · 7 dias de garantia · Pagamento seguro
             </p>
