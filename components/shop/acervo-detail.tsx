@@ -202,7 +202,7 @@ export function AcervoDetail({ product }: { product: Product }) {
           <div className="mt-12 grid gap-14 md:mt-16 lg:grid-cols-12 lg:items-center lg:gap-16">
             <div className="lg:col-span-7">
               <h1 className="font-expanded text-display font-extrabold">
-                O primeiro e único acervo tático de Inteligência Humana do <span className="redact">Brasil.</span>
+                Inteligência humana de operações reais, traduzida para as <span className="redact">suas decisões.</span>
               </h1>
               <p className="mt-8 max-w-[56ch] text-lede text-mist">
                 Aprenda a identificar intenções ocultas, extrair informações sem resistência e antecipar

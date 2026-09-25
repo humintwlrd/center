@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { CHECKOUT_URL } from "@/components/landing/access-button"
 import { ACERVO } from "@/lib/products"
 
@@ -11,7 +11,7 @@ export function MobileStickyCta() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY
-      const trigger = document.getElementById("diagnostico")
+      const trigger = document.getElementById("prova")
       const offer = document.getElementById("oferta")
       const triggerTop = trigger
         ? trigger.getBoundingClientRect().top + window.scrollY
@@ -27,7 +27,7 @@ export function MobileStickyCta() {
 
   return (
     <div
-      className={`md:hidden fixed bottom-0 inset-x-0 z-40 transition-transform duration-500 ${
+      className={`md:hidden fixed bottom-0 inset-x-0 z-40 transition-transform duration-300 ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
@@ -43,8 +43,9 @@ export function MobileStickyCta() {
           rel="noopener noreferrer"
           className="btn btn-signal btn-sm shrink-0"
         >
-          Acessar
-          <ArrowRight className="h-3.5 w-3.5" />
+          Garantir acesso agora
+          <ArrowUpRight aria-hidden />
+          <span className="sr-only">(abre em nova aba)</span>
         </a>
       </div>
     </div>

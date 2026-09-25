@@ -8,7 +8,7 @@ cursos/e-books) do **Mundo da HUMINT** (mundodahumint.com).
 - **Next.js 16** (App Router) + **React 19** + **TypeScript**
 - **Tailwind CSS v4** (config via `@theme`/`@utility` em `app/globals.css`, sem `tailwind.config`)
 - **pnpm** (10.11) — use `pnpm`, não `npm` (há `pnpm-lock.yaml`)
-- Ícones: **lucide-react**. UI base: **shadcn/ui** (Radix) em `components/ui/`
+- Ícones: **lucide-react**. Componentes próprios em `components/site` e `components/shop` (config shadcn em `components.json`, sem componentes instalados)
 - Deploy: **Vercel** — push na branch `main` republica sozinho (auto-deploy)
 
 ## Comandos
@@ -42,8 +42,8 @@ components/
                            # academy-cta, article-card, breadcrumbs, declassify, formulários
   shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
                            # acervo-detail (página de vendas rica do Acervo)
-  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, depoimentos, utmify)
-  ui/                      # shadcn/ui: só button + carousel (o resto foi removido por falta de uso)
+  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, access-button, utmify)
+                           # (sem components/ui: nenhum componente shadcn em uso hoje)
 lib/
   products.ts              # CATÁLOGO da Academy (tipo Product + PRODUCTS + getProductBySlug)
   site.ts                  # SITE (nome/urls) e NAV.primary (menu)
@@ -53,6 +53,7 @@ lib/
     categories.ts methods.ts resources.ts
   seo.ts schema.ts format.ts analytics.ts utils.ts
   consent.ts               # escolha do banner de cookies (lida por Analytics e pixel)
+  testimonials.ts          # os 7 DMs reais (capturas + trechos transcritos literalmente)
   webhook.ts               # postToWebhook: envio dos formulários com checagem de resposta
 data/
   instagram-export.json    # fonte dos artigos do Instagram (entrada do gerador)
@@ -161,8 +162,9 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 
 - **Preços parcelados** nos cards (sem preço cheio); selo Cartão · Pix; CTAs de compra em nova aba.
 - **`/lp` é intocável** salvo pedido explícito (o redesign de 2026 foi pedido pelo dono).
-- Não editar `lib/content/instagram-articles.generated.ts` nem `components/ui/*` sem necessidade.
+- Não editar `lib/content/instagram-articles.generated.ts` à mão.
   Para um componente shadcn novo, adicione só o que for usar (`pnpm dlx shadcn@latest add <nome>`).
+- Depoimentos: só os de `lib/testimonials.ts`; os trechos são literais das capturas, não edite.
 - Mudanças de design: siga a skill impeccable (`.claude/skills/impeccable`) e o `DESIGN.md`.
 - **Não cite o instrutor nem o anonimato dele** (nada de "instrutor anônimo" ou "o foco está no
   método, não em quem ensina"). Também não mostre nome ou rosto.

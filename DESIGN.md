@@ -266,7 +266,7 @@ Sobre a noite, o vermelho como cor de texto só funciona em tamanho de título (
 **Character:** Uma grotesca só, que vira voz de agência quando se alarga a 125% e pesa 800, e volta a ser texto neutro e legível na largura normal. A régua é a identidade de 2021 da CIA: grotesca estendida e pesada, escala grande, sem ornamento.
 
 ### Hierarchy
-- **Mega** (800, `clamp(2.75rem, 1.15rem + 6.2vw, 6rem)`, 0.94, -0.035em, largura 125%): a manchete da abertura e uma ou duas declarações por página (ética do Acervo). Medida curta (13 a 18ch).
+- **Mega** (800, `clamp(2.75rem, 1.15rem + 6.2vw, 6rem)`, 0.94, -0.035em, largura 125%): a manchete da abertura e uma ou duas declarações por página (ética do Acervo, a citação principal de um depoimento). Medida curta (13 a 18ch).
 - **Display** (800, `clamp(2.25rem, 1.25rem + 3.8vw, 4.5rem)`, 0.98, -0.03em, 125%): h1 das páginas internas e de produto, títulos de oferta e de FAQ, o caso principal.
 - **Title** (800, `clamp(1.75rem, 1.15rem + 2.2vw, 3rem)`, 1.04, -0.024em, 125%): títulos de seção (`SectionHeading`, `SplitSection`), frase de fechamento do rodapé, valor do preço em destaque, numerais de capítulo a partir de 768px.
 - **Heading** (800, `clamp(1.3125rem, 1.12rem + 0.75vw, 1.75rem)`, 1.14, -0.014em, 125%): títulos de itens em lista (dossiês, cenas de aplicação, capítulos no celular), nome do produto no card, citações de destaque, a escada de percepção.
@@ -306,7 +306,7 @@ O sistema é plano. Não existe `box-shadow` em nenhum componente. A profundidad
 
 ## Shapes
 
-Retângulo puro. Todos os raios do sistema são 0 (`--radius` e toda a escala `--radius-*`, inclusive a do shadcn/ui), e os componentes de `components/ui` herdam isso. As espessuras de traço são uma pequena escala com função: 1px para separar linhas, 1.5px para contornar botão e campo, 2px para abrir lista e sublinhar link de ação, 3px para o item ativo da navegação.
+Retângulo puro. Todos os raios do sistema são 0 (`--radius` e toda a escala `--radius-*`, inclusive os aliases de compatibilidade do shadcn/ui; não há componentes em `components/ui`). As espessuras de traço são uma pequena escala com função: 1px para separar linhas, 1.5px para contornar botão e campo, 2px para abrir lista e sublinhar link de ação, 3px para o item ativo da navegação.
 
 As formas recorrentes são todas barras: a tarja sobre o texto, a tarja permanente (`withheld`, altura de 0.9em), o marcador de lista (1.1em × 0.42em) e o selo do produto, encostado sem margem na borda esquerda da capa. Os quadros de imagem têm proporções fixas por papel: 3:4 para capas de produto e trilho de casos, 4:5 para artigos em grade, 16:10 para miniaturas de capítulo, 1:1 para miniaturas em lista e 9:16 para as capturas de depoimento. Capas do Instagram (9:16, com legenda gravada) nunca são recortadas: entram inteiras (`object-contain`) sobre a noite dentro do quadro que for.
 
@@ -346,7 +346,7 @@ Retangulares, pesados e diretos: parecem um comando, não um enfeite.
 - **Rodapé:** noite; abre com uma frase em Title e o botão sinal grande, depois logo, descrição e quatro colunas de links em Névoa.
 
 ### A Tarja (assinatura)
-O único momento autoral do site. Um trecho curto, sempre as últimas palavras de uma manchete ("com método.", "Brasil.", "antes.", "rastreável."), nasce coberto por uma barra na cor da tinta da superfície (preta no papel, branca na noite) e, quando 60% dele entra na tela, é liberado uma vez após 450ms (700ms na abertura): o texto volta em 420ms com 260ms de atraso, a barra some em 640ms, e fica um sublinhado Vermelho Sinal de 0.1em. O texto está sempre no DOM e acessível; sem JavaScript nada fica escondido, e com `prefers-reduced-motion` o trecho já aparece liberado. No máximo uma tarja por manchete.
+O único momento autoral do site. Um trecho curto nasce coberto por uma barra na cor da tinta da superfície (preta no papel, branca na noite): as últimas palavras de uma manchete ("com método.", "Brasil.", "antes.", "rastreável.") ou, numa página de venda, o preço final de uma oferta, depois da comparação que o justifica (a soma dos itens avulsos acima, o preço do pacote tarjado abaixo). Quando 60% dele entra na tela, é liberado uma vez após 450ms (ajustável por `data-delay`: 700ms na abertura, 300ms no preço): o texto volta em 420ms com 260ms de atraso, a barra some em 640ms, e fica um sublinhado Vermelho Sinal de 0.1em. O texto está sempre no DOM e acessível; sem JavaScript nada fica escondido, e com `prefers-reduced-motion` o trecho já aparece liberado. No máximo uma tarja por manchete.
 - **Tarja permanente (`withheld`):** barra na cor da tinta que substitui um trecho omitido de documento (prévia de capítulo na `/lp`), agrupada num contêiner com `role="img"` e `aria-label` descrevendo a omissão.
 
 ### Marcador de tarja e listas
@@ -372,7 +372,7 @@ Três linhas empilhadas em Heading estendido, entre filete de 2px em cima e emba
 - **Mostre** capas do Instagram inteiras, `object-contain` sobre `bg-night`, dentro do quadro.
 - **Use** algarismos tabulares em preços e numerais de capítulo; nos cards mostre só o parcelado, com "Cartão ou Pix".
 - **Abra** o checkout em nova aba com `ArrowUpRight` e o aviso "(abre em nova aba)" para leitores de tela.
-- **Coloque** a tarja nas últimas palavras de uma manchete, uma por manchete, com o texto real no DOM.
+- **Coloque** a tarja nas últimas palavras de uma manchete ou no preço final de uma oferta depois da comparação, uma por manchete ou valor, com o texto real no DOM.
 - **Preserve** o logo do cérebro e as capas sépia dos produtos exatamente como são.
 
 ### Don't:

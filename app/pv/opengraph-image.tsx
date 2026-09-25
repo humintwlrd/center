@@ -3,7 +3,7 @@ import { join } from "node:path"
 import { ImageResponse } from "next/og"
 import { ACERVO } from "@/lib/products"
 
-export const alt = "Acervo Tático de Inteligência Humana: o primeiro e único acervo tático de HUMINT do Brasil"
+export const alt = "Acervo Tático de Inteligência Humana: inteligência humana de operações reais, traduzida para as suas decisões"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -39,9 +39,9 @@ export default async function OG() {
               letterSpacing: "-0.03em",
             }}
           >
-            <span>O primeiro e único acervo tático de Inteligência Humana do&nbsp;</span>
+            <span>Inteligência humana de operações reais, traduzida para as&nbsp;</span>
             <span style={{ display: "flex", flexDirection: "column" }}>
-              <span>Brasil.</span>
+              <span>suas decisões.</span>
               <span style={{ height: 7, marginTop: 3, background: "#e5252a" }} />
             </span>
           </div>
