@@ -77,8 +77,8 @@ export function SupportForm() {
     <form onSubmit={onSubmit} className="flex flex-col gap-5" noValidate>
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-nome" className="text-sm font-medium text-ink">
-            Nome <span aria-hidden className="text-brand">*</span>
+          <label htmlFor="sp-nome" className="field-label">
+            Nome <span aria-hidden className="text-alert">*</span>
           </label>
           <input
             id="sp-nome"
@@ -86,12 +86,12 @@ export function SupportForm() {
             required
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-email" className="text-sm font-medium text-ink">
-            E-mail <span aria-hidden className="text-brand">*</span>
+          <label htmlFor="sp-email" className="field-label">
+            E-mail <span aria-hidden className="text-alert">*</span>
           </label>
           <input
             id="sp-email"
@@ -99,21 +99,21 @@ export function SupportForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+            className="field"
           />
         </div>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-categoria" className="text-sm font-medium text-ink">
+          <label htmlFor="sp-categoria" className="field-label">
             Categoria
           </label>
           <select
             id="sp-categoria"
             value={form.categoria}
             onChange={(e) => setForm((f) => ({ ...f, categoria: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+            className="field"
           >
             {CATEGORIES.map((c) => (
               <option key={c.value} value={c.value}>
@@ -123,8 +123,8 @@ export function SupportForm() {
           </select>
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-assunto" className="text-sm font-medium text-ink">
-            Assunto <span aria-hidden className="text-brand">*</span>
+          <label htmlFor="sp-assunto" className="field-label">
+            Assunto <span aria-hidden className="text-alert">*</span>
           </label>
           <input
             id="sp-assunto"
@@ -132,14 +132,14 @@ export function SupportForm() {
             required
             value={form.assunto}
             onChange={(e) => setForm((f) => ({ ...f, assunto: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+            className="field"
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="sp-msg" className="text-sm font-medium text-ink">
-          Descreva sua solicitação <span aria-hidden className="text-brand">*</span>
+        <label htmlFor="sp-msg" className="field-label">
+          Descreva sua solicitação <span aria-hidden className="text-alert">*</span>
         </label>
         <textarea
           id="sp-msg"
@@ -147,17 +147,17 @@ export function SupportForm() {
           rows={6}
           value={form.mensagem}
           onChange={(e) => setForm((f) => ({ ...f, mensagem: e.target.value }))}
-          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand resize-y"
+          className="field min-h-36 resize-y"
         />
       </div>
 
-      <label htmlFor="sp-consent" className="flex items-start gap-3 text-sm text-ink-soft leading-relaxed cursor-pointer">
+      <label htmlFor="sp-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-muted">
         <input
           id="sp-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 accent-[var(--color-brand)] shrink-0"
+          className="mt-1 h-4 w-4 shrink-0 accent-brand"
         />
         <span>
           Concordo com o uso dos meus dados para responder a esta solicitação,
@@ -174,8 +174,7 @@ export function SupportForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start bg-brand hover:bg-[var(--color-brand-hover)] disabled:bg-[var(--color-line-strong)] px-6 py-3 text-sm font-medium transition-colors"
-        style={{ color: "var(--color-on-brand)" }}
+        className="btn btn-primary btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Enviar solicitação"}
       </button>

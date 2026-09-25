@@ -61,7 +61,7 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
           className={cn(
             "h-12 min-w-0 flex-1 border px-4 text-[0.9375rem] outline-none transition-colors",
             isDark
-              ? "border-line-dark bg-deep-2 text-fog placeholder:text-fog-muted focus:border-brand-bright"
+              ? "border-line-dark-strong bg-deep-2 text-fog placeholder:text-fog-muted focus:border-fog"
               : "border-line-strong bg-paper-strong text-ink placeholder:text-ink-muted focus:border-ink",
           )}
         />

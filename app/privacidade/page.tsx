@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { LegalPage } from "@/components/legal-page"
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade · Mundo da HUMINT",
+  title: "Política de Privacidade",
   description:
     "Como o Mundo da HUMINT coleta, usa, armazena e protege seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).",
   alternates: { canonical: "/privacidade" },
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function PrivacidadePage() {
   return (
-    <LegalPage eyebrow="/ Documento legal" title="Política de Privacidade" updatedAt="4 de junho de 2026">
+    <LegalPage path="/privacidade" eyebrow="/ Documento legal" title="Política de Privacidade" updatedAt="4 de junho de 2026">
       <p>
         Esta Política de Privacidade descreve como o <strong>Mundo da HUMINT</strong> (&quot;nós&quot;) coleta,
         utiliza, armazena e protege os dados pessoais dos usuários do site{" "}

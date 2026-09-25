@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import { LegalPage } from "@/components/legal-page"
 import { pageMetadata } from "@/lib/seo"
 import { SITE } from "@/lib/site"
 
@@ -12,21 +12,12 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacidadePage() {
   return (
-    <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Política de privacidade", href: "/politica-de-privacidade" }]} />
-      </section>
-
-      <section className="container-editorial py-10 md:py-16 max-w-3xl">
-        <p className="eyebrow-brand">Documento legal</p>
-        <h1 className="mt-3 font-display text-4xl md:text-5xl font-semibold text-balance leading-tight">
-          Política de privacidade
-        </h1>
-        <p className="mt-3 text-sm font-mono uppercase tracking-widest text-ink-muted">
-          Última atualização: maio de 2026
-        </p>
-
-        <div className="mt-10 article-prose">
+    <LegalPage
+      path="/politica-de-privacidade"
+      eyebrow="Documento legal"
+      title="Política de privacidade"
+      updatedAt="maio de 2026"
+    >
           <p>
             Esta política descreve como o {SITE.name} coleta, usa e protege os
             dados pessoais de quem interage com o site. Está alinhada à Lei
@@ -106,8 +97,6 @@ export default function PrivacidadePage() {
             Esta política pode ser atualizada. Mudanças relevantes serão
             comunicadas no próprio site e, quando apropriado, por e-mail.
           </p>
-        </div>
-      </section>
-    </>
+    </LegalPage>
   )
 }

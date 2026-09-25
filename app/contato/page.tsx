@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
 import { ContactForm } from "@/components/site/contact-form"
+import { PageHeader } from "@/components/site/page-header"
 import { SITE } from "@/lib/site"
 import { pageMetadata } from "@/lib/seo"
 
@@ -10,6 +10,17 @@ export const metadata: Metadata = pageMetadata({
     "Fale com a equipe editorial do Mundo da HUMINT: imprensa, parcerias, convites e dúvidas gerais.",
   path: "/contato",
 })
+
+const CHANNELS = [
+  {
+    label: "Imprensa",
+    body: "Se você está em prazo de matéria, indique isso no assunto. Citações pedem aprovação prévia da equipe editorial.",
+  },
+  {
+    label: "Parcerias",
+    body: "Avaliamos parcerias que respeitem a linha editorial. Não publicamos conteúdo patrocinado disfarçado de editorial.",
+  },
+]
 
 const FAQ = [
   {
@@ -29,59 +40,53 @@ const FAQ = [
 export default function ContatoPage() {
   return (
     <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Contato", href: "/contato" }]} />
-      </section>
+      <PageHeader
+        eyebrow="Contato"
+        title="Fale com a equipe editorial."
+        lede="Imprensa, parcerias, convites e dúvidas gerais. Respondemos em até alguns dias úteis."
+        breadcrumbs={[{ label: "Contato", href: "/contato" }]}
+      />
 
-      <section className="container-editorial py-10 md:py-16">
-        <p className="eyebrow-brand">Contato</p>
-        <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-3xl">
-          Fale com a equipe editorial.
-        </h1>
-        <p className="mt-5 text-lg text-ink-soft leading-relaxed prose-measure">
-          Imprensa, parcerias, convites e dúvidas gerais. Respondemos em até
-          alguns dias úteis.
-        </p>
-      </section>
+      <section className="border-b border-line bg-paper-strong" aria-label="Formulário de contato">
+        <div className="container-editorial grid gap-12 py-16 md:py-20 lg:grid-cols-12 lg:gap-12">
+          <aside className="lg:col-span-4">
+            <div className="rule-top pt-4">
+              <p className="eyebrow">E-mail</p>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="mt-2 inline-block break-all font-display text-display-sm font-medium text-ink underline decoration-line-strong underline-offset-4 transition-colors hover:text-brand hover:decoration-brand"
+              >
+                {SITE.email}
+              </a>
+              <p className="mt-2 text-sm text-ink-muted">Para a maioria dos casos, prefira o formulário.</p>
+            </div>
+            <dl className="mt-10 flex flex-col gap-6">
+              {CHANNELS.map((c) => (
+                <div key={c.label} className="border-t border-line pt-5">
+                  <dt className="eyebrow-brand">{c.label}</dt>
+                  <dd className="mt-2 text-[0.9375rem] leading-relaxed text-ink-soft">{c.body}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
 
-      <section className="container-editorial pb-16 md:pb-20 grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-5 flex flex-col gap-5">
-          <div className="bg-paper-strong p-6 hairline-y">
-            <p className="eyebrow-brand">E-mail</p>
-            <a href={`mailto:${SITE.email}`} className="mt-1 inline-block font-display text-xl font-semibold text-ink hover:text-brand">
-              {SITE.email}
-            </a>
-            <p className="mt-2 text-sm text-ink-muted">Para a maioria dos casos, prefira o formulário ao lado.</p>
-          </div>
-          <div className="bg-paper-strong p-6 hairline-y">
-            <p className="eyebrow-brand">Imprensa</p>
-            <p className="mt-1 text-sm text-ink-soft leading-relaxed">
-              Se você está em prazo de matéria, indique isso no assunto. Citações pedem aprovação prévia da equipe editorial.
-            </p>
-          </div>
-          <div className="bg-paper-strong p-6 hairline-y">
-            <p className="eyebrow-brand">Parcerias</p>
-            <p className="mt-1 text-sm text-ink-soft leading-relaxed">
-              Avaliamos parcerias que respeitem a linha editorial. Não publicamos conteúdo patrocinado disfarçado de editorial.
-            </p>
+          <div className="lg:col-span-7 lg:col-start-6">
+            <ContactForm />
           </div>
         </div>
-        <div className="lg:col-span-7">
-          <ContactForm />
-        </div>
       </section>
 
-      <section className="bg-paper-deep">
+      <section className="bg-paper" aria-labelledby="faq-title">
         <div className="container-editorial py-16 md:py-20">
-          <p className="eyebrow-brand">Perguntas frequentes</p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-balance">
+          <p className="kicker">Perguntas frequentes</p>
+          <h2 id="faq-title" className="mt-5 font-display text-display-lg font-medium text-ink">
             Antes de escrever.
           </h2>
           <dl className="mt-10 grid gap-8 md:grid-cols-3">
             {FAQ.map((f) => (
-              <div key={f.q} className="hairline-t pt-5">
-                <dt className="font-display text-lg font-semibold">{f.q}</dt>
-                <dd className="mt-2 text-ink-soft leading-relaxed">{f.a}</dd>
+              <div key={f.q} className="border-t border-ink pt-5">
+                <dt className="font-display text-xl font-medium text-ink">{f.q}</dt>
+                <dd className="mt-2 text-[0.9375rem] leading-relaxed text-ink-soft">{f.a}</dd>
               </div>
             ))}
           </dl>

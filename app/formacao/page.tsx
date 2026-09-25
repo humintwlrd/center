@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { PageHeader } from "@/components/site/page-header"
+import { SplitSection } from "@/components/site/split-section"
 import { InterestForm } from "@/components/site/interest-form"
 import { pageMetadata } from "@/lib/seo"
 
@@ -40,78 +43,66 @@ const FUTURE_PROGRAMS = [
 export default function FormacaoPage() {
   return (
     <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Formação", href: "/formacao" }]} />
-      </section>
-
-      {/* HERO */}
-      <section className="container-editorial py-10 md:py-16">
-        <span className="inline-block bg-deep text-paper px-2.5 py-1 text-[11px] font-mono uppercase tracking-widest mb-5">
-          Em breve
-        </span>
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-4xl">
-          Formação Mundo da HUMINT
-        </h1>
-        <p className="mt-5 text-lg md:text-xl text-ink-soft leading-relaxed prose-measure">
-          Estamos finalizando nossos primeiros programas. Entre na lista para
-          receber acesso antecipado a turmas, aulas abertas e novos materiais.
-        </p>
-      </section>
-
-      {/* HONEST DISCLOSURE */}
-      <section className="bg-paper-deep">
-        <div className="container-editorial py-12 md:py-16 grid gap-8 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold">
-              Sem turma aberta. Sem promessa vazia.
-            </h2>
-          </div>
-          <div className="lg:col-span-7 prose-measure text-ink-soft leading-relaxed space-y-4 text-lg">
-            <p>
-              A formação está em desenvolvimento. Antes de abrir turma, queremos
-              ter o método consolidado, o material maduro e o convite certo
-              para quem leva HUMINT a sério.
-            </p>
-            <p>
-              A lista de interesse não é cobrança. É como organizamos o acesso
-              antecipado a workshops, aulas abertas e novos programas, sem
-              vender nada antes da hora.
-            </p>
-          </div>
+      <PageHeader
+        eyebrow="Formação · Em breve"
+        title="Formação Mundo da HUMINT."
+        lede="Estamos finalizando nossos primeiros programas ao vivo. Entre na lista para receber acesso antecipado a turmas, aulas abertas e novos materiais."
+        breadcrumbs={[{ label: "Formação", href: "/formacao" }]}
+      >
+        <div className="flex flex-col gap-4 border-l-2 border-brand bg-paper-strong p-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[0.9375rem] leading-relaxed text-ink-soft">
+            Quer começar agora? Os cursos e dossiês da Academy já estão disponíveis.
+          </p>
+          <Link href="/academy" className="btn btn-primary btn-sm shrink-0">
+            Ver a Academy
+            <ArrowRight aria-hidden />
+          </Link>
         </div>
-      </section>
+      </PageHeader>
 
-      {/* TEMAS FUTUROS */}
-      <section className="container-editorial py-16 md:py-20">
-        <div className="mb-10 hairline-b pb-3">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold">
-            Programas previstos
-          </h2>
+      <SplitSection id="transparencia" eyebrow="Transparência" title="Sem turma aberta. Sem promessa vazia." tone="strong">
+        <div className="flex max-w-[62ch] flex-col gap-5 text-lg leading-relaxed text-ink-soft">
+          <p>
+            A formação está em desenvolvimento. Antes de abrir turma, queremos ter o método consolidado, o material
+            maduro e o convite certo para quem leva HUMINT a sério.
+          </p>
+          <p>
+            A lista de interesse não é cobrança. É como organizamos o acesso antecipado a workshops, aulas abertas e
+            novos programas, sem vender nada antes da hora.
+          </p>
         </div>
-        <div className="grid gap-px bg-line md:grid-cols-2">
-          {FUTURE_PROGRAMS.map((p) => (
-            <article key={p.title} className="bg-paper-strong p-6 md:p-8 flex flex-col gap-3">
-              <p className="eyebrow">{p.format}</p>
-              <h3 className="font-display text-xl md:text-2xl font-semibold text-balance">{p.title}</h3>
-              <p className="text-ink-muted leading-relaxed">{p.summary}</p>
+      </SplitSection>
+
+      <SplitSection id="programas" eyebrow="Em desenvolvimento" title="Programas previstos.">
+        <div className="grid gap-px border border-line bg-line md:grid-cols-2">
+          {FUTURE_PROGRAMS.map((p, i) => (
+            <article key={p.title} className="flex flex-col gap-3 bg-paper-strong p-6 md:p-8">
+              <p className="flex items-center justify-between gap-4">
+                <span className="eyebrow">{p.format}</span>
+                <span className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-muted">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </p>
+              <h3 className="font-display text-display-sm font-medium text-ink">{p.title}</h3>
+              <p className="text-[0.9375rem] leading-relaxed text-ink-muted">{p.summary}</p>
             </article>
           ))}
         </div>
-      </section>
+      </SplitSection>
 
-      {/* INTEREST FORM */}
-      <section className="bg-deep text-paper">
-        <div className="container-editorial py-16 md:py-24 grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5 min-w-0">
-            <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper text-balance leading-tight">
+      <section className="surface-deep" aria-labelledby="interesse-title">
+        <div className="container-editorial grid gap-10 py-16 md:py-24 lg:grid-cols-12 lg:gap-12">
+          <div className="min-w-0 lg:col-span-5">
+            <p className="kicker">Lista de interesse</p>
+            <h2 id="interesse-title" className="mt-5 font-display text-display-lg font-medium text-fog">
               Acesso antecipado às próximas turmas.
             </h2>
-            <p className="mt-5 text-[var(--color-fog)] leading-relaxed">
-              Avisamos com antecedência sobre aulas abertas, workshops e
-              abertura de programas, na ordem em que forem confirmados.
+            <p className="mt-5 max-w-[44ch] text-[0.9375rem] leading-relaxed text-fog-muted">
+              Avisamos com antecedência sobre aulas abertas, workshops e abertura de programas, na ordem em que
+              forem confirmados.
             </p>
           </div>
-          <div className="lg:col-span-7 min-w-0 bg-paper p-6 md:p-10">
+          <div className="surface-deep-2 min-w-0 border border-line-dark p-6 md:p-10 lg:col-span-7">
             <InterestForm />
           </div>
         </div>

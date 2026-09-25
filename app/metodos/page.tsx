@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import { PageHeader } from "@/components/site/page-header"
+import { AcademyCta } from "@/components/site/academy-cta"
 import { METHODS, METHOD_GROUPS } from "@/lib/content/methods"
 import { pageMetadata } from "@/lib/seo"
 
@@ -14,130 +15,128 @@ export const metadata: Metadata = pageMetadata({
   image: "/images/hero-metodos.jpg",
 })
 
+/** Leitura de aprofundamento de cada método. */
+const FURTHER_READING: Record<string, { href: string; label: string }> = {
+  "fundamentos-de-humint": { href: "/humint", label: "Ler o guia de fundamentos" },
+  "fontes-humanas-e-validacao": { href: "/artigos/validacao-de-fontes-humanas", label: "Ler o protocolo" },
+  "entrevista-e-elicitacao": { href: "/artigos?categoria=metodos-e-tradecraft", label: "Ver artigos de método" },
+  "etica-e-limites": { href: "/principios-editoriais", label: "Ler os princípios" },
+  "humint-e-osint": { href: "/artigos/humint-e-osint-complementaridade-e-limites", label: "Ler a análise" },
+  "boas-praticas-de-pesquisa": { href: "/artigos?categoria=metodos-e-tradecraft", label: "Ver artigos de método" },
+  "leitura-de-contexto": { href: "/artigos?categoria=psicologia-comportamental", label: "Ver artigos de psicologia" },
+  "ciclo-de-inteligencia-aplicado": { href: "/artigos?categoria=fundamentos-de-humint", label: "Ver fundamentos" },
+}
+
 export default function MetodosPage() {
   const startHere = METHODS.find((m) => m.startHere)
 
   return (
     <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Métodos", href: "/metodos" }]} />
-      </section>
-
-      {/* HERO */}
-      <section className="container-editorial py-10 md:py-16 grid gap-10 lg:grid-cols-12 items-center">
-        <div className="lg:col-span-7">
-          <p className="eyebrow-brand">Métodos · Biblioteca viva</p>
-          <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight">
-            Métodos, fundamentos e boas práticas de HUMINT
-          </h1>
-          <p className="mt-5 text-lg text-ink-soft leading-relaxed prose-measure">
-            Referências de método para quem investiga, verifica ou decide com base em fontes humanas. 
-            Cada tema inclui definições, critérios práticos e limites explícitos.
-          </p>
-        </div>
-        <div className="lg:col-span-5">
-          <div className="relative aspect-[4/3] overflow-hidden">
+      <PageHeader
+        eyebrow="Métodos · Biblioteca viva"
+        title="Métodos, fundamentos e boas práticas de HUMINT."
+        lede="Referências de método para quem investiga, verifica ou decide com base em fontes humanas. Cada tema inclui definições, critérios práticos e limites explícitos."
+        breadcrumbs={[{ label: "Métodos", href: "/metodos" }]}
+        aside={
+          <div className="relative aspect-[4/3] overflow-hidden bg-paper-deep">
             <Image
               src="/images/hero-metodos.jpg"
               alt="Caderno aberto com diagramas e anotações manuscritas sobre método de pesquisa."
               fill
-              sizes="(min-width: 1024px) 480px, 100vw"
+              priority
+              sizes="(min-width: 1024px) 520px, 100vw"
               className="object-cover"
             />
           </div>
-        </div>
-      </section>
-
-      {/* COMECE POR AQUI */}
-      {startHere && (
-        <section className="container-editorial py-8 md:py-10">
-          <Link
-            href={`/metodos#${startHere.slug}`}
-            className="group block bg-deep text-paper p-8 md:p-12 hover:bg-[var(--color-deep-2)] transition-colors"
-          >
-            <p className="eyebrow-brand">Comece por aqui</p>
-            <h2 className="mt-3 font-display text-2xl md:text-4xl font-semibold text-balance">
-              {startHere.title}
-            </h2>
-            <p className="mt-3 text-lg text-[var(--color-fog)] leading-relaxed max-w-2xl">
-              {startHere.description}
-            </p>
-            <span className="mt-6 inline-flex items-center gap-2 text-sm text-brand group-hover:text-brand-bright">
-              Iniciar leitura
-              <ArrowRight className="w-4 h-4" />
-            </span>
+        }
+      >
+        {startHere && (
+          <Link href={`#${startHere.slug}`} className="btn btn-ink">
+            Comece por aqui: {startHere.title}
+            <ArrowRight aria-hidden />
           </Link>
-        </section>
-      )}
+        )}
+      </PageHeader>
 
-      {/* GRUPOS */}
-      <section className="container-editorial pb-16 md:pb-24 flex flex-col gap-16">
-        {METHOD_GROUPS.map((group) => {
-          const items = METHODS.filter((m) => m.group === group)
-          return (
-            <div key={group}>
-              <div className="mb-8 hairline-b pb-3">
-                <p className="eyebrow-brand mb-1">Grupo</p>
-                <h2 className="font-display text-2xl md:text-3xl font-semibold">{group}</h2>
-              </div>
-              <div className="grid gap-px bg-line md:grid-cols-2">
-                {items.map((m) => (
-                  <article
-                    key={m.slug}
-                    id={m.slug}
-                    className="bg-paper-strong p-6 md:p-8 hover:bg-paper-deep transition-colors flex flex-col gap-3 scroll-mt-24"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="inline-block bg-paper-deep px-2 py-0.5 text-[10px] font-mono uppercase tracking-widest text-ink-muted">
-                        {m.level}
-                      </span>
-                      {m.startHere && (
-                        <span
-                          className="inline-block bg-brand-soft px-2 py-0.5 text-[10px] font-mono uppercase tracking-widest"
-                          style={{ color: "var(--color-on-brand)" }}
-                        >
-                          Comece aqui
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold text-balance leading-snug">
-                      {m.title}
-                    </h3>
-                    <p className="text-ink-muted leading-relaxed">{m.description}</p>
-                    <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-ink-muted">
-                      Ver artigos relacionados
-                    </span>
-                  </article>
-                ))}
-              </div>
-            </div>
-          )
-        })}
-      </section>
+      <div className="bg-paper">
+        <div className="container-editorial flex flex-col gap-20 py-16 md:py-24">
+          {METHOD_GROUPS.map((group, gi) => {
+            const items = METHODS.filter((m) => m.group === group)
+            return (
+              <section key={group} aria-labelledby={`grupo-${gi}`} className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+                <header className="lg:col-span-3">
+                  <div className="rule-top pt-4 lg:sticky lg:top-28">
+                    <p className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-muted">
+                      {String(gi + 1).padStart(2, "0")}
+                    </p>
+                    <h2 id={`grupo-${gi}`} className="mt-2 font-display text-display-md font-medium text-ink">
+                      {group}
+                    </h2>
+                  </div>
+                </header>
+                <div className="grid gap-px border border-line bg-line md:grid-cols-2 lg:col-span-9">
+                  {items.map((m, idx) => {
+                    const more = FURTHER_READING[m.slug]
+                    const spanLast = items.length % 2 === 1 && idx === items.length - 1
+                    return (
+                      <article
+                        key={m.slug}
+                        id={m.slug}
+                        className={`flex flex-col p-6 md:p-8 ${m.startHere ? "surface-deep" : "bg-paper-strong"} ${spanLast ? "md:col-span-2" : ""}`}
+                      >
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="eyebrow">{m.level}</span>
+                          {m.startHere && (
+                            <span className="bg-brand px-2 py-0.5 font-mono text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-on-brand">
+                              Comece aqui
+                            </span>
+                          )}
+                        </div>
+                        <h3 className="mt-4 font-display text-display-sm font-medium text-tone">{m.title}</h3>
+                        <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-tone-muted">
+                          {m.description}
+                        </p>
+                        {more && (
+                          <Link href={more.href} className="link-arrow mt-6">
+                            {more.label}
+                            <ArrowRight aria-hidden />
+                          </Link>
+                        )}
+                      </article>
+                    )
+                  })}
+                </div>
+              </section>
+            )
+          })}
+        </div>
+      </div>
 
-      {/* Leitura recomendada */}
-      <section className="bg-paper-deep" aria-labelledby="reading-title">
-        <div className="container-editorial py-16 md:py-20 grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <p className="eyebrow-brand">Leitura recomendada</p>
-            <h2 id="reading-title" className="mt-3 font-display text-2xl md:text-4xl font-semibold text-balance">
+      <section className="border-t border-line bg-paper-strong" aria-labelledby="reading-title">
+        <div className="container-editorial grid gap-8 py-14 md:grid-cols-12 md:items-end md:py-16">
+          <div className="md:col-span-8">
+            <p className="kicker">Leitura recomendada</p>
+            <h2 id="reading-title" className="mt-4 font-display text-display-md font-medium text-ink">
               Comece pelos artigos editoriais.
             </h2>
-            <p className="mt-3 text-ink-soft leading-relaxed">
-              Enquanto a biblioteca de métodos cresce, os artigos editoriais já
-              cobrem fundamentos, validação de fontes e a relação entre HUMINT
-              e OSINT.
+            <p className="mt-3 max-w-[60ch] text-[0.9375rem] leading-relaxed text-ink-muted">
+              Enquanto a biblioteca de métodos cresce, os artigos editoriais já cobrem fundamentos, validação de
+              fontes e a relação entre HUMINT e OSINT.
             </p>
-            <Link
-              href="/artigos"
-              className="mt-5 inline-flex items-center gap-2 bg-ink text-paper hover:bg-ink-soft px-5 py-3 text-sm font-medium"
-            >
+          </div>
+          <div className="md:col-span-4 md:text-right">
+            <Link href="/artigos" className="btn btn-outline">
               Ir para os artigos
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight aria-hidden />
             </Link>
           </div>
         </div>
       </section>
+
+      <AcademyCta
+        title="Método aplicado, passo a passo."
+        description="Os cursos e dossiês da Academy transformam estes fundamentos em protocolos, checklists e exercícios práticos."
+      />
     </>
   )
 }

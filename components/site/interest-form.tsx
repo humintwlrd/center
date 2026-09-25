@@ -59,20 +59,20 @@ export function InterestForm() {
     <form onSubmit={onSubmit} className="flex flex-col gap-5">
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="if-nome" className="text-sm font-medium text-ink">
-            Nome <span aria-hidden className="text-brand">*</span>
+          <label htmlFor="if-nome" className="field-label">
+            Nome <span aria-hidden className="text-alert">*</span>
           </label>
           <input
             id="if-nome"
             required
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="if-email" className="text-sm font-medium text-ink">
-            E-mail <span aria-hidden className="text-brand">*</span>
+          <label htmlFor="if-email" className="field-label">
+            E-mail <span aria-hidden className="text-alert">*</span>
           </label>
           <input
             id="if-email"
@@ -80,13 +80,13 @@ export function InterestForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+            className="field"
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="if-perfil" className="text-sm font-medium text-ink">
+        <label htmlFor="if-perfil" className="field-label">
           Sua atuação
         </label>
         <input
@@ -94,19 +94,19 @@ export function InterestForm() {
           value={form.perfil}
           onChange={(e) => setForm((f) => ({ ...f, perfil: e.target.value }))}
           placeholder="Ex.: compliance, jornalismo, pesquisa, segurança"
-          className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+          className="field"
         />
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="if-interesse" className="text-sm font-medium text-ink">
+        <label htmlFor="if-interesse" className="field-label">
           Tema de maior interesse
         </label>
         <select
           id="if-interesse"
           value={form.interesse}
           onChange={(e) => setForm((f) => ({ ...f, interesse: e.target.value }))}
-          className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
+          className="field"
         >
           <option value="fundamentos">Fundamentos de HUMINT</option>
           <option value="entrevista">Entrevista e elicitação</option>
@@ -116,18 +116,18 @@ export function InterestForm() {
         </select>
       </div>
 
-      <label htmlFor="if-consent" className="flex items-start gap-3 text-sm text-ink-soft leading-relaxed cursor-pointer">
+      <label htmlFor="if-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-muted">
         <input
           id="if-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 accent-[var(--color-brand)] shrink-0"
+          className="mt-1 h-4 w-4 shrink-0 accent-brand"
         />
         <span>
           Concordo em receber comunicações sobre a formação do Mundo da HUMINT.
           Posso revogar a qualquer momento. Li a{" "}
-          <Link href="/politica-de-privacidade" className="underline text-brand hover:text-brand-hover">
+          <Link href="/politica-de-privacidade" className="text-tone underline decoration-brand-bright underline-offset-2 hover:decoration-2">
             Política de Privacidade
           </Link>
           .
@@ -143,8 +143,7 @@ export function InterestForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start bg-brand hover:bg-[var(--color-brand-hover)] disabled:bg-[var(--color-line-strong)] px-6 py-3 text-sm font-medium transition-colors"
-        style={{ color: "var(--color-on-brand)" }}
+        className="btn btn-primary btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Entrar na lista de interesse"}
       </button>

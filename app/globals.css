@@ -36,6 +36,7 @@
   --color-deep-2: #121212;
   --color-deep-3: #1b1b1a;
   --color-line-dark: #2a2a28;
+  --color-line-dark-strong: #45453f;
   --color-fog: #ededea;
   --color-fog-muted: #a3a39c;
 
@@ -187,6 +188,8 @@
   --tone-accent: var(--color-brand-bright);
   --tone-line: var(--color-line-dark);
   --tone-rule: var(--color-fog);
+  --tone-line-strong: var(--color-line-dark-strong);
+  --tone-field: var(--color-deep-2);
 }
 
 @utility surface-deep-2 {
@@ -198,6 +201,8 @@
   --tone-accent: var(--color-brand-bright);
   --tone-line: var(--color-line-dark);
   --tone-rule: var(--color-fog);
+  --tone-line-strong: var(--color-line-dark-strong);
+  --tone-field: var(--color-deep);
 }
 
 /* Cores que acompanham o tom da superfície */
@@ -381,6 +386,41 @@
     background-color: var(--tone-fg, var(--color-ink));
     color: var(--tone-bg, var(--color-paper));
   }
+}
+
+/* Campos de formulário (acompanham o tom da superfície) */
+@utility field {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--tone-line-strong, var(--color-line-strong));
+  background-color: var(--tone-field, var(--color-paper-strong));
+  color: var(--tone-fg, var(--color-ink));
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  outline: none;
+  transition:
+    border-color 160ms var(--ease-editorial),
+    box-shadow 160ms var(--ease-editorial);
+
+  &::placeholder {
+    color: var(--tone-muted, var(--color-ink-muted));
+  }
+  &:focus,
+  &:focus-visible {
+    border-color: var(--tone-fg, var(--color-ink));
+    box-shadow: inset 0 0 0 1px var(--tone-fg, var(--color-ink));
+  }
+  &[aria-invalid="true"] {
+    border-color: var(--color-alert);
+  }
+}
+
+@utility field-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--tone-fg, var(--color-ink));
 }
 
 /* Link editorial com seta */

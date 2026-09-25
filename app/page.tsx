@@ -314,9 +314,9 @@ export default function HomePage() {
             href="/artigos"
             linkLabel="Todos os artigos"
           />
-          <ul className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid border-l border-t border-line sm:grid-cols-2 lg:grid-cols-3">
             {themes.map((theme, i) => (
-              <li key={theme.slug} className="bg-paper">
+              <li key={theme.slug} className="border-b border-r border-line">
                 <Link
                   href={`/artigos?categoria=${theme.slug}`}
                   className="group flex h-full flex-col gap-3 p-6 transition-colors hover:bg-paper-strong"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import { PageHeader } from "@/components/site/page-header"
 import { SupportForm } from "@/components/site/support-form"
 import { pageMetadata } from "@/lib/seo"
 
@@ -20,7 +20,7 @@ const HELP = [
     a: "Agradecemos a correção. Informe o título do artigo e o trecho no formulário para que a equipe editorial avalie.",
   },
   {
-    q: "Dúvidas sobre pagamento ou assinatura.",
+    q: "Dúvidas sobre pagamento ou acesso a um curso.",
     a: "Selecione a categoria Pagamentos e inclua a data e o meio usados. Não envie dados completos de cartão.",
   },
 ]
@@ -28,41 +28,29 @@ const HELP = [
 export default function SuportePage() {
   return (
     <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Suporte", href: "/suporte" }]} />
-      </section>
+      <PageHeader
+        eyebrow="Suporte ao aluno"
+        title="Como podemos ajudar?"
+        lede="Envie sua solicitação e a equipe responderá no e-mail informado. Quanto mais claro o assunto, mais rápida a resposta."
+        breadcrumbs={[{ label: "Suporte", href: "/suporte" }]}
+      />
 
-      <section className="container-editorial py-10 md:py-16">
-        <p className="eyebrow-brand">Suporte ao membro</p>
-        <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-3xl">
-          Como podemos ajudar?
-        </h1>
-        <p className="mt-5 text-lg text-ink-soft leading-relaxed prose-measure">
-          Envie sua solicitação e a equipe responderá no e-mail informado.
-          Quanto mais claro o assunto, mais rápida a resposta.
-        </p>
-      </section>
-
-      <section className="container-editorial pb-16 md:pb-20">
-        <div className="max-w-2xl">
-          <SupportForm />
-        </div>
-      </section>
-
-      <section className="bg-paper-deep">
-        <div className="container-editorial py-16 md:py-20">
-          <p className="eyebrow-brand">Ajuda rápida</p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-balance">
-            Situações comuns.
-          </h2>
-          <dl className="mt-10 grid gap-8 md:grid-cols-3">
-            {HELP.map((f) => (
-              <div key={f.q} className="hairline-t pt-5">
-                <dt className="font-display text-lg font-semibold">{f.q}</dt>
-                <dd className="mt-2 text-ink-soft leading-relaxed">{f.a}</dd>
-              </div>
-            ))}
-          </dl>
+      <section className="border-b border-line bg-paper-strong" aria-label="Formulário de suporte">
+        <div className="container-editorial grid gap-12 py-16 md:py-20 lg:grid-cols-12 lg:gap-12">
+          <aside className="lg:col-span-4">
+            <h2 className="rule-top pt-4 font-display text-display-sm font-medium text-ink">Ajuda rápida</h2>
+            <dl className="mt-4">
+              {HELP.map((f) => (
+                <div key={f.q} className="border-b border-line py-5">
+                  <dt className="font-medium text-ink">{f.q}</dt>
+                  <dd className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink-muted">{f.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
+          <div className="lg:col-span-7 lg:col-start-6">
+            <SupportForm />
+          </div>
         </div>
       </section>
     </>

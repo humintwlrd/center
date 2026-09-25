@@ -3,29 +3,31 @@ import { ArrowRight } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <section className="container-editorial py-24 md:py-32">
-      <p className="eyebrow-brand">Erro 404</p>
-      <h1 className="mt-4 font-display text-5xl md:text-6xl font-semibold tracking-tight text-balance">
-        A trilha some aqui.
-      </h1>
-      <p className="mt-6 text-lg text-ink-soft max-w-xl leading-relaxed text-pretty">
-        A página que você procurou não existe, foi movida ou nunca esteve onde
-        a memória sugere. Voltar à apuração é sempre uma boa decisão.
-      </p>
-      <div className="mt-10 flex flex-col sm:flex-row gap-3">
-        <Link
-          href="/"
-          className="inline-flex items-center justify-center gap-2 bg-ink text-paper px-6 py-3 text-sm font-medium hover:bg-ink-soft transition-colors"
+    <section className="bg-paper">
+      <div className="container-editorial grid gap-10 py-24 md:py-36 lg:grid-cols-12">
+        <div className="lg:col-span-8">
+          <p className="kicker">Erro 404</p>
+          <h1 className="mt-6 font-display text-display-2xl font-medium text-ink">A trilha some aqui.</h1>
+          <p className="mt-6 max-w-[52ch] text-lede text-ink-soft">
+            A página que você procurou não existe, foi movida ou nunca esteve onde a memória sugere. Voltar à
+            apuração é sempre uma boa decisão.
+          </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Link href="/" className="btn btn-ink btn-lg">
+              Voltar para a home
+              <ArrowRight aria-hidden />
+            </Link>
+            <Link href="/artigos" className="btn btn-outline btn-lg">
+              Ver artigos
+            </Link>
+          </div>
+        </div>
+        <p
+          aria-hidden
+          className="hidden select-none self-end text-right font-display text-[11rem] font-medium leading-none text-line lg:col-span-4 lg:block"
         >
-          Voltar para a Home
-          <ArrowRight className="h-4 w-4" />
-        </Link>
-        <Link
-          href="/artigos"
-          className="inline-flex items-center justify-center gap-2 border border-ink text-ink px-6 py-3 text-sm font-medium hover:bg-ink hover:text-paper transition-colors"
-        >
-          Ver artigos
-        </Link>
+          404
+        </p>
       </div>
     </section>
   )
