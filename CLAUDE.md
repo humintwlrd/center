@@ -72,7 +72,8 @@ editorial: nada de filetes decorativos, rótulos acima de títulos ou colunas de
 Regras que não se negociam:
 - **Uma família**: Archivo variável (`next/font`, eixo `wdth`). Títulos com `font-expanded`
   (largura 118–125%) e `font-extrabold`; texto corrido em largura normal. Sem serifada, sem mono.
-- **Um acento**: `signal` (#e5252a), reservado a ação (CTA de compra, foco, link ativo) e à tarja liberada.
+- **Um acento**: `signal` (#e5252a), reservado a ação (CTA de compra, foco, link ativo, hover, erro de formulário)
+  e à tarja liberada. Nada de vermelho decorativo: ícones, marcadores, numerais e selos ficam em tinta/branco.
 - **Cantos retos** (radius 0), sem sombras, sem gradiente decorativo (só o escurecimento da foto do hero).
 - **Proibido** (craft floor da skill): eyebrow/kicker acima de título, numeração de seção decorativa,
   borda lateral colorida (>1px) em citação/callout, mono “de fantasia”, cards com ícone em bolha,
@@ -91,13 +92,18 @@ Utilitários próprios (`@utility`):
   scroll-snap alinhados ao container (casos, depoimentos)
 - Tipo: `font-expanded`, `font-condensed`, `tabular`; texto longo `prose-read`
 - Tarjas: `redact` (trecho tarjado que o `Declassify` libera uma vez ao entrar na tela;
-  `data-delay` em ms) e `withheld` (tarja fixa para dado omitido, ex.: nome do instrutor)
+  `data-delay` em ms), `withheld` (tarja fixa para dado omitido, ex.: nome do instrutor) e
+  `bar-mark` (marcador de lista em forma de tarja curta; use no lugar de check/traço)
 - Botões: `btn` + `btn-signal` | `btn-solid` | `btn-line` (+ `btn-sm`/`btn-lg`); link `link-more`
 - Formulários: `field`, `field-label` · Imagem em card: `media-zoom`
 
 Movimento: a liberação da tarja (`components/site/declassify.tsx`, montado no layout) é o
 **único** momento autoral. Respeita `prefers-reduced-motion` e funciona sem JS (texto visível).
-Use no máximo uma tarja por tela, em manchete.
+Use no máximo uma tarja por tela, em manchete. Sem marquee, pulso, scroll-reveal ou ticker animado.
+
+Imagens: capas do Instagram (9:16, com legenda gravada) **nunca** são recortadas; aparecem
+inteiras com `object-contain` sobre `bg-night` dentro do quadro 4:5 (ver `ArticleCard`).
+Números só quando carregam ordem (capítulos de casos, passos de acesso, partes/capítulos).
 
 Componentes de página (reutilize antes de criar markup novo):
 - `PageHeader` (`tone="snow" | "night"`, `size="lg" | "md"`, trilha, h1, linha fina, `aside`)
