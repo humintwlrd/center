@@ -2,6 +2,7 @@
 
 import Script from "next/script"
 import { useEffect, useState } from "react"
+import { readConsent } from "@/lib/consent"
 
 /**
  * Carrega os scripts da Utmify (UTMs + Pixel) somente no domínio oficial.
@@ -24,7 +25,10 @@ export function UtmifyScripts() {
     ])
     const isTopLevelWindow = window.self === window.top
 
-    if (productionHosts.has(window.location.hostname) && isTopLevelWindow) {
+    // Quem escolheu "Só essenciais" no banner do site não recebe o pixel.
+    const refused = readConsent() === "essential"
+
+    if (productionHosts.has(window.location.hostname) && isTopLevelWindow && !refused) {
       setEnabled(true)
     }
   }, [])

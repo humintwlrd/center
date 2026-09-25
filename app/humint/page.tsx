@@ -7,7 +7,6 @@ import { blogPostingSchema, faqSchema } from "@/lib/schema"
 import { JsonLd } from "@/components/site/json-ld"
 import { PageHeader } from "@/components/site/page-header"
 import { AcademyCta } from "@/components/site/academy-cta"
-import { NewsletterInline } from "@/components/site/newsletter-inline"
 
 export const metadata: Metadata = pageMetadata({
   title: "O Que é HUMINT: Inteligência Humana Explicada",
@@ -257,17 +256,6 @@ export default function HumintPage() {
         title="HUMINT com método e ética."
         description="Conteúdo rigoroso, sem sensacionalismo. Na Academy, os fundamentos deste guia viram prática estruturada."
       />
-
-      <section className="bg-snow text-ink" aria-labelledby="news-title">
-        <div className="container-site grid gap-8 border-t border-line py-16 lg:grid-cols-12 lg:items-center lg:gap-16">
-          <h2 id="news-title" className="font-expanded text-heading font-extrabold lg:col-span-6">
-            Receba os próximos guias por e-mail.
-          </h2>
-          <div className="lg:col-span-6">
-            <NewsletterInline />
-          </div>
-        </div>
-      </section>
     </>
   )
 }

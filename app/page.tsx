@@ -2,7 +2,6 @@ import Link from "next/link"
 import Image, { getImageProps } from "next/image"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { SectionHeading } from "@/components/site/section-heading"
-import { NewsletterInline } from "@/components/site/newsletter-inline"
 import { getArticleBySlug, getLatestArticles, type Article } from "@/lib/content/articles"
 import { formatDateBR } from "@/lib/format"
 import { PRODUCTS } from "@/lib/products"
@@ -108,7 +107,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="mt-12 text-sm text-mist-2">
-            Mais de 350 análises publicadas. Instrutor anônimo. Credenciais no seu e-mail em minutos.
+            Mais de 350 análises publicadas. Credenciais no seu e-mail em minutos.
           </p>
         </div>
       </section>
@@ -237,11 +236,6 @@ export default function HomePage() {
               })}
             </ol>
 
-            <p className="mt-8 text-mist">
-              Quem ensina: <span className="withheld w-40" role="img" aria-label="nome omitido" />. O foco está no método,
-              não em quem ensina.
-            </p>
-
             <div className="mt-10">
               <p className="tabular">
                 <span className="text-mist">{acervo.parcelado.split(" de ")[0]} de </span>
@@ -305,16 +299,6 @@ export default function HomePage() {
               </li>
             ))}
           </ol>
-
-          <div className="mt-20 grid gap-8 border-t-2 border-ink pt-10 lg:grid-cols-12 lg:items-center lg:gap-16">
-            <div className="lg:col-span-6">
-              <h2 className="font-expanded text-heading font-extrabold">Uma análise por semana no seu e-mail.</h2>
-              <p className="mt-2 text-ink-2">Casos, métodos e leituras selecionadas. Sem ruído.</p>
-            </div>
-            <div className="lg:col-span-6">
-              <NewsletterInline />
-            </div>
-          </div>
         </div>
       </section>
     </>

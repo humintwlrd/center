@@ -19,7 +19,7 @@ Mundo da HUMINT é uma publicação e uma escola de inteligência humana aplicad
 
 ## Positioning
 
-Método de inteligência humana extraído de práticas e documentos de serviços de inteligência, traduzido para decisões civis (negociação, avaliação de pessoas, proteção de informação), com instrutor anônimo e limites éticos explícitos: não ensina coação, fraude ou manipulação. O enquadramento é o de um acervo confidencial, rastreável e entregue por etapas.
+Método de inteligência humana extraído de práticas e documentos de serviços de inteligência, traduzido para decisões civis (negociação, avaliação de pessoas, proteção de informação), com limites éticos explícitos: não ensina coação, fraude ou manipulação. O enquadramento é o de um acervo confidencial, rastreável e entregue por etapas.
 
 ## Operating Context
 
@@ -40,7 +40,8 @@ Método de inteligência humana extraído de práticas e documentos de serviços
 
 - **Logo atual** "Mundo da HUMINT" com o ícone de cérebro (`public/images/brand/`), mantido como está.
 - **Capas dos produtos** em estilo dossiê sépia (`public/images/shop/*.webp`), mantidas como estão.
-- **Instrutor anônimo** e o enquadramento **"acervo confidencial / material catalogado e rastreável"** fazem parte da identidade.
+- O enquadramento **"acervo confidencial / material catalogado e rastreável"** faz parte da identidade.
+- **Não citar o instrutor nem o anonimato dele** no site (decisão do dono em 2026-09-25): nada de "instrutor anônimo" ou "o foco está no método, não em quem ensina". Nome e rosto também não aparecem.
 - Paleta: não há compromisso (a escolha anterior de preto/branco + verde foi liberada).
 - **Preferência permanente (escolhida pelo usuário):** o padrão da categoria, feito a sério e sem ironia, no nível de acabamento das melhores referências internacionais do nicho, pesquisadas em set/2026:
   - **MasterClass, "The Art of Intelligence"**: página de curso guiada por credencial, cinematográfica, com lista de capítulos. É a régua de estrutura de venda.
@@ -60,6 +61,6 @@ Método de inteligência humana extraído de práticas e documentos de serviços
 
 1. Toda página serve à compra: o conteúdo prova método, a Academy entrega o método.
 2. Provar, não prometer: casos reais, fontes, depoimentos reais; nenhuma alegação que os dados não sustentem.
-3. Discrição é parte do produto: anonimato e tom confidencial, sem sensacionalismo.
+3. Discrição é parte do produto: tom confidencial, sem expor nem comentar quem ensina, sem sensacionalismo.
 4. Ética explícita: leitura e proteção, nunca manipulação.
 5. Celular primeiro *(inferido do tráfego do Instagram)*: o visitante chega de um post e decide em poucos segundos.

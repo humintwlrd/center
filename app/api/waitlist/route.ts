@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { z } from "zod"
+import { postToWebhook } from "@/lib/webhook"
 
 /**
  * Endpoint: POST /api/waitlist
@@ -53,21 +54,17 @@ export async function POST(request: Request) {
   }
 
   try {
-    await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...data,
-        receivedAt: new Date().toISOString(),
-        ip:
-          request.headers.get("x-forwarded-for") ??
-          request.headers.get("x-real-ip") ??
-          null,
-        userAgent: request.headers.get("user-agent") ?? null,
-      }),
+    await postToWebhook(webhookUrl, {
+      ...data,
+      receivedAt: new Date().toISOString(),
+      ip:
+        request.headers.get("x-forwarded-for") ??
+        request.headers.get("x-real-ip") ??
+        null,
+      userAgent: request.headers.get("user-agent") ?? null,
     })
-  } catch {
-    console.error("[waitlist] webhook unavailable")
+  } catch (err) {
+    console.error("[waitlist] webhook unavailable:", err)
     return NextResponse.json(
       { error: "Não foi possível registrar a inscrição agora." },
       { status: 502 },

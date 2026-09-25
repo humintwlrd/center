@@ -209,7 +209,7 @@ components:
 
 **Creative North Star: "O Dossiê Liberado"**
 
-O Mundo da HUMINT é uma escola de inteligência humana apresentada como o site de uma agência. O sistema trabalha com três materiais: preto e branco absolutos, um único vermelho de operação e uma família tipográfica (Archivo variável) que ganha autoridade alargando-se e pesando, não trocando de voz. O confidencial não aparece como fantasia de carimbo. Ele é um sistema: tarjas que escondem um trecho e o liberam uma vez, tarjas permanentes onde a identidade do instrutor fica omitida, tarjas curtas que marcam itens de lista. É o motivo gráfico com origem verdadeira (o documento desclassificado) que o posicionamento pede.
+O Mundo da HUMINT é uma escola de inteligência humana apresentada como o site de uma agência. O sistema trabalha com três materiais: preto e branco absolutos, um único vermelho de operação e uma família tipográfica (Archivo variável) que ganha autoridade alargando-se e pesando, não trocando de voz. O confidencial não aparece como fantasia de carimbo. Ele é um sistema: tarjas que escondem um trecho e o liberam uma vez, tarjas permanentes em trechos omitidos de documento, tarjas curtas que marcam itens de lista. É o motivo gráfico com origem verdadeira (o documento desclassificado) que o posicionamento pede.
 
 A página alterna duas superfícies com funções diferentes. A noite (quase preto) vende: abertura, casos, oferta, ética, cabeçalho e rodapé. O papel branco lê: situação, listas longas, artigos, perguntas no site. Não há moldura, sombra nem canto arredondado. A densidade é de página de venda cinematográfica: seções altas, títulos enormes alinhados à esquerda, fotografia em tela cheia escurecida até a noite, casos reais tratados como capítulos numerados. A recusa confirmada é o portal editorial ou blog genérico: aqui quem organiza a página é o peso do título e a troca de superfície.
 
@@ -219,7 +219,7 @@ O movimento é quase nulo por princípio. Há um só momento autoral, a liberaç
 - Duas superfícies com papéis fixos: noite para vender, papel para ler.
 - Um acento, vermelho sinal, preso a ação e à tarja liberada.
 - Uma família, Archivo variável; a hierarquia sai do eixo de largura (100% a 125%) e do peso (400 a 800).
-- A tarja como sistema gráfico: liberada, permanente (instrutor anônimo) e como marcador de lista.
+- A tarja como sistema gráfico: liberada, permanente (trecho de documento omitido) e como marcador de lista.
 - Plano absoluto: raio 0, sem sombra, profundidade só por troca de tom.
 - Fotografia cinematográfica em tela cheia, escurecida, com cinza parcial liberado no hover.
 - Casos, etapas e partes numerados como capítulos, em algarismos tabulares largos.
@@ -337,7 +337,7 @@ Retangulares, pesados e diretos: parecem um comando, não um enfeite.
 ### Inputs / Fields
 - **Style:** retângulo de 48px de altura, 12px × 16px, 1.5px de contorno no tom de campo da superfície (#8c8c92 no papel, #6b6b70 na noite, ambos acima de 3:1 contra o fundo); fundo branco no papel, e na noite o passo de noite oposto ao da seção. Placeholder no terciário da superfície. Rótulo acima em 0.9375rem, 600.
 - **Focus:** a borda vira Vermelho Sinal em 160ms (mais o contorno de foco global).
-- **Error / Disabled:** `aria-invalid` deixa a borda em Vermelho Sinal; a mensagem aparece abaixo em 0.875rem Vermelho Sinal com `role="alert"`. No boletim, campo e botão sinal ficam colados (gap 0 a partir de 640px).
+- **Error / Disabled:** `aria-invalid` deixa a borda em Vermelho Sinal; a mensagem aparece abaixo em 0.875rem Vermelho Sinal com `role="alert"`.
 
 ### Navigation
 - **Cabeçalho:** sempre noite, fixo, 64px (72px no desktop), filete noturno embaixo. Logo branco à esquerda; links em 0.9375rem, 600, Névoa, que viram branco no hover. O item ativo fica branco com uma barra Vermelho Sinal de 3px na base, que cresce da esquerda em 300ms. À direita, busca (ícone Névoa) e o botão sinal pequeno "Acervo Tático", sempre visível. O fallback do Suspense em `app/layout.tsx` espelha essa estrutura.
@@ -347,7 +347,7 @@ Retangulares, pesados e diretos: parecem um comando, não um enfeite.
 
 ### A Tarja (assinatura)
 O único momento autoral do site. Um trecho curto, sempre as últimas palavras de uma manchete ("com método.", "Brasil.", "antes.", "rastreável."), nasce coberto por uma barra na cor da tinta da superfície (preta no papel, branca na noite) e, quando 60% dele entra na tela, é liberado uma vez após 450ms (700ms na abertura): o texto volta em 420ms com 260ms de atraso, a barra some em 640ms, e fica um sublinhado Vermelho Sinal de 0.1em. O texto está sempre no DOM e acessível; sem JavaScript nada fica escondido, e com `prefers-reduced-motion` o trecho já aparece liberado. No máximo uma tarja por manchete.
-- **Tarja permanente (`withheld`):** barra na cor da tinta onde a identidade do instrutor é omitida ("Quem ensina: ▇▇▇▇"), com `role="img"` e `aria-label="nome omitido"`; também compõe prévias de documento com linhas omitidas.
+- **Tarja permanente (`withheld`):** barra na cor da tinta que substitui um trecho omitido de documento (prévia de capítulo na `/lp`), agrupada num contêiner com `role="img"` e `aria-label` descrevendo a omissão.
 
 ### Marcador de tarja e listas
 Itens de lista afirmativa (destaques, o que está incluso, para quem é, pontos de dossiê) são marcados por `bar-mark`: uma tarja curta de 1.1em × 0.42em, alinhada à primeira linha, que segue o tom da superfície. Listas negativas ("não é para") usam um X de 20px em Tinta Apagada, com o texto também em Tinta Apagada.
@@ -373,7 +373,7 @@ Três linhas empilhadas em Heading estendido, entre filete de 2px em cima e emba
 - **Use** algarismos tabulares em preços e numerais de capítulo; nos cards mostre só o parcelado, com "Cartão ou Pix".
 - **Abra** o checkout em nova aba com `ArrowUpRight` e o aviso "(abre em nova aba)" para leitores de tela.
 - **Coloque** a tarja nas últimas palavras de uma manchete, uma por manchete, com o texto real no DOM.
-- **Preserve** o logo do cérebro e as capas sépia dos produtos exatamente como são; onde o instrutor apareceria, use `withheld`.
+- **Preserve** o logo do cérebro e as capas sépia dos produtos exatamente como são.
 
 ### Don't:
 - **Não use** `box-shadow` nem raio de borda: o sistema é plano e retangular.
@@ -383,5 +383,5 @@ Três linhas empilhadas em Heading estendido, entre filete de 2px em cima e emba
 - **Não expresse** o confidencial com carimbo; o dispositivo do mundo é a tarja.
 - **Não use** Vermelho Sinal como cor de texto corrido sobre a noite (fica abaixo de 4.5:1); na noite, o vermelho como texto só em títulos.
 - **Não recorte** capa do Instagram nem a coloque sobre o papel.
-- **Não mostre** nome ou rosto do instrutor.
+- **Não mostre nem comente** o instrutor: nome, rosto ou anonimato ("instrutor anônimo", "o foco está no método, não em quem ensina").
 - **Não use** os tokens e fontes do mundo editorial anterior (verde `brand`, `paper`, `deep`, Newsreader, Schibsted Grotesk, IBM Plex Mono): eles não existem mais em `app/globals.css`.

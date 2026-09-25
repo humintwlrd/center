@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { PageHeader } from "@/components/site/page-header"
-import { NewsletterInline } from "@/components/site/newsletter-inline"
 import { SplitSection } from "@/components/site/split-section"
 import { BIBLIOGRAPHY, GLOSSARY, QUICK_GUIDES } from "@/lib/content/resources"
 import { pageMetadata } from "@/lib/seo"
@@ -77,17 +76,6 @@ export default function RecursosPage() {
           ))}
         </ul>
       </SplitSection>
-
-      <section className="night" aria-labelledby="news-title">
-        <div className="container-site grid gap-8 py-16 md:py-20 lg:grid-cols-12 lg:items-center lg:gap-16">
-          <h2 id="news-title" className="font-expanded text-title font-extrabold lg:col-span-6">
-            Receba os próximos recursos por e-mail.
-          </h2>
-          <div className="lg:col-span-6">
-            <NewsletterInline />
-          </div>
-        </div>
-      </section>
     </>
   )
 }

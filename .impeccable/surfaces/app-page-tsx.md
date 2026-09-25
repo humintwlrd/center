@@ -25,3 +25,5 @@ FIRST VIEWPORT: Foto do caso da CIA em Pequim em tela cheia, escurecida. À esqu
 FORM: Padrão da categoria feito a sério (saída permanente escolhida pelo usuário), régua MasterClass "The Art of Intelligence", CIA.gov 2021 e SPYSCAPE. Candidato 4 do sorteio (transcrição anotada) recusado pelo usuário. Seed key b07c6030. Motion: a liberação da tarja é o único momento autoral.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+Emenda (2026-09-25): o dono pediu para não citar o instrutor nem o anonimato dele. A tarja permanente fica só para trechos omitidos de documento; o restante do contrato continua valendo.

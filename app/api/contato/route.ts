@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { z } from "zod"
+import { postToWebhook } from "@/lib/webhook"
 
 const Schema = z.object({
   nome: z.string().min(2),
@@ -35,17 +36,13 @@ export async function POST(request: Request) {
   }
 
   try {
-    await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        kind: "contato",
-        ...parsed.data,
-        receivedAt: new Date().toISOString(),
-      }),
+    await postToWebhook(webhookUrl, {
+      kind: "contato",
+      ...parsed.data,
+      receivedAt: new Date().toISOString(),
     })
-  } catch {
-    console.error("[contato] webhook unavailable")
+  } catch (err) {
+    console.error("[contato] webhook unavailable:", err)
     return NextResponse.json(
       { error: "Não foi possível registrar a mensagem agora." },
       { status: 502 },

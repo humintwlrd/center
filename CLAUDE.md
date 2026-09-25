@@ -42,8 +42,8 @@ components/
                            # academy-cta, article-card, breadcrumbs, declassify, formulários
   shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
                            # acervo-detail (página de vendas rica do Acervo)
-  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, depoimentos...)
-  ui/                      # shadcn/ui (não editar à toa)
+  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, depoimentos, utmify)
+  ui/                      # shadcn/ui: só button + carousel (o resto foi removido por falta de uso)
 lib/
   products.ts              # CATÁLOGO da Academy (tipo Product + PRODUCTS + getProductBySlug)
   site.ts                  # SITE (nome/urls) e NAV.primary (menu)
@@ -52,6 +52,8 @@ lib/
     instagram-articles.generated.ts  # GERADO — não editar à mão
     categories.ts methods.ts resources.ts
   seo.ts schema.ts format.ts analytics.ts utils.ts
+  consent.ts               # escolha do banner de cookies (lida por Analytics e pixel)
+  webhook.ts               # postToWebhook: envio dos formulários com checagem de resposta
 data/
   instagram-export.json    # fonte dos artigos do Instagram (entrada do gerador)
 public/images/
@@ -59,7 +61,14 @@ public/images/
   instagram/ carrossel/    # imagens dos artigos
 scripts/
   generate-instagram-articles.mjs   # JSON -> instagram-articles.generated.ts
+.claude/
+  skills/impeccable/       # skill de design usada no redesign (Apache-2.0, ver LICENSE/NOTICE)
+  agents/impeccable-*.md   # revisor final, documentador etc. da skill
 ```
+
+Na raiz há um **pacote de atualização não aplicado** (`APLICAR.md`, `CHANGES.diff`, `page.tsx`,
+`instagram-export.json`): transcrições OCR dos carrosséis de 50 posts. O OCR tem muito ruído
+("E a a Res Roso oficio..."); não aplique sem revisar o texto à mão.
 
 ## Design system (em `app/globals.css`; registro completo em `DESIGN.md`)
 
@@ -92,7 +101,7 @@ Utilitários próprios (`@utility`):
   scroll-snap alinhados ao container (casos, depoimentos)
 - Tipo: `font-expanded`, `tabular`; texto longo `prose-read`
 - Tarjas: `redact` (trecho tarjado que o `Declassify` libera uma vez ao entrar na tela;
-  `data-delay` em ms), `withheld` (tarja fixa para dado omitido, ex.: nome do instrutor) e
+  `data-delay` em ms), `withheld` (tarja fixa para trecho omitido, ex.: prévia de documento na /lp) e
   `bar-mark` (marcador de lista em forma de tarja curta; use no lugar de check/traço)
 - Botões: `btn` + `btn-signal` | `btn-solid` | `btn-line` (+ `btn-sm`/`btn-lg`); link `link-more`
 - Formulários: `field`, `field-label` · Imagem em card: `media-zoom`
@@ -140,11 +149,23 @@ Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente core
 3. Isso reescreve `lib/content/instagram-articles.generated.ts` (NÃO edite esse arquivo à mão).
 Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/instagram/`.
 
+## Privacidade e formulários
+
+- Banner de cookies grava a escolha em `localStorage` (`lib/consent.ts`). "Só essenciais" desliga
+  o Vercel Analytics (`components/site/site-analytics.tsx`) e o pixel da Utmify na `/pv`.
+  O banner não aparece na `/pv` (decisão de conversão, ver `app/pv/pv.css`).
+- Rotas de formulário (`app/api/*`) enviam para webhooks via `postToWebhook`: só respondem
+  sucesso se o webhook devolver 2xx em até 10 s.
+
 ## Convenções e cuidados
 
 - **Preços parcelados** nos cards (sem preço cheio); selo Cartão · Pix; CTAs de compra em nova aba.
 - **`/lp` é intocável** salvo pedido explícito (o redesign de 2026 foi pedido pelo dono).
 - Não editar `lib/content/instagram-articles.generated.ts` nem `components/ui/*` sem necessidade.
+  Para um componente shadcn novo, adicione só o que for usar (`pnpm dlx shadcn@latest add <nome>`).
+- Mudanças de design: siga a skill impeccable (`.claude/skills/impeccable`) e o `DESIGN.md`.
+- **Não cite o instrutor nem o anonimato dele** (nada de "instrutor anônimo" ou "o foco está no
+  método, não em quem ensina"). Também não mostre nome ou rosto.
 - Mantenha **fim de linha LF**.
 - O header é fixo (`sticky`) e renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx`
   (`HeaderFallback`). Ao mudar o header/CTA, ajuste **os dois** (fallback + `components/site/site-header.tsx`).
