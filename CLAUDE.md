@@ -90,7 +90,7 @@ Utilitários próprios (`@utility`):
   Cores que seguem o tom: `text-tone`, `text-tone-2`, `text-tone-3`, `border-tone`
 - Layout: `container-site` (máx. 1360px); `rail` + `scroller` para trilhos horizontais com
   scroll-snap alinhados ao container (casos, depoimentos)
-- Tipo: `font-expanded`, `font-condensed`, `tabular`; texto longo `prose-read`
+- Tipo: `font-expanded`, `tabular`; texto longo `prose-read`
 - Tarjas: `redact` (trecho tarjado que o `Declassify` libera uma vez ao entrar na tela;
   `data-delay` em ms), `withheld` (tarja fixa para dado omitido, ex.: nome do instrutor) e
   `bar-mark` (marcador de lista em forma de tarja curta; use no lugar de check/traço)

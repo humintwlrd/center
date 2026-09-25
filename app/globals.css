@@ -54,7 +54,7 @@
   --color-destructive: #e5252a;
   --color-destructive-foreground: #ffffff;
   --color-border: #e3e3e5;
-  --color-input: #cfcfd3;
+  --color-input: #8c8c92;
   --color-ring: #e5252a;
 
   --radius: 0;
@@ -179,7 +179,7 @@
   --tone-3: var(--color-mist-2);
   --tone-line: var(--color-line-night);
   --tone-field: var(--color-night-2);
-  --tone-field-line: #45454a;
+  --tone-field-line: #6b6b70;
   --redact-bar: #ffffff;
 }
 
@@ -193,7 +193,7 @@
   --tone-3: var(--color-mist-2);
   --tone-line: var(--color-line-night);
   --tone-field: var(--color-night);
-  --tone-field-line: #45454a;
+  --tone-field-line: #6b6b70;
   --redact-bar: #ffffff;
 }
 
@@ -229,9 +229,6 @@
 
 @utility font-expanded {
   font-stretch: 125%;
-}
-@utility font-condensed {
-  font-stretch: 75%;
 }
 
 /* =========================================================
@@ -387,7 +384,7 @@
   width: 100%;
   min-height: 3rem;
   padding: 0.75rem 1rem;
-  border: 1.5px solid var(--tone-field-line, #cfcfd3);
+  border: 1.5px solid var(--tone-field-line, #8c8c92);
   background-color: var(--tone-field, #ffffff);
   color: var(--tone-fg, var(--color-ink));
   font-size: 1rem;

@@ -642,7 +642,7 @@ export default function LandingPage() {
             {FAQ.map((item) => (
               <details key={item.q} className="group border-b border-line">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
-                  <span className="text-lg font-bold transition-colors group-hover:text-signal">{item.q}</span>
+                  <span className="text-lg font-bold decoration-signal decoration-2 underline-offset-4 group-hover:underline">{item.q}</span>
                   <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
                 </summary>
                 <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{item.a}</p>
