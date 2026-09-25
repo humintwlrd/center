@@ -27,7 +27,7 @@ export function MobileStickyCta() {
 
   return (
     <div
-      className={`md:hidden fixed bottom-0 inset-x-0 z-40 transition-transform duration-500 ${
+      className={`md:hidden fixed bottom-0 inset-x-0 z-40 transition-transform duration-300 ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}

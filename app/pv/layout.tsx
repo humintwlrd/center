@@ -6,7 +6,7 @@ import "./pv.css"
 export const metadata: Metadata = {
   title: "Acervo Tático de Inteligência Humana",
   description:
-    "O primeiro acervo tático brasileiro de Inteligência Humana: análise comportamental, comunicação estratégica, contrainteligência e leitura de pessoas.",
+    "Inteligência humana de operações reais, traduzida para as suas decisões: análise comportamental, comunicação estratégica, contrainteligência e leitura de pessoas.",
   alternates: {
     canonical: `${SITE.url}/pv`,
   },

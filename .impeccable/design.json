@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-25T04:29:04+00:00",
+  "generatedAt": "2026-09-25T12:00:00+00:00",
   "title": "Design System: Mundo da HUMINT",
   "extensions": {
     "colorMeta": {
@@ -235,7 +235,7 @@
     "typographyMeta": {
       "mega": {
         "displayName": "Mega",
-        "purpose": "Manchete da abertura e uma ou duas declarações por página; medida de 13 a 18ch."
+        "purpose": "Manchete da abertura e uma ou duas declarações por página (ética do Acervo, a citação principal de um depoimento); medida de 13 a 18ch."
       },
       "display": {
         "displayName": "Display",
@@ -403,7 +403,7 @@
       "name": "A Tarja",
       "kind": "custom",
       "refersTo": "redact-bar-night",
-      "description": "Assinatura do sistema: as últimas palavras da manchete sob uma barra na cor da tinta, liberadas uma vez ao entrar na tela, deixando um sublinhado vermelho. No painel, hover ou foco simula a liberação.",
+      "description": "Assinatura do sistema: as últimas palavras da manchete, ou o preço final de uma oferta depois da comparação, sob uma barra na cor da tinta, liberados uma vez ao entrar na tela, deixando um sublinhado vermelho. No painel, hover ou foco simula a liberação.",
       "html": "<div class=\"ds-redact-demo\" tabindex=\"0\"><h2 class=\"ds-redact-title\">Inteligência humana aplicada, <span class=\"ds-redact\">com método.</span></h2><p class=\"ds-redact-withheld\">Documento: <span class=\"ds-withheld\" role=\"img\" aria-label=\"trecho omitido\"></span></p></div>",
       "css": ".ds-redact-demo { padding: 2.5rem 2rem; background: var(--color-night, #0b0b0c); color: #ffffff; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-redact-title { margin: 0; max-width: 13ch; font-size: clamp(2.25rem, 1.25rem + 3.8vw, 4.5rem); font-weight: 800; font-stretch: 125%; line-height: 0.98; letter-spacing: -0.03em; } .ds-redact { -webkit-box-decoration-break: clone; box-decoration-break: clone; color: transparent; background-color: #ffffff; background-image: linear-gradient(var(--color-signal, #e5252a), var(--color-signal, #e5252a)); background-repeat: no-repeat; background-position: 0 92%; background-size: 100% 0.1em; transition: color 420ms cubic-bezier(0.16, 1, 0.3, 1) 260ms, background-color 640ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-redact-demo:hover .ds-redact, .ds-redact-demo:focus-visible .ds-redact { color: inherit; background-color: transparent; } .ds-redact-demo:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-redact-withheld { margin: 1.5rem 0 0; color: var(--color-mist, #b6b6ba); font-size: 1rem; } .ds-withheld { display: inline-block; width: 10rem; height: 0.9em; vertical-align: -0.08em; background: #ffffff; } @media (prefers-reduced-motion: reduce) { .ds-redact { color: inherit; background-color: transparent; transition: none; } }"
     },
@@ -490,7 +490,7 @@
       "**Mostre** capas do Instagram inteiras, `object-contain` sobre `bg-night`, dentro do quadro.",
       "**Use** algarismos tabulares em preços e numerais de capítulo; nos cards mostre só o parcelado, com \"Cartão ou Pix\".",
       "**Abra** o checkout em nova aba com `ArrowUpRight` e o aviso \"(abre em nova aba)\" para leitores de tela.",
-      "**Coloque** a tarja nas últimas palavras de uma manchete, uma por manchete, com o texto real no DOM.",
+      "**Coloque** a tarja nas últimas palavras de uma manchete ou no preço final de uma oferta depois da comparação, uma por manchete ou valor, com o texto real no DOM.",
       "**Preserve** o logo do cérebro e as capas sépia dos produtos exatamente como são."
     ],
     "donts": [

@@ -172,7 +172,7 @@ export default function AcervoTaticoPage() {
         <div className="container-site grid gap-12 pb-16 md:pb-24 lg:grid-cols-12 lg:items-center lg:gap-16">
           <div className="lg:col-span-7">
             <h1 className="font-expanded text-display font-extrabold">
-              O primeiro e único acervo tático de Inteligência Humana do <span className="redact">Brasil.</span>
+              Inteligência humana de operações reais, traduzida para as <span className="redact">suas decisões.</span>
             </h1>
             <p className="mt-7 max-w-[52ch] text-lede text-mist">
               Aprenda a identificar intenções ocultas, extrair informações sem resistência e antecipar comportamentos
