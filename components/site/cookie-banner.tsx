@@ -35,35 +35,33 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-label="Aviso de cookies"
-      className="fixed inset-x-0 bottom-0 z-50 px-4 pb-4"
+      className="fixed inset-x-0 bottom-0 z-50 p-3 sm:p-4"
     >
-      <div className="mx-auto max-w-4xl bg-deep text-warm shadow-lg">
-        <div className="p-5 sm:p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-          <p className="text-sm leading-relaxed flex-1">
-            Usamos cookies essenciais para o funcionamento do site. Cookies
-            opcionais ajudam a entender a leitura e melhorar conteúdos. Você
+      <div className="surface-deep mx-auto max-w-4xl border border-line-dark">
+        <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6">
+          <p className="flex-1 text-sm leading-relaxed text-fog-muted">
+            <span className="text-fog">Usamos cookies essenciais</span> para o funcionamento
+            do site. Cookies opcionais ajudam a entender a leitura e melhorar conteúdos. Você
             decide.{" "}
             <Link
               href="/politica-de-privacidade"
-              className="underline text-gold hover:text-[var(--color-gold-soft)]"
+              className="text-fog underline decoration-brand-bright underline-offset-4 hover:text-brand-bright"
             >
               Política de privacidade
             </Link>
-            .
           </p>
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex shrink-0 items-center gap-2">
             <button
               type="button"
               onClick={() => setConsent("essential")}
-              className="px-3 py-2 text-sm border border-[var(--color-warm-text)] text-[var(--color-warm-text)] hover:bg-[var(--color-deep-2)]"
+              className="btn btn-outline btn-sm"
             >
               Apenas essenciais
             </button>
             <button
               type="button"
               onClick={() => setConsent("all")}
-              className="px-3 py-2 text-sm bg-gold"
-              style={{ color: "var(--color-on-gold)" }}
+              className="btn btn-primary btn-sm"
             >
               Aceitar todos
             </button>

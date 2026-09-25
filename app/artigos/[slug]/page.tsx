@@ -4,8 +4,10 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Fragment, type ReactNode } from "react"
 import { ArticleCard } from "@/components/site/article-card"
+import { AcademyCta } from "@/components/site/academy-cta"
 import { Breadcrumbs } from "@/components/site/breadcrumbs"
 import { JsonLd } from "@/components/site/json-ld"
+import { SectionHeading } from "@/components/site/section-heading"
 import { ShareButtons } from "@/components/site/share-buttons"
 import {
   ARTICLES,
@@ -83,7 +85,7 @@ function highlightEntities(text: string): ReactNode {
     used.add(key)
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index))
     parts.push(
-      <strong key={`${key}-${match.index}`} className="font-semibold text-ink">
+      <strong key={`${key}-${match.index}`}>
         {match[0]}
       </strong>,
     )
@@ -131,7 +133,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
         <blockquote key={i}>
           {highlightEntities(block.text)}
           {block.cite && (
-            <cite className="block mt-3 text-sm font-mono uppercase tracking-widest text-ink-muted not-italic">
+            <cite className="mt-3 block font-sans text-xs font-medium not-italic uppercase tracking-[0.14em] text-ink-muted">
               — {block.cite}
             </cite>
           )}
@@ -141,10 +143,10 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
       return (
         <aside
           key={i}
-          className="my-6 bg-paper-strong border-l-4 border-gold p-5 text-ink-soft"
+          className="my-8 border-l-2 border-brand bg-paper-strong p-5 font-sans text-base md:p-6"
           role="note"
         >
-          <p className="eyebrow-gold mb-1.5">Nota</p>
+          <p className="eyebrow-brand mb-2">Nota</p>
           <p className="leading-relaxed text-ink">{highlightEntities(block.text)}</p>
         </aside>
       )
@@ -152,7 +154,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
       return (
         <div
           key={i}
-          className="my-8 grid grid-cols-2 sm:grid-cols-3 gap-2"
+          className="my-10 grid grid-cols-2 gap-2 sm:grid-cols-3"
           role="group"
           aria-label="Slides do post original"
         >
@@ -163,7 +165,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
               src={img.src || "/placeholder.svg"}
               alt={img.alt}
               loading="lazy"
-              className="block w-full h-auto border border-line bg-deep"
+              className="block h-auto w-full border border-line bg-paper-deep"
             />
           ))}
         </div>
@@ -220,346 +222,254 @@ export default async function ArtigoPage({ params }: Props) {
     }),
   ])
 
+  const portrait = isInstagramImage(article.heroImage)
+
   return (
     <article itemScope itemType="https://schema.org/Article">
       <JsonLd data={graph} />
 
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs
-          items={[
-            { label: "Artigos", href: "/artigos" },
-            { label: article.categoryLabel, href: `/artigos?categoria=${article.category}` },
-          ]}
-        />
-      </section>
+      <header className="border-b border-line bg-paper">
+        <div className="container-editorial pt-8 pb-12 md:pt-10 md:pb-16">
+          <Breadcrumbs
+            schema={false}
+            items={[
+              { label: "Artigos", href: "/artigos" },
+              { label: article.categoryLabel, href: `/artigos?categoria=${article.category}` },
+            ]}
+          />
 
-      <header className="container-editorial pt-8 pb-10 md:pb-12">
-        <p className="eyebrow-gold">
-          <Link
-            href={`/artigos?categoria=${article.category}`}
-            rel="category tag"
-            className="hover:text-gold-hover"
-            itemProp="articleSection"
-          >
-            {article.categoryLabel}
-          </Link>
-        </p>
-        <h1
-          className="mt-3 font-display text-3xl md:text-5xl lg:text-6xl font-semibold text-balance leading-[1.1] max-w-4xl"
-          itemProp="headline"
-        >
-          {article.title}
-        </h1>
-        <p
-          className="mt-5 text-lg md:text-xl text-ink-soft leading-relaxed prose-measure"
-          itemProp="description"
-        >
-          {highlightEntities(article.description)}
-        </p>
-        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono uppercase tracking-widest text-ink-muted hairline-t pt-5">
-          <address
-            className="not-italic"
-            itemProp="author"
-            itemScope
-            itemType="https://schema.org/Person"
-          >
-            Por <span itemProp="name">{article.author}</span>
-          </address>
-          <span aria-hidden="true">·</span>
-          <span>
-            Publicado em{" "}
-            <time dateTime={article.publishedAt} itemProp="datePublished">
-              {formatDateLongBR(article.publishedAt)}
-            </time>
-          </span>
-          {article.updatedAt && article.updatedAt !== article.publishedAt && (
-            <>
-              <span aria-hidden="true">·</span>
-              <span className="text-gold-active">
-                Atualizado em{" "}
-                <time dateTime={article.updatedAt} itemProp="dateModified">
-                  {formatDateLongBR(article.updatedAt)}
-                </time>
-              </span>
-            </>
-          )}
-          <span aria-hidden="true">·</span>
-          <span>{article.readingTime} de leitura</span>
+          <div className="mt-10 grid gap-10 md:mt-14 lg:grid-cols-12 lg:items-end lg:gap-12">
+            <div className="lg:col-span-7">
+              <p className="kicker">
+                <Link
+                  href={`/artigos?categoria=${article.category}`}
+                  rel="category tag"
+                  className="transition-colors hover:text-brand"
+                  itemProp="articleSection"
+                >
+                  {article.categoryLabel}
+                </Link>
+              </p>
+              <h1
+                className="mt-5 font-display text-display-xl font-medium text-ink"
+                itemProp="headline"
+              >
+                {article.title}
+              </h1>
+              <p className="mt-6 max-w-[58ch] text-lede text-ink-soft" itemProp="description">
+                {article.description}
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line pt-5 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-muted">
+                <address
+                  className="not-italic text-ink"
+                  itemProp="author"
+                  itemScope
+                  itemType="https://schema.org/Person"
+                >
+                  Por <span itemProp="name">{article.author}</span>
+                </address>
+                <span>
+                  <time dateTime={article.publishedAt} itemProp="datePublished">
+                    {formatDateLongBR(article.publishedAt)}
+                  </time>
+                </span>
+                {article.updatedAt && article.updatedAt > article.publishedAt && (
+                  <span className="text-brand">
+                    Atualizado em{" "}
+                    <time dateTime={article.updatedAt} itemProp="dateModified">
+                      {formatDateLongBR(article.updatedAt)}
+                    </time>
+                  </span>
+                )}
+                <span>{article.readingTime} de leitura</span>
+              </div>
+            </div>
+
+            <figure className="m-0 lg:col-span-5">
+              <div
+                className={`relative w-full overflow-hidden bg-paper-deep ${
+                  portrait ? "aspect-[4/5]" : "aspect-[4/3] lg:aspect-square"
+                }`}
+              >
+                <Image
+                  src={article.heroImage || "/placeholder.svg"}
+                  alt={article.heroAlt}
+                  fill
+                  sizes="(min-width: 1024px) 520px, 100vw"
+                  priority
+                  className="object-cover"
+                  style={{ objectPosition: portrait ? "center 38%" : "center" }}
+                  itemProp="image"
+                />
+              </div>
+              <figcaption className="sr-only">{article.heroAlt}</figcaption>
+            </figure>
+          </div>
         </div>
       </header>
 
-      <figure className="container-editorial m-0">
-        {isInstagramImage(article.heroImage) ? (
-          <>
-            {/* Mobile: proporção original da imagem do post */}
-            <div className="md:hidden w-full bg-deep">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={article.heroImage || "/placeholder.svg"}
-                alt={article.heroAlt}
-                className="block w-full h-auto"
-                fetchPriority="high"
-                itemProp="image"
-              />
-            </div>
-            {/* Desktop: enquadramento editorial 16:9 */}
-            <div className="hidden md:block relative aspect-[16/9] w-full overflow-hidden bg-deep">
-              <Image
-                src={article.heroImage}
-                alt={article.heroAlt}
-                fill
-                sizes="(min-width: 1280px) 1200px, 100vw"
-                priority
-                fetchPriority="high"
-                className="object-cover"
-                itemProp="image"
-              />
-            </div>
-          </>
-        ) : (
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-deep">
-            <Image
-              src={article.heroImage}
-              alt={article.heroAlt}
-              fill
-              sizes="(min-width: 1280px) 1200px, 100vw"
-              priority
-              fetchPriority="high"
-              className="object-cover"
-              itemProp="image"
-            />
-          </div>
-        )}
-        <figcaption className="sr-only">{article.heroAlt}</figcaption>
-      </figure>
-
-      <div className="container-editorial py-12 md:py-16 grid gap-10 lg:grid-cols-12">
-        <aside
-          className="lg:col-span-3 order-2 lg:order-1"
-          aria-label="Compartilhar e tags do artigo"
-        >
-          <div className="lg:sticky lg:top-24 flex flex-col gap-6">
-            <section aria-labelledby="share-heading">
-              <h2 id="share-heading" className="eyebrow mb-3">
-                Compartilhar
-              </h2>
-              <ShareButtons url={url} title={article.title} />
-            </section>
-            <section aria-labelledby="tags-heading" className="hairline-t pt-5">
-              <h2 id="tags-heading" className="eyebrow mb-3">
-                Tags
-              </h2>
-              <ul className="flex flex-wrap gap-1.5">
-                {article.tags.map((t) => (
-                  <li key={t}>
-                    <Link
-                      href={`/artigos?tag=${encodeURIComponent(t.toLowerCase())}`}
-                      rel="tag"
-                      className="inline-block bg-paper-strong border border-line px-2 py-0.5 text-[11px] font-mono uppercase tracking-widest text-ink-soft hover:text-ink"
-                    >
-                      {t}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          </div>
-        </aside>
-
-        <div className="lg:col-span-9 order-1 lg:order-2">
-          <section
-            aria-label="Corpo do artigo"
-            className="article-prose max-w-[68ch]"
-            itemProp="articleBody"
-          >
-            {article.body.map((block, i) => renderBlock(block, i))}
-          </section>
-
-          {/* Transparência metodológica */}
-          {article.methodology && (
-            <section
-              aria-labelledby="methodology-heading"
-              className="mt-12 bg-paper-deep p-6 md:p-8 max-w-[68ch]"
-            >
-              <h2 id="methodology-heading" className="eyebrow-gold mb-2">
-                Transparência metodológica
-              </h2>
-              <p className="text-ink-soft leading-relaxed">{article.methodology}</p>
-            </section>
-          )}
-
-          {/* Fontes e referências */}
-          {article.sources && article.sources.length > 0 && (
-            <section
-              aria-labelledby="sources-heading"
-              className="mt-8 max-w-[68ch]"
-            >
-              <h2
-                id="sources-heading"
-                className="font-display text-xl font-semibold mb-3"
-              >
-                Fontes e referências
-              </h2>
-              <ol className="space-y-2 text-sm text-ink-soft list-decimal pl-5">
-                {article.sources.map((s, i) => (
-                  <li key={i} className="pl-1">
-                    <span className="inline-flex items-baseline gap-3">
-                      {s.type && (
-                        <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted shrink-0">
-                          {s.type}
-                        </span>
-                      )}
-                      {s.url ? (
-                        <a
-                          href={s.url}
-                          className="underline text-gold-active hover:text-gold-hover"
-                          rel="noopener nofollow external"
-                          target="_blank"
+      <div className="bg-paper">
+        <div className="container-editorial grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-12">
+          <aside className="order-2 lg:order-1 lg:col-span-3" aria-label="Compartilhar e tags do artigo">
+            <div className="flex flex-col gap-8 lg:sticky lg:top-28">
+              <section aria-labelledby="share-heading">
+                <h2 id="share-heading" className="eyebrow mb-3">
+                  Compartilhar
+                </h2>
+                <ShareButtons url={url} title={article.title} />
+              </section>
+              {article.tags.length > 0 && (
+                <section aria-labelledby="tags-heading" className="border-t border-line pt-6">
+                  <h2 id="tags-heading" className="eyebrow mb-3">
+                    Tags
+                  </h2>
+                  <ul className="flex flex-wrap gap-1.5">
+                    {article.tags.map((t) => (
+                      <li key={t}>
+                        <Link
+                          href={`/artigos?tag=${encodeURIComponent(t.toLowerCase())}`}
+                          rel="tag"
+                          className="inline-block border border-line bg-paper-strong px-2 py-1 font-mono text-[0.625rem] uppercase tracking-[0.12em] text-ink-soft transition-colors hover:border-ink hover:text-ink"
                         >
-                          {s.label}
-                        </a>
-                      ) : (
-                        <cite className="not-italic">{s.label}</cite>
-                      )}
-                    </span>
-                  </li>
-                ))}
-              </ol>
+                          {t}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+            </div>
+          </aside>
+
+          <div className="order-1 min-w-0 lg:order-2 lg:col-span-8 xl:col-span-7">
+            <section aria-label="Corpo do artigo" className="article-prose" itemProp="articleBody">
+              {article.body.map((block, i) => renderBlock(block, i))}
             </section>
-          )}
 
-          {/* Correções */}
-          {article.corrections && article.corrections.length > 0 && (
-            <section
-              aria-labelledby="corrections-heading"
-              className="mt-8 max-w-[68ch] hairline-t pt-5"
-            >
-              <h2 id="corrections-heading" className="eyebrow mb-3">
-                Correções
-              </h2>
-              <ul className="space-y-2 text-sm text-ink-soft">
-                {article.corrections.map((c, i) => (
-                  <li key={i}>
-                    <time
-                      dateTime={c.date}
-                      className="font-mono text-xs text-ink-muted"
-                    >
-                      {c.date}
-                    </time>
-                    {": "}
-                    {c.note}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          <footer className="mt-12 space-y-8">
-            {/* Author card como <address> com itemProp Person */}
-            <address
-              className="bg-paper-strong p-6 md:p-8 hairline-y max-w-[68ch] flex items-start gap-5 not-italic"
-              itemProp="author"
-              itemScope
-              itemType="https://schema.org/Person"
-            >
-              <div
-                aria-hidden="true"
-                className="w-14 h-14 bg-deep text-paper flex items-center justify-center font-display text-lg shrink-0"
-              >
-                {authorInitials(article.author)}
-              </div>
-              <div>
-                <p className="eyebrow mb-1">Sobre o autor</p>
-                <h2
-                  className="font-display text-lg font-semibold"
-                  itemProp="name"
-                >
-                  {article.author}
-                </h2>
-                <p
-                  className="mt-1.5 text-sm text-ink-muted leading-relaxed"
-                  itemProp="description"
-                >
-                  {article.authorBio}
-                </p>
-              </div>
-            </address>
-
-            {originalInstagramUrl && (
+            {article.methodology && (
               <section
-                aria-labelledby="post-original-heading"
-                className="max-w-[68ch] border border-line bg-paper-strong p-6 md:p-7"
+                aria-labelledby="methodology-heading"
+                className="mt-14 border-l-2 border-brand bg-paper-strong p-6 md:p-8"
               >
-                <p className="eyebrow-gold">Post original</p>
-                <h2
-                  id="post-original-heading"
-                  className="mt-2 font-display text-xl font-semibold"
-                >
-                  Veja a publicação que originou este artigo.
+                <h2 id="methodology-heading" className="eyebrow-brand mb-3">
+                  Transparência metodológica
                 </h2>
-                <p className="mt-2 text-sm text-ink-muted leading-relaxed">
-                  O link abre o post respectivo no Instagram, preservando a fonte
-                  original do acervo.
-                </p>
-                <a
-                  href={originalInstagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow external"
-                  className="mt-5 inline-flex items-center justify-center border border-ink px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-paper"
-                >
-                  Abrir post no Instagram
-                </a>
+                <p className="leading-relaxed text-ink-soft">{article.methodology}</p>
               </section>
             )}
 
-            <section
-              aria-labelledby="vip-cta-heading"
-              className="bg-deep text-paper p-6 md:p-8 max-w-[68ch]"
-            >
-              <p className="eyebrow-gold">Academy</p>
-              <h2
-                id="vip-cta-heading"
-                className="mt-2 font-display text-2xl font-semibold text-balance"
-              >
-                Vá além com os cursos da Academy do Mundo da HUMINT.
-              </h2>
-              <p className="mt-2 text-[var(--color-warm-text)] leading-relaxed">
-                Conheça a Academy: cursos e materiais para aplicar inteligência
-                humana na prática, do comportamento à operação.
-              </p>
-              <Link
-                href="/academy"
-                className="mt-6 inline-flex items-center justify-center bg-gold px-5 py-3 text-sm font-semibold text-deep transition-colors hover:bg-gold-hover"
-              >
-                Conhecer a Academy
-              </Link>
-            </section>
-          </footer>
+            {article.sources && article.sources.length > 0 && (
+              <section aria-labelledby="sources-heading" className="mt-14">
+                <h2 id="sources-heading" className="rule-top pt-4 font-display text-display-sm font-medium">
+                  Fontes e referências
+                </h2>
+                <ol className="mt-5 flex flex-col gap-3 text-[0.9375rem] text-ink-soft">
+                  {article.sources.map((s, i) => (
+                    <li key={i} className="grid grid-cols-[2rem_1fr] gap-2 border-b border-line pb-3">
+                      <span className="font-mono text-[0.6875rem] tracking-[0.12em] text-ink-muted">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span>
+                        {s.url ? (
+                          <a
+                            href={s.url}
+                            className="underline decoration-brand underline-offset-2 transition-colors hover:text-brand"
+                            rel="noopener nofollow external"
+                            target="_blank"
+                          >
+                            {s.label}
+                          </a>
+                        ) : (
+                          <cite className="not-italic">{s.label}</cite>
+                        )}
+                        {s.type && (
+                          <span className="ml-2 font-mono text-[0.625rem] uppercase tracking-[0.12em] text-ink-muted">
+                            {s.type}
+                          </span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )}
+
+            {article.corrections && article.corrections.length > 0 && (
+              <section aria-labelledby="corrections-heading" className="mt-10 border-t border-line pt-5">
+                <h2 id="corrections-heading" className="eyebrow mb-3">
+                  Correções
+                </h2>
+                <ul className="flex flex-col gap-2 text-sm text-ink-soft">
+                  {article.corrections.map((c, i) => (
+                    <li key={i}>
+                      <time dateTime={c.date} className="font-mono text-xs text-ink-muted">
+                        {c.date}
+                      </time>
+                      {": "}
+                      {c.note}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            <footer className="mt-14 grid gap-6">
+              <div className="flex items-start gap-5 border-y border-line py-6">
+                <div
+                  aria-hidden="true"
+                  className="flex h-14 w-14 shrink-0 items-center justify-center bg-ink font-display text-lg text-paper"
+                >
+                  {authorInitials(article.author)}
+                </div>
+                <div>
+                  <p className="eyebrow mb-1">Sobre o autor</p>
+                  <p className="font-display text-lg font-medium text-ink">{article.author}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{article.authorBio}</p>
+                </div>
+              </div>
+
+              {originalInstagramUrl && (
+                <section
+                  aria-labelledby="post-original-heading"
+                  className="flex flex-col gap-5 border border-line bg-paper-strong p-6 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div>
+                    <p className="eyebrow-brand">Post original</p>
+                    <h2 id="post-original-heading" className="mt-2 font-display text-lg font-medium">
+                      Veja a publicação que originou este artigo.
+                    </h2>
+                  </div>
+                  <a
+                    href={originalInstagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow external"
+                    className="btn btn-outline btn-sm shrink-0"
+                  >
+                    Abrir no Instagram
+                  </a>
+                </section>
+              )}
+            </footer>
+          </div>
         </div>
       </div>
 
-      {/* Artigos relacionados */}
+      <AcademyCta
+        title="Vá além da leitura."
+        description="Na Academy, o que você leu aqui vira método: cursos e dossiês para aplicar inteligência humana na prática, do comportamento à operação."
+      />
+
       {related.length > 0 && (
-        <section className="bg-paper-deep" aria-labelledby="related-title">
-          <div className="container-editorial py-16 md:py-20">
-            <div className="mb-10 hairline-b pb-4 flex items-end justify-between gap-6">
-              <div>
-                <p className="eyebrow-gold mb-2">Leia também</p>
-                <h2
-                  id="related-title"
-                  className="font-display text-2xl md:text-3xl font-semibold"
-                >
-                  Outros artigos relacionados
-                </h2>
-              </div>
-              <Link
-                href="/artigos"
-                className="hidden sm:inline-flex text-sm text-ink-soft hover:text-ink"
-              >
-                Ver todos
-              </Link>
-            </div>
-            <div className="grid gap-10 md:grid-cols-3">
+        <section className="bg-paper-strong" aria-labelledby="related-title">
+          <div className="container-editorial py-14 md:py-20">
+            <SectionHeading
+              id="related-title"
+              eyebrow="Leia também"
+              title="Artigos relacionados"
+              href={`/artigos?categoria=${article.category}`}
+              linkLabel={`Mais em ${article.categoryLabel}`}
+            />
+            <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((a) => (
                 <ArticleCard key={a.slug} article={a} />
               ))}

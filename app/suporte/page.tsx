@@ -33,7 +33,7 @@ export default function SuportePage() {
       </section>
 
       <section className="container-editorial py-10 md:py-16">
-        <p className="eyebrow-gold">Suporte ao membro</p>
+        <p className="eyebrow-brand">Suporte ao membro</p>
         <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-3xl">
           Como podemos ajudar?
         </h1>
@@ -51,7 +51,7 @@ export default function SuportePage() {
 
       <section className="bg-paper-deep">
         <div className="container-editorial py-16 md:py-20">
-          <p className="eyebrow-gold">Ajuda rápida</p>
+          <p className="eyebrow-brand">Ajuda rápida</p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-balance">
             Situações comuns.
           </h2>

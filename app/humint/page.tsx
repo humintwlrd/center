@@ -114,22 +114,22 @@ export default function HumintPage() {
 
       <div className="min-h-screen bg-background">
         {/* Hero */}
-        <section className="relative bg-deep text-warm-text">
+        <section className="relative bg-deep text-fog">
           <div className="absolute inset-0 bg-gradient-to-b from-deep via-deep to-surface opacity-90" />
           <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
-            <div className="mb-8 text-warm-text/70"><Breadcrumbs items={breadcrumbs} /></div>
+            <div className="mb-8 text-fog/70"><Breadcrumbs items={breadcrumbs} /></div>
 
-            <p className="font-mono text-xs uppercase tracking-widest text-gold">Página Pilar</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-brand">Página Pilar</p>
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               O Que é HUMINT
             </h1>
-            <p className="mt-6 text-xl leading-relaxed text-warm-text/90">
+            <p className="mt-6 text-xl leading-relaxed text-fog/90">
               Inteligência humana (Human Intelligence) é a disciplina de coleta de informações através de fontes
               humanas. Este guia explica o que é, como funciona, quem usa e por que importa.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-gold text-on-gold hover:bg-gold-hover">
+              <Button asChild size="lg" className="bg-brand text-on-brand hover:bg-brand-hover">
                 <Link href="/artigos?categoria=fundamentos-de-humint">
                   Explorar artigos
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -141,7 +141,7 @@ export default function HumintPage() {
 
         {/* Definição */}
         <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-p:text-ink-soft prose-a:text-gold prose-a:no-underline hover:prose-a:underline">
+          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-p:text-ink-soft prose-a:text-brand prose-a:no-underline hover:prose-a:underline">
             <h2>Definição</h2>
             <p>
               <strong>HUMINT</strong> (Human Intelligence, ou Inteligência Humana) é uma das disciplinas de coleta de
@@ -223,11 +223,11 @@ export default function HumintPage() {
             {pillarTopics.map((topic) => (
               <Card key={topic.href} className="group transition-shadow hover:shadow-md">
                 <CardHeader>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10 text-gold">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand/10 text-brand">
                     <topic.icon className="h-5 w-5" />
                   </div>
                   <CardTitle className="mt-4 font-display text-lg">
-                    <Link href={topic.href} className="hover:text-gold">
+                    <Link href={topic.href} className="hover:text-brand">
                       {topic.title}
                     </Link>
                   </CardTitle>
@@ -236,7 +236,7 @@ export default function HumintPage() {
                 <CardContent>
                   <Link
                     href={topic.href}
-                    className="inline-flex items-center text-sm font-medium text-gold hover:underline"
+                    className="inline-flex items-center text-sm font-medium text-brand hover:underline"
                   >
                     Ver artigos
                     <ArrowRight className="ml-1 h-3 w-3" />
@@ -264,19 +264,19 @@ export default function HumintPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-surface py-16">
+        <section className="bg-deep-2 py-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-2xl bg-deep p-8 text-center text-warm-text sm:p-12">
-              <Scale className="mx-auto h-12 w-12 text-gold" />
+            <div className="rounded-2xl bg-deep p-8 text-center text-fog sm:p-12">
+              <Scale className="mx-auto h-12 w-12 text-brand" />
               <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">
                 HUMINT com Método e Ética
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-warm-text/80">
+              <p className="mx-auto mt-4 max-w-2xl text-fog/80">
                 O Mundo da HUMINT é uma plataforma educacional dedicada a tornar a inteligência humana mais
                 compreensível, útil e responsável. Conteúdo rigoroso, sem sensacionalismo.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-gold text-on-gold hover:bg-gold-hover">
+                <Button asChild size="lg" className="bg-brand text-on-brand hover:bg-brand-hover">
                   <Link href="/artigos">
                     Ver todos os artigos
                     <ArrowRight className="ml-2 h-4 w-4" />

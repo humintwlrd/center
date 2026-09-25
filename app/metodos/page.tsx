@@ -26,7 +26,7 @@ export default function MetodosPage() {
       {/* HERO */}
       <section className="container-editorial py-10 md:py-16 grid gap-10 lg:grid-cols-12 items-center">
         <div className="lg:col-span-7">
-          <p className="eyebrow-gold">Métodos · Biblioteca viva</p>
+          <p className="eyebrow-brand">Métodos · Biblioteca viva</p>
           <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight">
             Métodos, fundamentos e boas práticas de HUMINT
           </h1>
@@ -55,14 +55,14 @@ export default function MetodosPage() {
             href={`/metodos#${startHere.slug}`}
             className="group block bg-deep text-paper p-8 md:p-12 hover:bg-[var(--color-deep-2)] transition-colors"
           >
-            <p className="eyebrow-gold">Comece por aqui</p>
+            <p className="eyebrow-brand">Comece por aqui</p>
             <h2 className="mt-3 font-display text-2xl md:text-4xl font-semibold text-balance">
               {startHere.title}
             </h2>
-            <p className="mt-3 text-lg text-[var(--color-warm-text)] leading-relaxed max-w-2xl">
+            <p className="mt-3 text-lg text-[var(--color-fog)] leading-relaxed max-w-2xl">
               {startHere.description}
             </p>
-            <span className="mt-6 inline-flex items-center gap-2 text-sm text-gold group-hover:text-amber">
+            <span className="mt-6 inline-flex items-center gap-2 text-sm text-brand group-hover:text-brand-bright">
               Iniciar leitura
               <ArrowRight className="w-4 h-4" />
             </span>
@@ -77,7 +77,7 @@ export default function MetodosPage() {
           return (
             <div key={group}>
               <div className="mb-8 hairline-b pb-3">
-                <p className="eyebrow-gold mb-1">Grupo</p>
+                <p className="eyebrow-brand mb-1">Grupo</p>
                 <h2 className="font-display text-2xl md:text-3xl font-semibold">{group}</h2>
               </div>
               <div className="grid gap-px bg-line md:grid-cols-2">
@@ -93,8 +93,8 @@ export default function MetodosPage() {
                       </span>
                       {m.startHere && (
                         <span
-                          className="inline-block bg-gold-soft px-2 py-0.5 text-[10px] font-mono uppercase tracking-widest"
-                          style={{ color: "var(--color-on-gold)" }}
+                          className="inline-block bg-brand-soft px-2 py-0.5 text-[10px] font-mono uppercase tracking-widest"
+                          style={{ color: "var(--color-on-brand)" }}
                         >
                           Comece aqui
                         </span>
@@ -119,7 +119,7 @@ export default function MetodosPage() {
       <section className="bg-paper-deep" aria-labelledby="reading-title">
         <div className="container-editorial py-16 md:py-20 grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="eyebrow-gold">Leitura recomendada</p>
+            <p className="eyebrow-brand">Leitura recomendada</p>
             <h2 id="reading-title" className="mt-3 font-display text-2xl md:text-4xl font-semibold text-balance">
               Comece pelos artigos editoriais.
             </h2>

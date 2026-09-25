@@ -83,7 +83,7 @@ export default function PrincipiosPage() {
       </section>
 
       <section className="container-editorial py-10 md:py-16">
-        <p className="eyebrow-gold">Documento institucional</p>
+        <p className="eyebrow-brand">Documento institucional</p>
         <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-4xl">
           Princípios editoriais e éticos
         </h1>
@@ -96,13 +96,13 @@ export default function PrincipiosPage() {
       <section className="container-editorial pb-16 md:pb-24 grid gap-12 lg:grid-cols-12">
         <aside className="lg:col-span-3">
           <div className="lg:sticky lg:top-24">
-            <p className="eyebrow-gold mb-3">Nesta página</p>
+            <p className="eyebrow-brand mb-3">Nesta página</p>
             <ol className="flex flex-col gap-2 text-sm">
               {SECTIONS.map((s, i) => (
                 <li key={s.id}>
                   <a
                     href={`#${s.id}`}
-                    className="text-ink-soft hover:text-gold-active flex gap-3"
+                    className="text-ink-soft hover:text-brand flex gap-3"
                   >
                     <span className="font-mono text-ink-muted">{String(i + 1).padStart(2, "0")}</span>
                     <span>{s.title}</span>
@@ -123,7 +123,7 @@ export default function PrincipiosPage() {
           ))}
 
           <section className="mt-10 bg-paper-deep p-6 md:p-8 not-prose">
-            <p className="eyebrow-gold mb-2">Documento vivo</p>
+            <p className="eyebrow-brand mb-2">Documento vivo</p>
             <p className="text-ink-soft leading-relaxed">
               Este documento é revisado periodicamente. Sugestões e críticas
               são bem-vindas pelo formulário de contato.

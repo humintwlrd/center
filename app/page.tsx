@@ -1,375 +1,432 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { HeroCarousel, type HeroSlide } from "@/components/site/hero-carousel"
-import { MemberExclusives, type MemberExclusiveItem } from "@/components/site/member-exclusives"
+import { ArticleCard } from "@/components/site/article-card"
+import { SectionHeading } from "@/components/site/section-heading"
+import { NewsletterInline } from "@/components/site/newsletter-inline"
 import {
   ARTICLES,
   getArticleBySlug,
+  getArticlesByCategory,
   getLatestArticles,
-  isInstagramImage,
   type Article,
 } from "@/lib/content/articles"
-import { formatDateTimelineBR } from "@/lib/format"
+import { categories } from "@/lib/content/categories"
+import { PRODUCTS } from "@/lib/products"
+import { formatDateBR } from "@/lib/format"
 
-const COVER_STORY = {
-  category: "CONTRAINTELIGÊNCIA",
-  title: "A rede que a CIA perdeu em Pequim",
-  subtitle: "O caso que reescreveu o manual de contrainteligência hostil.",
-  href: "/artigos/como-china-desmantelou-rede-cia-contrainteligencia",
-  imageDesktop: "/images/editorial/cia-beijing-desktop.png",
-  imageMobile: "/images/editorial/cia-beijing-mobile.png",
-  imageAlt:
-    "Homem em terno cinza observa as luzes de Pequim através da janela de um quarto de hotel à noite.",
+/* ------------------------------------------------------------------ */
+/* Curadoria editorial                                                 */
+/* ------------------------------------------------------------------ */
+
+type CoverStory = {
+  slug: string
+  category: string
+  title: string
+  subtitle: string
+  ctaLabel: string
+  image: string
 }
 
-const HERO_SLIDES: HeroSlide[] = [
+const COVER: CoverStory = {
+  slug: "como-china-desmantelou-rede-cia-contrainteligencia",
+  category: "Contrainteligência",
+  title: "A rede que a CIA perdeu em Pequim",
+  subtitle: "O caso que reescreveu o manual de contrainteligência hostil.",
+  ctaLabel: "Ler a análise",
+  image: "/images/editorial/cia-beijing-desktop.png",
+}
+
+const ALSO_ON_COVER: CoverStory[] = [
   {
-    category: COVER_STORY.category,
-    title: COVER_STORY.title,
-    subtitle: COVER_STORY.subtitle,
-    href: COVER_STORY.href,
-    ctaLabel: "Ler análise",
-    imageDesktop: COVER_STORY.imageDesktop,
-    imageMobile: COVER_STORY.imageMobile,
-    imageAlt: COVER_STORY.imageAlt,
-    imagePosition: "center 35%",
-  },
-  {
-    category: "ENGENHARIA SOCIAL",
+    slug: "engenharia-social-ponto-vulneravel-humano",
+    category: "Engenharia social",
     title: "O ponto vulnerável é humano",
     subtitle: "Como a informação é entregue antes de ser roubada.",
-    href: "/artigos/engenharia-social-ponto-vulneravel-humano",
     ctaLabel: "Ver caso",
-    imageDesktop: "/images/editorial/social-engineering-desktop.png",
-    imageMobile: "/images/editorial/social-engineering-mobile.png",
-    imageAlt:
-      "Homem de terno cinza e mulher de vestido verde conversam em uma mesa de bar de hotel.",
-    imagePosition: "center 30%",
+    image: "/images/editorial/social-engineering-desktop.png",
   },
   {
-    category: "MÉTODO",
+    slug: "validacao-de-fontes-humanas",
+    category: "Método",
     title: "Validar uma fonte humana",
     subtitle: "Credibilidade, motivação, consistência e registro.",
-    href: "/artigos/validacao-de-fontes-humanas",
     ctaLabel: "Ver protocolo",
-    imageDesktop: "/images/editorial/source-validation-desktop.png",
-    imageMobile: "/images/editorial/source-validation-mobile.png",
-    imageAlt:
-      "Oficial de inteligência examina uma fotografia em preto e branco sob a luz de um abajur.",
-    imagePosition: "center 30%",
+    image: "/images/editorial/source-validation-desktop.png",
   },
 ]
 
 const FEATURED_SLUGS = [
-  "como-china-desmantelou-rede-cia-contrainteligencia",
-  "validacao-de-fontes-humanas",
   "humint-e-osint-complementaridade-e-limites",
   "unidade-29155-operacoes-encoberto-gru",
-  "engenharia-social-ponto-vulneravel-humano",
+  "caso-sergei-skripal-recrutamento-duplo-agente",
+  "o-que-humint-realmente-exige",
+  "guerra-golfo-1991-humint-desinformacao",
 ]
 
 const MOST_READ_SLUGS = [
   "como-china-desmantelou-rede-cia-contrainteligencia",
   "engenharia-social-ponto-vulneravel-humano",
   "psicologia-gaslighting-alterar-percepcao",
+  "caso-sergei-skripal-recrutamento-duplo-agente",
+  "validacao-de-fontes-humanas",
 ]
 
-const MEMBER_EXCLUSIVES: MemberExclusiveItem[] = [
+const ACADEMY_TOPICS = [
   {
     title: "Comportamento humano",
-    description:
-      "Padrões, vieses e gatilhos que tornam pessoas previsíveis — a base de toda leitura de fontes.",
-    href: "/academy",
-    image: "/images/cases/john-walker.jpg",
-    imageAlt: "Homem deposita pacote em árvore oca sob neblina.",
+    description: "Padrões, vieses e gatilhos que tornam pessoas previsíveis.",
   },
   {
     title: "Comunicação e influência",
-    description:
-      "Conduzir conversas, criar rapport e influenciar com método — sem manipular às cegas.",
-    href: "/academy",
-    image: "/images/cases/operation-ajax.jpg",
-    imageAlt: "Homem iraniano com chapéu em um bazar nos anos 1950.",
+    description: "Rapport e influência com método, sem manipular às cegas.",
   },
   {
     title: "Elicitação e fontes humanas",
-    description:
-      "Obter informação sem a pergunta óbvia; recrutar, validar e proteger fontes.",
-    href: "/academy",
-    image: "/images/cases/skripal.jpg",
-    imageAlt: "Homem sentado em banco de parque inglês sob neblina.",
+    description: "Obter informação sem a pergunta óbvia; recrutar e validar.",
   },
   {
     title: "Contrainteligência e OPSEC",
-    description:
-      "Proteger operações e a si mesmo — e reconhecer quando algo foi comprometido.",
-    href: "/academy",
-    image: "/images/editorial/china-cia-cover.jpg",
-    imageAlt: "Homem observa as luzes de Pequim pela janela de um quarto à noite.",
+    description: "Proteger operações e reconhecer quando algo foi comprometido.",
   },
   {
     title: "OSINT na prática",
-    description:
-      "Investigar fontes abertas com método e conectar pessoas, bens e vínculos.",
-    href: "/academy",
-    image: "/images/cases/unit-29155.jpg",
-    imageAlt: "Homem de sobretudo caminha por viela europeia molhada.",
+    description: "Investigar fontes abertas e conectar pessoas, bens e vínculos.",
   },
   {
     title: "Tradecraft e operação",
-    description:
-      "Do planejamento à execução: cobertura, comunicação segura e disciplina operacional.",
-    href: "/academy",
-    image: "/images/cases/project-azorian.jpg",
-    imageAlt: "Oficial observa o oceano a partir da ponte de um navio.",
+    description: "Cobertura, comunicação segura e disciplina operacional.",
   },
 ]
 
+function bySlugs(slugs: string[]) {
+  return slugs.map((slug) => getArticleBySlug(slug)).filter(Boolean) as Article[]
+}
+
+/* ------------------------------------------------------------------ */
+/* Página                                                              */
+/* ------------------------------------------------------------------ */
+
 export default function HomePage() {
-  const latest = getLatestArticles(6)
-  const featured = FEATURED_SLUGS.map((slug) => getArticleBySlug(slug)).filter(
-    Boolean,
-  ) as Article[]
-  const mostRead = MOST_READ_SLUGS.map((slug) => getArticleBySlug(slug)).filter(
-    Boolean,
-  ) as Article[]
-  const lead = featured[0] ?? ARTICLES[0]
+  const coverArticle = getArticleBySlug(COVER.slug)
+  const onCover = new Set([COVER.slug, ...ALSO_ON_COVER.map((s) => s.slug)])
+
+  const featured = bySlugs(FEATURED_SLUGS).filter((a) => !onCover.has(a.slug))
+  const lead = featured[0] ?? ARTICLES.find((a) => !onCover.has(a.slug))!
   const secondary = featured.slice(1, 5)
+  const mostRead = bySlugs(MOST_READ_SLUGS)
+
+  const shown = new Set([...onCover, lead.slug, ...secondary.map((a) => a.slug)])
+  const latest = getLatestArticles(12)
+    .filter((a) => !shown.has(a.slug))
+    .slice(0, 6)
+
+  const themes = categories
+    .map((c) => ({ ...c, count: getArticlesByCategory(c.slug).length }))
+    .filter((c) => c.count > 0)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 9)
+
+  const flagship = PRODUCTS.find((p) => p.destaque) ?? PRODUCTS[0]
+  const [parcelaLabel, ...parcelaRest] = flagship.parcelado.split(" de ")
 
   return (
     <>
-      <HeroCarousel slides={HERO_SLIDES} autoPlayMs={6000} />
-
-      <section className="bg-paper-strong border-b border-line" aria-labelledby="home-news-title">
-        <div className="container-editorial py-9 md:py-11 grid gap-9 lg:grid-cols-[minmax(0,1fr)_300px]">
-          <div>
-            <SectionHeader
-              eyebrow="Destaques"
-              title="Análises essenciais"
-              href="/artigos"
-              linkLabel="Ver arquivo"
-              id="home-news-title"
-            />
-
-            <div className="grid gap-px bg-line border border-line lg:grid-cols-[1.1fr_0.9fr]">
-              <LeadArticle article={lead} />
-              <div className="grid gap-px bg-line">
-                {secondary.map((article) => (
-                  <FeatureRow key={article.slug} article={article} />
-                ))}
+      {/* ============================ CAPA ============================ */}
+      <section className="surface-deep" aria-labelledby="cover-title">
+        <div className="container-editorial pt-10 pb-12 md:pt-14 md:pb-16">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+            <div className="flex flex-col justify-end lg:col-span-5 lg:pb-2">
+              <p className="kicker">Capa · {COVER.category}</p>
+              <h1 id="cover-title" className="mt-6 font-display text-display-2xl font-medium text-fog">
+                <Link href={`/artigos/${COVER.slug}`} className="transition-colors hover:text-white">
+                  {COVER.title}
+                </Link>
+              </h1>
+              <p className="mt-6 max-w-[42ch] text-lede text-fog-muted">{COVER.subtitle}</p>
+              {coverArticle && (
+                <p className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fog-muted">
+                  {formatDateBR(coverArticle.publishedAt)}
+                  <span aria-hidden className="mx-2 text-line-dark">
+                    /
+                  </span>
+                  {coverArticle.readingTime} de leitura
+                </p>
+              )}
+              <div className="mt-8">
+                <Link href={`/artigos/${COVER.slug}`} className="btn btn-primary btn-lg">
+                  {COVER.ctaLabel}
+                  <ArrowRight aria-hidden />
+                </Link>
               </div>
             </div>
+
+            <Link
+              href={`/artigos/${COVER.slug}`}
+              tabIndex={-1}
+              aria-hidden
+              className="group relative order-first block aspect-[4/3] overflow-hidden bg-deep-3 lg:order-none lg:col-span-7"
+            >
+              <Image
+                src={COVER.image}
+                alt=""
+                fill
+                priority
+                sizes="(min-width: 1024px) 760px, 100vw"
+                className="media-zoom object-cover"
+                style={{ objectPosition: "center 40%" }}
+              />
+            </Link>
           </div>
 
-          <aside aria-labelledby="most-read-title">
-            <div className="border-b border-line-strong pb-3">
-              <h2 id="most-read-title" className="font-display text-2xl font-bold text-ink">
-                Mais lidas
-              </h2>
-            </div>
-            <ol className="divide-y divide-line">
-              {mostRead.map((article, index) => (
-                <li key={article.slug}>
-                  <Link
-                    href={`/artigos/${article.slug}`}
-                    className="grid grid-cols-[2rem_1fr] gap-3 py-4 group"
-                  >
-                    <span className="font-mono text-sm text-gold-active">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span>
-                      <span className="block font-display text-base font-semibold leading-snug text-ink group-hover:text-gold-active transition-colors">
-                        {article.title}
-                      </span>
-                      <span className="mt-1 block text-[11px] font-mono uppercase text-ink-muted">
-                        {article.categoryLabel} · {article.readingTime}
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ol>
-          </aside>
-        </div>
-      </section>
-
-      <section className="bg-paper border-b border-line" aria-labelledby="latest-title">
-        <div className="container-editorial py-9 md:py-11">
-          <SectionHeader
-            eyebrow="Últimas publicadas"
-            title="Arquivo recente"
-            href="/artigos"
-            linkLabel="Ver todas"
-            id="latest-title"
-          />
-          <div className="grid gap-px bg-line border border-line md:grid-cols-2">
-            {latest.map((article) => (
-              <LatestItem key={article.slug} article={article} />
+          <div className="mt-12 grid gap-8 border-t border-line-dark pt-8 md:grid-cols-2 md:gap-10">
+            {ALSO_ON_COVER.map((story) => (
+              <article
+                key={story.slug}
+                className="group grid grid-cols-[112px_1fr] gap-5 sm:grid-cols-[160px_1fr]"
+              >
+                <Link
+                  href={`/artigos/${story.slug}`}
+                  tabIndex={-1}
+                  aria-hidden
+                  className="relative block aspect-[4/3] overflow-hidden bg-deep-3"
+                >
+                  <Image src={story.image} alt="" fill sizes="160px" className="media-zoom object-cover" />
+                </Link>
+                <div className="min-w-0">
+                  <p className="eyebrow-brand">{story.category}</p>
+                  <h2 className="mt-2 font-display text-display-sm font-medium text-fog">
+                    <Link
+                      href={`/artigos/${story.slug}`}
+                      className="transition-colors group-hover:text-brand-bright"
+                    >
+                      {story.title}
+                    </Link>
+                  </h2>
+                  <p className="mt-2 hidden text-sm leading-relaxed text-fog-muted sm:block">
+                    {story.subtitle}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <MemberExclusives items={MEMBER_EXCLUSIVES} />
+      {/* ========================= DESTAQUES ========================== */}
+      <section className="bg-paper" aria-labelledby="featured-title">
+        <div className="container-editorial py-14 md:py-20">
+          <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-8">
+              <SectionHeading
+                id="featured-title"
+                eyebrow="Destaques"
+                title="Análises essenciais"
+                href="/artigos"
+                linkLabel="Ver arquivo"
+              />
+              <ArticleCard article={lead} variant="lead" />
+              <div className="mt-10 grid gap-8 border-t border-line pt-8 sm:grid-cols-2">
+                {secondary.map((article) => (
+                  <ArticleCard key={article.slug} article={article} variant="row" />
+                ))}
+              </div>
+            </div>
+
+            <aside className="lg:col-span-4" aria-labelledby="most-read-title">
+              <div className="lg:sticky lg:top-24">
+                <header className="rule-top mb-2 pt-4">
+                  <h2 id="most-read-title" className="font-display text-display-sm font-medium">
+                    Mais lidas
+                  </h2>
+                </header>
+                <ol>
+                  {mostRead.map((article, index) => (
+                    <li key={article.slug} className="border-b border-line">
+                      <Link
+                        href={`/artigos/${article.slug}`}
+                        className="group grid grid-cols-[2.5rem_1fr] gap-3 py-5"
+                      >
+                        <span className="font-display text-3xl font-medium leading-none text-line-strong transition-colors group-hover:text-brand">
+                          {index + 1}
+                        </span>
+                        <span>
+                          <span className="block font-display text-lg font-medium leading-snug text-ink transition-colors group-hover:text-brand">
+                            {article.title}
+                          </span>
+                          <span className="mt-2 block font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-muted">
+                            {article.categoryLabel} · {article.readingTime}
+                          </span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+
+                <div className="mt-10 border border-line bg-paper-strong p-6">
+                  <p className="kicker">Newsletter</p>
+                  <p className="mt-3 font-display text-xl font-medium leading-snug text-ink">
+                    Uma análise por semana, sem ruído.
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                    Casos, métodos e leituras selecionadas direto no seu e-mail.
+                  </p>
+                  <div className="mt-5">
+                    <NewsletterInline />
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* ======================= ARQUIVO RECENTE ====================== */}
+      <section className="border-t border-line bg-paper-strong" aria-labelledby="latest-title">
+        <div className="container-editorial py-14 md:py-20">
+          <SectionHeading
+            id="latest-title"
+            eyebrow="Últimas publicadas"
+            title="Arquivo recente"
+            href="/artigos"
+            linkLabel="Ver todas"
+          />
+          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {latest.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
+          <Link href="/artigos" className="btn btn-outline mt-12 w-full sm:hidden">
+            Ver todos os artigos
+            <ArrowRight aria-hidden />
+          </Link>
+        </div>
+      </section>
+
+      {/* =========================== TEMAS =========================== */}
+      <section className="border-t border-line bg-paper" aria-labelledby="themes-title">
+        <div className="container-editorial py-14 md:py-20">
+          <SectionHeading
+            id="themes-title"
+            eyebrow="Índice"
+            title="Explore por tema"
+            description="Do comportamento humano à geopolítica: cada tema reúne casos, métodos e análises."
+            href="/artigos"
+            linkLabel="Todos os artigos"
+          />
+          <ul className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+            {themes.map((theme, i) => (
+              <li key={theme.slug} className="bg-paper">
+                <Link
+                  href={`/artigos?categoria=${theme.slug}`}
+                  className="group flex h-full flex-col gap-3 p-6 transition-colors hover:bg-paper-strong"
+                >
+                  <span className="flex items-baseline justify-between gap-4 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <span>
+                      {theme.count} {theme.count === 1 ? "texto" : "textos"}
+                    </span>
+                  </span>
+                  <span className="font-display text-display-sm font-medium text-ink transition-colors group-hover:text-brand">
+                    {theme.name}
+                  </span>
+                  <span className="text-sm leading-relaxed text-ink-muted">{theme.shortDescription}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ========================== ACADEMY ========================== */}
+      <section className="surface-deep" aria-labelledby="academy-title">
+        <div className="container-editorial py-16 md:py-24">
+          <div className="grid gap-14 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-7">
+              <p className="kicker">Mundo da HUMINT Academy</p>
+              <h2 id="academy-title" className="mt-5 font-display text-display-xl font-medium text-fog">
+                Da leitura à operação.
+              </h2>
+              <p className="mt-5 max-w-[54ch] text-lede text-fog-muted">
+                O que você lê aqui vira método na Academy: cursos e dossiês para observar,
+                conduzir conversas, validar fontes e proteger operações.
+              </p>
+
+              <ol className="mt-12 grid gap-px border-y border-line-dark bg-line-dark sm:grid-cols-2">
+                {ACADEMY_TOPICS.map((topic, i) => (
+                  <li key={topic.title} className="grid grid-cols-[2.25rem_1fr] gap-3 bg-deep py-5 sm:px-5">
+                    <span className="pt-1 font-mono text-[0.6875rem] tracking-[0.14em] text-brand-bright">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>
+                      <span className="block font-display text-lg font-medium text-fog">{topic.title}</span>
+                      <span className="mt-1 block text-sm leading-relaxed text-fog-muted">
+                        {topic.description}
+                      </span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="lg:col-span-5">
+              <article className="group border border-line-dark bg-deep-2 lg:sticky lg:top-24">
+                <Link
+                  href={`/academy/${flagship.id}`}
+                  tabIndex={-1}
+                  aria-hidden
+                  className="relative block aspect-[4/3] overflow-hidden bg-deep-3"
+                >
+                  <Image
+                    src={flagship.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 480px, 100vw"
+                    className="media-zoom object-cover object-top"
+                  />
+                  {flagship.badge && (
+                    <span className="absolute left-4 top-4 bg-brand px-2.5 py-1 font-mono text-[0.625rem] font-semibold uppercase tracking-[0.16em] text-on-brand">
+                      {flagship.badge}
+                    </span>
+                  )}
+                </Link>
+                <div className="p-6 md:p-8">
+                  <p className="eyebrow">{flagship.tipo}</p>
+                  <h3 className="mt-2 font-display text-display-sm font-medium text-fog">
+                    <Link href={`/academy/${flagship.id}`} className="transition-colors hover:text-white">
+                      {flagship.nome}
+                    </Link>
+                  </h3>
+                  <p className="mt-5 flex items-baseline gap-2">
+                    <span className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fog-muted">
+                      {parcelaLabel} de
+                    </span>
+                    <span className="font-display text-3xl font-medium text-fog">
+                      {parcelaRest.join(" de ")}
+                    </span>
+                  </p>
+                  <p className="mt-1 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fog-muted">
+                    Cartão · Pix · Acesso imediato
+                  </p>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    <a
+                      href={flagship.checkoutUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                    >
+                      Comprar agora
+                    </a>
+                    <Link href="/academy" className="btn btn-outline">
+                      Ver a Academy
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
-  )
-}
-
-function SectionHeader({
-  eyebrow,
-  title,
-  href,
-  linkLabel,
-  id,
-  dark = false,
-}: {
-  eyebrow: string
-  title: string
-  href: string
-  linkLabel: string
-  id: string
-  dark?: boolean
-}) {
-  return (
-    <header className="flex items-end justify-between gap-4 mb-6 border-b border-line-strong pb-3">
-      <div>
-        <p className="eyebrow-gold">{eyebrow}</p>
-        <h2
-          id={id}
-          className={`font-display text-2xl md:text-3xl font-bold mt-1 ${
-            dark ? "text-paper" : "text-ink"
-          }`}
-        >
-          {title}
-        </h2>
-      </div>
-      <Link
-        href={href}
-        className={`hidden sm:inline-flex items-center gap-1.5 text-sm font-medium ${
-          dark ? "text-warm-text hover:text-paper" : "text-ink-muted hover:text-ink"
-        } transition-colors`}
-      >
-        {linkLabel}
-        <ArrowRight className="w-4 h-4" />
-      </Link>
-    </header>
-  )
-}
-
-function LeadArticle({ article }: { article: Article }) {
-  const naturalOnMobile = isInstagramImage(article.heroImage)
-  return (
-    <Link href={`/artigos/${article.slug}`} className="group bg-paper-strong">
-      <article>
-        {naturalOnMobile ? (
-          <>
-            {/* Mobile: proporção original da imagem do post */}
-            <div className="md:hidden bg-paper-deep">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={article.heroImage || "/placeholder.svg"}
-                alt={article.heroAlt}
-                className="block w-full h-auto"
-                loading="eager"
-              />
-            </div>
-            {/* Desktop: enquadramento editorial 16:10 */}
-            <div className="hidden md:block relative aspect-[16/10] overflow-hidden bg-paper-deep">
-              <Image
-                src={article.heroImage}
-                alt={article.heroAlt}
-                fill
-                sizes="(min-width: 1024px) 640px, 100vw"
-                loading="eager"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-            </div>
-          </>
-        ) : (
-          <div className="relative aspect-[16/10] overflow-hidden bg-paper-deep">
-            <Image
-              src={article.heroImage}
-              alt={article.heroAlt}
-              fill
-              sizes="(min-width: 1024px) 640px, 100vw"
-              loading="eager"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            />
-          </div>
-        )}
-        <div className="p-5 md:p-6">
-          <p className="eyebrow-gold mb-2">{article.categoryLabel}</p>
-          <h3 className="font-display text-2xl md:text-3xl font-bold leading-tight text-ink group-hover:text-gold-active transition-colors text-balance">
-            {article.title}
-          </h3>
-          <p className="mt-3 text-sm md:text-base text-ink-muted leading-relaxed line-clamp-2">
-            {article.description}
-          </p>
-          <p className="mt-4 text-[11px] font-mono uppercase text-ink-muted">
-            {formatDateTimelineBR(article.publishedAt)} · {article.readingTime}
-          </p>
-        </div>
-      </article>
-    </Link>
-  )
-}
-
-function FeatureRow({ article }: { article: Article }) {
-  return (
-    <Link href={`/artigos/${article.slug}`} className="group bg-paper-strong p-4 grid grid-cols-[96px_1fr] gap-4">
-      <div className="relative aspect-square overflow-hidden bg-paper-deep">
-        <Image
-          src={article.heroImage}
-          alt=""
-          fill
-          sizes="96px"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-      </div>
-      <article>
-        <p className="font-mono text-[10px] uppercase text-gold-active mb-1">
-          {article.categoryLabel}
-        </p>
-        <h3 className="font-display text-base font-semibold leading-snug text-ink group-hover:text-gold-active transition-colors line-clamp-2">
-          {article.title}
-        </h3>
-        <p className="mt-2 text-[11px] font-mono uppercase text-ink-muted">
-          {formatDateTimelineBR(article.publishedAt)}
-        </p>
-      </article>
-    </Link>
-  )
-}
-
-function LatestItem({ article }: { article: Article }) {
-  return (
-    <Link href={`/artigos/${article.slug}`} className="group bg-paper flex flex-col">
-      <article className="flex flex-col">
-        {article.heroImage ? (
-          // Mobile: imagem em tamanho natural (proporção original do post)
-          <div className="md:hidden bg-paper-deep border-b border-line">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={article.heroImage || "/placeholder.svg"}
-              alt={article.heroAlt || article.title}
-              className="block w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-        ) : null}
-        <div className="p-4 md:p-5">
-          <p className="font-mono text-[10px] uppercase text-gold-active mb-1">
-            {article.categoryLabel}
-          </p>
-          <h3 className="font-display text-lg font-semibold leading-snug text-ink group-hover:text-gold-active transition-colors">
-            {article.title}
-          </h3>
-          <p className="mt-2 text-[11px] font-mono uppercase text-ink-muted">
-            {formatDateTimelineBR(article.publishedAt)} · {article.readingTime}
-          </p>
-        </div>
-      </article>
-    </Link>
   )
 }

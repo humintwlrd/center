@@ -18,7 +18,7 @@ export default function PrivacidadePage() {
       </section>
 
       <section className="container-editorial py-10 md:py-16 max-w-3xl">
-        <p className="eyebrow-gold">Documento legal</p>
+        <p className="eyebrow-brand">Documento legal</p>
         <h1 className="mt-3 font-display text-4xl md:text-5xl font-semibold text-balance leading-tight">
           Política de privacidade
         </h1>

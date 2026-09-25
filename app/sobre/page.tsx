@@ -18,7 +18,7 @@ export default function SobrePage() {
       </section>
 
       <section className="container-editorial py-10 md:py-16">
-        <p className="eyebrow-gold">Sobre o projeto</p>
+        <p className="eyebrow-brand">Sobre o projeto</p>
         <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-4xl">
           Uma plataforma editorial e educacional dedicada à inteligência humana
           aplicada.
@@ -33,7 +33,7 @@ export default function SobrePage() {
       <section className="bg-paper-deep">
         <div className="container-editorial py-16 md:py-20 grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <p className="eyebrow-gold">Manifesto</p>
+            <p className="eyebrow-brand">Manifesto</p>
             <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-balance">
               Por que existimos.
             </h2>
@@ -59,7 +59,7 @@ export default function SobrePage() {
 
       <section className="container-editorial py-16 md:py-20 grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <p className="eyebrow-gold">Como trabalhamos</p>
+          <p className="eyebrow-brand">Como trabalhamos</p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-balance">
             O que sustenta cada publicação.
           </h2>
@@ -84,11 +84,11 @@ export default function SobrePage() {
       <section className="bg-deep text-paper">
         <div className="container-editorial py-16 md:py-20 grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="eyebrow-gold">Transparência</p>
+            <p className="eyebrow-brand">Transparência</p>
             <h2 className="mt-3 font-display text-3xl md:text-4xl font-semibold text-balance leading-tight">
               O que você precisa saber para confiar no que lê aqui.
             </h2>
-            <ul className="mt-6 space-y-3 text-[var(--color-warm-text)]">
+            <ul className="mt-6 space-y-3 text-[var(--color-fog)]">
               <li>· Identificamos autor e revisor em cada texto.</li>
               <li>· Datas de publicação e atualização são visíveis.</li>
               <li>· Correções factuais são registradas no rodapé do artigo.</li>
@@ -101,7 +101,7 @@ export default function SobrePage() {
               href="/principios-editoriais"
               className="block bg-paper text-ink p-6 hover:bg-paper-deep transition-colors"
             >
-              <p className="eyebrow-gold">Documento</p>
+              <p className="eyebrow-brand">Documento</p>
               <h3 className="mt-2 font-display text-xl font-semibold">
                 Princípios editoriais e éticos
               </h3>
@@ -113,7 +113,7 @@ export default function SobrePage() {
               href="/contato"
               className="block bg-paper text-ink p-6 hover:bg-paper-deep transition-colors"
             >
-              <p className="eyebrow-gold">Contato</p>
+              <p className="eyebrow-brand">Contato</p>
               <h3 className="mt-2 font-display text-xl font-semibold">Imprensa, parcerias e dúvidas</h3>
               <p className="mt-1 text-sm text-ink-muted">
                 Fale com a equipe editorial.

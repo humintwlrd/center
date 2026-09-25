@@ -46,7 +46,7 @@ export default function FormacaoPage() {
 
       {/* HERO */}
       <section className="container-editorial py-10 md:py-16">
-        <span className="inline-block bg-warm-deep text-paper px-2.5 py-1 text-[11px] font-mono uppercase tracking-widest mb-5">
+        <span className="inline-block bg-deep text-paper px-2.5 py-1 text-[11px] font-mono uppercase tracking-widest mb-5">
           Em breve
         </span>
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-4xl">
@@ -106,7 +106,7 @@ export default function FormacaoPage() {
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper text-balance leading-tight">
               Acesso antecipado às próximas turmas.
             </h2>
-            <p className="mt-5 text-[var(--color-warm-text)] leading-relaxed">
+            <p className="mt-5 text-[var(--color-fog)] leading-relaxed">
               Avisamos com antecedência sobre aulas abertas, workshops e
               abertura de programas, na ordem em que forem confirmados.
             </p>

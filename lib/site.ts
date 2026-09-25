@@ -17,19 +17,19 @@ export const SITE = {
 } as const
 
 export const NAV = {
-  // 4 itens centrais no cabecalho (paralelo a Noticias/Artigos/Videos/Catalogo).
+  // Navegação editorial do cabeçalho. A Academy fica no CTA à direita.
   primary: [
     { label: "Artigos", href: "/artigos" },
     { label: "Casos", href: "/artigos?categoria=casos-historicos" },
     { label: "Métodos", href: "/metodos" },
-    { label: "Academy", href: "/academy" },
-  ],
-  // Acessos auxiliares (visiveis no menu mobile e no rodape).
-  meta: [
     { label: "Fundamentos", href: "/humint" },
-    { label: "Formação", href: "/formacao" },
+  ],
+  // Acessos auxiliares (menu mobile e rodapé).
+  meta: [
     { label: "Recursos", href: "/recursos" },
+    { label: "Formação", href: "/formacao" },
     { label: "Sobre", href: "/sobre" },
+    { label: "Contato", href: "/contato" },
   ],
   secondary: [
     { label: "Contato", href: "/contato" },

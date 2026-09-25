@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 export default function NotFound() {
   return (
     <section className="container-editorial py-24 md:py-32">
-      <p className="eyebrow-gold">Erro 404</p>
+      <p className="eyebrow-brand">Erro 404</p>
       <h1 className="mt-4 font-display text-5xl md:text-6xl font-semibold tracking-tight text-balance">
         A trilha some aqui.
       </h1>

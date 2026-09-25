@@ -285,7 +285,7 @@ export default function LandingPage() {
       <section className="hairline-b bg-paper-strong">
         <div className="container-editorial py-16 md:py-24 lg:py-28">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="eyebrow-gold mb-5">Como avaliar pessoas</p>
+            <p className="eyebrow-brand mb-5">Como avaliar pessoas</p>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-ink text-balance">
               Como investigadores, espiões e empresas obtêm informações através de pessoas
             </h1>
@@ -297,7 +297,7 @@ export default function LandingPage() {
             <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex items-center justify-center gap-2 bg-gold px-7 py-4 text-base font-semibold text-on-gold transition-colors hover:bg-gold-hover"
+                className="inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-base font-semibold text-on-brand transition-colors hover:bg-brand-hover"
               >
                 Quero aprender o método
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -349,8 +349,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="mt-8 border-l-2 border-gold bg-paper-deep p-6">
-              <p className="eyebrow-gold mb-2">Atenção</p>
+            <div className="mt-8 border-l-2 border-brand bg-paper-deep p-6">
+              <p className="eyebrow-brand mb-2">Atenção</p>
               <p className="text-[15px] leading-relaxed text-ink-soft">
                 Não se trata de desconfiar de todo mundo nem de manipular ninguém. Trata-se de parar de confiar no
                 escuro. Em toda relação que importa, alguém está avaliando alguém. Quando você não sabe avaliar,
@@ -378,7 +378,7 @@ export default function LandingPage() {
           <div className="mx-auto mt-12 max-w-4xl grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
             {CHAPTER_FORMAT.map((step, i) => (
               <div key={step.tag} className="bg-paper-strong p-6">
-                <span className="font-mono text-xs text-gold-active">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-xs text-brand">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-3 font-display text-base font-semibold text-ink">{step.tag}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
               </div>
@@ -413,14 +413,14 @@ export default function LandingPage() {
                   <div className="flex items-center justify-between">
                     <span
                       className={`inline-flex h-11 w-11 items-center justify-center ${
-                        part.highlight ? "bg-gold text-on-gold" : "bg-paper-deep text-gold-active"
+                        part.highlight ? "bg-brand text-on-brand" : "bg-paper-deep text-brand"
                       }`}
                     >
                       <Icon className="h-5 w-5" aria-hidden />
                     </span>
                     <span
                       className={`font-mono text-[11px] uppercase tracking-widest ${
-                        part.highlight ? "text-gold" : "text-ink-muted"
+                        part.highlight ? "text-brand" : "text-ink-muted"
                       }`}
                     >
                       {part.tag}
@@ -445,7 +445,7 @@ export default function LandingPage() {
                     {part.chapters.map((ch) => (
                       <li key={ch} className="flex items-start gap-2">
                         <Check
-                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-gold" : "text-gold-active"}`}
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-brand" : "text-brand"}`}
                           aria-hidden
                         />
                         <span className={part.highlight ? "text-paper/85" : "text-ink-soft"}>{ch}</span>
@@ -478,12 +478,12 @@ export default function LandingPage() {
             {CASES.map((c) => (
               <div key={c.name} className="bg-paper-strong p-7 md:p-8">
                 <div className="flex items-center gap-3">
-                  <Scale className="h-5 w-5 text-gold-active" aria-hidden />
+                  <Scale className="h-5 w-5 text-brand" aria-hidden />
                   <h3 className="font-display text-xl font-semibold text-ink">{c.name}</h3>
                 </div>
                 <div className="mt-5 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
                   <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-gold-active">Observado</p>
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-brand">Observado</p>
                     <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.seen}</p>
                   </div>
                   <div className="bg-paper-deep p-5">
@@ -505,7 +505,7 @@ export default function LandingPage() {
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow-gold mb-4">/ 06. O método</p>
+            <p className="eyebrow-brand mb-4">/ 06. O método</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
               A.C.E.S.S.O. — seis perguntas antes de confiar em alguém.
             </h2>
@@ -521,11 +521,11 @@ export default function LandingPage() {
               return (
                 <div key={m.title} className="bg-paper-strong p-7">
                   <div className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-display text-2xl font-bold text-gold">
+                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-display text-2xl font-bold text-brand">
                       {m.letter}
                     </span>
                     <div className="flex items-center gap-2">
-                      <Icon className="h-4 w-4 text-gold-active" aria-hidden />
+                      <Icon className="h-4 w-4 text-brand" aria-hidden />
                       <h3 className="font-display text-lg font-semibold text-ink">{m.title}</h3>
                     </div>
                   </div>
@@ -557,7 +557,7 @@ export default function LandingPage() {
               const Icon = card.icon
               return (
                 <div key={card.title} className="bg-paper-strong p-7">
-                  <span className="inline-flex h-11 w-11 items-center justify-center bg-paper-deep text-gold-active">
+                  <span className="inline-flex h-11 w-11 items-center justify-center bg-paper-deep text-brand">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <h3 className="mt-5 font-display text-lg font-semibold text-ink">{card.title}</h3>
@@ -576,7 +576,7 @@ export default function LandingPage() {
           <div className="mx-auto mt-8 grid max-w-4xl gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
             {STEPS.map((step) => (
               <div key={step.n} className="bg-paper-strong p-7">
-                <span className="font-display text-4xl font-bold text-gold">{step.n}</span>
+                <span className="font-display text-4xl font-bold text-brand">{step.n}</span>
                 <h3 className="mt-4 font-display text-lg font-semibold text-ink">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
               </div>
@@ -590,14 +590,14 @@ export default function LandingPage() {
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto grid max-w-5xl gap-px overflow-hidden border border-line bg-line lg:grid-cols-2">
             <div className="bg-paper-strong p-8 md:p-10">
-              <p className="eyebrow-gold mb-4">/ 07. Para quem</p>
+              <p className="eyebrow-brand mb-4">/ 07. Para quem</p>
               <h2 className="font-display text-2xl font-bold leading-snug text-ink text-balance">
                 Para quem paga caro quando confia na pessoa errada.
               </h2>
               <ul className="mt-6 space-y-4">
                 {FOR_WHOM.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold-active" aria-hidden />
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -625,7 +625,7 @@ export default function LandingPage() {
       <section className="hairline-b bg-ink text-paper">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-gold mb-4">/ 09. Ética e limites</p>
+            <p className="font-mono text-[11px] uppercase tracking-widest text-brand mb-4">/ 09. Ética e limites</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-paper text-balance">
               Avaliar pessoas não é manipular pessoas.
             </h2>
@@ -655,7 +655,7 @@ export default function LandingPage() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-px overflow-hidden border border-line bg-line lg:grid-cols-5">
             {/* Preço */}
             <div className="bg-paper-strong p-8 md:p-10 lg:col-span-2">
-              <p className="font-mono text-xs uppercase tracking-widest text-gold-active">Acesso por 12 meses</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-brand">Acesso por 12 meses</p>
               <p className="mt-4 text-sm text-ink-muted line-through">De R$ 1.290</p>
               <div className="mt-1 flex items-baseline gap-2">
                 <span className="font-display text-6xl font-bold text-ink">R$ 49</span>
@@ -663,17 +663,17 @@ export default function LandingPage() {
               <p className="mt-2 text-sm text-ink-muted">pagamento único · PIX ou cartão</p>
               <a
                 href={CHECKOUT_URL}
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-gold px-6 py-4 text-base font-semibold text-on-gold transition-colors hover:bg-gold-hover"
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-brand px-6 py-4 text-base font-semibold text-on-brand transition-colors hover:bg-brand-hover"
               >
                 Garantir meu acesso
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
               <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-mono uppercase tracking-wider text-ink-muted">
                 <span className="inline-flex items-center gap-1.5">
-                  <ShieldCheck className="h-3.5 w-3.5 text-gold-active" aria-hidden /> 7 dias garantia
+                  <ShieldCheck className="h-3.5 w-3.5 text-brand" aria-hidden /> 7 dias garantia
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <Lock className="h-3.5 w-3.5 text-gold-active" aria-hidden /> Pagamento seguro
+                  <Lock className="h-3.5 w-3.5 text-brand" aria-hidden /> Pagamento seguro
                 </span>
               </div>
             </div>
@@ -685,7 +685,7 @@ export default function LandingPage() {
               <ul className="mt-5 space-y-3">
                 {INCLUDED.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold-active" aria-hidden />
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -696,11 +696,11 @@ export default function LandingPage() {
           {/* Garantia */}
           <div className="mx-auto mt-8 max-w-4xl border border-line bg-paper-strong p-7 md:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-paper-deep text-gold-active">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-paper-deep text-brand">
                 <ShieldCheck className="h-6 w-6" aria-hidden />
               </span>
               <div>
-                <p className="eyebrow-gold mb-1">Garantia incondicional</p>
+                <p className="eyebrow-brand mb-1">Garantia incondicional</p>
                 <h3 className="font-display text-lg font-semibold text-ink">7 dias para testar. Risco zero.</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
                   Se em uma semana o material não for para você, você pode solicitar o reembolso dentro do prazo
@@ -724,7 +724,7 @@ export default function LandingPage() {
                 <details key={item.q} className="group">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5">
                     <span className="flex items-baseline gap-3">
-                      <span className="font-mono text-xs text-gold-active">
+                      <span className="font-mono text-xs text-brand">
                         / {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="font-display text-lg font-semibold text-ink">{item.q}</span>
@@ -746,7 +746,7 @@ export default function LandingPage() {
       <section className="bg-ink text-paper">
         <div className="container-editorial py-16 md:py-24">
           <div className="mx-auto max-w-3xl">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-gold mb-4 flex items-center gap-2">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-brand mb-4 flex items-center gap-2">
               <ShieldAlert className="h-4 w-4" aria-hidden />
               Aviso de segurança · Material protegido
             </p>
@@ -782,7 +782,7 @@ export default function LandingPage() {
             <div className="mt-12 text-center">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex items-center justify-center gap-2 bg-gold px-7 py-4 text-base font-semibold text-on-gold transition-colors hover:bg-gold-hover"
+                className="inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-base font-semibold text-on-brand transition-colors hover:bg-brand-hover"
               >
                 Quero aprender o método por R$ 49
                 <ArrowRight className="h-4 w-4" aria-hidden />

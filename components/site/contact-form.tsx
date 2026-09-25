@@ -55,8 +55,8 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="bg-paper-strong border border-gold p-6 sm:p-8">
-        <p className="eyebrow-gold mb-2">Recebido</p>
+      <div role="status" aria-live="polite" className="bg-paper-strong border border-brand p-6 sm:p-8">
+        <p className="eyebrow-brand mb-2">Recebido</p>
         <h3 className="font-display text-2xl font-semibold text-ink">
           Sua mensagem chegou aqui.
         </h3>
@@ -73,7 +73,7 @@ export function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="ct-nome" className="text-sm font-medium text-ink">
-            Nome <span aria-hidden className="text-gold-active">*</span>
+            Nome <span aria-hidden className="text-brand">*</span>
           </label>
           <input
             id="ct-nome"
@@ -81,12 +81,12 @@ export function ContactForm() {
             required
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
           />
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="ct-email" className="text-sm font-medium text-ink">
-            E-mail <span aria-hidden className="text-gold-active">*</span>
+            E-mail <span aria-hidden className="text-brand">*</span>
           </label>
           <input
             id="ct-email"
@@ -94,7 +94,7 @@ export function ContactForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
           />
         </div>
       </div>
@@ -107,7 +107,7 @@ export function ContactForm() {
           id="ct-intencao"
           value={form.intencao}
           onChange={(e) => setForm((f) => ({ ...f, intencao: e.target.value }))}
-          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand"
         >
           {INTENTS.map((i) => (
             <option key={i.value} value={i.value}>
@@ -119,7 +119,7 @@ export function ContactForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="ct-msg" className="text-sm font-medium text-ink">
-          Mensagem <span aria-hidden className="text-gold-active">*</span>
+          Mensagem <span aria-hidden className="text-brand">*</span>
         </label>
         <textarea
           id="ct-msg"
@@ -127,7 +127,7 @@ export function ContactForm() {
           rows={6}
           value={form.mensagem}
           onChange={(e) => setForm((f) => ({ ...f, mensagem: e.target.value }))}
-          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold resize-y"
+          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-brand resize-y"
         />
       </div>
 
@@ -137,7 +137,7 @@ export function ContactForm() {
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 accent-[var(--color-gold)] shrink-0"
+          className="mt-1 h-4 w-4 accent-[var(--color-brand)] shrink-0"
         />
         <span>
           Concordo com o uso dos meus dados para responder a esta solicitação,
@@ -154,8 +154,8 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start bg-gold hover:bg-[var(--color-gold-hover)] disabled:bg-[var(--color-gold-disabled)] px-6 py-3 text-sm font-medium transition-colors"
-        style={{ color: "var(--color-on-gold)" }}
+        className="self-start bg-brand hover:bg-[var(--color-brand-hover)] disabled:bg-[var(--color-line-strong)] px-6 py-3 text-sm font-medium transition-colors"
+        style={{ color: "var(--color-on-brand)" }}
       >
         {status === "loading" ? "Enviando…" : "Enviar mensagem"}
       </button>

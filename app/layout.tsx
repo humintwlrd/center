@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
-import { Inter, Space_Grotesk, IBM_Plex_Mono, Lora } from "next/font/google"
+import { Newsreader, Schibsted_Grotesk, IBM_Plex_Mono } from "next/font/google"
 import { Suspense } from "react"
+import Link from "next/link"
 import { Analytics } from "@vercel/analytics/next"
 import { SiteHeader } from "@/components/site/site-header"
 import { SiteFooter } from "@/components/site/site-footer"
@@ -10,28 +11,24 @@ import { OrganizationSchema } from "@/components/site/organization-schema"
 import { NAV, SITE } from "@/lib/site"
 import "./globals.css"
 
-const inter = Inter({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-inter",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-newsreader",
   display: "swap",
 })
 
-const spaceGrotesk = Space_Grotesk({
+const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-schibsted",
   display: "swap",
 })
 
 const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   variable: "--font-plex-mono",
-  display: "swap",
-})
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
   display: "swap",
 })
 
@@ -93,10 +90,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
-    { media: "(prefers-color-scheme: dark)", color: "#0D0D0D" },
-  ],
+  themeColor: "#f6f6f3",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -110,10 +104,10 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${plexMono.variable} ${lora.variable} bg-paper`}
+      className={`${newsreader.variable} ${schibsted.variable} ${plexMono.variable} bg-paper`}
       suppressHydrationWarning
     >
-      <body className="font-sans antialiased text-ink">
+      <body className="font-sans text-ink">
         <a href="#main" className="skip-link">
           Pular para o conteúdo
         </a>
@@ -133,23 +127,28 @@ export default function RootLayout({
 function HeaderFallback() {
   return (
     <header className="sticky top-0 z-40 w-full bg-paper border-b border-line">
-      <div className="container-editorial flex h-16 lg:h-[72px] items-center justify-between gap-4 lg:gap-8">
-        <a href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name}, página inicial`}>
+      <div className="container-editorial flex h-16 lg:h-[72px] items-center gap-4 lg:gap-10">
+        <Link href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name}, página inicial`}>
           <BrandLogo variant="black" className="h-8 sm:h-9" />
-        </a>
-        <nav className="hidden lg:flex flex-1 items-center justify-center gap-8" aria-label="Principal">
+        </Link>
+        <nav className="hidden lg:flex h-full items-stretch gap-7" aria-label="Principal">
           {NAV.primary.map((item) => (
-            <a key={item.href} href={item.href} className="text-[15px] font-medium text-ink-muted">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="inline-flex items-center text-[0.9375rem] font-medium text-ink-muted hover:text-ink"
+            >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
-        <a
-          href="/academy"
-          className="inline-flex items-center bg-gold text-on-gold px-3 py-2 text-sm font-semibold sm:px-4"
-        >
-          Academy
-        </a>
+        <div className="ml-auto flex items-center gap-1.5 sm:gap-3">
+          <span className="hidden md:inline-flex h-10 w-10" aria-hidden />
+          <Link href="/academy" className="btn btn-primary btn-sm">
+            Academy
+          </Link>
+          <span className="lg:hidden -mr-2 inline-flex h-10 w-10" aria-hidden />
+        </div>
       </div>
     </header>
   )

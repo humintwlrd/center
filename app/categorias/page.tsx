@@ -46,7 +46,7 @@ export default function CategoriasPage() {
                 <Card key={category.slug} className="group transition-shadow hover:shadow-md">
                   <CardHeader>
                     <CardTitle className="font-display text-xl">
-                      <Link href={`/artigos?categoria=${category.slug}`} className="hover:text-gold">
+                      <Link href={`/artigos?categoria=${category.slug}`} className="hover:text-brand">
                         {category.name}
                       </Link>
                     </CardTitle>
@@ -60,7 +60,7 @@ export default function CategoriasPage() {
                     <p className="mb-4 text-sm text-ink-muted line-clamp-3">{category.description}</p>
                     <Link
                       href={`/artigos?categoria=${category.slug}`}
-                      className="inline-flex items-center text-sm font-medium text-gold hover:underline"
+                      className="inline-flex items-center text-sm font-medium text-brand hover:underline"
                     >
                       {articleCount > 0 ? "Ver artigos" : "Acompanhar tema"}
                       <ArrowRight className="ml-1 h-3 w-3" />
