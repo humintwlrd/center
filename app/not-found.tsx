@@ -24,7 +24,7 @@ export default function NotFound() {
         </div>
         <p
           aria-hidden
-          className="hidden select-none self-end text-right font-display text-[11rem] font-medium leading-none text-line lg:col-span-4 lg:block"
+          className="hidden select-none self-end overflow-hidden text-right font-display text-[10rem] font-medium leading-none text-line lg:col-span-4 xl:block"
         >
           404
         </p>

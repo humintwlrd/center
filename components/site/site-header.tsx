@@ -78,9 +78,13 @@ export function SiteHeader() {
     <header
       className={cn(
         "sticky top-0 z-40 w-full border-b transition-[background-color,border-color] duration-200",
-        scrolled || open
-          ? "bg-paper/95 backdrop-blur-md border-line-strong"
-          : "bg-paper border-line",
+        // Sem backdrop-filter com o menu aberto: ele criaria um containing
+        // block e o painel `fixed` ficaria preso à altura do header.
+        open
+          ? "bg-paper border-line-strong"
+          : scrolled
+            ? "bg-paper/95 backdrop-blur-md border-line-strong"
+            : "bg-paper border-line",
       )}
     >
       <div className="container-editorial flex h-16 lg:h-[72px] items-center gap-4 lg:gap-10">

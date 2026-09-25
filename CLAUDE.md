@@ -34,11 +34,15 @@ app/
   artigos/                 # blog/artigos (inclui os importados do Instagram)
   categorias/ metodos/ humint/ recursos/ sobre/ contato/ formacao/ livro/
   lp/                      # landing "Como Avaliar Pessoas" (R$49) — NÃO MEXER sem pedir
+  pv/                      # landing de vendas do Acervo (header/footer próprios, Utmify)
+  error.tsx not-found.tsx  # páginas de erro no padrão visual
   api/                     # rotas de form (contato, etc.)
 components/
-  site/                    # header, footer, article-card, member-exclusives, etc.
-  shop/                    # Academy: shop-hero, product-grid, product-card,
+  site/                    # header, footer, page-header, section-heading, split-section,
+                           # academy-cta, article-card, breadcrumbs, formulários
+  shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
                            # acervo-detail (página de vendas rica do Acervo)
+  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, depoimentos...)
   ui/                      # shadcn/ui (não editar à toa)
 lib/
   products.ts              # CATÁLOGO da Academy (tipo Product + PRODUCTS + getProductBySlug)
@@ -59,17 +63,39 @@ scripts/
 
 ## Design system (em `app/globals.css`)
 
-Estética editorial: **escuro + dourado + serifada**, alinhado à esquerda, cantos retos.
-Evitar "AI slop": nada de gradiente roxo, centralização excessiva, cantos arredondados
-uniformes ou fonte Inter.
+Estética editorial: **preto/branco + acento verde**, títulos em **serifada**, alinhado à
+esquerda, **cantos retos**. Vermelho **só** para alerta (carimbos, erros). Evitar "AI slop":
+nada de gradiente decorativo, centralização excessiva, cards com ícone em bolha, sombras,
+cantos arredondados ou fonte Inter.
 
-Tokens (CSS vars) e utilitários equivalentes:
-- Dourado: `--color-gold` #d9a523, `gold-hover`, `gold-active`, `on-gold` → `.text-gold`, `.bg-gold`, `.text-on-gold`, `hover:bg-gold-hover`
-- Tinta: `ink`, `ink-soft`, `ink-muted` → `.text-ink`, `.text-ink-soft`, `.text-ink-muted`
-- Papel (fundos claros): `paper`, `paper-strong`, `paper-deep` → `.bg-paper*`
-- Escuro: `deep`, `deep-2`, `ink` → `.bg-deep`, `.bg-deep-2`, `.bg-ink`; texto claro `--color-warm-text` → `.text-warm`
-- Linhas: `line` → `.border-line`, `.hairline-b`; alerta `--color-alert` → `.text-alert`
-- Utilitários próprios: `.eyebrow`, `.eyebrow-gold` (rótulos mono dourados), `.container-editorial` (container padrão), `font-display` (serifada), `font-mono`
+Fontes (via `next/font` em `app/layout.tsx`):
+- `font-display` / `font-serif` → **Newsreader** (títulos e texto de artigo)
+- `font-sans` → **Schibsted Grotesk** (UI e texto corrido)
+- `font-mono` → **IBM Plex Mono** (rótulos, metadados)
+
+Tokens (Tailwind v4 gera `bg-*`, `text-*`, `border-*` com suporte a `/opacidade`):
+- Marca: `brand` #15803d, `brand-hover`, `brand-press`, `brand-soft`, `brand-bright` #4ade80 (acento sobre escuro), `on-brand`
+- Papel: `paper` #f6f6f3, `paper-strong` #fff, `paper-deep` · Tinta: `ink`, `ink-soft`, `ink-muted`
+- Filetes: `line`, `line-strong` (claro) · `line-dark`, `line-dark-strong` (escuro)
+- Escuro: `deep` #0a0a0a, `deep-2`, `deep-3` · texto claro `fog`, `fog-muted`
+- Alerta: `alert`, `alert-bright`
+- Escala fluida: `text-display-2xl|xl|lg|md|sm`, `text-lede` (já com line-height/tracking)
+
+Utilitários próprios (`@utility`):
+- Superfícies: `surface-deep`, `surface-deep-2` (seção escura; ajusta sozinhas eyebrow, kicker, botões, campos). Cores que seguem o tom: `text-tone`, `text-tone-muted`, `border-tone`
+- Layout: `container-editorial`, `prose-measure`, `rule-top` (filete grosso de seção), `hairline-t/b`
+- Rótulos: `kicker` (mono com quadrado verde), `eyebrow`, `eyebrow-brand`, `stamp`
+- Botões: `btn` + `btn-primary` | `btn-ink` | `btn-outline` (+ `btn-sm`/`btn-lg`); link `link-arrow`
+- Texto: `article-prose` (serifada, artigos), `doc-prose` (institucional/legal)
+- Formulários: `field`, `field-label` · Imagem em card: `media-zoom`
+
+Componentes de página (reutilize antes de criar markup novo):
+- `PageHeader` (abertura padrão: trilha, kicker, h1, linha fina, `tone="deep"` opcional)
+- `SectionHeading` (cabeçalho de seção com filete) · `SplitSection` (título 4/12 + conteúdo 8/12)
+- `AcademyCta` (`band` | `card`) · `ArticleCard` (`default` | `lead` | `row` | `compact`)
+
+`cn()` (`lib/utils.ts`) usa `extendTailwindMerge` com a escala `display-*`/`lede`; se
+criar novos tamanhos de texto, registre-os lá, senão o merge os descarta.
 
 Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente cores).
 
@@ -101,8 +127,9 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 - **`/lp` é intocável** salvo pedido explícito.
 - Não editar `lib/content/instagram-articles.generated.ts` nem `components/ui/*` sem necessidade.
 - Mantenha **fim de linha LF**.
-- O header é renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx` (`HeaderFallback`).
-  Ao mudar o header/CTA, ajuste **os dois** (fallback + `components/site/site-header.tsx`).
+- O header é fixo (`sticky`) e renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx`
+  (`HeaderFallback`). Ao mudar o header/CTA, ajuste **os dois** (fallback + `components/site/site-header.tsx`).
+  Barras fixas abaixo dele usam `top-16 lg:top-[72px]`.
 
 ## Deploy / verificação
 

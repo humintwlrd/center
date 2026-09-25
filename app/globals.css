@@ -322,8 +322,8 @@
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 600;
-  line-height: 1.2;
-  white-space: nowrap;
+  line-height: 1.25;
+  text-align: center;
   cursor: pointer;
   transition:
     background-color 160ms var(--ease-editorial),

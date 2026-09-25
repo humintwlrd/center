@@ -59,7 +59,7 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
           aria-describedby={message ? msgId : undefined}
           disabled={status === "loading" || status === "success"}
           className={cn(
-            "h-12 min-w-0 flex-1 border px-4 text-[0.9375rem] outline-none transition-colors",
+            "h-12 w-full min-w-0 flex-1 border px-4 sm:w-0 text-[0.9375rem] outline-none transition-colors",
             isDark
               ? "border-line-dark-strong bg-deep-2 text-fog placeholder:text-fog-muted focus:border-fog"
               : "border-line-strong bg-paper-strong text-ink placeholder:text-ink-muted focus:border-ink",

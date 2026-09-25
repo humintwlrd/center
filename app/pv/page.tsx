@@ -755,7 +755,7 @@ export default function AcervoTaticoPage() {
          ═══════════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden border-t-4 border-brand-bright bg-deep py-24 md:py-36">
         <div
-          className="absolute inset-x-0 top-0 mx-auto h-px max-w-3xl bg-gradient-to-r from-transparent via-brand-bright/60 to-transparent"
+          className="absolute inset-x-0 top-0 h-px bg-line-dark"
           aria-hidden
         />
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 px-5 text-center md:gap-10 md:px-8">

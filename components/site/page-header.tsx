@@ -61,7 +61,7 @@ export function PageHeader({
         )}
 
         <div className={cn("grid gap-10", aside && "lg:grid-cols-12 lg:gap-12 lg:items-end")}>
-          <div className={cn(aside ? "lg:col-span-7" : "max-w-4xl")}>
+          <div className={cn("min-w-0", aside ? "lg:col-span-7" : "max-w-4xl")}>
             {eyebrow && <p className="kicker mb-5">{eyebrow}</p>}
             <h1
               className={cn(
@@ -85,7 +85,7 @@ export function PageHeader({
             {children && <div className="mt-8">{children}</div>}
           </div>
 
-          {aside && <div className="lg:col-span-5">{aside}</div>}
+          {aside && <div className="min-w-0 lg:col-span-5">{aside}</div>}
         </div>
       </div>
     </header>

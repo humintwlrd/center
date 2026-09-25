@@ -16,9 +16,8 @@ export default function OG() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 80,
-          background:
-            "linear-gradient(135deg, #0d0d0d 0%, #141414 60%, #1c1c1c 100%)",
-          color: "#fafafa",
+          background: "#0a0a0a",
+          color: "#ededea",
           fontFamily: "serif",
         }}
       >
@@ -28,7 +27,7 @@ export default function OG() {
             alignItems: "center",
             gap: 16,
             fontSize: 22,
-            color: "#22c55e",
+            color: "#ededea",
             letterSpacing: 0,
             textTransform: "uppercase",
             fontFamily: "monospace",
@@ -38,7 +37,7 @@ export default function OG() {
             style={{
               width: 14,
               height: 14,
-              background: "#22c55e",
+              background: "#4ade80",
             }}
           />
           {SITE.name}
@@ -54,8 +53,8 @@ export default function OG() {
             style={{
               fontSize: 88,
               lineHeight: 1.05,
-              fontWeight: 600,
-              letterSpacing: 0,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
               maxWidth: 1000,
             }}
           >
@@ -64,7 +63,7 @@ export default function OG() {
           <div
             style={{
               fontSize: 28,
-              color: "#cfcfcf",
+              color: "#a3a39c",
               maxWidth: 900,
               lineHeight: 1.4,
             }}
@@ -78,14 +77,14 @@ export default function OG() {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: 20,
-            color: "#9ca3af",
+            color: "#a3a39c",
             fontFamily: "monospace",
             letterSpacing: 0,
-            borderTop: "1px solid #3a3a3a",
+            borderTop: "1px solid #2a2a28",
             paddingTop: 24,
           }}
         >
-          <span>mundodahumint.com.br</span>
+          <span>{new URL(SITE.url).host.replace(/^www\./, "")}</span>
           <span>pt-BR · publicação editorial</span>
         </div>
       </div>

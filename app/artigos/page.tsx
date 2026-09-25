@@ -121,9 +121,9 @@ export default async function ArtigosPage({ searchParams }: Props) {
             name="q"
             defaultValue={rawQ}
             placeholder="Buscar por tema, caso ou método…"
-            className="h-12 min-w-0 flex-1 bg-transparent px-3 text-[0.9375rem] text-ink outline-none placeholder:text-ink-muted"
+            className="h-12 w-0 min-w-0 flex-1 bg-transparent px-3 text-[0.9375rem] text-ink outline-none placeholder:text-ink-muted"
           />
-          <button type="submit" className="btn btn-ink rounded-none px-5">
+          <button type="submit" className="btn btn-ink shrink-0 px-4 sm:px-5">
             Buscar
           </button>
         </form>
