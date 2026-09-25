@@ -17,19 +17,19 @@ export const SITE = {
 } as const
 
 export const NAV = {
-  // 4 itens centrais no cabecalho (paralelo a Noticias/Artigos/Videos/Catalogo).
+  // Navegação do cabeçalho. O Acervo Tático fica no CTA vermelho à direita.
   primary: [
-    { label: "Artigos", href: "/artigos" },
     { label: "Casos", href: "/artigos?categoria=casos-historicos" },
+    { label: "Artigos", href: "/artigos" },
     { label: "Métodos", href: "/metodos" },
     { label: "Academy", href: "/academy" },
   ],
-  // Acessos auxiliares (visiveis no menu mobile e no rodape).
+  // Acessos auxiliares (menu mobile e rodapé).
   meta: [
     { label: "Fundamentos", href: "/humint" },
-    { label: "Formação", href: "/formacao" },
     { label: "Recursos", href: "/recursos" },
     { label: "Sobre", href: "/sobre" },
+    { label: "Contato", href: "/contato" },
   ],
   secondary: [
     { label: "Contato", href: "/contato" },

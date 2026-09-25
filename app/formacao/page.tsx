@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import Link from "next/link"
+import { PageHeader } from "@/components/site/page-header"
+import { SplitSection } from "@/components/site/split-section"
 import { InterestForm } from "@/components/site/interest-form"
 import { pageMetadata } from "@/lib/seo"
 
@@ -40,78 +42,56 @@ const FUTURE_PROGRAMS = [
 export default function FormacaoPage() {
   return (
     <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Formação", href: "/formacao" }]} />
-      </section>
-
-      {/* HERO */}
-      <section className="container-editorial py-10 md:py-16">
-        <span className="inline-block bg-warm-deep text-paper px-2.5 py-1 text-[11px] font-mono uppercase tracking-widest mb-5">
-          Em breve
-        </span>
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-4xl">
-          Formação Mundo da HUMINT
-        </h1>
-        <p className="mt-5 text-lg md:text-xl text-ink-soft leading-relaxed prose-measure">
-          Estamos finalizando nossos primeiros programas. Entre na lista para
-          receber acesso antecipado a turmas, aulas abertas e novos materiais.
+      <PageHeader
+        title="Formação ao vivo: em breve."
+        lede="Estamos finalizando os primeiros programas ao vivo. Entre na lista para receber acesso antecipado a turmas, aulas abertas e novos materiais."
+        breadcrumbs={[{ label: "Formação", href: "/formacao" }]}
+      >
+        <p className="max-w-[56ch] text-lg text-ink-2">
+          Quer começar agora? Os cursos e dossiês da Academy já estão disponíveis.{" "}
+          <Link href="/academy" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
+            Ver a Academy
+          </Link>
         </p>
-      </section>
+      </PageHeader>
 
-      {/* HONEST DISCLOSURE */}
-      <section className="bg-paper-deep">
-        <div className="container-editorial py-12 md:py-16 grid gap-8 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold">
-              Sem turma aberta. Sem promessa vazia.
-            </h2>
-          </div>
-          <div className="lg:col-span-7 prose-measure text-ink-soft leading-relaxed space-y-4 text-lg">
-            <p>
-              A formação está em desenvolvimento. Antes de abrir turma, queremos
-              ter o método consolidado, o material maduro e o convite certo
-              para quem leva HUMINT a sério.
-            </p>
-            <p>
-              A lista de interesse não é cobrança. É como organizamos o acesso
-              antecipado a workshops, aulas abertas e novos programas, sem
-              vender nada antes da hora.
-            </p>
-          </div>
+      <SplitSection id="transparencia" title="Sem turma aberta. Sem promessa vazia." tone="snow-2">
+        <div className="flex max-w-[60ch] flex-col gap-5 text-lg leading-relaxed text-ink-2">
+          <p>
+            A formação está em desenvolvimento. Antes de abrir turma, queremos o método consolidado, o material maduro e
+            o convite certo para quem leva HUMINT a sério.
+          </p>
+          <p>
+            A lista de interesse não é cobrança. É como organizamos o acesso antecipado a workshops, aulas abertas e
+            novos programas, sem vender nada antes da hora.
+          </p>
         </div>
-      </section>
+      </SplitSection>
 
-      {/* TEMAS FUTUROS */}
-      <section className="container-editorial py-16 md:py-20">
-        <div className="mb-10 hairline-b pb-3">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold">
-            Programas previstos
-          </h2>
-        </div>
-        <div className="grid gap-px bg-line md:grid-cols-2">
+      <SplitSection id="programas" title="Programas previstos.">
+        <div>
           {FUTURE_PROGRAMS.map((p) => (
-            <article key={p.title} className="bg-paper-strong p-6 md:p-8 flex flex-col gap-3">
-              <p className="eyebrow">{p.format}</p>
-              <h3 className="font-display text-xl md:text-2xl font-semibold text-balance">{p.title}</h3>
-              <p className="text-ink-muted leading-relaxed">{p.summary}</p>
+            <article key={p.title} className="border-t-2 border-ink py-6">
+              <h3 className="font-expanded text-heading font-extrabold">{p.title}</h3>
+              <p className="mt-2 text-lg leading-relaxed text-ink-2">{p.summary}</p>
+              <p className="mt-2 text-sm text-ink-3">{p.format}</p>
             </article>
           ))}
         </div>
-      </section>
+      </SplitSection>
 
-      {/* INTEREST FORM */}
-      <section className="bg-deep text-paper">
-        <div className="container-editorial py-16 md:py-24 grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5 min-w-0">
-            <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper text-balance leading-tight">
+      <section className="night" aria-labelledby="interesse-title">
+        <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
+          <div className="min-w-0 lg:col-span-5">
+            <h2 id="interesse-title" className="font-expanded text-title font-extrabold">
               Acesso antecipado às próximas turmas.
             </h2>
-            <p className="mt-5 text-[var(--color-warm-text)] leading-relaxed">
-              Avisamos com antecedência sobre aulas abertas, workshops e
-              abertura de programas, na ordem em que forem confirmados.
+            <p className="mt-5 max-w-[44ch] text-lg leading-relaxed text-mist">
+              Avisamos com antecedência sobre aulas abertas, workshops e abertura de programas, na ordem em que forem
+              confirmados.
             </p>
           </div>
-          <div className="lg:col-span-7 min-w-0 bg-paper p-6 md:p-10">
+          <div className="min-w-0 lg:col-span-7">
             <InterestForm />
           </div>
         </div>

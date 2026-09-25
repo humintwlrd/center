@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { LegalPage } from "@/components/legal-page"
 
 export const metadata: Metadata = {
-  title: "Termos de Uso · Mundo da HUMINT",
+  title: "Termos de Uso",
   description:
     "Termos e condições de uso do Acervo Tático HUMINT — regras de acesso, licença de uso, pagamento, garantia e responsabilidades.",
   alternates: { canonical: "/termos" },
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function TermosPage() {
   return (
-    <LegalPage eyebrow="/ Documento legal" title="Termos de Uso" updatedAt="4 de junho de 2026">
+    <LegalPage path="/termos" title="Termos de Uso" updatedAt="4 de junho de 2026">
       <p>
         Estes Termos de Uso (&quot;Termos&quot;) regem o acesso e a utilização do{" "}
         <strong>Acervo Tático HUMINT</strong> (&quot;Produto&quot;), um material digital educacional

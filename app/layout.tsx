@@ -1,37 +1,22 @@
 import type { Metadata, Viewport } from "next"
-import { Inter, Space_Grotesk, IBM_Plex_Mono, Lora } from "next/font/google"
+import { Archivo } from "next/font/google"
 import { Suspense } from "react"
+import Link from "next/link"
 import { Analytics } from "@vercel/analytics/next"
 import { SiteHeader } from "@/components/site/site-header"
 import { SiteFooter } from "@/components/site/site-footer"
 import { BrandLogo } from "@/components/site/brand-logo"
 import { CookieBanner } from "@/components/site/cookie-banner"
 import { OrganizationSchema } from "@/components/site/organization-schema"
+import { Declassify } from "@/components/site/declassify"
 import { NAV, SITE } from "@/lib/site"
 import "./globals.css"
 
-const inter = Inter({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-})
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-})
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
-  display: "swap",
-})
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
+  axes: ["wdth"],
+  style: ["normal", "italic"],
+  variable: "--font-archivo",
   display: "swap",
 })
 
@@ -93,10 +78,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
-    { media: "(prefers-color-scheme: dark)", color: "#0D0D0D" },
-  ],
+  themeColor: "#0b0b0c",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -110,10 +92,10 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${plexMono.variable} ${lora.variable} bg-paper`}
+      className={archivo.variable}
       suppressHydrationWarning
     >
-      <body className="font-sans antialiased text-ink">
+      <body>
         <a href="#main" className="skip-link">
           Pular para o conteúdo
         </a>
@@ -123,6 +105,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <SiteFooter />
         <CookieBanner />
+        <Declassify />
         <OrganizationSchema />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
@@ -132,24 +115,28 @@ export default function RootLayout({
 
 function HeaderFallback() {
   return (
-    <header className="sticky top-0 z-40 w-full bg-paper border-b border-line">
-      <div className="container-editorial flex h-16 lg:h-[72px] items-center justify-between gap-4 lg:gap-8">
-        <a href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name}, página inicial`}>
-          <BrandLogo variant="black" className="h-8 sm:h-9" />
-        </a>
-        <nav className="hidden lg:flex flex-1 items-center justify-center gap-8" aria-label="Principal">
+    <header className="night sticky top-0 z-40 w-full border-b border-line-night">
+      <div className="container-site flex h-16 items-center gap-6 lg:h-[72px] lg:gap-10">
+        <Link href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name}, página inicial`}>
+          <BrandLogo variant="white" className="h-8 sm:h-9" />
+        </Link>
+        <nav className="hidden h-full items-stretch gap-8 lg:flex" aria-label="Principal">
           {NAV.primary.map((item) => (
-            <a key={item.href} href={item.href} className="text-[15px] font-medium text-ink-muted">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="inline-flex items-center text-[0.9375rem] font-semibold text-mist hover:text-white"
+            >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
-        <a
-          href="/academy"
-          className="inline-flex items-center bg-gold text-on-gold px-3 py-2 text-sm font-semibold sm:px-4"
-        >
-          Academy
-        </a>
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
+          <Link href="/academy/acervo-tatico" className="btn btn-signal btn-sm">
+            Acervo Tático
+          </Link>
+          <span className="-mr-2 inline-flex h-10 w-10 lg:hidden" aria-hidden />
+        </div>
       </div>
     </header>
   )

@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises"
+import { join } from "node:path"
 import { ImageResponse } from "next/og"
 import { SITE } from "@/lib/site"
 
@@ -5,7 +7,12 @@ export const alt = "Mundo da HUMINT: inteligência humana aplicada, com método"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
-export default function OG() {
+export default async function OG() {
+  const [display, text] = await Promise.all([
+    readFile(join(process.cwd(), "assets/og/archivo-800-expanded.ttf")),
+    readFile(join(process.cwd(), "assets/og/archivo-400.ttf")),
+  ])
+
   return new ImageResponse(
     (
       <div
@@ -15,81 +22,58 @@ export default function OG() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: 80,
-          background:
-            "linear-gradient(135deg, #0d0d0d 0%, #141414 60%, #1c1c1c 100%)",
-          color: "#fafafa",
-          fontFamily: "serif",
+          padding: "72px 80px",
+          background: "#0b0b0c",
+          color: "#ffffff",
+          fontFamily: "Archivo",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-            fontSize: 22,
-            color: "#22c55e",
-            letterSpacing: 0,
-            textTransform: "uppercase",
-            fontFamily: "monospace",
-          }}
-        >
+        <div style={{ display: "flex", fontFamily: "Archivo Display", fontSize: 26 }}>{SITE.name}</div>
+
+        <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              width: 14,
-              height: 14,
-              background: "#22c55e",
-            }}
-          />
-          {SITE.name}
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 88,
-              lineHeight: 1.05,
-              fontWeight: 600,
-              letterSpacing: 0,
-              maxWidth: 1000,
+              display: "flex",
+              flexWrap: "wrap",
+              fontFamily: "Archivo Display",
+              fontSize: 84,
+              lineHeight: 0.98,
+              letterSpacing: "-0.03em",
+              maxWidth: 1040,
             }}
           >
-            A inteligência humana aplicada, com método.
+            <span>Inteligência humana aplicada,&nbsp;</span>
+            <span style={{ display: "flex", flexDirection: "column" }}>
+              <span>com método.</span>
+              <span style={{ height: 9, marginTop: 4, background: "#e5252a" }} />
+            </span>
           </div>
-          <div
-            style={{
-              fontSize: 28,
-              color: "#cfcfcf",
-              maxWidth: 900,
-              lineHeight: 1.4,
-            }}
-          >
-            Artigos, dossiês e fundamentos para quem investiga, verifica e decide.
+          <div style={{ display: "flex", marginTop: 36, fontSize: 30, lineHeight: 1.4, color: "#b6b6ba", maxWidth: 880 }}>
+            Casos reais de espionagem dissecados em método para negociar, avaliar pessoas e proteger informação.
           </div>
         </div>
+
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
-            fontSize: 20,
-            color: "#9ca3af",
-            fontFamily: "monospace",
-            letterSpacing: 0,
-            borderTop: "1px solid #3a3a3a",
+            borderTop: "1px solid #2e2e31",
             paddingTop: 24,
+            fontSize: 22,
+            color: "#8c8c92",
           }}
         >
-          <span>mundodahumint.com.br</span>
-          <span>pt-BR · publicação editorial</span>
+          <span>{new URL(SITE.url).host.replace(/^www\./, "")}</span>
+          <span>Academy · Acervo Tático</span>
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        { name: "Archivo Display", data: display, weight: 800, style: "normal" },
+        { name: "Archivo", data: text, weight: 400, style: "normal" },
+      ],
+    },
   )
 }

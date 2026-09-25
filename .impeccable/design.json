@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-25T04:29:04+00:00",
+  "title": "Design System: Mundo da HUMINT",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Vermelho Sinal",
+        "canonical": "#e5252a",
+        "oklch": "oklch(59.3% 0.223 26.6)",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0004",
+          "#7c020b",
+          "#b20014",
+          "#e42329",
+          "#fe655b",
+          "#feaba2",
+          "#fee9e6"
+        ]
+      },
+      "signal-hover": {
+        "role": "primary",
+        "displayName": "Vermelho Sinal Fechado",
+        "canonical": "#c81e23",
+        "oklch": "oklch(53.5% 0.202 26.5)",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0003",
+          "#7c010b",
+          "#b10315",
+          "#dc3634",
+          "#ff645b",
+          "#ffaba2",
+          "#ffe9e6"
+        ]
+      },
+      "on-signal": {
+        "role": "neutral",
+        "displayName": "Branco sobre Sinal",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Noite de Operação",
+        "canonical": "#0b0b0c",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "night-2": {
+        "role": "neutral",
+        "displayName": "Sala Escura",
+        "canonical": "#151516",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "night-3": {
+        "role": "neutral",
+        "displayName": "Moldura Noturna",
+        "canonical": "#202022",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "line-night": {
+        "role": "neutral",
+        "displayName": "Filete Noturno",
+        "canonical": "#2e2e31",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Névoa",
+        "canonical": "#b6b6ba",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "mist-2": {
+        "role": "neutral",
+        "displayName": "Névoa Funda",
+        "canonical": "#8c8c92",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "snow": {
+        "role": "neutral",
+        "displayName": "Papel Branco",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "snow-2": {
+        "role": "neutral",
+        "displayName": "Papel de Arquivo",
+        "canonical": "#f3f3f2",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#0b0b0c",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Tinta Corrida",
+        "canonical": "#3a3a3d",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Tinta Apagada",
+        "canonical": "#66666c",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Filete de Papel",
+        "canonical": "#e3e3e5",
+        "tonalRamp": [
+          "#151516",
+          "#202022",
+          "#2e2e31",
+          "#3a3a3d",
+          "#66666c",
+          "#8c8c92",
+          "#b6b6ba",
+          "#f3f3f2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "mega": {
+        "displayName": "Mega",
+        "purpose": "Manchete da abertura e uma ou duas declarações por página; medida de 13 a 18ch."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "h1 de páginas internas e de produto, títulos de oferta e FAQ, o caso principal."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de seção, frase de fechamento do rodapé, preço em destaque, numerais de capítulo no desktop."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Títulos de item em lista, nome do produto no card, citações de destaque, escada de percepção."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Linha fina sob h1 e títulos de seção, 46 a 58ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto de interface; descrições de seção sobem para 1.125rem."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Corpo de artigo (prose-read), 1.1875rem a partir de 768px, máximo 68ch, cor ink-2."
+      },
+      "card-title": {
+        "displayName": "Card title",
+        "purpose": "Títulos de artigo em grade e lista, etapas, perguntas do FAQ; 1.125 a 1.25rem, largura 110 a 112%."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Botões e links de ação, largura 112%."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rótulos de campo e links da navegação."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Categoria, data, tempo de leitura, trilha e legendas, no terciário da superfície."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Curva única de todas as transições do sistema."
+      },
+      {
+        "name": "state-change",
+        "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Troca de fundo, texto e borda em botões."
+      },
+      {
+        "name": "field-focus",
+        "value": "160ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Borda do campo indo para o vermelho sinal no foco."
+      },
+      {
+        "name": "icon-nudge",
+        "value": "transform 220ms cubic-bezier(0.16, 1, 0.3, 1); translateX(3px)",
+        "purpose": "Seta final de botão e link de ação avança no hover."
+      },
+      {
+        "name": "nav-underline",
+        "value": "transform 300ms; scaleX(0 -> 1), origin left",
+        "purpose": "Barra vermelha de 3px do item ativo ou em hover da navegação."
+      },
+      {
+        "name": "accordion-plus",
+        "value": "transform 300ms; rotate(45deg)",
+        "purpose": "O + do FAQ vira x quando a pergunta abre."
+      },
+      {
+        "name": "media-zoom",
+        "value": "transform 900ms cubic-bezier(0.16, 1, 0.3, 1); scale(1.035)",
+        "purpose": "Imagem de card se aproxima quando o grupo recebe hover."
+      },
+      {
+        "name": "grayscale-release",
+        "value": "filter 700ms; grayscale(35-40%) -> grayscale(0)",
+        "purpose": "Fotos de caso ganham cor no hover."
+      },
+      {
+        "name": "redact-release",
+        "value": "color 420ms cubic-bezier(0.16, 1, 0.3, 1) 260ms, background-color 640ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "A tarja liberada: o único momento autoral. Dispara uma vez com 60% do trecho visível, após 450ms (700ms na abertura)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Com prefers-reduced-motion toda animação e transição cai a 0.01ms e a tarja já aparece liberada."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "container-max",
+        "value": "1360px"
+      },
+      {
+        "name": "header-height",
+        "value": "64px; 72px from lg"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão sinal",
+      "kind": "button",
+      "refersTo": "button-signal",
+      "description": "Compra e CTA principal; checkout abre em nova aba com seta diagonal.",
+      "html": "<a class=\"ds-btn-signal\" href=\"#\" target=\"_blank\" rel=\"noopener\">Comprar agora<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg><span class=\"ds-sr\">(abre em nova aba)</span></a>",
+      "css": ".ds-btn-signal { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0.875rem 1.5rem; border: 1.5px solid transparent; border-radius: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-stretch: 112%; font-size: 0.9375rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-signal svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-signal:hover svg:last-child { transform: translateX(3px); } .ds-btn-signal:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-btn-signal { background: var(--color-signal, #e5252a); color: #ffffff; } .ds-btn-signal:hover { background: var(--color-signal-hover, #c81e23); } .ds-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }"
+    },
+    {
+      "name": "Botão sólido",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Ação secundária de peso; preenchido no tom do texto da superfície, vira vermelho no hover.",
+      "html": "<a class=\"ds-btn-solid\" href=\"#\">Falar com o suporte</a>",
+      "css": ".ds-btn-solid { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0.875rem 1.5rem; border: 1.5px solid transparent; border-radius: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-stretch: 112%; font-size: 0.9375rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-solid svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-solid:hover svg:last-child { transform: translateX(3px); } .ds-btn-solid:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-btn-solid { background: var(--color-ink, #0b0b0c); color: #ffffff; } .ds-btn-solid:hover { background: var(--color-signal, #e5252a); color: #ffffff; }"
+    },
+    {
+      "name": "Botão contorno",
+      "kind": "button",
+      "refersTo": "button-line-night",
+      "description": "Par secundário do botão sinal; contorno de 1.5px no tom do texto, preenche no hover. Mostrado na noite, ao lado do sinal.",
+      "html": "<div class=\"ds-line-demo\"><a class=\"ds-btn-line-sig\" href=\"#\">Conhecer o Acervo Tático<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a><a class=\"ds-btn-line\" href=\"#\">Ver os casos</a></div>",
+      "css": ".ds-line-demo { display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 2rem; background: var(--color-night, #0b0b0c); } .ds-btn-line-sig { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0.875rem 1.5rem; border: 1.5px solid transparent; border-radius: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-stretch: 112%; font-size: 0.9375rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-line-sig svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-line-sig:hover svg:last-child { transform: translateX(3px); } .ds-btn-line-sig:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-btn-line-sig { background: var(--color-signal, #e5252a); color: #ffffff; min-height: 3.5rem; padding: 1rem 1.875rem; font-size: 1rem; } .ds-btn-line-sig:hover { background: var(--color-signal-hover, #c81e23); } .ds-btn-line { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0.875rem 1.5rem; border: 1.5px solid transparent; border-radius: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-stretch: 112%; font-size: 0.9375rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-line svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-line:hover svg:last-child { transform: translateX(3px); } .ds-btn-line:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-btn-line { border-color: #ffffff; color: #ffffff; background: transparent; min-height: 3.5rem; padding: 1rem 1.875rem; font-size: 1rem; } .ds-btn-line:hover { background: #ffffff; color: var(--color-night, #0b0b0c); }"
+    },
+    {
+      "name": "Campo",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Campo de formulário retangular; borda vai ao vermelho sinal no foco e quando inválido. Borda de repouso reproduzida como construída (abaixo de 3:1, pendente).",
+      "html": "<div class=\"ds-field-wrap\"><label class=\"ds-field-label\" for=\"ds-email\">E-mail</label><input id=\"ds-email\" class=\"ds-field\" type=\"email\" placeholder=\"seu@email.com\"><input class=\"ds-field\" type=\"email\" value=\"email-invalido\" aria-invalid=\"true\" aria-label=\"E-mail inválido\"><p class=\"ds-field-error\" role=\"alert\">Informe um e-mail válido.</p></div>",
+      "css": ".ds-field-wrap { display: flex; flex-direction: column; gap: 0.5rem; max-width: 26rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-field-label { font-size: 0.9375rem; font-weight: 600; color: var(--color-ink, #0b0b0c); } .ds-field { width: 100%; min-height: 3rem; padding: 0.75rem 1rem; border: 1.5px solid #8c8c92; border-radius: 0; background: #ffffff; color: var(--color-ink, #0b0b0c); font: inherit; font-size: 1rem; line-height: 1.4; outline: none; transition: border-color 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-field::placeholder { color: var(--color-ink-3, #66666c); } .ds-field:focus, .ds-field:focus-visible { border-color: var(--color-signal, #e5252a); outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-field[aria-invalid='true'] { border-color: var(--color-signal, #e5252a); } .ds-field-error { margin: 0; font-size: 0.875rem; color: var(--color-signal, #e5252a); }"
+    },
+    {
+      "name": "Cabeçalho e navegação",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Cabeçalho fixo sempre na noite; item ativo branco com barra vermelha de 3px que cresce da esquerda; CTA sinal pequeno sempre visível.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-nav-logo\">Mundo da HUMINT</span><nav class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link\">Casos</a><a href=\"#\" class=\"ds-nav-link\" aria-current=\"page\">Artigos</a><a href=\"#\" class=\"ds-nav-link\">Métodos</a><a href=\"#\" class=\"ds-nav-link\">Academy</a></nav><a href=\"#\" class=\"ds-nav-cta\">Acervo Tático</a></header>",
+      "css": ".ds-nav { display: flex; align-items: stretch; gap: 2.5rem; height: 72px; padding: 0 2rem; background: var(--color-night, #0b0b0c); border-bottom: 1px solid var(--color-line-night, #2e2e31); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-nav-logo { display: flex; align-items: center; color: #ffffff; font-weight: 800; font-stretch: 125%; font-size: 1rem; letter-spacing: -0.01em; } .ds-nav-links { display: flex; align-items: stretch; gap: 2rem; } .ds-nav-link { position: relative; display: inline-flex; align-items: center; color: var(--color-mist, #b6b6ba); font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: color 150ms; } .ds-nav-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--color-signal, #e5252a); transform: scaleX(0); transform-origin: left; transition: transform 300ms; } .ds-nav-link:hover { color: #ffffff; } .ds-nav-link[aria-current='page'] { color: #ffffff; } .ds-nav-link[aria-current='page']::after { transform: scaleX(1); } .ds-nav-link:focus-visible, .ds-nav-cta:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-nav-cta { margin-left: auto; align-self: center; display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0.5625rem 1rem; background: var(--color-signal, #e5252a); color: #ffffff; font-size: 0.875rem; font-weight: 700; font-stretch: 112%; text-decoration: none; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-cta:hover { background: var(--color-signal-hover, #c81e23); }"
+    },
+    {
+      "name": "A Tarja",
+      "kind": "custom",
+      "refersTo": "redact-bar-night",
+      "description": "Assinatura do sistema: as últimas palavras da manchete sob uma barra na cor da tinta, liberadas uma vez ao entrar na tela, deixando um sublinhado vermelho. No painel, hover ou foco simula a liberação.",
+      "html": "<div class=\"ds-redact-demo\" tabindex=\"0\"><h2 class=\"ds-redact-title\">Inteligência humana aplicada, <span class=\"ds-redact\">com método.</span></h2><p class=\"ds-redact-withheld\">Quem ensina: <span class=\"ds-withheld\" role=\"img\" aria-label=\"nome omitido\"></span>. O foco está no método.</p></div>",
+      "css": ".ds-redact-demo { padding: 2.5rem 2rem; background: var(--color-night, #0b0b0c); color: #ffffff; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-redact-title { margin: 0; max-width: 13ch; font-size: clamp(2.25rem, 1.25rem + 3.8vw, 4.5rem); font-weight: 800; font-stretch: 125%; line-height: 0.98; letter-spacing: -0.03em; } .ds-redact { -webkit-box-decoration-break: clone; box-decoration-break: clone; color: transparent; background-color: #ffffff; background-image: linear-gradient(var(--color-signal, #e5252a), var(--color-signal, #e5252a)); background-repeat: no-repeat; background-position: 0 92%; background-size: 100% 0.1em; transition: color 420ms cubic-bezier(0.16, 1, 0.3, 1) 260ms, background-color 640ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-redact-demo:hover .ds-redact, .ds-redact-demo:focus-visible .ds-redact { color: inherit; background-color: transparent; } .ds-redact-demo:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-redact-withheld { margin: 1.5rem 0 0; color: var(--color-mist, #b6b6ba); font-size: 1rem; } .ds-withheld { display: inline-block; width: 10rem; height: 0.9em; vertical-align: -0.08em; background: #ffffff; } @media (prefers-reduced-motion: reduce) { .ds-redact { color: inherit; background-color: transparent; transition: none; } }"
+    },
+    {
+      "name": "Lista com marcador de tarja",
+      "kind": "custom",
+      "refersTo": "bar-mark",
+      "description": "Lista afirmativa aberta por filete de 2px, linhas com filete de 1px e a tarja curta como marcador; lista negativa com X em ink-3.",
+      "html": "<div class=\"ds-lists\"><ul class=\"ds-list\"><li><span class=\"ds-bar-mark\" aria-hidden=\"true\"></span>12 meses de acesso à área de membros.</li><li><span class=\"ds-bar-mark\" aria-hidden=\"true\"></span>6 dossiês fundamentais + núcleo de ferramentas operacionais.</li><li><span class=\"ds-bar-mark\" aria-hidden=\"true\"></span>Garantia incondicional de 7 dias.</li></ul><ul class=\"ds-list ds-list-not\"><li><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>Quem procura hack mental ou manual de manipulação.</li><li><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>Quem confunde inteligência humana com paranoia.</li></ul></div>",
+      "css": ".ds-lists { display: grid; gap: 2.5rem; max-width: 40rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-list { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--color-ink, #0b0b0c); } .ds-list li { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-line, #e3e3e5); font-size: 1.125rem; line-height: 1.55; color: var(--color-ink-2, #3a3a3d); } .ds-bar-mark { display: inline-block; flex-shrink: 0; width: 1.1em; height: 0.42em; margin-top: 0.6em; background: var(--color-ink, #0b0b0c); } .ds-list-not li { gap: 0.75rem; color: var(--color-ink-3, #66666c); } .ds-list-not svg { width: 1.25rem; height: 1.25rem; flex-shrink: 0; margin-top: 0.375rem; color: var(--color-ink-3, #66666c); }"
+    },
+    {
+      "name": "Capítulo numerado",
+      "kind": "custom",
+      "refersTo": "chapter-numeral",
+      "description": "Linha de lista ordenada de casos: numeral tabular estendido no terciário, numa calha fixa, título que vira vermelho no hover.",
+      "html": "<ol class=\"ds-chapters\"><li><a href=\"#\" class=\"ds-chapter\"><span class=\"ds-chapter-n\">02</span><span class=\"ds-chapter-body\"><span class=\"ds-chapter-title\">Sergei Skripal: recrutamento, troca de prisioneiros e retaliação</span><span class=\"ds-chapter-meta\">11 min de leitura</span></span></a></li><li><a href=\"#\" class=\"ds-chapter\"><span class=\"ds-chapter-n\">03</span><span class=\"ds-chapter-body\"><span class=\"ds-chapter-title\">Unidade 29155: as operações encobertas do GRU na Europa</span><span class=\"ds-chapter-meta\">10 min de leitura</span></span></a></li></ol>",
+      "css": ".ds-chapters { margin: 0; padding: 0 2rem; list-style: none; background: var(--color-night, #0b0b0c); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-chapters li { border-bottom: 1px solid var(--color-line-night, #2e2e31); } .ds-chapter { display: grid; grid-template-columns: 5rem minmax(0, 1fr); column-gap: 2rem; padding: 2.5rem 0; color: #ffffff; text-decoration: none; } .ds-chapter-n { font-variant-numeric: tabular-nums; font-size: clamp(1.75rem, 1.15rem + 2.2vw, 3rem); font-weight: 800; font-stretch: 125%; line-height: 1.04; color: var(--color-mist-2, #8c8c92); } .ds-chapter-body { display: flex; flex-direction: column; gap: 1rem; } .ds-chapter-title { font-size: clamp(1.3125rem, 1.12rem + 0.75vw, 1.75rem); font-weight: 800; font-stretch: 125%; line-height: 1.14; letter-spacing: -0.014em; transition: color 150ms; } .ds-chapter:hover .ds-chapter-title { color: var(--color-signal, #e5252a); } .ds-chapter:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-chapter-meta { font-size: 0.875rem; color: var(--color-mist-2, #8c8c92); }"
+    },
+    {
+      "name": "Card de produto",
+      "kind": "card",
+      "refersTo": "badge",
+      "description": "Card sem caixa: capa 3:4 com selo encostado à esquerda, nome estendido, só o parcelado com Cartão ou Pix, botão sinal e link de ação.",
+      "html": "<article class=\"ds-product\"><div class=\"ds-product-cover\"><span class=\"ds-badge\">Mais vendido</span></div><h3 class=\"ds-product-name\"><a href=\"#\">Acervo Tático de Inteligência Humana</a></h3><p class=\"ds-product-desc\">Seis dossiês e um núcleo de ferramentas operacionais.</p><p class=\"ds-price\"><span class=\"ds-price-label\">12x de </span><span class=\"ds-price-value\">R$ 93,09</span></p><p class=\"ds-price-note\">Curso · Cartão ou Pix</p><div class=\"ds-product-actions\"><a class=\"ds-product-buy\" href=\"#\" target=\"_blank\" rel=\"noopener\">Comprar agora<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a><a class=\"ds-link-more\" href=\"#\">Ver detalhes<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a></div></article>",
+      "css": ".ds-product { display: flex; flex-direction: column; max-width: 22rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; color: var(--color-ink, #0b0b0c); } .ds-product-cover { position: relative; aspect-ratio: 3 / 4; background: var(--color-night-3, #202022); overflow: hidden; } .ds-badge { position: absolute; left: 0; top: 1rem; padding: 0.375rem 0.75rem; background: #ffffff; color: var(--color-ink, #0b0b0c); font-size: 0.875rem; font-weight: 700; } .ds-product-name { margin: 1.5rem 0 0; font-size: clamp(1.3125rem, 1.12rem + 0.75vw, 1.75rem); font-weight: 800; font-stretch: 125%; line-height: 1.14; letter-spacing: -0.014em; } .ds-product-name a { color: inherit; text-decoration: none; transition: color 150ms; } .ds-product-name a:hover { color: var(--color-signal, #e5252a); } .ds-product-desc { margin: 0.75rem 0 0; font-size: 0.9375rem; line-height: 1.625; color: var(--color-ink-2, #3a3a3d); } .ds-price { margin: 1.5rem 0 0; font-variant-numeric: tabular-nums; } .ds-price-label { color: var(--color-ink-2, #3a3a3d); } .ds-price-value { white-space: nowrap; font-size: 1.5rem; font-weight: 800; font-stretch: 125%; } .ds-price-note { margin: 0.25rem 0 0; font-size: 0.875rem; color: var(--color-ink-3, #66666c); } .ds-product-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: 1.25rem; } .ds-product-buy { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0.875rem 1.5rem; border: 1.5px solid transparent; border-radius: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-stretch: 112%; font-size: 0.9375rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-product-buy svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-product-buy:hover svg:last-child { transform: translateX(3px); } .ds-product-buy:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; } .ds-product-buy { background: var(--color-signal, #e5252a); color: #ffffff; } .ds-product-buy:hover { background: var(--color-signal-hover, #c81e23); } .ds-link-more { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; font-stretch: 112%; color: var(--color-ink, #0b0b0c); text-decoration: underline; text-decoration-color: var(--color-signal, #e5252a); text-decoration-thickness: 2px; text-underline-offset: 0.3em; } .ds-link-more svg { width: 1rem; height: 1rem; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-link-more:hover svg { transform: translateX(3px); } .ds-link-more:focus-visible { outline: 2px solid var(--color-signal, #e5252a); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Dossiê Liberado",
+    "overview": "O Mundo da HUMINT é uma escola de inteligência humana apresentada como o site de uma agência. O sistema trabalha com três materiais: preto e branco absolutos, um único vermelho de operação e uma família tipográfica (Archivo variável) que ganha autoridade alargando-se e pesando, não trocando de voz. O confidencial não aparece como fantasia de carimbo. Ele é um sistema: tarjas que escondem um trecho e o liberam uma vez, tarjas permanentes onde a identidade do instrutor fica omitida, tarjas curtas que marcam itens de lista. É o motivo gráfico com origem verdadeira (o documento desclassificado) que o posicionamento pede.\n\nA página alterna duas superfícies com funções diferentes. A noite (quase preto) vende: abertura, casos, oferta, ética, cabeçalho e rodapé. O papel branco lê: situação, listas longas, artigos, perguntas no site. Não há moldura, sombra nem canto arredondado. A densidade é de página de venda cinematográfica: seções altas, títulos enormes alinhados à esquerda, fotografia em tela cheia escurecida até a noite, casos reais tratados como capítulos numerados. A recusa confirmada é o portal editorial ou blog genérico: aqui quem organiza a página é o peso do título e a troca de superfície.\n\nO movimento é quase nulo por princípio. Há um só momento autoral, a liberação da tarja, que acontece uma vez quando o trecho entra na tela. O resto é resposta de estado: troca de cor em 180ms, seta que avança 3px, imagem que se aproxima devagar.",
+    "keyCharacteristics": [
+      "Duas superfícies com papéis fixos: noite para vender, papel para ler.",
+      "Um acento, vermelho sinal, preso a ação e à tarja liberada.",
+      "Uma família, Archivo variável; a hierarquia sai do eixo de largura (100% a 125%) e do peso (400 a 800).",
+      "A tarja como sistema gráfico: liberada, permanente (instrutor anônimo) e como marcador de lista.",
+      "Plano absoluto: raio 0, sem sombra, profundidade só por troca de tom.",
+      "Fotografia cinematográfica em tela cheia, escurecida, com cinza parcial liberado no hover.",
+      "Casos, etapas e partes numerados como capítulos, em algarismos tabulares largos."
+    ],
+    "rules": [
+      {
+        "name": "A Regra do Sinal Único",
+        "body": "O vermelho marca apenas o que se clica ou o estado de algo: CTA, link de ação, item ativo, hover, foco, erro e a tarja liberada. Teste: se o vermelho sumir e nenhuma ação ou estado ficar ilegível, ele não devia estar ali.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra das Duas Superfícies",
+        "body": "Noite vende, papel lê. Seções vizinhas trocam de superfície (noite ↔ papel) ou de passo dentro dela (`night` ↔ `night-2`, `snow` ↔ `snow-2`); a troca é o divisor entre seções.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Tom Herdado",
+        "body": "Componentes que podem cair nas duas superfícies herdam as cores dela (`text-tone`, `text-tone-2`, `text-tone-3`, `border-tone`, e as variáveis `--tone-*` e `--redact-bar` que `night`/`night-2` definem). Botão, campo, marcador e tarja nunca recebem cor fixa.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Largura",
+        "body": "O contraste tipográfico vem do eixo `wdth` e do peso dentro da mesma Archivo: 100% para ler, 110 a 112% para interface e títulos pequenos (700), 118% para títulos padrão e 125% para display (800). Citações também são Archivo: estendida e pesada nas páginas de venda, itálico 500 dentro do artigo.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Teto",
+        "body": "O display para em 6rem e o tracking nunca fecha além de -0.04em. Escala maior que isso vira pôster e perde a leitura no celular.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Filete de Lista",
+        "body": "O filete organiza conteúdo dentro de uma seção: uma lista, tabela ou FAQ abre com 2px no tom do texto (Tinta no papel, branco na noite) e cada linha fecha com 1px (`line` ou `line-night`). O bloco final de ação dentro de uma seção pode abrir com o mesmo filete. Entre seções, quem divide é a troca de superfície.",
+        "section": "layout"
+      },
+      {
+        "name": "A Regra da Superfície Plana",
+        "body": "Nada flutua. Se algo precisa se destacar, troca de tom ou cresce em escala; degradê só como véu sobre fotografia, sempre indo para a noite.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Use** Vermelho Sinal (#e5252a) só para CTA, link de ação, item ativo, hover, foco, erro e o sublinhado da tarja liberada.",
+      "**Alterne** noite (venda) e papel (leitura) entre seções, e use `night-2` / `snow-2` quando duas seções da mesma superfície se encostam.",
+      "**Componha** todo título em Archivo 800, estendida (`font-expanded`, 125%), nas classes `text-mega`, `text-display`, `text-title` ou `text-heading`; texto corrido na largura normal.",
+      "**Escreva** componentes com `text-tone*`, `border-tone` e as variáveis `--tone-*`, para que funcionem nas duas superfícies sem variante.",
+      "**Marque** itens de lista afirmativa com `bar-mark`, e listas negativas com o X em Tinta Apagada.",
+      "**Mostre** capas do Instagram inteiras, `object-contain` sobre `bg-night`, dentro do quadro.",
+      "**Use** algarismos tabulares em preços e numerais de capítulo; nos cards mostre só o parcelado, com \"Cartão ou Pix\".",
+      "**Abra** o checkout em nova aba com `ArrowUpRight` e o aviso \"(abre em nova aba)\" para leitores de tela.",
+      "**Coloque** a tarja nas últimas palavras de uma manchete, uma por manchete, com o texto real no DOM.",
+      "**Preserve** o logo do cérebro e as capas sépia dos produtos exatamente como são; onde o instrutor apareceria, use `withheld`."
+    ],
+    "donts": [
+      "**Não use** `box-shadow` nem raio de borda: o sistema é plano e retangular.",
+      "**Não use** degradê fora de fotografia; sobre foto, o véu sempre termina em `night`.",
+      "**Não crie** um segundo momento autoral de movimento; além da tarja, só transições de estado (160 a 300ms) e o `media-zoom`.",
+      "**Não traga** outra família tipográfica; citação e destaque também são Archivo.",
+      "**Não expresse** o confidencial com carimbo; o dispositivo do mundo é a tarja.",
+      "**Não use** Vermelho Sinal como cor de texto corrido sobre a noite (fica abaixo de 4.5:1); na noite, o vermelho como texto só em títulos.",
+      "**Não recorte** capa do Instagram nem a coloque sobre o papel.",
+      "**Não mostre** nome ou rosto do instrutor.",
+      "**Não use** os tokens e fontes do mundo editorial anterior (verde `brand`, `paper`, `deep`, Newsreader, Schibsted Grotesk, IBM Plex Mono): eles não existem mais em `app/globals.css`."
+    ]
+  }
+}

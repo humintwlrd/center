@@ -23,9 +23,9 @@ export function BackButton({ variant = "compact", label }: BackButtonProps) {
       <button
         type="button"
         onClick={goBack}
-        className="inline-flex items-center gap-2 bg-humint-amber text-humint-ink font-mono text-[11px] tracking-[0.16em] uppercase font-bold px-5 py-3.5 hover:bg-humint-bone transition-colors"
+        className="btn btn-signal btn-lg"
       >
-        <ArrowLeft className="h-3.5 w-3.5" />
+        <ArrowLeft aria-hidden />
         {label ?? "Voltar para a área de membros"}
       </button>
     )
@@ -35,9 +35,9 @@ export function BackButton({ variant = "compact", label }: BackButtonProps) {
     <button
       type="button"
       onClick={goBack}
-      className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.16em] uppercase text-humint-bone/60 hover:text-humint-amber transition-colors"
+      className="inline-flex items-center gap-2 font-semibold text-tone-2 transition-colors hover:text-tone"
     >
-      <ArrowLeft className="h-3.5 w-3.5" />
+      <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
       {label ?? "Voltar"}
     </button>
   )

@@ -2,9 +2,12 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowUpRight, CreditCard, Check } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { PRODUCTS, getProductBySlug } from "@/lib/products"
 import { AcervoDetail } from "@/components/shop/acervo-detail"
+import { ProductGrid } from "@/components/shop/product-grid"
+import { splitParcelado } from "@/components/shop/product-card"
+import { Breadcrumbs } from "@/components/site/breadcrumbs"
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -41,94 +44,114 @@ export default async function ProductPage({ params }: Props) {
     return <AcervoDetail product={product} />
   }
 
+  const isDossie = product.id.startsWith("dossie-")
+  const flagship = PRODUCTS.find((p) => p.destaque)
+  const siblings = PRODUCTS.filter((p) => p.id !== product.id && p.tipo === product.tipo).slice(0, 3)
+  const { label, value } = splitParcelado(product.parcelado)
+
   return (
     <article>
-      <section className="container-editorial pt-8 md:pt-10">
-        <nav className="font-mono text-[11px] uppercase tracking-widest text-ink-muted" aria-label="Trilha">
-          <Link href="/academy" className="hover:text-ink">
-            Academy
-          </Link>
-          <span className="px-2" aria-hidden>
-            /
-          </span>
-          <span className="text-ink-soft">{product.nome}</span>
-        </nav>
-      </section>
-
-      <div className="container-editorial grid gap-10 py-10 md:py-14 lg:grid-cols-2">
-        {/* Capa real */}
-        <div className="relative aspect-[3/4] w-full overflow-hidden border border-line bg-deep">
-          <Image
-            src={product.image || "/placeholder.svg"}
-            alt={product.imageAlt}
-            fill
-            sizes="(min-width: 1024px) 600px, 100vw"
-            priority
-            className="object-cover"
+      <header className="night">
+        <div className="container-site pt-8 pb-20 md:pb-28">
+          <Breadcrumbs
+            tone="night"
+            items={[
+              { label: "Academy", href: "/academy" },
+              { label: product.nome, href: `/academy/${product.id}` },
+            ]}
           />
-          <span className="absolute left-3 top-3 inline-block bg-ink px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-paper">
-            {product.tipo}
-          </span>
-          {product.badge && (
-            <span
-              className="absolute right-3 top-3 inline-block bg-gold px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-widest"
-              style={{ color: "var(--color-on-gold)" }}
-            >
-              {product.badge}
-            </span>
-          )}
+          <div className="mt-12 grid gap-12 md:mt-16 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden lg:sticky lg:top-28 lg:max-w-none">
+                <Image
+                  src={product.image || "/placeholder.svg"}
+                  alt={product.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 520px, 90vw"
+                  priority
+                  className="object-cover"
+                />
+                {product.badge && (
+                  <span className="absolute left-0 top-5 bg-snow px-3 py-1.5 text-sm font-bold text-ink">
+                    {product.badge}
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <div className="lg:col-span-7">
+              <h1 className="font-expanded text-title font-extrabold">{product.nome}</h1>
+              <p className="mt-8 max-w-[56ch] text-lede text-mist">{product.descricao}</p>
+
+              <div className="mt-10 border-y border-line-night py-8">
+                <p className="tabular">
+                  {label && <span className="text-mist">{label} </span>}
+                  <span className="font-expanded text-title font-extrabold">{value}</span>
+                </p>
+                <p className="mt-1 text-mist-2">{product.tipo} · Cartão ou Pix · Acesso imediato</p>
+                <a
+                  href={product.checkoutUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-signal btn-lg mt-7 w-full sm:w-auto"
+                >
+                  Comprar agora
+                  <ArrowUpRight aria-hidden />
+                  <span className="sr-only">(abre em nova aba)</span>
+                </a>
+                <p className="mt-5 text-sm text-mist-2">
+                  Checkout seguro da HeroSpark. Dúvidas?{" "}
+                  <Link href="/suporte" className="text-mist underline decoration-signal decoration-2 underline-offset-4">
+                    Suporte ao aluno
+                  </Link>
+                </p>
+              </div>
+
+              {product.ementa && product.ementa.length > 0 && (
+                <section className="mt-12" aria-labelledby="ementa-title">
+                  <h2 id="ementa-title" className="font-expanded text-heading font-extrabold">
+                    O que tem dentro
+                  </h2>
+                  <ol className="mt-6 border-t border-line-night">
+                    {product.ementa.map((item) => (
+                      <li key={item} className="border-b border-line-night py-4 text-lg">
+                        {item}
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+              )}
+            </div>
+          </div>
         </div>
+      </header>
 
-        {/* Info + compra */}
-        <div className="flex flex-col">
-          <p className="eyebrow-gold">{product.tipo}</p>
-          <h1 className="mt-2 font-display text-3xl font-semibold leading-tight text-balance text-ink md:text-4xl">
-            {product.nome}
-          </h1>
-          <p className="mt-4 text-base leading-relaxed text-ink-soft">{product.descricao}</p>
-
-          <p className="mt-6 font-display text-4xl font-bold text-gold-active">{product.parcelado}</p>
-          <p className="mt-1 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ink-muted">
-            <CreditCard className="h-3.5 w-3.5" aria-hidden /> Cartão · Pix
-          </p>
-
-          <a
-            href={product.checkoutUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 bg-gold px-5 py-3.5 font-mono text-sm font-bold uppercase tracking-widest text-on-gold transition-colors hover:bg-gold-hover focus-visible:outline-2 sm:w-auto"
-          >
-            Comprar agora
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </a>
-        </div>
-      </div>
-
-      {/* Ementa */}
-      {product.ementa && product.ementa.length > 0 && (
-        <section className="container-editorial pb-16 md:pb-20">
-          <div className="max-w-[68ch]">
-            <p className="eyebrow-gold mb-2">Conteúdo</p>
-            <h2 className="font-display text-2xl font-semibold text-ink">Ementa</h2>
-            <ul className="mt-5 divide-y divide-line border-y border-line">
-              {product.ementa.map((item) => (
-                <li key={item} className="flex items-start gap-3 py-3 text-ink-soft">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-green" aria-hidden />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <a
-              href={product.checkoutUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 bg-gold px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest text-on-gold transition-colors hover:bg-gold-hover"
-            >
-              Comprar agora
-              <ArrowUpRight className="h-4 w-4" aria-hidden />
-            </a>
+      {isDossie && flagship && (
+        <section className="bg-snow-2 text-ink" aria-labelledby="upsell-title">
+          <div className="container-site grid gap-8 py-16 md:grid-cols-12 md:items-center md:py-20">
+            <div className="md:col-span-8">
+              <h2 id="upsell-title" className="font-expanded text-title font-extrabold">
+                Este dossiê é um dos módulos do Acervo Tático.
+              </h2>
+              <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-ink-2">
+                No acervo completo você recebe os seis dossiês, o núcleo de ferramentas operacionais e 12 meses de
+                atualizações, por {flagship.parcelado}.
+              </p>
+            </div>
+            <div className="md:col-span-4 md:text-right">
+              <Link href={`/academy/${flagship.id}`} className="btn btn-solid btn-lg">
+                Conhecer o acervo
+                <ArrowRight aria-hidden />
+              </Link>
+            </div>
           </div>
         </section>
+      )}
+
+      {siblings.length > 0 && (
+        <div className="bg-snow text-ink">
+          <ProductGrid id="relacionados-title" title={isDossie ? "Outros dossiês" : "Veja também"} items={siblings} />
+        </div>
       )}
     </article>
   )

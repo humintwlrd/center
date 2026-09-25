@@ -2,241 +2,126 @@ import Image from "next/image"
 import Link from "next/link"
 import { isInstagramImage, type Article } from "@/lib/content/articles"
 import { formatDateBR } from "@/lib/format"
+import { cn } from "@/lib/utils"
 
 type Props = {
   article: Article
-  variant?: "default" | "featured" | "compact" | "horizontal" | "overlay"
+  /**
+   * default: imagem 4:5 + título (grades)
+   * case: retrato 3:4, para o trilho de casos
+   * row: miniatura à esquerda (listas)
+   * compact: só texto
+   */
+  variant?: "default" | "case" | "row" | "compact"
   priority?: boolean
+  headingLevel?: "h2" | "h3"
+  className?: string
 }
 
-export function ArticleCard({ article, variant = "default", priority }: Props) {
+/**
+ * Posts do Instagram são verticais (9:16) e trazem a legenda gravada na imagem.
+ * Nunca recortamos: a imagem aparece inteira sobre a noite, dentro do quadro.
+ */
+function mediaFit(src?: string) {
+  return isInstagramImage(src) ? "bg-night object-contain" : "object-cover"
+}
+
+function Meta({ article, withDate = true }: { article: Article; withDate?: boolean }) {
+  return (
+    <p className="mt-3 text-sm text-tone-3">
+      {article.categoryLabel}
+      <span aria-hidden> · </span>
+      {withDate ? <time dateTime={article.publishedAt}>{formatDateBR(article.publishedAt)}</time> : article.readingTime}
+    </p>
+  )
+}
+
+export function ArticleCard({ article, variant = "default", priority, headingLevel = "h3", className }: Props) {
   const href = `/artigos/${article.slug}`
+  const H = headingLevel
 
-  if (variant === "featured") {
-    const naturalOnMobile = isInstagramImage(article.heroImage)
+  if (variant === "compact") {
     return (
-      <article className="group">
-        <Link href={href} className="block">
-          <div className="relative overflow-hidden bg-deep">
-            {naturalOnMobile ? (
-              <>
-                {/* Mobile: proporção original da imagem do post */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={article.heroImage || "/placeholder.svg"}
-                  alt={article.heroAlt}
-                  className="md:hidden block w-full h-auto"
-                  loading={priority ? "eager" : "lazy"}
-                />
-                {/* Desktop: enquadramento editorial 16:9 */}
-                <div className="hidden md:block relative aspect-[16/9]">
-                  <Image
-                    src={article.heroImage}
-                    alt={article.heroAlt}
-                    fill
-                    sizes="(min-width: 1024px) 720px, 100vw"
-                    preload={priority}
-                    loading={priority ? "eager" : "lazy"}
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
-                </div>
-              </>
-            ) : (
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src={article.heroImage}
-                  alt={article.heroAlt}
-                  fill
-                  sizes="(min-width: 1024px) 720px, 100vw"
-                  preload={priority}
-                  loading={priority ? "eager" : "lazy"}
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-              </div>
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-deep/80 via-deep/10 to-transparent" />
-            <div className="absolute left-0 bottom-0 p-6 sm:p-8 max-w-2xl">
-              <span className="inline-block bg-gold px-2.5 py-1 text-[11px] font-mono uppercase tracking-widest mb-3" style={{ color: "var(--color-on-gold)" }}>
-                {article.categoryLabel}
-              </span>
-              <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-paper text-balance leading-tight">
-                {article.title}
-              </h3>
-              <p className="mt-3 text-sm sm:text-base text-[var(--color-warm-text)] line-clamp-2 max-w-xl">
-                {article.description}
-              </p>
-              <div className="mt-4 flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-[var(--color-warm-text)]">
-                <span>{formatDateBR(article.publishedAt)}</span>
-                <span aria-hidden>·</span>
-                <span>{article.readingTime} de leitura</span>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </article>
-    )
-  }
-
-  if (variant === "overlay") {
-    return (
-      <article className="group flex flex-col">
-        <Link href={href} className="relative block overflow-hidden bg-paper-deep">
-          <div className="relative aspect-[16/9]">
-            <Image
-              src={article.heroImage || "/placeholder.svg"}
-              alt={article.heroAlt}
-              fill
-              sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 100vw"
-              preload={priority}
-              loading={priority ? "eager" : "lazy"}
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            />
-          </div>
-          <span className="absolute left-3 top-3 inline-block bg-ink/85 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-paper backdrop-blur-sm">
-            {article.categoryLabel}
-          </span>
-        </Link>
-        <Link href={href} className="mt-3 block">
-          <h3 className="font-display text-lg font-semibold leading-snug text-ink text-balance group-hover:text-gold-active transition-colors">
+      <article className={cn("group border-b border-tone py-5 first:pt-0", className)}>
+        <H className="text-lg font-bold leading-snug text-tone" style={{ fontStretch: "110%" }}>
+          <Link href={href} className="transition-colors group-hover:text-signal">
             {article.title}
-          </h3>
-        </Link>
-        <p className="mt-2 text-[11px] font-mono uppercase tracking-widest text-ink-muted">
-          {formatDateBR(article.publishedAt)}
-        </p>
+          </Link>
+        </H>
+        <Meta article={article} />
       </article>
     )
   }
 
-  if (variant === "horizontal") {
-    const naturalOnMobile = isInstagramImage(article.heroImage)
+  if (variant === "row") {
     return (
-      <article className="group grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 sm:gap-6 hairline-b pb-6">
-        <Link href={href} className="block overflow-hidden bg-paper-deep">
-          {naturalOnMobile ? (
-            <>
-              {/* Mobile: proporção original da imagem do post */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={article.heroImage || "/placeholder.svg"}
-                alt={article.heroAlt}
-                className="sm:hidden block w-full h-auto"
-                loading="lazy"
-              />
-              {/* Desktop: thumb 4:3 em coluna de 200px */}
-              <div className="hidden sm:block relative aspect-[4/3]">
-                <Image
-                  src={article.heroImage}
-                  alt={article.heroAlt}
-                  fill
-                  sizes="200px"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-              </div>
-            </>
-          ) : (
-            <div className="relative aspect-[16/10] sm:aspect-[4/3]">
-              <Image
-                src={article.heroImage}
-                alt={article.heroAlt}
-                fill
-                sizes="(min-width: 640px) 200px, 100vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-            </div>
-          )}
+      <article className={cn("group grid grid-cols-[96px_1fr] gap-4 sm:grid-cols-[128px_1fr] sm:gap-5", className)}>
+        <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-square overflow-hidden bg-snow-2">
+          <Image
+            src={article.heroImage || "/placeholder.svg"}
+            alt=""
+            fill
+            sizes="128px"
+            className={cn("media-zoom", mediaFit(article.heroImage))}
+          />
         </Link>
-        <div className="flex flex-col">
-          <Link href={href} className="block">
-            <p className="eyebrow-gold mb-2">{article.categoryLabel}</p>
-            <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink text-balance leading-tight group-hover:text-gold-active transition-colors">
+        <div className="min-w-0">
+          <H className="text-lg font-bold leading-snug text-tone line-clamp-3" style={{ fontStretch: "110%" }}>
+            <Link href={href} className="transition-colors group-hover:text-signal">
               {article.title}
-            </h3>
-            <p className="mt-2 text-sm text-ink-muted line-clamp-2">{article.description}</p>
-          </Link>
-          <div className="mt-3 flex items-center gap-3 text-[11px] font-mono uppercase tracking-widest text-ink-muted">
-            <span>{formatDateBR(article.publishedAt)}</span>
-            <span aria-hidden>·</span>
-            <span>{article.readingTime}</span>
-            <span aria-hidden>·</span>
-            <span>{article.author}</span>
-          </div>
+            </Link>
+          </H>
+          <Meta article={article} />
         </div>
       </article>
     )
   }
 
-  if (variant === "compact") {
+  if (variant === "case") {
     return (
-      <article className="group hairline-b pb-4">
-        <Link href={href} className="block">
-          <p className="eyebrow mb-1.5">{article.categoryLabel}</p>
-          <h3 className="font-display text-base font-semibold text-ink leading-snug group-hover:text-gold-active">
-            {article.title}
-          </h3>
-          <p className="mt-1.5 text-xs font-mono uppercase tracking-widest text-ink-muted">
-            {formatDateBR(article.publishedAt)} · {article.readingTime}
-          </p>
+      <article className={cn("group flex w-[78vw] max-w-[340px] shrink-0 flex-col sm:w-[300px]", className)}>
+        <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-[3/4] overflow-hidden bg-night-3">
+          <Image
+            src={article.heroImage || "/placeholder.svg"}
+            alt=""
+            fill
+            sizes="340px"
+            priority={priority}
+            className={cn(
+              "media-zoom grayscale-[35%] transition-[filter] duration-700 group-hover:grayscale-0",
+              mediaFit(article.heroImage),
+            )}
+          />
         </Link>
+        <H className="mt-5 font-expanded text-xl font-extrabold leading-tight tracking-[-0.01em] text-tone">
+          <Link href={href} className="transition-colors group-hover:text-signal">
+            {article.title}
+          </Link>
+        </H>
+        <Meta article={article} withDate={false} />
       </article>
     )
   }
 
-  const naturalOnMobile = isInstagramImage(article.heroImage)
   return (
-    <article className="group flex flex-col">
-      <Link href={href} className="block overflow-hidden bg-paper-deep mb-4">
-        {naturalOnMobile ? (
-          <>
-            {/* Mobile: proporção original da imagem do post */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={article.heroImage || "/placeholder.svg"}
-              alt={article.heroAlt}
-              className="md:hidden block w-full h-auto"
-              loading={priority ? "eager" : "lazy"}
-            />
-            {/* Desktop: enquadramento editorial 16:9 */}
-            <div className="hidden md:block relative aspect-[16/9]">
-              <Image
-                src={article.heroImage}
-                alt={article.heroAlt}
-                fill
-                sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
-                preload={priority}
-                loading={priority ? "eager" : "lazy"}
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-            </div>
-          </>
-        ) : (
-          <div className="relative aspect-[16/9]">
-            <Image
-              src={article.heroImage}
-              alt={article.heroAlt}
-              fill
-              sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
-              preload={priority}
-              loading={priority ? "eager" : "lazy"}
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-          </div>
-        )}
+    <article className={cn("group flex flex-col", className)}>
+      <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-[4/5] overflow-hidden bg-snow-2">
+        <Image
+          src={article.heroImage || "/placeholder.svg"}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw"
+          priority={priority}
+          className={cn("media-zoom", mediaFit(article.heroImage))}
+        />
       </Link>
-      <Link href={href} className="block">
-        <p className="eyebrow-gold mb-2">{article.categoryLabel}</p>
-        <h3 className="font-display text-xl font-semibold text-ink text-balance leading-snug group-hover:text-gold-active transition-colors">
+      <H className="mt-5 text-xl font-bold leading-snug text-tone" style={{ fontStretch: "112%" }}>
+        <Link href={href} className="transition-colors group-hover:text-signal">
           {article.title}
-        </h3>
-        <p className="mt-2 text-sm text-ink-muted line-clamp-3 leading-relaxed">
-          {article.description}
-        </p>
-      </Link>
-      <div className="mt-3 flex items-center gap-3 text-[11px] font-mono uppercase tracking-widest text-ink-muted">
-        <span>{formatDateBR(article.publishedAt)}</span>
-        <span aria-hidden>·</span>
-        <span>{article.readingTime}</span>
-      </div>
+        </Link>
+      </H>
+      <p className="mt-2 text-[0.9375rem] leading-relaxed text-tone-2 line-clamp-2">{article.description}</p>
+      <Meta article={article} />
     </article>
   )
 }

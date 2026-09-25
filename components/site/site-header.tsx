@@ -3,31 +3,20 @@
 import Link from "next/link"
 import { usePathname, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
-import { Menu, X, Search } from "lucide-react"
+import { ArrowRight, Menu, Search, X } from "lucide-react"
 import { NAV, SITE } from "@/lib/site"
 import { cn } from "@/lib/utils"
 import { BrandLogo } from "@/components/site/brand-logo"
 
 /**
- * Cabecalho no estilo portal editorial:
- * - Logo a esquerda
- * - Navegacao central com 4 itens (Analises / Casos / Metodos / Formacao)
- * - A direita: busca e CTA dourado de assinatura
- *
- * Em telas <lg, exibe apenas logo + CTA dourado + menu hamburguer.
+ * Cabeçalho fixo, sempre escuro (como o site de uma agência).
+ * O fallback do Suspense fica em app/layout.tsx (HeaderFallback) e
+ * espelha esta estrutura.
  */
 export function SiteHeader() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    onScroll()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
 
   useEffect(() => {
     setOpen(false)
@@ -40,63 +29,48 @@ export function SiteHeader() {
     }
   }, [open])
 
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false)
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [open])
+
   const isActive = (href: string) => {
     const [basePath, query] = href.split("?")
-
     if (query) {
       if (pathname !== basePath) return false
       const expected = new URLSearchParams(query)
-      return Array.from(expected.entries()).every(
-        ([key, value]) => searchParams.get(key) === value,
-      )
+      return Array.from(expected.entries()).every(([key, value]) => searchParams.get(key) === value)
     }
-
     if (basePath === "/artigos") {
-      return (
-        pathname.startsWith("/artigos") &&
-        !searchParams.get("categoria") &&
-        !searchParams.get("tag")
-      )
+      return pathname.startsWith("/artigos") && !searchParams.get("categoria") && !searchParams.get("tag")
     }
-
     return pathname === basePath || (basePath !== "/" && pathname.startsWith(`${basePath}/`))
   }
 
   return (
-    <header
-      className={cn(
-        "relative z-40 w-full transition-colors duration-200",
-        scrolled
-          ? "bg-paper/95 backdrop-blur-sm border-b border-line"
-          : "bg-paper border-b border-line",
-      )}
-    >
-      <div className="container-editorial flex h-16 lg:h-[72px] items-center justify-between gap-4 lg:gap-8">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex shrink-0 items-center"
-          aria-label={`${SITE.name}, página inicial`}
-        >
-          <BrandLogo variant="black" priority className="h-8 sm:h-9" />
+    <header className="night sticky top-0 z-40 w-full border-b border-line-night">
+      <div className="container-site flex h-16 items-center gap-6 lg:h-[72px] lg:gap-10">
+        <Link href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name}, página inicial`}>
+          <BrandLogo variant="white" priority className="h-8 sm:h-9" />
         </Link>
 
-        {/* Navegacao central */}
-        <nav
-          className="hidden lg:flex flex-1 items-center justify-center gap-8"
-          aria-label="Principal"
-        >
+        <nav className="hidden h-full items-stretch gap-8 lg:flex" aria-label="Principal">
           {NAV.primary.map((item) => {
             const active = isActive(item.href)
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "text-[15px] font-medium transition-colors",
-                  active ? "text-ink" : "text-ink-muted hover:text-ink",
-                )}
                 aria-current={active ? "page" : undefined}
+                className={cn(
+                  "relative inline-flex items-center text-[0.9375rem] font-semibold transition-colors",
+                  "after:absolute after:inset-x-0 after:bottom-0 after:h-[3px] after:bg-signal after:transition-transform after:duration-300 after:origin-left",
+                  active ? "text-white after:scale-x-100" : "text-mist hover:text-white after:scale-x-0",
+                )}
               >
                 {item.label}
               </Link>
@@ -104,95 +78,65 @@ export function SiteHeader() {
           })}
         </nav>
 
-        {/* Acoes a direita */}
-        <div className="flex items-center gap-2 lg:gap-3 shrink-0">
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
           <Link
-            href="/artigos"
-            aria-label="Buscar análises"
-            className="hidden md:inline-flex items-center justify-center w-10 h-10 text-ink-muted hover:text-ink transition-colors"
+            href="/artigos#busca"
+            aria-label="Buscar artigos"
+            className="hidden h-10 w-10 items-center justify-center text-mist transition-colors hover:text-white md:inline-flex"
           >
-            <Search className="w-[18px] h-[18px]" />
+            <Search className="h-[18px] w-[18px]" aria-hidden />
           </Link>
-
-          <Link
-            href="/academy"
-            className="inline-flex items-center justify-center bg-gold hover:bg-gold-active text-on-gold px-3 py-2 text-sm font-semibold transition-colors sm:px-4"
-          >
-            Academy
+          <Link href="/academy/acervo-tatico" className="btn btn-signal btn-sm">
+            Acervo Tático
           </Link>
-
           <button
             type="button"
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink"
+            className="-mr-2 inline-flex h-10 w-10 items-center justify-center text-white lg:hidden"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {open ? <X className="h-6 w-6" aria-hidden /> : <Menu className="h-6 w-6" aria-hidden />}
           </button>
         </div>
       </div>
 
-      {/* Menu mobile */}
       {open && (
-        <div
-          id="mobile-nav"
-          className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto border-t border-line bg-paper shadow-[0_24px_60px_rgba(14,17,22,0.18)]"
-        >
-          <nav
-            className="container-editorial py-6 flex flex-col"
-            aria-label="Principal mobile"
-          >
-            <p className="font-mono text-[10px] uppercase tracking-widest text-ink-muted mb-2">
-              Navegar
-            </p>
-            {NAV.primary.map((item) => {
-              const active = isActive(item.href)
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "py-3 border-b border-line font-medium text-lg",
-                    active ? "text-ink" : "text-ink-muted",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              )
-            })}
-
-            <p className="font-mono text-[10px] uppercase tracking-widest text-ink-muted mt-8 mb-2">
-              Mais
-            </p>
-            {NAV.meta.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="py-3 border-b border-line text-base text-ink-muted"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              href="/contato"
-              className="py-3 border-b border-line text-base text-ink-muted"
-            >
-              Contato
-            </Link>
-
-            <Link
-              href="/artigos"
-              className="mt-6 inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-ink border border-ink/80"
-            >
-              Ver artigos
-            </Link>
-            <Link
-              href="/academy"
-              className="mt-3 inline-flex items-center justify-center bg-gold text-on-gold px-4 py-3 text-sm font-semibold"
-            >
-              Academy
+        <div id="mobile-nav" className="night fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto lg:hidden">
+          <nav className="container-site flex min-h-full flex-col pt-6 pb-10" aria-label="Principal (mobile)">
+            <ul>
+              {NAV.primary.map((item) => {
+                const active = isActive(item.href)
+                return (
+                  <li key={item.href} className="border-b border-line-night">
+                    <Link
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "flex items-center justify-between py-5 font-expanded text-[1.75rem] font-extrabold tracking-[-0.02em]",
+                        active ? "text-white" : "text-mist",
+                      )}
+                    >
+                      {item.label}
+                      {active && <span className="h-2.5 w-2.5 bg-signal" aria-hidden />}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+            <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-1">
+              {NAV.meta.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="block py-2.5 text-base text-mist hover:text-white">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link href="/academy/acervo-tatico" className="btn btn-signal btn-lg mt-auto w-full">
+              Conhecer o Acervo Tático
+              <ArrowRight aria-hidden />
             </Link>
           </nav>
         </div>

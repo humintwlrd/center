@@ -1,17 +1,13 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, BookOpen, CheckCircle2, Shield, Users, Brain, Eye, Scale, Target } from "lucide-react"
+import { ArrowRight, Plus } from "lucide-react"
 
 import { pageMetadata } from "@/lib/seo"
-import { blogPostingSchema, breadcrumbSchema, faqSchema } from "@/lib/schema"
+import { blogPostingSchema, faqSchema } from "@/lib/schema"
 import { JsonLd } from "@/components/site/json-ld"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import { PageHeader } from "@/components/site/page-header"
+import { AcademyCta } from "@/components/site/academy-cta"
 import { NewsletterInline } from "@/components/site/newsletter-inline"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { SITE } from "@/lib/site"
 
 export const metadata: Metadata = pageMetadata({
   title: "O Que é HUMINT: Inteligência Humana Explicada",
@@ -53,46 +49,44 @@ const pillarTopics = [
     title: "Fundamentos de HUMINT",
     description: "Conceitos essenciais, história e princípios que regem a inteligência humana.",
     href: "/artigos?categoria=fundamentos-de-humint",
-    icon: BookOpen,
   },
   {
     title: "Métodos e Tradecraft",
     description: "Técnicas operacionais: elicitação, rapport, recrutamento e comunicação segura.",
     href: "/metodos",
-    icon: Target,
   },
   {
     title: "Engenharia Social",
     description: "Manipulação e influência interpessoal: como funciona e como se defender.",
     href: "/artigos?categoria=engenharia-social",
-    icon: Users,
   },
   {
     title: "Contrainteligência",
     description: "Proteção contra espionagem, detecção de ameaças e prevenção de vazamentos.",
     href: "/artigos?categoria=contrainteligencia",
-    icon: Shield,
   },
   {
     title: "OPSEC",
     description: "Segurança operacional e proteção de informações críticas.",
     href: "/artigos?categoria=opsec",
-    icon: Eye,
   },
   {
     title: "Psicologia Comportamental",
     description: "Vieses cognitivos, tomada de decisão e comportamento humano em contextos de inteligência.",
     href: "/artigos?categoria=psicologia-comportamental",
-    icon: Brain,
   },
 ]
 
-export default function HumintPage() {
-  const breadcrumbs = [
-    { label: "Início", href: "/" },
-    { label: "HUMINT", href: "/humint" },
-  ]
+const TOC = [
+  { id: "definicao", label: "Definição" },
+  { id: "por-que-importa", label: "Por que HUMINT importa" },
+  { id: "metodos", label: "Métodos principais" },
+  { id: "humint-vs-osint", label: "HUMINT vs OSINT" },
+  { id: "temas", label: "Explore por tema" },
+  { id: "faq", label: "Perguntas frequentes" },
+]
 
+export default function HumintPage() {
   return (
     <>
       <JsonLd
@@ -107,76 +101,82 @@ export default function HumintPage() {
             updatedAt: new Date().toISOString().split("T")[0],
             author: "Mundo da HUMINT",
           }),
-          breadcrumbSchema(breadcrumbs),
           faqSchema(faqs),
         ]}
       />
 
-      <div className="min-h-screen bg-background">
-        {/* Hero */}
-        <section className="relative bg-deep text-warm-text">
-          <div className="absolute inset-0 bg-gradient-to-b from-deep via-deep to-surface opacity-90" />
-          <div className="relative mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
-            <div className="mb-8 text-warm-text/70"><Breadcrumbs items={breadcrumbs} /></div>
+      <PageHeader
+        tone="night"
+        size="lg"
+        title="O que é HUMINT."
+        lede="Inteligência humana (Human Intelligence) é a disciplina de coleta de informações através de fontes humanas. Este guia explica o que é, como funciona, quem usa e por que importa."
+        breadcrumbs={[{ label: "Fundamentos", href: "/humint" }]}
+      >
+        <div className="flex flex-wrap gap-3">
+          <Link href="#definicao" className="btn btn-signal btn-lg">
+            Começar a leitura
+            <ArrowRight aria-hidden />
+          </Link>
+          <Link href="/artigos?categoria=fundamentos-de-humint" className="btn btn-line btn-lg">
+            Artigos de fundamentos
+          </Link>
+        </div>
+      </PageHeader>
 
-            <p className="font-mono text-xs uppercase tracking-widest text-gold">Página Pilar</p>
-            <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              O Que é HUMINT
-            </h1>
-            <p className="mt-6 text-xl leading-relaxed text-warm-text/90">
-              Inteligência humana (Human Intelligence) é a disciplina de coleta de informações através de fontes
-              humanas. Este guia explica o que é, como funciona, quem usa e por que importa.
-            </p>
+      <div className="bg-snow text-ink">
+        <div className="container-site grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-14">
+          <aside className="hidden lg:col-span-3 lg:block" aria-label="Neste guia">
+            <nav className="sticky top-28">
+              <p className="mb-3 font-bold">Neste guia</p>
+              <ol className="border-t-2 border-ink">
+                {TOC.map((item) => (
+                  <li key={item.id} className="border-b border-line">
+                    <Link href={`#${item.id}`} className="block py-3 text-ink-2 transition-colors hover:text-signal">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </aside>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-gold text-on-gold hover:bg-gold-hover">
-                <Link href="/artigos?categoria=fundamentos-de-humint">
-                  Explorar artigos
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Definição */}
-        <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:tracking-tight prose-p:text-ink-soft prose-a:text-gold prose-a:no-underline hover:prose-a:underline">
-            <h2>Definição</h2>
+          <article className="prose-read min-w-0 lg:col-span-8 lg:col-start-5">
+            <h2 id="definicao">Definição</h2>
             <p>
               <strong>HUMINT</strong> (Human Intelligence, ou Inteligência Humana) é uma das disciplinas de coleta de
-              inteligência que obtém informações através de fontes humanas. Diferente de SIGINT (sinais), IMINT (imagens)
-              ou OSINT (fontes abertas), HUMINT depende de interações interpessoais.
+              inteligência que obtém informações através de fontes humanas. Diferente de SIGINT (sinais), IMINT
+              (imagens) ou OSINT (fontes abertas), HUMINT depende de interações interpessoais.
             </p>
             <p>
               Uma fonte humana pode ser um informante recrutado, um contato voluntário, um diplomata, um desertor ou
-              qualquer pessoa com acesso a informações de interesse. O operador de HUMINT (também chamado de case officer
-              ou handler) é responsável por identificar, abordar, desenvolver e gerenciar essas fontes.
+              qualquer pessoa com acesso a informações de interesse. O operador de HUMINT (também chamado de case
+              officer ou handler) é responsável por identificar, abordar, desenvolver e gerenciar essas fontes.
             </p>
 
-            <h2>Por Que HUMINT Importa</h2>
+            <h2 id="por-que-importa">Por que HUMINT importa</h2>
             <p>
               Em um mundo saturado de dados digitais, pode parecer que inteligência humana é obsoleta. O oposto é
-              verdadeiro. Sistemas técnicos capturam o que acontece; fontes humanas explicam o porquê, revelam intenções
-              e fornecem contexto que nenhum algoritmo consegue inferir.
+              verdadeiro. Sistemas técnicos capturam o que acontece; fontes humanas explicam o porquê, revelam
+              intenções e fornecem contexto que nenhum algoritmo consegue inferir.
             </p>
             <ul>
               <li>
-                <strong>Intenções:</strong> HUMINT é a única disciplina capaz de acessar diretamente o que um adversário
-                planeja fazer.
+                <strong>Intenções:</strong> HUMINT é a única disciplina capaz de acessar diretamente o que um
+                adversário planeja fazer.
               </li>
               <li>
                 <strong>Contexto:</strong> Dados sem contexto são ruído. Fontes humanas explicam o significado.
               </li>
               <li>
-                <strong>Acesso:</strong> Algumas informações não existem em nenhum sistema, apenas na mente de pessoas.
+                <strong>Acesso:</strong> Algumas informações não existem em nenhum sistema, apenas na mente de
+                pessoas.
               </li>
               <li>
                 <strong>Validação:</strong> HUMINT pode confirmar ou refutar inteligência obtida por outros meios.
               </li>
             </ul>
 
-            <h2>Métodos Principais</h2>
+            <h2 id="metodos">Métodos principais</h2>
             <p>A coleta de HUMINT envolve um ciclo de operações que inclui:</p>
             <ol>
               <li>
@@ -199,99 +199,75 @@ export default function HumintPage() {
               </li>
             </ol>
 
-            <h2>HUMINT vs OSINT</h2>
+            <h2 id="humint-vs-osint">HUMINT vs OSINT</h2>
             <p>
               OSINT e HUMINT não são concorrentes, são complementares. Uma investigação robusta frequentemente começa
               com OSINT (pesquisa em fontes abertas) para mapear o terreno, identificar alvos e preparar abordagens.
               HUMINT então aprofunda, valida e contextualiza.
             </p>
-            <p>
-              A diferença fundamental: OSINT coleta o que está público; HUMINT acessa o que está protegido, classificado
-              ou simplesmente não documentado.
-            </p>
-          </div>
-        </section>
-
-        <Separator className="mx-auto max-w-4xl" />
-
-        {/* Tópicos relacionados */}
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">Explore por Tema</h2>
-          <p className="mt-2 text-ink-muted">Aprofunde-se nas diferentes dimensões da inteligência humana.</p>
-
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {pillarTopics.map((topic) => (
-              <Card key={topic.href} className="group transition-shadow hover:shadow-md">
-                <CardHeader>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10 text-gold">
-                    <topic.icon className="h-5 w-5" />
-                  </div>
-                  <CardTitle className="mt-4 font-display text-lg">
-                    <Link href={topic.href} className="hover:text-gold">
-                      {topic.title}
-                    </Link>
-                  </CardTitle>
-                  <CardDescription>{topic.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link
-                    href={topic.href}
-                    className="inline-flex items-center text-sm font-medium text-gold hover:underline"
-                  >
-                    Ver artigos
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <Separator className="mx-auto max-w-4xl" />
-
-        {/* FAQ */}
-        <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">Perguntas Frequentes</h2>
-
-          <dl className="mt-8 space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="border-b border-line pb-6">
-                <dt className="font-display text-lg font-semibold text-ink">{faq.question}</dt>
-                <dd className="mt-2 text-ink-soft">{faq.answer}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-surface py-16">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-2xl bg-deep p-8 text-center text-warm-text sm:p-12">
-              <Scale className="mx-auto h-12 w-12 text-gold" />
-              <h2 className="mt-4 font-display text-2xl font-bold sm:text-3xl">
-                HUMINT com Método e Ética
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-warm-text/80">
-                O Mundo da HUMINT é uma plataforma educacional dedicada a tornar a inteligência humana mais
-                compreensível, útil e responsável. Conteúdo rigoroso, sem sensacionalismo.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-gold text-on-gold hover:bg-gold-hover">
-                  <Link href="/artigos">
-                    Ver todos os artigos
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter */}
-        <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <NewsletterInline />
-        </section>
+            <blockquote>
+              OSINT coleta o que está público; HUMINT acessa o que está protegido, classificado ou simplesmente não
+              documentado.
+            </blockquote>
+          </article>
+        </div>
       </div>
+
+      <section id="temas" className="bg-snow-2 text-ink" aria-labelledby="temas-title">
+        <div className="container-site py-20 md:py-24">
+          <h2 id="temas-title" className="font-expanded text-title font-extrabold">
+            As dimensões da inteligência humana.
+          </h2>
+          <ul className="mt-12 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
+            {pillarTopics.map((topic) => (
+              <li key={topic.href} className="border-t-2 border-ink">
+                <Link href={topic.href} className="group flex h-full flex-col py-6">
+                  <span className="font-expanded text-heading font-extrabold transition-colors group-hover:text-signal">
+                    {topic.title}
+                  </span>
+                  <span className="mt-2 flex-1 text-lg leading-relaxed text-ink-2">{topic.description}</span>
+                  <ArrowRight className="mt-5 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" className="bg-snow text-ink" aria-labelledby="faq-title">
+        <div className="container-site grid gap-12 py-20 md:py-24 lg:grid-cols-12 lg:gap-14">
+          <h2 id="faq-title" className="font-expanded text-title font-extrabold lg:col-span-4">
+            Perguntas frequentes.
+          </h2>
+          <div className="border-t-2 border-ink lg:col-span-8">
+            {faqs.map((faq, i) => (
+              <details key={faq.question} className="group border-b border-line" open={i === 0}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg font-bold transition-colors group-hover:text-signal">{faq.question}</span>
+                  <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
+                </summary>
+                <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <AcademyCta
+        title="HUMINT com método e ética."
+        description="Conteúdo rigoroso, sem sensacionalismo. Na Academy, os fundamentos deste guia viram prática estruturada."
+      />
+
+      <section className="bg-snow text-ink" aria-labelledby="news-title">
+        <div className="container-site grid gap-8 border-t border-line py-16 lg:grid-cols-12 lg:items-center lg:gap-16">
+          <h2 id="news-title" className="font-expanded text-heading font-extrabold lg:col-span-6">
+            Receba os próximos guias por e-mail.
+          </h2>
+          <div className="lg:col-span-6">
+            <NewsletterInline />
+          </div>
+        </div>
+      </section>
     </>
   )
 }

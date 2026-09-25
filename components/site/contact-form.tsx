@@ -55,12 +55,11 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="bg-paper-strong border border-gold p-6 sm:p-8">
-        <p className="eyebrow-gold mb-2">Recebido</p>
-        <h3 className="font-display text-2xl font-semibold text-ink">
+      <div role="status" aria-live="polite" className="bg-snow-2 p-6 text-ink sm:p-8">
+                <h3 className="font-expanded text-heading font-extrabold text-ink">
           Sua mensagem chegou aqui.
         </h3>
-        <p className="mt-3 text-ink-soft leading-relaxed">
+        <p className="mt-3 text-ink-2 leading-relaxed">
           Responderemos no e-mail informado. Para imprensa e prazos curtos,
           inclua isso no assunto.
         </p>
@@ -72,8 +71,8 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="flex flex-col gap-5" noValidate>
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="ct-nome" className="text-sm font-medium text-ink">
-            Nome <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="ct-nome" className="field-label">
+            Nome <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="ct-nome"
@@ -81,12 +80,12 @@ export function ContactForm() {
             required
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="ct-email" className="text-sm font-medium text-ink">
-            E-mail <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="ct-email" className="field-label">
+            E-mail <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="ct-email"
@@ -94,20 +93,20 @@ export function ContactForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="ct-intencao" className="text-sm font-medium text-ink">
+        <label htmlFor="ct-intencao" className="field-label">
           Sobre o que é?
         </label>
         <select
           id="ct-intencao"
           value={form.intencao}
           onChange={(e) => setForm((f) => ({ ...f, intencao: e.target.value }))}
-          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+          className="field"
         >
           {INTENTS.map((i) => (
             <option key={i.value} value={i.value}>
@@ -118,8 +117,8 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="ct-msg" className="text-sm font-medium text-ink">
-          Mensagem <span aria-hidden className="text-gold-active">*</span>
+        <label htmlFor="ct-msg" className="field-label">
+          Mensagem <span aria-hidden className="text-tone-3">*</span>
         </label>
         <textarea
           id="ct-msg"
@@ -127,17 +126,17 @@ export function ContactForm() {
           rows={6}
           value={form.mensagem}
           onChange={(e) => setForm((f) => ({ ...f, mensagem: e.target.value }))}
-          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold resize-y"
+          className="field min-h-36 resize-y"
         />
       </div>
 
-      <label htmlFor="ct-consent" className="flex items-start gap-3 text-sm text-ink-soft leading-relaxed cursor-pointer">
+      <label htmlFor="ct-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-2">
         <input
           id="ct-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 accent-[var(--color-gold)] shrink-0"
+          className="mt-1 h-4 w-4 shrink-0 accent-signal"
         />
         <span>
           Concordo com o uso dos meus dados para responder a esta solicitação,
@@ -146,7 +145,7 @@ export function ContactForm() {
       </label>
 
       {error && (
-        <p role="alert" className="text-sm text-alert">
+        <p role="alert" className="text-sm text-signal">
           {error}
         </p>
       )}
@@ -154,8 +153,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start bg-gold hover:bg-[var(--color-gold-hover)] disabled:bg-[var(--color-gold-disabled)] px-6 py-3 text-sm font-medium transition-colors"
-        style={{ color: "var(--color-on-gold)" }}
+        className="btn btn-signal btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Enviar mensagem"}
       </button>

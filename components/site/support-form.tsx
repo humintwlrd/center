@@ -60,12 +60,11 @@ export function SupportForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="bg-paper-strong border border-gold p-6 sm:p-8">
-        <p className="eyebrow-gold mb-2">Recebido</p>
-        <h3 className="font-display text-2xl font-semibold text-ink">
+      <div role="status" aria-live="polite" className="bg-snow-2 p-6 text-ink sm:p-8">
+                <h3 className="font-expanded text-heading font-extrabold text-ink">
           Sua solicitação foi enviada.
         </h3>
-        <p className="mt-3 text-ink-soft leading-relaxed">
+        <p className="mt-3 text-ink-2 leading-relaxed">
           Nossa equipe responderá no e-mail informado. Solicitações urgentes
           costumam ter prioridade quando o assunto está claro.
         </p>
@@ -77,8 +76,8 @@ export function SupportForm() {
     <form onSubmit={onSubmit} className="flex flex-col gap-5" noValidate>
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-nome" className="text-sm font-medium text-ink">
-            Nome <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="sp-nome" className="field-label">
+            Nome <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="sp-nome"
@@ -86,12 +85,12 @@ export function SupportForm() {
             required
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-email" className="text-sm font-medium text-ink">
-            E-mail <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="sp-email" className="field-label">
+            E-mail <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="sp-email"
@@ -99,21 +98,21 @@ export function SupportForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-categoria" className="text-sm font-medium text-ink">
+          <label htmlFor="sp-categoria" className="field-label">
             Categoria
           </label>
           <select
             id="sp-categoria"
             value={form.categoria}
             onChange={(e) => setForm((f) => ({ ...f, categoria: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           >
             {CATEGORIES.map((c) => (
               <option key={c.value} value={c.value}>
@@ -123,8 +122,8 @@ export function SupportForm() {
           </select>
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="sp-assunto" className="text-sm font-medium text-ink">
-            Assunto <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="sp-assunto" className="field-label">
+            Assunto <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="sp-assunto"
@@ -132,14 +131,14 @@ export function SupportForm() {
             required
             value={form.assunto}
             onChange={(e) => setForm((f) => ({ ...f, assunto: e.target.value }))}
-            className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="sp-msg" className="text-sm font-medium text-ink">
-          Descreva sua solicitação <span aria-hidden className="text-gold-active">*</span>
+        <label htmlFor="sp-msg" className="field-label">
+          Descreva sua solicitação <span aria-hidden className="text-tone-3">*</span>
         </label>
         <textarea
           id="sp-msg"
@@ -147,17 +146,17 @@ export function SupportForm() {
           rows={6}
           value={form.mensagem}
           onChange={(e) => setForm((f) => ({ ...f, mensagem: e.target.value }))}
-          className="bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold resize-y"
+          className="field min-h-36 resize-y"
         />
       </div>
 
-      <label htmlFor="sp-consent" className="flex items-start gap-3 text-sm text-ink-soft leading-relaxed cursor-pointer">
+      <label htmlFor="sp-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-2">
         <input
           id="sp-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 accent-[var(--color-gold)] shrink-0"
+          className="mt-1 h-4 w-4 shrink-0 accent-signal"
         />
         <span>
           Concordo com o uso dos meus dados para responder a esta solicitação,
@@ -166,7 +165,7 @@ export function SupportForm() {
       </label>
 
       {error && (
-        <p role="alert" className="text-sm text-alert">
+        <p role="alert" className="text-sm text-signal">
           {error}
         </p>
       )}
@@ -174,8 +173,7 @@ export function SupportForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start bg-gold hover:bg-[var(--color-gold-hover)] disabled:bg-[var(--color-gold-disabled)] px-6 py-3 text-sm font-medium transition-colors"
-        style={{ color: "var(--color-on-gold)" }}
+        className="btn btn-signal btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Enviar solicitação"}
       </button>

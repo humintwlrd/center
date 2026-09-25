@@ -33,12 +33,16 @@ app/
     [slug]/page.tsx        # detalhe do produto (genérico) + branch do Acervo
   artigos/                 # blog/artigos (inclui os importados do Instagram)
   categorias/ metodos/ humint/ recursos/ sobre/ contato/ formacao/ livro/
-  lp/                      # landing "Como Avaliar Pessoas" (R$49) — NÃO MEXER sem pedir
+  lp/                      # landing "Como Avaliar Pessoas" (R$49) — só mexer com pedido explícito
+  pv/                      # landing de vendas do Acervo (header/footer próprios, Utmify)
+  error.tsx not-found.tsx  # páginas de erro no padrão visual
   api/                     # rotas de form (contato, etc.)
 components/
-  site/                    # header, footer, article-card, member-exclusives, etc.
-  shop/                    # Academy: shop-hero, product-grid, product-card,
+  site/                    # header, footer, page-header, section-heading, split-section,
+                           # academy-cta, article-card, breadcrumbs, declassify, formulários
+  shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
                            # acervo-detail (página de vendas rica do Acervo)
+  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, depoimentos...)
   ui/                      # shadcn/ui (não editar à toa)
 lib/
   products.ts              # CATÁLOGO da Academy (tipo Product + PRODUCTS + getProductBySlug)
@@ -57,19 +61,58 @@ scripts/
   generate-instagram-articles.mjs   # JSON -> instagram-articles.generated.ts
 ```
 
-## Design system (em `app/globals.css`)
+## Design system (em `app/globals.css`; registro completo em `DESIGN.md`)
 
-Estética editorial: **escuro + dourado + serifada**, alinhado à esquerda, cantos retos.
-Evitar "AI slop": nada de gradiente roxo, centralização excessiva, cantos arredondados
-uniformes ou fonte Inter.
+Mundo visual definido com a skill **impeccable** (contrato em `.impeccable/surfaces/app-page-tsx.md`,
+produto em `PRODUCT.md`). Tese: **uma escola de inteligência apresentada como o site de uma agência**:
+preto, branco e um vermelho de operação, tipografia estendida e pesada, casos reais como capítulos.
+Referências: MasterClass "The Art of Intelligence", CIA.gov (2021) e SPYSCAPE. **Não** é portal
+editorial: nada de filetes decorativos, rótulos acima de títulos ou colunas de jornal.
 
-Tokens (CSS vars) e utilitários equivalentes:
-- Dourado: `--color-gold` #d9a523, `gold-hover`, `gold-active`, `on-gold` → `.text-gold`, `.bg-gold`, `.text-on-gold`, `hover:bg-gold-hover`
-- Tinta: `ink`, `ink-soft`, `ink-muted` → `.text-ink`, `.text-ink-soft`, `.text-ink-muted`
-- Papel (fundos claros): `paper`, `paper-strong`, `paper-deep` → `.bg-paper*`
-- Escuro: `deep`, `deep-2`, `ink` → `.bg-deep`, `.bg-deep-2`, `.bg-ink`; texto claro `--color-warm-text` → `.text-warm`
-- Linhas: `line` → `.border-line`, `.hairline-b`; alerta `--color-alert` → `.text-alert`
-- Utilitários próprios: `.eyebrow`, `.eyebrow-gold` (rótulos mono dourados), `.container-editorial` (container padrão), `font-display` (serifada), `font-mono`
+Regras que não se negociam:
+- **Uma família**: Archivo variável (`next/font`, eixo `wdth`). Títulos com `font-expanded`
+  (largura 118–125%) e `font-extrabold`; texto corrido em largura normal. Sem serifada, sem mono.
+- **Um acento**: `signal` (#e5252a), reservado a ação (CTA de compra, foco, link ativo, hover, erro de formulário)
+  e à tarja liberada. Nada de vermelho decorativo: ícones, marcadores, numerais e selos ficam em tinta/branco.
+- **Cantos retos** (radius 0), sem sombras, sem gradiente decorativo (só o escurecimento da foto do hero).
+- **Proibido** (craft floor da skill): eyebrow/kicker acima de título, numeração de seção decorativa,
+  borda lateral colorida (>1px) em citação/callout, mono “de fantasia”, cards com ícone em bolha,
+  template “número grande + legenda”, fontes Inter/Newsreader/IBM Plex/Space Grotesk/Fraunces.
+
+Tokens (Tailwind v4 gera `bg-*`, `text-*`, `border-*`):
+- Noite (vendas): `night` #0b0b0c, `night-2`, `night-3`, `line-night`; texto claro `mist`, `mist-2`, `white`
+- Papel (leitura): `snow` #fff, `snow-2` #f3f3f2; tinta `ink`, `ink-2`, `ink-3`; filete `line`
+- Sinal: `signal`, `signal-hover`, `on-signal`
+- Escala fluida: `text-mega` (manchete da home), `text-display`, `text-title`, `text-heading`, `text-lede`
+
+Utilitários próprios (`@utility`):
+- Superfícies: `night`, `night-2` (seção escura; ajustam `--tone-*` para botões, campos e textos).
+  Cores que seguem o tom: `text-tone`, `text-tone-2`, `text-tone-3`, `border-tone`
+- Layout: `container-site` (máx. 1360px); `rail` + `scroller` para trilhos horizontais com
+  scroll-snap alinhados ao container (casos, depoimentos)
+- Tipo: `font-expanded`, `tabular`; texto longo `prose-read`
+- Tarjas: `redact` (trecho tarjado que o `Declassify` libera uma vez ao entrar na tela;
+  `data-delay` em ms), `withheld` (tarja fixa para dado omitido, ex.: nome do instrutor) e
+  `bar-mark` (marcador de lista em forma de tarja curta; use no lugar de check/traço)
+- Botões: `btn` + `btn-signal` | `btn-solid` | `btn-line` (+ `btn-sm`/`btn-lg`); link `link-more`
+- Formulários: `field`, `field-label` · Imagem em card: `media-zoom`
+
+Movimento: a liberação da tarja (`components/site/declassify.tsx`, montado no layout) é o
+**único** momento autoral. Respeita `prefers-reduced-motion` e funciona sem JS (texto visível).
+Use no máximo uma tarja por tela, em manchete. Sem marquee, pulso, scroll-reveal ou ticker animado.
+
+Imagens: capas do Instagram (9:16, com legenda gravada) **nunca** são recortadas; aparecem
+inteiras com `object-contain` sobre `bg-night` dentro do quadro 4:5 (ver `ArticleCard`).
+Números só quando carregam ordem (capítulos de casos, passos de acesso, partes/capítulos).
+
+Componentes de página (reutilize antes de criar markup novo):
+- `PageHeader` (`tone="snow" | "night"`, `size="lg" | "md"`, trilha, h1, linha fina, `aside`)
+- `SectionHeading` (h2 + descrição + link) · `SplitSection` (título 5/12 + conteúdo 7/12, `sticky`)
+- `AcademyCta` (`band` | `card`) · `ArticleCard` (`default` | `case` | `row` | `compact`)
+- Academy: `ShopHero`, `ProductFeature`, `ProductCard` (exporta `splitParcelado`), `ProductGrid`
+
+`cn()` (`lib/utils.ts`) usa `extendTailwindMerge` com `mega/display/title/heading/lede`; se
+criar novos tamanhos de texto, registre-os lá, senão o merge os descarta.
 
 Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente cores).
 
@@ -85,6 +128,8 @@ Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente core
   adaptado da humint.click: situação real, 6 dossiês + núcleo, ética, oferta, FAQ, aviso de segurança).
 - Produtos atuais: **Acervo Tático** (R$900 · 12x R$93,09 · "Mais vendido"),
   **Engenharia Social** (R$120 · 12x R$12,41), **Dossiês 01–06** (R$190 · 12x R$19,65 · E-book).
+- **`/pv` lê preço e checkout do catálogo** (`ACERVO` em `lib/products.ts`): mude o preço só lá.
+- **`/lp`**: checkout em `NEXT_PUBLIC_LP_CHECKOUT_URL` (Vercel). Sem a variável, a página fica `noindex`.
 - `/shop` redireciona para `/academy` e `/assinar` foi removido (ver `next.config.mjs`).
   A "Assinatura" foi substituída pela narrativa da Academy em todo o site.
 
@@ -98,13 +143,16 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 ## Convenções e cuidados
 
 - **Preços parcelados** nos cards (sem preço cheio); selo Cartão · Pix; CTAs de compra em nova aba.
-- **`/lp` é intocável** salvo pedido explícito.
+- **`/lp` é intocável** salvo pedido explícito (o redesign de 2026 foi pedido pelo dono).
 - Não editar `lib/content/instagram-articles.generated.ts` nem `components/ui/*` sem necessidade.
 - Mantenha **fim de linha LF**.
-- O header é renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx` (`HeaderFallback`).
-  Ao mudar o header/CTA, ajuste **os dois** (fallback + `components/site/site-header.tsx`).
+- O header é fixo (`sticky`) e renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx`
+  (`HeaderFallback`). Ao mudar o header/CTA, ajuste **os dois** (fallback + `components/site/site-header.tsx`).
+  Barras fixas abaixo dele usam `top-16 lg:top-[72px]`.
 
 ## Deploy / verificação
 
 - `git push origin main` → Vercel republica automaticamente.
+- Domínios: `mundodahumint.com` e `.com.br` apontam para o mesmo projeto Vercel; o canônico vem de
+  `NEXT_PUBLIC_SITE_URL` (padrão `https://www.mundodahumint.com.br`). E-mail: `contato@mundodahumint.com.br`.
 - Como há cache de CDN, verifique a página com um cache-buster (`?v=algo`) e avise pra dar **Ctrl+F5**.

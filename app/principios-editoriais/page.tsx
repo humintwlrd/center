@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { Breadcrumbs } from "@/components/site/breadcrumbs"
+import Link from "next/link"
+import { PageHeader } from "@/components/site/page-header"
 import { pageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = pageMetadata({
@@ -78,59 +79,49 @@ const SECTIONS: { id: string; title: string; body: string[] }[] = [
 export default function PrincipiosPage() {
   return (
     <>
-      <section className="container-editorial pt-8 md:pt-10">
-        <Breadcrumbs items={[{ label: "Princípios editoriais", href: "/principios-editoriais" }]} />
-      </section>
-
-      <section className="container-editorial py-10 md:py-16">
-        <p className="eyebrow-gold">Documento institucional</p>
-        <h1 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-balance leading-tight max-w-4xl">
-          Princípios editoriais e éticos
-        </h1>
-        <p className="mt-5 text-lg text-ink-soft leading-relaxed prose-measure">
-          Os compromissos abaixo orientam o que publicamos, como publicamos e o
-          que recusamos publicar.
-        </p>
-      </section>
-
-      <section className="container-editorial pb-16 md:pb-24 grid gap-12 lg:grid-cols-12">
-        <aside className="lg:col-span-3">
-          <div className="lg:sticky lg:top-24">
-            <p className="eyebrow-gold mb-3">Nesta página</p>
-            <ol className="flex flex-col gap-2 text-sm">
-              {SECTIONS.map((s, i) => (
-                <li key={s.id}>
-                  <a
-                    href={`#${s.id}`}
-                    className="text-ink-soft hover:text-gold-active flex gap-3"
-                  >
-                    <span className="font-mono text-ink-muted">{String(i + 1).padStart(2, "0")}</span>
-                    <span>{s.title}</span>
-                  </a>
-                </li>
+      <PageHeader
+        title="Princípios editoriais e éticos."
+        lede="Os compromissos que orientam o que publicamos, como publicamos e o que recusamos publicar."
+        breadcrumbs={[{ label: "Princípios editoriais", href: "/principios-editoriais" }]}
+      />
+      <div className="border-t border-line bg-snow text-ink">
+        <div className="container-site grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-14">
+          <aside className="lg:col-span-3" aria-label="Nesta página">
+            <nav className="lg:sticky lg:top-28">
+              <p className="mb-3 font-bold">Nesta página</p>
+              <ol className="border-t-2 border-ink">
+                {SECTIONS.map((s) => (
+                  <li key={s.id} className="border-b border-line">
+                    <a href={`#${s.id}`} className="block py-3 text-ink-2 transition-colors hover:text-signal">
+                      {s.title}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </aside>
+          <div className="min-w-0 lg:col-span-8 lg:col-start-5">
+            <div className="prose-read">
+              {SECTIONS.map((s) => (
+                <section key={s.id} id={s.id}>
+                  <h2>{s.title}</h2>
+                  {s.body.map((p, j) => (
+                    <p key={j}>{p}</p>
+                  ))}
+                </section>
               ))}
-            </ol>
-          </div>
-        </aside>
-        <div className="lg:col-span-9 article-prose max-w-[68ch]">
-          {SECTIONS.map((s) => (
-            <section key={s.id} id={s.id} className="scroll-mt-24">
-              <h2>{s.title}</h2>
-              {s.body.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </section>
-          ))}
-
-          <section className="mt-10 bg-paper-deep p-6 md:p-8 not-prose">
-            <p className="eyebrow-gold mb-2">Documento vivo</p>
-            <p className="text-ink-soft leading-relaxed">
-              Este documento é revisado periodicamente. Sugestões e críticas
-              são bem-vindas pelo formulário de contato.
+            </div>
+            <p className="mt-14 max-w-[68ch] bg-snow-2 p-6 text-lg leading-relaxed text-ink-2 md:p-8">
+              <strong className="text-ink">Documento vivo.</strong> Revisado periodicamente. Sugestões e críticas são
+              bem-vindas pelo{" "}
+              <Link href="/contato" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
+                formulário de contato
+              </Link>
+              .
             </p>
-          </section>
+          </div>
         </div>
-      </section>
+      </div>
     </>
   )
 }

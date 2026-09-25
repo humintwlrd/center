@@ -43,12 +43,11 @@ export function InterestForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="bg-paper-strong border border-gold p-6 sm:p-8">
-        <p className="eyebrow-gold mb-2">Recebido</p>
-        <h3 className="font-display text-2xl font-semibold text-ink">
+      <div role="status" aria-live="polite" className="bg-snow-2 p-6 text-ink sm:p-8">
+                <h3 className="font-expanded text-heading font-extrabold text-ink">
           Você está na lista de interesse.
         </h3>
-        <p className="mt-3 text-ink-soft leading-relaxed">
+        <p className="mt-3 text-ink-2 leading-relaxed">
           Vamos avisar com antecedência sobre aulas abertas, workshops e abertura de turmas.
         </p>
       </div>
@@ -59,20 +58,20 @@ export function InterestForm() {
     <form onSubmit={onSubmit} className="flex flex-col gap-5">
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="if-nome" className="text-sm font-medium text-ink">
-            Nome <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="if-nome" className="field-label">
+            Nome <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="if-nome"
             required
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="if-email" className="text-sm font-medium text-ink">
-            E-mail <span aria-hidden className="text-gold-active">*</span>
+          <label htmlFor="if-email" className="field-label">
+            E-mail <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="if-email"
@@ -80,13 +79,13 @@ export function InterestForm() {
             required
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+            className="field"
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="if-perfil" className="text-sm font-medium text-ink">
+        <label htmlFor="if-perfil" className="field-label">
           Sua atuação
         </label>
         <input
@@ -94,19 +93,19 @@ export function InterestForm() {
           value={form.perfil}
           onChange={(e) => setForm((f) => ({ ...f, perfil: e.target.value }))}
           placeholder="Ex.: compliance, jornalismo, pesquisa, segurança"
-          className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+          className="field"
         />
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="if-interesse" className="text-sm font-medium text-ink">
+        <label htmlFor="if-interesse" className="field-label">
           Tema de maior interesse
         </label>
         <select
           id="if-interesse"
           value={form.interesse}
           onChange={(e) => setForm((f) => ({ ...f, interesse: e.target.value }))}
-          className="w-full bg-paper-strong border border-line px-3 py-2.5 text-ink focus:outline-none focus:border-gold"
+          className="field"
         >
           <option value="fundamentos">Fundamentos de HUMINT</option>
           <option value="entrevista">Entrevista e elicitação</option>
@@ -116,18 +115,18 @@ export function InterestForm() {
         </select>
       </div>
 
-      <label htmlFor="if-consent" className="flex items-start gap-3 text-sm text-ink-soft leading-relaxed cursor-pointer">
+      <label htmlFor="if-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-2">
         <input
           id="if-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 accent-[var(--color-gold)] shrink-0"
+          className="mt-1 h-4 w-4 shrink-0 accent-signal"
         />
         <span>
           Concordo em receber comunicações sobre a formação do Mundo da HUMINT.
           Posso revogar a qualquer momento. Li a{" "}
-          <Link href="/politica-de-privacidade" className="underline text-gold-active hover:text-gold-hover">
+          <Link href="/politica-de-privacidade" className="text-tone underline decoration-signal underline-offset-2 hover:decoration-2">
             Política de Privacidade
           </Link>
           .
@@ -135,7 +134,7 @@ export function InterestForm() {
       </label>
 
       {error && (
-        <p role="alert" className="text-sm text-alert">
+        <p role="alert" className="text-sm text-signal">
           {error}
         </p>
       )}
@@ -143,8 +142,7 @@ export function InterestForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start bg-gold hover:bg-[var(--color-gold-hover)] disabled:bg-[var(--color-gold-disabled)] px-6 py-3 text-sm font-medium transition-colors"
-        style={{ color: "var(--color-on-gold)" }}
+        className="btn btn-signal btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Entrar na lista de interesse"}
       </button>

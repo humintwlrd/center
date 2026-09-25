@@ -1,15 +1,19 @@
 "use client"
 
+import Link from "next/link"
 import { useId, useState } from "react"
 import { track } from "@/lib/analytics"
+import { cn } from "@/lib/utils"
 
 type Props = {
+  /** Mantido por compatibilidade; o tom vem da superfície (night). */
   variant?: "light" | "dark"
   placeholder?: string
 }
 
-export function NewsletterInline({ variant = "light", placeholder = "seu@email.com" }: Props) {
+export function NewsletterInline({ placeholder = "seu@email.com" }: Props) {
   const emailId = useId()
+  const msgId = useId()
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [message, setMessage] = useState("")
@@ -36,11 +40,10 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
     }
   }
 
-  const isDark = variant === "dark"
 
   return (
     <form onSubmit={onSubmit} className="w-full" aria-label="Assinar newsletter">
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+      <div className="flex flex-col gap-2 sm:flex-row sm:gap-0">
         <label htmlFor={emailId} className="sr-only">
           E-mail
         </label>
@@ -52,48 +55,39 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
           onChange={(e) => setEmail(e.target.value)}
           placeholder={placeholder}
           autoComplete="email"
-          className={
-            isDark
-              ? "flex-1 bg-transparent border border-[var(--color-warm-text)] text-paper placeholder:text-[var(--color-warm-text)]/60 px-3 py-2.5 text-sm focus:outline-none focus:border-gold"
-              : "flex-1 bg-paper-strong border border-line text-ink placeholder:text-ink-muted px-3 py-2.5 text-sm focus:outline-none focus:border-gold"
-          }
           aria-invalid={status === "error"}
+          aria-describedby={message ? msgId : undefined}
           disabled={status === "loading" || status === "success"}
+          className="field h-12 w-full min-w-0 flex-1 sm:w-0"
         />
         <button
           type="submit"
           disabled={status === "loading" || status === "success"}
-          className="bg-gold hover:bg-[var(--color-gold-hover)] disabled:bg-[var(--color-gold-disabled)] px-4 py-2.5 text-sm font-medium transition-colors"
-          style={{ color: "var(--color-on-gold)" }}
+          className="btn btn-signal h-12 shrink-0"
         >
           {status === "loading" ? "Enviando…" : status === "success" ? "Inscrito" : "Assinar"}
         </button>
       </div>
       {message && (
         <p
+          id={msgId}
           role={status === "error" ? "alert" : "status"}
-          className={
-            isDark
-              ? "mt-2 text-xs " + (status === "error" ? "text-[var(--color-copper)]" : "text-[var(--color-warm-text)]")
-              : "mt-2 text-xs " + (status === "error" ? "text-alert" : "text-ink-muted")
-          }
+          className={cn(
+            "mt-2 text-sm",
+            status === "error" ? "text-signal" : "text-tone",
+          )}
         >
           {message}
         </p>
       )}
-      <p
-        className={
-          "mt-2 text-[11px] leading-relaxed " +
-          (isDark ? "text-[var(--color-warm-text)]/70" : "text-ink-muted")
-        }
-      >
+      <p className="mt-3 text-sm leading-relaxed text-tone-3">
         Ao assinar, você concorda com nossa{" "}
-        <a
+        <Link
           href="/politica-de-privacidade"
-          className={isDark ? "underline text-[var(--color-warm-text)]" : "underline text-ink-soft"}
+          className="text-tone-2 underline"
         >
           Política de Privacidade
-        </a>
+        </Link>
         .
       </p>
     </form>

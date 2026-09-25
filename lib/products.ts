@@ -179,6 +179,9 @@ export function getProductBySlug(slug: string): Product | undefined {
   return PRODUCTS.find((p) => p.id === slug)
 }
 
+/** Produto carro-chefe. As landings (/pv) leem preço e checkout daqui. */
+export const ACERVO = getProductBySlug("acervo-tatico") as Product
+
 export interface Combo {
   id: string
   titulo: string
