@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { ARTICLES } from "@/lib/content/articles"
 import { categories } from "@/lib/content/categories"
+import { PRODUCTS } from "@/lib/products"
 import { SITE } from "@/lib/site"
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>
@@ -42,6 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: ChangeFrequency
   }> = [
     { path: "", priority: 1.0, changeFrequency: "daily" },
+    { path: "/academy", priority: 0.95, changeFrequency: "weekly" },
+    { path: "/pv", priority: 0.8, changeFrequency: "monthly" },
     { path: "/artigos", priority: 0.9, changeFrequency: "daily" },
     { path: "/humint", priority: 0.95, changeFrequency: "weekly" },
     { path: "/metodos", priority: 0.85, changeFrequency: "weekly" },
@@ -51,7 +54,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/sobre", priority: 0.5, changeFrequency: "yearly" },
     { path: "/contato", priority: 0.4, changeFrequency: "yearly" },
     { path: "/principios-editoriais", priority: 0.6, changeFrequency: "yearly" },
+    { path: "/livro", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/comoaproveitar", priority: 0.4, changeFrequency: "yearly" },
+    { path: "/suporte", priority: 0.4, changeFrequency: "yearly" },
     { path: "/politica-de-privacidade", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/termos", priority: 0.3, changeFrequency: "yearly" },
   ]
 
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map(({ path, priority, changeFrequency }) => ({
@@ -59,6 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency,
     priority,
+  }))
+
+  // Produtos da Academy (a loja): o carro-chefe com prioridade de pilar.
+  const productEntries: MetadataRoute.Sitemap = PRODUCTS.map((p) => ({
+    url: `${SITE.url}/academy/${p.id}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: p.destaque ? 0.9 : 0.8,
   }))
 
   // Páginas de categoria (rotas dinâmicas usando query string em /artigos?categoria=)
@@ -80,5 +95,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  return [...staticEntries, ...categoryEntries, ...articleEntries]
+  return [...staticEntries, ...productEntries, ...categoryEntries, ...articleEntries]
 }

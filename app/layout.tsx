@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next"
 import { Archivo } from "next/font/google"
 import { Suspense } from "react"
 import Link from "next/link"
-import { Analytics } from "@vercel/analytics/next"
 import { SiteHeader } from "@/components/site/site-header"
 import { SiteFooter } from "@/components/site/site-footer"
 import { BrandLogo } from "@/components/site/brand-logo"
@@ -11,6 +10,7 @@ import { OrganizationSchema } from "@/components/site/organization-schema"
 import { Declassify } from "@/components/site/declassify"
 import { NAV, SITE } from "@/lib/site"
 import "./globals.css"
+import { SiteAnalytics } from "@/components/site/site-analytics"
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -107,7 +107,7 @@ export default function RootLayout({
         <CookieBanner />
         <Declassify />
         <OrganizationSchema />
-        {process.env.NODE_ENV === "production" && <Analytics />}
+        {process.env.NODE_ENV === "production" && <SiteAnalytics />}
       </body>
     </html>
   )
