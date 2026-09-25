@@ -57,16 +57,12 @@ const INCLUDED = [
 
 const FAQ = [
   {
-    q: "Por que o instrutor é anônimo?",
-    a: "Porque ele continua em atividade, e quem trabalha nessa área não aparece, já que um rosto público é um rosto inutilizado para qualquer coleta futura. A discrição aqui não é recurso de marketing, é condição de exercício da profissão, e acaba sendo também a primeira competência que o próprio acervo desenvolve em você.",
-  },
-  {
     q: "Funciona para mim, que não sou da área?",
     a: "O material foi escrito pensando em situações civis comuns, como uma negociação, uma contratação, uma sociedade, um relacionamento ou a proteção da sua própria família, e não tem a intenção de transformar você em agente. A intenção é tirar você da condição de alvo fácil, que é onde a maioria das pessoas passa a vida sem perceber.",
   },
   {
     q: "Isso é ético e legal?",
-    a: "O acervo trata de elicitação ética e de defesa, nunca de coerção ou de invasão, e em nenhum ponto ensina a forçar alguém a coisa alguma. Se o que você procura é poder sobre os outros, a seção 'Não é para' já te avisou, e ela estava falando sério.",
+    a: "O acervo trata de elicitação ética e de defesa, nunca de coerção ou de invasão, e em nenhum ponto ensina a forçar alguém a coisa alguma. Se o que você procura é poder sobre os outros, este material não é para você.",
   },
   {
     q: "Isso não é só linguagem corporal de internet?",

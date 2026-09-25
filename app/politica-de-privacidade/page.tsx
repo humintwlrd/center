@@ -27,7 +27,7 @@ export default function PrivacidadePage() {
           <p>
             Coletamos apenas os dados estritamente necessários para responder
             ao que você nos pede. Em formulários (interesse em formação,
-            newsletter, contato), tipicamente:
+            contato, suporte), tipicamente:
           </p>
           <ul>
             <li>Nome</li>
@@ -44,7 +44,7 @@ export default function PrivacidadePage() {
           <h2>2. Como usamos seus dados</h2>
           <ul>
             <li>Para responder ao seu contato ou solicitação.</li>
-            <li>Para enviar comunicações relacionadas ao motivo da sua inscrição (abertura de turma, newsletter).</li>
+            <li>Para enviar comunicações relacionadas ao motivo da sua inscrição (abertura de turma).</li>
             <li>Para melhorar continuamente o conteúdo do site, com base em métricas agregadas.</li>
           </ul>
           <p>

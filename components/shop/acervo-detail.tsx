@@ -140,10 +140,6 @@ const INCLUDED = [
 
 const FAQ = [
   {
-    q: "Por que o instrutor é anônimo?",
-    a: "Inteligência humana se exerce melhor em discrição. O foco está no método, nos dossiês e na aplicação — não na figura de quem ensina.",
-  },
-  {
     q: "Funciona para mim, que não sou da área?",
     a: "Sim. O acervo foi escrito para quem decide, negocia e lida com pessoas no dia a dia. Não exige formação prévia em inteligência ou investigação: você começa pelos fundamentos e avança de forma progressiva.",
   },

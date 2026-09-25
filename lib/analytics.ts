@@ -6,7 +6,6 @@
  */
 
 export type AnalyticsEvent =
-  | "newsletter_signup"
   | "course_interest_submit"
   | "article_share"
   | "article_read_progress"

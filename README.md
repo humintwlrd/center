@@ -27,7 +27,7 @@ Plataforma editorial e educacional dedicada à inteligência humana aplicada.
   /principios-editoriais
   /politica-de-privacidade
   /categorias           # Navegação por categoria
-  /api                  # API Routes (waitlist, newsletter, contato)
+  /api                  # API Routes (waitlist, contato, suporte)
 
 /components
   /site                 # Componentes específicos do site
@@ -147,7 +147,6 @@ Instagram JSON → Brief editorial → Draft MDX → Revisão factual → Public
 
 ### Endpoints
 
-- `POST /api/newsletter`: Cadastro na newsletter
 - `POST /api/waitlist`: Lista de espera do livro
 - `POST /api/contato`: Formulário de contato
 
@@ -211,7 +210,6 @@ Copie `.env.example` para `.env.local` no desenvolvimento e configure no dashboa
 - [x] Páginas pilar (HUMINT, Métodos)
 - [x] Waitlist do livro
 - [x] Lista de interesse (formação)
-- [x] Newsletter
 - [x] SEO técnico completo
 - [x] LGPD/cookies
 

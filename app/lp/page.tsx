@@ -242,10 +242,6 @@ const FAQ = [
     a: "Não. Linguagem não-verbal é um detalhe menor. O núcleo é critério de julgamento: motivação, consistência, acesso, vulnerabilidade, evidência e observação ao longo do tempo.",
   },
   {
-    q: "Por que o autor é anônimo?",
-    a: "Avaliação humana se exerce melhor em discrição. O foco está no método e nos documentos, não na figura de quem ensina.",
-  },
-  {
     q: "Como recebo o acesso?",
     a: "Após a compra, as credenciais chegam em poucos minutos no e-mail usado no pagamento. Use sempre o e-mail principal que você realmente acessa.",
   },
