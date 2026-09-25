@@ -144,10 +144,12 @@ export default function HomePage() {
                   <div>
                     <h3 className="max-w-[22ch] font-expanded text-heading font-extrabold sm:text-title md:text-display">{lead.title}</h3>
                     <p className="mt-5 max-w-[58ch] text-lede text-mist">{lead.description}</p>
-                    <p className="mt-6 inline-flex items-center gap-2 font-semibold">
-                      Ler o caso
-                      <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
-                      <span className="font-normal text-mist-2">· {lead.readingTime}</span>
+                    <p className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
+                      <span className="inline-flex items-center gap-2 font-semibold">
+                        Ler o caso
+                        <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
+                      </span>
+                      <span className="text-mist-2">{lead.readingTime} de leitura</span>
                     </p>
                   </div>
                 </div>

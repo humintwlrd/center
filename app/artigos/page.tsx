@@ -167,8 +167,7 @@ export default async function ArtigosPage({ searchParams }: Props) {
                       fill
                       priority
                       sizes="(min-width: 768px) 540px, 100vw"
-                      className="media-zoom object-cover"
-                      style={{ objectPosition: isInstagramImage(lead.heroImage) ? "center 40%" : "center" }}
+                      className={`media-zoom ${isInstagramImage(lead.heroImage) ? "bg-night object-contain" : "object-cover"}`}
                     />
                   </Link>
                   <div className="md:col-span-7">

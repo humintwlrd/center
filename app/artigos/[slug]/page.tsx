@@ -274,8 +274,7 @@ export default async function ArtigoPage({ params }: Props) {
                   fill
                   sizes="(min-width: 1024px) 540px, 100vw"
                   priority
-                  className="object-cover"
-                  style={{ objectPosition: portrait ? "center 40%" : "center" }}
+                  className={portrait ? "bg-night object-contain" : "object-cover"}
                   itemProp="image"
                 />
               </div>

@@ -310,11 +310,17 @@ export function AcervoDetail({ product }: { product: Product }) {
                 key={m.title}
                 className={`grid gap-4 border-b border-line-night py-8 md:grid-cols-12 md:gap-8 ${m.highlight ? "text-white" : ""}`}
               >
-                <p className={`text-sm font-bold md:col-span-2 md:pt-2 ${m.highlight ? "text-white" : "text-mist-2"}`}>
+                <p
+                  aria-hidden
+                  className={`hidden text-sm font-bold md:col-span-2 md:block md:pt-2 ${m.highlight ? "text-white" : "text-mist-2"}`}
+                >
                   {m.tag}
                 </p>
                 <div className="md:col-span-6">
-                  <h3 className="font-expanded text-heading font-extrabold">{m.title}</h3>
+                  <h3 className="font-expanded text-heading font-extrabold">
+                    <span className="md:sr-only">{m.tag} · </span>
+                    {m.title}
+                  </h3>
                   <p className="mt-3 max-w-[54ch] text-mist">{m.body}</p>
                 </div>
                 <ul className="flex flex-col gap-2 md:col-span-4 md:pt-2">

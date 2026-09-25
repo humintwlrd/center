@@ -462,7 +462,7 @@
     padding-left: 0.2em;
   }
   & li::marker {
-    color: var(--color-signal);
+    color: var(--color-ink);
     font-weight: 700;
   }
   & blockquote {

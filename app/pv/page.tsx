@@ -233,9 +233,14 @@ export default function AcervoTaticoPage() {
           <ol className="mt-16 border-t border-line-night">
             {DOSSIES.map((m) => (
               <li key={m.t} className="grid gap-4 border-b border-line-night py-8 md:grid-cols-12 md:gap-8">
-                <p className={`font-bold md:col-span-2 md:pt-1.5 ${m.core ? "text-white" : "text-mist-2"}`}>{m.label}</p>
+                <p aria-hidden className={`hidden font-bold md:col-span-2 md:block md:pt-1.5 ${m.core ? "text-white" : "text-mist-2"}`}>
+                  {m.label}
+                </p>
                 <div className="md:col-span-6">
-                  <h3 className="font-expanded text-heading font-extrabold">{m.t}</h3>
+                  <h3 className="font-expanded text-heading font-extrabold">
+                    <span className="md:sr-only">{m.label} · </span>
+                    {m.t}
+                  </h3>
                   <p className="mt-3 max-w-[54ch] leading-relaxed text-mist">{m.d}</p>
                 </div>
                 <div className="md:col-span-4 md:pt-1.5">

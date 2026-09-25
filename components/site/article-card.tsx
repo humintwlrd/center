@@ -19,11 +19,11 @@ type Props = {
 }
 
 /**
- * Posts do Instagram são verticais (9:16) com a legenda gravada entre ~15% e ~80%
- * da altura. O recorte 4:5 centrado em 40% mantém a legenda inteira.
+ * Posts do Instagram são verticais (9:16) e trazem a legenda gravada na imagem.
+ * Nunca recortamos: a imagem aparece inteira sobre a noite, dentro do quadro.
  */
-function imagePosition(src?: string) {
-  return isInstagramImage(src) ? "center 40%" : "center"
+function mediaFit(src?: string) {
+  return isInstagramImage(src) ? "bg-night object-contain" : "object-cover"
 }
 
 function Meta({ article, withDate = true }: { article: Article; withDate?: boolean }) {
@@ -62,8 +62,7 @@ export function ArticleCard({ article, variant = "default", priority, headingLev
             alt=""
             fill
             sizes="128px"
-            className="media-zoom object-cover"
-            style={{ objectPosition: imagePosition(article.heroImage) }}
+            className={cn("media-zoom", mediaFit(article.heroImage))}
           />
         </Link>
         <div className="min-w-0">
@@ -88,8 +87,10 @@ export function ArticleCard({ article, variant = "default", priority, headingLev
             fill
             sizes="340px"
             priority={priority}
-            className="media-zoom object-cover grayscale-[35%] transition-[filter] duration-700 group-hover:grayscale-0"
-            style={{ objectPosition: imagePosition(article.heroImage) }}
+            className={cn(
+              "media-zoom grayscale-[35%] transition-[filter] duration-700 group-hover:grayscale-0",
+              mediaFit(article.heroImage),
+            )}
           />
         </Link>
         <H className="mt-5 font-expanded text-xl font-extrabold leading-tight tracking-[-0.01em] text-tone">
@@ -111,8 +112,7 @@ export function ArticleCard({ article, variant = "default", priority, headingLev
           fill
           sizes="(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw"
           priority={priority}
-          className="media-zoom object-cover"
-          style={{ objectPosition: imagePosition(article.heroImage) }}
+          className={cn("media-zoom", mediaFit(article.heroImage))}
         />
       </Link>
       <H className="mt-5 text-xl font-bold leading-snug text-tone" style={{ fontStretch: "112%" }}>
