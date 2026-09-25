@@ -54,7 +54,7 @@ Método de inteligência humana extraído de práticas e documentos de serviços
 
 - 7 depoimentos reais em captura de DM (`public/images/pv/testimonials/1–7.webp`), com nomes borrados.
 - 9 artigos editoriais longos com fontes citadas e 344 artigos curtos vindos do Instagram (capas verticais 9:16 com texto sobreposto).
-- Imagens editoriais quadradas (`public/images/editorial/`, `public/images/cases/`) e mockup da área de membros (`public/images/pv/members-area-mockup-v2.webp`).
+- Imagens editoriais quadradas (`public/images/editorial/`, `public/images/cases/`) e mockup da área de membros (`public/images/pv/members-area-mockup-v3.webp`).
 - **Ausentes (não inventar):** nome ou rosto do instrutor, número de alunos, imprensa, certificações, métricas de resultado.
 
 ## Product Principles

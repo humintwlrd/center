@@ -459,7 +459,7 @@ export default function AcervoTaticoPage() {
             </div>
             <div className="lg:col-span-6">
               <Image
-                src="/images/pv/members-area-mockup-v2.webp"
+                src="/images/pv/members-area-mockup-v3.webp"
                 alt="Prévia da área de membros do Mundo da HUMINT em um celular, com a aula em andamento, lista de dossiês e progresso do operador"
                 width={1254}
                 height={921}
