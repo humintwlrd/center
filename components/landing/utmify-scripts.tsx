@@ -18,8 +18,6 @@ export function UtmifyScripts() {
     const productionHosts = new Set([
       "mundodahumint.com",
       "www.mundodahumint.com",
-      "mundodahumint.com.br",
-      "www.mundodahumint.com.br",
       "humint.click",
       "www.humint.click",
     ])
