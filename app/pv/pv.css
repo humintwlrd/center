@@ -8,35 +8,34 @@ body:has(.pv-page) > [role="dialog"][aria-label="Aviso de cookies"] {
 }
 
 body:has(.pv-page) {
-  background: oklch(0.14 0.005 60);
+  background: var(--color-deep);
 }
 
 .pv-page {
-  --pv-charcoal: oklch(0.14 0.005 60);
-  --pv-graphite: oklch(0.18 0.006 70);
-  --pv-paper: oklch(0.88 0.025 85);
-  --pv-bone: oklch(0.92 0.01 80);
-  --pv-amber: oklch(0.78 0.13 75);
-  --pv-blood: oklch(0.42 0.18 25);
-  --pv-ink: oklch(0.18 0.005 60);
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-feature-settings: "ss01", "cv11";
-  text-rendering: optimizeLegibility;
+  /* Aliases para o design system (app/globals.css) */
+  --pv-charcoal: var(--color-deep);
+  --pv-graphite: var(--color-deep-2);
+  --pv-paper: var(--color-paper);
+  --pv-bone: var(--color-fog);
+  --pv-amber: var(--color-brand-bright);
+  --pv-blood: var(--color-alert-bright);
+  --pv-ink: var(--color-ink);
+  --tone-fg: var(--color-fog);
+  --tone-bg: var(--color-deep);
+  --tone-muted: var(--color-fog-muted);
+  --tone-accent: var(--color-brand-bright);
+  --tone-line: var(--color-line-dark);
+  font-family: var(--font-sans);
   scroll-behavior: smooth;
 }
 
-.pv-page .font-serif {
-  font-family: var(--font-pv-serif), Georgia, serif;
-}
-
-.pv-page .font-mono,
 .pv-page .stamp-confidential {
-  font-family: var(--font-pv-mono), ui-monospace, monospace;
+  font-family: var(--font-mono);
 }
 
 .pv-page ::selection {
-  background: var(--pv-amber);
-  color: var(--pv-ink);
+  background: var(--color-brand-bright);
+  color: var(--color-ink);
 }
 
 .pv-page .texture-grain {
@@ -87,7 +86,6 @@ body:has(.pv-page) {
   border: 1.5px solid var(--pv-blood);
   padding: 0.25rem 0.7rem;
   white-space: nowrap;
-  border-radius: 2px;
   transform: rotate(-1.5deg);
   opacity: 0.85;
 }
@@ -98,7 +96,6 @@ body:has(.pv-page) {
   color: transparent;
   padding: 0 0.4em;
   user-select: none;
-  border-radius: 1px;
 }
 
 @keyframes pv-ticker {
@@ -111,8 +108,8 @@ body:has(.pv-page) {
 }
 
 @keyframes pv-amber-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 165, 90, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(212, 165, 90, 0), 0 8px 30px rgba(0, 0, 0, 0.5); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.45), 0 8px 24px rgba(0, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0), 0 8px 30px rgba(0, 0, 0, 0.5); }
 }
 
 .pv-page .animate-amber-pulse {

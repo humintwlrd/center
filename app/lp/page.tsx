@@ -284,20 +284,20 @@ export default function LandingPage() {
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="hairline-b bg-paper-strong">
         <div className="container-editorial py-16 md:py-24 lg:py-28">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="eyebrow-brand mb-5">Como avaliar pessoas</p>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight text-ink text-balance">
+          <div className="max-w-4xl">
+            <p className="kicker mb-6">Como avaliar pessoas</p>
+            <h1 className="font-display text-display-2xl font-medium text-ink text-balance">
               Como investigadores, espiões e empresas obtêm informações através de pessoas
             </h1>
-            <p className="mt-6 mx-auto max-w-2xl text-lg md:text-xl leading-relaxed text-ink-soft text-pretty">
+            <p className="mt-6 max-w-2xl text-lede text-ink-soft text-pretty">
               Um método de avaliação humana extraído de documentos de inteligência desclassificados, para
               identificar confiança, risco e vulnerabilidade em alguém — antes de dar acesso, fechar negócio ou
               colocar o seu nome ao lado do dela.
             </p>
-            <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-base font-semibold text-on-brand transition-colors hover:bg-brand-hover"
+                className="btn btn-primary btn-lg"
               >
                 Quero aprender o método
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -313,7 +313,7 @@ export default function LandingPage() {
       {/* ── 02. A situação real ──────────────────────────────── */}
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl">
+          <div className="max-w-3xl">
             <p className="eyebrow mb-4">/ 02. A situação real</p>
             <div className="article-prose">
               <p>
@@ -364,9 +364,9 @@ export default function LandingPage() {
       {/* ── 03. Como cada capítulo funciona ──────────────────── */}
       <section className="hairline-b bg-paper-deep">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="max-w-3xl">
             <p className="eyebrow mb-4">/ 03. O protocolo de leitura</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
+            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
               Cada capítulo parte de um documento real e termina em aplicação prática.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
@@ -375,7 +375,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-4xl grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
             {CHAPTER_FORMAT.map((step, i) => (
               <div key={step.tag} className="bg-paper-strong p-6">
                 <span className="font-mono text-xs text-brand">{String(i + 1).padStart(2, "0")}</span>
@@ -390,9 +390,9 @@ export default function LandingPage() {
       {/* ── 04. A arquitetura: 4 partes / 11 capítulos ───────── */}
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="max-w-3xl">
             <p className="eyebrow mb-4">/ 04. A arquitetura</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
+            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
               Quatro partes. Onze capítulos. Um método para avaliar qualquer pessoa.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
@@ -408,7 +408,7 @@ export default function LandingPage() {
               return (
                 <div
                   key={part.title}
-                  className={`flex flex-col p-7 md:p-8 ${part.highlight ? "bg-ink text-paper" : "bg-paper-strong"}`}
+                  className={`flex flex-col p-7 md:p-8 ${part.highlight ? "surface-deep" : "bg-paper-strong"}`}
                 >
                   <div className="flex items-center justify-between">
                     <span
@@ -420,7 +420,7 @@ export default function LandingPage() {
                     </span>
                     <span
                       className={`font-mono text-[11px] uppercase tracking-widest ${
-                        part.highlight ? "text-brand" : "text-ink-muted"
+                        part.highlight ? "text-brand-bright" : "text-ink-muted"
                       }`}
                     >
                       {part.tag}
@@ -434,18 +434,18 @@ export default function LandingPage() {
                     {part.title}
                   </h3>
                   <p
-                    className={`mt-2 text-sm leading-relaxed ${part.highlight ? "text-paper/70" : "text-ink-muted"}`}
+                    className={`mt-2 text-sm leading-relaxed ${part.highlight ? "text-fog-muted" : "text-ink-muted"}`}
                   >
                     {part.body}
                   </p>
                   <ul
                     className="mt-5 space-y-2 border-t border-dashed pt-4 text-sm"
-                    style={{ borderColor: part.highlight ? "rgba(246,241,230,0.2)" : "var(--color-line)" }}
+                    style={{ borderColor: part.highlight ? "var(--color-line-dark)" : "var(--color-line)" }}
                   >
                     {part.chapters.map((ch) => (
                       <li key={ch} className="flex items-start gap-2">
                         <Check
-                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-brand" : "text-brand"}`}
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-brand-bright" : "text-brand"}`}
                           aria-hidden
                         />
                         <span className={part.highlight ? "text-paper/85" : "text-ink-soft"}>{ch}</span>
@@ -462,9 +462,9 @@ export default function LandingPage() {
       {/* ── 05. Os 4 casos reais ─────────────────────────────── */}
       <section className="hairline-b bg-paper-deep">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="max-w-3xl">
             <p className="eyebrow mb-4">/ 05. Os casos</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
+            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
               Quatro traições que ninguém viu chegar — até ser tarde.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
@@ -474,7 +474,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-4xl space-y-px overflow-hidden border border-line bg-line">
+          <div className="mt-12 max-w-4xl space-y-px overflow-hidden border border-line bg-line">
             {CASES.map((c) => (
               <div key={c.name} className="bg-paper-strong p-7 md:p-8">
                 <div className="flex items-center gap-3">
@@ -504,9 +504,9 @@ export default function LandingPage() {
       {/* ── 06. O método A.C.E.S.S.O. ────────────────────────── */}
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="max-w-3xl">
             <p className="eyebrow-brand mb-4">/ 06. O método</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
+            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
               A.C.E.S.S.O. — seis perguntas antes de confiar em alguém.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
@@ -521,7 +521,7 @@ export default function LandingPage() {
               return (
                 <div key={m.title} className="bg-paper-strong p-7">
                   <div className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-display text-2xl font-bold text-brand">
+                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-display text-2xl font-medium text-brand-bright">
                       {m.letter}
                     </span>
                     <div className="flex items-center gap-2">
@@ -541,9 +541,9 @@ export default function LandingPage() {
       {/* ── A plataforma / entregável ────────────────────────── */}
       <section className="hairline-b bg-paper-deep">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="max-w-3xl">
             <p className="eyebrow mb-4">O que você recebe</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
+            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
               Um material para estudar uma vez e consultar pela vida toda.
             </h2>
             <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
@@ -572,11 +572,11 @@ export default function LandingPage() {
       {/* ── Como o acesso funciona ───────────────────────────── */}
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
-          <p className="eyebrow mb-4 text-center">Como o acesso funciona</p>
-          <div className="mx-auto mt-8 grid max-w-4xl gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
+          <p className="eyebrow mb-4">Como o acesso funciona</p>
+          <div className="mt-8 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
             {STEPS.map((step) => (
               <div key={step.n} className="bg-paper-strong p-7">
-                <span className="font-display text-4xl font-bold text-brand">{step.n}</span>
+                <span className="font-display text-5xl font-medium text-brand">{step.n}</span>
                 <h3 className="mt-4 font-display text-lg font-semibold text-ink">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
               </div>
@@ -588,10 +588,10 @@ export default function LandingPage() {
       {/* ── Para quem / Não é para ───────────────────────────── */}
       <section className="hairline-b bg-paper-deep">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto grid max-w-5xl gap-px overflow-hidden border border-line bg-line lg:grid-cols-2">
+          <div className="grid gap-px overflow-hidden border border-line bg-line lg:grid-cols-2">
             <div className="bg-paper-strong p-8 md:p-10">
               <p className="eyebrow-brand mb-4">/ 07. Para quem</p>
-              <h2 className="font-display text-2xl font-bold leading-snug text-ink text-balance">
+              <h2 className="font-display text-display-md font-medium text-ink text-balance">
                 Para quem paga caro quando confia na pessoa errada.
               </h2>
               <ul className="mt-6 space-y-4">
@@ -605,7 +605,7 @@ export default function LandingPage() {
             </div>
             <div className="bg-paper-strong p-8 md:p-10">
               <p className="eyebrow mb-4">/ 08. Não é para</p>
-              <h2 className="font-display text-2xl font-bold leading-snug text-ink text-balance">
+              <h2 className="font-display text-display-md font-medium text-ink text-balance">
                 Não é para quem quer poder sobre os outros.
               </h2>
               <ul className="mt-6 space-y-4">
@@ -622,14 +622,14 @@ export default function LandingPage() {
       </section>
 
       {/* ── Ética e limites ──────────────────────────────────── */}
-      <section className="hairline-b bg-ink text-paper">
+      <section className="surface-deep">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-brand mb-4">/ 09. Ética e limites</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-paper text-balance">
+          <div className="max-w-3xl">
+            <p className="eyebrow-brand mb-4">/ 09. Ética e limites</p>
+            <h2 className="font-display text-display-lg font-medium text-paper text-balance">
               Avaliar pessoas não é manipular pessoas.
             </h2>
-            <p className="mt-6 text-[15px] md:text-base leading-relaxed text-paper/75 text-pretty">
+            <p className="mt-6 text-[15px] md:text-base leading-relaxed text-fog-muted text-pretty">
               Este material não ensina coação, fraude, invasão, chantagem ou exploração de vulnerabilidades. Ele
               ensina a julgar confiança com critério, a enxergar risco antes do prejuízo e a proteger o que é
               seu — começando pela própria capacidade de decidir.
@@ -645,9 +645,9 @@ export default function LandingPage() {
       {/* ── Oferta ───────────────────────────────────────────── */}
       <section id="oferta" className="hairline-b bg-paper-deep scroll-mt-20">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="max-w-3xl">
             <p className="eyebrow mb-4">A oferta</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-balance">
+            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
               Tudo incluso. Em um único pacote.
             </h2>
           </div>
@@ -658,7 +658,7 @@ export default function LandingPage() {
               <p className="font-mono text-xs uppercase tracking-widest text-brand">Acesso por 12 meses</p>
               <p className="mt-4 text-sm text-ink-muted line-through">De R$ 1.290</p>
               <div className="mt-1 flex items-baseline gap-2">
-                <span className="font-display text-6xl font-bold text-ink">R$ 49</span>
+                <span className="font-display text-6xl font-medium text-ink">R$ 49</span>
               </div>
               <p className="mt-2 text-sm text-ink-muted">pagamento único · PIX ou cartão</p>
               <a
@@ -694,7 +694,7 @@ export default function LandingPage() {
           </div>
 
           {/* Garantia */}
-          <div className="mx-auto mt-8 max-w-4xl border border-line bg-paper-strong p-7 md:p-8">
+          <div className="mt-8 max-w-4xl border border-line bg-paper-strong p-7 md:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-paper-deep text-brand">
                 <ShieldCheck className="h-6 w-6" aria-hidden />
@@ -715,8 +715,8 @@ export default function LandingPage() {
       {/* ── FAQ ──────────────────────────────────────────────── */}
       <section className="hairline-b">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight tracking-tight text-ink text-center">
+          <div className="max-w-3xl">
+            <h2 className="font-display text-display-lg font-medium text-ink">
               Antes de decidir.
             </h2>
             <div className="mt-10 divide-y divide-line border-y border-line">
@@ -743,46 +743,46 @@ export default function LandingPage() {
       </section>
 
       {/* ── Aviso de segurança ───────────────────────────────── */}
-      <section className="bg-ink text-paper">
+      <section className="surface-deep">
         <div className="container-editorial py-16 md:py-24">
-          <div className="mx-auto max-w-3xl">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-brand mb-4 flex items-center gap-2">
+          <div className="max-w-3xl">
+            <p className="eyebrow-brand mb-4 flex items-center gap-2">
               <ShieldAlert className="h-4 w-4" aria-hidden />
               Aviso de segurança · Material protegido
             </p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold leading-tight tracking-tight text-paper text-balance">
+            <h2 className="font-display text-display-md font-medium text-paper text-balance">
               Cada linha deste material está catalogada, datada e rastreável até a fonte.
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-paper/70">
+            <p className="mt-6 text-[15px] leading-relaxed text-fog-muted">
               Todo o conteúdo do Mundo da HUMINT — marca, identidade, copy, narrativa, estrutura de página,
               guias, dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é
               propriedade intelectual exclusiva e está protegido por direito autoral, direito de marca e
               legislação de concorrência desleal.
             </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-paper/70">
+            <p className="mt-4 text-[15px] leading-relaxed text-fog-muted">
               Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa não passa
               despercebida. Documentos carregam marcações ocultas e identificadores individuais por leitor.
               Quando um vazamento aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
             </p>
 
-            <div className="mt-10 grid gap-px overflow-hidden border border-paper/15 bg-paper/15 sm:grid-cols-3">
+            <div className="mt-10 grid gap-px overflow-hidden border border-line-dark bg-line-dark sm:grid-cols-3">
               {PROTECTION.map((p) => (
-                <div key={p.title} className="bg-ink p-6">
-                  <p className="font-display text-base font-semibold text-paper">{p.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-paper/65">{p.body}</p>
+                <div key={p.title} className="bg-deep p-6">
+                  <p className="font-display text-lg font-medium text-fog">{p.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-fog-muted">{p.body}</p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-10 text-[15px] leading-relaxed text-paper/80">
+            <p className="mt-10 text-[15px] leading-relaxed text-fog">
               Quem estuda este material aprende a enxergar a pegada dos outros. Quem tenta copiá-lo,
               ironicamente, deixa a pegada mais visível de todas.
             </p>
 
-            <div className="mt-12 text-center">
+            <div className="mt-12">
               <a
                 href={CHECKOUT_URL}
-                className="inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-base font-semibold text-on-brand transition-colors hover:bg-brand-hover"
+                className="btn btn-primary btn-lg"
               >
                 Quero aprender o método por R$ 49
                 <ArrowRight className="h-4 w-4" aria-hidden />

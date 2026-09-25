@@ -31,12 +31,12 @@ export function MobileStickyCta() {
       }`}
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <div className="bg-humint-charcoal/97 backdrop-blur-xl border-t border-humint-amber/30 px-3 py-2.5 flex items-center gap-2.5 shadow-[0_-12px_32px_rgba(0,0,0,0.4)]">
+      <div className="bg-deep/97 backdrop-blur-xl border-t border-brand-bright/30 px-3 py-2.5 flex items-center gap-2.5 shadow-[0_-12px_32px_rgba(0,0,0,0.4)]">
         <div className="flex-1 min-w-0">
-          <div className="font-mono text-[10px] tracking-[0.16em] uppercase text-humint-amber/85 leading-tight">
+          <div className="font-mono text-[10px] tracking-[0.16em] uppercase text-brand-bright/85 leading-tight">
             12× R$ 99,30
           </div>
-          <div className="text-[11px] text-humint-bone/65 truncate leading-tight mt-0.5">
+          <div className="text-[11px] text-fog/65 truncate leading-tight mt-0.5">
             7 dias de garantia
           </div>
         </div>
@@ -44,7 +44,7 @@ export function MobileStickyCta() {
           href={CHECKOUT_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 inline-flex items-center gap-1.5 bg-humint-amber text-humint-ink font-mono text-[11px] tracking-[0.16em] uppercase font-bold px-4 py-3 min-h-[44px] active:bg-humint-bone"
+          className="shrink-0 inline-flex items-center gap-1.5 bg-brand text-on-brand font-mono text-[11px] tracking-[0.16em] uppercase font-bold px-4 py-3 min-h-[44px] active:bg-brand-press"
         >
           Acessar
           <ArrowRight className="h-3.5 w-3.5" />

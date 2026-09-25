@@ -66,7 +66,7 @@ export function TestimonialsCarousel() {
       <CarouselContent className="-ml-3 md:-ml-5">
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={testimonial.src} className="basis-[86%] pl-3 sm:basis-[62%] md:basis-[44%] md:pl-5 lg:basis-[34%]">
-            <figure className="relative overflow-hidden border border-humint-ink/15 bg-humint-white shadow-[0_20px_60px_rgba(0,0,0,0.16)]">
+            <figure className="relative overflow-hidden border border-ink/15 bg-paper-strong shadow-[0_20px_60px_rgba(0,0,0,0.16)]">
               <div className="relative aspect-[9/16] w-full">
                 <Image
                   src={testimonial.src}
@@ -87,7 +87,7 @@ export function TestimonialsCarousel() {
         <button
           type="button"
           onClick={() => api?.scrollPrev()}
-          className="inline-flex size-11 items-center justify-center border border-humint-ink/25 text-humint-ink transition-colors hover:border-humint-blood hover:bg-humint-white hover:text-humint-blood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-humint-blood"
+          className="inline-flex size-11 items-center justify-center border border-ink/25 text-ink transition-colors hover:border-brand hover:bg-paper-strong hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
           aria-label="Depoimento anterior"
         >
           <ChevronLeft aria-hidden />
@@ -100,8 +100,8 @@ export function TestimonialsCarousel() {
               type="button"
               onClick={() => api?.scrollTo(index)}
               className={cn(
-                "h-1.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-humint-blood",
-                current === index ? "w-8 bg-humint-blood" : "w-2 bg-humint-ink/20 hover:bg-humint-ink/45",
+                "h-1.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand",
+                current === index ? "w-8 bg-brand" : "w-2 bg-ink/20 hover:bg-ink/45",
               )}
               aria-label={`Ir para depoimento ${index + 1}`}
               aria-current={current === index ? "true" : undefined}
@@ -112,7 +112,7 @@ export function TestimonialsCarousel() {
         <button
           type="button"
           onClick={() => api?.scrollNext()}
-          className="inline-flex size-11 items-center justify-center border border-humint-ink/25 text-humint-ink transition-colors hover:border-humint-blood hover:bg-humint-white hover:text-humint-blood focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-humint-blood"
+          className="inline-flex size-11 items-center justify-center border border-ink/25 text-ink transition-colors hover:border-brand hover:bg-paper-strong hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
           aria-label="Próximo depoimento"
         >
           <ChevronRight aria-hidden />

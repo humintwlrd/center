@@ -1,19 +1,6 @@
 import type { Metadata } from "next"
-import { Fraunces, JetBrains_Mono } from "next/font/google"
 import { UtmifyScripts } from "@/components/landing/utmify-scripts"
 import "./pv.css"
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-pv-serif",
-  display: "swap",
-})
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-pv-mono",
-  display: "swap",
-})
 
 export const metadata: Metadata = {
   title: "Acervo Tático de Inteligência Humana",
@@ -49,9 +36,9 @@ export const metadata: Metadata = {
 
 export default function PvLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${fraunces.variable} ${jetBrainsMono.variable}`}>
+    <>
       {children}
       <UtmifyScripts />
-    </div>
+    </>
   )
 }
