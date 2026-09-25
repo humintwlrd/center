@@ -34,7 +34,7 @@ Método de inteligência humana extraído de práticas e documentos de serviços
 - Catálogo em `lib/products.ts`: Acervo Tático (12x R$ 93,09), Engenharia Social (12x R$ 12,41), Dossiês 01–06 (12x R$ 19,65 cada). Cards mostram só o valor parcelado com selo Cartão · Pix.
 - `/lp` ("Como Avaliar Pessoas", R$ 49) ainda não tem checkout real. O link entra pela variável `NEXT_PUBLIC_LP_CHECKOUT_URL` na Vercel; sem ela, a página fica `noindex` e os botões levam à oferta.
 - Preço e checkout da `/pv` vêm do catálogo (`ACERVO` em `lib/products.ts`), a mesma fonte da loja. Antes a `/pv` anunciava 12x R$ 99,30 / R$ 960; se o HeroSpark cobrar outro valor, corrija só o catálogo.
-- Domínio: `mundodahumint.com` e `mundodahumint.com.br` apontam para o mesmo projeto na Vercel. O canônico sai de `NEXT_PUBLIC_SITE_URL` (padrão `https://www.mundodahumint.com.br`), e o pixel da Utmify dispara nos dois.
+- Domínio: o canônico é `https://mundodahumint.com` (fixo em `SITE.url`, `lib/site.ts`). `mundodahumint.com.br` e `www.mundodahumint.com.br` apontam para o mesmo projeto na Vercel e redirecionam com 308 para o `.com` (mesmo caminho e query), pelo `next.config.mjs`. O e-mail continua `contato@mundodahumint.com.br`.
 
 ## Brand Commitments
 

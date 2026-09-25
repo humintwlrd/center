@@ -197,7 +197,7 @@ vercel
 ### Variáveis de Ambiente
 
 Copie `.env.example` para `.env.local` no desenvolvimento e configure no dashboard Vercel:
-- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_LP_CHECKOUT_URL` (checkout da `/lp`)
 - Webhooks dos formulários
 - Chaves de analytics (opcional)
 

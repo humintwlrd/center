@@ -176,6 +176,8 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 ## Deploy / verificação
 
 - `git push origin main` → Vercel republica automaticamente.
-- Domínios: `mundodahumint.com` e `.com.br` apontam para o mesmo projeto Vercel; o canônico vem de
-  `NEXT_PUBLIC_SITE_URL` (padrão `https://www.mundodahumint.com.br`). E-mail: `contato@mundodahumint.com.br`.
+- Domínios: o canônico é `https://mundodahumint.com` (fixo em `SITE.url`, `lib/site.ts`). O `.com.br`
+  (com ou sem `www`) aponta para o mesmo projeto Vercel e redireciona com 308 para o `.com` pelo
+  `next.config.mjs`. Na Vercel, nunca configure redirecionamento `.com` → `.com.br` (daria loop).
+  E-mail: `contato@mundodahumint.com.br` (caixa de e-mail, não muda).
 - Como há cache de CDN, verifique a página com um cache-buster (`?v=algo`) e avise pra dar **Ctrl+F5**.

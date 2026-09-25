@@ -4,7 +4,8 @@ export const SITE = {
   name: "Mundo da HUMINT",
   shortName: "HUMINT",
   tagline: "Inteligência humana aplicada, com método.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mundodahumint.com.br",
+  // Domínio canônico: o .com.br redireciona para cá (next.config.mjs).
+  url: "https://mundodahumint.com",
   description:
     "Plataforma editorial e educacional dedicada à inteligência humana aplicada. Feita para quem investiga, verifica e decide com método, contexto e ética.",
   email: "contato@mundodahumint.com.br",
