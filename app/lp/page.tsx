@@ -17,7 +17,6 @@ import {
   Lock,
   ArrowRight,
   ShieldCheck,
-  ShieldAlert,
 } from "lucide-react"
 import { SITE } from "@/lib/site"
 
@@ -280,16 +279,15 @@ const PROTECTION = [
 
 export default function LandingPage() {
   return (
-    <div className="bg-paper">
+    <div className="bg-snow">
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="hairline-b bg-paper-strong">
-        <div className="container-editorial py-16 md:py-24 lg:py-28">
+      <section className="border-b border-line bg-snow">
+        <div className="container-site py-16 md:py-24 lg:py-28">
           <div className="max-w-4xl">
-            <p className="kicker mb-6">Como avaliar pessoas</p>
-            <h1 className="font-display text-display-2xl font-medium text-ink text-balance">
+            <h1 className="font-expanded text-display font-extrabold text-ink text-balance">
               Como investigadores, espiões e empresas obtêm informações através de pessoas
             </h1>
-            <p className="mt-6 max-w-2xl text-lede text-ink-soft text-pretty">
+            <p className="mt-6 max-w-2xl text-lede text-ink-2 text-pretty">
               Um método de avaliação humana extraído de documentos de inteligência desclassificados, para
               identificar confiança, risco e vulnerabilidade em alguém — antes de dar acesso, fechar negócio ou
               colocar o seu nome ao lado do dela.
@@ -297,12 +295,12 @@ export default function LandingPage() {
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href={CHECKOUT_URL}
-                className="btn btn-primary btn-lg"
+                className="btn btn-signal btn-lg"
               >
                 Quero aprender o método
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
-              <span className="font-mono text-xs uppercase tracking-widest text-ink-muted">
+              <span className="text-xs text-ink-3">
                 R$ 49 · 7 dias de garantia
               </span>
             </div>
@@ -311,11 +309,10 @@ export default function LandingPage() {
       </section>
 
       {/* ── 02. A situação real ──────────────────────────────── */}
-      <section className="hairline-b">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4">/ 02. A situação real</p>
-            <div className="article-prose">
+            <div className="prose-read">
               <p>
                 Quase todo prejuízo grande começa com uma boa impressão. O sócio parecia alinhado. O funcionário
                 parecia leal. O parceiro parecia sólido. Tudo fazia sentido no começo — e foi exatamente por isso
@@ -335,23 +332,22 @@ export default function LandingPage() {
             </div>
 
             <div className="my-10 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
-              <div className="bg-paper-strong p-6">
-                <p className="font-display text-lg font-semibold text-ink">Quem confia por impressão</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">descobre depois.</p>
+              <div className="bg-snow p-6">
+                <p className="font-expanded text-lg font-semibold text-ink">Quem confia por impressão</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-3">descobre depois.</p>
               </div>
-              <div className="bg-paper-strong p-6">
-                <p className="font-display text-lg font-semibold text-ink">Quem avalia com critério</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">percebe durante.</p>
+              <div className="bg-snow p-6">
+                <p className="font-expanded text-lg font-semibold text-ink">Quem avalia com critério</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-3">percebe durante.</p>
               </div>
-              <div className="bg-paper-strong p-6">
-                <p className="font-display text-lg font-semibold text-ink">Quem observa com método</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">percebe antes.</p>
+              <div className="bg-snow p-6">
+                <p className="font-expanded text-lg font-semibold text-ink">Quem observa com método</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-3">percebe antes.</p>
               </div>
             </div>
 
-            <div className="mt-8 border-l-2 border-brand bg-paper-deep p-6">
-              <p className="eyebrow-brand mb-2">Atenção</p>
-              <p className="text-[15px] leading-relaxed text-ink-soft">
+            <div className="mt-8 bg-snow-2 p-6">
+              <p className="text-[15px] leading-relaxed text-ink-2">
                 Não se trata de desconfiar de todo mundo nem de manipular ninguém. Trata-se de parar de confiar no
                 escuro. Em toda relação que importa, alguém está avaliando alguém. Quando você não sabe avaliar,
                 normalmente só entende o custo depois que ele já chegou.
@@ -362,14 +358,13 @@ export default function LandingPage() {
       </section>
 
       {/* ── 03. Como cada capítulo funciona ──────────────────── */}
-      <section className="hairline-b bg-paper-deep">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line bg-snow-2">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4">/ 03. O protocolo de leitura</p>
-            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
               Cada capítulo parte de um documento real e termina em aplicação prática.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
+            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
               Não é teoria solta nem opinião. Cada lição nasce de um arquivo de inteligência desclassificado e é
               conduzida pelo mesmo percurso, do documento à decisão que você toma amanhã.
             </p>
@@ -377,10 +372,10 @@ export default function LandingPage() {
 
           <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
             {CHAPTER_FORMAT.map((step, i) => (
-              <div key={step.tag} className="bg-paper-strong p-6">
-                <span className="font-mono text-xs text-brand">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-3 font-display text-base font-semibold text-ink">{step.tag}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
+              <div key={step.tag} className="bg-snow p-6">
+                <span className="text-xs text-signal">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-3 font-expanded text-base font-semibold text-ink">{step.tag}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-3">{step.body}</p>
               </div>
             ))}
           </div>
@@ -388,14 +383,13 @@ export default function LandingPage() {
       </section>
 
       {/* ── 04. A arquitetura: 4 partes / 11 capítulos ───────── */}
-      <section className="hairline-b">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4">/ 04. A arquitetura</p>
-            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
               Quatro partes. Onze capítulos. Um método para avaliar qualquer pessoa.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
+            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
               Você começa entendendo por que erra ao confiar, aprende o que a inteligência procura antes de
               confiar, estuda os maiores erros de julgamento da história e termina com um método próprio para
               aplicar a partir de hoje.
@@ -408,47 +402,47 @@ export default function LandingPage() {
               return (
                 <div
                   key={part.title}
-                  className={`flex flex-col p-7 md:p-8 ${part.highlight ? "surface-deep" : "bg-paper-strong"}`}
+                  className={`flex flex-col p-7 md:p-8 ${part.highlight ? "night" : "bg-snow"}`}
                 >
                   <div className="flex items-center justify-between">
                     <span
                       className={`inline-flex h-11 w-11 items-center justify-center ${
-                        part.highlight ? "bg-brand text-on-brand" : "bg-paper-deep text-brand"
+                        part.highlight ? "bg-signal text-on-signal" : "bg-snow-2 text-signal"
                       }`}
                     >
                       <Icon className="h-5 w-5" aria-hidden />
                     </span>
                     <span
-                      className={`font-mono text-[11px] uppercase tracking-widest ${
-                        part.highlight ? "text-brand-bright" : "text-ink-muted"
+                      className={`text-sm font-bold ${
+                        part.highlight ? "text-signal" : "text-ink-3"
                       }`}
                     >
                       {part.tag}
                     </span>
                   </div>
                   <h3
-                    className={`mt-5 font-display text-xl font-semibold leading-snug ${
-                      part.highlight ? "text-paper" : "text-ink"
+                    className={`mt-5 font-expanded text-xl font-semibold leading-snug ${
+                      part.highlight ? "text-white" : "text-ink"
                     }`}
                   >
                     {part.title}
                   </h3>
                   <p
-                    className={`mt-2 text-sm leading-relaxed ${part.highlight ? "text-fog-muted" : "text-ink-muted"}`}
+                    className={`mt-2 text-sm leading-relaxed ${part.highlight ? "text-mist" : "text-ink-3"}`}
                   >
                     {part.body}
                   </p>
                   <ul
                     className="mt-5 space-y-2 border-t border-dashed pt-4 text-sm"
-                    style={{ borderColor: part.highlight ? "var(--color-line-dark)" : "var(--color-line)" }}
+                    style={{ borderColor: part.highlight ? "var(--color-line-night)" : "var(--color-line)" }}
                   >
                     {part.chapters.map((ch) => (
                       <li key={ch} className="flex items-start gap-2">
                         <Check
-                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-brand-bright" : "text-brand"}`}
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-signal" : "text-signal"}`}
                           aria-hidden
                         />
-                        <span className={part.highlight ? "text-paper/85" : "text-ink-soft"}>{ch}</span>
+                        <span className={part.highlight ? "text-white/85" : "text-ink-2"}>{ch}</span>
                       </li>
                     ))}
                   </ul>
@@ -460,14 +454,13 @@ export default function LandingPage() {
       </section>
 
       {/* ── 05. Os 4 casos reais ─────────────────────────────── */}
-      <section className="hairline-b bg-paper-deep">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line bg-snow-2">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4">/ 05. Os casos</p>
-            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
               Quatro traições que ninguém viu chegar — até ser tarde.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
+            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
               Em todos eles os sinais existiam, estavam à vista e foram explicados como qualquer outra coisa. Cada
               caso é dissecado em três colunas: o que foi observado, o que foi ignorado e o que deveria ter sido
               percebido.
@@ -476,23 +469,23 @@ export default function LandingPage() {
 
           <div className="mt-12 max-w-4xl space-y-px overflow-hidden border border-line bg-line">
             {CASES.map((c) => (
-              <div key={c.name} className="bg-paper-strong p-7 md:p-8">
+              <div key={c.name} className="bg-snow p-7 md:p-8">
                 <div className="flex items-center gap-3">
-                  <Scale className="h-5 w-5 text-brand" aria-hidden />
-                  <h3 className="font-display text-xl font-semibold text-ink">{c.name}</h3>
+                  <Scale className="h-5 w-5 text-signal" aria-hidden />
+                  <h3 className="font-expanded text-xl font-semibold text-ink">{c.name}</h3>
                 </div>
                 <div className="mt-5 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
-                  <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-brand">Observado</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.seen}</p>
+                  <div className="bg-snow-2 p-5">
+                    <p className=" text-sm text-signal">Observado</p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-2">{c.seen}</p>
                   </div>
-                  <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">Ignorado</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.ignored}</p>
+                  <div className="bg-snow-2 p-5">
+                    <p className=" text-sm text-ink-3">Ignorado</p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-2">{c.ignored}</p>
                   </div>
-                  <div className="bg-paper-deep p-5">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-ink">A lição</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.lesson}</p>
+                  <div className="bg-snow-2 p-5">
+                    <p className=" text-sm text-ink">A lição</p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-2">{c.lesson}</p>
                   </div>
                 </div>
               </div>
@@ -502,14 +495,13 @@ export default function LandingPage() {
       </section>
 
       {/* ── 06. O método A.C.E.S.S.O. ────────────────────────── */}
-      <section className="hairline-b">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow-brand mb-4">/ 06. O método</p>
-            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
               A.C.E.S.S.O. — seis perguntas antes de confiar em alguém.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
+            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
               Todo o conteúdo do guia condensado em um protocolo simples o bastante para você usar de cabeça em
               qualquer avaliação — de uma contratação a uma sociedade.
             </p>
@@ -519,18 +511,18 @@ export default function LandingPage() {
             {METHOD.map((m) => {
               const Icon = m.icon
               return (
-                <div key={m.title} className="bg-paper-strong p-7">
+                <div key={m.title} className="bg-snow p-7">
                   <div className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-display text-2xl font-medium text-brand-bright">
+                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-expanded text-2xl font-medium text-signal">
                       {m.letter}
                     </span>
                     <div className="flex items-center gap-2">
-                      <Icon className="h-4 w-4 text-brand" aria-hidden />
-                      <h3 className="font-display text-lg font-semibold text-ink">{m.title}</h3>
+                      <Icon className="h-4 w-4 text-signal" aria-hidden />
+                      <h3 className="font-expanded text-lg font-semibold text-ink">{m.title}</h3>
                     </div>
                   </div>
-                  <p className="mt-4 font-display text-[15px] font-medium leading-snug text-ink">{m.q}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{m.body}</p>
+                  <p className="mt-4 font-expanded text-[15px] font-medium leading-snug text-ink">{m.q}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-3">{m.body}</p>
                 </div>
               )
             })}
@@ -539,14 +531,13 @@ export default function LandingPage() {
       </section>
 
       {/* ── A plataforma / entregável ────────────────────────── */}
-      <section className="hairline-b bg-paper-deep">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line bg-snow-2">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4">O que você recebe</p>
-            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
               Um material para estudar uma vez e consultar pela vida toda.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-soft text-pretty">
+            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
               Tudo entregue na área de membros, em ordem progressiva: do erro de julgamento ao método pronto para
               aplicar.
             </p>
@@ -556,12 +547,12 @@ export default function LandingPage() {
             {PLATFORM.map((card) => {
               const Icon = card.icon
               return (
-                <div key={card.title} className="bg-paper-strong p-7">
-                  <span className="inline-flex h-11 w-11 items-center justify-center bg-paper-deep text-brand">
+                <div key={card.title} className="bg-snow p-7">
+                  <span className="inline-flex h-11 w-11 items-center justify-center bg-snow-2 text-signal">
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
-                  <h3 className="mt-5 font-display text-lg font-semibold text-ink">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{card.body}</p>
+                  <h3 className="mt-5 font-expanded text-lg font-semibold text-ink">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-3">{card.body}</p>
                 </div>
               )
             })}
@@ -570,15 +561,14 @@ export default function LandingPage() {
       </section>
 
       {/* ── Como o acesso funciona ───────────────────────────── */}
-      <section className="hairline-b">
-        <div className="container-editorial py-16 md:py-24">
-          <p className="eyebrow mb-4">Como o acesso funciona</p>
+      <section className="border-b border-line">
+        <div className="container-site py-16 md:py-24">
           <div className="mt-8 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
             {STEPS.map((step) => (
-              <div key={step.n} className="bg-paper-strong p-7">
-                <span className="font-display text-5xl font-medium text-brand">{step.n}</span>
-                <h3 className="mt-4 font-display text-lg font-semibold text-ink">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
+              <div key={step.n} className="bg-snow p-7">
+                <span className="font-expanded text-5xl font-medium text-signal">{step.n}</span>
+                <h3 className="mt-4 font-expanded text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-3">{step.body}</p>
               </div>
             ))}
           </div>
@@ -586,32 +576,30 @@ export default function LandingPage() {
       </section>
 
       {/* ── Para quem / Não é para ───────────────────────────── */}
-      <section className="hairline-b bg-paper-deep">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line bg-snow-2">
+        <div className="container-site py-16 md:py-24">
           <div className="grid gap-px overflow-hidden border border-line bg-line lg:grid-cols-2">
-            <div className="bg-paper-strong p-8 md:p-10">
-              <p className="eyebrow-brand mb-4">/ 07. Para quem</p>
-              <h2 className="font-display text-display-md font-medium text-ink text-balance">
+            <div className="bg-snow p-8 md:p-10">
+              <h2 className="font-expanded text-heading font-extrabold text-ink text-balance">
                 Para quem paga caro quando confia na pessoa errada.
               </h2>
               <ul className="mt-6 space-y-4">
                 {FOR_WHOM.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand" aria-hidden />
+                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-2">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-paper-strong p-8 md:p-10">
-              <p className="eyebrow mb-4">/ 08. Não é para</p>
-              <h2 className="font-display text-display-md font-medium text-ink text-balance">
+            <div className="bg-snow p-8 md:p-10">
+              <h2 className="font-expanded text-heading font-extrabold text-ink text-balance">
                 Não é para quem quer poder sobre os outros.
               </h2>
               <ul className="mt-6 space-y-4">
                 {NOT_FOR.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-muted">
-                    <X className="mt-0.5 h-5 w-5 shrink-0 text-alert" aria-hidden />
+                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-3">
+                    <X className="mt-0.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -622,19 +610,18 @@ export default function LandingPage() {
       </section>
 
       {/* ── Ética e limites ──────────────────────────────────── */}
-      <section className="surface-deep">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="night">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow-brand mb-4">/ 09. Ética e limites</p>
-            <h2 className="font-display text-display-lg font-medium text-paper text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-white text-balance">
               Avaliar pessoas não é manipular pessoas.
             </h2>
-            <p className="mt-6 text-[15px] md:text-base leading-relaxed text-fog-muted text-pretty">
+            <p className="mt-6 text-[15px] md:text-base leading-relaxed text-mist text-pretty">
               Este material não ensina coação, fraude, invasão, chantagem ou exploração de vulnerabilidades. Ele
               ensina a julgar confiança com critério, a enxergar risco antes do prejuízo e a proteger o que é
               seu — começando pela própria capacidade de decidir.
             </p>
-            <p className="mt-5 text-lg font-display font-medium text-paper text-pretty">
+            <p className="mt-5 text-lg font-expanded font-medium text-white text-pretty">
               Quem sabe avaliar não vence porque engana melhor. Vence porque percebe melhor, decide melhor e para
               de pagar a conta da confiança cega.
             </p>
@@ -643,49 +630,47 @@ export default function LandingPage() {
       </section>
 
       {/* ── Oferta ───────────────────────────────────────────── */}
-      <section id="oferta" className="hairline-b bg-paper-deep scroll-mt-20">
-        <div className="container-editorial py-16 md:py-24">
+      <section id="oferta" className="border-b border-line bg-snow-2 scroll-mt-20">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4">A oferta</p>
-            <h2 className="font-display text-display-lg font-medium text-ink text-balance">
+            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
               Tudo incluso. Em um único pacote.
             </h2>
           </div>
 
           <div className="mx-auto mt-12 grid max-w-4xl gap-px overflow-hidden border border-line bg-line lg:grid-cols-5">
             {/* Preço */}
-            <div className="bg-paper-strong p-8 md:p-10 lg:col-span-2">
-              <p className="font-mono text-xs uppercase tracking-widest text-brand">Acesso por 12 meses</p>
-              <p className="mt-4 text-sm text-ink-muted line-through">De R$ 1.290</p>
+            <div className="bg-snow p-8 md:p-10 lg:col-span-2">
+              <p className="text-xs text-signal">Acesso por 12 meses</p>
+              <p className="mt-4 text-sm text-ink-3 line-through">De R$ 1.290</p>
               <div className="mt-1 flex items-baseline gap-2">
-                <span className="font-display text-6xl font-medium text-ink">R$ 49</span>
+                <span className="font-expanded text-6xl font-medium text-ink">R$ 49</span>
               </div>
-              <p className="mt-2 text-sm text-ink-muted">pagamento único · PIX ou cartão</p>
+              <p className="mt-2 text-sm text-ink-3">pagamento único · PIX ou cartão</p>
               <a
                 href={CHECKOUT_URL}
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-brand px-6 py-4 text-base font-semibold text-on-brand transition-colors hover:bg-brand-hover"
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-signal px-6 py-4 text-base font-semibold text-on-signal transition-colors hover:bg-signal-hover"
               >
                 Garantir meu acesso
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
-              <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-mono uppercase tracking-wider text-ink-muted">
+              <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm tracking-wider text-ink-3">
                 <span className="inline-flex items-center gap-1.5">
-                  <ShieldCheck className="h-3.5 w-3.5 text-brand" aria-hidden /> 7 dias garantia
+                  <ShieldCheck className="h-3.5 w-3.5 text-signal" aria-hidden /> 7 dias garantia
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <Lock className="h-3.5 w-3.5 text-brand" aria-hidden /> Pagamento seguro
+                  <Lock className="h-3.5 w-3.5 text-signal" aria-hidden /> Pagamento seguro
                 </span>
               </div>
             </div>
 
             {/* Conteúdo incluso */}
-            <div className="bg-paper-strong p-8 md:p-10 lg:col-span-3">
-              <p className="eyebrow mb-4">Conteúdo do material</p>
-              <h3 className="font-display text-xl font-semibold text-ink">Como Avaliar Pessoas</h3>
+            <div className="bg-snow p-8 md:p-10 lg:col-span-3">
+              <h3 className="font-expanded text-xl font-semibold text-ink">Como Avaliar Pessoas</h3>
               <ul className="mt-5 space-y-3">
                 {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-soft">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand" aria-hidden />
+                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-2">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -694,15 +679,14 @@ export default function LandingPage() {
           </div>
 
           {/* Garantia */}
-          <div className="mt-8 max-w-4xl border border-line bg-paper-strong p-7 md:p-8">
+          <div className="mt-8 max-w-4xl border border-line bg-snow p-7 md:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-paper-deep text-brand">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-snow-2 text-signal">
                 <ShieldCheck className="h-6 w-6" aria-hidden />
               </span>
               <div>
-                <p className="eyebrow-brand mb-1">Garantia incondicional</p>
-                <h3 className="font-display text-lg font-semibold text-ink">7 dias para testar. Risco zero.</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
+                <h3 className="font-expanded text-lg font-semibold text-ink">7 dias para testar. Risco zero.</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-ink-2">
                   Se em uma semana o material não for para você, você pode solicitar o reembolso dentro do prazo
                   de garantia. Sem fricção e sem justificativa.
                 </p>
@@ -713,10 +697,10 @@ export default function LandingPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────── */}
-      <section className="hairline-b">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="border-b border-line">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <h2 className="font-display text-display-lg font-medium text-ink">
+            <h2 className="font-expanded text-title font-extrabold text-ink">
               Antes de decidir.
             </h2>
             <div className="mt-10 divide-y divide-line border-y border-line">
@@ -724,17 +708,17 @@ export default function LandingPage() {
                 <details key={item.q} className="group">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5">
                     <span className="flex items-baseline gap-3">
-                      <span className="font-mono text-xs text-brand">
+                      <span className="text-xs text-signal">
                         / {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-display text-lg font-semibold text-ink">{item.q}</span>
+                      <span className="font-expanded text-lg font-semibold text-ink">{item.q}</span>
                     </span>
                     <ArrowRight
-                      className="h-4 w-4 shrink-0 text-ink-muted transition-transform group-open:rotate-90"
+                      className="h-4 w-4 shrink-0 text-ink-3 transition-transform group-open:rotate-90"
                       aria-hidden
                     />
                   </summary>
-                  <p className="pb-5 pl-9 text-[15px] leading-relaxed text-ink-soft">{item.a}</p>
+                  <p className="pb-5 pl-9 text-[15px] leading-relaxed text-ink-2">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -743,38 +727,34 @@ export default function LandingPage() {
       </section>
 
       {/* ── Aviso de segurança ───────────────────────────────── */}
-      <section className="surface-deep">
-        <div className="container-editorial py-16 md:py-24">
+      <section className="night">
+        <div className="container-site py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="eyebrow-brand mb-4 flex items-center gap-2">
-              <ShieldAlert className="h-4 w-4" aria-hidden />
-              Aviso de segurança · Material protegido
-            </p>
-            <h2 className="font-display text-display-md font-medium text-paper text-balance">
-              Cada linha deste material está catalogada, datada e rastreável até a fonte.
+            <h2 className="font-expanded text-display font-extrabold text-white text-balance">
+              Cada linha deste material está catalogada, datada e <span className="redact">rastreável.</span>
             </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-fog-muted">
+            <p className="mt-6 text-[15px] leading-relaxed text-mist">
               Todo o conteúdo do Mundo da HUMINT — marca, identidade, copy, narrativa, estrutura de página,
               guias, dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é
               propriedade intelectual exclusiva e está protegido por direito autoral, direito de marca e
               legislação de concorrência desleal.
             </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-fog-muted">
+            <p className="mt-4 text-[15px] leading-relaxed text-mist">
               Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa não passa
               despercebida. Documentos carregam marcações ocultas e identificadores individuais por leitor.
               Quando um vazamento aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
             </p>
 
-            <div className="mt-10 grid gap-px overflow-hidden border border-line-dark bg-line-dark sm:grid-cols-3">
+            <div className="mt-10 grid gap-px overflow-hidden border border-line-night bg-line-night sm:grid-cols-3">
               {PROTECTION.map((p) => (
-                <div key={p.title} className="bg-deep p-6">
-                  <p className="font-display text-lg font-medium text-fog">{p.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-fog-muted">{p.body}</p>
+                <div key={p.title} className="bg-night p-6">
+                  <p className="font-expanded text-lg font-medium text-white">{p.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-mist">{p.body}</p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-10 text-[15px] leading-relaxed text-fog">
+            <p className="mt-10 text-[15px] leading-relaxed text-white">
               Quem estuda este material aprende a enxergar a pegada dos outros. Quem tenta copiá-lo,
               ironicamente, deixa a pegada mais visível de todas.
             </p>
@@ -782,7 +762,7 @@ export default function LandingPage() {
             <div className="mt-12">
               <a
                 href={CHECKOUT_URL}
-                className="btn btn-primary btn-lg"
+                className="btn btn-signal btn-lg"
               >
                 Quero aprender o método por R$ 49
                 <ArrowRight className="h-4 w-4" aria-hidden />

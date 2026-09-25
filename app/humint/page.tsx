@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Plus } from "lucide-react"
 
 import { pageMetadata } from "@/lib/seo"
 import { blogPostingSchema, faqSchema } from "@/lib/schema"
@@ -106,39 +106,32 @@ export default function HumintPage() {
       />
 
       <PageHeader
-        tone="deep"
+        tone="night"
         size="lg"
-        eyebrow="Página pilar · Fundamentos"
         title="O que é HUMINT."
         lede="Inteligência humana (Human Intelligence) é a disciplina de coleta de informações através de fontes humanas. Este guia explica o que é, como funciona, quem usa e por que importa."
         breadcrumbs={[{ label: "Fundamentos", href: "/humint" }]}
       >
         <div className="flex flex-wrap gap-3">
-          <Link href="#definicao" className="btn btn-primary btn-lg">
+          <Link href="#definicao" className="btn btn-signal btn-lg">
             Começar a leitura
             <ArrowRight aria-hidden />
           </Link>
-          <Link href="/artigos?categoria=fundamentos-de-humint" className="btn btn-outline btn-lg">
+          <Link href="/artigos?categoria=fundamentos-de-humint" className="btn btn-line btn-lg">
             Artigos de fundamentos
           </Link>
         </div>
       </PageHeader>
 
-      <div className="bg-paper">
-        <div className="container-editorial grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-12">
+      <div className="bg-snow text-ink">
+        <div className="container-site grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-14">
           <aside className="hidden lg:col-span-3 lg:block" aria-label="Neste guia">
             <nav className="sticky top-28">
-              <p className="eyebrow mb-4">Neste guia</p>
-              <ol className="border-t border-ink">
-                {TOC.map((item, i) => (
+              <p className="mb-3 font-bold">Neste guia</p>
+              <ol className="border-t-2 border-ink">
+                {TOC.map((item) => (
                   <li key={item.id} className="border-b border-line">
-                    <Link
-                      href={`#${item.id}`}
-                      className="grid grid-cols-[2rem_1fr] gap-2 py-3 text-sm text-ink-muted transition-colors hover:text-ink"
-                    >
-                      <span className="font-mono text-[0.6875rem] tracking-[0.12em]">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
+                    <Link href={`#${item.id}`} className="block py-3 text-ink-2 transition-colors hover:text-signal">
                       {item.label}
                     </Link>
                   </li>
@@ -147,7 +140,7 @@ export default function HumintPage() {
             </nav>
           </aside>
 
-          <article className="article-prose min-w-0 lg:col-span-8 xl:col-span-7">
+          <article className="prose-read min-w-0 lg:col-span-8 lg:col-start-5">
             <h2 id="definicao">Definição</h2>
             <p>
               <strong>HUMINT</strong> (Human Intelligence, ou Inteligência Humana) é uma das disciplinas de coleta de
@@ -220,32 +213,20 @@ export default function HumintPage() {
         </div>
       </div>
 
-      <section id="temas" className="border-t border-line bg-paper-strong" aria-labelledby="temas-title">
-        <div className="container-editorial py-16 md:py-20">
-          <p className="kicker">Explore por tema</p>
-          <h2 id="temas-title" className="mt-5 font-display text-display-lg font-medium text-ink">
+      <section id="temas" className="bg-snow-2 text-ink" aria-labelledby="temas-title">
+        <div className="container-site py-20 md:py-24">
+          <h2 id="temas-title" className="font-expanded text-title font-extrabold">
             As dimensões da inteligência humana.
           </h2>
-          <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {pillarTopics.map((topic, i) => (
-              <li key={topic.href} className="bg-paper-strong">
-                <Link
-                  href={topic.href}
-                  className="group flex h-full flex-col p-6 transition-colors hover:bg-paper md:p-7"
-                >
-                  <span className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-muted">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="mt-3 font-display text-display-sm font-medium text-ink transition-colors group-hover:text-brand">
+          <ul className="mt-12 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
+            {pillarTopics.map((topic) => (
+              <li key={topic.href} className="border-t-2 border-ink">
+                <Link href={topic.href} className="group flex h-full flex-col py-6">
+                  <span className="font-expanded text-heading font-extrabold transition-colors group-hover:text-signal">
                     {topic.title}
                   </span>
-                  <span className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-ink-muted">
-                    {topic.description}
-                  </span>
-                  <ArrowRight
-                    className="mt-5 h-4 w-4 text-ink transition-transform group-hover:translate-x-1"
-                    aria-hidden
-                  />
+                  <span className="mt-2 flex-1 text-lg leading-relaxed text-ink-2">{topic.description}</span>
+                  <ArrowRight className="mt-5 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />
                 </Link>
               </li>
             ))}
@@ -253,27 +234,19 @@ export default function HumintPage() {
         </div>
       </section>
 
-      <section id="faq" className="border-t border-line bg-paper" aria-labelledby="faq-title">
-        <div className="container-editorial grid gap-10 py-16 md:py-20 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-4">
-            <p className="kicker">Perguntas frequentes</p>
-            <h2 id="faq-title" className="mt-5 font-display text-display-lg font-medium text-ink">
-              O essencial, em poucas linhas.
-            </h2>
-          </div>
-          <div className="border-t border-ink lg:col-span-8">
+      <section id="faq" className="bg-snow text-ink" aria-labelledby="faq-title">
+        <div className="container-site grid gap-12 py-20 md:py-24 lg:grid-cols-12 lg:gap-14">
+          <h2 id="faq-title" className="font-expanded text-title font-extrabold lg:col-span-4">
+            Perguntas frequentes.
+          </h2>
+          <div className="border-t-2 border-ink lg:col-span-8">
             {faqs.map((faq, i) => (
               <details key={faq.question} className="group border-b border-line" open={i === 0}>
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
-                  <span className="font-display text-xl font-medium text-ink transition-colors group-hover:text-brand">
-                    {faq.question}
-                  </span>
-                  <span
-                    aria-hidden
-                    className="relative mt-2 h-3 w-3 shrink-0 before:absolute before:inset-x-0 before:top-1/2 before:h-px before:bg-ink after:absolute after:inset-y-0 after:left-1/2 after:w-px after:bg-ink after:transition-transform group-open:after:scale-y-0"
-                  />
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg font-bold transition-colors group-hover:text-signal">{faq.question}</span>
+                  <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
                 </summary>
-                <p className="max-w-[62ch] pb-6 text-[0.9375rem] leading-relaxed text-ink-soft">{faq.answer}</p>
+                <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{faq.answer}</p>
               </details>
             ))}
           </div>
@@ -285,14 +258,11 @@ export default function HumintPage() {
         description="Conteúdo rigoroso, sem sensacionalismo. Na Academy, os fundamentos deste guia viram prática estruturada."
       />
 
-      <section className="bg-paper" aria-labelledby="news-title">
-        <div className="container-editorial grid gap-8 py-14 md:py-16 lg:grid-cols-12 lg:items-center lg:gap-12">
-          <div className="lg:col-span-6">
-            <p className="kicker">Newsletter</p>
-            <h2 id="news-title" className="mt-4 font-display text-display-md font-medium text-ink">
-              Receba os próximos guias por e-mail.
-            </h2>
-          </div>
+      <section className="bg-snow text-ink" aria-labelledby="news-title">
+        <div className="container-site grid gap-8 border-t border-line py-16 lg:grid-cols-12 lg:items-center lg:gap-16">
+          <h2 id="news-title" className="font-expanded text-heading font-extrabold lg:col-span-6">
+            Receba os próximos guias por e-mail.
+          </h2>
           <div className="lg:col-span-6">
             <NewsletterInline />
           </div>

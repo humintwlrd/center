@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft, ArrowRight, Search } from "lucide-react"
 import { ArticleCard } from "@/components/site/article-card"
 import { AcademyCta } from "@/components/site/academy-cta"
-import { NewsletterInline } from "@/components/site/newsletter-inline"
 import { PageHeader } from "@/components/site/page-header"
-import { ARTICLES, articleMatchesCategory, articleMatchesTag } from "@/lib/content/articles"
+import { ARTICLES, articleMatchesCategory, articleMatchesTag, isInstagramImage } from "@/lib/content/articles"
 import { getCategoryBySlug } from "@/lib/content/categories"
 import { ARTICLE_CATEGORIES } from "@/lib/site"
 import { pageMetadata } from "@/lib/seo"
@@ -85,7 +85,6 @@ export default async function ArtigosPage({ searchParams }: Props) {
         ? `Tag: ${tag}`
         : "Mais recentes"
 
-  const trending = allSorted.slice(0, 6)
 
   const breadcrumbs = [
     { label: "Artigos", href: "/artigos" },
@@ -94,173 +93,137 @@ export default async function ArtigosPage({ searchParams }: Props) {
 
   return (
     <>
-      <PageHeader
-        eyebrow={cat || tag ? "Tema" : "Arquivo editorial"}
-        title={heading}
-        lede={lede}
-        breadcrumbs={breadcrumbs}
-      >
+      <PageHeader title={heading} lede={lede} breadcrumbs={breadcrumbs}>
         <form
           id="busca"
           action="/artigos"
           method="get"
           role="search"
-          className="flex max-w-xl items-stretch border border-line-strong bg-paper-strong focus-within:border-ink"
+          className="flex max-w-xl items-stretch gap-2"
         >
           {cat && <input type="hidden" name="categoria" value={cat} />}
           {tag && <input type="hidden" name="tag" value={tag} />}
           <label htmlFor="q" className="sr-only">
             Buscar artigos
           </label>
-          <span className="flex items-center pl-4 text-ink-muted" aria-hidden>
-            <Search className="h-4 w-4" />
-          </span>
           <input
             type="search"
             id="q"
             name="q"
             defaultValue={rawQ}
-            placeholder="Buscar por tema, caso ou método…"
-            className="h-12 w-0 min-w-0 flex-1 bg-transparent px-3 text-[0.9375rem] text-ink outline-none placeholder:text-ink-muted"
+            placeholder="Buscar por caso, tema ou método"
+            className="field h-12 w-0 min-w-0 flex-1"
           />
-          <button type="submit" className="btn btn-ink shrink-0 px-4 sm:px-5">
-            Buscar
+          <button type="submit" className="btn btn-solid h-12 shrink-0">
+            <Search aria-hidden />
+            <span className="sr-only sm:not-sr-only">Buscar</span>
           </button>
         </form>
       </PageHeader>
 
-      {/* Abas de categoria */}
-      <nav
-        aria-label="Categorias"
-        className="sticky top-16 z-30 border-b border-line bg-paper/95 backdrop-blur-md lg:top-[72px]"
-      >
-        <div className="container-editorial">
-          <ul className="-mx-1 flex items-stretch gap-6 overflow-x-auto px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <nav aria-label="Categorias" className="sticky top-16 z-30 border-y border-line bg-snow/95 backdrop-blur-md lg:top-[72px]">
+        <div className="container-site">
+          <ul className="scroller -mx-1 flex items-stretch gap-7 overflow-x-auto px-1">
             <CategoryTab label="Todas" href="/artigos" active={!cat && !tag} />
             {ARTICLE_CATEGORIES.map((c) => (
-              <CategoryTab
-                key={c.slug}
-                label={c.label}
-                href={`/artigos?categoria=${c.slug}`}
-                active={cat === c.slug}
-              />
+              <CategoryTab key={c.slug} label={c.label} href={`/artigos?categoria=${c.slug}`} active={cat === c.slug} />
             ))}
           </ul>
         </div>
       </nav>
 
-      <section className="bg-paper">
-        <div className="container-editorial py-12 md:py-16">
-          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-8">
-              <div className="rule-top mb-10 flex items-baseline justify-between gap-4 pt-4">
-                <h2 className="font-display text-display-sm font-medium">{resultLabel}</h2>
-                <p className="shrink-0 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
-                  {filtered.length} {filtered.length === 1 ? "texto" : "textos"}
-                </p>
-              </div>
-
-              {filtered.length === 0 ? (
-                <div className="border border-line bg-paper-strong p-8 md:p-10">
-                  <p className="kicker">Nada encontrado</p>
-                  <p className="mt-4 font-display text-display-sm font-medium text-ink">
-                    Nenhum texto corresponde a essa busca.
-                  </p>
-                  <p className="mt-3 text-ink-muted">
-                    Tente outro termo, escolha um tema acima ou volte ao arquivo completo.
-                  </p>
-                  <Link href="/artigos" className="btn btn-outline mt-6">
-                    Limpar filtros
-                  </Link>
-                </div>
-              ) : (
-                <>
-                  {isBase && lead && (
-                    <ArticleCard
-                      article={lead}
-                      variant="lead"
-                      priority
-                      className="mb-12 border-b border-line pb-12"
-                    />
-                  )}
-
-                  <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
-                    {gridArticles.map((a, index) => (
-                      <ArticleCard key={a.slug} article={a} priority={!isBase && index < 2} />
-                    ))}
-                  </div>
-
-                  {totalPages > 1 && (
-                    <nav
-                      aria-label="Paginação de artigos"
-                      className="mt-16 flex items-center justify-between gap-3 border-t border-ink pt-6"
-                    >
-                      {currentPage > 1 ? (
-                        <Link
-                          href={articlesPageHref({ cat, tag, q: rawQ, page: currentPage - 1 })}
-                          className="btn btn-outline btn-sm"
-                          rel="prev"
-                        >
-                          <ArrowLeft aria-hidden />
-                          Anterior
-                        </Link>
-                      ) : (
-                        <span className="btn btn-outline btn-sm pointer-events-none opacity-30" aria-hidden>
-                          Anterior
-                        </span>
-                      )}
-                      <span className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
-                        Página {currentPage} de {totalPages}
-                      </span>
-                      {currentPage < totalPages ? (
-                        <Link
-                          href={articlesPageHref({ cat, tag, q: rawQ, page: currentPage + 1 })}
-                          className="btn btn-outline btn-sm"
-                          rel="next"
-                        >
-                          Próxima
-                          <ArrowRight aria-hidden />
-                        </Link>
-                      ) : (
-                        <span className="btn btn-outline btn-sm pointer-events-none opacity-30" aria-hidden>
-                          Próxima
-                        </span>
-                      )}
-                    </nav>
-                  )}
-                </>
-              )}
-            </div>
-
-            <aside className="lg:col-span-4">
-              <div className="flex flex-col gap-12 lg:sticky lg:top-40">
-                <div className="border border-line bg-paper-strong p-6">
-                  <p className="kicker">Newsletter</p>
-                  <p className="mt-3 font-display text-xl font-medium leading-snug text-ink">
-                    Receba os próximos artigos por e-mail.
-                  </p>
-                  <div className="mt-5">
-                    <NewsletterInline />
-                  </div>
-                </div>
-
-                <div>
-                  <h2 className="rule-top mb-4 pt-4 font-display text-display-sm font-medium">
-                    Assuntos em alta
-                  </h2>
-                  <div className="flex flex-col">
-                    {trending.map((a) => (
-                      <ArticleCard key={a.slug} article={a} variant="compact" />
-                    ))}
-                  </div>
-                </div>
-
-                <AcademyCta variant="card" />
-              </div>
-            </aside>
+      <section className="bg-snow text-ink" aria-labelledby="resultados-title">
+        <div className="container-site py-14 md:py-20">
+          <div className="mb-12 flex items-baseline justify-between gap-4">
+            <h2 id="resultados-title" className="font-expanded text-heading font-extrabold">
+              {resultLabel}
+            </h2>
+            <p className="tabular shrink-0 text-ink-3">
+              {filtered.length} {filtered.length === 1 ? "texto" : "textos"}
+            </p>
           </div>
+
+          {filtered.length === 0 ? (
+            <div className="max-w-2xl bg-snow-2 p-8 md:p-10">
+              <p className="font-expanded text-heading font-extrabold">Nenhum texto corresponde a essa busca.</p>
+              <p className="mt-3 text-lg text-ink-2">Tente outro termo, escolha um tema acima ou volte ao arquivo.</p>
+              <Link href="/artigos" className="btn btn-solid mt-6">
+                Limpar filtros
+              </Link>
+            </div>
+          ) : (
+            <>
+              {isBase && lead && (
+                <article className="group mb-16 grid gap-8 border-b border-line pb-16 md:grid-cols-12 md:items-center md:gap-12">
+                  <Link
+                    href={`/artigos/${lead.slug}`}
+                    tabIndex={-1}
+                    aria-hidden
+                    className="relative block aspect-[4/3] overflow-hidden bg-snow-2 md:col-span-7"
+                  >
+                    <Image
+                      src={lead.heroImage || "/placeholder.svg"}
+                      alt=""
+                      fill
+                      priority
+                      sizes="(min-width: 768px) 760px, 100vw"
+                      className="media-zoom object-cover"
+                      style={{ objectPosition: isInstagramImage(lead.heroImage) ? "center 38%" : "center" }}
+                    />
+                  </Link>
+                  <div className="md:col-span-5">
+                    <h3 className="font-expanded text-title font-extrabold">
+                      <Link href={`/artigos/${lead.slug}`} className="transition-colors group-hover:text-signal">
+                        {lead.title}
+                      </Link>
+                    </h3>
+                    <p className="mt-5 text-lg leading-relaxed text-ink-2 line-clamp-4">{lead.description}</p>
+                    <p className="mt-5 text-sm text-ink-3">
+                      {lead.categoryLabel} · {lead.readingTime} de leitura
+                    </p>
+                  </div>
+                </article>
+              )}
+
+              <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+                {gridArticles.map((a, index) => (
+                  <ArticleCard key={a.slug} article={a} priority={!isBase && index < 3} />
+                ))}
+              </div>
+
+              {totalPages > 1 && (
+                <nav aria-label="Paginação de artigos" className="mt-20 flex items-center justify-between gap-3 border-t-2 border-ink pt-8">
+                  {currentPage > 1 ? (
+                    <Link href={articlesPageHref({ cat, tag, q: rawQ, page: currentPage - 1 })} className="btn btn-line" rel="prev">
+                      <ArrowLeft aria-hidden />
+                      Anterior
+                    </Link>
+                  ) : (
+                    <span className="btn btn-line pointer-events-none opacity-30" aria-hidden>
+                      Anterior
+                    </span>
+                  )}
+                  <span className="tabular text-ink-3">
+                    Página {currentPage} de {totalPages}
+                  </span>
+                  {currentPage < totalPages ? (
+                    <Link href={articlesPageHref({ cat, tag, q: rawQ, page: currentPage + 1 })} className="btn btn-line" rel="next">
+                      Próxima
+                      <ArrowRight aria-hidden />
+                    </Link>
+                  ) : (
+                    <span className="btn btn-line pointer-events-none opacity-30" aria-hidden>
+                      Próxima
+                    </span>
+                  )}
+                </nav>
+              )}
+            </>
+          )}
         </div>
       </section>
+
+      <AcademyCta />
     </>
   )
 }
@@ -292,11 +255,9 @@ function CategoryTab({ label, href, active }: { label: string; href: string; act
         href={href}
         aria-current={active ? "page" : undefined}
         className={cn(
-          "relative flex h-12 items-center whitespace-nowrap text-sm font-medium transition-colors",
-          "after:absolute after:inset-x-0 after:bottom-0 after:h-0.5",
-          active
-            ? "text-ink after:bg-brand"
-            : "text-ink-muted hover:text-ink after:bg-transparent hover:after:bg-line-strong",
+          "relative flex h-14 items-center whitespace-nowrap font-semibold transition-colors",
+          "after:absolute after:inset-x-0 after:bottom-0 after:h-[3px]",
+          active ? "text-ink after:bg-signal" : "text-ink-3 hover:text-ink after:bg-transparent",
         )}
       >
         {label}

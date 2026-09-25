@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ChevronRight } from "lucide-react"
 import { breadcrumbSchema } from "@/lib/schema"
 import { cn } from "@/lib/utils"
 import { JsonLd } from "./json-ld"
@@ -6,47 +7,32 @@ import { JsonLd } from "./json-ld"
 type Crumb = { label: string; href: string }
 
 type BreadcrumbsProps = {
-  /** Itens da trilha, sem "Início" (adicionado aqui). */
   items: Crumb[]
-  tone?: "paper" | "deep"
-  /** Desliga o JSON-LD quando a página já publica o próprio BreadcrumbList. */
+  tone?: "snow" | "night"
   schema?: boolean
 }
 
-export function Breadcrumbs({ items, tone = "paper", schema = true }: BreadcrumbsProps) {
-  const rest = items.filter((c) => c.href !== "/")
-  const full: Crumb[] = [{ label: "Início", href: "/" }, ...rest]
-  const deep = tone === "deep"
-
+export function Breadcrumbs({ items, tone = "snow", schema = true }: BreadcrumbsProps) {
+  const full: Crumb[] = [{ label: "Início", href: "/" }, ...items.filter((c) => c.href !== "/")]
+  const night = tone === "night"
   return (
     <>
-      <nav
-        aria-label="Trilha de navegação"
-        className={cn(
-          "font-mono text-[0.6875rem] uppercase tracking-[0.14em]",
-          deep ? "text-fog-muted" : "text-ink-muted",
-        )}
-      >
-        <ol className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+      <nav aria-label="Trilha de navegação" className={cn("text-sm", night ? "text-mist-2" : "text-ink-3")}>
+        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
           {full.map((c, i) => {
             const isLast = i === full.length - 1
             return (
-              <li key={c.href + i} className="flex items-center gap-2.5">
+              <li key={c.href + i} className="flex items-center gap-2">
                 {isLast ? (
-                  <span aria-current="page" className={cn("line-clamp-1", deep ? "text-fog" : "text-ink")}>
+                  <span aria-current="page" className={cn("line-clamp-1 font-semibold", night ? "text-mist" : "text-ink-2")}>
                     {c.label}
                   </span>
                 ) : (
                   <>
-                    <Link
-                      href={c.href}
-                      className={cn("transition-colors", deep ? "hover:text-fog" : "hover:text-ink")}
-                    >
+                    <Link href={c.href} className={cn("transition-colors", night ? "hover:text-white" : "hover:text-ink")}>
                       {c.label}
                     </Link>
-                    <span aria-hidden className={deep ? "text-line-dark" : "text-line-strong"}>
-                      /
-                    </span>
+                    <ChevronRight className="h-3.5 w-3.5 opacity-70" aria-hidden />
                   </>
                 )}
               </li>

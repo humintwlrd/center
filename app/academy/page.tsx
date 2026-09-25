@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react"
 import { ShopHero } from "@/components/shop/shop-hero"
 import { ProductGrid } from "@/components/shop/product-grid"
 import { ProductFeature } from "@/components/shop/product-feature"
-import { SectionHeading } from "@/components/site/section-heading"
 import { PRODUCTS } from "@/lib/products"
 
 export const metadata: Metadata = {
@@ -14,8 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/academy" },
   openGraph: {
     title: "Academy — Mundo da HUMINT",
-    description:
-      "Cursos de inteligência humana aplicada e engenharia social. Pagamento via Cartão e Pix.",
+    description: "Cursos de inteligência humana aplicada e engenharia social. Pagamento via Cartão e Pix.",
     url: "/academy",
   },
 }
@@ -26,55 +24,42 @@ const EBOOKS = PRODUCTS.filter((p) => p.tipo.toLowerCase().includes("book"))
 export default function AcademyPage() {
   return (
     <>
-      <ShopHero courses={COURSES.length} ebooks={EBOOKS.length} />
+      <ShopHero />
 
-      <section aria-labelledby="cursos-title" className="container-editorial py-14 md:py-20">
-        <SectionHeading
-          id="cursos-title"
-          eyebrow="Cursos"
-          title="Formações completas"
-          description="Programas estruturados para dominar a inteligência humana de ponta a ponta."
-        />
-        <div className="flex flex-col gap-6">
+      <section aria-label="Cursos" className="night">
+        <div className="container-site flex flex-col gap-8 py-16 md:gap-10 md:py-24">
           {COURSES.map((product, i) => (
-            <ProductFeature
-              key={product.id}
-              product={product}
-              tone={product.destaque ? "deep" : "paper"}
-              priority={i === 0}
-            />
+            <ProductFeature key={product.id} product={product} tone="night" priority={i === 0} />
           ))}
         </div>
       </section>
 
-      <div className="border-t border-line bg-paper-strong">
+      <div className="bg-snow text-ink">
         <ProductGrid
           id="dossies-title"
-          eyebrow="Dossiês"
-          title="E-books individuais"
-          subtitle="Cada dossiê é um módulo do Acervo Tático, também disponível avulso."
+          title="Dossiês avulsos"
+          subtitle="Cada dossiê é um módulo do Acervo Tático, também vendido separadamente."
           items={EBOOKS}
         />
       </div>
 
-      <section className="border-t border-line bg-paper" aria-labelledby="duvidas-title">
-        <div className="container-editorial grid gap-8 py-14 md:grid-cols-12 md:items-end md:py-16">
+      <section className="bg-snow-2 text-ink" aria-labelledby="duvidas-title">
+        <div className="container-site grid gap-8 py-16 md:grid-cols-12 md:items-end md:py-20">
           <div className="md:col-span-7">
-            <p className="kicker">Suporte ao aluno</p>
-            <h2 id="duvidas-title" className="mt-4 font-display text-display-md font-medium text-ink">
+            <h2 id="duvidas-title" className="font-expanded text-heading font-extrabold">
               Dúvidas sobre acesso, pagamento ou conteúdo?
             </h2>
-            <p className="mt-3 max-w-[56ch] text-[0.9375rem] leading-relaxed text-ink-muted">
-              Os links de compra abrem o checkout seguro da HeroSpark em nova aba. O acesso chega no e-mail usado
-              na compra; se algo não chegar, fale com a gente.
+            <p className="mt-3 max-w-[58ch] text-lg leading-relaxed text-ink-2">
+              A compra abre o checkout seguro da HeroSpark em nova aba. O acesso chega no e-mail usado na compra; se
+              algo não chegar, fale com a gente.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 md:col-span-5 md:justify-end">
-            <Link href="/suporte" className="btn btn-ink">
+            <Link href="/suporte" className="btn btn-solid">
               Falar com o suporte
               <ArrowRight aria-hidden />
             </Link>
-            <Link href="/comoaproveitar" className="btn btn-outline">
+            <Link href="/comoaproveitar" className="btn btn-line">
               Como aproveitar
             </Link>
           </div>

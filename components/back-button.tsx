@@ -23,7 +23,7 @@ export function BackButton({ variant = "compact", label }: BackButtonProps) {
       <button
         type="button"
         onClick={goBack}
-        className="btn btn-primary btn-lg"
+        className="btn btn-signal btn-lg"
       >
         <ArrowLeft aria-hidden />
         {label ?? "Voltar para a área de membros"}
@@ -35,7 +35,7 @@ export function BackButton({ variant = "compact", label }: BackButtonProps) {
     <button
       type="button"
       onClick={goBack}
-      className="inline-flex items-center gap-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-tone-muted transition-colors hover:text-tone"
+      className="inline-flex items-center gap-2 font-semibold text-tone-2 transition-colors hover:text-tone"
     >
       <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
       {label ?? "Voltar"}

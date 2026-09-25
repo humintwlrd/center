@@ -7,31 +7,26 @@ import { cn } from "@/lib/utils"
 const FLAGSHIP = PRODUCTS.find((p) => p.destaque) ?? PRODUCTS[0]
 
 type AcademyCtaProps = {
-  /**
-   * band: faixa larga com capa do produto destaque (fim de páginas).
-   * card: bloco compacto para colunas laterais.
-   */
   variant?: "band" | "card"
   title?: string
   description?: string
   className?: string
 }
 
-/** Chamada única para a Academy, reutilizada em todo o site. */
+/** Chamada para o Acervo Tático, reutilizada em todo o site. */
 export function AcademyCta({
   variant = "band",
-  title = "Onde a teoria vira operação.",
-  description = "Cursos e dossiês de comportamento, comunicação, elicitação, contrainteligência e OSINT. Método para aplicar de verdade.",
+  title = "Aprenda a ler pessoas com o método inteiro.",
+  description = "Seis dossiês e um núcleo de ferramentas operacionais: comportamento, comunicação, linguagem não verbal, elicitação, contrainteligência e fontes.",
   className,
 }: AcademyCtaProps) {
   if (variant === "card") {
     return (
-      <aside className={cn("surface-deep p-6", className)} aria-label="Mundo da HUMINT Academy">
-        <p className="kicker">Academy</p>
-        <p className="mt-4 font-display text-display-sm font-medium text-fog">{title}</p>
-        <p className="mt-3 text-sm leading-relaxed text-fog-muted">{description}</p>
-        <Link href="/academy" className="btn btn-primary mt-6 w-full">
-          Conhecer a Academy
+      <aside className={cn("night p-7", className)} aria-label={FLAGSHIP.nome}>
+        <p className="font-expanded text-heading font-extrabold">{title}</p>
+        <p className="mt-3 text-[0.9375rem] leading-relaxed text-mist">{description}</p>
+        <Link href={`/academy/${FLAGSHIP.id}`} className="btn btn-signal mt-6 w-full">
+          Ver o Acervo Tático
           <ArrowRight aria-hidden />
         </Link>
       </aside>
@@ -39,50 +34,30 @@ export function AcademyCta({
   }
 
   return (
-    <section className={cn("surface-deep", className)} aria-labelledby="academy-cta-title">
-      <div className="container-editorial grid gap-10 py-14 md:py-20 lg:grid-cols-12 lg:items-center lg:gap-12">
+    <section className={cn("night overflow-hidden", className)} aria-labelledby="academy-cta-title">
+      <div className="container-site grid items-center gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
-          <p className="kicker">Mundo da HUMINT Academy</p>
-          <h2
-            id="academy-cta-title"
-            className="mt-5 font-display text-display-lg font-medium text-fog"
-          >
+          <h2 id="academy-cta-title" className="font-expanded text-display font-extrabold">
             {title}
           </h2>
-          <p className="mt-5 max-w-[56ch] text-lede text-fog-muted">{description}</p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Link href="/academy" className="btn btn-primary btn-lg">
-              Conhecer a Academy
+          <p className="mt-6 max-w-[54ch] text-lede text-mist">{description}</p>
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <Link href={`/academy/${FLAGSHIP.id}`} className="btn btn-signal btn-lg">
+              Conhecer o Acervo Tático
               <ArrowRight aria-hidden />
             </Link>
-            <Link href={`/academy/${FLAGSHIP.id}`} className="btn btn-outline btn-lg">
-              Ver o {FLAGSHIP.nome.split(" de ")[0]}
-            </Link>
+            <p className="tabular text-mist">
+              {FLAGSHIP.parcelado} <span className="text-mist-2">· Cartão ou Pix</span>
+            </p>
           </div>
         </div>
-
         <Link
           href={`/academy/${FLAGSHIP.id}`}
-          className="group grid grid-cols-[112px_1fr] items-center gap-5 border border-line-dark bg-deep-2 p-4 transition-colors hover:border-fog-muted sm:grid-cols-[140px_1fr] lg:col-span-5"
+          tabIndex={-1}
+          aria-hidden
+          className="group relative mx-auto block aspect-[3/4] w-full max-w-sm overflow-hidden lg:col-span-5 lg:max-w-none"
         >
-          <div className="relative aspect-[3/4] overflow-hidden bg-deep-3">
-            <Image
-              src={FLAGSHIP.image}
-              alt={FLAGSHIP.imageAlt}
-              fill
-              sizes="140px"
-              className="media-zoom object-cover"
-            />
-          </div>
-          <div className="min-w-0">
-            {FLAGSHIP.badge && <p className="eyebrow-brand">{FLAGSHIP.badge}</p>}
-            <p className="mt-2 font-display text-xl font-medium leading-snug text-fog">
-              {FLAGSHIP.nome}
-            </p>
-            <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fog-muted">
-              {FLAGSHIP.parcelado} · Cartão · Pix
-            </p>
-          </div>
+          <Image src={FLAGSHIP.image} alt="" fill sizes="(min-width: 1024px) 480px, 80vw" className="media-zoom object-cover" />
         </Link>
       </div>
     </section>

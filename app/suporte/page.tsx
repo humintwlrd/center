@@ -29,21 +29,19 @@ export default function SuportePage() {
   return (
     <>
       <PageHeader
-        eyebrow="Suporte ao aluno"
         title="Como podemos ajudar?"
-        lede="Envie sua solicitação e a equipe responderá no e-mail informado. Quanto mais claro o assunto, mais rápida a resposta."
+        lede="Envie sua solicitação e a equipe responde no e-mail informado. Quanto mais claro o assunto, mais rápida a resposta."
         breadcrumbs={[{ label: "Suporte", href: "/suporte" }]}
       />
-
-      <section className="border-b border-line bg-paper-strong" aria-label="Formulário de suporte">
-        <div className="container-editorial grid gap-12 py-16 md:py-20 lg:grid-cols-12 lg:gap-12">
+      <section className="border-t border-line bg-snow text-ink" aria-label="Formulário de suporte">
+        <div className="container-site grid gap-14 py-16 md:py-20 lg:grid-cols-12 lg:gap-16">
           <aside className="lg:col-span-4">
-            <h2 className="rule-top pt-4 font-display text-display-sm font-medium text-ink">Ajuda rápida</h2>
-            <dl className="mt-4">
+            <h2 className="font-expanded text-heading font-extrabold">Ajuda rápida</h2>
+            <dl className="mt-6">
               {HELP.map((f) => (
-                <div key={f.q} className="border-b border-line py-5">
-                  <dt className="font-medium text-ink">{f.q}</dt>
-                  <dd className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink-muted">{f.a}</dd>
+                <div key={f.q} className="border-t border-line py-5">
+                  <dt className="font-bold">{f.q}</dt>
+                  <dd className="mt-1.5 leading-relaxed text-ink-2">{f.a}</dd>
                 </div>
               ))}
             </dl>

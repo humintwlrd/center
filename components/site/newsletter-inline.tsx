@@ -6,11 +6,12 @@ import { track } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 
 type Props = {
+  /** Mantido por compatibilidade; o tom vem da superfície (night). */
   variant?: "light" | "dark"
   placeholder?: string
 }
 
-export function NewsletterInline({ variant = "light", placeholder = "seu@email.com" }: Props) {
+export function NewsletterInline({ placeholder = "seu@email.com" }: Props) {
   const emailId = useId()
   const msgId = useId()
   const [email, setEmail] = useState("")
@@ -39,7 +40,6 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
     }
   }
 
-  const isDark = variant === "dark"
 
   return (
     <form onSubmit={onSubmit} className="w-full" aria-label="Assinar newsletter">
@@ -58,17 +58,12 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
           aria-invalid={status === "error"}
           aria-describedby={message ? msgId : undefined}
           disabled={status === "loading" || status === "success"}
-          className={cn(
-            "h-12 w-full min-w-0 flex-1 border px-4 sm:w-0 text-[0.9375rem] outline-none transition-colors",
-            isDark
-              ? "border-line-dark-strong bg-deep-2 text-fog placeholder:text-fog-muted focus:border-fog"
-              : "border-line-strong bg-paper-strong text-ink placeholder:text-ink-muted focus:border-ink",
-          )}
+          className="field h-12 w-full min-w-0 flex-1 sm:w-0"
         />
         <button
           type="submit"
           disabled={status === "loading" || status === "success"}
-          className="btn btn-primary h-12"
+          className="btn btn-signal h-12 shrink-0"
         >
           {status === "loading" ? "Enviando…" : status === "success" ? "Inscrito" : "Assinar"}
         </button>
@@ -79,23 +74,17 @@ export function NewsletterInline({ variant = "light", placeholder = "seu@email.c
           role={status === "error" ? "alert" : "status"}
           className={cn(
             "mt-2 text-sm",
-            status === "error"
-              ? isDark
-                ? "text-alert-bright"
-                : "text-alert"
-              : isDark
-                ? "text-brand-bright"
-                : "text-brand",
+            status === "error" ? "text-signal" : "text-tone",
           )}
         >
           {message}
         </p>
       )}
-      <p className={cn("mt-3 text-xs leading-relaxed", isDark ? "text-fog-muted" : "text-ink-muted")}>
+      <p className="mt-3 text-sm leading-relaxed text-tone-3">
         Ao assinar, você concorda com nossa{" "}
         <Link
           href="/politica-de-privacidade"
-          className={cn("underline underline-offset-2", isDark ? "text-fog" : "text-ink-soft")}
+          className="text-tone-2 underline"
         >
           Política de Privacidade
         </Link>

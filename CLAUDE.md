@@ -33,13 +33,13 @@ app/
     [slug]/page.tsx        # detalhe do produto (genérico) + branch do Acervo
   artigos/                 # blog/artigos (inclui os importados do Instagram)
   categorias/ metodos/ humint/ recursos/ sobre/ contato/ formacao/ livro/
-  lp/                      # landing "Como Avaliar Pessoas" (R$49) — NÃO MEXER sem pedir
+  lp/                      # landing "Como Avaliar Pessoas" (R$49) — só mexer com pedido explícito
   pv/                      # landing de vendas do Acervo (header/footer próprios, Utmify)
   error.tsx not-found.tsx  # páginas de erro no padrão visual
   api/                     # rotas de form (contato, etc.)
 components/
   site/                    # header, footer, page-header, section-heading, split-section,
-                           # academy-cta, article-card, breadcrumbs, formulários
+                           # academy-cta, article-card, breadcrumbs, declassify, formulários
   shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
                            # acervo-detail (página de vendas rica do Acervo)
   landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, depoimentos...)
@@ -61,40 +61,51 @@ scripts/
   generate-instagram-articles.mjs   # JSON -> instagram-articles.generated.ts
 ```
 
-## Design system (em `app/globals.css`)
+## Design system (em `app/globals.css`; registro completo em `DESIGN.md`)
 
-Estética editorial: **preto/branco + acento verde**, títulos em **serifada**, alinhado à
-esquerda, **cantos retos**. Vermelho **só** para alerta (carimbos, erros). Evitar "AI slop":
-nada de gradiente decorativo, centralização excessiva, cards com ícone em bolha, sombras,
-cantos arredondados ou fonte Inter.
+Mundo visual definido com a skill **impeccable** (contrato em `.impeccable/surfaces/app-page-tsx.md`,
+produto em `PRODUCT.md`). Tese: **uma escola de inteligência apresentada como o site de uma agência**:
+preto, branco e um vermelho de operação, tipografia estendida e pesada, casos reais como capítulos.
+Referências: MasterClass "The Art of Intelligence", CIA.gov (2021) e SPYSCAPE. **Não** é portal
+editorial: nada de filetes decorativos, rótulos acima de títulos ou colunas de jornal.
 
-Fontes (via `next/font` em `app/layout.tsx`):
-- `font-display` / `font-serif` → **Newsreader** (títulos e texto de artigo)
-- `font-sans` → **Schibsted Grotesk** (UI e texto corrido)
-- `font-mono` → **IBM Plex Mono** (rótulos, metadados)
+Regras que não se negociam:
+- **Uma família**: Archivo variável (`next/font`, eixo `wdth`). Títulos com `font-expanded`
+  (largura 118–125%) e `font-extrabold`; texto corrido em largura normal. Sem serifada, sem mono.
+- **Um acento**: `signal` (#e5252a), reservado a ação (CTA de compra, foco, link ativo) e à tarja liberada.
+- **Cantos retos** (radius 0), sem sombras, sem gradiente decorativo (só o escurecimento da foto do hero).
+- **Proibido** (craft floor da skill): eyebrow/kicker acima de título, numeração de seção decorativa,
+  borda lateral colorida (>1px) em citação/callout, mono “de fantasia”, cards com ícone em bolha,
+  template “número grande + legenda”, fontes Inter/Newsreader/IBM Plex/Space Grotesk/Fraunces.
 
-Tokens (Tailwind v4 gera `bg-*`, `text-*`, `border-*` com suporte a `/opacidade`):
-- Marca: `brand` #15803d, `brand-hover`, `brand-press`, `brand-soft`, `brand-bright` #4ade80 (acento sobre escuro), `on-brand`
-- Papel: `paper` #f6f6f3, `paper-strong` #fff, `paper-deep` · Tinta: `ink`, `ink-soft`, `ink-muted`
-- Filetes: `line`, `line-strong` (claro) · `line-dark`, `line-dark-strong` (escuro)
-- Escuro: `deep` #0a0a0a, `deep-2`, `deep-3` · texto claro `fog`, `fog-muted`
-- Alerta: `alert`, `alert-bright`
-- Escala fluida: `text-display-2xl|xl|lg|md|sm`, `text-lede` (já com line-height/tracking)
+Tokens (Tailwind v4 gera `bg-*`, `text-*`, `border-*`):
+- Noite (vendas): `night` #0b0b0c, `night-2`, `night-3`, `line-night`; texto claro `mist`, `mist-2`, `white`
+- Papel (leitura): `snow` #fff, `snow-2` #f3f3f2; tinta `ink`, `ink-2`, `ink-3`; filete `line`
+- Sinal: `signal`, `signal-hover`, `on-signal`
+- Escala fluida: `text-mega` (manchete da home), `text-display`, `text-title`, `text-heading`, `text-lede`
 
 Utilitários próprios (`@utility`):
-- Superfícies: `surface-deep`, `surface-deep-2` (seção escura; ajusta sozinhas eyebrow, kicker, botões, campos). Cores que seguem o tom: `text-tone`, `text-tone-muted`, `border-tone`
-- Layout: `container-editorial`, `prose-measure`, `rule-top` (filete grosso de seção), `hairline-t/b`
-- Rótulos: `kicker` (mono com quadrado verde), `eyebrow`, `eyebrow-brand`, `stamp`
-- Botões: `btn` + `btn-primary` | `btn-ink` | `btn-outline` (+ `btn-sm`/`btn-lg`); link `link-arrow`
-- Texto: `article-prose` (serifada, artigos), `doc-prose` (institucional/legal)
+- Superfícies: `night`, `night-2` (seção escura; ajustam `--tone-*` para botões, campos e textos).
+  Cores que seguem o tom: `text-tone`, `text-tone-2`, `text-tone-3`, `border-tone`
+- Layout: `container-site` (máx. 1360px); `rail` + `scroller` para trilhos horizontais com
+  scroll-snap alinhados ao container (casos, depoimentos)
+- Tipo: `font-expanded`, `font-condensed`, `tabular`; texto longo `prose-read`
+- Tarjas: `redact` (trecho tarjado que o `Declassify` libera uma vez ao entrar na tela;
+  `data-delay` em ms) e `withheld` (tarja fixa para dado omitido, ex.: nome do instrutor)
+- Botões: `btn` + `btn-signal` | `btn-solid` | `btn-line` (+ `btn-sm`/`btn-lg`); link `link-more`
 - Formulários: `field`, `field-label` · Imagem em card: `media-zoom`
 
-Componentes de página (reutilize antes de criar markup novo):
-- `PageHeader` (abertura padrão: trilha, kicker, h1, linha fina, `tone="deep"` opcional)
-- `SectionHeading` (cabeçalho de seção com filete) · `SplitSection` (título 4/12 + conteúdo 8/12)
-- `AcademyCta` (`band` | `card`) · `ArticleCard` (`default` | `lead` | `row` | `compact`)
+Movimento: a liberação da tarja (`components/site/declassify.tsx`, montado no layout) é o
+**único** momento autoral. Respeita `prefers-reduced-motion` e funciona sem JS (texto visível).
+Use no máximo uma tarja por tela, em manchete.
 
-`cn()` (`lib/utils.ts`) usa `extendTailwindMerge` com a escala `display-*`/`lede`; se
+Componentes de página (reutilize antes de criar markup novo):
+- `PageHeader` (`tone="snow" | "night"`, `size="lg" | "md"`, trilha, h1, linha fina, `aside`)
+- `SectionHeading` (h2 + descrição + link) · `SplitSection` (título 5/12 + conteúdo 7/12, `sticky`)
+- `AcademyCta` (`band` | `card`) · `ArticleCard` (`default` | `case` | `row` | `compact`)
+- Academy: `ShopHero`, `ProductFeature`, `ProductCard` (exporta `splitParcelado`), `ProductGrid`
+
+`cn()` (`lib/utils.ts`) usa `extendTailwindMerge` com `mega/display/title/heading/lede`; se
 criar novos tamanhos de texto, registre-os lá, senão o merge os descarta.
 
 Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente cores).
@@ -124,7 +135,7 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 ## Convenções e cuidados
 
 - **Preços parcelados** nos cards (sem preço cheio); selo Cartão · Pix; CTAs de compra em nova aba.
-- **`/lp` é intocável** salvo pedido explícito.
+- **`/lp` é intocável** salvo pedido explícito (o redesign de 2026 foi pedido pelo dono).
 - Não editar `lib/content/instagram-articles.generated.ts` nem `components/ui/*` sem necessidade.
 - Mantenha **fim de linha LF**.
 - O header é fixo (`sticky`) e renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx`

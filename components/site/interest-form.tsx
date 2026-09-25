@@ -43,12 +43,11 @@ export function InterestForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="bg-paper-strong border border-brand p-6 sm:p-8">
-        <p className="eyebrow-brand mb-2">Recebido</p>
-        <h3 className="font-display text-2xl font-semibold text-ink">
+      <div role="status" aria-live="polite" className="bg-snow-2 p-6 text-ink sm:p-8">
+                <h3 className="font-expanded text-heading font-extrabold text-ink">
           Você está na lista de interesse.
         </h3>
-        <p className="mt-3 text-ink-soft leading-relaxed">
+        <p className="mt-3 text-ink-2 leading-relaxed">
           Vamos avisar com antecedência sobre aulas abertas, workshops e abertura de turmas.
         </p>
       </div>
@@ -60,7 +59,7 @@ export function InterestForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="if-nome" className="field-label">
-            Nome <span aria-hidden className="text-alert">*</span>
+            Nome <span aria-hidden className="text-signal">*</span>
           </label>
           <input
             id="if-nome"
@@ -72,7 +71,7 @@ export function InterestForm() {
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="if-email" className="field-label">
-            E-mail <span aria-hidden className="text-alert">*</span>
+            E-mail <span aria-hidden className="text-signal">*</span>
           </label>
           <input
             id="if-email"
@@ -116,18 +115,18 @@ export function InterestForm() {
         </select>
       </div>
 
-      <label htmlFor="if-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-muted">
+      <label htmlFor="if-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-2">
         <input
           id="if-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 shrink-0 accent-brand"
+          className="mt-1 h-4 w-4 shrink-0 accent-signal"
         />
         <span>
           Concordo em receber comunicações sobre a formação do Mundo da HUMINT.
           Posso revogar a qualquer momento. Li a{" "}
-          <Link href="/politica-de-privacidade" className="text-tone underline decoration-brand-bright underline-offset-2 hover:decoration-2">
+          <Link href="/politica-de-privacidade" className="text-tone underline decoration-signal underline-offset-2 hover:decoration-2">
             Política de Privacidade
           </Link>
           .
@@ -135,7 +134,7 @@ export function InterestForm() {
       </label>
 
       {error && (
-        <p role="alert" className="text-sm text-alert">
+        <p role="alert" className="text-sm text-signal">
           {error}
         </p>
       )}
@@ -143,7 +142,7 @@ export function InterestForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="btn btn-primary btn-lg self-start"
+        className="btn btn-signal btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Entrar na lista de interesse"}
       </button>

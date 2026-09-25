@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { PageHeader } from "@/components/site/page-header"
 import { SplitSection } from "@/components/site/split-section"
 import { InterestForm } from "@/components/site/interest-form"
@@ -44,27 +43,23 @@ export default function FormacaoPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Formação · Em breve"
-        title="Formação Mundo da HUMINT."
-        lede="Estamos finalizando nossos primeiros programas ao vivo. Entre na lista para receber acesso antecipado a turmas, aulas abertas e novos materiais."
+        title="Formação ao vivo: em breve."
+        lede="Estamos finalizando os primeiros programas ao vivo. Entre na lista para receber acesso antecipado a turmas, aulas abertas e novos materiais."
         breadcrumbs={[{ label: "Formação", href: "/formacao" }]}
       >
-        <div className="flex flex-col gap-4 border-l-2 border-brand bg-paper-strong p-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[0.9375rem] leading-relaxed text-ink-soft">
-            Quer começar agora? Os cursos e dossiês da Academy já estão disponíveis.
-          </p>
-          <Link href="/academy" className="btn btn-primary btn-sm shrink-0">
+        <p className="max-w-[56ch] text-lg text-ink-2">
+          Quer começar agora? Os cursos e dossiês da Academy já estão disponíveis.{" "}
+          <Link href="/academy" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
             Ver a Academy
-            <ArrowRight aria-hidden />
           </Link>
-        </div>
+        </p>
       </PageHeader>
 
-      <SplitSection id="transparencia" eyebrow="Transparência" title="Sem turma aberta. Sem promessa vazia." tone="strong">
-        <div className="flex max-w-[62ch] flex-col gap-5 text-lg leading-relaxed text-ink-soft">
+      <SplitSection id="transparencia" title="Sem turma aberta. Sem promessa vazia." tone="snow-2">
+        <div className="flex max-w-[60ch] flex-col gap-5 text-lg leading-relaxed text-ink-2">
           <p>
-            A formação está em desenvolvimento. Antes de abrir turma, queremos ter o método consolidado, o material
-            maduro e o convite certo para quem leva HUMINT a sério.
+            A formação está em desenvolvimento. Antes de abrir turma, queremos o método consolidado, o material maduro e
+            o convite certo para quem leva HUMINT a sério.
           </p>
           <p>
             A lista de interesse não é cobrança. É como organizamos o acesso antecipado a workshops, aulas abertas e
@@ -73,36 +68,30 @@ export default function FormacaoPage() {
         </div>
       </SplitSection>
 
-      <SplitSection id="programas" eyebrow="Em desenvolvimento" title="Programas previstos.">
-        <div className="grid gap-px border border-line bg-line md:grid-cols-2">
-          {FUTURE_PROGRAMS.map((p, i) => (
-            <article key={p.title} className="flex flex-col gap-3 bg-paper-strong p-6 md:p-8">
-              <p className="flex items-center justify-between gap-4">
-                <span className="eyebrow">{p.format}</span>
-                <span className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-muted">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </p>
-              <h3 className="font-display text-display-sm font-medium text-ink">{p.title}</h3>
-              <p className="text-[0.9375rem] leading-relaxed text-ink-muted">{p.summary}</p>
+      <SplitSection id="programas" title="Programas previstos.">
+        <div>
+          {FUTURE_PROGRAMS.map((p) => (
+            <article key={p.title} className="border-t-2 border-ink py-6">
+              <h3 className="font-expanded text-heading font-extrabold">{p.title}</h3>
+              <p className="mt-2 text-lg leading-relaxed text-ink-2">{p.summary}</p>
+              <p className="mt-2 text-sm text-ink-3">{p.format}</p>
             </article>
           ))}
         </div>
       </SplitSection>
 
-      <section className="surface-deep" aria-labelledby="interesse-title">
-        <div className="container-editorial grid gap-10 py-16 md:py-24 lg:grid-cols-12 lg:gap-12">
+      <section className="night" aria-labelledby="interesse-title">
+        <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="min-w-0 lg:col-span-5">
-            <p className="kicker">Lista de interesse</p>
-            <h2 id="interesse-title" className="mt-5 font-display text-display-lg font-medium text-fog">
+            <h2 id="interesse-title" className="font-expanded text-title font-extrabold">
               Acesso antecipado às próximas turmas.
             </h2>
-            <p className="mt-5 max-w-[44ch] text-[0.9375rem] leading-relaxed text-fog-muted">
-              Avisamos com antecedência sobre aulas abertas, workshops e abertura de programas, na ordem em que
-              forem confirmados.
+            <p className="mt-5 max-w-[44ch] text-lg leading-relaxed text-mist">
+              Avisamos com antecedência sobre aulas abertas, workshops e abertura de programas, na ordem em que forem
+              confirmados.
             </p>
           </div>
-          <div className="surface-deep-2 min-w-0 border border-line-dark p-6 md:p-10 lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <InterestForm />
           </div>
         </div>

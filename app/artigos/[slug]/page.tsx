@@ -133,7 +133,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
         <blockquote key={i}>
           {highlightEntities(block.text)}
           {block.cite && (
-            <cite className="mt-3 block font-sans text-xs font-medium not-italic uppercase tracking-[0.14em] text-ink-muted">
+            <cite className="mt-3 block text-base font-semibold not-italic text-ink-3">
               — {block.cite}
             </cite>
           )}
@@ -141,12 +141,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
       )
     case "note":
       return (
-        <aside
-          key={i}
-          className="my-8 border-l-2 border-brand bg-paper-strong p-5 font-sans text-base md:p-6"
-          role="note"
-        >
-          <p className="eyebrow-brand mb-2">Nota</p>
+        <aside key={i} className="my-10 bg-snow-2 p-6 text-base md:p-7" role="note">
           <p className="leading-relaxed text-ink">{highlightEntities(block.text)}</p>
         </aside>
       )
@@ -165,7 +160,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
               src={img.src || "/placeholder.svg"}
               alt={img.alt}
               loading="lazy"
-              className="block h-auto w-full border border-line bg-paper-deep"
+              className="block h-auto w-full bg-snow-2"
             />
           ))}
         </div>
@@ -228,8 +223,8 @@ export default async function ArtigoPage({ params }: Props) {
     <article itemScope itemType="https://schema.org/Article">
       <JsonLd data={graph} />
 
-      <header className="border-b border-line bg-paper">
-        <div className="container-editorial pt-8 pb-12 md:pt-10 md:pb-16">
+      <header className="bg-snow text-ink">
+        <div className="container-site pt-8 pb-14 md:pb-20">
           <Breadcrumbs
             schema={false}
             items={[
@@ -237,44 +232,31 @@ export default async function ArtigoPage({ params }: Props) {
               { label: article.categoryLabel, href: `/artigos?categoria=${article.category}` },
             ]}
           />
-
-          <div className="mt-10 grid gap-10 md:mt-14 lg:grid-cols-12 lg:items-end lg:gap-12">
+          <div className="mt-12 grid gap-10 md:mt-16 lg:grid-cols-12 lg:items-end lg:gap-14">
             <div className="lg:col-span-7">
-              <p className="kicker">
+              <h1 className="font-expanded text-title font-extrabold" itemProp="headline">
+                {article.title}
+              </h1>
+              <p className="mt-7 max-w-[56ch] text-lede text-ink-2" itemProp="description">
+                {article.description}
+              </p>
+              <p className="mt-8 flex flex-wrap gap-x-4 gap-y-1 text-ink-3">
                 <Link
                   href={`/artigos?categoria=${article.category}`}
                   rel="category tag"
-                  className="transition-colors hover:text-brand"
                   itemProp="articleSection"
+                  className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4"
                 >
                   {article.categoryLabel}
                 </Link>
-              </p>
-              <h1
-                className="mt-5 font-display text-display-xl font-medium text-ink"
-                itemProp="headline"
-              >
-                {article.title}
-              </h1>
-              <p className="mt-6 max-w-[58ch] text-lede text-ink-soft" itemProp="description">
-                {article.description}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line pt-5 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-muted">
-                <address
-                  className="not-italic text-ink"
-                  itemProp="author"
-                  itemScope
-                  itemType="https://schema.org/Person"
-                >
+                <address className="not-italic" itemProp="author" itemScope itemType="https://schema.org/Person">
                   Por <span itemProp="name">{article.author}</span>
                 </address>
-                <span>
-                  <time dateTime={article.publishedAt} itemProp="datePublished">
-                    {formatDateLongBR(article.publishedAt)}
-                  </time>
-                </span>
+                <time dateTime={article.publishedAt} itemProp="datePublished">
+                  {formatDateLongBR(article.publishedAt)}
+                </time>
                 {article.updatedAt && article.updatedAt > article.publishedAt && (
-                  <span className="text-brand">
+                  <span>
                     Atualizado em{" "}
                     <time dateTime={article.updatedAt} itemProp="dateModified">
                       {formatDateLongBR(article.updatedAt)}
@@ -282,20 +264,15 @@ export default async function ArtigoPage({ params }: Props) {
                   </span>
                 )}
                 <span>{article.readingTime} de leitura</span>
-              </div>
+              </p>
             </div>
-
             <figure className="m-0 lg:col-span-5">
-              <div
-                className={`relative w-full overflow-hidden bg-paper-deep ${
-                  portrait ? "aspect-[4/5]" : "aspect-[4/3] lg:aspect-square"
-                }`}
-              >
+              <div className={`relative w-full overflow-hidden bg-snow-2 ${portrait ? "aspect-[4/5]" : "aspect-[4/3] lg:aspect-square"}`}>
                 <Image
                   src={article.heroImage || "/placeholder.svg"}
                   alt={article.heroAlt}
                   fill
-                  sizes="(min-width: 1024px) 520px, 100vw"
+                  sizes="(min-width: 1024px) 540px, 100vw"
                   priority
                   className="object-cover"
                   style={{ objectPosition: portrait ? "center 38%" : "center" }}
@@ -308,86 +285,38 @@ export default async function ArtigoPage({ params }: Props) {
         </div>
       </header>
 
-      <div className="bg-paper">
-        <div className="container-editorial grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-12">
-          <aside className="order-2 lg:order-1 lg:col-span-3" aria-label="Compartilhar e tags do artigo">
-            <div className="flex flex-col gap-8 lg:sticky lg:top-28">
-              <section aria-labelledby="share-heading">
-                <h2 id="share-heading" className="eyebrow mb-3">
-                  Compartilhar
-                </h2>
-                <ShareButtons url={url} title={article.title} />
-              </section>
-              {article.tags.length > 0 && (
-                <section aria-labelledby="tags-heading" className="border-t border-line pt-6">
-                  <h2 id="tags-heading" className="eyebrow mb-3">
-                    Tags
-                  </h2>
-                  <ul className="flex flex-wrap gap-1.5">
-                    {article.tags.map((t) => (
-                      <li key={t}>
-                        <Link
-                          href={`/artigos?tag=${encodeURIComponent(t.toLowerCase())}`}
-                          rel="tag"
-                          className="inline-block border border-line bg-paper-strong px-2 py-1 font-mono text-[0.625rem] uppercase tracking-[0.12em] text-ink-soft transition-colors hover:border-ink hover:text-ink"
-                        >
-                          {t}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-            </div>
-          </aside>
-
-          <div className="order-1 min-w-0 lg:order-2 lg:col-span-8 xl:col-span-7">
-            <section aria-label="Corpo do artigo" className="article-prose" itemProp="articleBody">
+      <div className="border-t border-line bg-snow text-ink">
+        <div className="container-site grid gap-14 py-14 md:py-20 lg:grid-cols-12 lg:gap-14">
+          <div className="min-w-0 lg:col-span-8">
+            <section aria-label="Corpo do artigo" className="prose-read" itemProp="articleBody">
               {article.body.map((block, i) => renderBlock(block, i))}
             </section>
 
             {article.methodology && (
-              <section
-                aria-labelledby="methodology-heading"
-                className="mt-14 border-l-2 border-brand bg-paper-strong p-6 md:p-8"
-              >
-                <h2 id="methodology-heading" className="eyebrow-brand mb-3">
+              <section aria-labelledby="methodology-heading" className="mt-14 max-w-[68ch] bg-snow-2 p-6 md:p-8">
+                <h2 id="methodology-heading" className="text-lg font-bold">
                   Transparência metodológica
                 </h2>
-                <p className="leading-relaxed text-ink-soft">{article.methodology}</p>
+                <p className="mt-2 leading-relaxed text-ink-2">{article.methodology}</p>
               </section>
             )}
 
             {article.sources && article.sources.length > 0 && (
-              <section aria-labelledby="sources-heading" className="mt-14">
-                <h2 id="sources-heading" className="rule-top pt-4 font-display text-display-sm font-medium">
+              <section aria-labelledby="sources-heading" className="mt-14 max-w-[68ch]">
+                <h2 id="sources-heading" className="font-expanded text-heading font-extrabold">
                   Fontes e referências
                 </h2>
-                <ol className="mt-5 flex flex-col gap-3 text-[0.9375rem] text-ink-soft">
+                <ol className="mt-5 list-decimal pl-5 text-ink-2 marker:font-bold marker:text-signal">
                   {article.sources.map((s, i) => (
-                    <li key={i} className="grid grid-cols-[2rem_1fr] gap-2 border-b border-line pb-3">
-                      <span className="font-mono text-[0.6875rem] tracking-[0.12em] text-ink-muted">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span>
-                        {s.url ? (
-                          <a
-                            href={s.url}
-                            className="underline decoration-brand underline-offset-2 transition-colors hover:text-brand"
-                            rel="noopener nofollow external"
-                            target="_blank"
-                          >
-                            {s.label}
-                          </a>
-                        ) : (
-                          <cite className="not-italic">{s.label}</cite>
-                        )}
-                        {s.type && (
-                          <span className="ml-2 font-mono text-[0.625rem] uppercase tracking-[0.12em] text-ink-muted">
-                            {s.type}
-                          </span>
-                        )}
-                      </span>
+                    <li key={i} className="border-b border-line py-3 pl-2">
+                      {s.url ? (
+                        <a href={s.url} className="underline decoration-signal decoration-2 underline-offset-4 hover:text-signal" rel="noopener nofollow external" target="_blank">
+                          {s.label}
+                        </a>
+                      ) : (
+                        <cite className="not-italic">{s.label}</cite>
+                      )}
+                      {s.type && <span className="ml-2 text-sm text-ink-3">({s.type})</span>}
                     </li>
                   ))}
                 </ol>
@@ -395,14 +324,14 @@ export default async function ArtigoPage({ params }: Props) {
             )}
 
             {article.corrections && article.corrections.length > 0 && (
-              <section aria-labelledby="corrections-heading" className="mt-10 border-t border-line pt-5">
-                <h2 id="corrections-heading" className="eyebrow mb-3">
+              <section aria-labelledby="corrections-heading" className="mt-10 max-w-[68ch]">
+                <h2 id="corrections-heading" className="text-lg font-bold">
                   Correções
                 </h2>
-                <ul className="flex flex-col gap-2 text-sm text-ink-soft">
+                <ul className="mt-3 flex flex-col gap-2 text-ink-2">
                   {article.corrections.map((c, i) => (
                     <li key={i}>
-                      <time dateTime={c.date} className="font-mono text-xs text-ink-muted">
+                      <time dateTime={c.date} className="text-ink-3">
                         {c.date}
                       </time>
                       {": "}
@@ -413,63 +342,61 @@ export default async function ArtigoPage({ params }: Props) {
               </section>
             )}
 
-            <footer className="mt-14 grid gap-6">
-              <div className="flex items-start gap-5 border-y border-line py-6">
-                <div
-                  aria-hidden="true"
-                  className="flex h-14 w-14 shrink-0 items-center justify-center bg-ink font-display text-lg text-paper"
-                >
-                  {authorInitials(article.author)}
-                </div>
-                <div>
-                  <p className="eyebrow mb-1">Sobre o autor</p>
-                  <p className="font-display text-lg font-medium text-ink">{article.author}</p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{article.authorBio}</p>
+            <footer className="mt-14 flex max-w-[68ch] flex-col gap-8 border-t-2 border-ink pt-8">
+              <div>
+                <h2 className="text-lg font-bold">Compartilhar</h2>
+                <div className="mt-3">
+                  <ShareButtons url={url} title={article.title} />
                 </div>
               </div>
-
-              {originalInstagramUrl && (
-                <section
-                  aria-labelledby="post-original-heading"
-                  className="flex flex-col gap-5 border border-line bg-paper-strong p-6 sm:flex-row sm:items-center sm:justify-between"
-                >
-                  <div>
-                    <p className="eyebrow-brand">Post original</p>
-                    <h2 id="post-original-heading" className="mt-2 font-display text-lg font-medium">
-                      Veja a publicação que originou este artigo.
-                    </h2>
-                  </div>
-                  <a
-                    href={originalInstagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow external"
-                    className="btn btn-outline btn-sm shrink-0"
-                  >
-                    Abrir no Instagram
-                  </a>
-                </section>
+              {article.tags.length > 0 && (
+                <ul className="flex flex-wrap gap-2" aria-label="Tags">
+                  {article.tags.map((t) => (
+                    <li key={t}>
+                      <Link
+                        href={`/artigos?tag=${encodeURIComponent(t.toLowerCase())}`}
+                        rel="tag"
+                        className="inline-block bg-snow-2 px-3 py-1.5 text-sm font-medium text-ink-2 transition-colors hover:bg-ink hover:text-white"
+                      >
+                        {t}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               )}
+              <p className="text-ink-3">
+                {article.author}. {article.authorBio}
+                {originalInstagramUrl && (
+                  <>
+                    {" "}
+                    <a href={originalInstagramUrl} target="_blank" rel="noopener noreferrer nofollow external" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
+                      Ver o post original no Instagram
+                    </a>
+                    .
+                  </>
+                )}
+              </p>
             </footer>
           </div>
+
+          <aside className="lg:col-span-4" aria-label="Acervo Tático">
+            <div className="lg:sticky lg:top-28">
+              <AcademyCta variant="card" title="Leu o caso? Aprenda o método." />
+            </div>
+          </aside>
         </div>
       </div>
 
-      <AcademyCta
-        title="Vá além da leitura."
-        description="Na Academy, o que você leu aqui vira método: cursos e dossiês para aplicar inteligência humana na prática, do comportamento à operação."
-      />
-
       {related.length > 0 && (
-        <section className="bg-paper-strong" aria-labelledby="related-title">
-          <div className="container-editorial py-14 md:py-20">
+        <section className="bg-snow-2 text-ink" aria-labelledby="related-title">
+          <div className="container-site py-20 md:py-24">
             <SectionHeading
               id="related-title"
-              eyebrow="Leia também"
-              title="Artigos relacionados"
+              title="Continue lendo"
               href={`/artigos?categoria=${article.category}`}
               linkLabel={`Mais em ${article.categoryLabel}`}
             />
-            <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((a) => (
                 <ArticleCard key={a.slug} article={a} />
               ))}

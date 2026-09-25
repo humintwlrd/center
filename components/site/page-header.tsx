@@ -5,86 +5,49 @@ import { Breadcrumbs } from "@/components/site/breadcrumbs"
 type Crumb = { label: string; href: string }
 
 type PageHeaderProps = {
-  /** Rótulo de abertura (mono, com marcador verde). */
-  eyebrow?: string
   title: ReactNode
   /** Linha fina abaixo do título. */
   lede?: ReactNode
   /** Trilha (sem "Início": o componente adiciona). */
   breadcrumbs?: Crumb[]
-  /** "paper" (padrão) ou "deep" (seção escura). */
-  tone?: "paper" | "deep"
-  /** "lg" para páginas pilar; "md" para institucionais. */
+  /** "snow" (papel, leitura) ou "night" (venda). */
+  tone?: "snow" | "night"
   size?: "lg" | "md"
-  /** Ações/metadados logo abaixo da linha fina. */
+  /** Ações logo abaixo da linha fina. */
   children?: ReactNode
-  /** Coluna à direita (imagem, índice, destaque). */
+  /** Coluna à direita (imagem, destaque). */
   aside?: ReactNode
   className?: string
 }
 
-/**
- * Abertura padrão das páginas: trilha, kicker, h1 serifado, linha fina.
- * Sempre alinhada à esquerda; a coluna lateral é opcional.
- */
+/** Abertura das páginas: trilha, título estendido, linha fina. Sem rótulo acima do título. */
 export function PageHeader({
-  eyebrow,
   title,
   lede,
   breadcrumbs,
-  tone = "paper",
+  tone = "snow",
   size = "md",
   children,
   aside,
   className,
 }: PageHeaderProps) {
-  const deep = tone === "deep"
-
+  const night = tone === "night"
   return (
-    <header
-      className={cn(
-        "border-b",
-        deep ? "surface-deep border-line-dark" : "bg-paper border-line",
-        className,
-      )}
-    >
-      <div
-        className={cn(
-          "container-editorial",
-          size === "lg" ? "pt-8 pb-14 md:pt-10 md:pb-20" : "pt-8 pb-12 md:pt-10 md:pb-16",
-        )}
-      >
+    <header className={cn(night ? "night" : "bg-snow text-ink", className)}>
+      <div className={cn("container-site", size === "lg" ? "pt-8 pb-16 md:pb-24" : "pt-8 pb-14 md:pb-20")}>
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <div className="mb-10 md:mb-14">
-            <Breadcrumbs items={breadcrumbs} tone={tone} />
+          <div className="mb-12 md:mb-16">
+            <Breadcrumbs items={breadcrumbs} tone={night ? "night" : "snow"} />
           </div>
         )}
-
-        <div className={cn("grid gap-10", aside && "lg:grid-cols-12 lg:gap-12 lg:items-end")}>
-          <div className={cn("min-w-0", aside ? "lg:col-span-7" : "max-w-4xl")}>
-            {eyebrow && <p className="kicker mb-5">{eyebrow}</p>}
-            <h1
-              className={cn(
-                "font-display font-medium",
-                size === "lg" ? "text-display-2xl" : "text-display-xl",
-                deep ? "text-fog" : "text-ink",
-              )}
-            >
+        <div className={cn("grid gap-10", aside && "lg:grid-cols-12 lg:items-end lg:gap-14")}>
+          <div className={cn("min-w-0", aside ? "lg:col-span-7" : "max-w-5xl")}>
+            <h1 className={cn("font-expanded font-extrabold", size === "lg" ? "text-mega" : "text-display")}>
               {title}
             </h1>
-            {lede && (
-              <p
-                className={cn(
-                  "mt-6 max-w-[60ch] text-lede",
-                  deep ? "text-fog-muted" : "text-ink-soft",
-                )}
-              >
-                {lede}
-              </p>
-            )}
-            {children && <div className="mt-8">{children}</div>}
+            {lede && <p className="mt-6 max-w-[58ch] text-lede text-tone-2 md:mt-8">{lede}</p>}
+            {children && <div className="mt-8 md:mt-10">{children}</div>}
           </div>
-
           {aside && <div className="min-w-0 lg:col-span-5">{aside}</div>}
         </div>
       </div>

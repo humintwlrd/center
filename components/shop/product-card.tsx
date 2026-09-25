@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ArrowUpRight, CreditCard } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import type { Product } from "@/lib/products"
 
 type Props = {
@@ -20,60 +20,43 @@ export function ProductCard({ product, priority }: Props) {
   const href = `/academy/${product.id}`
 
   return (
-    <article className="group flex flex-col border border-line bg-paper-strong transition-colors duration-200 hover:border-ink">
-      <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-[3/4] overflow-hidden bg-deep">
+    <article className="group flex flex-col">
+      <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-[3/4] overflow-hidden bg-night">
         <Image
           src={product.image || "/placeholder.svg"}
           alt=""
           fill
-          sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+          sizes="(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw"
           priority={priority}
           className="media-zoom object-cover"
         />
-        <span className="absolute left-3 top-3 bg-ink px-2.5 py-1 font-mono text-[0.625rem] font-medium uppercase tracking-[0.16em] text-paper">
-          {product.tipo}
-        </span>
         {product.badge && (
-          <span className="absolute right-3 top-3 bg-brand px-2.5 py-1 font-mono text-[0.625rem] font-semibold uppercase tracking-[0.16em] text-on-brand">
+          <span className="absolute left-0 top-4 bg-signal px-3 py-1.5 text-sm font-bold text-on-signal">
             {product.badge}
           </span>
         )}
       </Link>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <h3 className="font-display text-display-sm font-medium text-ink">
-          <Link href={href} className="transition-colors hover:text-brand">
-            {product.nome}
-          </Link>
-        </h3>
-        <p className="mt-3 text-[0.9375rem] leading-relaxed text-ink-muted line-clamp-3">{product.descricao}</p>
+      <h3 className="mt-6 font-expanded text-heading font-extrabold text-tone">
+        <Link href={href} className="transition-colors hover:text-signal">
+          {product.nome}
+        </Link>
+      </h3>
+      <p className="mt-3 text-[0.9375rem] leading-relaxed text-tone-2 line-clamp-3">{product.descricao}</p>
 
-        <div className="mt-auto pt-6">
-          <div className="border-t border-line pt-5">
-            <p className="flex items-baseline gap-2">
-              {label && (
-                <span className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
-                  {label}
-                </span>
-              )}
-              <span className="font-display text-3xl font-medium leading-none text-ink">{value}</span>
-            </p>
-            <p className="mt-2 inline-flex items-center gap-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
-              <CreditCard className="h-3.5 w-3.5" aria-hidden /> Cartão · Pix
-            </p>
-          </div>
-
-          <a
-            href={product.checkoutUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary mt-5 w-full"
-          >
+      <div className="mt-auto pt-6">
+        <p className="tabular text-tone">
+          {label && <span className="text-tone-2">{label} </span>}
+          <span className="whitespace-nowrap font-expanded text-2xl font-extrabold">{value}</span>
+        </p>
+        <p className="mt-1 text-sm text-tone-3">{product.tipo} · Cartão ou Pix</p>
+        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+          <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="btn btn-signal">
             Comprar agora
             <ArrowUpRight aria-hidden />
             <span className="sr-only">(abre em nova aba)</span>
           </a>
-          <Link href={href} className="link-arrow mt-4">
+          <Link href={href} className="link-more">
             Ver detalhes
             <ArrowRight aria-hidden />
           </Link>

@@ -14,7 +14,6 @@ export default function PrivacidadePage() {
   return (
     <LegalPage
       path="/politica-de-privacidade"
-      eyebrow="Documento legal"
       title="Política de privacidade"
       updatedAt="maio de 2026"
     >

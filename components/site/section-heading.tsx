@@ -5,23 +5,17 @@ import { cn } from "@/lib/utils"
 
 type SectionHeadingProps = {
   id?: string
-  eyebrow?: string
   title: ReactNode
   description?: ReactNode
   href?: string
   linkLabel?: string
-  /** Nível do título (padrão h2). */
   as?: "h2" | "h3"
   className?: string
 }
 
-/**
- * Cabeçalho de seção com filete grosso no topo (padrão de jornal).
- * Herda o tom da superfície (surface-deep ajusta cores sozinho).
- */
+/** Título de seção: o próprio título carrega o peso, sem rótulo nem filete. */
 export function SectionHeading({
   id,
-  eyebrow,
   title,
   description,
   href,
@@ -30,26 +24,19 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <header className={cn("rule-top mb-8 pt-4 md:mb-10", className)}>
-      <div className="flex items-start justify-between gap-6">
-        <div className="min-w-0">
-          {eyebrow && <p className="eyebrow-brand mb-2">{eyebrow}</p>}
-          <Tag id={id} className="font-display text-display-md font-medium">
-            {title}
-          </Tag>
-          {description && (
-            <p className="mt-3 max-w-[62ch] text-[0.9375rem] leading-relaxed text-tone-muted">
-              {description}
-            </p>
-          )}
-        </div>
-        {href && (
-          <Link href={href} className="link-arrow mt-1 hidden shrink-0 sm:inline-flex">
-            {linkLabel}
-            <ArrowRight aria-hidden />
-          </Link>
-        )}
+    <header className={cn("mb-10 flex flex-col gap-5 md:mb-14 md:flex-row md:items-end md:justify-between", className)}>
+      <div className="min-w-0 max-w-3xl">
+        <Tag id={id} className="font-expanded text-title font-extrabold text-tone">
+          {title}
+        </Tag>
+        {description && <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-tone-2">{description}</p>}
       </div>
+      {href && (
+        <Link href={href} className="link-more shrink-0">
+          {linkLabel}
+          <ArrowRight aria-hidden />
+        </Link>
+      )}
     </header>
   )
 }

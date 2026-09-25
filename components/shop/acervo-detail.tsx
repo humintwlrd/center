@@ -9,13 +9,10 @@ import {
   ListChecks,
   ClipboardCheck,
   RefreshCw,
-  Lock,
-  CalendarClock,
-  ShieldAlert,
-  ShieldCheck,
   Fingerprint,
   Bell,
   Scale,
+  Plus,
 } from "lucide-react"
 import { Breadcrumbs } from "@/components/site/breadcrumbs"
 import type { Product } from "@/lib/products"
@@ -199,76 +196,58 @@ const PROTECTION = [
   { icon: Scale, title: "Responsabilização", body: "Medidas cíveis e criminais cabíveis, com perdas, danos e ressarcimento de custos." },
 ]
 
-function SectionLabel({ n, children }: { n: string; children: React.ReactNode }) {
-  return (
-    <p className="flex items-center gap-3 font-mono text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-tone">
-      <span className="text-tone-muted">{n}</span>
-      <span aria-hidden className="h-px w-8 bg-current opacity-30" />
-      {children}
-    </p>
-  )
-}
-
-function PriceLine({ parcelado, className }: { parcelado: string; className?: string }) {
-  return (
-    <p className={`font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-tone-muted ${className ?? ""}`}>
-      {parcelado} · Cartão · Pix · 7 dias de garantia
-    </p>
-  )
-}
-
 export function AcervoDetail({ product }: { product: Product }) {
   const checkout = product.checkoutUrl
   const parcelado = product.parcelado // "12x de R$ 93,09"
-  const [parcelaLabel, ...parcelaRest] = parcelado.split(" de ")
+
+  const BuyButton = ({ label = "Garantir acesso agora", size = "btn-lg" }: { label?: string; size?: string }) => (
+    <a href={checkout} target="_blank" rel="noopener noreferrer" className={`btn btn-signal ${size}`}>
+      {label}
+      <ArrowUpRight aria-hidden />
+      <span className="sr-only">(abre em nova aba)</span>
+    </a>
+  )
 
   return (
-    <div className="bg-paper">
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <header className="surface-deep border-b border-line-dark">
-        <div className="container-editorial pt-8 pb-14 md:pt-10 md:pb-20">
+    <div>
+      {/* ── Abertura ───────────────────────────────────────────── */}
+      <header className="night">
+        <div className="container-site pt-8 pb-20 md:pb-28">
           <Breadcrumbs
-            tone="deep"
+            tone="night"
             items={[
               { label: "Academy", href: "/academy" },
               { label: "Acervo Tático", href: `/academy/${product.id}` },
             ]}
           />
-
-          <div className="mt-10 grid gap-12 md:mt-14 lg:grid-cols-12 lg:items-center">
+          <div className="mt-12 grid gap-14 md:mt-16 lg:grid-cols-12 lg:items-center lg:gap-16">
             <div className="lg:col-span-7">
-              <div className="mb-8 flex flex-wrap items-center gap-2">
-                <span className="stamp text-alert-bright">
-                  <Lock className="h-3 w-3" aria-hidden /> Acervo confidencial
-                </span>
-                <span className="stamp text-fog-muted">Acesso limitado</span>
-              </div>
-              <p className="kicker">Conhecimento prático em HUMINT</p>
-              <h1 className="mt-5 font-display text-display-xl font-medium text-fog">
-                O primeiro e único acervo tático de Inteligência Humana do Brasil.
+              <h1 className="font-expanded text-display font-extrabold">
+                O primeiro e único acervo tático de Inteligência Humana do <span className="redact">Brasil.</span>
               </h1>
-              <p className="mt-6 max-w-[58ch] text-lede text-fog-muted">
+              <p className="mt-8 max-w-[56ch] text-lede text-mist">
                 Aprenda a identificar intenções ocultas, extrair informações sem resistência e antecipar
-                comportamentos antes que eles se revelem. Técnicas de obtenção de dados através de pessoas,
-                usadas em operações reais — aplicadas à negociação, influência, leitura comportamental e
-                proteção contra manipulação.
+                comportamentos antes que eles se revelem. Técnicas de obtenção de dados através de pessoas, usadas em
+                operações reais, aplicadas à negociação, influência, leitura comportamental e proteção contra
+                manipulação.
               </p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-                <a href="#oferta" className="btn btn-primary btn-lg">
+              <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
+                <a href="#oferta" className="btn btn-signal btn-lg">
                   Acessar o acervo
                   <ArrowRight aria-hidden />
                 </a>
-                <PriceLine parcelado={parcelado} />
+                <p className="tabular text-mist">
+                  {parcelado} <span className="text-mist-2">· 7 dias de garantia</span>
+                </p>
               </div>
             </div>
-
             <div className="lg:col-span-5">
-              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden border border-line-dark bg-deep-2 lg:max-w-none">
+              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden lg:max-w-none">
                 <Image
                   src={product.image || "/placeholder.svg"}
                   alt={product.imageAlt}
                   fill
-                  sizes="(min-width: 1024px) 480px, 80vw"
+                  sizes="(min-width: 1024px) 500px, 80vw"
                   priority
                   className="object-cover"
                 />
@@ -276,174 +255,136 @@ export function AcervoDetail({ product }: { product: Product }) {
             </div>
           </div>
         </div>
+        <div className="overflow-hidden border-y border-line-night py-4" aria-hidden>
+          <div className="flex w-max animate-[marquee_48s_linear_infinite] items-center gap-10 whitespace-nowrap">
+            {[...MARQUEE, ...MARQUEE].map((t, i) => (
+              <span key={i} className="flex items-center gap-10 font-expanded text-lg font-bold text-mist-2">
+                {t}
+                <span className="h-2 w-2 bg-signal" />
+              </span>
+            ))}
+          </div>
+        </div>
       </header>
 
-      {/* ── Faixa de termos ───────────────────────────────────── */}
-      <div className="surface-deep-2 overflow-hidden border-b border-line-dark py-3.5" aria-hidden>
-        <div className="flex w-max animate-[marquee_40s_linear_infinite] items-center gap-8 whitespace-nowrap will-change-transform">
-          {[...MARQUEE, ...MARQUEE].map((t, i) => (
-            <span
-              key={i}
-              className="flex items-center gap-8 font-mono text-[0.6875rem] uppercase tracking-[0.16em] text-fog-muted"
-            >
-              {t}
-              <span className="h-1.5 w-1.5 bg-brand-bright" />
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ── 01. A situação real ────────────────────────────────── */}
-      <section className="border-b border-line" aria-labelledby="situacao-title">
-        <div className="container-editorial grid gap-10 py-16 md:py-24 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-28">
-              <SectionLabel n="01">A situação real</SectionLabel>
-              <h2 id="situacao-title" className="mt-5 font-display text-display-lg font-medium text-ink">
-                Quem conduz percebe antes.
-              </h2>
-            </div>
+      {/* ── A situação ─────────────────────────────────────────── */}
+      <section className="bg-snow text-ink" aria-labelledby="situacao-title">
+        <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <h2 id="situacao-title" className="font-expanded text-display font-extrabold lg:sticky lg:top-28">
+              Quem conduz percebe antes.
+            </h2>
           </div>
-
-          <div className="lg:col-span-8">
-            <div className="flex max-w-[62ch] flex-col gap-5 text-lg leading-relaxed text-ink-soft">
+          <div className="lg:col-span-7">
+            <div className="flex max-w-[62ch] flex-col gap-5 text-lg leading-relaxed text-ink-2">
               {SITUATION.map((p) => (
                 <p key={p.slice(0, 24)}>{p}</p>
               ))}
             </div>
-
-            <blockquote className="my-12 max-w-[34ch] border-l-2 border-brand pl-6 font-display text-display-sm font-medium italic text-ink">
-              A pior posição é sair de uma situação convencido de que decidiu bem, quando na prática você apenas
-              reagiu melhor ao roteiro que alguém construiu para você.
+            <blockquote className="my-14 max-w-[30ch] font-expanded text-heading font-extrabold">
+              A pior posição é sair convencido de que decidiu bem, quando você apenas reagiu melhor ao roteiro que
+              alguém construiu.
             </blockquote>
-
-            <ol className="grid gap-px border border-line bg-line sm:grid-cols-3">
+            <dl className="border-t-2 border-ink">
               {POSITIONS.map((p, i) => (
-                <li key={p.who} className={i === 2 ? "surface-deep p-6" : "bg-paper-strong p-6"}>
-                  <p className="font-mono text-[0.6875rem] tracking-[0.14em] text-tone-muted">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <p className="mt-3 font-display text-xl font-medium text-tone">{p.who}</p>
-                  <p className="mt-1 text-[0.9375rem] text-tone-muted">{p.when}</p>
-                </li>
+                <div
+                  key={p.who}
+                  className={`flex items-baseline justify-between gap-6 border-b border-line py-5 ${i === 2 ? "text-signal" : ""}`}
+                >
+                  <dt className="text-lg font-semibold">{p.who}</dt>
+                  <dd className="font-expanded text-lg font-extrabold">{p.when}</dd>
+                </div>
               ))}
-            </ol>
-
-            <p className="mt-12 max-w-[62ch] text-lg leading-relaxed text-ink-soft">
-              O Acervo Tático foi construído para treinar essa percepção. Para que você deixe de entrar em
-              interações importantes apenas reagindo ao que aparece e passe a observar o que está sendo construído
-              diante de você.
+            </dl>
+            <p className="mt-12 max-w-[62ch] text-lg leading-relaxed text-ink-2">
+              O Acervo Tático foi construído para treinar essa percepção: deixar de reagir ao que aparece e passar a
+              observar o que está sendo construído diante de você.
             </p>
-
-            <aside className="mt-10 max-w-[62ch] border-l-2 border-brand bg-paper-strong p-6">
-              <p className="eyebrow-brand mb-2">Atenção</p>
-              <p className="text-[0.9375rem] leading-relaxed text-ink-soft">
-                Não se trata de manipular pessoas. Trata-se de não ser ingênuo em ambientes onde percepção,
-                linguagem, comportamento e decisão estão sempre em jogo. Em qualquer interação relevante, alguém
-                ocupa a posição de leitura — e quando essa pessoa não é você, normalmente você só entende o custo
-                depois.
-              </p>
-            </aside>
+            <p className="mt-6 max-w-[62ch] text-lg font-semibold leading-relaxed">
+              Não se trata de manipular pessoas. Trata-se de não ser ingênuo onde percepção, linguagem, comportamento
+              e decisão estão sempre em jogo.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── 02. A arquitetura ──────────────────────────────────── */}
-      <section id="dossie" className="border-b border-line bg-paper-strong" aria-labelledby="arquitetura-title">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-6">
-              <SectionLabel n="02">A arquitetura</SectionLabel>
-              <h2 id="arquitetura-title" className="mt-5 font-display text-display-lg font-medium text-ink">
-                Seis fundamentos. Um núcleo operacional. Um sistema para ler melhor interações humanas.
-              </h2>
-            </div>
-            <p className="max-w-[60ch] text-[0.9375rem] leading-relaxed text-ink-soft md:text-base lg:col-span-6 lg:pt-10">
-              Cada dossiê desenvolve uma camada específica da terceira posição: compreender comportamento,
-              calibrar comunicação, observar sinais, conduzir conversas, proteger informação e organizar fontes —
-              até transformar conhecimento em prática. Não é uma sequência aleatória de conteúdos: é um mapa
-              progressivo para formar percepção, critério e precisão.
+      {/* ── A arquitetura ──────────────────────────────────────── */}
+      <section id="dossie" className="night" aria-labelledby="arquitetura-title">
+        <div className="container-site py-20 md:py-28">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <h2 id="arquitetura-title" className="font-expanded text-display font-extrabold lg:col-span-7">
+              Seis dossiês. Um núcleo operacional.
+            </h2>
+            <p className="max-w-[56ch] text-lg leading-relaxed text-mist lg:col-span-5 lg:pt-3">
+              Cada dossiê desenvolve uma camada: compreender comportamento, calibrar comunicação, observar sinais,
+              conduzir conversas, proteger informação e organizar fontes. Um mapa progressivo, não uma sequência
+              aleatória de conteúdos.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+          <ol className="mt-16 border-t border-line-night">
             {MODULES.map((m) => (
-              <article
+              <li
                 key={m.title}
-                className={`flex flex-col p-7 md:p-8 ${m.highlight ? "surface-deep" : "bg-paper-strong"}`}
+                className={`grid gap-4 border-b border-line-night py-8 md:grid-cols-12 md:gap-8 ${m.highlight ? "text-white" : ""}`}
               >
-                <p className="eyebrow-brand">{m.tag}</p>
-                <h3 className="mt-4 font-display text-display-sm font-medium text-tone">{m.title}</h3>
-                <p className="mt-3 text-[0.9375rem] leading-relaxed text-tone-muted">{m.body}</p>
-                <p className="eyebrow mt-6">{m.bulletsLabel}</p>
-                <ul className="mt-3 flex flex-col gap-2 text-[0.9375rem]">
+                <p className={`text-sm font-bold md:col-span-2 md:pt-2 ${m.highlight ? "text-signal" : "text-mist-2"}`}>
+                  {m.tag}
+                </p>
+                <div className="md:col-span-6">
+                  <h3 className="font-expanded text-heading font-extrabold">{m.title}</h3>
+                  <p className="mt-3 max-w-[54ch] text-mist">{m.body}</p>
+                </div>
+                <ul className="flex flex-col gap-2 md:col-span-4 md:pt-2">
                   {m.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2.5">
-                      <Check
-                        className={`mt-1 h-4 w-4 shrink-0 ${m.highlight ? "text-brand-bright" : "text-brand"}`}
-                        aria-hidden
-                      />
-                      <span className="text-tone">{b}</span>
+                    <li key={b} className="flex items-start gap-2.5 text-[0.9375rem]">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-signal" aria-hidden />
+                      {b}
                     </li>
                   ))}
                 </ul>
-              </article>
+              </li>
             ))}
-            <div className="hidden bg-paper-strong p-8 md:flex md:flex-col md:justify-end lg:col-span-2">
-              <p className="max-w-[34ch] text-[0.9375rem] leading-relaxed text-ink-soft">
-                Cada módulo cumpre uma função dentro do sistema. Primeiro você entende o comportamento; depois
-                aprende a observar a interação, conduzir conversas, proteger informação e transformar leitura em
-                ação.
-              </p>
-              <a href="#oferta" className="link-arrow mt-6">
-                Ver a oferta completa
-                <ArrowRight aria-hidden />
-              </a>
-            </div>
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* ── 03. A plataforma + acesso ──────────────────────────── */}
-      <section className="border-b border-line" aria-labelledby="plataforma-title">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-6">
-              <SectionLabel n="03">A plataforma</SectionLabel>
-              <h2 id="plataforma-title" className="mt-5 font-display text-display-lg font-medium text-ink">
-                O que você recebe dentro da plataforma.
+      {/* ── A plataforma e o acesso ────────────────────────────── */}
+      <section className="bg-snow-2 text-ink" aria-labelledby="plataforma-title">
+        <div className="container-site py-20 md:py-28">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <h2 id="plataforma-title" className="font-expanded text-display font-extrabold">
+                O que você recebe.
               </h2>
+              <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-ink-2">
+                Uma estrutura de consulta, estudo e aplicação, em ordem progressiva.
+              </p>
             </div>
-            <p className="max-w-[60ch] text-[0.9375rem] leading-relaxed text-ink-soft md:text-base lg:col-span-6 lg:pt-10">
-              O Acervo não é uma sequência de aulas soltas. É uma estrutura de consulta, estudo e aplicação. Você
-              acessa os dossiês e materiais auxiliares em ordem progressiva, cada parte desenvolvendo uma camada de
-              leitura humana.
-            </p>
+            <dl className="grid gap-x-10 sm:grid-cols-2 lg:col-span-7">
+              {PLATFORM.map((card) => {
+                const Icon = card.icon
+                return (
+                  <div key={card.title} className="border-t-2 border-ink py-6">
+                    <dt className="flex items-center gap-3 font-expanded text-lg font-extrabold">
+                      <Icon className="h-5 w-5 text-signal" aria-hidden />
+                      {card.title}
+                    </dt>
+                    <dd className="mt-2 text-ink-2">{card.body}</dd>
+                  </div>
+                )
+              })}
+            </dl>
           </div>
 
-          <dl className="mt-14 grid gap-px border-y border-ink bg-line sm:grid-cols-2 lg:grid-cols-4">
-            {PLATFORM.map((card) => {
-              const Icon = card.icon
-              return (
-                <div key={card.title} className="bg-paper p-6 lg:px-6 lg:py-8">
-                  <dt className="flex items-center gap-2.5 font-display text-xl font-medium text-ink">
-                    <Icon className="h-4 w-4 text-brand" aria-hidden />
-                    {card.title}
-                  </dt>
-                  <dd className="mt-2 text-[0.9375rem] leading-relaxed text-ink-muted">{card.body}</dd>
-                </div>
-              )
-            })}
-          </dl>
-
-          <div className="mt-20">
-            <SectionLabel n="04">Como o acesso funciona</SectionLabel>
-            <ol className="mt-8 grid gap-10 md:grid-cols-3 md:gap-8">
-              {STEPS.map((step) => (
-                <li key={step.n} className="border-t border-line-strong pt-6">
-                  <span className="font-display text-5xl font-medium leading-none text-brand">{step.n}</span>
-                  <h3 className="mt-5 font-display text-xl font-medium text-ink">{step.title}</h3>
-                  <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-muted">{step.body}</p>
+          <div className="mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <h2 className="font-expanded text-title font-extrabold lg:col-span-5">Como o acesso funciona.</h2>
+            <ol className="grid gap-10 sm:grid-cols-3 lg:col-span-7">
+              {STEPS.map((step, i) => (
+                <li key={step.n}>
+                  <span className="font-expanded text-display font-extrabold text-signal">{i + 1}</span>
+                  <h3 className="mt-3 text-lg font-bold">{step.title}</h3>
+                  <p className="mt-2 text-ink-2">{step.body}</p>
                 </li>
               ))}
             </ol>
@@ -451,39 +392,27 @@ export function AcervoDetail({ product }: { product: Product }) {
         </div>
       </section>
 
-      {/* ── 05. Para quem / Não é para ─────────────────────────── */}
-      <section className="border-b border-line bg-paper-strong" aria-label="Para quem é o Acervo">
-        <div className="container-editorial grid gap-px py-16 md:py-24 lg:grid-cols-2 lg:gap-16">
+      {/* ── Para quem ──────────────────────────────────────────── */}
+      <section className="bg-snow text-ink" aria-label="Para quem é o Acervo">
+        <div className="container-site grid gap-16 py-20 md:py-28 lg:grid-cols-2">
           <div>
-            <SectionLabel n="05">Para quem</SectionLabel>
-            <h2 className="mt-5 font-display text-display-md font-medium text-ink">
-              Para profissionais que dependem de leitura humana em decisões reais.
-            </h2>
-            <ul className="mt-8 border-t border-line">
+            <h2 className="font-expanded text-title font-extrabold">Para quem depende de ler pessoas em decisões reais.</h2>
+            <ul className="mt-8">
               {FOR_WHOM.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 border-b border-line py-4 text-[0.9375rem] leading-relaxed text-ink-soft"
-                >
-                  <Check className="mt-1 h-4 w-4 shrink-0 text-brand" aria-hidden />
-                  <span>{item}</span>
+                <li key={item} className="flex items-start gap-3 border-t border-line py-4 text-lg leading-relaxed text-ink-2">
+                  <Check className="mt-1.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="mt-14 lg:mt-0">
-            <SectionLabel n="06">Não é para</SectionLabel>
-            <h2 className="mt-5 font-display text-display-md font-medium text-ink">
-              Não é para quem procura poder sobre os outros.
-            </h2>
-            <ul className="mt-8 border-t border-line">
+          <div>
+            <h2 className="font-expanded text-title font-extrabold">Não é para quem procura poder sobre os outros.</h2>
+            <ul className="mt-8">
               {NOT_FOR.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 border-b border-line py-4 text-[0.9375rem] leading-relaxed text-ink-muted"
-                >
-                  <X className="mt-1 h-4 w-4 shrink-0 text-alert" aria-hidden />
-                  <span>{item}</span>
+                <li key={item} className="flex items-start gap-3 border-t border-line py-4 text-lg leading-relaxed text-ink-3">
+                  <X className="mt-1.5 h-5 w-5 shrink-0 text-ink" aria-hidden />
+                  {item}
                 </li>
               ))}
             </ul>
@@ -491,22 +420,18 @@ export function AcervoDetail({ product }: { product: Product }) {
         </div>
       </section>
 
-      {/* ── 07. Ética e limites ────────────────────────────────── */}
-      <section className="surface-deep" aria-labelledby="etica-title">
-        <div className="container-editorial grid gap-10 py-16 md:py-24 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-5">
-            <SectionLabel n="07">Ética e limites</SectionLabel>
-            <h2 id="etica-title" className="mt-5 font-display text-display-lg font-medium text-fog">
-              Inteligência humana sem manipulação barata.
-            </h2>
-          </div>
-          <div className="lg:col-span-7 lg:pt-10">
-            <p className="max-w-[60ch] text-lg leading-relaxed text-fog-muted">
-              O Acervo Tático não ensina coação, fraude, invasão, exposição ou exploração de vulnerabilidades. O
-              foco é leitura de contexto, comunicação consciente, proteção informacional e tomada de decisão em
-              interações humanas.
+      {/* ── Ética ──────────────────────────────────────────────── */}
+      <section className="night" aria-labelledby="etica-title">
+        <div className="container-site py-20 md:py-28">
+          <h2 id="etica-title" className="max-w-[18ch] font-expanded text-mega font-extrabold">
+            Inteligência humana sem manipulação barata.
+          </h2>
+          <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <p className="max-w-[56ch] text-lede text-mist lg:col-span-6">
+              O Acervo Tático não ensina coação, fraude, invasão, exposição ou exploração de vulnerabilidades. O foco é
+              leitura de contexto, comunicação consciente, proteção informacional e tomada de decisão.
             </p>
-            <p className="mt-8 max-w-[40ch] border-l-2 border-brand-bright pl-6 font-display text-display-sm font-medium italic text-fog">
+            <p className="max-w-[40ch] font-expanded text-heading font-extrabold lg:col-span-6">
               O operador não vence porque engana melhor. Vence porque percebe melhor, decide melhor e preserva
               confiança enquanto atua.
             </p>
@@ -514,173 +439,111 @@ export function AcervoDetail({ product }: { product: Product }) {
         </div>
       </section>
 
-      {/* ── 08. Oferta ─────────────────────────────────────────── */}
-      <section id="oferta" className="border-b border-line bg-paper-deep" aria-labelledby="oferta-title">
-        <div className="container-editorial py-16 md:py-24">
-          <SectionLabel n="08">A oferta</SectionLabel>
-          <h2 id="oferta-title" className="mt-5 max-w-3xl font-display text-display-lg font-medium text-ink">
-            Tudo incluso. Em um único pacote.
+      {/* ── Oferta ─────────────────────────────────────────────── */}
+      <section id="oferta" className="bg-snow text-ink" aria-labelledby="oferta-title">
+        <div className="container-site py-20 md:py-28">
+          <h2 id="oferta-title" className="font-expanded text-display font-extrabold">
+            Tudo incluso. Um único pacote.
           </h2>
-
-          <div className="mt-12 grid gap-px border border-line bg-line lg:grid-cols-12">
-            <div className="border-t-2 border-t-brand bg-paper-strong p-8 md:p-10 lg:col-span-5">
-              <p className="eyebrow-brand">Acesso por 12 meses</p>
-              <p className="mt-5 flex flex-wrap items-baseline gap-x-3">
-                <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
-                  {parcelaLabel} de
-                </span>
-                <span className="font-display text-6xl font-medium leading-none text-ink">
-                  {parcelaRest.join(" de ")}
-                </span>
+          <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <p className="text-lg font-semibold text-ink-2">Acesso por 12 meses</p>
+              <p className="tabular mt-3 font-expanded text-mega font-extrabold">{parcelado.split(" de ")[1] ?? parcelado}</p>
+              <p className="mt-2 text-lg text-ink-2">
+                em {parcelado.split(" de ")[0]} no cartão, ou {product.preco} à vista no Pix
               </p>
-              <p className="mt-3 text-sm text-ink-muted">ou {product.preco} à vista · Pix ou cartão</p>
-              <a
-                href={checkout}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-lg mt-8 w-full"
-              >
-                Garantir acesso agora
-                <ArrowUpRight aria-hidden />
-              </a>
-              <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-muted">
-                <li className="inline-flex items-center gap-1.5">
-                  <ShieldCheck className="h-3.5 w-3.5 text-brand" aria-hidden /> 7 dias de garantia
-                </li>
-                <li className="inline-flex items-center gap-1.5">
-                  <CalendarClock className="h-3.5 w-3.5 text-brand" aria-hidden /> 12 meses
-                </li>
-                <li className="inline-flex items-center gap-1.5">
-                  <Lock className="h-3.5 w-3.5 text-brand" aria-hidden /> Pagamento seguro
-                </li>
-              </ul>
+              <div className="mt-8">
+                <BuyButton />
+              </div>
+              <p className="mt-6 text-ink-3">7 dias de garantia incondicional · Pagamento seguro · Acesso por e-mail</p>
             </div>
-
-            <div className="bg-paper-strong p-8 md:p-10 lg:col-span-7">
-              <p className="eyebrow">Conteúdo do acervo</p>
-              <h3 className="mt-2 font-display text-display-sm font-medium text-ink">Acervo Tático HUMINT</h3>
-              <ul className="mt-6 border-t border-line">
+            <div className="lg:col-span-7">
+              <h3 className="font-expanded text-heading font-extrabold">Acervo Tático HUMINT</h3>
+              <ul className="mt-6 border-t-2 border-ink">
                 {INCLUDED.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 border-b border-line py-4 text-[0.9375rem] leading-relaxed text-ink-soft"
-                  >
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-brand" aria-hidden />
-                    <span>{item}</span>
+                  <li key={item} className="flex items-start gap-3 border-b border-line py-4 text-lg text-ink-2">
+                    <Check className="mt-1.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
+                    {item}
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-
-          <div className="mt-6 flex flex-col gap-4 border border-line bg-paper-strong p-7 sm:flex-row sm:items-start md:p-8">
-            <ShieldCheck className="h-7 w-7 shrink-0 text-brand" aria-hidden />
-            <div>
-              <p className="eyebrow-brand mb-1">Garantia incondicional</p>
-              <h3 className="font-display text-xl font-medium text-ink">7 dias para testar. Risco zero.</h3>
-              <p className="mt-2 max-w-[70ch] text-[0.9375rem] leading-relaxed text-ink-soft">
-                Se em uma semana o material não for para você, você pode solicitar o reembolso dentro do prazo de
-                garantia. Sem fricção e sem justificativa.
+              <p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-ink-2">
+                <strong className="text-ink">7 dias para testar.</strong> Se em uma semana o material não for para
+                você, solicite o reembolso dentro do prazo. Sem fricção e sem justificativa.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── FAQ ────────────────────────────────────────────────── */}
-      <section className="border-b border-line" aria-labelledby="faq-title">
-        <div className="container-editorial grid gap-10 py-16 md:py-24 lg:grid-cols-12 lg:gap-12">
+      {/* ── Perguntas ──────────────────────────────────────────── */}
+      <section className="bg-snow-2 text-ink" aria-labelledby="faq-title">
+        <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <SectionLabel n="09">Perguntas frequentes</SectionLabel>
-            <h2 id="faq-title" className="mt-5 font-display text-display-lg font-medium text-ink">
+            <h2 id="faq-title" className="font-expanded text-display font-extrabold">
               Antes de decidir.
             </h2>
-            <p className="mt-5 text-[0.9375rem] leading-relaxed text-ink-muted">
-              Ficou alguma dúvida?{" "}
-              <Link href="/suporte" className="text-ink underline decoration-brand underline-offset-4 hover:text-brand">
+            <p className="mt-6 text-lg text-ink-2">
+              Outra dúvida?{" "}
+              <Link href="/suporte" className="font-semibold underline decoration-signal decoration-2 underline-offset-4">
                 Fale com o suporte
               </Link>
               .
             </p>
           </div>
-          <div className="border-t border-ink lg:col-span-8">
-            {FAQ.map((item, i) => (
+          <div className="border-t-2 border-ink lg:col-span-8">
+            {FAQ.map((item) => (
               <details key={item.q} className="group border-b border-line">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-baseline gap-4">
-                    <span className="font-mono text-[0.6875rem] tracking-[0.14em] text-ink-muted">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="font-display text-xl font-medium text-ink transition-colors group-hover:text-brand">
-                      {item.q}
-                    </span>
-                  </span>
-                  <span
-                    aria-hidden
-                    className="relative mt-2 h-3 w-3 shrink-0 before:absolute before:inset-x-0 before:top-1/2 before:h-px before:bg-ink after:absolute after:inset-y-0 after:left-1/2 after:w-px after:bg-ink after:transition-transform group-open:after:scale-y-0"
-                  />
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg font-bold transition-colors group-hover:text-signal">{item.q}</span>
+                  <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
                 </summary>
-                <p className="max-w-[62ch] pb-6 pl-9 text-[0.9375rem] leading-relaxed text-ink-soft">{item.a}</p>
+                <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{item.a}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Aviso de segurança ─────────────────────────────────── */}
-      <section className="surface-deep" aria-labelledby="aviso-title">
-        <div className="container-editorial py-16 md:py-24">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-6">
-              <p className="stamp text-alert-bright">
-                <ShieldAlert className="h-3.5 w-3.5" aria-hidden />
-                Aviso de segurança · Material protegido
-              </p>
-              <h2 id="aviso-title" className="mt-6 font-display text-display-md font-medium text-fog">
-                Cada linha deste material está catalogada, datada e rastreável até a fonte.
-              </h2>
-            </div>
-            <div className="flex flex-col gap-4 text-[0.9375rem] leading-relaxed text-fog-muted lg:col-span-6 lg:pt-12">
-              <p>
-                Todo o conteúdo do Mundo da HUMINT — marca, identidade, copy, narrativa, estrutura de página,
-                dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é propriedade
-                intelectual exclusiva e está protegido por direito autoral, direito de marca e legislação de
-                concorrência desleal.
-              </p>
-              <p>
-                Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa não passa
-                despercebida. Documentos carregam marcações ocultas e identificadores individuais por operador.
-                Quando um vazamento aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
-              </p>
-            </div>
+      {/* ── Material protegido ─────────────────────────────────── */}
+      <section className="night" aria-labelledby="aviso-title">
+        <div className="container-site py-20 md:py-28">
+          <h2 id="aviso-title" className="max-w-[22ch] font-expanded text-display font-extrabold">
+            Cada linha deste material está catalogada, datada e <span className="redact">rastreável.</span>
+          </h2>
+          <div className="mt-12 grid gap-8 text-lg leading-relaxed text-mist lg:grid-cols-2 lg:gap-16">
+            <p>
+              Todo o conteúdo do Mundo da HUMINT (marca, identidade, textos, estrutura, dossiês, protocolos e
+              ferramentas) é propriedade intelectual exclusiva, protegida por direito autoral, direito de marca e
+              legislação de concorrência desleal.
+            </p>
+            <p>
+              Documentos carregam marcações ocultas e identificadores individuais por operador. Quando um vazamento
+              aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
+            </p>
           </div>
-
-          <div className="mt-12 grid gap-px border border-line-dark bg-line-dark sm:grid-cols-3">
+          <dl className="mt-14 grid gap-x-10 border-t border-line-night sm:grid-cols-3">
             {PROTECTION.map((p) => {
               const Icon = p.icon
               return (
-                <div key={p.title} className="bg-deep p-6">
-                  <Icon className="h-5 w-5 text-brand-bright" aria-hidden />
-                  <p className="mt-4 font-display text-lg font-medium text-fog">{p.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-fog-muted">{p.body}</p>
+                <div key={p.title} className="border-b border-line-night py-6 sm:border-b-0">
+                  <dt className="flex items-center gap-3 font-expanded text-lg font-extrabold">
+                    <Icon className="h-5 w-5 text-signal" aria-hidden />
+                    {p.title}
+                  </dt>
+                  <dd className="mt-2 text-mist">{p.body}</dd>
                 </div>
               )
             })}
-          </div>
-
-          <div className="mt-14 flex flex-col gap-8 border-t border-line-dark pt-10 lg:flex-row lg:items-center lg:justify-between">
-            <p className="max-w-[52ch] font-display text-display-sm font-medium italic text-fog">
-              Quem estuda este material aprende a fechar a própria pegada. Quem tenta copiá-lo, ironicamente, deixa
-              a pegada mais visível de todas.
+          </dl>
+          <div className="mt-16 flex flex-col gap-6 border-t border-line-night pt-12 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-[46ch] text-lede text-mist">
+              Quem estuda este material aprende a fechar a própria pegada. Quem tenta copiá-lo deixa a pegada mais
+              visível de todas.
             </p>
-            <div className="flex flex-col gap-3 lg:items-end">
-              <a href={checkout} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">
-                Garantir meu acesso
-                <ArrowUpRight aria-hidden />
-              </a>
-              <p className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-fog-muted">
-                {parcelado} · Cartão e Pix
-              </p>
+            <div className="flex flex-col gap-2 md:items-end">
+              <BuyButton label="Garantir meu acesso" />
+              <p className="tabular text-sm text-mist-2">{parcelado} · Cartão ou Pix</p>
             </div>
           </div>
         </div>

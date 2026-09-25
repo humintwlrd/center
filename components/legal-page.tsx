@@ -9,42 +9,27 @@ const DOCUMENTS = [
   { label: "Princípios editoriais", href: "/principios-editoriais" },
 ]
 
-/**
- * Documento legal renderizado dentro do layout do site
- * (sem header/footer próprios): abertura padrão + texto em doc-prose.
- */
+/** Documento legal dentro do layout do site. */
 export function LegalPage({
-  eyebrow,
   title,
   updatedAt,
   path,
   children,
 }: {
-  eyebrow: string
   title: string
   updatedAt: string
-  /** Caminho da página, para a trilha e o índice lateral. */
   path?: string
   children: ReactNode
 }) {
   return (
     <>
-      <PageHeader
-        eyebrow={eyebrow.replace(/^\/\s*/, "")}
-        title={title}
-        breadcrumbs={path ? [{ label: title, href: path }] : undefined}
-      >
-        <p className="font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-muted">
-          Última atualização: {updatedAt}
-        </p>
-      </PageHeader>
-
-      <div className="bg-paper">
-        <div className="container-editorial grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-12">
+      <PageHeader title={title} lede={`Última atualização: ${updatedAt}.`} breadcrumbs={path ? [{ label: title, href: path }] : undefined} />
+      <div className="border-t border-line bg-snow text-ink">
+        <div className="container-site grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-14">
           <aside className="lg:col-span-3" aria-label="Documentos">
             <nav className="lg:sticky lg:top-28">
-              <p className="eyebrow mb-4">Documentos</p>
-              <ul className="border-t border-ink">
+              <p className="mb-3 font-bold">Documentos</p>
+              <ul className="border-t-2 border-ink">
                 {DOCUMENTS.map((doc) => {
                   const active = doc.href === path
                   return (
@@ -52,14 +37,9 @@ export function LegalPage({
                       <Link
                         href={doc.href}
                         aria-current={active ? "page" : undefined}
-                        className={
-                          active
-                            ? "flex items-center justify-between py-3 text-sm font-medium text-ink"
-                            : "flex items-center justify-between py-3 text-sm text-ink-muted transition-colors hover:text-ink"
-                        }
+                        className={active ? "block py-3 font-semibold text-signal" : "block py-3 text-ink-2 transition-colors hover:text-ink"}
                       >
                         {doc.label}
-                        {active && <span aria-hidden className="h-1.5 w-1.5 bg-brand" />}
                       </Link>
                     </li>
                   )
@@ -67,8 +47,7 @@ export function LegalPage({
               </ul>
             </nav>
           </aside>
-
-          <article className="doc-prose min-w-0 max-w-[70ch] lg:col-span-8 lg:col-start-5">{children}</article>
+          <article className="prose-read min-w-0 lg:col-span-8 lg:col-start-5">{children}</article>
         </div>
       </div>
     </>

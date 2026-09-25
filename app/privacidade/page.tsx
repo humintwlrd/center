@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function PrivacidadePage() {
   return (
-    <LegalPage path="/privacidade" eyebrow="/ Documento legal" title="Política de Privacidade" updatedAt="4 de junho de 2026">
+    <LegalPage path="/privacidade" title="Política de Privacidade" updatedAt="4 de junho de 2026">
       <p>
         Esta Política de Privacidade descreve como o <strong>Mundo da HUMINT</strong> (&quot;nós&quot;) coleta,
         utiliza, armazena e protege os dados pessoais dos usuários do site{" "}

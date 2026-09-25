@@ -33,7 +33,7 @@ export function ShareButtons({ url, title }: Props) {
         type="button"
         onClick={onCopy}
         aria-label={copied ? "Link copiado" : "Copiar link"}
-        className="inline-flex h-9 items-center gap-2 border border-line bg-paper-strong px-3 text-xs font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="inline-flex h-10 items-center gap-2 border-[1.5px] border-ink px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
       >
         <Link2 className="w-3.5 h-3.5" />
         <span>{copied ? "Copiado" : "Copiar link"}</span>
@@ -43,7 +43,7 @@ export function ShareButtons({ url, title }: Props) {
         href={`https://wa.me/?text=${encodedTitle}%20${encoded}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-9 items-center gap-2 border border-line bg-paper-strong px-3 text-xs font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="inline-flex h-10 items-center gap-2 border-[1.5px] border-ink px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
         aria-label="Compartilhar no WhatsApp"
       >
         WhatsApp
@@ -53,7 +53,7 @@ export function ShareButtons({ url, title }: Props) {
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-9 items-center gap-2 border border-line bg-paper-strong px-3 text-xs font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="inline-flex h-10 items-center gap-2 border-[1.5px] border-ink px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
         aria-label="Compartilhar no LinkedIn"
       >
         LinkedIn
@@ -63,7 +63,7 @@ export function ShareButtons({ url, title }: Props) {
         href={`https://x.com/intent/tweet?text=${encodedTitle}&url=${encoded}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-9 items-center gap-2 border border-line bg-paper-strong px-3 text-xs font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="inline-flex h-10 items-center gap-2 border-[1.5px] border-ink px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
         aria-label="Compartilhar no X"
       >
         X
@@ -71,7 +71,7 @@ export function ShareButtons({ url, title }: Props) {
       <a
         onClick={() => onShare("email")}
         href={`mailto:?subject=${encodedTitle}&body=${encoded}`}
-        className="inline-flex h-9 items-center gap-2 border border-line bg-paper-strong px-3 text-xs font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="inline-flex h-10 items-center gap-2 border-[1.5px] border-ink px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
         aria-label="Compartilhar por e-mail"
       >
         <Mail className="w-3.5 h-3.5" />

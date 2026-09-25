@@ -8,23 +8,24 @@ body:has(.pv-page) > [role="dialog"][aria-label="Aviso de cookies"] {
 }
 
 body:has(.pv-page) {
-  background: var(--color-deep);
+  background: var(--color-night);
 }
 
 .pv-page {
   /* Aliases para o design system (app/globals.css) */
-  --pv-charcoal: var(--color-deep);
-  --pv-graphite: var(--color-deep-2);
-  --pv-paper: var(--color-paper);
-  --pv-bone: var(--color-fog);
-  --pv-amber: var(--color-brand-bright);
-  --pv-blood: var(--color-alert-bright);
+  --pv-charcoal: var(--color-night);
+  --pv-graphite: var(--color-night-2);
+  --pv-paper: var(--color-snow);
+  --pv-bone: #ffffff;
+  --pv-amber: var(--color-signal);
+  --pv-blood: var(--color-signal);
   --pv-ink: var(--color-ink);
-  --tone-fg: var(--color-fog);
-  --tone-bg: var(--color-deep);
-  --tone-muted: var(--color-fog-muted);
-  --tone-accent: var(--color-brand-bright);
-  --tone-line: var(--color-line-dark);
+  --tone-fg: #ffffff;
+  --tone-bg: var(--color-night);
+  --tone-2: var(--color-mist);
+  --tone-3: var(--color-mist-2);
+  --tone-line: var(--color-line-night);
+  --redact-bar: #ffffff;
   font-family: var(--font-sans);
   scroll-behavior: smooth;
 }
@@ -34,8 +35,8 @@ body:has(.pv-page) {
 }
 
 .pv-page ::selection {
-  background: var(--color-brand-bright);
-  color: var(--color-ink);
+  background: var(--color-signal);
+  color: #ffffff;
 }
 
 .pv-page .texture-grain {
@@ -108,8 +109,8 @@ body:has(.pv-page) {
 }
 
 @keyframes pv-amber-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.45), 0 8px 24px rgba(0, 0, 0, 0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0), 0 8px 30px rgba(0, 0, 0, 0.5); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(229, 37, 42, 0), 0 8px 24px rgba(0, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(229, 37, 42, 0), 0 8px 30px rgba(0, 0, 0, 0.5); }
 }
 
 .pv-page .animate-amber-pulse {

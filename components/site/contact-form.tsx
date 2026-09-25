@@ -55,12 +55,11 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="bg-paper-strong border border-brand p-6 sm:p-8">
-        <p className="eyebrow-brand mb-2">Recebido</p>
-        <h3 className="font-display text-2xl font-semibold text-ink">
+      <div role="status" aria-live="polite" className="bg-snow-2 p-6 text-ink sm:p-8">
+                <h3 className="font-expanded text-heading font-extrabold text-ink">
           Sua mensagem chegou aqui.
         </h3>
-        <p className="mt-3 text-ink-soft leading-relaxed">
+        <p className="mt-3 text-ink-2 leading-relaxed">
           Responderemos no e-mail informado. Para imprensa e prazos curtos,
           inclua isso no assunto.
         </p>
@@ -73,7 +72,7 @@ export function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="ct-nome" className="field-label">
-            Nome <span aria-hidden className="text-alert">*</span>
+            Nome <span aria-hidden className="text-signal">*</span>
           </label>
           <input
             id="ct-nome"
@@ -86,7 +85,7 @@ export function ContactForm() {
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="ct-email" className="field-label">
-            E-mail <span aria-hidden className="text-alert">*</span>
+            E-mail <span aria-hidden className="text-signal">*</span>
           </label>
           <input
             id="ct-email"
@@ -119,7 +118,7 @@ export function ContactForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="ct-msg" className="field-label">
-          Mensagem <span aria-hidden className="text-alert">*</span>
+          Mensagem <span aria-hidden className="text-signal">*</span>
         </label>
         <textarea
           id="ct-msg"
@@ -131,13 +130,13 @@ export function ContactForm() {
         />
       </div>
 
-      <label htmlFor="ct-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-muted">
+      <label htmlFor="ct-consent" className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-tone-2">
         <input
           id="ct-consent"
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 shrink-0 accent-brand"
+          className="mt-1 h-4 w-4 shrink-0 accent-signal"
         />
         <span>
           Concordo com o uso dos meus dados para responder a esta solicitação,
@@ -146,7 +145,7 @@ export function ContactForm() {
       </label>
 
       {error && (
-        <p role="alert" className="text-sm text-alert">
+        <p role="alert" className="text-sm text-signal">
           {error}
         </p>
       )}
@@ -154,7 +153,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="btn btn-primary btn-lg self-start"
+        className="btn btn-signal btn-lg self-start"
       >
         {status === "loading" ? "Enviando…" : "Enviar mensagem"}
       </button>

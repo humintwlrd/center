@@ -17,17 +17,17 @@ export const SITE = {
 } as const
 
 export const NAV = {
-  // Navegação editorial do cabeçalho. A Academy fica no CTA à direita.
+  // Navegação do cabeçalho. O Acervo Tático fica no CTA vermelho à direita.
   primary: [
-    { label: "Artigos", href: "/artigos" },
     { label: "Casos", href: "/artigos?categoria=casos-historicos" },
+    { label: "Artigos", href: "/artigos" },
     { label: "Métodos", href: "/metodos" },
-    { label: "Fundamentos", href: "/humint" },
+    { label: "Academy", href: "/academy" },
   ],
   // Acessos auxiliares (menu mobile e rodapé).
   meta: [
+    { label: "Fundamentos", href: "/humint" },
     { label: "Recursos", href: "/recursos" },
-    { label: "Formação", href: "/formacao" },
     { label: "Sobre", href: "/sobre" },
     { label: "Contato", href: "/contato" },
   ],
