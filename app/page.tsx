@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/site/section-heading"
 import { getArticleBySlug, getLatestArticles, type Article } from "@/lib/content/articles"
 import { formatDateBR } from "@/lib/format"
 import { PRODUCTS } from "@/lib/products"
+import { TESTIMONIALS } from "@/lib/testimonials"
 
 const CASE_SLUGS = [
   "como-china-desmantelou-rede-cia-contrainteligencia",
@@ -26,16 +27,6 @@ const APPLICATIONS = [
     scene: "Na vida pessoal",
     body: "Reconhecer manipulação enquanto ela acontece e proteger o que você não deveria ter dito.",
   },
-]
-
-const TESTIMONIALS = [
-  { src: "/images/pv/testimonials/1.webp", alt: "Mensagem de aluno elogiando o dossiê de Engenharia Social pelas dicas para atuação em campo" },
-  { src: "/images/pv/testimonials/7.webp", alt: "Mensagem destacando a profundidade técnica e o olhar prático dos dossiês" },
-  { src: "/images/pv/testimonials/5.webp", alt: "Mensagem afirmando que o material vale a pena e abre novos insights" },
-  { src: "/images/pv/testimonials/4.webp", alt: "Mensagem de comprador recorrente elogiando profundidade e fácil compreensão" },
-  { src: "/images/pv/testimonials/2.webp", alt: "Mensagem sobre aplicar observação e percepção na vida e no trabalho" },
-  { src: "/images/pv/testimonials/3.webp", alt: "Mensagem elogiando a escrita e as aplicações além da área técnica" },
-  { src: "/images/pv/testimonials/6.webp", alt: "Mensagem afirmando que o acervo vale cada centavo e serve para consulta contínua" },
 ]
 
 /** Foto do caso de Pequim: retrato no celular, paisagem a partir de 768px. */
