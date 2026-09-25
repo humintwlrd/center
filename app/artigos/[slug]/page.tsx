@@ -240,7 +240,7 @@ export default async function ArtigoPage({ params }: Props) {
               <p className="mt-7 max-w-[56ch] text-lede text-ink-2" itemProp="description">
                 {article.description}
               </p>
-              <p className="mt-8 flex flex-wrap gap-x-4 gap-y-1 text-ink-3">
+              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-1 text-ink-3">
                 <Link
                   href={`/artigos?categoria=${article.category}`}
                   rel="category tag"
@@ -264,7 +264,7 @@ export default async function ArtigoPage({ params }: Props) {
                   </span>
                 )}
                 <span>{article.readingTime} de leitura</span>
-              </p>
+              </div>
             </div>
             <figure className="m-0 lg:col-span-5">
               <div className={`relative w-full overflow-hidden bg-snow-2 ${portrait ? "aspect-[4/5]" : "aspect-[4/3] lg:aspect-square"}`}>
@@ -275,7 +275,7 @@ export default async function ArtigoPage({ params }: Props) {
                   sizes="(min-width: 1024px) 540px, 100vw"
                   priority
                   className="object-cover"
-                  style={{ objectPosition: portrait ? "center 38%" : "center" }}
+                  style={{ objectPosition: portrait ? "center 40%" : "center" }}
                   itemProp="image"
                 />
               </div>
@@ -306,7 +306,7 @@ export default async function ArtigoPage({ params }: Props) {
                 <h2 id="sources-heading" className="font-expanded text-heading font-extrabold">
                   Fontes e referências
                 </h2>
-                <ol className="mt-5 list-decimal pl-5 text-ink-2 marker:font-bold marker:text-signal">
+                <ol className="mt-5 list-decimal pl-5 text-ink-2 marker:font-bold marker:text-ink">
                   {article.sources.map((s, i) => (
                     <li key={i} className="border-b border-line py-3 pl-2">
                       {s.url ? (

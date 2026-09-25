@@ -72,7 +72,7 @@ export function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="ct-nome" className="field-label">
-            Nome <span aria-hidden className="text-signal">*</span>
+            Nome <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="ct-nome"
@@ -85,7 +85,7 @@ export function ContactForm() {
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="ct-email" className="field-label">
-            E-mail <span aria-hidden className="text-signal">*</span>
+            E-mail <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="ct-email"
@@ -118,7 +118,7 @@ export function ContactForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="ct-msg" className="field-label">
-          Mensagem <span aria-hidden className="text-signal">*</span>
+          Mensagem <span aria-hidden className="text-tone-3">*</span>
         </label>
         <textarea
           id="ct-msg"

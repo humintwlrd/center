@@ -1,10 +1,10 @@
 import Link from "next/link"
-import Image from "next/image"
+import Image, { getImageProps } from "next/image"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
-import { ArticleCard } from "@/components/site/article-card"
 import { SectionHeading } from "@/components/site/section-heading"
 import { NewsletterInline } from "@/components/site/newsletter-inline"
 import { getArticleBySlug, getLatestArticles, type Article } from "@/lib/content/articles"
+import { formatDateBR } from "@/lib/format"
 import { PRODUCTS } from "@/lib/products"
 
 const CASE_SLUGS = [
@@ -12,10 +12,6 @@ const CASE_SLUGS = [
   "caso-sergei-skripal-recrutamento-duplo-agente",
   "unidade-29155-operacoes-encoberto-gru",
   "guerra-golfo-1991-humint-desinformacao",
-  "engenharia-social-ponto-vulneravel-humano",
-  "validacao-de-fontes-humanas",
-  "humint-e-osint-complementaridade-e-limites",
-  "psicologia-gaslighting-alterar-percepcao",
 ]
 
 const APPLICATIONS = [
@@ -43,16 +39,36 @@ const TESTIMONIALS = [
   { src: "/images/pv/testimonials/6.webp", alt: "Mensagem afirmando que o acervo vale cada centavo e serve para consulta contínua" },
 ]
 
+/** Foto do caso de Pequim: retrato no celular, paisagem a partir de 768px. */
+function heroSources() {
+  const common = { alt: "", fill: true, sizes: "100vw" }
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({ ...common, src: "/images/editorial/cia-beijing-desktop.png" })
+  const { props: mobile } = getImageProps({
+    ...common,
+    src: "/images/editorial/cia-beijing-mobile.png",
+    fetchPriority: "high",
+    loading: "eager",
+  })
+  return { desktop, mobile }
+}
+
+function chapterNumber(i: number) {
+  return String(i + 1).padStart(2, "0")
+}
+
 function bySlugs(slugs: string[]) {
   return slugs.map((slug) => getArticleBySlug(slug)).filter(Boolean) as Article[]
 }
 
 export default function HomePage() {
-  const cases = bySlugs(CASE_SLUGS)
+  const [lead, ...chapters] = bySlugs(CASE_SLUGS)
   const shown = new Set(CASE_SLUGS)
-  const latest = getLatestArticles(12)
+  const latest = getLatestArticles(14)
     .filter((a) => !shown.has(a.slug))
-    .slice(0, 6)
+    .slice(0, 8)
+  const hero = heroSources()
 
   const acervo = PRODUCTS.find((p) => p.destaque) ?? PRODUCTS[0]
   const modules = (acervo.ementa ?? []).filter((m) => m.includes("·"))
@@ -61,16 +77,19 @@ export default function HomePage() {
     <>
       {/* ========================= ABERTURA ========================= */}
       <section className="night relative isolate overflow-hidden" aria-labelledby="home-title">
-        <Image
-          src="/images/editorial/cia-beijing-desktop.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="-z-10 object-cover object-[70%_35%] opacity-70"
-        />
-        <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-night via-night/85 to-night/10" />
-        <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-night to-transparent" />
+        <div aria-hidden className="absolute inset-x-0 top-0 -z-10 h-[64svh] md:inset-y-0 md:h-auto">
+          <picture>
+            <source media="(min-width: 768px)" srcSet={hero.desktop} sizes="100vw" />
+            <img
+              {...hero.mobile}
+              alt=""
+              className="object-cover object-[30%_45%] opacity-80 md:object-[70%_35%] md:opacity-70"
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-b from-night/30 via-night/45 to-night md:hidden" />
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-night via-night/85 to-night/10 md:block" />
+          <div className="absolute inset-x-0 bottom-0 hidden h-40 bg-gradient-to-t from-night to-transparent md:block" />
+        </div>
 
         <div className="container-site flex min-h-[calc(100svh-4rem)] flex-col justify-end pt-24 pb-14 md:min-h-[min(calc(100svh-4.5rem),860px)] md:pb-20">
           <h1 id="home-title" className="max-w-[13ch] font-expanded text-mega font-extrabold">
@@ -89,7 +108,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="mt-12 text-sm text-mist-2">
-            Mais de 350 análises publicadas. Instrutor anônimo. Acesso imediato ao acervo.
+            Mais de 350 análises publicadas. Instrutor anônimo. Credenciais no seu e-mail em minutos.
           </p>
         </div>
       </section>
@@ -105,11 +124,68 @@ export default function HomePage() {
             linkLabel="Todos os casos"
           />
         </div>
-        <div className="scroller flex gap-6 overflow-x-auto pb-20 md:pb-28 rail md:gap-8">
-          {cases.map((article, i) => (
-            <ArticleCard key={article.slug} article={article} variant="case" priority={i < 2} />
+
+        {lead && (
+          <article className="group relative isolate">
+            <Link href={`/artigos/${lead.slug}`} className="block">
+              <div className="relative h-[78svh] max-h-[780px] min-h-[520px] overflow-hidden bg-night-3">
+                <Image
+                  src={lead.heroImage}
+                  alt=""
+                  fill
+                  sizes="100vw"
+                  className="media-zoom object-cover object-[45%_25%]"
+                />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-night/0" />
+              </div>
+              <div className="absolute inset-x-0 bottom-0">
+                <div className="container-site grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-3 pb-12 sm:grid-cols-[2.75rem_minmax(0,1fr)] sm:gap-x-4 md:grid-cols-[5rem_minmax(0,1fr)] md:gap-x-8 md:pb-16">
+                  <span className="tabular font-expanded text-heading font-extrabold text-mist-2 md:text-title">01</span>
+                  <div>
+                    <h3 className="max-w-[22ch] font-expanded text-heading font-extrabold sm:text-title md:text-display">{lead.title}</h3>
+                    <p className="mt-5 max-w-[58ch] text-lede text-mist">{lead.description}</p>
+                    <p className="mt-6 inline-flex items-center gap-2 font-semibold">
+                      Ler o caso
+                      <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
+                      <span className="font-normal text-mist-2">· {lead.readingTime}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </article>
+        )}
+
+        <ol className="container-site pb-20 md:pb-28">
+          {chapters.map((article, i) => (
+            <li key={article.slug} className="border-b border-line-night">
+              <Link
+                href={`/artigos/${article.slug}`}
+                className="group grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-3 py-10 sm:grid-cols-[2.75rem_minmax(0,1fr)] sm:gap-x-4 md:grid-cols-[5rem_minmax(0,1fr)_minmax(0,22rem)] md:gap-x-8 md:py-12"
+              >
+                <span className="tabular font-expanded text-heading font-extrabold text-mist-2 md:text-title">
+                  {chapterNumber(i + 1)}
+                </span>
+                <div>
+                  <h3 className="font-expanded text-heading font-extrabold transition-colors group-hover:text-signal md:text-title">
+                    {article.title}
+                  </h3>
+                  <p className="mt-3 max-w-[60ch] leading-relaxed text-mist line-clamp-3">{article.description}</p>
+                  <p className="mt-4 text-sm text-mist-2">{article.readingTime} de leitura</p>
+                </div>
+                <div className="relative col-start-2 mt-6 aspect-[16/10] overflow-hidden bg-night-3 md:col-start-3 md:mt-0">
+                  <Image
+                    src={article.heroImage}
+                    alt=""
+                    fill
+                    sizes="(min-width: 768px) 352px, 80vw"
+                    className="media-zoom object-cover grayscale-[40%] transition-[filter] duration-700 group-hover:grayscale-0"
+                  />
+                </div>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       {/* ======================= NA SUA VIDA ======================== */}
@@ -209,11 +285,24 @@ export default function HomePage() {
       <section className="bg-snow text-ink" aria-labelledby="arquivo-title">
         <div className="container-site py-20 md:py-28">
           <SectionHeading id="arquivo-title" title="Publicado recentemente" href="/artigos" linkLabel="Todos os artigos" />
-          <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <ol className="grid gap-x-12 md:grid-cols-2">
             {latest.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+              <li key={article.slug} className="border-t border-line">
+                <Link href={`/artigos/${article.slug}`} className="group block py-6">
+                  <h3 className="text-lg font-bold leading-snug transition-colors group-hover:text-signal" style={{ fontStretch: "110%" }}>
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-ink-3">
+                    {article.categoryLabel}
+                    <span aria-hidden> · </span>
+                    <time dateTime={article.publishedAt}>{formatDateBR(article.publishedAt)}</time>
+                    <span aria-hidden> · </span>
+                    {article.readingTime}
+                  </p>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ol>
 
           <div className="mt-20 grid gap-8 border-t-2 border-ink pt-10 lg:grid-cols-12 lg:items-center lg:gap-16">
             <div className="lg:col-span-6">

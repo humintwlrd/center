@@ -159,19 +159,19 @@ export default async function ArtigosPage({ searchParams }: Props) {
                     href={`/artigos/${lead.slug}`}
                     tabIndex={-1}
                     aria-hidden
-                    className="relative block aspect-[4/3] overflow-hidden bg-snow-2 md:col-span-7"
+                    className="relative block aspect-[4/5] overflow-hidden bg-snow-2 md:col-span-5"
                   >
                     <Image
                       src={lead.heroImage || "/placeholder.svg"}
                       alt=""
                       fill
                       priority
-                      sizes="(min-width: 768px) 760px, 100vw"
+                      sizes="(min-width: 768px) 540px, 100vw"
                       className="media-zoom object-cover"
-                      style={{ objectPosition: isInstagramImage(lead.heroImage) ? "center 38%" : "center" }}
+                      style={{ objectPosition: isInstagramImage(lead.heroImage) ? "center 40%" : "center" }}
                     />
                   </Link>
-                  <div className="md:col-span-5">
+                  <div className="md:col-span-7">
                     <h3 className="font-expanded text-title font-extrabold">
                       <Link href={`/artigos/${lead.slug}`} className="transition-colors group-hover:text-signal">
                         {lead.title}

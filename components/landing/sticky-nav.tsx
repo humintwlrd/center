@@ -14,13 +14,11 @@ export function StickyNav() {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-night/92 backdrop-blur-xl border-b border-signal/20 py-2"
-          : "bg-night/40 backdrop-blur-md border-b border-white/5 py-2.5 md:py-3"
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
+        scrolled ? "border-line-night bg-night py-2" : "border-transparent bg-night/70 py-2.5 md:py-3"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 md:px-8 flex items-center justify-between">
+      <div className="container-site flex items-center justify-between">
         <a href="#top" className="flex items-center group" aria-label="Mundo da HUMINT">
           <img
             src="/images/pv/logo-mundo-humint.png"
@@ -30,23 +28,12 @@ export function StickyNav() {
         </a>
 
         {/* Desktop CTA — mobile uses sticky bottom CTA instead */}
-        <a
-          href="#oferta"
-          className="hidden md:inline-flex items-center gap-2 bg-signal text-on-signal text-xs font-semibold px-5 py-2.5 hover:bg-signal-hover transition-colors"
-        >
-          <span className="h-1.5 w-1.5 bg-on-signal animate-pulse" />
+        <a href="#oferta" className="btn btn-signal btn-sm hidden md:inline-flex">
           Acessar acervo
         </a>
 
         {/* Mobile mini-CTA — only when scrolled past hero */}
-        <a
-          href="#oferta"
-          className={`md:hidden inline-flex items-center gap-1.5 text-sm font-bold px-3 py-2 transition-all ${
-            scrolled
-              ? "bg-signal text-on-signal opacity-100"
-              : "text-signal border border-signal/40 opacity-90"
-          }`}
-        >
+        <a href="#oferta" className={`btn btn-sm md:hidden ${scrolled ? "btn-signal" : "border-white text-white"}`}>
           Acessar
         </a>
       </div>

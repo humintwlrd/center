@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 type Props = {
   article: Article
   /**
-   * default: imagem 4:3 + título (grades)
+   * default: imagem 4:5 + título (grades)
    * case: retrato 3:4, para o trilho de casos
    * row: miniatura à esquerda (listas)
    * compact: só texto
@@ -18,9 +18,12 @@ type Props = {
   className?: string
 }
 
-/** Posts do Instagram são verticais (9:16) com o texto no terço central. */
+/**
+ * Posts do Instagram são verticais (9:16) com a legenda gravada entre ~15% e ~80%
+ * da altura. O recorte 4:5 centrado em 40% mantém a legenda inteira.
+ */
 function imagePosition(src?: string) {
-  return isInstagramImage(src) ? "center 38%" : "center"
+  return isInstagramImage(src) ? "center 40%" : "center"
 }
 
 function Meta({ article, withDate = true }: { article: Article; withDate?: boolean }) {
@@ -101,7 +104,7 @@ export function ArticleCard({ article, variant = "default", priority, headingLev
 
   return (
     <article className={cn("group flex flex-col", className)}>
-      <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-[4/3] overflow-hidden bg-snow-2">
+      <Link href={href} tabIndex={-1} aria-hidden className="relative block aspect-[4/5] overflow-hidden bg-snow-2">
         <Image
           src={article.heroImage || "/placeholder.svg"}
           alt=""

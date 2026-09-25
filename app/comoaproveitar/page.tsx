@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { Brain, Layers, Target, Repeat } from "lucide-react"
 import { BackButton } from "@/components/back-button"
 import { PageHeader } from "@/components/site/page-header"
 import { SplitSection } from "@/components/site/split-section"
@@ -14,22 +13,18 @@ export const metadata: Metadata = {
 
 const STEPS = [
   {
-    icon: Brain,
     title: "Estude com intenção, não com pressa",
     body: "O acervo não é uma maratona para terminar no fim de semana. Cada dossiê foi construído para ser lido com atenção, anotado e digerido. Leia uma vez para entender o caso, leia de novo para enxergar a técnica por trás dele. Conhecimento de HUMINT não se consome, se internaliza.",
   },
   {
-    icon: Repeat,
     title: "Repetição espaçada retém melhor",
     body: "Voltar a um material dias depois fixa o aprendizado muito mais do que devorar tudo de uma vez. É por isso que o ritmo de liberação ajuda você: ele cria intervalos naturais de revisão, em vez de um acúmulo que você nunca mais abre. Revisite, releia, conecte com o que veio antes.",
   },
   {
-    icon: Target,
     title: "Aplique em situações reais",
     body: "A diferença entre quem leu sobre HUMINT e quem domina HUMINT está na prática. Observe conversas, identifique padrões de comportamento, teste a leitura de intenções no dia a dia. O acervo te dá o mapa, a maestria vem da aplicação diária em campo.",
   },
   {
-    icon: Layers,
     title: "Construa sobre uma base",
     body: "Os conteúdos foram sequenciados para que um conceito prepare o terreno para o próximo. Quem pula etapas perde a fundação. Quem segue o ritmo constrói um entendimento que se sustenta, camada sobre camada, do fundamento à aplicação avançada.",
   },
@@ -51,10 +46,7 @@ export default function ComoAproveitarPage() {
           <ol className="grid gap-x-12 md:grid-cols-2">
             {STEPS.map((step) => (
               <li key={step.title} className="border-t-2 border-ink py-7">
-                <h2 className="flex items-center gap-3 font-expanded text-heading font-extrabold">
-                  <step.icon className="h-6 w-6 shrink-0 text-signal" aria-hidden />
-                  {step.title}
-                </h2>
+                <h2 className="font-expanded text-heading font-extrabold">{step.title}</h2>
                 <p className="mt-3 text-lg leading-relaxed text-ink-2">{step.body}</p>
               </li>
             ))}

@@ -77,7 +77,7 @@ export function SupportForm() {
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="sp-nome" className="field-label">
-            Nome <span aria-hidden className="text-signal">*</span>
+            Nome <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="sp-nome"
@@ -90,7 +90,7 @@ export function SupportForm() {
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="sp-email" className="field-label">
-            E-mail <span aria-hidden className="text-signal">*</span>
+            E-mail <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="sp-email"
@@ -123,7 +123,7 @@ export function SupportForm() {
         </div>
         <div className="flex flex-col gap-1.5">
           <label htmlFor="sp-assunto" className="field-label">
-            Assunto <span aria-hidden className="text-signal">*</span>
+            Assunto <span aria-hidden className="text-tone-3">*</span>
           </label>
           <input
             id="sp-assunto"
@@ -138,7 +138,7 @@ export function SupportForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="sp-msg" className="field-label">
-          Descreva sua solicitação <span aria-hidden className="text-signal">*</span>
+          Descreva sua solicitação <span aria-hidden className="text-tone-3">*</span>
         </label>
         <textarea
           id="sp-msg"

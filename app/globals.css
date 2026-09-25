@@ -270,6 +270,17 @@
   background-color: var(--redact-bar, var(--color-ink));
 }
 
+/* Marcador de lista: uma tarja curta, o dispositivo nativo do mundo.
+   Segue o tom da superfície (tinta no papel, branco na noite). */
+@utility bar-mark {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1.1em;
+  height: 0.42em;
+  margin-top: 0.6em;
+  background-color: var(--redact-bar, var(--color-ink));
+}
+
 /* =========================================================
    Controls
    ========================================================= */
@@ -512,15 +523,5 @@
   }
   & > * {
     scroll-snap-align: start;
-  }
-}
-
-/* Faixa de termos (página do Acervo) */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
   }
 }

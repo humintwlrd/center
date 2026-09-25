@@ -42,7 +42,7 @@ export default function RecursosPage() {
               <article key={g.href} id={id}>
                 <h3 className="font-expanded text-heading font-extrabold">{g.title}</h3>
                 <p className="mt-3 max-w-[60ch] text-lg leading-relaxed text-ink-2">{g.summary}</p>
-                <ol className="mt-6 list-decimal pl-6 marker:font-bold marker:text-signal">
+                <ol className="mt-6 list-decimal pl-6 marker:font-bold marker:text-ink">
                   {g.steps.map((step) => (
                     <li key={step} className="border-t border-line py-3 pl-2 text-lg leading-relaxed text-ink-2">
                       {step}

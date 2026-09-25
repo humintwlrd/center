@@ -1,19 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Check,
-  X,
-  BookOpen,
-  ListChecks,
-  ClipboardCheck,
-  RefreshCw,
-  Fingerprint,
-  Bell,
-  Scale,
-  Plus,
-} from "lucide-react"
+import { ArrowRight, ArrowUpRight, X, Plus } from "lucide-react"
 import { Breadcrumbs } from "@/components/site/breadcrumbs"
 import type { Product } from "@/lib/products"
 
@@ -22,7 +9,7 @@ import type { Product } from "@/lib/products"
  * Conteúdo adaptado da humint.click para o design system do site.
  */
 
-const MARQUEE = [
+const TERMS = [
   "Behavioral baselining",
   "Cognitive interviewing",
   "Statement analysis",
@@ -105,14 +92,10 @@ const MODULES = [
 ]
 
 const PLATFORM = [
-  { icon: BookOpen, title: "Dossiês completos", body: "Materiais em PDF para estudo profundo, revisão e consulta." },
-  { icon: ListChecks, title: "Protocolos práticos", body: "Estruturas para aplicar leitura, observação e análise com método." },
-  {
-    icon: ClipboardCheck,
-    title: "Checklists e modelos",
-    body: "Ferramentas para organizar hipóteses, registrar sinais e revisar decisões.",
-  },
-  { icon: RefreshCw, title: "Atualizações", body: "Novas liberações e melhorias durante o período de acesso." },
+  { title: "Dossiês completos", body: "Materiais em PDF para estudo profundo, revisão e consulta." },
+  { title: "Protocolos práticos", body: "Estruturas para aplicar leitura, observação e análise com método." },
+  { title: "Checklists e modelos", body: "Ferramentas para organizar hipóteses, registrar sinais e revisar decisões." },
+  { title: "Atualizações", body: "Novas liberações e melhorias durante o período de acesso." },
 ]
 
 const STEPS = [
@@ -191,9 +174,9 @@ const FAQ = [
 ]
 
 const PROTECTION = [
-  { icon: Fingerprint, title: "Identificação", body: "Cada acesso é nominal e marcado. A origem de qualquer cópia é determinável." },
-  { icon: Bell, title: "Notificação", body: "Remoção imediata, derrubada de domínios, plataformas e meios de pagamento envolvidos." },
-  { icon: Scale, title: "Responsabilização", body: "Medidas cíveis e criminais cabíveis, com perdas, danos e ressarcimento de custos." },
+  { title: "Identificação", body: "Cada acesso é nominal e marcado. A origem de qualquer cópia é determinável." },
+  { title: "Notificação", body: "Remoção imediata, derrubada de domínios, plataformas e meios de pagamento envolvidos." },
+  { title: "Responsabilização", body: "Medidas cíveis e criminais cabíveis, com perdas, danos e ressarcimento de custos." },
 ]
 
 export function AcervoDetail({ product }: { product: Product }) {
@@ -255,15 +238,12 @@ export function AcervoDetail({ product }: { product: Product }) {
             </div>
           </div>
         </div>
-        <div className="overflow-hidden border-y border-line-night py-4" aria-hidden>
-          <div className="flex w-max animate-[marquee_48s_linear_infinite] items-center gap-10 whitespace-nowrap">
-            {[...MARQUEE, ...MARQUEE].map((t, i) => (
-              <span key={i} className="flex items-center gap-10 font-expanded text-lg font-bold text-mist-2">
-                {t}
-                <span className="h-2 w-2 bg-signal" />
-              </span>
+        <div className="hidden border-y border-line-night py-4 md:block">
+          <ul className="container-site flex flex-wrap gap-x-8 gap-y-1 font-expanded font-bold text-mist-2">
+            {TERMS.map((t) => (
+              <li key={t}>{t}</li>
             ))}
-          </div>
+          </ul>
         </div>
       </header>
 
@@ -289,7 +269,9 @@ export function AcervoDetail({ product }: { product: Product }) {
               {POSITIONS.map((p, i) => (
                 <div
                   key={p.who}
-                  className={`flex items-baseline justify-between gap-6 border-b border-line py-5 ${i === 2 ? "text-signal" : ""}`}
+                  className={`flex items-baseline justify-between gap-6 border-b border-line py-5 ${
+                    i === 0 ? "text-ink-3" : i === 1 ? "text-ink-2" : "text-ink"
+                  }`}
                 >
                   <dt className="text-lg font-semibold">{p.who}</dt>
                   <dd className="font-expanded text-lg font-extrabold">{p.when}</dd>
@@ -328,7 +310,7 @@ export function AcervoDetail({ product }: { product: Product }) {
                 key={m.title}
                 className={`grid gap-4 border-b border-line-night py-8 md:grid-cols-12 md:gap-8 ${m.highlight ? "text-white" : ""}`}
               >
-                <p className={`text-sm font-bold md:col-span-2 md:pt-2 ${m.highlight ? "text-signal" : "text-mist-2"}`}>
+                <p className={`text-sm font-bold md:col-span-2 md:pt-2 ${m.highlight ? "text-white" : "text-mist-2"}`}>
                   {m.tag}
                 </p>
                 <div className="md:col-span-6">
@@ -337,8 +319,8 @@ export function AcervoDetail({ product }: { product: Product }) {
                 </div>
                 <ul className="flex flex-col gap-2 md:col-span-4 md:pt-2">
                   {m.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2.5 text-[0.9375rem]">
-                      <Check className="mt-1 h-4 w-4 shrink-0 text-signal" aria-hidden />
+                    <li key={b} className="flex items-start gap-3 text-[0.9375rem]">
+                      <span aria-hidden className="bar-mark" />
                       {b}
                     </li>
                   ))}
@@ -362,18 +344,12 @@ export function AcervoDetail({ product }: { product: Product }) {
               </p>
             </div>
             <dl className="grid gap-x-10 sm:grid-cols-2 lg:col-span-7">
-              {PLATFORM.map((card) => {
-                const Icon = card.icon
-                return (
-                  <div key={card.title} className="border-t-2 border-ink py-6">
-                    <dt className="flex items-center gap-3 font-expanded text-lg font-extrabold">
-                      <Icon className="h-5 w-5 text-signal" aria-hidden />
-                      {card.title}
-                    </dt>
-                    <dd className="mt-2 text-ink-2">{card.body}</dd>
-                  </div>
-                )
-              })}
+              {PLATFORM.map((card) => (
+                <div key={card.title} className="border-t-2 border-ink py-6">
+                  <dt className="font-expanded text-lg font-extrabold">{card.title}</dt>
+                  <dd className="mt-2 text-ink-2">{card.body}</dd>
+                </div>
+              ))}
             </dl>
           </div>
 
@@ -382,7 +358,7 @@ export function AcervoDetail({ product }: { product: Product }) {
             <ol className="grid gap-10 sm:grid-cols-3 lg:col-span-7">
               {STEPS.map((step, i) => (
                 <li key={step.n}>
-                  <span className="font-expanded text-display font-extrabold text-signal">{i + 1}</span>
+                  <span className="tabular font-expanded text-display font-extrabold text-ink-3">{i + 1}</span>
                   <h3 className="mt-3 text-lg font-bold">{step.title}</h3>
                   <p className="mt-2 text-ink-2">{step.body}</p>
                 </li>
@@ -399,8 +375,8 @@ export function AcervoDetail({ product }: { product: Product }) {
             <h2 className="font-expanded text-title font-extrabold">Para quem depende de ler pessoas em decisões reais.</h2>
             <ul className="mt-8">
               {FOR_WHOM.map((item) => (
-                <li key={item} className="flex items-start gap-3 border-t border-line py-4 text-lg leading-relaxed text-ink-2">
-                  <Check className="mt-1.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
+                <li key={item} className="flex items-start gap-4 border-t border-line py-4 text-lg leading-relaxed text-ink-2">
+                  <span aria-hidden className="bar-mark" />
                   {item}
                 </li>
               ))}
@@ -411,7 +387,7 @@ export function AcervoDetail({ product }: { product: Product }) {
             <ul className="mt-8">
               {NOT_FOR.map((item) => (
                 <li key={item} className="flex items-start gap-3 border-t border-line py-4 text-lg leading-relaxed text-ink-3">
-                  <X className="mt-1.5 h-5 w-5 shrink-0 text-ink" aria-hidden />
+                  <X className="mt-1.5 h-5 w-5 shrink-0 text-ink-3" aria-hidden />
                   {item}
                 </li>
               ))}
@@ -448,7 +424,7 @@ export function AcervoDetail({ product }: { product: Product }) {
           <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="text-lg font-semibold text-ink-2">Acesso por 12 meses</p>
-              <p className="tabular mt-3 font-expanded text-mega font-extrabold">{parcelado.split(" de ")[1] ?? parcelado}</p>
+              <p className="tabular mt-3 font-expanded text-display font-extrabold whitespace-nowrap">{parcelado.split(" de ")[1] ?? parcelado}</p>
               <p className="mt-2 text-lg text-ink-2">
                 em {parcelado.split(" de ")[0]} no cartão, ou {product.preco} à vista no Pix
               </p>
@@ -461,8 +437,8 @@ export function AcervoDetail({ product }: { product: Product }) {
               <h3 className="font-expanded text-heading font-extrabold">Acervo Tático HUMINT</h3>
               <ul className="mt-6 border-t-2 border-ink">
                 {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3 border-b border-line py-4 text-lg text-ink-2">
-                    <Check className="mt-1.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
+                  <li key={item} className="flex items-start gap-4 border-b border-line py-4 text-lg text-ink-2">
+                    <span aria-hidden className="bar-mark" />
                     {item}
                   </li>
                 ))}
@@ -523,18 +499,12 @@ export function AcervoDetail({ product }: { product: Product }) {
             </p>
           </div>
           <dl className="mt-14 grid gap-x-10 border-t border-line-night sm:grid-cols-3">
-            {PROTECTION.map((p) => {
-              const Icon = p.icon
-              return (
-                <div key={p.title} className="border-b border-line-night py-6 sm:border-b-0">
-                  <dt className="flex items-center gap-3 font-expanded text-lg font-extrabold">
-                    <Icon className="h-5 w-5 text-signal" aria-hidden />
-                    {p.title}
-                  </dt>
-                  <dd className="mt-2 text-mist">{p.body}</dd>
-                </div>
-              )
-            })}
+            {PROTECTION.map((p) => (
+              <div key={p.title} className="border-b border-line-night py-6 sm:border-b-0">
+                <dt className="font-expanded text-lg font-extrabold">{p.title}</dt>
+                <dd className="mt-2 text-mist">{p.body}</dd>
+              </div>
+            ))}
           </dl>
           <div className="mt-16 flex flex-col gap-6 border-t border-line-night pt-12 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[46ch] text-lede text-mist">

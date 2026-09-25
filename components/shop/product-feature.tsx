@@ -34,7 +34,7 @@ export function ProductFeature({ product, tone = "snow", priority }: Props) {
           className="media-zoom object-cover object-top"
         />
         {product.badge && (
-          <span className="absolute left-0 top-5 bg-signal px-3 py-1.5 text-sm font-bold text-on-signal">
+          <span className="absolute left-0 top-5 bg-snow px-3 py-1.5 text-sm font-bold text-ink">
             {product.badge}
           </span>
         )}

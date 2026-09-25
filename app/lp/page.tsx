@@ -1,23 +1,5 @@
 import type { Metadata } from "next"
-import {
-  Scale,
-  History,
-  KeyRound,
-  Activity,
-  FileSearch,
-  AlertTriangle,
-  Flag,
-  Eye,
-  BookOpen,
-  FileText,
-  ListChecks,
-  ClipboardCheck,
-  Check,
-  X,
-  Lock,
-  ArrowRight,
-  ShieldCheck,
-} from "lucide-react"
+import { ArrowRight, Plus, X } from "lucide-react"
 import { SITE } from "@/lib/site"
 
 export const metadata: Metadata = {
@@ -48,7 +30,6 @@ const CHAPTER_FORMAT = [
 const PARTS = [
   {
     tag: "Parte 1",
-    icon: AlertTriangle,
     title: "Os erros que nos fazem confiar nas pessoas erradas",
     body: "Antes de aprender a avaliar bem, é preciso entender por que avaliamos mal. Os três atalhos mentais que sabotam o julgamento de quase todo mundo.",
     chapters: [
@@ -59,7 +40,6 @@ const PARTS = [
   },
   {
     tag: "Parte 2",
-    icon: FileSearch,
     title: "O que a inteligência procura antes de confiar",
     body: "Quando o custo de errar é alto, ninguém confia por impressão. Os quatro critérios que profissionais usam para avaliar uma pessoa antes de lhe dar acesso.",
     chapters: [
@@ -71,7 +51,6 @@ const PARTS = [
   },
   {
     tag: "Parte 3",
-    icon: History,
     title: "Os maiores erros de julgamento da história da inteligência",
     body: "Quatro casos reais em que sinais existiam, estavam à vista e foram ignorados por anos. Cada um é dissecado em o que foi observado, o que foi ignorado e o que deveria ter sido percebido.",
     chapters: [
@@ -83,7 +62,6 @@ const PARTS = [
   },
   {
     tag: "Parte 4",
-    icon: KeyRound,
     title: "O método A.C.E.S.S.O.",
     body: "Tudo o que foi estudado nas partes anteriores condensado em um protocolo simples, repetível e aplicável a qualquer pessoa que você precise avaliar.",
     chapters: [
@@ -98,42 +76,36 @@ const PARTS = [
 const METHOD = [
   {
     letter: "A",
-    icon: KeyRound,
     title: "Acesso",
     q: "O que essa pessoa realmente sabe e alcança?",
     body: "Mapeie o que ela toca, vê e influencia de fato, para além do cargo no cartão.",
   },
   {
     letter: "C",
-    icon: Activity,
     title: "Consistência",
     q: "O comportamento é estável ao longo do tempo?",
     body: "Compare o que foi dito ontem com o que é feito hoje. A confiança vive na repetição.",
   },
   {
     letter: "E",
-    icon: FileSearch,
     title: "Evidências",
     q: "O que comprova aquilo que ela afirma?",
     body: "Separe o verificável da boa narrativa. Afirmação não é prova.",
   },
   {
     letter: "S",
-    icon: AlertTriangle,
     title: "Situação",
     q: "Existem pressões ou vulnerabilidades em jogo?",
     body: "Dívida, ego, ressentimento ou necessidade mudam o que uma pessoa é capaz de fazer.",
   },
   {
     letter: "S",
-    icon: Flag,
     title: "Sinais",
     q: "Há alertas sendo ignorados por conveniência?",
     body: "O problema raramente é a falta de sinal. É a vontade de não enxergá-lo.",
   },
   {
     letter: "O",
-    icon: Eye,
     title: "Observação contínua",
     q: "A confiança continua merecida?",
     body: "Avaliar não é um veredito único. É um processo que acompanha a relação.",
@@ -169,22 +141,18 @@ const CASES = [
 
 const PLATFORM = [
   {
-    icon: BookOpen,
     title: "O guia completo",
     body: "As 4 partes e os 11 capítulos em PDF, para estudo profundo, revisão e consulta.",
   },
   {
-    icon: FileText,
     title: "Os 4 dossiês de caso",
     body: "Ames, Philby, Montes e Hanssen dissecados em observado, ignorado e o que perceber.",
   },
   {
-    icon: ListChecks,
     title: "O protocolo A.C.E.S.S.O.",
     body: "O framework de seis perguntas em formato aplicável a qualquer avaliação.",
   },
   {
-    icon: ClipboardCheck,
     title: "Fichas e checklists",
     body: "Modelos para registrar sinais, pressões e evidências de uma pessoa antes de decidir.",
   },
@@ -277,497 +245,449 @@ const PROTECTION = [
   },
 ]
 
+/** Larguras das tarjas da prévia: o trecho do documento não é reproduzido aqui. */
+const WITHHELD_LINES = [
+  ["w-[34%]", "w-[22%]", "w-[30%]"],
+  ["w-[18%]", "w-[40%]", "w-[26%]"],
+  ["w-[46%]", "w-[14%]", "w-[24%]"],
+  ["w-[28%]", "w-[36%]"],
+]
+
+function splitChapter(text: string) {
+  const [num, ...rest] = text.split(" — ")
+  return rest.length ? { num, text: rest.join(" — ") } : { num: null, text }
+}
+
 export default function LandingPage() {
+  const ames = CASES[0]
+
   return (
-    <div className="bg-snow">
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="border-b border-line bg-snow">
-        <div className="container-site py-16 md:py-24 lg:py-28">
-          <div className="max-w-4xl">
-            <h1 className="font-expanded text-display font-extrabold text-ink text-balance">
+    <div className="bg-night">
+      {/* ── Abertura ─────────────────────────────────────────── */}
+      <section className="night" aria-labelledby="lp-title">
+        <div className="container-site grid gap-14 py-16 md:py-24 lg:grid-cols-12 lg:items-center lg:gap-16 lg:py-28">
+          <div className="lg:col-span-7">
+            <h1 id="lp-title" className="font-expanded text-display font-extrabold">
               Como investigadores, espiões e empresas obtêm informações através de pessoas
             </h1>
-            <p className="mt-6 max-w-2xl text-lede text-ink-2 text-pretty">
-              Um método de avaliação humana extraído de documentos de inteligência desclassificados, para
-              identificar confiança, risco e vulnerabilidade em alguém — antes de dar acesso, fechar negócio ou
-              colocar o seu nome ao lado do dela.
+            <p className="mt-8 max-w-[56ch] text-lede text-mist">
+              Um método de avaliação humana extraído de documentos de inteligência desclassificados, para identificar
+              confiança, risco e vulnerabilidade em alguém — antes de dar acesso, fechar negócio ou colocar o seu nome
+              ao lado do dela.
             </p>
-            <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <a
-                href={CHECKOUT_URL}
-                className="btn btn-signal btn-lg"
-              >
+            <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
+              <a href={CHECKOUT_URL} className="btn btn-signal btn-lg">
                 Quero aprender o método
-                <ArrowRight className="h-4 w-4" aria-hidden />
+                <ArrowRight aria-hidden />
               </a>
-              <span className="text-xs text-ink-3">
-                R$ 49 · 7 dias de garantia
-              </span>
+              <p className="tabular text-mist">
+                R$ 49 <span className="text-mist-2">· 7 dias de garantia</span>
+              </p>
             </div>
+          </div>
+
+          {/* Prévia do formato de um capítulo */}
+          <figure className="lg:col-span-5">
+            <div className="bg-snow p-6 text-ink [--redact-bar:var(--color-ink)] md:p-8">
+              <div className="flex items-baseline justify-between gap-4 border-b-2 border-ink pb-4">
+                <p className="font-expanded text-lg font-extrabold">Cap. 8 · {ames.name}</p>
+                <p className="text-sm text-ink-3">Parte 3</p>
+              </div>
+              <div className="border-b border-line py-5">
+                <p className="text-sm font-semibold text-ink-3">Documento</p>
+                <div role="img" aria-label="Trecho do documento omitido nesta prévia" className="mt-3 flex flex-col gap-2.5">
+                  {WITHHELD_LINES.map((line, i) => (
+                    <p key={i} className="flex gap-2">
+                      {line.map((w, j) => (
+                        <span key={j} className={`withheld ${w}`} />
+                      ))}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="border-b border-line py-5">
+                <p className="text-sm font-semibold text-ink-3">O que foi observado</p>
+                <p className="mt-2 leading-relaxed">{ames.seen}</p>
+              </div>
+              <div className="pt-5">
+                <p className="text-sm font-semibold text-ink-3">O que foi ignorado</p>
+                <p className="mt-2 leading-relaxed">{ames.ignored}</p>
+              </div>
+            </div>
+            <figcaption className="mt-3 text-sm text-mist-2">
+              Prévia do formato de um capítulo. O trecho do documento fica omitido aqui.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* ── A situação real ──────────────────────────────────── */}
+      <section className="bg-snow text-ink" aria-label="A situação real">
+        <div className="container-site py-20 md:py-28">
+          <div className="max-w-[64ch]">
+            <div className="flex flex-col gap-6 text-lg leading-relaxed text-ink-2">
+              <p className="text-[1.375rem] leading-normal text-ink md:text-[1.625rem]">
+                Quase todo prejuízo grande começa com uma boa impressão. O sócio parecia alinhado. O funcionário parecia
+                leal. O parceiro parecia sólido. Tudo fazia sentido no começo — e foi exatamente por isso que ninguém
+                olhou com atenção.
+              </p>
+              <p>
+                A verdade desconfortável é que a maioria das pessoas avalia caráter em segundos e quase nunca revisa
+                esse julgamento. Confiamos em quem fala bem, em quem tem o título certo, em quem se parece conosco. E
+                então entregamos acesso, dinheiro, informação e reputação com base em pouco mais do que simpatia.
+              </p>
+              <p>
+                Serviços de inteligência aprenderam, no custo mais alto possível, que isso não funciona. Quando confiar
+                na pessoa errada significa perder agentes, operações e vidas, a avaliação deixa de ser instinto e vira
+                método. Este material traduz esse método para as decisões da sua vida.
+              </p>
+            </div>
+
+            <div className="my-14 border-y-2 border-ink font-expanded text-heading font-extrabold md:my-16">
+              <p className="border-b border-line py-5 text-ink-3">Quem confia por impressão descobre depois.</p>
+              <p className="border-b border-line py-5 text-ink-2">Quem avalia com critério percebe durante.</p>
+              <p className="py-5">
+                Quem observa com método percebe <span className="redact">antes.</span>
+              </p>
+            </div>
+
+            <p className="font-expanded text-heading font-extrabold">Não se trata de desconfiar de todo mundo.</p>
+            <p className="mt-4 text-lg leading-relaxed text-ink-2">
+              Nem de manipular ninguém. Trata-se de parar de confiar no escuro. Em toda relação que importa, alguém está
+              avaliando alguém. Quando você não sabe avaliar, normalmente só entende o custo depois que ele já chegou.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── 02. A situação real ──────────────────────────────── */}
-      <section className="border-b border-line">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <div className="prose-read">
-              <p>
-                Quase todo prejuízo grande começa com uma boa impressão. O sócio parecia alinhado. O funcionário
-                parecia leal. O parceiro parecia sólido. Tudo fazia sentido no começo — e foi exatamente por isso
-                que ninguém olhou com atenção.
-              </p>
-              <p>
-                A verdade desconfortável é que a maioria das pessoas avalia caráter em segundos e quase nunca
-                revisa esse julgamento. Confiamos em quem fala bem, em quem tem o título certo, em quem se parece
-                conosco. E então entregamos acesso, dinheiro, informação e reputação com base em pouco mais do
-                que simpatia.
-              </p>
-              <p>
-                Serviços de inteligência aprenderam, no custo mais alto possível, que isso não funciona. Quando
-                confiar na pessoa errada significa perder agentes, operações e vidas, a avaliação deixa de ser
-                instinto e vira método. Este material traduz esse método para as decisões da sua vida.
-              </p>
-            </div>
-
-            <div className="my-10 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
-              <div className="bg-snow p-6">
-                <p className="font-expanded text-lg font-semibold text-ink">Quem confia por impressão</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-3">descobre depois.</p>
-              </div>
-              <div className="bg-snow p-6">
-                <p className="font-expanded text-lg font-semibold text-ink">Quem avalia com critério</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-3">percebe durante.</p>
-              </div>
-              <div className="bg-snow p-6">
-                <p className="font-expanded text-lg font-semibold text-ink">Quem observa com método</p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-3">percebe antes.</p>
-              </div>
-            </div>
-
-            <div className="mt-8 bg-snow-2 p-6">
-              <p className="text-[15px] leading-relaxed text-ink-2">
-                Não se trata de desconfiar de todo mundo nem de manipular ninguém. Trata-se de parar de confiar no
-                escuro. Em toda relação que importa, alguém está avaliando alguém. Quando você não sabe avaliar,
-                normalmente só entende o custo depois que ele já chegou.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 03. Como cada capítulo funciona ──────────────────── */}
-      <section className="border-b border-line bg-snow-2">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
+      {/* ── Como cada capítulo funciona ──────────────────────── */}
+      <section className="night" aria-labelledby="formato-title">
+        <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <h2 id="formato-title" className="font-expanded text-title font-extrabold">
               Cada capítulo parte de um documento real e termina em aplicação prática.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
+            <p className="mt-6 max-w-[48ch] text-lg leading-relaxed text-mist">
               Não é teoria solta nem opinião. Cada lição nasce de um arquivo de inteligência desclassificado e é
               conduzida pelo mesmo percurso, do documento à decisão que você toma amanhã.
             </p>
           </div>
-
-          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
+          <ol className="border-t border-line-night lg:col-span-7">
             {CHAPTER_FORMAT.map((step, i) => (
-              <div key={step.tag} className="bg-snow p-6">
-                <span className="text-xs text-signal">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-3 font-expanded text-base font-semibold text-ink">{step.tag}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-3">{step.body}</p>
-              </div>
+              <li
+                key={step.tag}
+                className="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-4 border-b border-line-night py-6 md:grid-cols-[3rem_12rem_minmax(0,1fr)] md:gap-x-6"
+              >
+                <span className="tabular font-expanded text-lg font-extrabold text-mist-2">{i + 1}</span>
+                <h3 className="font-expanded text-lg font-extrabold">{step.tag}</h3>
+                <p className="col-start-2 mt-1 leading-relaxed text-mist md:col-start-3 md:mt-0">{step.body}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* ── 04. A arquitetura: 4 partes / 11 capítulos ───────── */}
-      <section className="border-b border-line">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
+      {/* ── A arquitetura: 4 partes, 11 capítulos ────────────── */}
+      <section className="night-2" aria-labelledby="partes-title">
+        <div className="container-site py-20 md:py-28">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
+            <h2 id="partes-title" className="font-expanded text-title font-extrabold lg:col-span-7">
               Quatro partes. Onze capítulos. Um método para avaliar qualquer pessoa.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
-              Você começa entendendo por que erra ao confiar, aprende o que a inteligência procura antes de
-              confiar, estuda os maiores erros de julgamento da história e termina com um método próprio para
-              aplicar a partir de hoje.
+            <p className="max-w-[52ch] text-lg leading-relaxed text-mist lg:col-span-5 lg:pt-2">
+              Você começa entendendo por que erra ao confiar, aprende o que a inteligência procura antes de confiar,
+              estuda os maiores erros de julgamento da história e termina com um método próprio para aplicar a partir de
+              hoje.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2">
-            {PARTS.map((part) => {
-              const Icon = part.icon
-              return (
-                <div
-                  key={part.title}
-                  className={`flex flex-col p-7 md:p-8 ${part.highlight ? "night" : "bg-snow"}`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={`inline-flex h-11 w-11 items-center justify-center ${
-                        part.highlight ? "bg-signal text-on-signal" : "bg-snow-2 text-signal"
-                      }`}
-                    >
-                      <Icon className="h-5 w-5" aria-hidden />
-                    </span>
-                    <span
-                      className={`text-sm font-bold ${
-                        part.highlight ? "text-signal" : "text-ink-3"
-                      }`}
-                    >
-                      {part.tag}
-                    </span>
+          <ol className="mt-16 border-t border-line-night">
+            {PARTS.map((part, i) => (
+              <li key={part.title} className="grid gap-6 border-b border-line-night py-10 lg:grid-cols-12 lg:gap-16">
+                <div className="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-4 lg:col-span-5 lg:grid-cols-[3.5rem_minmax(0,1fr)]">
+                  <span className="tabular font-expanded text-title font-extrabold text-mist-2">{i + 1}</span>
+                  <div>
+                    <h3 className="font-expanded text-heading font-extrabold">{part.title}</h3>
+                    <p className="mt-3 leading-relaxed text-mist">{part.body}</p>
                   </div>
-                  <h3
-                    className={`mt-5 font-expanded text-xl font-semibold leading-snug ${
-                      part.highlight ? "text-white" : "text-ink"
-                    }`}
-                  >
-                    {part.title}
-                  </h3>
-                  <p
-                    className={`mt-2 text-sm leading-relaxed ${part.highlight ? "text-mist" : "text-ink-3"}`}
-                  >
-                    {part.body}
-                  </p>
-                  <ul
-                    className="mt-5 space-y-2 border-t border-dashed pt-4 text-sm"
-                    style={{ borderColor: part.highlight ? "var(--color-line-night)" : "var(--color-line)" }}
-                  >
-                    {part.chapters.map((ch) => (
-                      <li key={ch} className="flex items-start gap-2">
-                        <Check
-                          className={`mt-0.5 h-4 w-4 shrink-0 ${part.highlight ? "text-signal" : "text-signal"}`}
-                          aria-hidden
-                        />
-                        <span className={part.highlight ? "text-white/85" : "text-ink-2"}>{ch}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-              )
-            })}
-          </div>
+                <ul className="lg:col-span-7">
+                  {part.chapters.map((ch) => {
+                    const { num, text } = splitChapter(ch)
+                    return (
+                      <li
+                        key={ch}
+                        className="grid grid-cols-[4.5rem_minmax(0,1fr)] gap-x-4 border-t border-line-night py-3.5 first:border-t-0 first:pt-0"
+                      >
+                        {num ? (
+                          <span className="tabular text-sm font-bold text-mist-2">{num}</span>
+                        ) : (
+                          <span aria-hidden className="bar-mark" />
+                        )}
+                        <span className="leading-relaxed">{text}</span>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
-      {/* ── 05. Os 4 casos reais ─────────────────────────────── */}
-      <section className="border-b border-line bg-snow-2">
-        <div className="container-site py-16 md:py-24">
+      {/* ── Os 4 casos reais ─────────────────────────────────── */}
+      <section className="night" aria-labelledby="casos-title">
+        <div className="container-site py-20 md:py-28">
           <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
+            <h2 id="casos-title" className="font-expanded text-title font-extrabold">
               Quatro traições que ninguém viu chegar — até ser tarde.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
-              Em todos eles os sinais existiam, estavam à vista e foram explicados como qualquer outra coisa. Cada
-              caso é dissecado em três colunas: o que foi observado, o que foi ignorado e o que deveria ter sido
-              percebido.
+            <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-mist">
+              Em todos eles os sinais existiam, estavam à vista e foram explicados como qualquer outra coisa. Cada caso é
+              dissecado em três colunas: o que foi observado, o que foi ignorado e o que deveria ter sido percebido.
             </p>
           </div>
 
-          <div className="mt-12 max-w-4xl space-y-px overflow-hidden border border-line bg-line">
+          <div className="mt-14">
+            <div aria-hidden className="hidden grid-cols-12 gap-8 border-b-2 border-white pb-3 text-sm font-semibold text-mist-2 md:grid">
+              <span className="col-span-3">Caso</span>
+              <span className="col-span-3">O que foi observado</span>
+              <span className="col-span-3">O que foi ignorado</span>
+              <span className="col-span-3">A lição</span>
+            </div>
             {CASES.map((c) => (
-              <div key={c.name} className="bg-snow p-7 md:p-8">
-                <div className="flex items-center gap-3">
-                  <Scale className="h-5 w-5 text-signal" aria-hidden />
-                  <h3 className="font-expanded text-xl font-semibold text-ink">{c.name}</h3>
+              <dl key={c.name} className="grid gap-4 border-b border-line-night py-7 md:grid-cols-12 md:gap-8">
+                <div className="md:col-span-3">
+                  <dt className="sr-only">Caso</dt>
+                  <dd className="font-expanded text-heading font-extrabold">{c.name}</dd>
                 </div>
-                <div className="mt-5 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
-                  <div className="bg-snow-2 p-5">
-                    <p className=" text-sm text-signal">Observado</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-2">{c.seen}</p>
-                  </div>
-                  <div className="bg-snow-2 p-5">
-                    <p className=" text-sm text-ink-3">Ignorado</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-2">{c.ignored}</p>
-                  </div>
-                  <div className="bg-snow-2 p-5">
-                    <p className=" text-sm text-ink">A lição</p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-2">{c.lesson}</p>
-                  </div>
+                <div className="md:col-span-3">
+                  <dt className="text-sm font-semibold text-mist-2 md:sr-only">O que foi observado</dt>
+                  <dd className="mt-1 leading-relaxed text-mist md:mt-0">{c.seen}</dd>
                 </div>
-              </div>
+                <div className="md:col-span-3">
+                  <dt className="text-sm font-semibold text-mist-2 md:sr-only">O que foi ignorado</dt>
+                  <dd className="mt-1 leading-relaxed text-mist md:mt-0">{c.ignored}</dd>
+                </div>
+                <div className="md:col-span-3">
+                  <dt className="text-sm font-semibold text-mist-2 md:sr-only">A lição</dt>
+                  <dd className="mt-1 font-semibold leading-relaxed md:mt-0">{c.lesson}</dd>
+                </div>
+              </dl>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 06. O método A.C.E.S.S.O. ────────────────────────── */}
-      <section className="border-b border-line">
-        <div className="container-site py-16 md:py-24">
+      {/* ── O método A.C.E.S.S.O. ────────────────────────────── */}
+      <section className="bg-snow text-ink" aria-labelledby="metodo-title">
+        <div className="container-site py-20 md:py-28">
           <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
+            <h2 id="metodo-title" className="font-expanded text-title font-extrabold">
               A.C.E.S.S.O. — seis perguntas antes de confiar em alguém.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
-              Todo o conteúdo do guia condensado em um protocolo simples o bastante para você usar de cabeça em
-              qualquer avaliação — de uma contratação a uma sociedade.
+            <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-ink-2">
+              Todo o conteúdo do guia condensado em um protocolo simples o bastante para você usar de cabeça em qualquer
+              avaliação — de uma contratação a uma sociedade.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {METHOD.map((m) => {
-              const Icon = m.icon
-              return (
-                <div key={m.title} className="bg-snow p-7">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 items-center justify-center bg-ink font-expanded text-2xl font-medium text-signal">
-                      {m.letter}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <Icon className="h-4 w-4 text-signal" aria-hidden />
-                      <h3 className="font-expanded text-lg font-semibold text-ink">{m.title}</h3>
-                    </div>
-                  </div>
-                  <p className="mt-4 font-expanded text-[15px] font-medium leading-snug text-ink">{m.q}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-3">{m.body}</p>
+          <dl className="mt-14 grid gap-x-12 md:grid-cols-2">
+            {METHOD.map((m) => (
+              <div key={m.title} className="grid grid-cols-[3.5rem_minmax(0,1fr)] gap-x-5 border-t-2 border-ink py-7">
+                <span aria-hidden className="font-expanded text-display font-extrabold leading-none">
+                  {m.letter}
+                </span>
+                <div>
+                  <dt className="font-expanded text-heading font-extrabold">{m.title}</dt>
+                  <dd className="mt-2 text-lg font-semibold leading-snug">{m.q}</dd>
+                  <dd className="mt-2 leading-relaxed text-ink-2">{m.body}</dd>
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
-      {/* ── A plataforma / entregável ────────────────────────── */}
-      <section className="border-b border-line bg-snow-2">
-        <div className="container-site py-16 md:py-24">
+      {/* ── O material e o acesso ────────────────────────────── */}
+      <section className="night-2" aria-labelledby="material-title">
+        <div className="container-site py-20 md:py-28">
           <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
+            <h2 id="material-title" className="font-expanded text-title font-extrabold">
               Um material para estudar uma vez e consultar pela vida toda.
             </h2>
-            <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2 text-pretty">
+            <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-mist">
               Tudo entregue na área de membros, em ordem progressiva: do erro de julgamento ao método pronto para
               aplicar.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-            {PLATFORM.map((card) => {
-              const Icon = card.icon
-              return (
-                <div key={card.title} className="bg-snow p-7">
-                  <span className="inline-flex h-11 w-11 items-center justify-center bg-snow-2 text-signal">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </span>
-                  <h3 className="mt-5 font-expanded text-lg font-semibold text-ink">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-3">{card.body}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Como o acesso funciona ───────────────────────────── */}
-      <section className="border-b border-line">
-        <div className="container-site py-16 md:py-24">
-          <div className="mt-8 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-3">
-            {STEPS.map((step) => (
-              <div key={step.n} className="bg-snow p-7">
-                <span className="font-expanded text-5xl font-medium text-signal">{step.n}</span>
-                <h3 className="mt-4 font-expanded text-lg font-semibold text-ink">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-3">{step.body}</p>
+          <dl className="mt-14 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+            {PLATFORM.map((card) => (
+              <div key={card.title} className="border-t-2 border-white py-6">
+                <dt className="font-expanded text-lg font-extrabold">{card.title}</dt>
+                <dd className="mt-2 leading-relaxed text-mist">{card.body}</dd>
               </div>
             ))}
+          </dl>
+
+          <div className="mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <h3 className="font-expanded text-title font-extrabold lg:col-span-5">Como o acesso funciona.</h3>
+            <ol className="grid gap-10 sm:grid-cols-3 lg:col-span-7">
+              {STEPS.map((step, i) => (
+                <li key={step.n}>
+                  <span className="tabular font-expanded text-display font-extrabold text-mist-2">{i + 1}</span>
+                  <h4 className="mt-3 text-lg font-bold">{step.title}</h4>
+                  <p className="mt-2 leading-relaxed text-mist">{step.body}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
 
       {/* ── Para quem / Não é para ───────────────────────────── */}
-      <section className="border-b border-line bg-snow-2">
-        <div className="container-site py-16 md:py-24">
-          <div className="grid gap-px overflow-hidden border border-line bg-line lg:grid-cols-2">
-            <div className="bg-snow p-8 md:p-10">
-              <h2 className="font-expanded text-heading font-extrabold text-ink text-balance">
-                Para quem paga caro quando confia na pessoa errada.
-              </h2>
-              <ul className="mt-6 space-y-4">
-                {FOR_WHOM.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-2">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-snow p-8 md:p-10">
-              <h2 className="font-expanded text-heading font-extrabold text-ink text-balance">
-                Não é para quem quer poder sobre os outros.
-              </h2>
-              <ul className="mt-6 space-y-4">
-                {NOT_FOR.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-3">
-                    <X className="mt-0.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      <section className="bg-snow text-ink" aria-label="Para quem é o material">
+        <div className="container-site grid gap-16 py-20 md:py-28 lg:grid-cols-2">
+          <div>
+            <h2 className="font-expanded text-title font-extrabold">Para quem paga caro quando confia na pessoa errada.</h2>
+            <ul className="mt-8">
+              {FOR_WHOM.map((item) => (
+                <li key={item} className="flex items-start gap-4 border-t border-line py-4 text-lg leading-relaxed text-ink-2">
+                  <span aria-hidden className="bar-mark" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="font-expanded text-title font-extrabold">Não é para quem quer poder sobre os outros.</h2>
+            <ul className="mt-8">
+              {NOT_FOR.map((item) => (
+                <li key={item} className="flex items-start gap-3 border-t border-line py-4 text-lg leading-relaxed text-ink-3">
+                  <X className="mt-1.5 h-5 w-5 shrink-0 text-ink-3" aria-hidden />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       {/* ── Ética e limites ──────────────────────────────────── */}
-      <section className="night">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-white text-balance">
-              Avaliar pessoas não é manipular pessoas.
-            </h2>
-            <p className="mt-6 text-[15px] md:text-base leading-relaxed text-mist text-pretty">
-              Este material não ensina coação, fraude, invasão, chantagem ou exploração de vulnerabilidades. Ele
-              ensina a julgar confiança com critério, a enxergar risco antes do prejuízo e a proteger o que é
-              seu — começando pela própria capacidade de decidir.
+      <section className="night" aria-labelledby="etica-title">
+        <div className="container-site py-20 md:py-28">
+          <h2 id="etica-title" className="max-w-[18ch] font-expanded text-display font-extrabold">
+            Avaliar pessoas não é manipular pessoas.
+          </h2>
+          <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <p className="max-w-[56ch] text-lede text-mist lg:col-span-6">
+              Este material não ensina coação, fraude, invasão, chantagem ou exploração de vulnerabilidades. Ele ensina a
+              julgar confiança com critério, a enxergar risco antes do prejuízo e a proteger o que é seu — começando pela
+              própria capacidade de decidir.
             </p>
-            <p className="mt-5 text-lg font-expanded font-medium text-white text-pretty">
-              Quem sabe avaliar não vence porque engana melhor. Vence porque percebe melhor, decide melhor e para
-              de pagar a conta da confiança cega.
+            <p className="max-w-[40ch] font-expanded text-heading font-extrabold lg:col-span-6">
+              Quem sabe avaliar não vence porque engana melhor. Vence porque percebe melhor, decide melhor e para de pagar
+              a conta da confiança cega.
             </p>
           </div>
         </div>
       </section>
 
       {/* ── Oferta ───────────────────────────────────────────── */}
-      <section id="oferta" className="border-b border-line bg-snow-2 scroll-mt-20">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink text-balance">
-              Tudo incluso. Em um único pacote.
-            </h2>
-          </div>
-
-          <div className="mx-auto mt-12 grid max-w-4xl gap-px overflow-hidden border border-line bg-line lg:grid-cols-5">
-            {/* Preço */}
-            <div className="bg-snow p-8 md:p-10 lg:col-span-2">
-              <p className="text-xs text-signal">Acesso por 12 meses</p>
-              <p className="mt-4 text-sm text-ink-3 line-through">De R$ 1.290</p>
-              <div className="mt-1 flex items-baseline gap-2">
-                <span className="font-expanded text-6xl font-medium text-ink">R$ 49</span>
-              </div>
-              <p className="mt-2 text-sm text-ink-3">pagamento único · PIX ou cartão</p>
-              <a
-                href={CHECKOUT_URL}
-                className="mt-7 inline-flex w-full items-center justify-center gap-2 bg-signal px-6 py-4 text-base font-semibold text-on-signal transition-colors hover:bg-signal-hover"
-              >
+      <section id="oferta" className="night-2 scroll-mt-20" aria-labelledby="oferta-title">
+        <div className="container-site py-20 md:py-28">
+          <h2 id="oferta-title" className="font-expanded text-display font-extrabold">
+            Tudo incluso. Em um único pacote.
+          </h2>
+          <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <p className="text-lg font-semibold text-mist">Acesso por 12 meses</p>
+              <p className="mt-4 text-mist-2 line-through">De R$ 1.290</p>
+              <p className="tabular mt-1 font-expanded text-mega font-extrabold">R$ 49</p>
+              <p className="mt-2 text-lg text-mist">pagamento único · PIX ou cartão</p>
+              <a href={CHECKOUT_URL} className="btn btn-signal btn-lg mt-8 w-full sm:w-auto">
                 Garantir meu acesso
-                <ArrowRight className="h-4 w-4" aria-hidden />
+                <ArrowRight aria-hidden />
               </a>
-              <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm tracking-wider text-ink-3">
-                <span className="inline-flex items-center gap-1.5">
-                  <ShieldCheck className="h-3.5 w-3.5 text-signal" aria-hidden /> 7 dias garantia
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Lock className="h-3.5 w-3.5 text-signal" aria-hidden /> Pagamento seguro
-                </span>
-              </div>
+              <p className="mt-6 text-mist-2">7 dias de garantia · Pagamento seguro</p>
             </div>
-
-            {/* Conteúdo incluso */}
-            <div className="bg-snow p-8 md:p-10 lg:col-span-3">
-              <h3 className="font-expanded text-xl font-semibold text-ink">Como Avaliar Pessoas</h3>
-              <ul className="mt-5 space-y-3">
+            <div className="lg:col-span-7">
+              <h3 className="font-expanded text-heading font-extrabold">Como Avaliar Pessoas</h3>
+              <ul className="mt-6 border-t-2 border-white">
                 {INCLUDED.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-ink-2">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-signal" aria-hidden />
-                    <span>{item}</span>
+                  <li key={item} className="flex items-start gap-4 border-b border-line-night py-4 text-lg text-mist">
+                    <span aria-hidden className="bar-mark" />
+                    {item}
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-
-          {/* Garantia */}
-          <div className="mt-8 max-w-4xl border border-line bg-snow p-7 md:p-8">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center bg-snow-2 text-signal">
-                <ShieldCheck className="h-6 w-6" aria-hidden />
-              </span>
-              <div>
-                <h3 className="font-expanded text-lg font-semibold text-ink">7 dias para testar. Risco zero.</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-ink-2">
-                  Se em uma semana o material não for para você, você pode solicitar o reembolso dentro do prazo
-                  de garantia. Sem fricção e sem justificativa.
-                </p>
-              </div>
+              <p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-mist">
+                <strong className="text-white">7 dias para testar. Risco zero.</strong> Se em uma semana o material não
+                for para você, você pode solicitar o reembolso dentro do prazo de garantia. Sem fricção e sem
+                justificativa.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── FAQ ──────────────────────────────────────────────── */}
-      <section className="border-b border-line">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h2 className="font-expanded text-title font-extrabold text-ink">
-              Antes de decidir.
-            </h2>
-            <div className="mt-10 divide-y divide-line border-y border-line">
-              {FAQ.map((item, i) => (
-                <details key={item.q} className="group">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5">
-                    <span className="flex items-baseline gap-3">
-                      <span className="text-xs text-signal">
-                        / {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="font-expanded text-lg font-semibold text-ink">{item.q}</span>
-                    </span>
-                    <ArrowRight
-                      className="h-4 w-4 shrink-0 text-ink-3 transition-transform group-open:rotate-90"
-                      aria-hidden
-                    />
-                  </summary>
-                  <p className="pb-5 pl-9 text-[15px] leading-relaxed text-ink-2">{item.a}</p>
-                </details>
-              ))}
-            </div>
+      {/* ── Perguntas ────────────────────────────────────────── */}
+      <section className="bg-snow text-ink" aria-labelledby="faq-title">
+        <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
+          <h2 id="faq-title" className="font-expanded text-display font-extrabold lg:col-span-4">
+            Antes de decidir.
+          </h2>
+          <div className="border-t-2 border-ink lg:col-span-8">
+            {FAQ.map((item) => (
+              <details key={item.q} className="group border-b border-line">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg font-bold transition-colors group-hover:text-signal">{item.q}</span>
+                  <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
+                </summary>
+                <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Aviso de segurança ───────────────────────────────── */}
-      <section className="night">
-        <div className="container-site py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h2 className="font-expanded text-display font-extrabold text-white text-balance">
-              Cada linha deste material está catalogada, datada e <span className="redact">rastreável.</span>
-            </h2>
-            <p className="mt-6 text-[15px] leading-relaxed text-mist">
-              Todo o conteúdo do Mundo da HUMINT — marca, identidade, copy, narrativa, estrutura de página,
-              guias, dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é
-              propriedade intelectual exclusiva e está protegido por direito autoral, direito de marca e
-              legislação de concorrência desleal.
+      {/* ── Material protegido ───────────────────────────────── */}
+      <section className="night" aria-labelledby="aviso-title">
+        <div className="container-site py-20 md:py-28">
+          <h2 id="aviso-title" className="max-w-[22ch] font-expanded text-display font-extrabold">
+            Cada linha deste material está catalogada, datada e <span className="redact">rastreável.</span>
+          </h2>
+          <div className="mt-12 grid gap-8 text-lg leading-relaxed text-mist lg:grid-cols-2 lg:gap-16">
+            <p>
+              Todo o conteúdo do Mundo da HUMINT — marca, identidade, copy, narrativa, estrutura de página, guias,
+              dossiês, protocolos, ferramentas e qualquer material entregue na área de membros — é propriedade
+              intelectual exclusiva e está protegido por direito autoral, direito de marca e legislação de concorrência
+              desleal.
             </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-mist">
+            <p>
               Cópia, clonagem, reprodução, adaptação, revenda, redistribuição ou engenharia reversa não passa
-              despercebida. Documentos carregam marcações ocultas e identificadores individuais por leitor.
-              Quando um vazamento aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
+              despercebida. Documentos carregam marcações ocultas e identificadores individuais por leitor. Quando um
+              vazamento aparece, ele aponta de volta para quem o originou. Não é ameaça. É procedimento.
             </p>
-
-            <div className="mt-10 grid gap-px overflow-hidden border border-line-night bg-line-night sm:grid-cols-3">
-              {PROTECTION.map((p) => (
-                <div key={p.title} className="bg-night p-6">
-                  <p className="font-expanded text-lg font-medium text-white">{p.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-mist">{p.body}</p>
-                </div>
-              ))}
-            </div>
-
-            <p className="mt-10 text-[15px] leading-relaxed text-white">
-              Quem estuda este material aprende a enxergar a pegada dos outros. Quem tenta copiá-lo,
-              ironicamente, deixa a pegada mais visível de todas.
+          </div>
+          <dl className="mt-14 grid gap-x-10 border-t border-line-night sm:grid-cols-3">
+            {PROTECTION.map((p) => (
+              <div key={p.title} className="border-b border-line-night py-6 sm:border-b-0">
+                <dt className="font-expanded text-lg font-extrabold">{p.title}</dt>
+                <dd className="mt-2 text-mist">{p.body}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="mt-16 flex flex-col gap-6 border-t border-line-night pt-12 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-[46ch] text-lede text-mist">
+              Quem estuda este material aprende a enxergar a pegada dos outros. Quem tenta copiá-lo, ironicamente, deixa a
+              pegada mais visível de todas.
             </p>
-
-            <div className="mt-12">
-              <a
-                href={CHECKOUT_URL}
-                className="btn btn-signal btn-lg"
-              >
-                Quero aprender o método por R$ 49
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
-            </div>
+            <a href={CHECKOUT_URL} className="btn btn-signal btn-lg">
+              Quero aprender o método por R$ 49
+              <ArrowRight aria-hidden />
+            </a>
           </div>
         </div>
       </section>

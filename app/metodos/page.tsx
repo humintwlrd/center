@@ -75,7 +75,7 @@ export default function MetodosPage() {
                           <h3 className="font-expanded text-heading font-extrabold">
                             {m.title}
                             {m.startHere && (
-                              <span className="ml-3 inline-block translate-y-[-0.2em] bg-signal px-2 py-0.5 align-middle text-sm font-bold text-on-signal" style={{ fontStretch: "100%" }}>
+                              <span className="ml-3 inline-block translate-y-[-0.2em] bg-ink px-2 py-0.5 align-middle text-sm font-bold text-snow" style={{ fontStretch: "100%" }}>
                                 Comece aqui
                               </span>
                             )}
