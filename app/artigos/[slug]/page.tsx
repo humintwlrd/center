@@ -133,7 +133,7 @@ function renderBlock(block: Article["body"][number], i: number): ReactNode {
         <blockquote key={i}>
           {highlightEntities(block.text)}
           {block.cite && (
-            <cite className="mt-3 block text-base font-semibold not-italic text-ink-3">
+            <cite className="mt-3 block text-base font-medium not-italic text-ink-3">
               — {block.cite}
             </cite>
           )}
@@ -234,7 +234,7 @@ export default async function ArtigoPage({ params }: Props) {
           />
           <div className="mt-12 grid gap-10 md:mt-16 lg:grid-cols-12 lg:items-end lg:gap-14">
             <div className="lg:col-span-7">
-              <h1 className="font-expanded text-title font-extrabold" itemProp="headline">
+              <h1 className="text-title font-medium" itemProp="headline">
                 {article.title}
               </h1>
               <p className="mt-7 max-w-[56ch] text-lede text-ink-2" itemProp="description">
@@ -245,7 +245,7 @@ export default async function ArtigoPage({ params }: Props) {
                   href={`/artigos?categoria=${article.category}`}
                   rel="category tag"
                   itemProp="articleSection"
-                  className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4"
+                  className="font-medium text-ink underline decoration-ink-4 decoration-2 underline-offset-4"
                 >
                   {article.categoryLabel}
                 </Link>
@@ -293,7 +293,7 @@ export default async function ArtigoPage({ params }: Props) {
 
             {article.methodology && (
               <section aria-labelledby="methodology-heading" className="mt-14 max-w-[68ch] bg-snow-2 p-6 md:p-8">
-                <h2 id="methodology-heading" className="text-lg font-bold">
+                <h2 id="methodology-heading" className="text-lg font-medium">
                   Transparência metodológica
                 </h2>
                 <p className="mt-2 leading-relaxed text-ink-2">{article.methodology}</p>
@@ -302,14 +302,14 @@ export default async function ArtigoPage({ params }: Props) {
 
             {article.sources && article.sources.length > 0 && (
               <section aria-labelledby="sources-heading" className="mt-14 max-w-[68ch]">
-                <h2 id="sources-heading" className="font-expanded text-heading font-extrabold">
+                <h2 id="sources-heading" className="text-heading font-medium">
                   Fontes e referências
                 </h2>
-                <ol className="mt-5 list-decimal pl-5 text-ink-2 marker:font-bold marker:text-ink">
+                <ol className="mt-5 list-decimal pl-5 text-ink-2 marker:font-medium marker:text-ink">
                   {article.sources.map((s, i) => (
                     <li key={i} className="border-b border-line py-3 pl-2">
                       {s.url ? (
-                        <a href={s.url} className="underline decoration-signal decoration-2 underline-offset-4 hover:text-signal" rel="noopener nofollow external" target="_blank">
+                        <a href={s.url} className="underline decoration-ink-4 decoration-2 underline-offset-4 hover:text-ink-2" rel="noopener nofollow external" target="_blank">
                           {s.label}
                         </a>
                       ) : (
@@ -324,7 +324,7 @@ export default async function ArtigoPage({ params }: Props) {
 
             {article.corrections && article.corrections.length > 0 && (
               <section aria-labelledby="corrections-heading" className="mt-10 max-w-[68ch]">
-                <h2 id="corrections-heading" className="text-lg font-bold">
+                <h2 id="corrections-heading" className="text-lg font-medium">
                   Correções
                 </h2>
                 <ul className="mt-3 flex flex-col gap-2 text-ink-2">
@@ -341,9 +341,9 @@ export default async function ArtigoPage({ params }: Props) {
               </section>
             )}
 
-            <footer className="mt-14 flex max-w-[68ch] flex-col gap-8 border-t-2 border-ink pt-8">
+            <footer className="mt-14 flex max-w-[68ch] flex-col gap-8 border-t border-line pt-8">
               <div>
-                <h2 className="text-lg font-bold">Compartilhar</h2>
+                <h2 className="text-lg font-medium">Compartilhar</h2>
                 <div className="mt-3">
                   <ShareButtons url={url} title={article.title} />
                 </div>
@@ -368,7 +368,7 @@ export default async function ArtigoPage({ params }: Props) {
                 {originalInstagramUrl && (
                   <>
                     {" "}
-                    <a href={originalInstagramUrl} target="_blank" rel="noopener noreferrer nofollow external" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
+                    <a href={originalInstagramUrl} target="_blank" rel="noopener noreferrer nofollow external" className="font-medium text-ink underline decoration-ink-4 decoration-2 underline-offset-4">
                       Ver o post original no Instagram
                     </a>
                     .

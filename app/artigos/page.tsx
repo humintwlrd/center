@@ -1,11 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft, ArrowRight, Search } from "lucide-react"
+import { ArrowLeft, ChevronRight, Search } from "lucide-react"
 import { ArticleCard } from "@/components/site/article-card"
 import { AcademyCta } from "@/components/site/academy-cta"
 import { PageHeader } from "@/components/site/page-header"
-import { ARTICLES, articleMatchesCategory, articleMatchesTag, isInstagramImage } from "@/lib/content/articles"
+import { ARTICLES, articleMatchesCategory, articleMatchesTag } from "@/lib/content/articles"
 import { getCategoryBySlug } from "@/lib/content/categories"
 import { ARTICLE_CATEGORIES } from "@/lib/site"
 import { pageMetadata } from "@/lib/seo"
@@ -99,7 +98,7 @@ export default async function ArtigosPage({ searchParams }: Props) {
           action="/artigos"
           method="get"
           role="search"
-          className="flex max-w-xl items-stretch gap-2"
+          className="flex max-w-xl items-stretch"
         >
           {cat && <input type="hidden" name="categoria" value={cat} />}
           {tag && <input type="hidden" name="tag" value={tag} />}
@@ -112,16 +111,16 @@ export default async function ArtigosPage({ searchParams }: Props) {
             name="q"
             defaultValue={rawQ}
             placeholder="Buscar por caso, tema ou método"
-            className="field h-12 w-0 min-w-0 flex-1"
+            className="field w-0 min-w-0 flex-1"
           />
-          <button type="submit" className="btn btn-solid h-12 shrink-0">
+          <button type="submit" className="btn btn-signal min-h-16 shrink-0">
             <Search aria-hidden />
             <span className="sr-only sm:not-sr-only">Buscar</span>
           </button>
         </form>
       </PageHeader>
 
-      <nav aria-label="Categorias" className="sticky top-16 z-30 border-y border-line bg-snow/95 backdrop-blur-md lg:top-[72px]">
+      <nav aria-label="Categorias" className="sticky top-16 z-30 border-y border-line bg-snow/95 backdrop-blur-md lg:top-[67px]">
         <div className="container-site">
           <ul className="scroller -mx-1 flex items-stretch gap-7 overflow-x-auto px-1">
             <CategoryTab label="Todas" href="/artigos" active={!cat && !tag} />
@@ -134,64 +133,39 @@ export default async function ArtigosPage({ searchParams }: Props) {
 
       <section className="bg-snow text-ink" aria-labelledby="resultados-title">
         <div className="container-site py-14 md:py-20">
-          <div className="mb-12 flex items-baseline justify-between gap-4">
-            <h2 id="resultados-title" className="font-expanded text-heading font-extrabold">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <h2 id="resultados-title" className="text-title">
               {resultLabel}
             </h2>
-            <p className="tabular shrink-0 text-ink-3">
+            <p className="subtitle tabular shrink-0">
               {filtered.length} {filtered.length === 1 ? "texto" : "textos"}
             </p>
           </div>
 
           {filtered.length === 0 ? (
-            <div className="max-w-2xl bg-snow-2 p-8 md:p-10">
-              <p className="font-expanded text-heading font-extrabold">Nenhum texto corresponde a essa busca.</p>
-              <p className="mt-3 text-lg text-ink-2">Tente outro termo, escolha um tema acima ou volte ao arquivo.</p>
-              <Link href="/artigos" className="btn btn-solid mt-6">
+            <div className="max-w-2xl border border-line bg-snow-2 p-8 md:p-10">
+              <p className="text-heading text-ink">Nenhum texto corresponde a essa busca.</p>
+              <p className="mt-3 text-base text-ink-2">Tente outro termo, escolha um tema acima ou volte ao arquivo.</p>
+              <Link href="/artigos" className="btn btn-signal mt-6">
                 Limpar filtros
               </Link>
             </div>
           ) : (
             <>
               {isBase && lead && (
-                <article className="group mb-16 grid gap-8 border-b border-line pb-16 md:grid-cols-12 md:items-center md:gap-12">
-                  <Link
-                    href={`/artigos/${lead.slug}`}
-                    tabIndex={-1}
-                    aria-hidden
-                    className="relative block aspect-[4/5] overflow-hidden bg-snow-2 md:col-span-5"
-                  >
-                    <Image
-                      src={lead.heroImage || "/placeholder.svg"}
-                      alt=""
-                      fill
-                      priority
-                      sizes="(min-width: 768px) 540px, 100vw"
-                      className={`media-zoom ${isInstagramImage(lead.heroImage) ? "bg-night object-contain" : "object-cover"}`}
-                    />
-                  </Link>
-                  <div className="md:col-span-7">
-                    <h3 className="font-expanded text-title font-extrabold">
-                      <Link href={`/artigos/${lead.slug}`} className="transition-colors group-hover:text-signal">
-                        {lead.title}
-                      </Link>
-                    </h3>
-                    <p className="mt-5 text-lg leading-relaxed text-ink-2 line-clamp-4">{lead.description}</p>
-                    <p className="mt-5 text-sm text-ink-3">
-                      {lead.categoryLabel} · {lead.readingTime} de leitura
-                    </p>
-                  </div>
-                </article>
+                <div className="rule-t mb-12 border-l border-line">
+                  <ArticleCard article={lead} variant="feature" priority className="rule-b" />
+                </div>
               )}
 
-              <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 border-t border-l border-line sm:grid-cols-2 lg:grid-cols-3">
                 {gridArticles.map((a, index) => (
-                  <ArticleCard key={a.slug} article={a} priority={!isBase && index < 3} />
+                  <ArticleCard key={a.slug} article={a} variant="cell" withImage priority={!isBase && index < 3} />
                 ))}
               </div>
 
               {totalPages > 1 && (
-                <nav aria-label="Paginação de artigos" className="mt-20 flex items-center justify-between gap-3 border-t-2 border-ink pt-8">
+                <nav aria-label="Paginação de artigos" className="mt-10 flex items-center justify-between gap-3">
                   {currentPage > 1 ? (
                     <Link href={articlesPageHref({ cat, tag, q: rawQ, page: currentPage - 1 })} className="btn btn-line" rel="prev">
                       <ArrowLeft aria-hidden />
@@ -202,13 +176,13 @@ export default async function ArtigosPage({ searchParams }: Props) {
                       Anterior
                     </span>
                   )}
-                  <span className="tabular text-ink-3">
+                  <span className="subtitle tabular">
                     Página {currentPage} de {totalPages}
                   </span>
                   {currentPage < totalPages ? (
                     <Link href={articlesPageHref({ cat, tag, q: rawQ, page: currentPage + 1 })} className="btn btn-line" rel="next">
                       Próxima
-                      <ArrowRight aria-hidden />
+                      <ChevronRight aria-hidden />
                     </Link>
                   ) : (
                     <span className="btn btn-line pointer-events-none opacity-30" aria-hidden>
@@ -254,9 +228,9 @@ function CategoryTab({ label, href, active }: { label: string; href: string; act
         href={href}
         aria-current={active ? "page" : undefined}
         className={cn(
-          "relative flex h-14 items-center whitespace-nowrap font-semibold transition-colors",
-          "after:absolute after:inset-x-0 after:bottom-0 after:h-[3px]",
-          active ? "text-ink after:bg-signal" : "text-ink-3 hover:text-ink after:bg-transparent",
+          "relative flex h-14 items-center whitespace-nowrap text-sm font-medium uppercase transition-colors",
+          "after:absolute after:inset-x-0 after:bottom-0 after:h-px",
+          active ? "text-ink after:bg-ink" : "text-ink-4 hover:text-ink after:bg-transparent",
         )}
       >
         {label}

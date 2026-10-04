@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import { PageHeader } from "@/components/site/page-header"
 import { AcademyCta } from "@/components/site/academy-cta"
 import { METHODS, METHOD_GROUPS } from "@/lib/content/methods"
@@ -52,7 +52,7 @@ export default function MetodosPage() {
         {startHere && (
           <Link href={`#${startHere.slug}`} className="btn btn-solid">
             Comece por {startHere.title}
-            <ArrowRight aria-hidden />
+            <ChevronRight aria-hidden />
           </Link>
         )}
       </PageHeader>
@@ -63,19 +63,19 @@ export default function MetodosPage() {
             const items = METHODS.filter((m) => m.group === group)
             return (
               <section key={group} aria-labelledby={`grupo-${gi}`} className="grid gap-8 lg:grid-cols-12 lg:gap-14">
-                <h2 id={`grupo-${gi}`} className="font-expanded text-title font-extrabold lg:col-span-4">
+                <h2 id={`grupo-${gi}`} className="text-title font-medium lg:col-span-4">
                   {group}
                 </h2>
                 <div className="lg:col-span-8">
                   {items.map((m) => {
                     const more = FURTHER_READING[m.slug]
                     return (
-                      <article key={m.slug} id={m.slug} className="grid gap-3 border-t-2 border-ink py-7 md:grid-cols-12 md:gap-8">
+                      <article key={m.slug} id={m.slug} className="grid gap-3 border-t border-line py-7 md:grid-cols-12 md:gap-8">
                         <div className="md:col-span-8">
-                          <h3 className="font-expanded text-heading font-extrabold">
+                          <h3 className="text-heading font-medium">
                             {m.title}
                             {m.startHere && (
-                              <span className="ml-3 inline-block translate-y-[-0.2em] bg-ink px-2 py-0.5 align-middle text-sm font-bold text-snow" style={{ fontStretch: "100%" }}>
+                              <span className="ml-3 inline-block translate-y-[-0.2em] bg-ink px-2 py-0.5 align-middle text-sm font-medium text-snow">
                                 Comece aqui
                               </span>
                             )}
@@ -87,7 +87,7 @@ export default function MetodosPage() {
                           <div className="md:col-span-4 md:pt-2 md:text-right">
                             <Link href={more.href} className="link-more">
                               {more.label}
-                              <ArrowRight aria-hidden />
+                              <ChevronRight aria-hidden />
                             </Link>
                           </div>
                         )}

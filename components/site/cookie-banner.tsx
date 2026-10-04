@@ -24,7 +24,7 @@ export function CookieBanner() {
         <p className="flex-1 text-[0.9375rem] leading-relaxed text-mist">
           Usamos cookies essenciais para o site funcionar. Com a sua permissão, também medimos a audiência e usamos o
           pixel de anúncios nas páginas de venda.{" "}
-          <Link href="/politica-de-privacidade" className="text-white underline decoration-signal decoration-2">
+          <Link href="/politica-de-privacidade" className="text-white underline decoration-ink-4 decoration-2">
             Política de privacidade
           </Link>
         </p>

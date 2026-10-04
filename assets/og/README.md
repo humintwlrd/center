@@ -1,11 +1,10 @@
-# Fontes da imagem social (OG)
+# Arquivos da imagem social (OG)
 
-Instâncias estáticas da **Archivo** (Copyright 2020 The Archivo Project Authors,
-https://github.com/Omnibus-Type/Archivo), licenciada sob a SIL Open Font License 1.1
-(https://openfontlicense.org). Geradas a partir da fonte variável servida pelo
-`next/font` (subconjunto latin), só para o `app/opengraph-image.tsx`, que não aceita
-fontes variáveis nem woff2.
+Os `opengraph-image.tsx` (home e /pv) usam a **Inter Tight** (Copyright 2022 The Inter Tight Project
+Authors, https://github.com/googlefonts/inter-tight), licenciada sob a SIL Open Font License 1.1
+(https://openfontlicense.org). Instâncias estáticas baixadas do Google Fonts, porque o `ImageResponse`
+não aceita fontes variáveis nem woff2.
 
-- `archivo-800-expanded.ttf`: wght 800, wdth 125 (títulos)
-- `archivo-400.ttf`: wght 400, wdth 100 (texto)
+- `inter-tight-500.ttf`: wght 500 (títulos)
+- `inter-tight-400.ttf`: wght 400 (texto)
 - `acervo-tatico-cover.jpg`: capa do Acervo (de `public/images/shop/acervo-tatico.webp`) para o OG da /pv

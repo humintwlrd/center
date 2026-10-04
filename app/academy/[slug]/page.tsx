@@ -2,11 +2,12 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Check, ChevronRight } from "lucide-react"
 import { PRODUCTS, getProductBySlug } from "@/lib/products"
-import { AcervoDetail } from "@/components/shop/acervo-detail"
+import { AcervoLetter } from "@/components/shop/acervo-letter"
 import { ProductGrid } from "@/components/shop/product-grid"
 import { splitParcelado } from "@/components/shop/product-card"
+import { Roll } from "@/components/site/roll"
 import { Breadcrumbs } from "@/components/site/breadcrumbs"
 
 type Props = { params: Promise<{ slug: string }> }
@@ -39,9 +40,20 @@ export default async function ProductPage({ params }: Props) {
   const product = getProductBySlug(slug)
   if (!product) notFound()
 
-  // O Acervo Tático (carro-chefe) tem uma página de vendas rica, estilo landing.
+  // O Acervo Tático (carro-chefe) usa a carta de vendas completa, a mesma da /pv.
   if (product.id === "acervo-tatico") {
-    return <AcervoDetail product={product} />
+    return (
+      <AcervoLetter
+        top={
+          <Breadcrumbs
+            items={[
+              { label: "Academy", href: "/academy" },
+              { label: "Acervo Tático", href: `/academy/${product.id}` },
+            ]}
+          />
+        }
+      />
+    )
   }
 
   const isDossie = product.id.startsWith("dossie-")
@@ -51,70 +63,71 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <article>
-      <header className="night">
-        <div className="container-site pt-8 pb-20 md:pb-28">
+      <header className="bg-snow">
+        <div className="container-site pt-10 pb-20 md:pt-16 md:pb-[120px]">
           <Breadcrumbs
-            tone="night"
             items={[
               { label: "Academy", href: "/academy" },
               { label: product.nome, href: `/academy/${product.id}` },
             ]}
           />
-          <div className="mt-12 grid gap-12 md:mt-16 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
-              <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden lg:sticky lg:top-28 lg:max-w-none">
+          <div className="rule-t rule-b mt-8 grid border-x border-line lg:grid-cols-12">
+            <div className="relative border-b border-line bg-snow-2 p-6 md:p-10 lg:col-span-5 lg:border-r lg:border-b-0">
+              <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden lg:sticky lg:top-28">
                 <Image
                   src={product.image || "/placeholder.svg"}
                   alt={product.imageAlt}
                   fill
-                  sizes="(min-width: 1024px) 520px, 90vw"
+                  sizes="(min-width: 1024px) 440px, 90vw"
                   priority
                   className="object-cover"
                 />
-                {product.badge && (
-                  <span className="absolute left-0 top-5 bg-snow px-3 py-1.5 text-sm font-bold text-ink">
-                    {product.badge}
-                  </span>
-                )}
               </div>
+              {product.badge && (
+                <span className="absolute top-0 left-0 border-r border-b border-line bg-snow px-3 py-2 text-sm font-medium text-ink uppercase">
+                  {product.badge}
+                </span>
+              )}
             </div>
 
-            <div className="lg:col-span-7">
-              <h1 className="font-expanded text-title font-extrabold">{product.nome}</h1>
-              <p className="mt-8 max-w-[56ch] text-lede text-mist">{product.descricao}</p>
+            <div className="px-6 py-10 md:px-12 md:py-12 lg:col-span-7">
+              <p className="subtitle">{product.tipo}</p>
+              <h1 className="mt-2 text-display">{product.nome}</h1>
+              <p className="mt-4 max-w-[56ch] text-base text-ink-2 md:text-lg">{product.descricao}</p>
 
-              <div className="mt-10 border-y border-line-night py-8">
-                <p className="tabular">
-                  {label && <span className="text-mist">{label} </span>}
-                  <span className="font-expanded text-title font-extrabold">{value}</span>
+              <div className="mt-8 border-y border-line py-8">
+                <p className="tabular text-ink">
+                  {label && <span className="text-ink-2">{label} </span>}
+                  <span className="text-title">{value}</span>
                 </p>
-                <p className="mt-1 text-mist-2">{product.tipo} · Cartão ou Pix · Acesso imediato</p>
+                <p className="mt-1 text-sm text-ink-3">Cartão ou Pix · Acesso imediato</p>
                 <a
                   href={product.checkoutUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-signal btn-lg mt-7 w-full sm:w-auto"
+                  className="btn btn-signal mt-6 w-full sm:w-auto"
                 >
-                  Comprar agora
+                  <Roll>Comprar agora</Roll>
                   <ArrowUpRight aria-hidden />
                   <span className="sr-only">(abre em nova aba)</span>
                 </a>
-                <p className="mt-5 text-sm text-mist-2">
+                <p className="mt-5 text-sm text-ink-3">
                   Checkout seguro da HeroSpark. Dúvidas?{" "}
-                  <Link href="/suporte" className="text-mist underline decoration-signal decoration-2 underline-offset-4">
+                  <Link href="/suporte" className="text-ink underline decoration-ink-4 underline-offset-4 hover:decoration-ink">
                     Suporte ao aluno
                   </Link>
                 </p>
               </div>
 
               {product.ementa && product.ementa.length > 0 && (
-                <section className="mt-12" aria-labelledby="ementa-title">
-                  <h2 id="ementa-title" className="font-expanded text-heading font-extrabold">
+                <section className="mt-10" aria-labelledby="ementa-title">
+                  <h2 id="ementa-title" className="text-heading">
                     O que tem dentro
                   </h2>
-                  <ol className="mt-6 border-t border-line-night">
+                  <ol className="mt-5 border-t border-line">
                     {product.ementa.map((item) => (
-                      <li key={item} className="border-b border-line-night py-4 text-lg">
+                      <li key={item} className="flex items-center gap-3 border-b border-line py-4 text-base text-ink">
+                        <Check className="size-4 shrink-0" aria-hidden />
                         {item}
                       </li>
                     ))}
@@ -127,31 +140,34 @@ export default async function ProductPage({ params }: Props) {
       </header>
 
       {isDossie && flagship && (
-        <section className="bg-snow-2 text-ink" aria-labelledby="upsell-title">
-          <div className="container-site grid gap-8 py-16 md:grid-cols-12 md:items-center md:py-20">
-            <div className="md:col-span-8">
-              <h2 id="upsell-title" className="font-expanded text-title font-extrabold">
-                Este dossiê é um dos módulos do Acervo Tático.
-              </h2>
-              <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-ink-2">
-                No acervo completo você recebe os seis dossiês, o núcleo de ferramentas operacionais e 12 meses de
-                atualizações, por {flagship.parcelado}.
-              </p>
-            </div>
-            <div className="md:col-span-4 md:text-right">
-              <Link href={`/academy/${flagship.id}`} className="btn btn-solid btn-lg">
-                Conhecer o acervo
-                <ArrowRight aria-hidden />
-              </Link>
+        <section className="bg-snow-2" aria-labelledby="upsell-title">
+          <div className="container-site py-20 md:py-[120px]">
+            <div className="rule-t rule-b grid border-x border-line bg-snow md:grid-cols-2">
+              <div className="border-b border-line px-6 py-10 md:border-r md:border-b-0 md:px-16 md:py-12">
+                <p className="subtitle">Acervo Tático</p>
+                <h2 id="upsell-title" className="mt-2 text-title">
+                  Este dossiê é um dos módulos do Acervo Tático.
+                </h2>
+              </div>
+              <div className="flex flex-col justify-center gap-6 px-6 py-10 md:px-16 md:py-12">
+                <p className="max-w-[440px] text-base text-ink-2">
+                  No acervo completo você recebe os seis dossiês, o núcleo de ferramentas operacionais e 12 meses de
+                  atualizações, por {flagship.parcelado}.
+                </p>
+                <Link href={`/academy/${flagship.id}`} className="btn btn-signal self-start">
+                  <Roll>Conhecer o acervo</Roll>
+                  <ChevronRight aria-hidden />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
       )}
 
       {siblings.length > 0 && (
-        <div className="bg-snow text-ink">
+        <section className="bg-snow py-20 md:py-[120px]" aria-labelledby="relacionados-title">
           <ProductGrid id="relacionados-title" title={isDossie ? "Outros dossiês" : "Veja também"} items={siblings} />
-        </div>
+        </section>
       )}
     </article>
   )

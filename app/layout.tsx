@@ -1,24 +1,41 @@
 import type { Metadata, Viewport } from "next"
-import { Archivo } from "next/font/google"
+import { Archivo, Inter_Tight } from "next/font/google"
 import { Suspense } from "react"
 import Link from "next/link"
+import { ChevronRight, Menu } from "lucide-react"
 import { SiteHeader } from "@/components/site/site-header"
 import { SiteFooter } from "@/components/site/site-footer"
 import { BrandLogo } from "@/components/site/brand-logo"
 import { CookieBanner } from "@/components/site/cookie-banner"
 import { OrganizationSchema } from "@/components/site/organization-schema"
 import { Declassify } from "@/components/site/declassify"
+import { ScrollReveal } from "@/components/site/scroll-reveal"
+import { Roll } from "@/components/site/roll"
 import { NAV, SITE } from "@/lib/site"
 import "./globals.css"
 import { SiteAnalytics } from "@/components/site/site-analytics"
 
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
+  display: "swap",
+})
+
+/** Só a /lp (escopo .world-legacy) usa a Archivo: sem preload no resto do site. */
 const archivo = Archivo({
   subsets: ["latin"],
   axes: ["wdth"],
   style: ["normal", "italic"],
   variable: "--font-archivo",
   display: "swap",
+  preload: false,
 })
+
+/**
+ * Marca html.js antes da pintura para o reveal de scroll esconder só quando há JS.
+ * Se o componente não montar em 3 s, tira a marca e mostra tudo.
+ */
+const REVEAL_BOOT = `document.documentElement.classList.add("js");setTimeout(function(){if(!window.__revealReady)document.documentElement.classList.remove("js")},3000)`
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -78,7 +95,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0b0b0c",
+  themeColor: "#ffffff",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -92,9 +109,12 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={archivo.variable}
+      className={`${interTight.variable} ${archivo.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: REVEAL_BOOT }} />
+      </head>
       <body>
         <a href="#main" className="skip-link">
           Pular para o conteúdo
@@ -102,10 +122,13 @@ export default function RootLayout({
         <Suspense fallback={<HeaderFallback />}>
           <SiteHeader />
         </Suspense>
-        <main id="main">{children}</main>
+        <main id="main" className="overflow-x-clip">
+          {children}
+        </main>
         <SiteFooter />
         <CookieBanner />
         <Declassify />
+        <ScrollReveal />
         <OrganizationSchema />
         {process.env.NODE_ENV === "production" && <SiteAnalytics />}
       </body>
@@ -115,27 +138,30 @@ export default function RootLayout({
 
 function HeaderFallback() {
   return (
-    <header className="night sticky top-0 z-40 w-full border-b border-line-night">
-      <div className="container-site flex h-16 items-center gap-6 lg:h-[72px] lg:gap-10">
-        <Link href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name}, página inicial`}>
-          <BrandLogo variant="white" className="h-8 sm:h-9" />
-        </Link>
-        <nav className="hidden h-full items-stretch gap-8 lg:flex" aria-label="Principal">
-          {NAV.primary.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="inline-flex items-center text-[0.9375rem] font-semibold text-mist hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="ml-auto flex items-center gap-2 sm:gap-3">
-          <Link href="/academy/acervo-tatico" className="btn btn-signal btn-sm">
-            Acervo Tático
+    <header className="sticky top-0 z-40 w-full bg-snow">
+      <div className="container-site">
+        <div className="flex h-16 items-stretch border-b border-l border-line lg:h-[67px]">
+          <Link href="/" className="flex shrink-0 items-center px-4 sm:px-6" aria-label={`${SITE.name}, página inicial`}>
+            <BrandLogo variant="black" className="h-8 sm:h-9" />
           </Link>
-          <span className="-mr-2 inline-flex h-10 w-10 lg:hidden" aria-hidden />
+          <nav className="ml-auto hidden items-center pr-4 lg:flex" aria-label="Principal">
+            {NAV.primary.map((item) => (
+              <Link key={item.href} href={item.href} className="inline-flex items-center px-2.5 text-sm uppercase text-ink">
+                {item.label}
+              </Link>
+            ))}
+            <span className="ml-2 inline-flex size-10" aria-hidden />
+          </nav>
+          <Link
+            href="/academy/acervo-tatico"
+            className="btn btn-signal ml-auto min-h-0 px-4 text-[0.8125rem] sm:px-6 sm:text-sm lg:ml-0"
+          >
+            <Roll>Acervo Tático</Roll>
+            <ChevronRight aria-hidden />
+          </Link>
+          <span className="inline-flex w-16 shrink-0 items-center justify-center text-ink lg:hidden" aria-hidden>
+            <Menu className="size-6" />
+          </span>
         </div>
       </div>
     </header>

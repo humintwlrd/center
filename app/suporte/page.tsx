@@ -36,11 +36,11 @@ export default function SuportePage() {
       <section className="border-t border-line bg-snow text-ink" aria-label="Formulário de suporte">
         <div className="container-site grid gap-14 py-16 md:py-20 lg:grid-cols-12 lg:gap-16">
           <aside className="lg:col-span-4">
-            <h2 className="font-expanded text-heading font-extrabold">Ajuda rápida</h2>
+            <h2 className="text-heading font-medium">Ajuda rápida</h2>
             <dl className="mt-6">
               {HELP.map((f) => (
                 <div key={f.q} className="border-t border-line py-5">
-                  <dt className="font-bold">{f.q}</dt>
+                  <dt className="font-medium">{f.q}</dt>
                   <dd className="mt-1.5 leading-relaxed text-ink-2">{f.a}</dd>
                 </div>
               ))}

@@ -56,7 +56,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div role="status" aria-live="polite" className="bg-snow-2 p-6 text-ink sm:p-8">
-                <h3 className="font-expanded text-heading font-extrabold text-ink">
+                <h3 className="text-heading font-medium text-ink">
           Sua mensagem chegou aqui.
         </h3>
         <p className="mt-3 text-ink-2 leading-relaxed">
@@ -136,7 +136,7 @@ export function ContactForm() {
           type="checkbox"
           checked={form.consent}
           onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
-          className="mt-1 h-4 w-4 shrink-0 accent-signal"
+          className="mt-1 h-4 w-4 shrink-0 accent-ink"
         />
         <span>
           Concordo com o uso dos meus dados para responder a esta solicitação,
@@ -145,7 +145,7 @@ export function ContactForm() {
       </label>
 
       {error && (
-        <p role="alert" className="text-sm text-signal">
+        <p role="alert" className="text-sm text-danger">
           {error}
         </p>
       )}

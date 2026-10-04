@@ -88,11 +88,11 @@ export default function PrincipiosPage() {
         <div className="container-site grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-14">
           <aside className="lg:col-span-3" aria-label="Nesta página">
             <nav className="lg:sticky lg:top-28">
-              <p className="mb-3 font-bold">Nesta página</p>
-              <ol className="border-t-2 border-ink">
+              <p className="mb-3 font-medium">Nesta página</p>
+              <ol className="border-t border-line">
                 {SECTIONS.map((s) => (
                   <li key={s.id} className="border-b border-line">
-                    <a href={`#${s.id}`} className="block py-3 text-ink-2 transition-colors hover:text-signal">
+                    <a href={`#${s.id}`} className="block py-3 text-ink-2 transition-colors hover:text-ink-2">
                       {s.title}
                     </a>
                   </li>
@@ -114,7 +114,7 @@ export default function PrincipiosPage() {
             <p className="mt-14 max-w-[68ch] bg-snow-2 p-6 text-lg leading-relaxed text-ink-2 md:p-8">
               <strong className="text-ink">Documento vivo.</strong> Revisado periodicamente. Sugestões e críticas são
               bem-vindas pelo{" "}
-              <Link href="/contato" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
+              <Link href="/contato" className="font-medium text-ink underline decoration-ink-4 decoration-2 underline-offset-4">
                 formulário de contato
               </Link>
               .

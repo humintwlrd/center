@@ -1,42 +1,35 @@
-"use client"
+import { ArrowUpRight } from "lucide-react"
+import { BrandLogo } from "@/components/site/brand-logo"
+import { Roll } from "@/components/site/roll"
+import { CHECKOUT_URL } from "@/components/landing/access-button"
 
-import { useEffect, useState } from "react"
-
+/**
+ * Cabeçalho da /pv no padrão do site (caixa com filete, CTA em bloco à direita),
+ * sem navegação: a landing tem uma saída só, o checkout.
+ */
 export function StickyNav() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    onScroll()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
-
   return (
-    <nav
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
-        scrolled ? "border-line-night bg-night py-2" : "border-transparent bg-night/70 py-2.5 md:py-3"
-      }`}
-    >
-      <div className="container-site flex items-center justify-between">
-        <a href="#top" className="flex items-center group" aria-label="Mundo da HUMINT">
-          <img
-            src="/images/pv/logo-mundo-humint.png"
-            alt="Mundo da HUMINT"
-            className="h-9 md:h-11 w-auto object-contain"
-          />
-        </a>
-
-        {/* Desktop CTA — mobile uses sticky bottom CTA instead */}
-        <a href="#oferta" className="btn btn-signal btn-sm hidden md:inline-flex">
-          Acessar o acervo
-        </a>
-
-        {/* Mobile mini-CTA — only when scrolled past hero */}
-        <a href="#oferta" className={`btn btn-sm md:hidden ${scrolled ? "btn-signal" : "border-white text-white"}`}>
-          Acessar o acervo
-        </a>
+    <header className="sticky top-0 z-50 w-full bg-snow">
+      <div className="container-site">
+        <div className="flex h-16 items-stretch border-b border-l border-line lg:h-[67px]">
+          <a href="#top" className="flex shrink-0 items-center px-4 sm:px-6" aria-label="Mundo da HUMINT, início da página">
+            <BrandLogo variant="black" priority className="h-8 sm:h-9" />
+          </a>
+          <a
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-signal ml-auto min-h-0 px-4 text-[0.8125rem] sm:px-6 sm:text-sm"
+          >
+            <span className="sm:hidden">Quero acessar</span>
+            <span className="hidden sm:inline-grid">
+              <Roll>Quero acessar o Acervo Tático</Roll>
+            </span>
+            <ArrowUpRight aria-hidden />
+            <span className="sr-only">(abre em nova aba)</span>
+          </a>
+        </div>
       </div>
-    </nav>
+    </header>
   )
 }

@@ -39,9 +39,9 @@ export default function RecursosPage() {
             const id = g.href.split("#")[1]
             return (
               <article key={g.href} id={id}>
-                <h3 className="font-expanded text-heading font-extrabold">{g.title}</h3>
+                <h3 className="text-heading font-medium">{g.title}</h3>
                 <p className="mt-3 max-w-[60ch] text-lg leading-relaxed text-ink-2">{g.summary}</p>
-                <ol className="mt-6 list-decimal pl-6 marker:font-bold marker:text-ink">
+                <ol className="mt-6 list-decimal pl-6 marker:font-medium marker:text-ink">
                   {g.steps.map((step) => (
                     <li key={step} className="border-t border-line py-3 pl-2 text-lg leading-relaxed text-ink-2">
                       {step}
@@ -57,8 +57,8 @@ export default function RecursosPage() {
       <SplitSection id="glossario" title="Glossário." sticky>
         <dl>
           {GLOSSARY.map((g) => (
-            <div key={g.term} className="border-t-2 border-ink py-6">
-              <dt className="font-expanded text-heading font-extrabold">{g.term}</dt>
+            <div key={g.term} className="border-t border-line py-6">
+              <dt className="text-heading font-medium">{g.term}</dt>
               <dd className="mt-2 max-w-[62ch] text-lg leading-relaxed text-ink-2">{g.definition}</dd>
             </div>
           ))}
@@ -69,8 +69,8 @@ export default function RecursosPage() {
         <ul>
           {BIBLIOGRAPHY.map((b) => (
             <li key={b.title} className="border-t border-line py-6">
-              <h3 className="text-xl font-bold italic">{b.title}</h3>
-              <p className="mt-1 font-semibold text-ink-3">{b.author}</p>
+              <h3 className="text-xl font-medium italic">{b.title}</h3>
+              <p className="mt-1 font-medium text-ink-3">{b.author}</p>
               <p className="mt-2 max-w-[62ch] leading-relaxed text-ink-2">{b.note}</p>
             </li>
           ))}

@@ -6,7 +6,7 @@ import "./pv.css"
 export const metadata: Metadata = {
   title: "Acervo Tático de Inteligência Humana",
   description:
-    "Inteligência humana de operações reais, traduzida para as suas decisões: análise comportamental, comunicação estratégica, contrainteligência e leitura de pessoas.",
+    "Suas decisões dependem de pessoas. O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar informações de forma mais estruturada. Sem leitura mental, sem truques, com método.",
   alternates: {
     canonical: `${SITE.url}/pv`,
   },
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     url: `${SITE.url}/pv`,
     title: "Acervo Tático de Inteligência Humana",
     description:
-      "Conhecimento prático em HUMINT reunido em um acervo confidencial e atualizado.",
+      "Suas decisões dependem de pessoas. Inteligência humana de operações reais, traduzida para as suas decisões.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Acervo Tático de Inteligência Humana",
     description:
-      "Conhecimento prático em HUMINT reunido em um acervo confidencial e atualizado.",
+      "Suas decisões dependem de pessoas. Inteligência humana de operações reais, traduzida para as suas decisões.",
   },
 }
 

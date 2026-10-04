@@ -1,4 +1,4 @@
-/* A landing possui header/footer próprios. O shell editorial continua intacto
+/* A landing possui header/footer próprios. O shell do site continua intacto
    em todas as outras rotas e é ocultado somente quando /pv está presente. */
 body:has(.pv-page) > .skip-link,
 body:has(.pv-page) > header,
@@ -7,16 +7,6 @@ body:has(.pv-page) > [role="dialog"][aria-label="Aviso de cookies"] {
   display: none;
 }
 
-body:has(.pv-page) {
-  background: var(--color-night);
-}
-
 .pv-page {
-  font-family: var(--font-sans);
   scroll-behavior: smooth;
-}
-
-.pv-page ::selection {
-  background: var(--color-signal);
-  color: #ffffff;
 }

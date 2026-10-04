@@ -35,7 +35,7 @@ export function BackButton({ variant = "compact", label }: BackButtonProps) {
     <button
       type="button"
       onClick={goBack}
-      className="inline-flex items-center gap-2 font-semibold text-tone-2 transition-colors hover:text-tone"
+      className="inline-flex items-center gap-2 font-medium text-tone-2 transition-colors hover:text-tone"
     >
       <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
       {label ?? "Voltar"}

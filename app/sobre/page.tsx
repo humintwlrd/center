@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import { PageHeader } from "@/components/site/page-header"
 import { SplitSection } from "@/components/site/split-section"
 import { pageMetadata } from "@/lib/seo"
@@ -51,7 +51,7 @@ export default function SobrePage() {
             útil, em português, com contexto local.
           </p>
         </div>
-        <p className="mt-12 max-w-[24ch] font-expanded text-title font-extrabold">
+        <p className="mt-12 max-w-[24ch] text-title font-medium">
           Método antes de técnica. Contexto antes de conclusão. Ética antes de tudo.
         </p>
       </SplitSection>
@@ -59,8 +59,8 @@ export default function SobrePage() {
       <SplitSection id="como-trabalhamos" title="O que sustenta cada publicação." tone="snow-2">
         <dl className="grid gap-x-10 sm:grid-cols-2">
           {PRINCIPLES.map((p) => (
-            <div key={p.t} className="border-t-2 border-ink py-6">
-              <dt className="font-expanded text-heading font-extrabold">{p.t}</dt>
+            <div key={p.t} className="border-t border-line py-6">
+              <dt className="text-heading font-medium">{p.t}</dt>
               <dd className="mt-2 text-lg leading-relaxed text-ink-2">{p.d}</dd>
             </div>
           ))}
@@ -78,7 +78,7 @@ export default function SobrePage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <Link href="/principios-editoriais" className="btn btn-solid">
             Princípios editoriais
-            <ArrowRight aria-hidden />
+            <ChevronRight aria-hidden />
           </Link>
           <Link href="/contato" className="btn btn-line">
             Falar com a equipe
