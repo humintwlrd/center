@@ -28,8 +28,8 @@ export function LegalPage({
         <div className="container-site grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-14">
           <aside className="lg:col-span-3" aria-label="Documentos">
             <nav className="lg:sticky lg:top-28">
-              <p className="mb-3 font-bold">Documentos</p>
-              <ul className="border-t-2 border-ink">
+              <p className="mb-3 font-medium">Documentos</p>
+              <ul className="border-t border-line">
                 {DOCUMENTS.map((doc) => {
                   const active = doc.href === path
                   return (
@@ -37,7 +37,7 @@ export function LegalPage({
                       <Link
                         href={doc.href}
                         aria-current={active ? "page" : undefined}
-                        className={active ? "block py-3 font-semibold text-signal" : "block py-3 text-ink-2 transition-colors hover:text-ink"}
+                        className={active ? "block py-3 font-medium text-ink" : "block py-3 text-ink-2 transition-colors hover:text-ink"}
                       >
                         {doc.label}
                       </Link>

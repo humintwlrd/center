@@ -45,8 +45,8 @@ export default function ComoAproveitarPage() {
         <div className="container-site py-20 md:py-24">
           <ol className="grid gap-x-12 md:grid-cols-2">
             {STEPS.map((step) => (
-              <li key={step.title} className="border-t-2 border-ink py-7">
-                <h2 className="font-expanded text-heading font-extrabold">{step.title}</h2>
+              <li key={step.title} className="border-t border-line py-7">
+                <h2 className="text-heading font-medium">{step.title}</h2>
                 <p className="mt-3 text-lg leading-relaxed text-ink-2">{step.body}</p>
               </li>
             ))}
@@ -75,7 +75,7 @@ export default function ComoAproveitarPage() {
 
       <section className="night" aria-labelledby="franca-title">
         <div className="container-site py-20 md:py-24">
-          <h2 id="franca-title" className="max-w-[20ch] font-expanded text-display font-extrabold">
+          <h2 id="franca-title" className="max-w-[20ch] text-display font-medium">
             Este acervo é para quem está comprometido em evoluir.
           </h2>
           <p className="mt-8 max-w-[60ch] text-lede text-mist">

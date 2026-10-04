@@ -34,18 +34,23 @@ app/
   artigos/                 # blog/artigos (inclui os importados do Instagram)
   categorias/ metodos/ humint/ recursos/ sobre/ contato/ formacao/ livro/
   lp/                      # landing "Como Avaliar Pessoas" (R$49) — só mexer com pedido explícito
-  pv/                      # landing de vendas do Acervo (header/footer próprios, Utmify)
+                           # (visual anterior, escopo .world-legacy)
+  pv/                      # landing de vendas do Acervo (header/footer próprios, Utmify,
+                           # visual anterior, escopo .world-legacy)
   error.tsx not-found.tsx  # páginas de erro no padrão visual
   api/                     # rotas de form (contato, etc.)
 components/
   site/                    # header, footer, page-header, section-heading, split-section,
-                           # academy-cta, article-card, breadcrumbs, declassify, formulários
+                           # academy-cta, article-card, breadcrumbs, formulários,
+                           # dot-matrix, roll, rise-text, scrub-text, scroll-reveal,
+                           # declassify (tarjas da /pv e /lp)
   shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
                            # acervo-detail (página de vendas rica do Acervo)
   landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, access-button, utmify)
                            # (sem components/ui: nenhum componente shadcn em uso hoje)
 lib/
   products.ts              # CATÁLOGO da Academy (tipo Product + PRODUCTS + getProductBySlug)
+  dot-patterns.ts          # padrões das ilustrações em matriz de pontos (olho, anel, relevo, ícones)
   site.ts                  # SITE (nome/urls) e NAV.primary (menu)
   content/
     articles.ts            # tipos Article/ArticleBlock + artigos manuais
@@ -63,7 +68,7 @@ public/images/
 scripts/
   generate-instagram-articles.mjs   # JSON -> instagram-articles.generated.ts
 .claude/
-  skills/impeccable/       # skill de design usada no redesign (Apache-2.0, ver LICENSE/NOTICE)
+  skills/impeccable/       # skill de design do redesign de set/2026 (Apache-2.0, ver LICENSE/NOTICE)
   agents/impeccable-*.md   # revisor final, documentador etc. da skill
 ```
 
@@ -73,53 +78,56 @@ Na raiz há um **pacote de atualização não aplicado** (`APLICAR.md`, `CHANGES
 
 ## Design system (em `app/globals.css`; registro completo em `DESIGN.md`)
 
-Mundo visual definido com a skill **impeccable** (contrato em `.impeccable/surfaces/app-page-tsx.md`,
-produto em `PRODUCT.md`). Tese: **uma escola de inteligência apresentada como o site de uma agência**:
-preto, branco e um vermelho de operação, tipografia estendida e pesada, casos reais como capítulos.
-Referências: MasterClass "The Art of Intelligence", CIA.gov (2021) e SPYSCAPE. **Não** é portal
-editorial: nada de filetes decorativos, rótulos acima de títulos ou colunas de jornal.
+Desde 2026-10-03 o site segue o **layout e o web design da referência QuantumLab** (template Webflow,
+home V1 e V2), a pedido do dono: estrutura, ritmo, tipografia, grade de filetes e interações da
+referência, com **os textos do Mundo da HUMINT**. Nenhum asset do template foi copiado: as ilustrações
+em matriz de pontos são desenhadas em `lib/dot-patterns.ts`. A `/pv` e a `/lp` continuam no visual
+anterior pelo escopo `.world-legacy` (fim de `app/globals.css`).
 
-Regras que não se negociam:
-- **Uma família**: Archivo variável (`next/font`, eixo `wdth`). Títulos com `font-expanded`
-  (largura 118–125%) e `font-extrabold`; texto corrido em largura normal. Sem serifada, sem mono.
-- **Um acento**: `signal` (#e5252a), reservado a ação (CTA de compra, foco, link ativo, hover, erro de formulário)
-  e à tarja liberada. Nada de vermelho decorativo: ícones, marcadores, numerais e selos ficam em tinta/branco.
-- **Cantos retos** (radius 0), sem sombras, sem gradiente decorativo (só o escurecimento da foto do hero).
-- **Proibido** (craft floor da skill): eyebrow/kicker acima de título, numeração de seção decorativa,
-  borda lateral colorida (>1px) em citação/callout, mono “de fantasia”, cards com ícone em bolha,
-  template “número grande + legenda”, fontes Inter/Newsreader/IBM Plex/Space Grotesk/Fraunces.
+Regras:
+- **Uma família**: Inter Tight (`next/font`, `--font-inter-tight`). Títulos em **peso 500** e tracking
+  −0.03em (nada de 700/800); botões em 600 e caixa-alta. A Archivo só carrega para o escopo legado.
+- **Monocromático, sem acento**: tinta `#161616`, texto `#505050`, rótulo `#ababab`, filete `#e3e3e3`,
+  neutro `#fbfbfb`, faixa escura `#161616`. A ação é a tinta (`btn-signal`: preto no claro, branco no
+  escuro). Vermelho (`danger`) só em erro de formulário.
+- **Cantos retos**, sem sombras, sem gradiente decorativo.
+- **Rótulo acima do título** (`subtitle`) faz parte do padrão: curto, com vocabulário que já existe no
+  site (Casos, Academy, Depoimentos, Artigos...). Não invente copy nova.
+- Fotos editoriais em preto e branco (`mono`, cor no hover). Capas do Instagram (9:16, com legenda
+  gravada) **nunca** são recortadas: inteiras, `object-contain` sobre `bg-night` (ver `ArticleCard`).
 
 Tokens (Tailwind v4 gera `bg-*`, `text-*`, `border-*`):
-- Noite (vendas): `night` #0b0b0c, `night-2`, `night-3`, `line-night`; texto claro `mist`, `mist-2`, `white`
-- Papel (leitura): `snow` #fff, `snow-2` #f3f3f2; tinta `ink`, `ink-2`, `ink-3`; filete `line`
-- Sinal: `signal`, `signal-hover`, `on-signal`
-- Escala fluida: `text-mega` (manchete da home), `text-display`, `text-title`, `text-heading`, `text-lede`
+- Claro: `snow` #fff, `snow-2` #fbfbfb, `snow-3` #f3f3f3; tinta `ink`, `ink-2`, `ink-3`, `ink-4`; filetes `line`, `line-2`
+- Escuro: `night`, `night-2`, `night-3`, `line-night`; texto `mist`, `mist-2`
+- Ação: `signal`, `signal-hover`, `on-signal` (seguem o tom da superfície) · erro: `danger`
+- Escala: `text-mega` (manchete da home), `text-display`, `text-title`, `text-heading`, `text-lede`
 
 Utilitários próprios (`@utility`):
-- Superfícies: `night`, `night-2` (seção escura; ajustam `--tone-*` para botões, campos e textos).
-  Cores que seguem o tom: `text-tone`, `text-tone-2`, `text-tone-3`, `border-tone`
-- Layout: `container-site` (máx. 1360px); `rail` + `scroller` para trilhos horizontais com
-  scroll-snap alinhados ao container (casos, depoimentos)
-- Tipo: `font-expanded`, `tabular`; texto longo `prose-read`
-- Tarjas: `redact` (trecho tarjado que o `Declassify` libera uma vez ao entrar na tela;
-  `data-delay` em ms), `withheld` (tarja fixa para trecho omitido, ex.: prévia de documento na /lp) e
-  `bar-mark` (marcador de lista em forma de tarja curta; use no lugar de check/traço)
-- Botões: `btn` + `btn-signal` | `btn-solid` | `btn-line` (+ `btn-sm`/`btn-lg`); link `link-more`
-- Formulários: `field`, `field-label` · Imagem em card: `media-zoom`
+- Superfícies: `night`, `night-2` (ajustam `--tone-*`, `signal` e campos). Seguem o tom: `text-tone`,
+  `text-tone-2`, `text-tone-3`, `text-tone-4`, `border-tone`, `bg-cell`
+- Layout: `container-site` (1186px = 1138 de conteúdo); `frame` (filetes verticais nas bordas do
+  conteúdo); `rule-t` / `rule-b` (filetes horizontais longos que esmaecem; ajuste com `--rule-left`,
+  `--rule-width`, `--rule-shift`); `grid-fade` (grade clara do hero); `rail` + `scroller`
+- Tipo: `subtitle` (rótulo), `meta` (data / categoria), `tabular`, `prose-read`
+- Botões: `btn` + `btn-signal` | `btn-solid` | `btn-line` (+ `btn-sm`); `arrow-cell`; link `link-more`
+- Formulários: `field`, `field-label` · Imagem: `media-zoom`, `mono`
+- Movimento: `words-rise` (via `RiseText`), `blur-in`, `scrub` (via `ScrubText`), `roll` (via `Roll`),
+  `marquee`; `[data-reveal]` + `ScrollReveal`
+- Legado (só /pv e /lp): `redact`, `withheld`, `bar-mark`, `font-expanded`
 
-Movimento: a liberação da tarja (`components/site/declassify.tsx`, montado no layout) é o
-**único** momento autoral. Respeita `prefers-reduced-motion` e funciona sem JS (texto visível).
-Use no máximo uma tarja por tela, em manchete. Sem marquee, pulso, scroll-reveal ou ticker animado.
+Movimento (interações da referência): manchete que sobe palavra a palavra, linha fina que entra do
+desfoque, blocos que entram ao rolar (`data-reveal`), parágrafo grande que acende com a rolagem,
+faixas em loop que param no hover, texto de botão que rola no hover, pontos que piscam devagar.
+Tudo respeita `prefers-reduced-motion` e nada fica escondido sem JS (o reveal só oculta sob `html.js`,
+marcado no `<head>` do layout).
 
-Imagens: capas do Instagram (9:16, com legenda gravada) **nunca** são recortadas; aparecem
-inteiras com `object-contain` sobre `bg-night` dentro do quadro 4:5 (ver `ArticleCard`).
-Números só quando carregam ordem (capítulos de casos, passos de acesso, partes/capítulos).
-
-Componentes de página (reutilize antes de criar markup novo):
+Componentes (reutilize antes de criar markup novo):
 - `PageHeader` (`tone="snow" | "night"`, `size="lg" | "md"`, trilha, h1, linha fina, `aside`)
-- `SectionHeading` (h2 + descrição + link) · `SplitSection` (título 5/12 + conteúdo 7/12, `sticky`)
-- `AcademyCta` (`band` | `card`) · `ArticleCard` (`default` | `case` | `row` | `compact`)
-- Academy: `ShopHero`, `ProductFeature`, `ProductCard` (exporta `splitParcelado`), `ProductGrid`
+- `SectionHeading` (`eyebrow`, h2, descrição, botão à direita, `align`) · `SplitSection` (`eyebrow`)
+- `AcademyCta` (`band` | `card`) · `ArticleCard` (`feature` | `cell` | `default` | `case` | `row` | `compact`)
+- Academy: `ShopHero` (anel de pontos), `ProductFeature`, `ProductCard` (exporta `splitParcelado`), `ProductGrid`
+- `DotMatrix` + `lib/dot-patterns.ts` (`eyePattern`, `ringPattern`, `terrainPattern`, `ICON_EYE`,
+  `ICON_LENS`, `ICON_SHIELD`) · `Roll` · `RiseText` · `ScrubText` · `ScrollReveal`
 
 `cn()` (`lib/utils.ts`) usa `extendTailwindMerge` com `mega/display/title/heading/lede`; se
 criar novos tamanhos de texto, registre-os lá, senão o merge os descarta.
@@ -165,13 +173,14 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 - Não editar `lib/content/instagram-articles.generated.ts` à mão.
   Para um componente shadcn novo, adicione só o que for usar (`pnpm dlx shadcn@latest add <nome>`).
 - Depoimentos: só os de `lib/testimonials.ts`; os trechos são literais das capturas, não edite.
-- Mudanças de design: siga a skill impeccable (`.claude/skills/impeccable`) e o `DESIGN.md`.
+- Mudanças de design: siga o `DESIGN.md` (padrão QuantumLab). Na `/pv` e na `/lp`, o visual anterior
+  (escopo `.world-legacy`) e a skill impeccable (`.claude/skills/impeccable`).
 - **Não cite o instrutor nem o anonimato dele** (nada de "instrutor anônimo" ou "o foco está no
   método, não em quem ensina"). Também não mostre nome ou rosto.
 - Mantenha **fim de linha LF**.
 - O header é fixo (`sticky`) e renderizado em `<Suspense>`; o fallback fica em `app/layout.tsx`
   (`HeaderFallback`). Ao mudar o header/CTA, ajuste **os dois** (fallback + `components/site/site-header.tsx`).
-  Barras fixas abaixo dele usam `top-16 lg:top-[72px]`.
+  Ele tem 64px no celular e 67px no desktop: barras fixas abaixo dele usam `top-16 lg:top-[67px]`.
 
 ## Deploy / verificação
 

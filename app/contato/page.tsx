@@ -42,14 +42,14 @@ export default function ContatoPage() {
             <p className="text-ink-3">E-mail</p>
             <a
               href={`mailto:${SITE.email}`}
-              className="mt-1 inline-block break-all font-expanded text-lg font-extrabold underline decoration-signal decoration-2 underline-offset-4 hover:text-signal"
+              className="mt-1 inline-block break-all text-lg font-medium underline decoration-ink-4 decoration-2 underline-offset-4 hover:text-ink-2"
             >
               {SITE.email}
             </a>
             <dl className="mt-10">
               {CHANNELS.map((c) => (
                 <div key={c.label} className="border-t border-line py-5">
-                  <dt className="font-bold">{c.label}</dt>
+                  <dt className="font-medium">{c.label}</dt>
                   <dd className="mt-1 leading-relaxed text-ink-2">{c.body}</dd>
                 </div>
               ))}
@@ -63,13 +63,13 @@ export default function ContatoPage() {
 
       <section className="bg-snow-2 text-ink" aria-labelledby="faq-title">
         <div className="container-site py-16 md:py-20">
-          <h2 id="faq-title" className="font-expanded text-title font-extrabold">
+          <h2 id="faq-title" className="text-title font-medium">
             Antes de escrever.
           </h2>
           <dl className="mt-10 grid gap-x-10 md:grid-cols-3">
             {FAQ.map((f) => (
-              <div key={f.q} className="border-t-2 border-ink py-6">
-                <dt className="text-lg font-bold">{f.q}</dt>
+              <div key={f.q} className="border-t border-line py-6">
+                <dt className="text-lg font-medium">{f.q}</dt>
                 <dd className="mt-2 leading-relaxed text-ink-2">{f.a}</dd>
               </div>
             ))}

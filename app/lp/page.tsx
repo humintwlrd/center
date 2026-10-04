@@ -283,7 +283,7 @@ export default function LandingPage() {
   const ames = CASES[0]
 
   return (
-    <div className="bg-night">
+    <div className="world-legacy bg-night">
       {/* ── Abertura ─────────────────────────────────────────── */}
       <section className="night" aria-labelledby="lp-title">
         <div className="container-site grid gap-14 py-16 md:py-24 lg:grid-cols-12 lg:items-center lg:gap-16 lg:py-28">

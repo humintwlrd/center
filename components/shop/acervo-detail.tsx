@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ArrowUpRight, X, Plus } from "lucide-react"
+import { RiseText } from "@/components/site/rise-text"
+import { ArrowUpRight, Check, ChevronRight, Plus, X } from "lucide-react"
 import { Breadcrumbs } from "@/components/site/breadcrumbs"
 import type { Product } from "@/lib/products"
 
@@ -201,8 +202,8 @@ export function AcervoDetail({ product }: { product: Product }) {
           />
           <div className="mt-12 grid gap-14 md:mt-16 lg:grid-cols-12 lg:items-center lg:gap-16">
             <div className="lg:col-span-7">
-              <h1 className="font-expanded text-display font-extrabold">
-                Inteligência humana de operações reais, traduzida para as <span className="redact">suas decisões.</span>
+              <h1 className="text-display font-medium">
+                <RiseText text="Inteligência humana de operações reais, traduzida para as suas decisões." />
               </h1>
               <p className="mt-8 max-w-[56ch] text-lede text-mist">
                 Aprenda a identificar intenções ocultas, extrair informações sem resistência e antecipar
@@ -213,7 +214,7 @@ export function AcervoDetail({ product }: { product: Product }) {
               <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
                 <a href="#oferta" className="btn btn-signal btn-lg">
                   Acessar o acervo
-                  <ArrowRight aria-hidden />
+                  <ChevronRight aria-hidden />
                 </a>
                 <p className="tabular text-mist">
                   {parcelado} <span className="text-mist-2">· 7 dias de garantia</span>
@@ -235,7 +236,7 @@ export function AcervoDetail({ product }: { product: Product }) {
           </div>
         </div>
         <div className="hidden border-y border-line-night py-4 md:block">
-          <ul className="container-site flex flex-wrap gap-x-8 gap-y-1 font-expanded font-bold text-mist-2">
+          <ul className="container-site flex flex-wrap gap-x-8 gap-y-1 font-medium text-mist-2">
             {TERMS.map((t) => (
               <li key={t}>{t}</li>
             ))}
@@ -247,7 +248,7 @@ export function AcervoDetail({ product }: { product: Product }) {
       <section className="bg-snow text-ink" aria-labelledby="situacao-title">
         <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <h2 id="situacao-title" className="font-expanded text-display font-extrabold lg:sticky lg:top-28">
+            <h2 id="situacao-title" className="text-display font-medium lg:sticky lg:top-28">
               Quem conduz percebe antes.
             </h2>
           </div>
@@ -257,11 +258,11 @@ export function AcervoDetail({ product }: { product: Product }) {
                 <p key={p.slice(0, 24)}>{p}</p>
               ))}
             </div>
-            <blockquote className="my-14 max-w-[30ch] font-expanded text-heading font-extrabold">
+            <blockquote className="my-14 max-w-[30ch] text-heading font-medium">
               A pior posição é sair convencido de que decidiu bem, quando você apenas reagiu melhor ao roteiro que
               alguém construiu.
             </blockquote>
-            <dl className="border-t-2 border-ink">
+            <dl className="border-t border-line">
               {POSITIONS.map((p, i) => (
                 <div
                   key={p.who}
@@ -269,8 +270,8 @@ export function AcervoDetail({ product }: { product: Product }) {
                     i === 0 ? "text-ink-3" : i === 1 ? "text-ink-2" : "text-ink"
                   }`}
                 >
-                  <dt className="text-lg font-semibold">{p.who}</dt>
-                  <dd className="font-expanded text-lg font-extrabold">{p.when}</dd>
+                  <dt className="text-lg font-medium">{p.who}</dt>
+                  <dd className="text-lg font-medium">{p.when}</dd>
                 </div>
               ))}
             </dl>
@@ -278,7 +279,7 @@ export function AcervoDetail({ product }: { product: Product }) {
               O Acervo Tático foi construído para treinar essa percepção: deixar de reagir ao que aparece e passar a
               observar o que está sendo construído diante de você.
             </p>
-            <p className="mt-6 max-w-[62ch] text-lg font-semibold leading-relaxed">
+            <p className="mt-6 max-w-[62ch] text-lg font-medium leading-relaxed">
               Não se trata de manipular pessoas. Trata-se de não ser ingênuo onde percepção, linguagem, comportamento
               e decisão estão sempre em jogo.
             </p>
@@ -290,7 +291,7 @@ export function AcervoDetail({ product }: { product: Product }) {
       <section id="dossie" className="night" aria-labelledby="arquitetura-title">
         <div className="container-site py-20 md:py-28">
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
-            <h2 id="arquitetura-title" className="font-expanded text-display font-extrabold lg:col-span-7">
+            <h2 id="arquitetura-title" className="text-display font-medium lg:col-span-7">
               Seis dossiês. Um núcleo operacional.
             </h2>
             <p className="max-w-[56ch] text-lg leading-relaxed text-mist lg:col-span-5 lg:pt-3">
@@ -308,12 +309,12 @@ export function AcervoDetail({ product }: { product: Product }) {
               >
                 <p
                   aria-hidden
-                  className={`hidden text-sm font-bold md:col-span-2 md:block md:pt-2 ${m.highlight ? "text-white" : "text-mist-2"}`}
+                  className={`hidden text-sm font-medium md:col-span-2 md:block md:pt-2 ${m.highlight ? "text-white" : "text-mist-2"}`}
                 >
                   {m.tag}
                 </p>
                 <div className="md:col-span-6">
-                  <h3 className="font-expanded text-heading font-extrabold">
+                  <h3 className="text-heading font-medium">
                     <span className="md:sr-only">{m.tag} · </span>
                     {m.title}
                   </h3>
@@ -322,7 +323,7 @@ export function AcervoDetail({ product }: { product: Product }) {
                 <ul className="flex flex-col gap-2 md:col-span-4 md:pt-2">
                   {m.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-[0.9375rem]">
-                      <span aria-hidden className="bar-mark" />
+                      <Check aria-hidden className="mt-[0.3em] size-4 shrink-0" />
                       {b}
                     </li>
                   ))}
@@ -338,7 +339,7 @@ export function AcervoDetail({ product }: { product: Product }) {
         <div className="container-site py-20 md:py-28">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <h2 id="plataforma-title" className="font-expanded text-display font-extrabold">
+              <h2 id="plataforma-title" className="text-display font-medium">
                 O que você recebe.
               </h2>
               <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-ink-2">
@@ -347,8 +348,8 @@ export function AcervoDetail({ product }: { product: Product }) {
             </div>
             <dl className="grid gap-x-10 sm:grid-cols-2 lg:col-span-7">
               {PLATFORM.map((card) => (
-                <div key={card.title} className="border-t-2 border-ink py-6">
-                  <dt className="font-expanded text-lg font-extrabold">{card.title}</dt>
+                <div key={card.title} className="border-t border-line py-6">
+                  <dt className="text-lg font-medium">{card.title}</dt>
                   <dd className="mt-2 text-ink-2">{card.body}</dd>
                 </div>
               ))}
@@ -356,12 +357,12 @@ export function AcervoDetail({ product }: { product: Product }) {
           </div>
 
           <div className="mt-20 grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <h2 className="font-expanded text-title font-extrabold lg:col-span-5">Como o acesso funciona.</h2>
+            <h2 className="text-title font-medium lg:col-span-5">Como o acesso funciona.</h2>
             <ol className="grid gap-10 sm:grid-cols-3 lg:col-span-7">
               {STEPS.map((step, i) => (
                 <li key={step.n}>
-                  <span className="tabular font-expanded text-display font-extrabold text-ink-3">{i + 1}</span>
-                  <h3 className="mt-3 text-lg font-bold">{step.title}</h3>
+                  <span className="tabular text-display font-medium text-ink-3">{i + 1}</span>
+                  <h3 className="mt-3 text-lg font-medium">{step.title}</h3>
                   <p className="mt-2 text-ink-2">{step.body}</p>
                 </li>
               ))}
@@ -374,18 +375,18 @@ export function AcervoDetail({ product }: { product: Product }) {
       <section className="bg-snow text-ink" aria-label="Para quem é o Acervo">
         <div className="container-site grid gap-16 py-20 md:py-28 lg:grid-cols-2">
           <div>
-            <h2 className="font-expanded text-title font-extrabold">Para quem depende de ler pessoas em decisões reais.</h2>
+            <h2 className="text-title font-medium">Para quem depende de ler pessoas em decisões reais.</h2>
             <ul className="mt-8">
               {FOR_WHOM.map((item) => (
                 <li key={item} className="flex items-start gap-4 border-t border-line py-4 text-lg leading-relaxed text-ink-2">
-                  <span aria-hidden className="bar-mark" />
+                  <Check aria-hidden className="mt-[0.3em] size-4 shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h2 className="font-expanded text-title font-extrabold">Não é para quem procura poder sobre os outros.</h2>
+            <h2 className="text-title font-medium">Não é para quem procura poder sobre os outros.</h2>
             <ul className="mt-8">
               {NOT_FOR.map((item) => (
                 <li key={item} className="flex items-start gap-3 border-t border-line py-4 text-lg leading-relaxed text-ink-3">
@@ -401,7 +402,7 @@ export function AcervoDetail({ product }: { product: Product }) {
       {/* ── Ética ──────────────────────────────────────────────── */}
       <section className="night" aria-labelledby="etica-title">
         <div className="container-site py-20 md:py-28">
-          <h2 id="etica-title" className="max-w-[18ch] font-expanded text-mega font-extrabold">
+          <h2 id="etica-title" className="max-w-[18ch] text-mega font-medium">
             Inteligência humana sem manipulação barata.
           </h2>
           <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
@@ -409,7 +410,7 @@ export function AcervoDetail({ product }: { product: Product }) {
               O Acervo Tático não ensina coação, fraude, invasão, exposição ou exploração de vulnerabilidades. O foco é
               leitura de contexto, comunicação consciente, proteção informacional e tomada de decisão.
             </p>
-            <p className="max-w-[40ch] font-expanded text-heading font-extrabold lg:col-span-6">
+            <p className="max-w-[40ch] text-heading font-medium lg:col-span-6">
               O operador não vence porque engana melhor. Vence porque percebe melhor, decide melhor e preserva
               confiança enquanto atua.
             </p>
@@ -420,13 +421,13 @@ export function AcervoDetail({ product }: { product: Product }) {
       {/* ── Oferta ─────────────────────────────────────────────── */}
       <section id="oferta" className="bg-snow text-ink" aria-labelledby="oferta-title">
         <div className="container-site py-20 md:py-28">
-          <h2 id="oferta-title" className="font-expanded text-display font-extrabold">
+          <h2 id="oferta-title" className="text-display font-medium">
             Tudo incluso. Um único pacote.
           </h2>
           <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <p className="text-lg font-semibold text-ink-2">Acesso por 12 meses</p>
-              <p className="tabular mt-3 font-expanded text-display font-extrabold whitespace-nowrap">{parcelado.split(" de ")[1] ?? parcelado}</p>
+              <p className="text-lg font-medium text-ink-2">Acesso por 12 meses</p>
+              <p className="tabular mt-3 text-display font-medium whitespace-nowrap">{parcelado.split(" de ")[1] ?? parcelado}</p>
               <p className="mt-2 text-lg text-ink-2">
                 em {parcelado.split(" de ")[0]} no cartão, ou {product.preco} à vista no Pix
               </p>
@@ -436,11 +437,11 @@ export function AcervoDetail({ product }: { product: Product }) {
               <p className="mt-6 text-ink-3">7 dias de garantia incondicional · Pagamento seguro · Acesso por e-mail</p>
             </div>
             <div className="lg:col-span-7">
-              <h3 className="font-expanded text-heading font-extrabold">Acervo Tático HUMINT</h3>
-              <ul className="mt-6 border-t-2 border-ink">
+              <h3 className="text-heading font-medium">Acervo Tático HUMINT</h3>
+              <ul className="mt-6 border-t border-line">
                 {INCLUDED.map((item) => (
                   <li key={item} className="flex items-start gap-4 border-b border-line py-4 text-lg text-ink-2">
-                    <span aria-hidden className="bar-mark" />
+                    <Check aria-hidden className="mt-[0.3em] size-4 shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -458,22 +459,22 @@ export function AcervoDetail({ product }: { product: Product }) {
       <section className="bg-snow-2 text-ink" aria-labelledby="faq-title">
         <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <h2 id="faq-title" className="font-expanded text-display font-extrabold">
+            <h2 id="faq-title" className="text-display font-medium">
               Antes de decidir.
             </h2>
             <p className="mt-6 text-lg text-ink-2">
               Outra dúvida?{" "}
-              <Link href="/suporte" className="font-semibold underline decoration-signal decoration-2 underline-offset-4">
+              <Link href="/suporte" className="font-medium underline decoration-ink-4 decoration-2 underline-offset-4">
                 Fale com o suporte
               </Link>
               .
             </p>
           </div>
-          <div className="border-t-2 border-ink lg:col-span-8">
+          <div className="border-t border-line lg:col-span-8">
             {FAQ.map((item) => (
               <details key={item.q} className="group border-b border-line">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
-                  <span className="text-lg font-bold decoration-signal decoration-2 underline-offset-4 group-hover:underline">{item.q}</span>
+                  <span className="text-lg font-medium decoration-ink-4 decoration-2 underline-offset-4 group-hover:underline">{item.q}</span>
                   <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
                 </summary>
                 <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{item.a}</p>
@@ -486,8 +487,8 @@ export function AcervoDetail({ product }: { product: Product }) {
       {/* ── Material protegido ─────────────────────────────────── */}
       <section className="night" aria-labelledby="aviso-title">
         <div className="container-site py-20 md:py-28">
-          <h2 id="aviso-title" className="max-w-[22ch] font-expanded text-display font-extrabold">
-            Cada linha deste material está catalogada, datada e <span className="redact">rastreável.</span>
+          <h2 id="aviso-title" className="max-w-[22ch] text-display font-medium">
+            Cada linha deste material está catalogada, datada e rastreável.
           </h2>
           <div className="mt-12 grid gap-8 text-lg leading-relaxed text-mist lg:grid-cols-2 lg:gap-16">
             <p>
@@ -503,7 +504,7 @@ export function AcervoDetail({ product }: { product: Product }) {
           <dl className="mt-14 grid gap-x-10 border-t border-line-night sm:grid-cols-3">
             {PROTECTION.map((p) => (
               <div key={p.title} className="border-b border-line-night py-6 sm:border-b-0">
-                <dt className="font-expanded text-lg font-extrabold">{p.title}</dt>
+                <dt className="text-lg font-medium">{p.title}</dt>
                 <dd className="mt-2 text-mist">{p.body}</dd>
               </div>
             ))}

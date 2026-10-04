@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import { ShopHero } from "@/components/shop/shop-hero"
 import { ProductGrid } from "@/components/shop/product-grid"
 import { ProductFeature } from "@/components/shop/product-feature"
 import { PRODUCTS } from "@/lib/products"
+import { Roll } from "@/components/site/roll"
 
 export const metadata: Metadata = {
   title: { absolute: "Academy — Mundo da HUMINT" },
@@ -26,42 +27,54 @@ export default function AcademyPage() {
     <>
       <ShopHero />
 
-      <section aria-label="Cursos" className="night">
-        <div className="container-site flex flex-col gap-8 py-16 md:gap-10 md:py-24">
-          {COURSES.map((product, i) => (
-            <ProductFeature key={product.id} product={product} tone="night" priority={i === 0} />
-          ))}
+      <section id="cursos" aria-labelledby="cursos-title" className="bg-snow pb-20 md:pb-[140px]">
+        <div className="container-site">
+          <h2 id="cursos-title" className="subtitle mb-4">
+            Cursos
+          </h2>
+          <div className="rule-t border-l border-line">
+            {COURSES.map((product, i) => (
+              <ProductFeature key={product.id} product={product} priority={i === 0} className="rule-b" />
+            ))}
+          </div>
         </div>
       </section>
 
-      <div className="bg-snow text-ink">
+      <section aria-labelledby="dossies-title" className="bg-snow-2 py-20 md:py-[120px]">
         <ProductGrid
           id="dossies-title"
+          eyebrow="Dossiês"
           title="Dossiês avulsos"
           subtitle="Cada dossiê é um módulo do Acervo Tático, também vendido separadamente."
           items={EBOOKS}
         />
-      </div>
+      </section>
 
-      <section className="bg-snow-2 text-ink" aria-labelledby="duvidas-title">
-        <div className="container-site grid gap-8 py-16 md:grid-cols-12 md:items-end md:py-20">
-          <div className="md:col-span-7">
-            <h2 id="duvidas-title" className="font-expanded text-heading font-extrabold">
-              Dúvidas sobre acesso, pagamento ou conteúdo?
-            </h2>
-            <p className="mt-3 max-w-[58ch] text-lg leading-relaxed text-ink-2">
-              A compra abre o checkout seguro da HeroSpark em nova aba. O acesso chega no e-mail usado na compra; se
-              algo não chegar, fale com a gente.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3 md:col-span-5 md:justify-end">
-            <Link href="/suporte" className="btn btn-solid">
-              Falar com o suporte
-              <ArrowRight aria-hidden />
-            </Link>
-            <Link href="/comoaproveitar" className="btn btn-line">
-              Como aproveitar
-            </Link>
+      <section className="bg-snow" aria-labelledby="duvidas-title">
+        <div className="container-site py-20 md:py-[120px]">
+          <div className="rule-t rule-b grid border-x border-line md:grid-cols-2">
+            <div className="border-b border-line px-6 py-10 md:border-r md:border-b-0 md:px-16 md:py-12">
+              <p className="subtitle">Suporte</p>
+              <h2 id="duvidas-title" className="mt-2 text-title">
+                Dúvidas sobre acesso, pagamento ou conteúdo?
+              </h2>
+            </div>
+            <div className="flex flex-col justify-center gap-6 px-6 py-10 md:px-16 md:py-12">
+              <p className="max-w-[440px] text-base text-ink-2">
+                A compra abre o checkout seguro da HeroSpark em nova aba. O acesso chega no e-mail usado na compra; se
+                algo não chegar, fale com a gente.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link href="/suporte" className="btn btn-signal">
+                  <Roll>Falar com o suporte</Roll>
+                  <ChevronRight aria-hidden />
+                </Link>
+                <Link href="/comoaproveitar" className="btn btn-line">
+                  <Roll>Como aproveitar</Roll>
+                  <ChevronRight aria-hidden />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

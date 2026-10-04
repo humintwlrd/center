@@ -163,7 +163,7 @@ export default function AcervoTaticoPage() {
   const valueQuote = moreQuotes[3]
 
   return (
-    <div id="top" className="pv-page min-h-screen overflow-x-hidden bg-night pb-20 text-white md:pb-0">
+    <div id="top" className="pv-page world-legacy min-h-screen overflow-x-hidden bg-night pb-20 text-white md:pb-0">
       <StickyNav />
       <MobileStickyCta />
 

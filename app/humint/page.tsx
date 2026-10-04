@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, Plus } from "lucide-react"
+import { ChevronRight, Plus } from "lucide-react"
 
 import { pageMetadata } from "@/lib/seo"
 import { blogPostingSchema, faqSchema } from "@/lib/schema"
@@ -114,7 +114,7 @@ export default function HumintPage() {
         <div className="flex flex-wrap gap-3">
           <Link href="#definicao" className="btn btn-signal btn-lg">
             Começar a leitura
-            <ArrowRight aria-hidden />
+            <ChevronRight aria-hidden />
           </Link>
           <Link href="/artigos?categoria=fundamentos-de-humint" className="btn btn-line btn-lg">
             Artigos de fundamentos
@@ -126,11 +126,11 @@ export default function HumintPage() {
         <div className="container-site grid gap-12 py-16 md:py-24 lg:grid-cols-12 lg:gap-14">
           <aside className="hidden lg:col-span-3 lg:block" aria-label="Neste guia">
             <nav className="sticky top-28">
-              <p className="mb-3 font-bold">Neste guia</p>
-              <ol className="border-t-2 border-ink">
+              <p className="mb-3 font-medium">Neste guia</p>
+              <ol className="border-t border-line">
                 {TOC.map((item) => (
                   <li key={item.id} className="border-b border-line">
-                    <Link href={`#${item.id}`} className="block py-3 text-ink-2 transition-colors hover:text-signal">
+                    <Link href={`#${item.id}`} className="block py-3 text-ink-2 transition-colors hover:text-ink-2">
                       {item.label}
                     </Link>
                   </li>
@@ -214,18 +214,18 @@ export default function HumintPage() {
 
       <section id="temas" className="bg-snow-2 text-ink" aria-labelledby="temas-title">
         <div className="container-site py-20 md:py-24">
-          <h2 id="temas-title" className="font-expanded text-title font-extrabold">
+          <h2 id="temas-title" className="text-title font-medium">
             As dimensões da inteligência humana.
           </h2>
           <ul className="mt-12 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
             {pillarTopics.map((topic) => (
-              <li key={topic.href} className="border-t-2 border-ink">
+              <li key={topic.href} className="border-t border-line">
                 <Link href={topic.href} className="group flex h-full flex-col py-6">
-                  <span className="font-expanded text-heading font-extrabold transition-colors group-hover:text-signal">
+                  <span className="text-heading font-medium transition-colors group-hover:text-ink-2">
                     {topic.title}
                   </span>
                   <span className="mt-2 flex-1 text-lg leading-relaxed text-ink-2">{topic.description}</span>
-                  <ArrowRight className="mt-5 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />
+                  <ChevronRight className="mt-5 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden />
                 </Link>
               </li>
             ))}
@@ -235,14 +235,14 @@ export default function HumintPage() {
 
       <section id="faq" className="bg-snow text-ink" aria-labelledby="faq-title">
         <div className="container-site grid gap-12 py-20 md:py-24 lg:grid-cols-12 lg:gap-14">
-          <h2 id="faq-title" className="font-expanded text-title font-extrabold lg:col-span-4">
+          <h2 id="faq-title" className="text-title font-medium lg:col-span-4">
             Perguntas frequentes.
           </h2>
-          <div className="border-t-2 border-ink lg:col-span-8">
+          <div className="border-t border-line lg:col-span-8">
             {faqs.map((faq, i) => (
               <details key={faq.question} className="group border-b border-line" open={i === 0}>
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
-                  <span className="text-lg font-bold transition-colors group-hover:text-signal">{faq.question}</span>
+                  <span className="text-lg font-medium transition-colors group-hover:text-ink-2">{faq.question}</span>
                   <Plus className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-45" aria-hidden />
                 </summary>
                 <p className="max-w-[62ch] pb-6 text-lg leading-relaxed text-ink-2">{faq.answer}</p>

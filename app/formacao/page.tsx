@@ -49,7 +49,7 @@ export default function FormacaoPage() {
       >
         <p className="max-w-[56ch] text-lg text-ink-2">
           Quer começar agora? Os cursos e dossiês da Academy já estão disponíveis.{" "}
-          <Link href="/academy" className="font-semibold text-ink underline decoration-signal decoration-2 underline-offset-4">
+          <Link href="/academy" className="font-medium text-ink underline decoration-ink-4 decoration-2 underline-offset-4">
             Ver a Academy
           </Link>
         </p>
@@ -71,8 +71,8 @@ export default function FormacaoPage() {
       <SplitSection id="programas" title="Programas previstos.">
         <div>
           {FUTURE_PROGRAMS.map((p) => (
-            <article key={p.title} className="border-t-2 border-ink py-6">
-              <h3 className="font-expanded text-heading font-extrabold">{p.title}</h3>
+            <article key={p.title} className="border-t border-line py-6">
+              <h3 className="text-heading font-medium">{p.title}</h3>
               <p className="mt-2 text-lg leading-relaxed text-ink-2">{p.summary}</p>
               <p className="mt-2 text-sm text-ink-3">{p.format}</p>
             </article>
@@ -83,7 +83,7 @@ export default function FormacaoPage() {
       <section className="night" aria-labelledby="interesse-title">
         <div className="container-site grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="min-w-0 lg:col-span-5">
-            <h2 id="interesse-title" className="font-expanded text-title font-extrabold">
+            <h2 id="interesse-title" className="text-title font-medium">
               Acesso antecipado às próximas turmas.
             </h2>
             <p className="mt-5 max-w-[44ch] text-lg leading-relaxed text-mist">
