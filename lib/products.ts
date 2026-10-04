@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
     descricao:
       "O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar informações de forma mais estruturada. Sem “leitura mental”, sem truques de linguagem corporal, sem manipulação barata. Com método.",
     destaques: [
-      "Mecanismos do Comportamento",
+      "Mecânicas do Comportamento",
       "Comunicação e Influência",
       "Linguagem Não-Verbal",
       "Elicitação Ética",

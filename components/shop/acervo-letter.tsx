@@ -26,7 +26,7 @@ const DOSSIER_PRODUCTS = PRODUCTS.filter((p) => p.id.startsWith("dossie-"))
 
 const DOSSIERS = [
   {
-    name: "Mecanismos do Comportamento",
+    name: "Mecânicas do Comportamento",
     rest: "ajuda você a compreender melhor o que influencia decisões, reações e mudanças de comportamento — sem transformar qualquer gesto em uma conclusão.",
   },
   {
