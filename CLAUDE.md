@@ -35,18 +35,19 @@ app/
   categorias/ metodos/ humint/ recursos/ sobre/ contato/ formacao/ livro/
   lp/                      # landing "Como Avaliar Pessoas" (R$49) — só mexer com pedido explícito
                            # (visual anterior, escopo .world-legacy)
-  pv/                      # landing de vendas do Acervo (header/footer próprios, Utmify,
-                           # visual anterior, escopo .world-legacy)
+  pv/                      # landing de vendas do Acervo (carta de vendas, header/footer
+                           # próprios, Utmify)
   error.tsx not-found.tsx  # páginas de erro no padrão visual
   api/                     # rotas de form (contato, etc.)
 components/
   site/                    # header, footer, page-header, section-heading, split-section,
                            # academy-cta, article-card, breadcrumbs, formulários,
                            # dot-matrix, roll, rise-text, scrub-text, scroll-reveal,
-                           # declassify (tarjas da /pv e /lp)
+                           # testimonials-strip, declassify (tarjas da /lp)
   shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
-                           # acervo-detail (página de vendas rica do Acervo)
-  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, access-button, utmify)
+                           # acervo-letter (carta de vendas do Acervo: /pv, /academy/acervo-tatico
+                           # e o recorte da home)
+  landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, access-button = CHECKOUT_URL, utmify)
                            # (sem components/ui: nenhum componente shadcn em uso hoje)
 lib/
   products.ts              # CATÁLOGO da Academy (tipo Product + PRODUCTS + getProductBySlug)
@@ -81,8 +82,8 @@ Na raiz há um **pacote de atualização não aplicado** (`APLICAR.md`, `CHANGES
 Desde 2026-10-03 o site segue o **layout e o web design da referência QuantumLab** (template Webflow,
 home V1 e V2), a pedido do dono: estrutura, ritmo, tipografia, grade de filetes e interações da
 referência, com **os textos do Mundo da HUMINT**. Nenhum asset do template foi copiado: as ilustrações
-em matriz de pontos são desenhadas em `lib/dot-patterns.ts`. A `/pv` e a `/lp` continuam no visual
-anterior pelo escopo `.world-legacy` (fim de `app/globals.css`).
+em matriz de pontos são desenhadas em `lib/dot-patterns.ts`. Só a `/lp` continua no visual anterior,
+pelo escopo `.world-legacy` (fim de `app/globals.css`).
 
 Regras:
 - **Uma família**: Inter Tight (`next/font`, `--font-inter-tight`). Títulos em **peso 500** e tracking
@@ -113,7 +114,7 @@ Utilitários próprios (`@utility`):
 - Formulários: `field`, `field-label` · Imagem: `media-zoom`, `mono`
 - Movimento: `words-rise` (via `RiseText`), `blur-in`, `scrub` (via `ScrubText`), `roll` (via `Roll`),
   `marquee`; `[data-reveal]` + `ScrollReveal`
-- Legado (só /pv e /lp): `redact`, `withheld`, `bar-mark`, `font-expanded`
+- Legado (só /lp): `redact`, `withheld`, `bar-mark`, `font-expanded`
 
 Movimento (interações da referência): manchete que sobe palavra a palavra, linha fina que entra do
 desfoque, blocos que entram ao rolar (`data-reveal`), parágrafo grande que acende com a rolagem,
@@ -126,6 +127,10 @@ Componentes (reutilize antes de criar markup novo):
 - `SectionHeading` (`eyebrow`, h2, descrição, botão à direita, `align`) · `SplitSection` (`eyebrow`)
 - `AcademyCta` (`band` | `card`) · `ArticleCard` (`feature` | `cell` | `default` | `case` | `row` | `compact`)
 - Academy: `ShopHero` (anel de pontos), `ProductFeature`, `ProductCard` (exporta `splitParcelado`), `ProductGrid`
+- Venda: `AcervoLetter` e suas seções (`LetterHero`, `LetterProblem`, `LetterWhy`, `LetterTwoPeople`,
+  `LetterAlready`, `LetterNoCheap`, `LetterConversation`, `LetterDossiers`, `LetterPurpose`, `LetterForWhom`,
+  `LetterDeliverables`, `LetterNotFor`, `LetterQuestion`, `LetterOffer`, `LetterFaq`, `LetterFinal`,
+  `LetterCtaBand`, `BuyCta`) em `components/shop/acervo-letter.tsx` · `TestimonialsStrip`
 - `DotMatrix` + `lib/dot-patterns.ts` (`eyePattern`, `ringPattern`, `terrainPattern`, `ICON_EYE`,
   `ICON_LENS`, `ICON_SHIELD`) · `Roll` · `RiseText` · `ScrubText` · `ScrollReveal`
 
@@ -142,8 +147,14 @@ Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente core
   abre o `checkoutUrl` (HeroSpark) em **nova aba**, "Ver detalhes" → `/academy/<id>`.
 - `/academy` separa em **Cursos** (`tipo` contém "curso") e **Dossiês / e-books** (`tipo` contém "book").
 - `/academy/[slug]`: template genérico (capa + preço + ementa) **exceto** `acervo-tatico`,
-  que renderiza `components/shop/acervo-detail.tsx` — página de vendas rica (conteúdo
-  adaptado da humint.click: situação real, 6 dossiês + núcleo, ética, oferta, FAQ, aviso de segurança).
+  que renderiza a carta de vendas (`AcervoLetter`, a mesma da `/pv`).
+- **Direção de copy/oferta (dono, 2026-10-04)**: "Suas decisões dependem de pessoas. Mas você ainda pode
+  estar decidindo sem um método." O texto da carta é literal da copy enviada pelo dono e vive só em
+  `components/shop/acervo-letter.tsx` (home, `/pv` e `/academy/acervo-tatico` usam as mesmas seções).
+  Nada de "ler pessoas", detectar mentira ou "gatilhos". Os trechos que pediam dado real usam só fatos
+  já publicados (PDFs na área de membros, credenciais por e-mail em minutos, 12 meses de acesso com
+  atualizações, garantia incondicional de 7 dias, preço do catálogo). **Pendentes do dono**: número de
+  páginas, ferramentas, checklists e modelos, e bônus. Não invente esses números.
 - Produtos atuais: **Acervo Tático** (R$900 · 12x R$93,09 · "Mais vendido"),
   **Engenharia Social** (R$120 · 12x R$12,41), **Dossiês 01–06** (R$190 · 12x R$19,65 · E-book).
 - **`/pv` lê preço e checkout do catálogo** (`ACERVO` em `lib/products.ts`): mude o preço só lá.
@@ -170,10 +181,12 @@ Slug dos artigos: `instagram-<shortcode>-<resumo>`. Capas em `public/images/inst
 
 - **Preços parcelados** nos cards (sem preço cheio); selo Cartão · Pix; CTAs de compra em nova aba.
 - **`/lp` é intocável** salvo pedido explícito (o redesign de 2026 foi pedido pelo dono).
+- A `/pv` tem cabeçalho próprio (`components/landing/sticky-nav.tsx`, só logo + CTA de compra), barra de
+  compra fixa no celular e rodapé com o aviso da Meta; o shell do site fica oculto pelo `app/pv/pv.css`.
 - Não editar `lib/content/instagram-articles.generated.ts` à mão.
   Para um componente shadcn novo, adicione só o que for usar (`pnpm dlx shadcn@latest add <nome>`).
 - Depoimentos: só os de `lib/testimonials.ts`; os trechos são literais das capturas, não edite.
-- Mudanças de design: siga o `DESIGN.md` (padrão QuantumLab). Na `/pv` e na `/lp`, o visual anterior
+- Mudanças de design: siga o `DESIGN.md` (padrão QuantumLab). Na `/lp`, o visual anterior
   (escopo `.world-legacy`) e a skill impeccable (`.claude/skills/impeccable`).
 - **Não cite o instrutor nem o anonimato dele** (nada de "instrutor anônimo" ou "o foco está no
   método, não em quem ensina"). Também não mostre nome ou rosto.

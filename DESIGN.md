@@ -145,10 +145,19 @@ vocabulário que já existe no site; desenhe novas ilustrações como padrões e
 em erro de formulário); pesos 700/800; cantos arredondados, sombras ou gradientes decorativos;
 recortar capas do Instagram.
 
-## Mundo legado (/pv e /lp)
+## Carta de vendas
 
-A `/pv` (venda do Acervo) e a `/lp` ("Como Avaliar Pessoas") continuam no sistema anterior (Archivo
-variável estendida em 800, vermelho de operação #e5252a, grade de 1360px, tarjas `redact`,
-`withheld` e `bar-mark`). O escopo `.world-legacy` (fim de `app/globals.css`) restaura esses tokens
-e utilitários só dentro dessas páginas; a Archivo é carregada sem preload. A especificação completa
+A copy de venda do Acervo (direção do dono, 2026-10-04) vive em `components/shop/acervo-letter.tsx`,
+montada em seções no mesmo visual: hero dividido com o olho, parágrafo que acende com a rolagem,
+células divididas (por que HUMINT, conversa estruturada, para quem, não é para você), comparação
+palpite × análise com a célula escura, grade dos seis dossiês com as capas, oferta em célula
+dividida com o preço do catálogo, FAQ em acordeão e faixa escura final. A `/pv` e
+`/academy/acervo-tatico` usam a carta inteira; a home usa um recorte.
+
+## Mundo legado (/lp)
+
+A `/lp` ("Como Avaliar Pessoas") continua no sistema anterior (Archivo variável estendida em 800,
+vermelho de operação #e5252a, grade de 1360px, tarjas `redact`, `withheld` e `bar-mark`). O escopo
+`.world-legacy` (fim de `app/globals.css`) restaura esses tokens e utilitários só dentro dela; a
+Archivo é carregada sem preload. A especificação completa
 desse sistema está no histórico do git (DESIGN.md até o commit `43e6c34`).

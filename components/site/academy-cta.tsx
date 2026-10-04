@@ -18,8 +18,8 @@ type AcademyCtaProps = {
 /** Chamada para o Acervo Tático: faixa escura com relevo de pontos (CTA da referência). */
 export function AcademyCta({
   variant = "band",
-  title = "Aprenda a ler pessoas com o método inteiro.",
-  description = "Seis dossiês e um núcleo de ferramentas operacionais: comportamento, comunicação, linguagem não verbal, elicitação, contrainteligência e fontes.",
+  title = "Observe melhor. Pergunte melhor. Avalie melhor. Decida com mais informação.",
+  description = "O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar informações de forma mais estruturada.",
   className,
 }: AcademyCtaProps) {
   if (variant === "card") {
@@ -55,7 +55,7 @@ export function AcademyCta({
           <p className="mt-4 text-base text-snow-3">{description}</p>
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link href={`/academy/${FLAGSHIP.id}`} className="btn btn-signal self-start">
-              <Roll>Conhecer o Acervo Tático</Roll>
+              <Roll>Quero acessar o Acervo Tático</Roll>
               <ChevronRight aria-hidden />
             </Link>
             <p className="tabular text-sm text-mist">

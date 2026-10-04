@@ -21,7 +21,7 @@ const interTight = Inter_Tight({
   display: "swap",
 })
 
-/** Só a /pv e a /lp (escopo .world-legacy) usam a Archivo: sem preload no resto do site. */
+/** Só a /lp (escopo .world-legacy) usa a Archivo: sem preload no resto do site. */
 const archivo = Archivo({
   subsets: ["latin"],
   axes: ["wdth"],

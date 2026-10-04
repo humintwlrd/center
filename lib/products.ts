@@ -42,13 +42,14 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 900,00",
     parcelado: "12x de R$ 93,09",
     descricao:
-      "O acervo definitivo de HUMINT: 9 módulos cobrindo mecânicas do comportamento, comunicação e influência, linguagem não verbal, elicitação, contrainteligência e OPSEC, fontes de informação e ferramentas operacionais.",
+      "O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar informações de forma mais estruturada. Sem “leitura mental”, sem truques de linguagem corporal, sem manipulação barata. Com método.",
     destaques: [
-      "Mecânicas do Comportamento",
+      "Mecanismos do Comportamento",
       "Comunicação e Influência",
-      "Linguagem Não Verbal",
-      "Elicitação",
+      "Linguagem Não-Verbal",
+      "Elicitação Ética",
       "Contrainteligência e OPSEC",
+      "Fontes de Informação e Ferramentas Operacionais",
     ],
     ementa: [
       "Comece por aqui",

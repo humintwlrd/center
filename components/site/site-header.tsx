@@ -145,7 +145,7 @@ export function SiteHeader() {
               </div>
             </div>
             <Link href="/academy/acervo-tatico" className="btn btn-signal w-full">
-              Conhecer o Acervo Tático
+              Quero acessar o Acervo Tático
               <ChevronRight aria-hidden />
             </Link>
           </nav>

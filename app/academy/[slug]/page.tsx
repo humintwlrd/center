@@ -4,7 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowUpRight, Check, ChevronRight } from "lucide-react"
 import { PRODUCTS, getProductBySlug } from "@/lib/products"
-import { AcervoDetail } from "@/components/shop/acervo-detail"
+import { AcervoLetter } from "@/components/shop/acervo-letter"
 import { ProductGrid } from "@/components/shop/product-grid"
 import { splitParcelado } from "@/components/shop/product-card"
 import { Roll } from "@/components/site/roll"
@@ -40,9 +40,20 @@ export default async function ProductPage({ params }: Props) {
   const product = getProductBySlug(slug)
   if (!product) notFound()
 
-  // O Acervo Tático (carro-chefe) tem uma página de vendas rica, estilo landing.
+  // O Acervo Tático (carro-chefe) usa a carta de vendas completa, a mesma da /pv.
   if (product.id === "acervo-tatico") {
-    return <AcervoDetail product={product} />
+    return (
+      <AcervoLetter
+        top={
+          <Breadcrumbs
+            items={[
+              { label: "Academy", href: "/academy" },
+              { label: "Acervo Tático", href: `/academy/${product.id}` },
+            ]}
+          />
+        }
+      />
+    )
   }
 
   const isDossie = product.id.startsWith("dossie-")

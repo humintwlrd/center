@@ -9,8 +9,8 @@
    container, dark #161616 bands and dot-matrix illustrations
    drawn from our own subjects. Copy stays ours.
 
-   /pv and /lp keep the previous world (Archivo + operational
-   red) through the `.world-legacy` scope at the end of this file.
+   /lp keeps the previous world (Archivo + operational red)
+   through the `.world-legacy` scope at the end of this file.
    ========================================================= */
 
 @theme inline {
@@ -483,7 +483,7 @@
 }
 
 /* =========================================================
-   Redaction devices (kept for /pv and /lp)
+   Redaction devices (kept for /lp)
    ========================================================= */
 @utility redact {
   position: relative;
@@ -815,7 +815,7 @@
 }
 
 /* =========================================================
-   Legacy world: /pv and /lp keep the previous design
+   Legacy world: /lp keeps the previous design
    (Archivo with the wdth axis, operational red, 1360px grid).
    ========================================================= */
 @layer base {

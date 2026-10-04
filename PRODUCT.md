@@ -44,9 +44,14 @@ Método de inteligência humana extraído de práticas e documentos de serviços
 - **Não citar o instrutor nem o anonimato dele** no site (decisão do dono em 2026-09-25): nada de "instrutor anônimo" ou "o foco está no método, não em quem ensina". Nome e rosto também não aparecem.
 - **Design atual (pedido do dono em 2026-10-03):** layout e web design copiados e adaptados do template
   **QuantumLab** (Webflow, home V1 e V2), monocromático, com Inter Tight e ilustrações em matriz de pontos;
-  só os textos do Mundo da HUMINT foram mantidos. A `/pv` e a `/lp` ficaram no visual anterior. Ver `DESIGN.md`.
+  só os textos do Mundo da HUMINT foram mantidos. Só a `/lp` ficou no visual anterior. Ver `DESIGN.md`.
+- **Direção de copy/oferta (dono, 2026-10-04):** "Suas decisões dependem de pessoas. Mas você ainda pode estar
+  decidindo sem um método." HUMINT como método para trabalhar com informação humana, sem "leitura mental",
+  sem truques de linguagem corporal e sem manipulação barata. Aplicada à home, à `/pv` e à Academy
+  (`components/shop/acervo-letter.tsx`). Pendentes do dono: número de páginas, ferramentas, checklists,
+  modelos e bônus do Acervo.
 - Paleta: não há compromisso (a escolha anterior de preto/branco + verde foi liberada).
-- **Referências do redesign anterior (set/2026, ainda valem para a `/pv` e a `/lp`):** o padrão da categoria, feito a sério e sem ironia, no nível de acabamento das melhores referências internacionais do nicho, pesquisadas em set/2026:
+- **Referências do redesign anterior (set/2026, ainda valem para a `/lp`):** o padrão da categoria, feito a sério e sem ironia, no nível de acabamento das melhores referências internacionais do nicho, pesquisadas em set/2026:
   - **MasterClass, "The Art of Intelligence"**: página de curso guiada por credencial, cinematográfica, com lista de capítulos. É a régua de estrutura de venda.
   - **CIA.gov (rebrand 2021)**: monocromático com um acento vermelho, grotesca estendida pesada (GT America Expanded) e serifada só para citações. É a régua de identidade e escala tipográfica.
   - **SPYSCAPE (identidade da SomeOne)**: a tarja como sistema tipográfico, com letras parcialmente ocultas, e "question everything". É a régua para expressar o "confidencial" sem clichê de carimbo.
