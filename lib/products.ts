@@ -42,7 +42,7 @@ export const PRODUCTS: Product[] = [
     preco: "R$ 900,00",
     parcelado: "12x de R$ 93,09",
     descricao:
-      "O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar informações de forma mais estruturada. Sem “leitura mental”, sem truques de linguagem corporal, sem manipulação barata. Com método.",
+      "O método da inteligência humana (HUMINT) em seis dossiês e um núcleo de ferramentas operacionais, para observar, perguntar e checar antes de confiar: numa negociação, numa contratação, numa conversa que importa.",
     destaques: [
       "Mecânicas do Comportamento",
       "Comunicação e Influência",

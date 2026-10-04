@@ -19,13 +19,10 @@ export function TestimonialsStrip({ id, action, className }: TestimonialsStripPr
     <section id={id} aria-labelledby="depoimentos-title" className={cn("overflow-hidden bg-snow-2 py-20 md:py-[120px]", className)}>
       <div className="container-site">
         <header className="flex flex-col gap-4 pb-10 md:flex-row md:items-end md:justify-between md:pb-8" data-reveal>
-          <div className="max-w-[420px]">
-            <p className="subtitle">Depoimentos</p>
-            <h2 id="depoimentos-title" className="mt-2 text-title">
-              Quem comprou, aplicou.
-            </h2>
-          </div>
-          <p className="max-w-[400px] text-base text-ink-2">Capturas reais de mensagens de alunos. Os nomes foram ocultados.</p>
+          <h2 id="depoimentos-title" className="max-w-[420px] text-display">
+            Quem comprou, recomenda.
+          </h2>
+          <p className="max-w-[400px] text-lg text-ink-2">Capturas reais de mensagens de alunos. Os nomes foram ocultados.</p>
         </header>
       </div>
       <div className="border-y border-line">

@@ -2,28 +2,26 @@
 version: 1
 slug: "app-pv-page-tsx"
 primary_target: "app/pv/page.tsx"
-related_targets: []
+related_targets: ["app/academy/[slug]/page.tsx"]
 ---
 
-# /pv: landing de vendas do Acervo Tático (tráfego pago)
+# /pv e /academy/acervo-tatico: página de vendas do Acervo Tático
 
-Escopo: só a /pv. Modo: Persuade. Mundo visual herdado do site (DESIGN.md), sem mudanças no sistema.
-Público: quem chega de anúncio no Instagram/Meta, no celular, com pouca paciência. Ação: comprar o Acervo no checkout HeroSpark (nova aba).
-Trava principal (dono): não enxergam valor no preço. Prova que lidera (dono): os DMs reais, logo depois da abertura.
-Texto: parágrafos preservados; títulos, ordem e cortes de repetição liberados; mudanças pontuais de copy autorizadas quando necessárias, sem inventar dado.
-Fatos de valor (catálogo): 6 dossiês avulsos a R$ 190 = R$ 1.140; Acervo R$ 900 (12x R$ 93,09) com os 6 dossiês, o núcleo operacional e 12 meses de atualizações.
-Momento memorável: o preço do acervo liberado sob a tarja depois da soma dos avulsos.
+Escopo: a carta de vendas (`components/shop/acervo-letter.tsx`), usada inteira na /pv (tráfego pago) e em /academy/acervo-tatico. Modo: Persuade. Mundo visual: o do site (DESIGN.md), sem mudanças no sistema.
+Público: quem chega do Instagram ou de anúncio, quase sempre no celular. Ação: comprar o Acervo no checkout HeroSpark (nova aba).
+Copy: reescrita do zero pelo pedido do dono (2026-10-04), mantendo a direção "decisões dependem de pessoas; método em vez de impressão; sem manipulação". Só fatos do catálogo e da área de membros. Preço não é trava (dono): mostrar com clareza, sem justificar.
+Pendentes do dono: número de páginas, ferramentas, checklists e bônus.
 
 ## Direction contract
 
-THESIS: A página responde, em ordem, às três perguntas de quem vem do anúncio (vale o preço? serve para mim? é ético?), depois de mostrar gente real dizendo que valeu. Recusa a carta de vendas longa em que a oferta só aparece no fim.
+THESIS: Carta de vendas curta e direta: o produto aparece na primeira dobra (as seis capas), alunos reais confirmam logo em seguida e o método é provado numa conversa concreta antes da oferta. Recusa a carta longa em caixinhas cinzas, os rótulos acima de títulos e a repetição do argumento ético.
 
-OWN-WORLD: O do site: noite #0b0b0c para vender, papel branco para ler, vermelho sinal só em ação e na tarja liberada, Archivo estendida 800 nos títulos, cantos retos, sem sombra. Capas sépia dos seis dossiês como material de valor; DMs reais como prova; tarja, bar-mark e numerais de capítulo como únicos dispositivos.
+OWN-WORLD: Inter Tight 500, tinta #161616, texto corrido #505050 a 18px, filetes #e3e3e3, faixas #161616 e neutro #fbfbfb, cantos retos, sem sombra. As capas sépia dos dossiês são o único material de cor; DMs reais como prova; matriz de pontos só no ícone do núcleo e no fechamento.
 
-STORY: Vê o acervo e o preço parcelado; lê alunos dizendo "valeu cada centavo"; vê item por item o que leva e quanto custaria avulso; reconhece a própria situação; confirma a ética; compra.
+STORY: Em cinco segundos entende o que é e vê o produto; lê alunos dizendo que valeu; reconhece que decide pela impressão; vê o método mudar uma conversa; vê o que tem dentro; entende como recebe; confirma que é para ele e que é ético; compra.
 
-FIRST VIEWPORT: Noite. À esquerda, manchete em display com "Brasil." tarjado, linha fina de uma frase, CTA vermelho "Acessar material" e linha de fatos (6 dossiês + núcleo · 12 meses · 12x). À direita, as seis capas sépia em grade 3x2 escalonada. No celular, as capas vêm logo abaixo do CTA.
+FIRST VIEWPORT: Esquerda: manchete em dois tons, "Toda decisão importante passa por uma pessoa." em tinta e "Aprenda a avaliá-la com método." em cinza, por volta de 64px; linha fina de duas linhas; CTA escuro "Quero acessar o Acervo"; linha de fatos. Direita: grade 3×2 das seis capas em células com filete sobre o neutro. No celular, a grade vem logo abaixo do CTA.
 
-FORM: Objeções como espinha, posição 6 da lista ordenada (distribuída pelo sorteio; escolha delegada pelo dono), com a escada de percepção e o mural de DMs incorporados. Seed key 70d8d8cf. Code-led. Movimento: só a tarja (manchete e preço).
+FORM: Estrutura própria a partir de fundamentos de resposta direta (o dono recusou as três estruturas sorteadas: "faça uma boa página de vendas, sem framework"). Seed key 7819005f. Momento memorável: "Tem certeza?" contra as perguntas de método, em duas colunas, a do método em faixa escura. Movimento: entrada da manchete e reveals já existentes; nada novo.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

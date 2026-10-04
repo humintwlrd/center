@@ -18,8 +18,8 @@ type AcademyCtaProps = {
 /** Chamada para o Acervo Tático: faixa escura com relevo de pontos (CTA da referência). */
 export function AcademyCta({
   variant = "band",
-  title = "Observe melhor. Pergunte melhor. Avalie melhor. Decida com mais informação.",
-  description = "O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar informações de forma mais estruturada.",
+  title = "Toda decisão importante passa por uma pessoa. Aprenda a avaliá-la com método.",
+  description = "O Acervo Tático HUMINT reúne seis dossiês e um núcleo de ferramentas para observar, perguntar e checar antes de confiar.",
   className,
 }: AcademyCtaProps) {
   if (variant === "card") {

@@ -21,6 +21,7 @@ colors:
   danger: "#d92d20"
 typography:
   family: "Inter Tight (next/font, variável), ui-sans-serif, system-ui, sans-serif"
+  hero: { fontSize: "clamp(2.375rem, 1.5rem + 3.1vw, 4.25rem)", fontWeight: 500, lineHeight: 1.04, letterSpacing: "-0.035em" }
   mega: { fontSize: "clamp(2.25rem, 1.85rem + 1.25vw, 3rem)", fontWeight: 500, lineHeight: 1.12, letterSpacing: "-0.03em" }
   display: { fontSize: "clamp(2rem, 1.7rem + 0.95vw, 2.8rem)", fontWeight: 500, lineHeight: 1.15, letterSpacing: "-0.03em" }
   title: { fontSize: "clamp(1.75rem, 1.55rem + 0.62vw, 2.25rem)", fontWeight: 500, lineHeight: 1.25, letterSpacing: "-0.03em" }
@@ -84,7 +85,8 @@ Inter Tight variável (`next/font`, variável `--font-inter-tight`).
 
 | Papel | Classe | Referência a 1440px |
 | --- | --- | --- |
-| Manchete da home | `text-mega` | 48px / 1.12 |
+| Manchete de venda (home, /pv, fechamento) | `text-hero` | 68px / 1.04, −0.035em |
+| Manchete de página editorial | `text-mega` | 48px / 1.12 |
 | Título de página | `text-display` | 44.8px / 1.15 |
 | Título de seção | `text-title` | 36px / 1.25 |
 | Título de card/parágrafo grande | `text-heading` | 30px / 1.25 |
@@ -133,7 +135,8 @@ Interações da referência, todas respeitando `prefers-reduced-motion` e legív
   `html.js` (marcado no `<head>`; se o componente não montar em 3s, a marca sai).
 - `ScrubText`: parágrafo grande que acende letra a letra com a rolagem.
 - `marquee`: faixas em loop (temas, depoimentos) que param no hover/foco.
-- `DotMatrix`: `wipe` revela a grade linha a linha; `twinkle` faz alguns pontos piscarem devagar.
+- `DotMatrix`: `wipe` revela a grade linha a linha; `twinkle` faz alguns pontos piscarem devagar. Tons:
+  `light`, `soft`, `dark` (relevo no escuro) e `inverse` (ícone claro sobre faixa escura).
 - `Roll`: texto de botão e navegação rola para cima no hover.
 
 ## Do's and Don'ts
@@ -145,14 +148,29 @@ vocabulário que já existe no site; desenhe novas ilustrações como padrões e
 em erro de formulário); pesos 700/800; cantos arredondados, sombras ou gradientes decorativos;
 recortar capas do Instagram.
 
-## Carta de vendas
+## Página de vendas
 
-A copy de venda do Acervo (direção do dono, 2026-10-04) vive em `components/shop/acervo-letter.tsx`,
-montada em seções no mesmo visual: hero dividido com o olho, parágrafo que acende com a rolagem,
-células divididas (por que HUMINT, conversa estruturada, para quem, não é para você), comparação
-palpite × análise com a célula escura, grade dos seis dossiês com as capas, oferta em célula
-dividida com o preço do catálogo, FAQ em acordeão e faixa escura final. A `/pv` e
-`/academy/acervo-tatico` usam a carta inteira; a home usa um recorte.
+A página de vendas do Acervo (reescrita do zero em 2026-10-04 a pedido do dono, sem framework) vive em
+`components/shop/acervo-letter.tsx`. `/pv` e `/academy/acervo-tatico` usam a página inteira; a home
+reaproveita `MethodSection`, `DossierCovers` e `OfferFacts`. Ordem e papel de cada seção:
+
+1. **SalesHero**: manchete em dois tons (`text-hero`, tinta + `ink-4` em linha própria), linha fina,
+   CTA escuro e linha de fatos; à direita, as seis capas em grade 3×2 com filete (no celular, logo abaixo
+   do CTA). O produto aparece na primeira dobra.
+2. **QuoteStrip**: três trechos literais de DMs entre filetes, logo depois da promessa.
+3. **ProblemSection**: título em dois tons, uma cena concreta e quatro linhas grandes "X não prova Y".
+4. **MethodSection** (neutro): os quatro movimentos numa lista de quatro colunas com filetes, sem cards.
+5. **DemoSection**: o momento memorável, "Tem certeza?" contra quatro perguntas abertas, a coluna do método
+   em faixa escura. As perguntas são conversa, nunca interrogatório.
+6. **InsideSection** (escuro): linhas com capa, número em cinza dentro do título, descrição e três pontos;
+   o núcleo leva o ícone de lente em matriz (`inverse`); fecha com CTA.
+7. **DeliverySection**: mockup da área de membros, três passos e a DM "para ser consultado sempre".
+8. **FitSection**: "É para você" × "Não é para você" (neutro), sem repetir o argumento ético.
+9. **TestimonialsStrip**, **OfferSection** (lista do que entra + painel escuro com o preço do catálogo em
+   `text-hero`, sem justificar o valor), **FaqSection** (acordeão) e **FinalCta** (faixa escura com relevo).
+
+Regras: nenhum rótulo acima de título nessas seções; texto corrido a 18px (`text-lg`); a cor fica nas capas
+sépia; os fatos vêm só do catálogo, da área de membros e de `lib/testimonials.ts`.
 
 ## Mundo legado (/lp)
 

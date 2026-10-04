@@ -45,8 +45,8 @@ components/
                            # dot-matrix, roll, rise-text, scrub-text, scroll-reveal,
                            # testimonials-strip, declassify (tarjas da /lp)
   shop/                    # Academy: shop-hero, product-grid, product-card, product-feature,
-                           # acervo-letter (carta de vendas do Acervo: /pv, /academy/acervo-tatico
-                           # e o recorte da home)
+                           # acervo-letter (página de vendas do Acervo: /pv, /academy/acervo-tatico;
+                           # a home reaproveita MethodSection, DossierCovers e OfferFacts)
   landing/                 # peças da /pv (sticky-nav, mobile-sticky-cta, access-button = CHECKOUT_URL, utmify)
                            # (sem components/ui: nenhum componente shadcn em uso hoje)
 lib/
@@ -127,10 +127,11 @@ Componentes (reutilize antes de criar markup novo):
 - `SectionHeading` (`eyebrow`, h2, descrição, botão à direita, `align`) · `SplitSection` (`eyebrow`)
 - `AcademyCta` (`band` | `card`) · `ArticleCard` (`feature` | `cell` | `default` | `case` | `row` | `compact`)
 - Academy: `ShopHero` (anel de pontos), `ProductFeature`, `ProductCard` (exporta `splitParcelado`), `ProductGrid`
-- Venda: `AcervoLetter` e suas seções (`LetterHero`, `LetterProblem`, `LetterWhy`, `LetterTwoPeople`,
-  `LetterAlready`, `LetterNoCheap`, `LetterConversation`, `LetterDossiers`, `LetterPurpose`, `LetterForWhom`,
-  `LetterDeliverables`, `LetterNotFor`, `LetterQuestion`, `LetterOffer`, `LetterFaq`, `LetterFinal`,
-  `LetterCtaBand`, `BuyCta`) em `components/shop/acervo-letter.tsx` · `TestimonialsStrip`
+- Venda (`components/shop/acervo-letter.tsx`): `AcervoLetter` monta, em ordem, `SalesHero`, `QuoteStrip`,
+  `ProblemSection`, `MethodSection` (`lede`, `sources`), `DemoSection`, `InsideSection`, `DeliverySection`,
+  `FitSection`, `TestimonialsStrip`, `OfferSection`, `FaqSection`, `FinalCta`. Peças: `BuyCta` (checkout em
+  nova aba ou âncora com `href`), `OfferFacts` (linha de fatos da oferta), `DossierCovers` (as seis capas,
+  seguem o tom da superfície), `DOSSIERS` · `TestimonialsStrip`
 - `DotMatrix` + `lib/dot-patterns.ts` (`eyePattern`, `ringPattern`, `terrainPattern`, `ICON_EYE`,
   `ICON_LENS`, `ICON_SHIELD`) · `Roll` · `RiseText` · `ScrubText` · `ScrollReveal`
 
@@ -148,9 +149,10 @@ Ao criar telas novas, **reutilize esses tokens/utilitários** (não invente core
 - `/academy` separa em **Cursos** (`tipo` contém "curso") e **Dossiês / e-books** (`tipo` contém "book").
 - `/academy/[slug]`: template genérico (capa + preço + ementa) **exceto** `acervo-tatico`,
   que renderiza a carta de vendas (`AcervoLetter`, a mesma da `/pv`).
-- **Direção de copy/oferta (dono, 2026-10-04)**: "Suas decisões dependem de pessoas. Mas você ainda pode
-  estar decidindo sem um método." O texto da carta é literal da copy enviada pelo dono e vive só em
-  `components/shop/acervo-letter.tsx` (home, `/pv` e `/academy/acervo-tatico` usam as mesmas seções).
+- **Copy de venda (reescrita em 2026-10-04 a pedido do dono, na direção dele)**: "Toda decisão importante
+  passa por uma pessoa. Aprenda a avaliá-la com método." Vive só em `components/shop/acervo-letter.tsx`
+  (`/pv` e `/academy/acervo-tatico` usam a página inteira; a home reaproveita peças). O preço não é trava
+  para esse público: mostre com clareza, sem justificar nem ancorar.
   Nada de "ler pessoas", detectar mentira ou "gatilhos". Os trechos que pediam dado real usam só fatos
   já publicados (PDFs na área de membros, credenciais por e-mail em minutos, 12 meses de acesso com
   atualizações, garantia incondicional de 7 dias, preço do catálogo). **Pendentes do dono**: número de

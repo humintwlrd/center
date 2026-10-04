@@ -3,10 +3,11 @@ import { cn } from "@/lib/utils"
 
 type Palette = [string, string, string]
 
-const PALETTES: Record<"light" | "dark" | "soft", Palette> = {
+const PALETTES: Record<"light" | "dark" | "soft" | "inverse", Palette> = {
   light: ["#e3e3e3", "#ababab", "#161616"],
   soft: ["#f3f3f3", "#e3e3e3", "#cfcfcf"],
   dark: ["#262626", "#323232", "#505050"],
+  inverse: ["#3a3a3a", "#6b6b6b", "#ffffff"],
 }
 
 type DotMatrixProps = {

@@ -74,7 +74,10 @@
   --radius-2xl: 0;
   --radius-3xl: 0;
 
-  /* Type roles (reference: 44.8 / 36 / 30 / 16 at 1440px) */
+  /* Type roles (reference: 44.8 / 36 / 30 / 16 at 1440px); hero = sales headlines */
+  --text-hero: clamp(2.375rem, 1.5rem + 3.1vw, 4.25rem);
+  --text-hero--line-height: 1.04;
+  --text-hero--letter-spacing: -0.035em;
   --text-mega: clamp(2.25rem, 1.85rem + 1.25vw, 3rem);
   --text-mega--line-height: 1.12;
   --text-mega--letter-spacing: -0.03em;

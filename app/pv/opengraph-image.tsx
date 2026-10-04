@@ -3,7 +3,7 @@ import { join } from "node:path"
 import { ImageResponse } from "next/og"
 import { ACERVO } from "@/lib/products"
 
-export const alt = "Acervo Tático HUMINT: suas decisões dependem de pessoas"
+export const alt = "Acervo Tático HUMINT: toda decisão importante passa por uma pessoa"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -31,11 +31,11 @@ export default async function OG() {
             Acervo Tático HUMINT
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ display: "flex", fontFamily: "Inter Tight Medium", fontSize: 70, lineHeight: 1.06, letterSpacing: "-0.03em" }}>
-              Suas decisões dependem de pessoas.
+            <div style={{ display: "flex", fontFamily: "Inter Tight Medium", fontSize: 62, lineHeight: 1.08, letterSpacing: "-0.03em" }}>
+              Toda decisão importante passa por uma pessoa.
             </div>
             <div style={{ display: "flex", marginTop: 22, fontSize: 30, lineHeight: 1.35, color: "#505050", letterSpacing: "-0.03em" }}>
-              Mas você ainda pode estar decidindo sem um método.
+              Aprenda a avaliá-la com método.
             </div>
           </div>
           <div

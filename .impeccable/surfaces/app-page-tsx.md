@@ -2,28 +2,25 @@
 version: 1
 slug: "app-page-tsx"
 primary_target: "app/page.tsx"
-related_targets: ["app/academy/page.tsx","app/academy/[slug]/page.tsx","app/artigos/page.tsx","app/artigos/[slug]/page.tsx","app/pv/page.tsx","app/lp/page.tsx"]
+related_targets: []
 ---
 
-# Site Mundo da HUMINT: mundo visual
+# Home do Mundo da HUMINT
 
-Escopo: o site inteiro (home, Academy, produto, artigos, institucionais, /pv, /lp). Modo da home e das páginas de venda: Persuade. Artigos e guias: Read.
-Público: seguidor do Instagram e profissional que investiga. Ação: comprar o Acervo Tático ou um dossiê. Prova: casos reais primeiro, depois o material e os depoimentos reais (DMs).
-Restrições: logo do cérebro, capas sépia dos produtos, instrutor anônimo e "confidencial" preservados. Proibido parecer blog ou jornal genérico.
-Momento memorável: a manchete com um trecho tarjado que é liberado uma vez, ao entrar na tela.
+Escopo: `app/page.tsx` (a home). As demais rotas seguem o DESIGN.md; a /pv tem brief próprio. Modo: Persuade (porta do site e da Academy). Mundo visual: o do site (DESIGN.md, padrão QuantumLab desde 2026-10-03).
+Público: seguidor do Instagram e profissional que investiga. Ação: conhecer o Acervo Tático (página de vendas) ou ler os casos.
+Copy: reescrita do zero (2026-10-04) na direção do dono, mais curta que a página de vendas; sem rótulos acima de títulos.
 
 ## Direction contract
 
-THESIS: Uma escola de inteligência apresentada como o site de uma agência: preto, branco e um vermelho de operação, tipografia estendida e pesada, casos reais como capítulos. Recusa o portal editorial com filetes, rótulos e colunas.
+THESIS: A home diz em uma tela o que o site é (inteligência humana aplicada às suas decisões), mostra o método em quatro movimentos, prova com casos reais e só então apresenta o Acervo num bloco compacto. Recusa a mistura de carta de vendas com blog que a deixou confusa.
 
-OWN-WORLD: Fundo preto #0B0B0C nas páginas de venda; papel branco puro para leitura longa. Um só acento, vermelho sinal, reservado a ação e à tarja liberada. Uma família: Archivo variável, estendida e pesada nos títulos, largura normal no texto. Tarjas pretas/brancas como sistema (anonimato do instrutor, trecho liberado). Fotografia cinematográfica em tela cheia. Cantos retos, sem rótulos acima de títulos, sem mono de fantasia.
+OWN-WORLD: O do site: Inter Tight 500, tinta #161616, texto #505050, filetes #e3e3e3, faixas #161616, cantos retos; olho em matriz de pontos no hero; capas sépia no bloco do Acervo; fotos dos casos em preto e branco.
 
-STORY: O visitante vê um caso real, entende que o método vem da inteligência de verdade, reconhece a aplicação na própria vida (negociação, trabalho, relações), vê o Acervo por dentro e compra no checkout.
+STORY: Entende o que é o Mundo da HUMINT, entende o método, vê casos reais analisados com ele, vê o Acervo e alunos reais, e segue para a página de vendas ou para os artigos.
 
-FIRST VIEWPORT: Foto do caso da CIA em Pequim em tela cheia, escurecida. À esquerda, manchete gigante em Archivo estendida: "Inteligência humana aplicada, com método.", com "com método" sob tarja que se libera. Linha fina curta. CTA vermelho "Conhecer o Acervo Tático" e secundário "Ver os casos". Logo abaixo da dobra começa o trilho de casos reais.
+FIRST VIEWPORT: Esquerda: manchete "Inteligência humana aplicada às suas decisões." com a segunda linha em cinza, linha fina de duas linhas, CTA "Conhecer o Acervo Tático" e secundário "Ler os casos". Direita: o olho em matriz de pontos.
 
-FORM: Padrão da categoria feito a sério (saída permanente escolhida pelo usuário), régua MasterClass "The Art of Intelligence", CIA.gov 2021 e SPYSCAPE. Candidato 4 do sorteio (transcrição anotada) recusado pelo usuário. Seed key b07c6030. Motion: a liberação da tarja é o único momento autoral.
+FORM: Estrutura própria (o dono pediu uma página de vendas sem framework; a home é a versão curta). Seed key 7819005f. Movimento: entrada da manchete e reveals de seção.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
-
-Emenda (2026-09-25): o dono pediu para não citar o instrutor nem o anonimato dele. A tarja permanente fica só para trechos omitidos de documento; o restante do contrato continua valendo.

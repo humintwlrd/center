@@ -20,8 +20,8 @@ export function ShopHero() {
               className="blur-in mt-4 hidden max-w-[48ch] text-base text-ink-2 md:block"
               style={{ ["--d" as string]: "450ms" }}
             >
-              O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e
-              avaliar informações de forma mais estruturada.
+              O Acervo Tático HUMINT reúne seis dossiês e um núcleo de ferramentas para observar, perguntar e checar
+              antes de confiar.
             </p>
             <Link
               href="/academy/acervo-tatico"
@@ -35,8 +35,8 @@ export function ShopHero() {
         </div>
         <div className="mx-auto mt-6 flex max-w-[48ch] flex-col items-center gap-5 text-center md:hidden">
           <p className="text-base text-ink-2">
-            O Acervo Tático HUMINT reúne seis dossiês para ensinar você a observar pessoas, conduzir conversas e avaliar
-            informações de forma mais estruturada.
+            O Acervo Tático HUMINT reúne seis dossiês e um núcleo de ferramentas para observar, perguntar e checar antes
+            de confiar.
           </p>
           <Link href="/academy/acervo-tatico" className="btn btn-signal sm:hidden">
             <Roll>Quero acessar o Acervo Tático</Roll>

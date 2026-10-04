@@ -47,9 +47,12 @@ Método de inteligência humana extraído de práticas e documentos de serviços
   só os textos do Mundo da HUMINT foram mantidos. Só a `/lp` ficou no visual anterior. Ver `DESIGN.md`.
 - **Direção de copy/oferta (dono, 2026-10-04):** "Suas decisões dependem de pessoas. Mas você ainda pode estar
   decidindo sem um método." HUMINT como método para trabalhar com informação humana, sem "leitura mental",
-  sem truques de linguagem corporal e sem manipulação barata. Aplicada à home, à `/pv` e à Academy
-  (`components/shop/acervo-letter.tsx`). Pendentes do dono: número de páginas, ferramentas, checklists,
-  modelos e bônus do Acervo.
+  sem truques de linguagem corporal e sem manipulação barata. No mesmo dia o dono pediu a página reescrita
+  do zero, sem framework: a manchete passou a ser "Toda decisão importante passa por uma pessoa. Aprenda a
+  avaliá-la com método." e o método aparece em quatro movimentos (observar, perguntar, avaliar, proteger).
+  O preço não é objeção desse público. Vive em `components/shop/acervo-letter.tsx` (`/pv`,
+  `/academy/acervo-tatico`; a home reaproveita peças). Pendentes do dono: número de páginas, ferramentas,
+  checklists, modelos e bônus do Acervo.
 - Paleta: não há compromisso (a escolha anterior de preto/branco + verde foi liberada).
 - **Referências do redesign anterior (set/2026, ainda valem para a `/lp`):** o padrão da categoria, feito a sério e sem ironia, no nível de acabamento das melhores referências internacionais do nicho, pesquisadas em set/2026:
   - **MasterClass, "The Art of Intelligence"**: página de curso guiada por credencial, cinematográfica, com lista de capítulos. É a régua de estrutura de venda.
